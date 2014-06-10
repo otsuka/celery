@@ -1,0 +1,103 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorials/debugging.rst:5
+msgid "Debugging Tasks Remotely (using pdb)"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:8
+msgid "Basics"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:10
+msgid ""
+":mod:`celery.contrib.rdb` is an extended version of :mod:`pdb` that enables "
+"remote debugging of processes that does not have terminal access."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:14
+msgid "Example usage:"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:28
+msgid ""
+":func:`~celery.contrib.rdb.set_trace` sets a breakpoint at the current "
+"location and creates a socket you can telnet into to remotely debug your "
+"task."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:32
+msgid ""
+"The debugger may be started by multiple processes at the same time, so "
+"rather than using a fixed port the debugger will search for an available "
+"port, starting from the base port (6900 by default). The base port can be "
+"changed using the environment variable :envvar:`CELERY_RDB_PORT`."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:38
+msgid ""
+"By default the debugger will only be available from the local host, to "
+"enable access from the outside you have to set the environment variable "
+":envvar:`CELERY_RDB_HOST`."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:42
+msgid ""
+"When the worker encounters your breakpoint it will log the following "
+"information::"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:52
+msgid ""
+"If you telnet the port specified you will be presented with a `pdb` shell:"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:64
+msgid ""
+"Enter ``help`` to get a list of available commands, It may be a good idea to"
+" read the `Python Debugger Manual`_ if you have never used `pdb` before."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:68
+msgid ""
+"To demonstrate, we will read the value of the ``result`` variable, change it"
+" and continue execution of the task::"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:77
+msgid "The result of our vandalism can be seen in the worker logs::"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:87
+msgid "Tips"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:92
+msgid "Enabling the breakpoint signal"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:94
+msgid ""
+"If the environment variable :envvar:`CELERY_RDBSIG` is set, the worker will "
+"open up an rdb instance whenever the `SIGUSR2` signal is sent. This is the "
+"case for both main and worker processes."
+msgstr ""
+
+#: ../../tutorials/debugging.rst:98
+msgid "For example starting the worker with::"
+msgstr ""
+
+#: ../../tutorials/debugging.rst:102
+msgid ""
+"You can start an rdb session for any of the worker processes by executing::"
+msgstr ""

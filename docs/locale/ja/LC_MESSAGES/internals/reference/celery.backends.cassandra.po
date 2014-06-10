@@ -1,0 +1,38 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.backends.cassandra.rst:3
+#: ../../../celery/backends/cassandra.pydocstring of
+#: celery.backends.cassandra:2
+msgid "celery.backends.cassandra"
+msgstr ""
+
+#: ../../../celery/backends/cassandra.pydocstring of
+#: celery.backends.cassandra:4
+msgid "Apache Cassandra result store backend."
+msgstr ""
+
+#: ../../../celery/backends/cassandra.pydocstring of
+#: celery.backends.cassandra.CassandraBackend:1
+msgid "Highly fault tolerant Cassandra backend."
+msgstr ""
+
+#: ../../../celery/backends/cassandra.pydocstring of
+#: celery.backends.cassandra.CassandraBackend:5
+msgid "List of Cassandra servers with format: ``hostname:port``."
+msgstr ""
+
+#: ../../../celery/backends/cassandra.pydocstring of
+#: celery.backends.cassandra.CassandraBackend:7
+msgid "if module :mod:`pycassa` is not available."
+msgstr ""

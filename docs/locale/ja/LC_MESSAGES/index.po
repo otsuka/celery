@@ -1,0 +1,80 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:3
+msgid "Celery - Distributed Task Queue"
+msgstr ""
+
+#: ../../index.rst:5
+msgid ""
+"Celery is a simple, flexible and reliable distributed system to process vast"
+" amounts of messages, while providing operations with the tools required to "
+"maintain such a system."
+msgstr ""
+"Celery は大量のメッセージを扱える、シンプルでフレキシブル、且つ信頼性の高い分散処理システムです。"
+"そしてこのシステムの運用に必要なツールを提供しています。"
+
+#: ../../index.rst:9
+msgid ""
+"It's a task queue with focus on real-time processing, while also supporting "
+"task scheduling."
+msgstr ""
+"Celery はリアルタイム処理にフォーカスしたタスクキューですが、スケジューリングタスクもサポートしています。"
+
+#: ../../index.rst:12
+msgid ""
+"Celery has a large and diverse community of users and contributors, you "
+"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-list "
+"<mailing-list>`."
+msgstr ""
+"ユーザーと開発者のコミュニティが充実しており、:ref:`IRC <irc-channel>` "
+"または :ref:`メーリングリスト <mailing-list>` でいつでも参加できます。"
+
+#: ../../index.rst:16
+msgid "Celery is Open Source and licensed under the `BSD License`_."
+msgstr "Celery はオープンソースで `BSD License`_ に基づいて提供されています。"
+
+#: ../../index.rst:19
+msgid "Getting Started"
+msgstr "はじめよう"
+
+#: ../../index.rst:21
+msgid ""
+"If you are new to Celery you can get started by following the :ref:`first-"
+"steps` tutorial."
+msgstr ""
+"Celery が初めての方は、次の :ref:`first-steps` チュートリアルからはじめるのいいでしょう。"
+
+#: ../../index.rst:24
+msgid "You can also check out the :ref:`FAQ <faq>`."
+msgstr "または :ref:`FAQ <faq>` をチェックするのもありだね。"
+
+#: ../../index.rst:29
+msgid "Contents"
+msgstr "目次"
+
+#: ../../index.rst:62https://www.evernote.com/shard/s38/sh/64b4aab4-f2a3-44fa-9be3-c640a85432a4/5888f9d733f7a505f6f1ed6bdb1fad73
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../index.rst:64
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:65
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:66
+msgid ":ref:`search`"
+msgstr ""

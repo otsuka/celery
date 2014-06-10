@@ -1,0 +1,50 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.dispatch.saferef.rst:3
+msgid "celery.utils.dispatch.saferef"
+msgstr ""
+
+#: ../../../celery/utils/dispatch/saferef.pydocstring of
+#: celery.utils.dispatch.saferef:1
+msgid "\"Safe weakrefs\", originally from pyDispatcher."
+msgstr ""
+
+#: ../../../celery/utils/dispatch/saferef.pydocstring of
+#: celery.utils.dispatch.saferef:3
+msgid ""
+"Provides a way to safely weakref any function, including bound methods "
+"(which aren't handled by the core weakref module)."
+msgstr ""
+
+#: ../../../celery/utils/dispatch/saferef.pydocstring of
+#: celery.utils.dispatch.saferef.safe_ref:1
+msgid "Return a *safe* weak reference to a callable target"
+msgstr ""
+
+#: ../../../celery/utils/dispatch/saferef.pydocstring of
+#: celery.utils.dispatch.saferef.safe_ref:3
+msgid ""
+"the object to be weakly referenced, if it's a bound method reference, will "
+"create a :class:`BoundMethodWeakref`, otherwise creates a simple "
+":class:`weakref.ref`."
+msgstr ""
+
+#: ../../../celery/utils/dispatch/saferef.pydocstring of
+#: celery.utils.dispatch.saferef.safe_ref:7
+msgid ""
+"if provided, will have a hard reference stored to the callable to be called "
+"after the safe reference goes out of scope with the reference object, "
+"(either a :class:`weakref.ref` or a :class:`BoundMethodWeakref`) as "
+"argument."
+msgstr ""

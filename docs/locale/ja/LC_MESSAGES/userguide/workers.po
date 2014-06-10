@@ -1,0 +1,1429 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../userguide/workers.rst:5
+msgid "Workers Guide"
+msgstr ""
+
+#: ../../userguide/workers.rst:14
+msgid "Starting the worker"
+msgstr ""
+
+#: ../../userguide/workers.rst:0
+msgid "Daemonizing"
+msgstr ""
+
+#: ../../userguide/workers.rst:18
+msgid ""
+"You probably want to use a daemonization tool to start in the background.  "
+"See :ref:`daemonizing` for help detaching the worker using popular "
+"daemonization tools."
+msgstr ""
+
+#: ../../userguide/workers.rst:22
+msgid "You can start the worker in the foreground by executing the command:"
+msgstr ""
+
+#: ../../userguide/workers.rst:28
+msgid ""
+"For a full list of available command-line options see "
+":mod:`~celery.bin.worker`, or simply do:"
+msgstr ""
+
+#: ../../userguide/workers.rst:35
+msgid ""
+"You can also start multiple workers on the same machine. If you do so be "
+"sure to give a unique name to each individual worker by specifying a host "
+"name with the :option:`--hostname|-n` argument:"
+msgstr ""
+
+#: ../../userguide/workers.rst:45
+msgid "The hostname argument can expand the following variables:"
+msgstr ""
+
+#: ../../userguide/workers.rst:47 ../../userguide/workers.rst:148
+msgid "``%h``:  Hostname including domain name."
+msgstr ""
+
+#: ../../userguide/workers.rst:48 ../../userguide/workers.rst:149
+msgid "``%n``:  Hostname only."
+msgstr ""
+
+#: ../../userguide/workers.rst:49 ../../userguide/workers.rst:150
+msgid "``%d``:  Domain name only."
+msgstr ""
+
+#: ../../userguide/workers.rst:51 ../../userguide/workers.rst:154
+msgid ""
+"E.g. if the current hostname is ``george.example.com`` then these will "
+"expand to:"
+msgstr ""
+
+#: ../../userguide/workers.rst:54
+msgid "``worker1.%h`` -> ``worker1.george.example.com``"
+msgstr ""
+
+#: ../../userguide/workers.rst:55
+msgid "``worker1.%n`` -> ``worker1.george``"
+msgstr ""
+
+#: ../../userguide/workers.rst:56
+msgid "``worker1.%d`` -> ``worker1.example.com``"
+msgstr ""
+
+#: ../../userguide/workers.rst:61
+msgid "Stopping the worker"
+msgstr ""
+
+#: ../../userguide/workers.rst:63
+msgid "Shutdown should be accomplished using the :sig:`TERM` signal."
+msgstr ""
+
+#: ../../userguide/workers.rst:65
+msgid ""
+"When shutdown is initiated the worker will finish all currently executing "
+"tasks before it actually terminates, so if these tasks are important you "
+"should wait for it to finish before doing anything drastic (like sending the"
+" :sig:`KILL` signal)."
+msgstr ""
+
+#: ../../userguide/workers.rst:70
+msgid ""
+"If the worker won't shutdown after considerate time, for example because of "
+"tasks stuck in an infinite-loop, you can use the :sig:`KILL` signal to force"
+" terminate the worker, but be aware that currently executing tasks will be "
+"lost (unless the tasks have the :attr:`~@Task.acks_late` option set)."
+msgstr ""
+
+#: ../../userguide/workers.rst:76
+msgid ""
+"Also as processes can't override the :sig:`KILL` signal, the worker will not"
+" be able to reap its children, so make sure to do so manually.  This command"
+" usually does the trick:"
+msgstr ""
+
+#: ../../userguide/workers.rst:87
+msgid "Restarting the worker"
+msgstr ""
+
+#: ../../userguide/workers.rst:89
+msgid ""
+"To restart the worker you should send the `TERM` signal and start a new "
+"instance.  The easiest way to manage workers for development is by using "
+"`celery multi`:"
+msgstr ""
+
+#: ../../userguide/workers.rst:98
+msgid ""
+"For production deployments you should be using init scripts or other process"
+" supervision systems (see :ref:`daemonizing`)."
+msgstr ""
+
+#: ../../userguide/workers.rst:101
+msgid ""
+"Other than stopping then starting the worker to restart, you can also "
+"restart the worker using the :sig:`HUP` signal, but note that the worker "
+"will be responsible for restarting itself so this is prone to problems and "
+"is not recommended in production:"
+msgstr ""
+
+#: ../../userguide/workers.rst:112
+msgid ""
+"Restarting by :sig:`HUP` only works if the worker is running in the "
+"background as a daemon (it does not have a controlling terminal)."
+msgstr ""
+
+#: ../../userguide/workers.rst:116
+msgid ""
+":sig:`HUP` is disabled on OS X because of a limitation on that platform."
+msgstr ""
+
+#: ../../userguide/workers.rst:123
+msgid "Process Signals"
+msgstr ""
+
+#: ../../userguide/workers.rst:125
+msgid "The worker's main process overrides the following signals:"
+msgstr ""
+
+#: ../../userguide/workers.rst:128
+msgid ":sig:`TERM`"
+msgstr ""
+
+#: ../../userguide/workers.rst:128
+msgid "Warm shutdown, wait for tasks to complete."
+msgstr ""
+
+#: ../../userguide/workers.rst:130
+msgid ":sig:`QUIT`"
+msgstr ""
+
+#: ../../userguide/workers.rst:130
+msgid "Cold shutdown, terminate ASAP"
+msgstr ""
+
+#: ../../userguide/workers.rst:132
+msgid ":sig:`USR1`"
+msgstr ""
+
+#: ../../userguide/workers.rst:132
+msgid "Dump traceback for all active threads."
+msgstr ""
+
+#: ../../userguide/workers.rst:134
+msgid ":sig:`USR2`"
+msgstr ""
+
+#: ../../userguide/workers.rst:134
+msgid "Remote debug, see :mod:`celery.contrib.rdb`."
+msgstr ""
+
+#: ../../userguide/workers.rst:140
+msgid "Variables in file paths"
+msgstr ""
+
+#: ../../userguide/workers.rst:142
+msgid ""
+"The file path arguments for :option:`--logfile`, :option:`--pidfile` and "
+":option:`--statedb` can contain variables that the worker will expand:"
+msgstr ""
+
+#: ../../userguide/workers.rst:146
+msgid "Node name replacements"
+msgstr ""
+
+#: ../../userguide/workers.rst:151
+msgid "``%i``:  Prefork pool process index or 0 if MainProcess."
+msgstr ""
+
+#: ../../userguide/workers.rst:152
+msgid "``%I``:  Prefork pool process index with separator."
+msgstr ""
+
+#: ../../userguide/workers.rst:157
+msgid "``--logfile=%h.log`` -> :file:`george.example.com.log`"
+msgstr ""
+
+#: ../../userguide/workers.rst:158
+msgid "``--logfile=%n.log`` -> :file:`george.log`"
+msgstr ""
+
+#: ../../userguide/workers.rst:159
+msgid "``--logfile=%d`` -> :file:`example.com.log`"
+msgstr ""
+
+#: ../../userguide/workers.rst:164
+msgid "Prefork pool process index"
+msgstr ""
+
+#: ../../userguide/workers.rst:166
+msgid ""
+"The prefork pool process index specifiers will expand into a different "
+"filename depending on the process that will eventually need to open the "
+"file."
+msgstr ""
+
+#: ../../userguide/workers.rst:169
+msgid "This can be used to specify one log file per child process."
+msgstr ""
+
+#: ../../userguide/workers.rst:171
+msgid ""
+"Note that the numbers will stay within the process limit even if processes "
+"exit or if autoscale/maxtasksperchild/time limits are used.  I.e. the number"
+" is the *process index* not the process count or pid."
+msgstr ""
+
+#: ../../userguide/workers.rst:175
+msgid "``%i`` - Pool process index or 0 if MainProcess."
+msgstr ""
+
+#: ../../userguide/workers.rst:177
+msgid ""
+"Where ``-n worker1@example.com -c2 -f %n-%i.log`` will result in three log "
+"files:"
+msgstr ""
+
+#: ../../userguide/workers.rst:180
+msgid ":file:`worker1-0.log` (main process)"
+msgstr ""
+
+#: ../../userguide/workers.rst:181
+msgid ":file:`worker1-1.log` (pool process 1)"
+msgstr ""
+
+#: ../../userguide/workers.rst:182
+msgid ":file:`worker1-2.log` (pool process 2)"
+msgstr ""
+
+#: ../../userguide/workers.rst:184
+msgid "``%I`` - Pool process index with separator."
+msgstr ""
+
+#: ../../userguide/workers.rst:186
+msgid ""
+"Where ``-n worker1@example.com -c2 -f %n%I.log`` will result in three log "
+"files:"
+msgstr ""
+
+#: ../../userguide/workers.rst:189
+msgid ":file:`worker1.log` (main process)"
+msgstr ""
+
+#: ../../userguide/workers.rst:190
+msgid ":file:`worker1-1.log`` (pool process 1)"
+msgstr ""
+
+#: ../../userguide/workers.rst:191
+msgid ":file:`worker1-2.log`` (pool process 2)"
+msgstr ""
+
+#: ../../userguide/workers.rst:196
+msgid "Concurrency"
+msgstr ""
+
+#: ../../userguide/workers.rst:198
+msgid ""
+"By default multiprocessing is used to perform concurrent execution of tasks,"
+" but you can also use :ref:`Eventlet <concurrency-eventlet>`.  The number of"
+" worker processes/threads can be changed using the :option:`--concurrency` "
+"argument and defaults to the number of CPUs available on the machine."
+msgstr ""
+
+#: ../../userguide/workers.rst:203
+msgid "Number of processes (multiprocessing/prefork pool)"
+msgstr ""
+
+#: ../../userguide/workers.rst:205
+msgid ""
+"More pool processes are usually better, but there's a cut-off point where "
+"adding more pool processes affects performance in negative ways. There is "
+"even some evidence to support that having multiple worker instances running,"
+" may perform better than having a single worker. For example 3 workers with "
+"10 pool processes each.  You need to experiment to find the numbers that "
+"works best for you, as this varies based on application, work load, task run"
+" times and other factors."
+msgstr ""
+
+#: ../../userguide/workers.rst:216
+msgid "Remote control"
+msgstr ""
+
+#: ../../userguide/workers.rst:0
+msgid "The ``celery`` command"
+msgstr ""
+
+#: ../../userguide/workers.rst:222
+msgid ""
+"The :program:`celery` program is used to execute remote control commands "
+"from the command-line.  It supports all of the commands listed below.  See "
+":ref:`monitoring-control` for more information."
+msgstr ""
+
+#: ../../userguide/workers.rst:226
+msgid ""
+"pool support: *prefork, eventlet, gevent*, blocking:*threads/solo* (see "
+"note) broker support: *amqp, redis*"
+msgstr ""
+
+#: ../../userguide/workers.rst:229
+msgid ""
+"Workers have the ability to be remote controlled using a high-priority "
+"broadcast message queue.  The commands can be directed to all, or a specific"
+" list of workers."
+msgstr ""
+
+#: ../../userguide/workers.rst:233
+msgid ""
+"Commands can also have replies.  The client can then wait for and collect "
+"those replies.  Since there's no central authority to know how many workers "
+"are available in the cluster, there is also no way to estimate how many "
+"workers may send a reply, so the client has a configurable timeout — the "
+"deadline in seconds for replies to arrive in.  This timeout defaults to one "
+"second.  If the worker doesn't reply within the deadline it doesn't "
+"necessarily mean the worker didn't reply, or worse is dead, but may simply "
+"be caused by network latency or the worker being slow at processing "
+"commands, so adjust the timeout accordingly."
+msgstr ""
+
+#: ../../userguide/workers.rst:243
+msgid ""
+"In addition to timeouts, the client can specify the maximum number of "
+"replies to wait for.  If a destination is specified, this limit is set to "
+"the number of destination hosts."
+msgstr ""
+
+#: ../../userguide/workers.rst:249
+msgid ""
+"The solo and threads pool supports remote control commands, but any task "
+"executing will block any waiting control command, so it is of limited use if"
+" the worker is very busy.  In that case you must increase the timeout "
+"waiting for replies in the client."
+msgstr ""
+
+#: ../../userguide/workers.rst:257
+msgid "The :meth:`~@control.broadcast` function."
+msgstr ""
+
+#: ../../userguide/workers.rst:259
+msgid ""
+"This is the client function used to send commands to the workers. Some "
+"remote control commands also have higher-level interfaces using "
+":meth:`~@control.broadcast` in the background, like "
+":meth:`~@control.rate_limit` and :meth:`~@control.ping`."
+msgstr ""
+
+#: ../../userguide/workers.rst:264
+msgid "Sending the :control:`rate_limit` command and keyword arguments::"
+msgstr ""
+
+#: ../../userguide/workers.rst:270
+msgid ""
+"This will send the command asynchronously, without waiting for a reply. To "
+"request a reply you have to use the `reply` argument::"
+msgstr ""
+
+#: ../../userguide/workers.rst:279
+msgid ""
+"Using the `destination` argument you can specify a list of workers to "
+"receive the command::"
+msgstr ""
+
+#: ../../userguide/workers.rst:289
+msgid ""
+"Of course, using the higher-level interface to set rate limits is much more "
+"convenient, but there are commands that can only be requested using "
+":meth:`~@control.broadcast`."
+msgstr ""
+
+#: ../../userguide/workers.rst:294
+msgid "Commands"
+msgstr ""
+
+#: ../../userguide/workers.rst:299
+msgid "``revoke``: Revoking tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:300
+msgid "all"
+msgstr ""
+
+#: ../../userguide/workers.rst:301
+msgid "*amqp, redis*"
+msgstr ""
+
+#: ../../userguide/workers.rst:302
+msgid ":program:`celery -A proj control revoke <task_id>`"
+msgstr ""
+
+#: ../../userguide/workers.rst:304
+msgid ""
+"All worker nodes keeps a memory of revoked task ids, either in-memory or "
+"persistent on disk (see :ref:`worker-persistent-revokes`)."
+msgstr ""
+
+#: ../../userguide/workers.rst:307
+msgid ""
+"When a worker receives a revoke request it will skip executing the task, but"
+" it won't terminate an already executing task unless the `terminate` option "
+"is set."
+msgstr ""
+
+#: ../../userguide/workers.rst:313
+msgid ""
+"The terminate option is a last resort for administrators when a task is "
+"stuck.  It's not for terminating the task, it's for terminating the process "
+"that is executing the task, and that process may have already started "
+"processing another task at the point when the signal is sent, so for this "
+"rason you must never call this programatically."
+msgstr ""
+
+#: ../../userguide/workers.rst:320
+msgid ""
+"If `terminate` is set the worker child process processing the task will be "
+"terminated.  The default signal sent is `TERM`, but you can specify this "
+"using the `signal` argument.  Signal can be the uppercase name of any signal"
+" defined in the :mod:`signal` module in the Python Standard Library."
+msgstr ""
+
+#: ../../userguide/workers.rst:326
+msgid "Terminating a task also revokes it."
+msgstr ""
+
+#: ../../userguide/workers.rst:328 ../../userguide/workers.rst:356
+msgid "**Example**"
+msgstr ""
+
+#: ../../userguide/workers.rst:348
+msgid "Revoking multiple tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:353
+msgid ""
+"The revoke method also accepts a list argument, where it will revoke several"
+" tasks at once."
+msgstr ""
+
+#: ../../userguide/workers.rst:367
+msgid ""
+"The ``GroupResult.revoke`` method takes advantage of this since version 3.1."
+msgstr ""
+
+#: ../../userguide/workers.rst:373
+msgid "Persistent revokes"
+msgstr ""
+
+#: ../../userguide/workers.rst:375
+msgid ""
+"Revoking tasks works by sending a broadcast message to all the workers, the "
+"workers then keep a list of revoked tasks in memory.  When a worker starts "
+"up it will synchronize revoked tasks with other workers in the cluster."
+msgstr ""
+
+#: ../../userguide/workers.rst:379
+msgid ""
+"The list of revoked tasks is in-memory so if all workers restart the list of"
+" revoked ids will also vanish.  If you want to preserve this list between "
+"restarts you need to specify a file for these to be stored in by using the "
+"`--statedb` argument to :program:`celery worker`:"
+msgstr ""
+
+#: ../../userguide/workers.rst:388
+msgid ""
+"or if you use :program:`celery multi` you will want to create one file per "
+"worker instance so then you can use the `%n` format to expand the current "
+"node name:"
+msgstr ""
+
+#: ../../userguide/workers.rst:397
+msgid "See also :ref:`worker-files`"
+msgstr ""
+
+#: ../../userguide/workers.rst:399
+msgid ""
+"Note that remote control commands must be working for revokes to work. "
+"Remote control commands are only supported by the RabbitMQ (amqp) and Redis "
+"at this point."
+msgstr ""
+
+#: ../../userguide/workers.rst:406
+msgid "Time Limits"
+msgstr ""
+
+#: ../../userguide/workers.rst:410
+msgid "pool support: *prefork/gevent*"
+msgstr ""
+
+#: ../../userguide/workers.rst:0
+msgid "Soft, or hard?"
+msgstr ""
+
+#: ../../userguide/workers.rst:414
+msgid ""
+"The time limit is set in two values, `soft` and `hard`. The soft time limit "
+"allows the task to catch an exception to clean up before it is killed: the "
+"hard timeout is not catchable and force terminates the task."
+msgstr ""
+
+#: ../../userguide/workers.rst:419
+msgid ""
+"A single task can potentially run forever, if you have lots of tasks waiting"
+" for some event that will never happen you will block the worker from "
+"processing new tasks indefinitely.  The best way to defend against this "
+"scenario happening is enabling time limits."
+msgstr ""
+
+#: ../../userguide/workers.rst:424
+msgid ""
+"The time limit (`--time-limit`) is the maximum number of seconds a task may "
+"run before the process executing it is terminated and replaced by a new "
+"process.  You can also enable a soft time limit (`--soft-time-limit`), this "
+"raises an exception the task can catch to clean up before the hard time "
+"limit kills it:"
+msgstr ""
+
+#: ../../userguide/workers.rst:442
+msgid ""
+"Time limits can also be set using the :setting:`CELERYD_TASK_TIME_LIMIT` / "
+":setting:`CELERYD_TASK_SOFT_TIME_LIMIT` settings."
+msgstr ""
+
+#: ../../userguide/workers.rst:447
+msgid ""
+"Time limits do not currently work on Windows and other platforms that do not"
+" support the ``SIGUSR1`` signal."
+msgstr ""
+
+#: ../../userguide/workers.rst:452
+msgid "Changing time limits at runtime"
+msgstr ""
+
+#: ../../userguide/workers.rst:455
+msgid "broker support: *amqp, redis*"
+msgstr ""
+
+#: ../../userguide/workers.rst:457
+msgid ""
+"There is a remote control command that enables you to change both soft and "
+"hard time limits for a task — named ``time_limit``."
+msgstr ""
+
+#: ../../userguide/workers.rst:460
+msgid ""
+"Example changing the time limit for the ``tasks.crawl_the_web`` task to have"
+" a soft time limit of one minute, and a hard time limit of two minutes::"
+msgstr ""
+
+#: ../../userguide/workers.rst:468
+msgid ""
+"Only tasks that starts executing after the time limit change will be "
+"affected."
+msgstr ""
+
+#: ../../userguide/workers.rst:473
+msgid "Rate Limits"
+msgstr ""
+
+#: ../../userguide/workers.rst:478
+msgid "Changing rate-limits at runtime"
+msgstr ""
+
+#: ../../userguide/workers.rst:480
+msgid ""
+"Example changing the rate limit for the `myapp.mytask` task to execute at "
+"most 200 tasks of that type every minute:"
+msgstr ""
+
+#: ../../userguide/workers.rst:487
+msgid ""
+"The above does not specify a destination, so the change request will affect "
+"all worker instances in the cluster.  If you only want to affect a specific "
+"list of workers you can include the ``destination`` argument:"
+msgstr ""
+
+#: ../../userguide/workers.rst:498
+msgid ""
+"This won't affect workers with the :setting:`CELERY_DISABLE_RATE_LIMITS` "
+"setting enabled."
+msgstr ""
+
+#: ../../userguide/workers.rst:504
+msgid "Max tasks per child setting"
+msgstr ""
+
+#: ../../userguide/workers.rst:508
+msgid "pool support: *prefork*"
+msgstr ""
+
+#: ../../userguide/workers.rst:510
+msgid ""
+"With this option you can configure the maximum number of tasks a worker can "
+"execute before it's replaced by a new process."
+msgstr ""
+
+#: ../../userguide/workers.rst:513
+msgid ""
+"This is useful if you have memory leaks you have no control over for example"
+" from closed source C extensions."
+msgstr ""
+
+#: ../../userguide/workers.rst:516
+msgid ""
+"The option can be set using the workers `--maxtasksperchild` argument or "
+"using the :setting:`CELERYD_MAX_TASKS_PER_CHILD` setting."
+msgstr ""
+
+#: ../../userguide/workers.rst:522
+msgid "Autoscaling"
+msgstr ""
+
+#: ../../userguide/workers.rst:526
+msgid "pool support: *prefork*, *gevent*"
+msgstr ""
+
+#: ../../userguide/workers.rst:528
+msgid ""
+"The *autoscaler* component is used to dynamically resize the pool based on "
+"load:"
+msgstr ""
+
+#: ../../userguide/workers.rst:532
+msgid "The autoscaler adds more pool processes when there is work to do,"
+msgstr ""
+
+#: ../../userguide/workers.rst:532
+msgid "and starts removing processes when the workload is low."
+msgstr ""
+
+#: ../../userguide/workers.rst:534
+msgid ""
+"It's enabled by the :option:`--autoscale` option, which needs two numbers: "
+"the maximum and minimum number of pool processes::"
+msgstr ""
+
+#: ../../userguide/workers.rst:543
+msgid ""
+"You can also define your own rules for the autoscaler by subclassing "
+":class:`~celery.worker.autoscaler.Autoscaler`. Some ideas for metrics "
+"include load average or the amount of memory available. You can specify a "
+"custom autoscaler with the :setting:`CELERYD_AUTOSCALER` setting."
+msgstr ""
+
+#: ../../userguide/workers.rst:551
+msgid "Queues"
+msgstr ""
+
+#: ../../userguide/workers.rst:553
+msgid ""
+"A worker instance can consume from any number of queues. By default it will "
+"consume from all queues defined in the :setting:`CELERY_QUEUES` setting "
+"(which if not specified defaults to the queue named ``celery``)."
+msgstr ""
+
+#: ../../userguide/workers.rst:558
+msgid ""
+"You can specify what queues to consume from at startup, by giving a comma "
+"separated list of queues to the :option:`-Q` option:"
+msgstr ""
+
+#: ../../userguide/workers.rst:565
+msgid ""
+"If the queue name is defined in :setting:`CELERY_QUEUES` it will use that "
+"configuration, but if it's not defined in the list of queues Celery will "
+"automatically generate a new queue for you (depending on the "
+":setting:`CELERY_CREATE_MISSING_QUEUES` option)."
+msgstr ""
+
+#: ../../userguide/workers.rst:570
+msgid ""
+"You can also tell the worker to start and stop consuming from a queue at "
+"runtime using the remote control commands :control:`add_consumer` and "
+":control:`cancel_consumer`."
+msgstr ""
+
+#: ../../userguide/workers.rst:577
+msgid "Queues: Adding consumers"
+msgstr ""
+
+#: ../../userguide/workers.rst:579
+msgid ""
+"The :control:`add_consumer` control command will tell one or more workers to"
+" start consuming from a queue. This operation is idempotent."
+msgstr ""
+
+#: ../../userguide/workers.rst:582
+msgid ""
+"To tell all workers in the cluster to start consuming from a queue named "
+"\"``foo``\" you can use the :program:`celery control` program:"
+msgstr ""
+
+#: ../../userguide/workers.rst:591
+msgid ""
+"If you want to specify a specific worker you can use the "
+":option:`--destination`` argument:"
+msgstr ""
+
+#: ../../userguide/workers.rst:598
+msgid ""
+"The same can be accomplished dynamically using the "
+":meth:`@control.add_consumer` method::"
+msgstr ""
+
+#: ../../userguide/workers.rst:608
+msgid ""
+"By now I have only shown examples using automatic queues, If you need more "
+"control you can also specify the exchange, routing_key and even other "
+"options::"
+msgstr ""
+
+#: ../../userguide/workers.rst:628
+msgid "Queues: Cancelling consumers"
+msgstr ""
+
+#: ../../userguide/workers.rst:630
+msgid ""
+"You can cancel a consumer by queue name using the :control:`cancel_consumer`"
+" control command."
+msgstr ""
+
+#: ../../userguide/workers.rst:633
+msgid ""
+"To force all workers in the cluster to cancel consuming from a queue you can"
+" use the :program:`celery control` program:"
+msgstr ""
+
+#: ../../userguide/workers.rst:640
+msgid ""
+"The :option:`--destination` argument can be used to specify a worker, or a "
+"list of workers, to act on the command:"
+msgstr ""
+
+#: ../../userguide/workers.rst:648
+msgid ""
+"You can also cancel consumers programmatically using the "
+":meth:`@control.cancel_consumer` method:"
+msgstr ""
+
+#: ../../userguide/workers.rst:659
+msgid "Queues: List of active queues"
+msgstr ""
+
+#: ../../userguide/workers.rst:661
+msgid ""
+"You can get a list of queues that a worker consumes from by using the "
+":control:`active_queues` control command:"
+msgstr ""
+
+#: ../../userguide/workers.rst:669
+msgid ""
+"Like all other remote control commands this also supports the "
+":option:`--destination` argument used to specify which workers should reply "
+"to the request:"
+msgstr ""
+
+#: ../../userguide/workers.rst:679
+msgid ""
+"This can also be done programmatically by using the "
+":meth:`@control.inspect.active_queues` method::"
+msgstr ""
+
+#: ../../userguide/workers.rst:691
+msgid "Autoreloading"
+msgstr ""
+
+#: ../../userguide/workers.rst:695
+msgid "pool support: *prefork, eventlet, gevent, threads, solo*"
+msgstr ""
+
+#: ../../userguide/workers.rst:697
+msgid ""
+"Starting :program:`celery worker` with the :option:`--autoreload` option "
+"will enable the worker to watch for file system changes to all imported task"
+" modules imported (and also any non-task modules added to the "
+":setting:`CELERY_IMPORTS` setting or the :option:`-I|--include` option)."
+msgstr ""
+
+#: ../../userguide/workers.rst:702
+msgid ""
+"This is an experimental feature intended for use in development only, using "
+"auto-reload in production is discouraged as the behavior of reloading a "
+"module in Python is undefined, and may cause hard to diagnose bugs and "
+"crashes.  Celery uses the same approach as the auto-reloader found in e.g. "
+"the Django ``runserver`` command."
+msgstr ""
+
+#: ../../userguide/workers.rst:708
+msgid ""
+"When auto-reload is enabled the worker starts an additional thread that "
+"watches for changes in the file system.  New modules are imported, and "
+"already imported modules are reloaded whenever a change is detected, and if "
+"the prefork pool is used the child processes will finish the work they are "
+"doing and exit, so that they can be replaced by fresh processes effectively "
+"reloading the code."
+msgstr ""
+
+#: ../../userguide/workers.rst:715
+msgid ""
+"File system notification backends are pluggable, and it comes with three "
+"implementations:"
+msgstr ""
+
+#: ../../userguide/workers.rst:718
+msgid "inotify (Linux)"
+msgstr ""
+
+#: ../../userguide/workers.rst:720
+msgid ""
+"Used if the :mod:`pyinotify` library is installed. If you are running on "
+"Linux this is the recommended implementation, to install the "
+":mod:`pyinotify` library you have to run the following command:"
+msgstr ""
+
+#: ../../userguide/workers.rst:729
+msgid "kqueue (OS X/BSD)"
+msgstr ""
+
+#: ../../userguide/workers.rst:731
+msgid "stat"
+msgstr ""
+
+#: ../../userguide/workers.rst:733
+msgid ""
+"The fallback implementation simply polls the files using ``stat`` and is "
+"very expensive."
+msgstr ""
+
+#: ../../userguide/workers.rst:736
+msgid ""
+"You can force an implementation by setting the :envvar:`CELERYD_FSNOTIFY` "
+"environment variable:"
+msgstr ""
+
+#: ../../userguide/workers.rst:748
+msgid "Pool Restart Command"
+msgstr ""
+
+#: ../../userguide/workers.rst:752
+msgid "Requires the :setting:`CELERYD_POOL_RESTARTS` setting to be enabled."
+msgstr ""
+
+#: ../../userguide/workers.rst:754
+msgid ""
+"The remote control command :control:`pool_restart` sends restart requests to"
+" the workers child processes.  It is particularly useful for forcing the "
+"worker to import new modules, or for reloading already imported modules.  "
+"This command does not interrupt executing tasks."
+msgstr ""
+
+#: ../../userguide/workers.rst:760
+msgid "Example"
+msgstr ""
+
+#: ../../userguide/workers.rst:762
+msgid ""
+"Running the following command will result in the `foo` and `bar` modules "
+"being imported by the worker processes:"
+msgstr ""
+
+#: ../../userguide/workers.rst:770
+msgid "Use the ``reload`` argument to reload modules it has already imported:"
+msgstr ""
+
+#: ../../userguide/workers.rst:778
+msgid ""
+"If you don't specify any modules then all known tasks modules will be "
+"imported/reloaded:"
+msgstr ""
+
+#: ../../userguide/workers.rst:785
+msgid ""
+"The ``modules`` argument is a list of modules to modify. ``reload`` "
+"specifies whether to reload modules if they have previously been imported. "
+"By default ``reload`` is disabled. The `pool_restart` command uses the "
+"Python :func:`reload` function to reload modules, or you can provide your "
+"own custom reloader by passing the ``reloader`` argument."
+msgstr ""
+
+#: ../../userguide/workers.rst:793
+msgid ""
+"Module reloading comes with caveats that are documented in :func:`reload`. "
+"Please read this documentation and make sure your modules are suitable for "
+"reloading."
+msgstr ""
+
+#: ../../userguide/workers.rst:799
+msgid "http://pyunit.sourceforge.net/notes/reloading.html"
+msgstr ""
+
+#: ../../userguide/workers.rst:800
+msgid "http://www.indelible.org/ink/python-reloading/"
+msgstr ""
+
+#: ../../userguide/workers.rst:801
+msgid "http://docs.python.org/library/functions.html#reload"
+msgstr ""
+
+#: ../../userguide/workers.rst:807
+msgid "Inspecting workers"
+msgstr ""
+
+#: ../../userguide/workers.rst:809
+msgid ""
+":class:`@control.inspect` lets you inspect running workers.  It uses remote "
+"control commands under the hood."
+msgstr ""
+
+#: ../../userguide/workers.rst:812
+msgid ""
+"You can also use the ``celery`` command to inspect workers, and it supports "
+"the same commands as the :class:`@Celery.control` interface."
+msgstr ""
+
+#: ../../userguide/workers.rst:830
+msgid "Dump of registered tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:832
+msgid ""
+"You can get a list of tasks registered in the worker using the "
+":meth:`~@control.inspect.registered`::"
+msgstr ""
+
+#: ../../userguide/workers.rst:842
+msgid "Dump of currently executing tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:844
+msgid ""
+"You can get a list of active tasks using :meth:`~@control.inspect.active`::"
+msgstr ""
+
+#: ../../userguide/workers.rst:857
+msgid "Dump of scheduled (ETA) tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:859
+msgid ""
+"You can get a list of tasks waiting to be scheduled by using "
+":meth:`~@control.inspect.scheduled`::"
+msgstr ""
+
+#: ../../userguide/workers.rst:879
+msgid "These are tasks with an eta/countdown argument, not periodic tasks."
+msgstr ""
+
+#: ../../userguide/workers.rst:884
+msgid "Dump of reserved tasks"
+msgstr ""
+
+#: ../../userguide/workers.rst:886
+msgid ""
+"Reserved tasks are tasks that has been received, but is still waiting to be "
+"executed."
+msgstr ""
+
+#: ../../userguide/workers.rst:889
+msgid "You can get a list of these using :meth:`~@control.inspect.reserved`::"
+msgstr ""
+
+#: ../../userguide/workers.rst:903
+msgid "Statistics"
+msgstr ""
+
+#: ../../userguide/workers.rst:905
+msgid ""
+"The remote control command ``inspect stats`` (or "
+":meth:`~@control.inspect.stats`) will give you a long list of useful (or not"
+" so useful) statistics about the worker:"
+msgstr ""
+
+#: ../../userguide/workers.rst:913
+msgid "The output will include the following fields:"
+msgstr ""
+
+#: ../../userguide/workers.rst:915
+msgid "``broker``"
+msgstr ""
+
+#: ../../userguide/workers.rst:917
+msgid "Section for broker information."
+msgstr ""
+
+#: ../../userguide/workers.rst:919
+msgid "``connect_timeout``"
+msgstr ""
+
+#: ../../userguide/workers.rst:921
+msgid "Timeout in seconds (int/float) for establishing a new connection."
+msgstr ""
+
+#: ../../userguide/workers.rst:923
+msgid "``heartbeat``"
+msgstr ""
+
+#: ../../userguide/workers.rst:925
+msgid "Current heartbeat value (set by client)."
+msgstr ""
+
+#: ../../userguide/workers.rst:927
+msgid "``hostname``"
+msgstr ""
+
+#: ../../userguide/workers.rst:929
+msgid "Hostname of the remote broker."
+msgstr ""
+
+#: ../../userguide/workers.rst:931
+msgid "``insist``"
+msgstr ""
+
+#: ../../userguide/workers.rst:933
+msgid "No longer used."
+msgstr ""
+
+#: ../../userguide/workers.rst:935
+msgid "``login_method``"
+msgstr ""
+
+#: ../../userguide/workers.rst:937
+msgid "Login method used to connect to the broker."
+msgstr ""
+
+#: ../../userguide/workers.rst:939
+msgid "``port``"
+msgstr ""
+
+#: ../../userguide/workers.rst:941
+msgid "Port of the remote broker."
+msgstr ""
+
+#: ../../userguide/workers.rst:943
+msgid "``ssl``"
+msgstr ""
+
+#: ../../userguide/workers.rst:945
+msgid "SSL enabled/disabled."
+msgstr ""
+
+#: ../../userguide/workers.rst:947
+msgid "``transport``"
+msgstr ""
+
+#: ../../userguide/workers.rst:949
+msgid "Name of transport used (e.g. ``amqp`` or ``redis``)"
+msgstr ""
+
+#: ../../userguide/workers.rst:951
+msgid "``transport_options``"
+msgstr ""
+
+#: ../../userguide/workers.rst:953
+msgid "Options passed to transport."
+msgstr ""
+
+#: ../../userguide/workers.rst:955
+msgid "``uri_prefix``"
+msgstr ""
+
+#: ../../userguide/workers.rst:957
+msgid ""
+"Some transports expects the host name to be an URL, this applies to for "
+"example SQLAlchemy where the host name part is the connection URI:"
+msgstr ""
+
+#: ../../userguide/workers.rst:960
+msgid "redis+socket:///tmp/redis.sock"
+msgstr ""
+
+#: ../../userguide/workers.rst:962
+msgid "In this example the uri prefix will be ``redis``."
+msgstr ""
+
+#: ../../userguide/workers.rst:964
+msgid "``userid``"
+msgstr ""
+
+#: ../../userguide/workers.rst:966
+msgid "User id used to connect to the broker with."
+msgstr ""
+
+#: ../../userguide/workers.rst:968
+msgid "``virtual_host``"
+msgstr ""
+
+#: ../../userguide/workers.rst:970
+msgid "Virtual host used."
+msgstr ""
+
+#: ../../userguide/workers.rst:972
+msgid "``clock``"
+msgstr ""
+
+#: ../../userguide/workers.rst:974
+msgid ""
+"Value of the workers logical clock.  This is a positive integer and should "
+"be increasing every time you receive statistics."
+msgstr ""
+
+#: ../../userguide/workers.rst:977
+msgid "``pid``"
+msgstr ""
+
+#: ../../userguide/workers.rst:979
+msgid "Process id of the worker instance (Main process)."
+msgstr ""
+
+#: ../../userguide/workers.rst:981
+msgid "``pool``"
+msgstr ""
+
+#: ../../userguide/workers.rst:983
+msgid "Pool-specific section."
+msgstr ""
+
+#: ../../userguide/workers.rst:985
+msgid "``max-concurrency``"
+msgstr ""
+
+#: ../../userguide/workers.rst:987
+msgid "Max number of processes/threads/green threads."
+msgstr ""
+
+#: ../../userguide/workers.rst:989
+msgid "``max-tasks-per-child``"
+msgstr ""
+
+#: ../../userguide/workers.rst:991
+msgid "Max number of tasks a thread may execute before being recycled."
+msgstr ""
+
+#: ../../userguide/workers.rst:993
+msgid "``processes``"
+msgstr ""
+
+#: ../../userguide/workers.rst:995
+msgid "List of pids (or thread-id's)."
+msgstr ""
+
+#: ../../userguide/workers.rst:997
+msgid "``put-guarded-by-semaphore``"
+msgstr ""
+
+#: ../../userguide/workers.rst:999
+msgid "Internal"
+msgstr ""
+
+#: ../../userguide/workers.rst:1001
+msgid "``timeouts``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1003
+msgid "Default values for time limits."
+msgstr ""
+
+#: ../../userguide/workers.rst:1005
+msgid "``writes``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1007
+msgid ""
+"Specific to the prefork pool, this shows the distribution of writes to each "
+"process in the pool when using async I/O."
+msgstr ""
+
+#: ../../userguide/workers.rst:1010
+msgid "``prefetch_count``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1012
+msgid "Current prefetch count value for the task consumer."
+msgstr ""
+
+#: ../../userguide/workers.rst:1014
+msgid "``rusage``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1016
+msgid ""
+"System usage statistics.  The fields available may be different on your "
+"platform."
+msgstr ""
+
+#: ../../userguide/workers.rst:1019
+msgid "From :manpage:`getrusage(2)`:"
+msgstr ""
+
+#: ../../userguide/workers.rst:1021
+msgid "``stime``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1023
+msgid "Time spent in operating system code on behalf of this process."
+msgstr ""
+
+#: ../../userguide/workers.rst:1025
+msgid "``utime``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1027
+msgid "Time spent executing user instructions."
+msgstr ""
+
+#: ../../userguide/workers.rst:1029
+msgid "``maxrss``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1031
+msgid "The maximum resident size used by this process (in kilobytes)."
+msgstr ""
+
+#: ../../userguide/workers.rst:1033
+msgid "``idrss``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1035
+msgid ""
+"Amount of unshared memory used for data (in kilobytes times ticks of "
+"execution)"
+msgstr ""
+
+#: ../../userguide/workers.rst:1038
+msgid "``isrss``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1040
+msgid ""
+"Amount of unshared memory used for stack space (in kilobytes times ticks of "
+"execution)"
+msgstr ""
+
+#: ../../userguide/workers.rst:1043
+msgid "``ixrss``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1045
+msgid ""
+"Amount of memory shared with other processes (in kilobytes times ticks of "
+"execution)."
+msgstr ""
+
+#: ../../userguide/workers.rst:1048
+msgid "``inblock``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1050
+msgid ""
+"Number of times the file system had to read from the disk on behalf of this "
+"process."
+msgstr ""
+
+#: ../../userguide/workers.rst:1053
+msgid "``oublock``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1055
+msgid ""
+"Number of times the file system has to write to disk on behalf of this "
+"process."
+msgstr ""
+
+#: ../../userguide/workers.rst:1058
+msgid "``majflt``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1060
+msgid "Number of page faults which were serviced by doing I/O."
+msgstr ""
+
+#: ../../userguide/workers.rst:1062
+msgid "``minflt``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1064
+msgid "Number of page faults which were serviced without doing I/O."
+msgstr ""
+
+#: ../../userguide/workers.rst:1066
+msgid "``msgrcv``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1068
+msgid "Number of IPC messages received."
+msgstr ""
+
+#: ../../userguide/workers.rst:1070
+msgid "``msgsnd``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1072
+msgid "Number of IPC messages sent."
+msgstr ""
+
+#: ../../userguide/workers.rst:1074
+msgid "``nvcsw``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1076
+msgid "Number of times this process voluntarily invoked a context switch."
+msgstr ""
+
+#: ../../userguide/workers.rst:1078
+msgid "``nivcsw``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1080
+msgid "Number of times an involuntary context switch took place."
+msgstr ""
+
+#: ../../userguide/workers.rst:1082
+msgid "``nsignals``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1084
+msgid "Number of signals received."
+msgstr ""
+
+#: ../../userguide/workers.rst:1086
+msgid "``nswap``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1088
+msgid "The number of times this process was swapped entirely out of memory."
+msgstr ""
+
+#: ../../userguide/workers.rst:1091
+msgid "``total``"
+msgstr ""
+
+#: ../../userguide/workers.rst:1093
+msgid ""
+"List of task names and a total number of times that task have been executed "
+"since worker start."
+msgstr ""
+
+#: ../../userguide/workers.rst:1098
+msgid "Additional Commands"
+msgstr ""
+
+#: ../../userguide/workers.rst:1103
+msgid "Remote shutdown"
+msgstr ""
+
+#: ../../userguide/workers.rst:1105
+msgid "This command will gracefully shut down the worker remotely:"
+msgstr ""
+
+#: ../../userguide/workers.rst:1115
+msgid "Ping"
+msgstr ""
+
+#: ../../userguide/workers.rst:1117
+msgid ""
+"This command requests a ping from alive workers. The workers reply with the "
+"string 'pong', and that's just about it. It will use the default one second "
+"timeout for replies unless you specify a custom timeout:"
+msgstr ""
+
+#: ../../userguide/workers.rst:1129
+msgid ""
+":meth:`~@control.ping` also supports the `destination` argument, so you can "
+"specify which workers to ping::"
+msgstr ""
+
+#: ../../userguide/workers.rst:1142
+msgid "Enable/disable events"
+msgstr ""
+
+#: ../../userguide/workers.rst:1144
+msgid ""
+"You can enable/disable events by using the `enable_events`, `disable_events`"
+" commands.  This is useful to temporarily monitor a worker using "
+":program:`celery events`/:program:`celerymon`."
+msgstr ""
+
+#: ../../userguide/workers.rst:1156
+msgid "Writing your own remote control commands"
+msgstr ""
+
+#: ../../userguide/workers.rst:1158
+msgid ""
+"Remote control commands are registered in the control panel and they take a "
+"single argument: the current :class:`~celery.worker.control.ControlDispatch`"
+" instance. From there you have access to the active "
+":class:`~celery.worker.consumer.Consumer` if needed."
+msgstr ""
+
+#: ../../userguide/workers.rst:1164
+msgid ""
+"Here's an example control command that increments the task prefetch count:"
+msgstr ""

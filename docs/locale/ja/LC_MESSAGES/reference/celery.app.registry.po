@@ -1,0 +1,54 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.app.registry.rst:3
+#: ../../../celery/app/registry.pydocstring of celery.app.registry:2
+msgid "celery.app.registry"
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of celery.app.registry:4
+msgid "Registry of available tasks."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.NotRegistered:1
+msgid "The task is not registered."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.register:1
+msgid "Register a task in the task registry."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.register:3
+msgid ""
+"The task will be automatically instantiated if not already an instance."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.unregister:1
+msgid "Unregister task by name."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.unregister:3
+msgid ""
+"name of the task to unregister, or a :class:`celery.task.base.Task` with a "
+"valid `name` attribute."
+msgstr ""
+
+#: ../../../celery/app/registry.pydocstring of
+#: celery.app.registry.TaskRegistry.unregister:6
+msgid "if the task has not been registered."
+msgstr ""

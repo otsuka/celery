@@ -1,0 +1,41 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.worker.autoreload.rst:3
+#: ../../../celery/worker/autoreload.pydocstring of celery.worker.autoreload:2
+msgid "celery.worker.autoreload"
+msgstr ""
+
+#: ../../../celery/worker/autoreload.pydocstring of celery.worker.autoreload:4
+msgid "This module implements automatic module reloading"
+msgstr ""
+
+#: ../../../celery/worker/autoreload.pydocstring of
+#: celery.worker.autoreload.Autoreloader:1
+msgid "Tracks changes in modules and fires reload commands"
+msgstr ""
+
+#: ../../../celery/worker/autoreload.pydocstring of
+#: celery.worker.autoreload.StatMonitor:1
+msgid "File change monitor based on the ``stat`` system call."
+msgstr ""
+
+#: ../../../celery/worker/autoreload.pydocstring of
+#: celery.worker.autoreload.KQueueMonitor:1
+msgid "File change monitor based on BSD kernel event notifications"
+msgstr ""
+
+#: ../../../celery/worker/autoreload.pydocstring of
+#: celery.worker.autoreload.InotifyMonitor:1
+msgid "File change monitor based on Linux kernel `inotify` subsystem"
+msgstr ""

@@ -1,0 +1,118 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:2
+msgid "celery.contrib.batches"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:4
+msgid ""
+"Experimental task class that buffers messages and processes them as a list."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:8
+msgid ""
+"For this to work you have to set :setting:`CELERYD_PREFETCH_MULTIPLIER` to "
+"zero, or some value where the final multiplied value is higher than "
+"``flush_every``."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:12
+msgid ""
+"In the future we hope to add the ability to direct batching tasks to a "
+"channel with different QoS requirements than the task channel."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:15
+msgid "**Simple Example**"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:17
+msgid ""
+"A click counter that flushes the buffer every 100 messages, and every "
+"seconds.  Does not do anything with the data, but can easily be modified to "
+"store it in a database."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:32
+msgid "Then you can ask for a click to be counted by doing::"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:36
+msgid "**Example returning results**"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:38
+msgid ""
+"An interface to the Web of Trust API that flushes the buffer every 100 "
+"messages, and every 10 seconds."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:69
+msgid "Using the API is done as follows::"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of celery.contrib.batches:75
+msgid ""
+"If you don't have an ``app`` instance then use the current app proxy "
+"instead::"
+msgstr ""
+
+#: ../../reference/celery.contrib.batches.rst:5
+msgid "**API**"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.Batches.flush_every:1
+msgid "Maximum number of message in buffer."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.Batches.flush_interval:1
+msgid "Timeout in seconds before buffer is flushed anyway."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest:1
+msgid "Pickleable request."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.args:1
+msgid "positional arguments"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.delivery_info:1
+msgid "message delivery information."
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.hostname:1
+msgid "worker node name"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.id:1
+msgid "task id"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.kwargs:1
+msgid "keyword arguments"
+msgstr ""
+
+#: ../../../celery/contrib/batches.pydocstring of
+#: celery.contrib.batches.SimpleRequest.name:1
+msgid "task name"
+msgstr ""

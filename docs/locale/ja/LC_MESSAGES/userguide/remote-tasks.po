@@ -1,0 +1,116 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../userguide/remote-tasks.rst:5
+msgid "HTTP Callback Tasks (Webhooks)"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:15
+msgid "Basics"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:17
+msgid ""
+"If you need to call into another language, framework or similar, you can do "
+"so by using HTTP callback tasks."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:20
+msgid ""
+"The HTTP callback tasks uses GET/POST data to pass arguments and returns "
+"result as a JSON response. The scheme to call a task is::"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:25
+msgid "or using POST::"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:31
+msgid "POST data needs to be form encoded."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:33
+msgid "Whether to use GET or POST is up to you and your requirements."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:35
+msgid ""
+"The web page should then return a response in the following format if the "
+"execution was successful::"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:40
+msgid "or if there was an error::"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:45
+msgid "Enabling the HTTP task"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:47
+msgid ""
+"To enable the HTTP dispatch task you have to add :mod:`celery.task.http` to "
+":setting:`CELERY_IMPORTS`, or start the worker with ``-I celery.task.http``."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:55
+msgid "Django webhook example"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:57
+msgid "With this information you could define a simple task in Django:"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:75
+msgid "Ruby on Rails webhook example"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:77
+msgid "or in Ruby on Rails:"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:90
+msgid ""
+"You can easily port this scheme to any language/framework; new examples and "
+"libraries are very welcome."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:96
+msgid "Calling webhook tasks"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:98
+msgid "To call a task you can use the :class:`~celery.task.http.URL` class:"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:104
+msgid ""
+":class:`~celery.task.http.URL` is a shortcut to the "
+":class:`HttpDispatchTask`. You can subclass this to extend the "
+"functionality."
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:115
+msgid ""
+"The output of :program:`celery worker` (or the log file if enabled) should "
+"show the task being executed::"
+msgstr ""
+
+#: ../../userguide/remote-tasks.rst:121
+msgid ""
+"Since calling tasks can be done via HTTP using the "
+":func:`djcelery.views.apply` view, calling tasks from other languages is "
+"easy. For an example service exposing tasks via HTTP you should have a look "
+"at `examples/celery_http_gateway` in the Celery distribution: "
+"http://github.com/celery/celery/tree/master/examples/celery_http_gateway/"
+msgstr ""

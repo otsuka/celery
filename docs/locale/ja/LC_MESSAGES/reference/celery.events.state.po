@@ -1,0 +1,128 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.events.state.rst:3
+#: ../../../celery/events/state.pydocstring of celery.events.state:2
+msgid "celery.events.state"
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state:4
+msgid ""
+"This module implements a datastructure used to keep track of the state of a "
+"cluster of workers and the tasks it is working on (by consuming events)."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state:8
+msgid ""
+"For every event consumed the state is updated, so the state represents the "
+"state of the cluster at the time of the last event."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state:12
+msgid ""
+"Snapshots (:mod:`celery.events.snapshot`) can be used to take \"pictures\" "
+"of this state at regular intervals to e.g. store that in a database."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state.Worker:1
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.Worker:1
+msgid "Worker State."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state.Task:1
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.Task:1
+msgid "Task State."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state.Task.info:1
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.Task.info:1
+msgid "Information about this task suitable for on-screen display."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.Task.merge_rules:1
+msgid ""
+"How to merge out of order events. Disorder is detected by logical ordering "
+"(e.g. :event:`task-received` must have happened before a :event:`task-"
+"failed` event)."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.Task.merge_rules:5
+msgid ""
+"A merge rule consists of a state and a list of fields to keep from that "
+"state. ``(RECEIVED, ('name', 'args')``, means the name and args fields are "
+"always taken from the RECEIVED state, and any values for these fields "
+"received before or after is simply ignored."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of celery.events.state.State:1
+msgid "Records clusters state."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.alive_workers:1
+msgid "Return a list of (seemingly) alive workers."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.get_or_create_task:1
+msgid "Get or create task by uuid."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.get_or_create_worker:1
+msgid "Get or create worker by hostname."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.get_or_create_worker:3
+msgid "Return tuple of ``(worker, was_created)``."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.task_event:1
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.worker_event:1
+msgid "Deprecated, use :meth:`event`."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.task_types:1
+msgid "Return a list of all seen task types."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.tasks_by_time:1
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.tasks_by_timestamp:1
+msgid "Generator giving tasks ordered by time, in ``(uuid, Task)`` tuples."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.tasks_by_type:1
+msgid "Get all tasks by type."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.tasks_by_type:3
+msgid "Return a list of ``(uuid, Task)`` tuples."
+msgstr ""
+
+#: ../../../celery/events/state.pydocstring of
+#: celery.events.state.State.tasks_by_worker:1
+msgid "Get all tasks by worker."
+msgstr ""

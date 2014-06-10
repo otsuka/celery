@@ -1,0 +1,173 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../docstring of celery.datastructures:2
+msgid "celery.datastructures"
+msgstr ""
+
+#: ../../docstring of celery.datastructures:4
+msgid "Custom types and data structures."
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:9
+msgid "AttributeDict"
+msgstr ""
+
+#: ../../docstring of celery.datastructures.AttributeDict:1
+msgid "Dict subclass with attribute access."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.AttributeDictMixin:1
+msgid "Augment classes with a Mapping interface by adding attribute access."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.AttributeDictMixin:3
+msgid "I.e. `d.key -> d[key]`."
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:18
+msgid "DictAttribute"
+msgstr ""
+
+#: ../../docstring of celery.datastructures.DictAttribute:1
+msgid "Dict interface to attributes."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.DictAttribute:3
+msgid "`obj[k] -> obj.k` `obj[k] = val -> obj.k = val`"
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:25
+msgid "ConfigurationView"
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView:1
+msgid "A view over an applications configuration dicts."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView:3
+msgid "Custom (but older) version of :class:`collections.ChainMap`."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView:5
+msgid ""
+"If the key does not exist in ``changes``, the ``defaults`` dicts are "
+"consulted."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView:8
+msgid "Dict containing changes to the configuration."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView:9
+msgid "List of dicts containing the default configuration."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.ConfigurationView.clear:1
+msgid "Remove all changes, but keep defaults."
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:32
+msgid "ExceptionInfo"
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo:1
+msgid "Exception wrapping an exception and its traceback."
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo:3
+msgid "The exception info tuple as returned by :func:`sys.exc_info`."
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo.exception:1
+msgid "Exception instance."
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo.internal:1
+msgid "Set to true if this is an internal error."
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo.tb:1
+msgid "Pickleable traceback instance for use with :mod:`traceback`"
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo.traceback:1
+msgid "String representation of the traceback."
+msgstr ""
+
+#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
+#: celery.datastructures.ExceptionInfo.type:1
+msgid "Exception type."
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:38
+msgid "LimitedSet"
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet:1
+msgid "Kind-of Set with limitations."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet:3
+msgid ""
+"Good for when you need to test for membership (`a in set`), but the list "
+"might become too big."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet:6
+msgid "Maximum number of members before we start evicting expired members."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet:8
+msgid "Time in seconds, before a membership expires."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet.add:1
+msgid "Add a new member."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet.clear:1
+msgid "Remove all members"
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet.discard:1
+#: ../../docstring of celery.datastructures.LimitedSet.pop_value:1
+msgid "Remove membership by finding value."
+msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet.purge:1
+msgid "Purge expired items."
+msgstr ""
+
+#: ../../internals/reference/celery.datastructures.rst:45
+msgid "LRUCache"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.datastructures.LRUCache:1
+msgid "LRU Cache implementation using a doubly linked list to track access."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.datastructures.LRUCache:3
+msgid ""
+"The maximum number of keys to keep in the cache. When a new key is inserted "
+"and the limit has been exceeded, the *Least Recently Used* key will be "
+"discarded from the cache."
+msgstr ""

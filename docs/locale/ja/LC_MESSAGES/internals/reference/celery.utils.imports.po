@@ -1,0 +1,98 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.imports.rst:3
+msgid "celery.utils.imports"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of celery.utils.imports:2
+msgid "celery.utils.import"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of celery.utils.imports:4
+msgid "Utilities related to importing modules and symbols by name."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.instantiate:1
+msgid "Instantiate class by name."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.instantiate:3
+msgid "See :func:`symbol_by_name`."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:1
+msgid "Get symbol by qualified name."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:3
+msgid "The name should be the full dot-separated path to the class::"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:7
+msgid "Example::"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:12
+msgid "or using ':' to separate module and symbol::"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:16
+msgid ""
+"If `aliases` is provided, a dict containing short name/long name mappings, "
+"the name is looked up in the aliases first."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:19
+msgid "Examples:"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.symbol_by_name:28
+msgid ""
+"# Does not try to look up non-string names. >>> from "
+"celery.concurrency.processes import TaskPool >>> symbol_by_name(TaskPool) is"
+" TaskPool True"
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.find_module:1
+msgid "Version of :func:`imp.find_module` supporting dots."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.import_from_cwd:1
+msgid ""
+"Import module, but make sure it finds modules located in the current "
+"directory."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.import_from_cwd:4
+msgid ""
+"Modules located in the current directory has precedence over modules located"
+" in `sys.path`."
+msgstr ""
+
+#: ../../../celery/utils/imports.pydocstring of
+#: celery.utils.imports.module_file:1
+msgid "Return the correct original file name of a module."
+msgstr ""

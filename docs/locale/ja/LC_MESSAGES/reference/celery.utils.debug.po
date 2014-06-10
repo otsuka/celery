@@ -1,0 +1,82 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.utils.debug.rst:3 ../../docstring of
+#: celery.utils.debug:2
+msgid "celery.utils.debug"
+msgstr ""
+
+#: ../../reference/celery.utils.debug.rst:9
+msgid "Sampling Memory Usage"
+msgstr ""
+
+#: ../../reference/celery.utils.debug.rst:11
+msgid ""
+"This module can be used to diagnose and sample the memory usage used by "
+"parts of your application."
+msgstr ""
+
+#: ../../reference/celery.utils.debug.rst:14
+msgid "E.g to sample the memory usage of calling tasks you can do this:"
+msgstr ""
+
+#: ../../reference/celery.utils.debug.rst:34
+msgid "API Reference"
+msgstr ""
+
+#: ../../docstring of celery.utils.debug:4
+msgid "Utilities for debugging memory usage."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.sample_mem:1
+msgid "Sample RSS memory usage."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.sample_mem:3
+msgid "Statistics can then be output by calling :func:`memdump`."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.memdump:1
+msgid "Dump memory statistics."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.memdump:3
+msgid ""
+"Will print a sample of all RSS memory samples added by calling "
+":func:`sample_mem`, and in addition print used RSS memory after "
+":func:`gc.collect`."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.sample:1
+msgid "Given a list `x` a sample of length ``n`` of that list is returned."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.sample:3
+msgid ""
+"E.g. if `n` is 10, and `x` has 100 items, a list of every 10th item is "
+"returned."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.sample:6
+msgid "``k`` can be used as offset."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.mem_rss:1
+msgid "Return RSS memory usage as a humanized string."
+msgstr ""
+
+#: ../../docstring of celery.utils.debug.ps:1
+msgid ""
+"Return the global :class:`psutil.Process` instance, or :const:`None` if "
+":mod:`psutil` is not installed."
+msgstr ""

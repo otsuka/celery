@@ -1,0 +1,185 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.functional.rst:3
+#: ../../../celery/utils/functional.pydocstring of celery.utils.functional:2
+msgid "celery.utils.functional"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of celery.utils.functional:4
+msgid "Utilities for functions."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.LRUCache:1
+msgid "LRU Cache implementation using a doubly linked list to track access."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.LRUCache:3
+msgid ""
+"The maximum number of keys to keep in the cache. When a new key is inserted "
+"and the limit has been exceeded, the *Least Recently Used* key will be "
+"discarded from the cache."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.is_list:1
+msgid ""
+"Return true if the object is iterable (but not if object is a mapping or "
+"string)."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.maybe_list:1
+msgid "Return list of one element if ``l`` is a scalar."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.mlazy:1
+msgid "Memoized lazy evaluation."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.mlazy:3
+msgid ""
+"The function is only evaluated once, every subsequent access will return the"
+" same value."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.mlazy:8
+msgid "Set to to :const:`True` after the object has been evaluated."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.noop:1
+msgid "No operation."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.noop:3
+msgid "Takes any arguments/keyword arguments and does nothing."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.first:1
+msgid ""
+"Return the first element in `iterable` that `predicate` Gives a "
+":const:`True` value for."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.first:4
+msgid "If `predicate` is None it will return the first item that is not None."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.firstmethod:1
+msgid ""
+"Return a function that with a list of instances, finds the first instance "
+"that gives a value for the given method."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.firstmethod:4
+msgid ""
+"The list can also contain lazy instances "
+"(:class:`~kombu.utils.functional.lazy`.)"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.chunks:1
+msgid "Split an iterator into chunks with `n` elements each."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.chunks:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.chunks:5
+msgid ""
+"# n == 2 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 2) >>> "
+"list(x) [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.chunks:10
+msgid ""
+"# n == 3 >>> x = chunks(iter([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 3) >>> "
+"list(x) [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10]]"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.padlist:1
+msgid "Pad list with default elements."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.padlist:3
+msgid "Examples:"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.mattrgetter:1
+msgid ""
+"Like :func:`operator.itemgetter` but return :const:`None` on missing "
+"attributes instead of raising :exc:`AttributeError`."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.uniq:1
+msgid "Return all unique elements in ``it``, preserving order."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.regen:1
+msgid ""
+"Regen takes any iterable, and if the object is an generator it will cache "
+"the evaluated list on first access, so that the generator can be "
+"\"consumed\" multiple times."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.dictfilter:1
+msgid "Remove all keys from dict ``d`` whose value is :const:`None`"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.lazy:1
+msgid "Holds lazy evaluation."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.lazy:3
+msgid ""
+"Evaluated when called or if the :meth:`evaluate` method is called. The "
+"function is re-evaluated on every call."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.lazy:9
+msgid "Overloaded operations that will evaluate the promise:"
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.lazy:7
+msgid ":meth:`__str__`, :meth:`__repr__`, :meth:`__cmp__`."
+msgstr ""
+
+#: ../../../celery/utils/functional.pydocstring of
+#: celery.utils.functional.maybe_evaluate:1
+msgid "Evaluates if the value is a :class:`lazy` instance."
+msgstr ""

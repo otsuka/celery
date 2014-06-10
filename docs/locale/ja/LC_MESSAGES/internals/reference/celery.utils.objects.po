@@ -1,0 +1,43 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.objects.rst:3
+#: ../../../celery/utils/objects.pydocstring of celery.utils.objects:2
+msgid "celery.utils.objects"
+msgstr ""
+
+#: ../../../celery/utils/objects.pydocstring of celery.utils.objects:4
+msgid "Object related utilities including introspection, etc."
+msgstr ""
+
+#: ../../../celery/utils/objects.pydocstring of
+#: celery.utils.objects.mro_lookup:1
+msgid "Return the first node by MRO order that defines an attribute."
+msgstr ""
+
+#: ../../../celery/utils/objects.pydocstring of
+#: celery.utils.objects.mro_lookup:3
+msgid "A list of types that if reached will stop the search."
+msgstr ""
+
+#: ../../../celery/utils/objects.pydocstring of
+#: celery.utils.objects.mro_lookup:4
+msgid ""
+"Use one of the stop classes if the attr's module origin is not in this list,"
+" this to detect monkey patched attributes."
+msgstr ""
+
+#: ../../../celery/utils/objects.pydocstring of
+#: celery.utils.objects.mro_lookup:8
+msgid "if the attribute was not found."
+msgstr ""

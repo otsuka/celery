@@ -1,0 +1,77 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.app.trace.rst:3
+#: ../../../celery/app/trace.pydocstring of celery.app.trace:2
+msgid "celery.app.trace"
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace:4
+msgid ""
+"This module defines how the task execution is traced: errors are recorded, "
+"handlers are applied and so on."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of
+#: celery.app.trace.TraceInfo.handle_failure:1
+msgid "Handle exception."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of
+#: celery.app.trace.TraceInfo.handle_retry:1
+msgid "Handle retry exception."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:1
+msgid ""
+"Return a function that traces task execution; catches all exceptions and "
+"updates result backend with the state and result"
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:4
+msgid ""
+"If the call was successful, it saves the result to the task result backend, "
+"and sets the task status to `\"SUCCESS\"`."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:7
+msgid ""
+"If the call raises :exc:`~@Retry`, it extracts the original exception, uses "
+"that as the result and sets the task state to `\"RETRY\"`."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:11
+msgid ""
+"If the call results in an exception, it saves the exception as the task "
+"result, and sets the task state to `\"FAILURE\"`."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:14
+msgid "Return a function that takes the following arguments:"
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:16
+msgid "The id of the task."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:17
+msgid "List of positional args to pass on to the function."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:18
+msgid "Keyword arguments mapping to pass on to the function."
+msgstr ""
+
+#: ../../../celery/app/trace.pydocstring of celery.app.trace.build_tracer:19
+msgid "Request dict."
+msgstr ""

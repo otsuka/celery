@@ -1,0 +1,531 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.result.rst:3 ../../../celery/result.pydocstring of
+#: celery.result:2
+msgid "celery.result"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result:4
+msgid "Task results/state and groups of results."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultBase:1
+msgid "Base class for all results"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultBase.parent:1
+msgid "Parent result (if part of a chain)"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult:1
+msgid "Query task state."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult:3
+msgid "see :attr:`id`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult:4
+msgid "see :attr:`backend`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of
+#: celery.result.AsyncResult.TimeoutError:1
+msgid "Error raised for timeouts."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.backend:1
+msgid "The task result backend to use."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.collect:1
+msgid ""
+"Iterator, like :meth:`get` will wait for the task to complete, but will also"
+" follow :class:`AsyncResult` and :class:`ResultSet` returned by the task, "
+"yielding ``(result, value)`` tuples for each result in the tree."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.collect:6
+msgid "An example would be having the following tasks:"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.collect:25
+msgid ""
+"Note that the ``trail`` option must be enabled so that the list of children "
+"is stored in ``result.children``. This is the default but enabled explicitly"
+" for illustration."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.collect:29
+msgid "Calling :meth:`collect` would return:"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.failed:1
+msgid "Returns :const:`True` if the task failed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.forget:1
+msgid "Forget about (and possibly remove the result of) this task."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:1
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:1
+msgid "Wait until task is ready, and return its result."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:5
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:5
+msgid ""
+"Waiting for tasks within a task may lead to deadlocks. Please read :ref"
+":`task-synchronous-subtasks`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:8
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:8
+msgid "How long to wait, in seconds, before the operation times out."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:10
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:10
+msgid "Re-raise exception if the task failed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:11
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:11
+msgid ""
+"Time to wait (in seconds) before retrying to retrieve the result.  Note that"
+" this does not have any effect when using the amqp result store backend, as "
+"it does not use polling."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:15
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:15
+msgid ""
+"Enable amqp no ack (automatically acknowledge message).  If this is "
+":const:`False` then the message will **not be acked**."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:18
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:18
+msgid "Reraise any exception raised by parent task."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:20
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:20
+msgid ""
+"if `timeout` is not :const:`None` and the result does not arrive within "
+"`timeout` seconds."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.get:24
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.wait:24
+msgid ""
+"If the remote call raised an exception then that exception will be re-"
+"raised."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.id:1
+msgid "The task's UUID."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.info:1
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.result:1
+msgid ""
+"When the task has been executed, this contains the return value. If the task"
+" raised an exception, this will be the exception instance."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.ready:1
+msgid "Returns :const:`True` if the task has been executed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.ready:3
+msgid ""
+"If the task is still running, pending, or is waiting for retry then "
+":const:`False` is returned."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:1
+msgid "Send revoke signal to all workers."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:3
+msgid ""
+"Any worker receiving the task, or having reserved the task, *must* ignore "
+"it."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:6
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.revoke:3
+msgid "Also terminate the process currently working on the task (if any)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:8
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.revoke:5
+msgid "Name of signal to send to process if terminate. Default is TERM."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:10
+msgid ""
+"Wait for replies from workers.  Will wait for 1 second by default or you can"
+" specify a custom ``timeout``."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.revoke:12
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.revoke:9
+msgid "Time in seconds to wait for replies if ``wait`` enabled."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:1
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:1
+msgid "The tasks current state."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:3
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:3
+msgid "Possible values includes:"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:5
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:5
+msgid "*PENDING*"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:7
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:7
+msgid "The task is waiting for execution."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:9
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:9
+msgid "*STARTED*"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:11
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:11
+msgid "The task has been started."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:13
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:13
+msgid "*RETRY*"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:15
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:15
+msgid "The task is to be retried, possibly because of failure."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:17
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:17
+msgid "*FAILURE*"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:19
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:19
+msgid ""
+"The task raised an exception, or has exceeded the retry limit. The "
+":attr:`result` attribute then contains the exception raised by the task."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:23
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:23
+msgid "*SUCCESS*"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.state:25
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.status:25
+msgid ""
+"The task executed successfully. The :attr:`result` attribute then contains "
+"the tasks return value."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of
+#: celery.result.AsyncResult.successful:1
+msgid "Returns :const:`True` if the task executed successfully."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.task_id:1
+msgid "compat alias to :attr:`id`"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.AsyncResult.traceback:1
+msgid "Get the traceback of a failed task."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet:1
+msgid "Working with more than one result."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet:3
+#: ../../../celery/result.pydocstring of celery.result.GroupResult:10
+msgid "List of result instances."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.add:1
+msgid "Add :class:`AsyncResult` as a new member of the set."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.add:3
+msgid "Does nothing if the result is already a member."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.clear:1
+msgid "Remove all results from this set."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of
+#: celery.result.ResultSet.completed_count:1
+msgid "Task completion count."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of
+#: celery.result.ResultSet.completed_count:3
+msgid "the number of tasks completed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.discard:1
+msgid "Remove result from the set if it is a member."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.discard:3
+msgid "If it is not a member, do nothing."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.failed:1
+msgid "Did any of the tasks fail?"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.failed:3
+msgid ":const:`True` if one of the tasks failed. (i.e., raised an exception)"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.forget:1
+msgid "Forget about (and possible remove the result of) all the tasks."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.get:1
+msgid "See :meth:`join`"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.get:3
+msgid ""
+"This is here for API compatibility with :class:`AsyncResult`, in addition it"
+" uses :meth:`join_native` if available for the current result backend."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.iter_native:1
+msgid "Backend optimized version of :meth:`iterate`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.iter_native:5
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join_native:5
+msgid ""
+"Note that this does not support collecting the results for different task "
+"types using different backends."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.iter_native:8
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join_native:8
+msgid ""
+"This is currently only supported by the amqp, Redis and cache result "
+"backends."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.iterate:1
+msgid "Deprecated method, use :meth:`get` with a callback argument."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:1
+msgid "Gathers the results of all tasks as a list in order."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:5
+msgid ""
+"This can be an expensive operation for result store backends that must "
+"resort to polling (e.g. database)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:8
+msgid ""
+"You should consider using :meth:`join_native` if your backend supports it."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:13
+msgid ""
+"Waiting for tasks within a task may lead to deadlocks. Please see :ref"
+":`task-synchronous-subtasks`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:16
+msgid ""
+"The number of seconds to wait for results before the operation times out."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:19
+msgid ""
+"If any of the tasks raises an exception, the exception will be re-raised."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:22
+msgid ""
+"Time to wait (in seconds) before retrying to retrieve a result from the set."
+"  Note that this does not have any effect when using the amqp result store "
+"backend, as it does not use polling."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:27
+msgid ""
+"Optional callback to be called for every result received.  Must have "
+"signature ``(task_id, value)`` No results will be returned by this function "
+"if a callback is specified.  The order of results is also arbitrary when a "
+"callback is used. To get access to the result object for a particular id you"
+" will have to generate an index first: ``index = {r.id: r for r in "
+"gres.results.values()}`` Or you can create new result objects on the fly: "
+"``result = app.AsyncResult(task_id)`` (both will take advantage of the "
+"backend cache anyway)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:39
+msgid ""
+"Automatic message acknowledgement (Note that if this is set to "
+":const:`False` then the messages *will not be acknowledged*)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join:43
+msgid ""
+"if ``timeout`` is not :const:`None` and the operation takes longer than "
+"``timeout`` seconds."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.join_native:1
+msgid "Backend optimized version of :meth:`join`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.ready:1
+msgid "Did all of the tasks complete? (either by success of failure)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.ready:3
+msgid ":const:`True` if all of the tasks has been executed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.remove:1
+msgid "Remove result from the set; it must be a member."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.remove:3
+msgid "if the result is not a member."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.results:1
+msgid "List of results in in the set."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.revoke:1
+msgid "Send revoke signal to all workers for all tasks in the set."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.revoke:7
+msgid ""
+"Wait for replies from worker.  Will wait for 1 second by default or you can "
+"specify a custom ``timeout``."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.subtasks:1
+msgid "Deprecated alias to :attr:`results`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.successful:1
+msgid "Was all of the tasks successful?"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.successful:3
+msgid ""
+":const:`True` if all of the tasks finished successfully (i.e. did not raise "
+"an exception)."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.update:1
+msgid "Update set with the union of itself and an iterable with results."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.waiting:1
+msgid "Are any of the tasks incomplete?"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.ResultSet.waiting:3
+msgid ":const:`True` if one of the tasks are still waiting for execution."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult:1
+msgid "Like :class:`ResultSet`, but with an associated id."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult:3
+msgid ""
+"This type is returned by :class:`~celery.group`, and the deprecated TaskSet,"
+" meth:`~celery.task.TaskSet.apply_async` method."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult:6
+msgid ""
+"It enables inspection of the tasks state and return values as a single "
+"entity."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult:9
+msgid "The id of the group."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.delete:1
+msgid "Remove this result if it was previously saved."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.id:1
+msgid "The UUID of the group."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.restore:1
+msgid "Restore previously saved group result."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.results:1
+msgid "List/iterator of results in the group"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.save:1
+msgid "Save group-result for later retrieval using :meth:`restore`."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.GroupResult.save:3
+msgid "Example::"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.EagerResult:1
+msgid "Result that we know has already been executed."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.EagerResult.result:1
+msgid "The tasks return value"
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.EagerResult.state:1
+#: ../../../celery/result.pydocstring of celery.result.EagerResult.status:1
+msgid "The tasks state."
+msgstr ""
+
+#: ../../../celery/result.pydocstring of celery.result.EagerResult.traceback:1
+msgid "The traceback if the task failed."
+msgstr ""

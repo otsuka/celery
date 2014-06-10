@@ -1,0 +1,36 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.apps.worker.rst:3 ../../docstring of
+#: celery.apps.worker:2
+msgid "celery.apps.worker"
+msgstr ""
+
+#: ../../docstring of celery.apps.worker:4
+msgid "This module is the 'program-version' of :mod:`celery.worker`."
+msgstr ""
+
+#: ../../docstring of celery.apps.worker:6
+msgid ""
+"It does everything necessary to run that module as an actual application, "
+"like installing signal handlers, platform tweaks, and so on."
+msgstr ""
+
+#: ../../docstring of celery.apps.worker.Worker.install_platform_tweaks:1
+msgid "Install platform specific tweaks and workarounds."
+msgstr ""
+
+#: ../../docstring of
+#: celery.apps.worker.Worker.osx_proxy_detection_workaround:1
+msgid "See http://github.com/celery/celery/issues#issue/161"
+msgstr ""

@@ -1,0 +1,165 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.beat.rst:3 ../../../celery/beat.pydocstring of
+#: celery.beat:2
+msgid "celery.beat"
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat:4
+msgid "The periodic task scheduler."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.SchedulingError:1
+msgid "An error occured while scheduling a task."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:1
+msgid "An entry in the scheduler."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:3
+msgid "see :attr:`name`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:4
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler:8
+msgid "see :attr:`schedule`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:5
+msgid "see :attr:`args`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:6
+msgid "see :attr:`kwargs`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:7
+msgid "see :attr:`options`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:8
+msgid "see :attr:`last_run_at`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:9
+msgid "see :attr:`total_run_count`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry:10
+msgid "Is the time relative to when the server starts?"
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.args:1
+msgid "Positional arguments to apply."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.is_due:1
+msgid "See :meth:`~celery.schedule.schedule.is_due`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.kwargs:1
+msgid "Keyword arguments to apply."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.last_run_at:1
+msgid "The time and date of when this task was last scheduled."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.name:1
+msgid "The task name"
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.next:1
+msgid ""
+"Return a new instance of the same class, but with its date and count fields "
+"updated."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.options:1
+msgid "Task execution options."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.schedule:1
+msgid "The schedule (run_every/crontab)"
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of
+#: celery.beat.ScheduleEntry.total_run_count:1
+msgid "Total number of times this task has been scheduled."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.update:1
+msgid "Update values from another entry."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.ScheduleEntry.update:3
+msgid ""
+"Does only update \"editable\" fields (task, schedule, args, kwargs, "
+"options)."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler:1
+msgid "Scheduler for periodic tasks."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler:3
+msgid ""
+"The :program:`celery beat` program may instantiate this class multiple times"
+" for introspection purposes, but then with the ``lazy`` argument set.  It is"
+" important for subclasses to be idempotent when this argument is set."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler:9
+msgid "see :attr:`max_interval`."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler:10
+msgid "Do not set up the schedule."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler.max_interval:1
+msgid "Maximum time to sleep between re-checking the schedule."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler.schedule:1
+msgid "The schedule dict/shelve."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler.sync_every:1
+msgid "How often to sync the schedule (3 minutes by default)"
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of
+#: celery.beat.Scheduler.sync_every_tasks:1
+msgid "How many tasks can be called before a sync is forced."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler.tick:1
+msgid "Run a tick, that is one iteration of the scheduler."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.Scheduler.tick:3
+msgid "Executes all due tasks."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.EmbeddedService:1
+msgid "Return embedded clock service."
+msgstr ""
+
+#: ../../../celery/beat.pydocstring of celery.beat.EmbeddedService:3
+msgid ""
+"Run threaded instead of as a separate process. Uses :mod:`multiprocessing` "
+"by default, if available."
+msgstr ""

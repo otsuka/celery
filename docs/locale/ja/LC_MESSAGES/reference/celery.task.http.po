@@ -1,0 +1,113 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.task.http.rst:3
+#: ../../../celery/task/http.pydocstring of celery.task.http:2
+msgid "celery.task.http"
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http:4
+msgid "Webhook task implementation."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of
+#: celery.task.http.InvalidResponseError:1
+msgid "The remote server gave an invalid response."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of
+#: celery.task.http.RemoteExecuteError:1
+msgid "The remote task gave a custom error."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of
+#: celery.task.http.UnknownStatusError:1
+msgid "The remote server gave an unknown status."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.HttpDispatch:1
+msgid "Make task HTTP request and collect the task result."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.HttpDispatch:3
+msgid "The URL to request."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.HttpDispatch:4
+msgid "HTTP method used. Currently supported methods are `GET` and `POST`."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.HttpDispatch:6
+msgid "Task keyword arguments."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.HttpDispatch:7
+msgid "Logger used for user/system feedback."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of
+#: celery.task.http.HttpDispatch.dispatch:1
+msgid "Dispatch callback and return result."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of
+#: celery.task.http.HttpDispatch.make_request:1
+msgid "Perform HTTP request and return the response."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:1
+msgid "Task dispatching to an URL."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:3
+msgid "The URL location of the HTTP callback task."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:4
+msgid "Method to use when dispatching the callback. Usually `GET` or `POST`."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:6
+msgid "Keyword arguments to pass on to the HTTP callback."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:10
+msgid ""
+"If this is set, this is used as the default URL for requests. Default is to "
+"require the user of the task to supply the url as an argument, as this "
+"attribute is intended for subclasses."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.dispatch:16
+msgid ""
+"If this is set, this is the default method used for requests. Default is to "
+"require the user of the task to supply the method as an argument, as this "
+"attribute is intended for subclasses."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.URL:1
+msgid "HTTP Callback URL"
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.URL:3
+msgid "Supports requesting an URL asynchronously."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.URL:5
+msgid "URL to request."
+msgstr ""
+
+#: ../../../celery/task/http.pydocstring of celery.task.http.URL:6
+msgid ""
+"Class used to dispatch the request. By default this is :func:`dispatch`."
+msgstr ""

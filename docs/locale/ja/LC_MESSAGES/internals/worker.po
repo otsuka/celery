@@ -1,0 +1,87 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/worker.rst:5
+msgid "Internals: The worker"
+msgstr ""
+
+#: ../../internals/worker.rst:11
+msgid "Introduction"
+msgstr ""
+
+#: ../../internals/worker.rst:13
+msgid ""
+"The worker consists of 4 main components: the consumer, the scheduler, the "
+"mediator and the task pool. All these components runs in parallel working "
+"with two data structures: the ready queue and the ETA schedule."
+msgstr ""
+
+#: ../../internals/worker.rst:18
+msgid "Data structures"
+msgstr ""
+
+#: ../../internals/worker.rst:21
+msgid "timer"
+msgstr ""
+
+#: ../../internals/worker.rst:23
+msgid ""
+"The timer uses :mod:`heapq` to schedule internal functions. It's very "
+"efficient and can handle hundred of thousands of entries."
+msgstr ""
+
+#: ../../internals/worker.rst:28
+msgid "Components"
+msgstr ""
+
+#: ../../internals/worker.rst:31
+msgid "Consumer"
+msgstr ""
+
+#: ../../internals/worker.rst:33
+msgid "Receives messages from the broker using `Kombu`_."
+msgstr ""
+
+#: ../../internals/worker.rst:37
+msgid ""
+"When a message is received it's converted into a "
+":class:`celery.worker.job.TaskRequest` object."
+msgstr ""
+
+#: ../../internals/worker.rst:40
+msgid ""
+"Tasks with an ETA, or rate-limit are entered into the `timer`, messages that"
+" can be immediately processed are sent to the execution pool."
+msgstr ""
+
+#: ../../internals/worker.rst:44
+msgid "Timer"
+msgstr ""
+
+#: ../../internals/worker.rst:46
+msgid ""
+"The timer schedules internal functions, like cleanup and internal "
+"monitoring, but also it schedules ETA tasks and rate limited tasks. If the "
+"scheduled tasks eta has passed it is moved to the execution pool."
+msgstr ""
+
+#: ../../internals/worker.rst:51
+msgid "TaskPool"
+msgstr ""
+
+#: ../../internals/worker.rst:53
+msgid ""
+"This is a slightly modified :class:`multiprocessing.Pool`. It mostly works "
+"the same way, except it makes sure all of the workers are running at all "
+"times. If a worker is missing, it replaces it with a new one."
+msgstr ""

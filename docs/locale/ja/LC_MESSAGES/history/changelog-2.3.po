@@ -1,0 +1,594 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history/changelog-2.3.rst:5
+msgid "Change history for Celery 2.3"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:13
+msgid "2.3.4"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:14
+msgid "2011-11-25 04:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:15 ../../history/changelog-2.3.rst:64
+#: ../../history/changelog-2.3.rst:128 ../../history/changelog-2.3.rst:143
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:20
+msgid "Security Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:22
+msgid ""
+"[Security: `CELERYSA-0001`_] Daemons would set effective id's rather than "
+"real id's when the :option:`--uid`/:option:`--gid` arguments to "
+":program:`celery multi`, :program:`celeryd_detach`, :program:`celery beat` "
+"and :program:`celery events` were used."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:27
+msgid ""
+"This means privileges weren't properly dropped, and that it would be "
+"possible to regain supervisor privileges later."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:35 ../../history/changelog-2.3.rst:91
+#: ../../history/changelog-2.3.rst:131 ../../history/changelog-2.3.rst:353
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:37
+msgid "Backported fix for #455 from 2.4 to 2.3."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:39
+msgid "Statedb was not saved at shutdown."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:41
+msgid "Fixes worker sometimes hanging when hard time limit exceeded."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:47
+msgid "2.3.3"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:48
+msgid "2011-16-09 05:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:49
+msgid "Mher Movsisyan"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:51
+msgid ""
+"Monkey patching :attr:`sys.stdout` could result in the worker crashing if "
+"the replacing object did not define :meth:`isatty` (Issue #477)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:55
+msgid ""
+"``CELERYD`` option in :file:`/etc/default/celeryd` should not be used with "
+"generic init scripts."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:62
+msgid "2.3.2"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:63
+msgid "2011-10-07 05:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:69 ../../history/changelog-2.3.rst:191
+msgid "News"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:71
+msgid "Improved Contributing guide."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:73
+msgid ""
+"If you'd like to contribute to Celery you should read the :ref:`Contributing"
+" Gudie <contributing>`."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:76
+msgid ""
+"We are looking for contributors at all skill levels, so don't hesitate!"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:79
+msgid "Now depends on Kombu 1.3.1"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:81
+msgid ""
+"``Task.request`` now contains the current worker host name (Issue #460)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:83
+msgid "Available as ``task.request.hostname``."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:86
+msgid "It is now easier for app subclasses to extend how they are pickled."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:86
+msgid "(see :class:`celery.app.AppPickler`)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:93
+msgid "`purge/discard_all` was not working correctly (Issue #455)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:95
+msgid ""
+"The coloring of log messages didn't handle non-ASCII data well (Issue #427)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:98
+msgid ""
+"[Windows] the multiprocessing pool tried to import ``os.kill`` even though "
+"this is not available there (Issue #450)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:101
+msgid ""
+"Fixes case where the worker could become unresponsive because of tasks "
+"exceeding the hard time limit."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:104
+msgid "The :event:`task-sent` event was missing from the event reference."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:106
+msgid "``ResultSet.iterate`` now returns results as they finish (Issue #459)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:108
+msgid ""
+"This was not the case previously, even though the documentation states this "
+"was the expected behavior."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:111
+msgid ""
+"Retries will no longer be performed when tasks are called directly (using "
+"``__call__``)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:114
+msgid "Instead the exception passed to ``retry`` will be re-raised."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:116
+msgid "Eventlet no longer crashes if autoscale is enabled."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:118
+msgid "growing and shrinking eventlet pools is still not supported."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:120
+msgid "py24 target removed from :file:`tox.ini`."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:126
+msgid "2.3.1"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:127
+msgid "2011-08-07 08:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:133
+msgid ""
+"The :setting:`CELERY_AMQP_TASK_RESULT_EXPIRES` setting did not work, "
+"resulting in an AMQP related error about not being able to serialize floats "
+"while trying to publish task states (Issue #446)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:140
+msgid "2.3.0"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:141
+msgid "2011-08-05 12:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:142
+msgid "cPython: 2.5, 2.6, 2.7; PyPy: 1.5; Jython: 2.5.2"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:148
+msgid "Important Notes"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:150
+msgid "Now requires Kombu 1.2.1"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:152
+msgid "Results are now disabled by default."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:154
+msgid ""
+"The AMQP backend was not a good default because often the users were not "
+"consuming the results, resulting in thousands of queues."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:157
+msgid ""
+"While the queues can be configured to expire if left unused, it was not "
+"possible to enable this by default because this was only available in recent"
+" RabbitMQ versions (2.1.1+)"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:161
+msgid ""
+"With this change enabling a result backend will be a conscious choice, which"
+" will hopefully lead the user to read the documentation and be aware of any "
+"common pitfalls with the particular backend."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:165
+msgid ""
+"The default backend is now a dummy backend "
+"(:class:`celery.backends.base.DisabledBackend`).  Saving state is simply an "
+"noop operation, and AsyncResult.wait(), .result, .state, etc. will raise a "
+":exc:`NotImplementedError` telling the user to configure the result backend."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:170
+msgid "For help choosing a backend please see :ref:`task-result-backends`."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:172
+msgid ""
+"If you depend on the previous default which was the AMQP backend, then you "
+"have to set this explicitly before upgrading::"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:179
+msgid ""
+"For django-celery users the default backend is still ``database``, and "
+"results are not disabled by default."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:182
+msgid ""
+"The Debian init scripts have been deprecated in favor of the generic-init.d "
+"init scripts."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:185
+msgid ""
+"In addition generic init scripts for celerybeat and celeryev has been added."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:193
+msgid "Automatic connection pool support."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:195
+msgid ""
+"The pool is used by everything that requires a broker connection.  For "
+"example calling tasks, sending broadcast commands, retrieving results with "
+"the AMQP result backend, and so on."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:199
+msgid ""
+"The pool is disabled by default, but you can enable it by configuring the "
+":setting:`BROKER_POOL_LIMIT` setting::"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:204
+msgid ""
+"A limit of 10 means a maximum of 10 simultaneous connections can co-exist. "
+"Only a single connection will ever be used in a single-thread environment, "
+"but in a concurrent environment (threads, greenlets, etc., but not "
+"processes) when the limit has been exceeded, any try to acquire a connection"
+" will block the thread and wait for a connection to be released. This is "
+"something to take into consideration when choosing a limit."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:211
+msgid ""
+"A limit of :const:`None` or 0 means no limit, and connections will be "
+"established and closed every time."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:214
+msgid "Introducing Chords (taskset callbacks)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:216
+msgid ""
+"A chord is a task that only executes after all of the tasks in a taskset has"
+" finished executing.  It's a fancy term for \"taskset callbacks\" adopted "
+"from `Cω  <http://research.microsoft.com/en-"
+"us/um/cambridge/projects/comega/>`_)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:221
+msgid ""
+"It works with all result backends, but the best implementation is currently "
+"provided by the Redis result backend."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:224
+msgid "Here's an example chord::"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:230
+msgid ""
+"Please read the :ref:`Chords section in the user guide <canvas-chord>`, if "
+"you want to know more."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:233
+msgid "Time limits can now be set for individual tasks."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:235
+msgid ""
+"To set the soft and hard time limits for a task use the ``time_limit`` and "
+"``soft_time_limit`` attributes:"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:246
+msgid ""
+"If the attributes are not set, then the workers default time limits will be "
+"used."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:249
+msgid ""
+"New in this version you can also change the time limits for a task at "
+"runtime using the :func:`time_limit` remote control command::"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:257
+msgid ""
+"Only tasks that starts executing after the time limit change will be "
+"affected."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:261
+msgid ""
+"Soft time limits will still not work on Windows or other platforms that do "
+"not have the ``SIGUSR1`` signal."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:277
+msgid "Redis backend configuration directive names changed to include the"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:265
+msgid "``CELERY_`` prefix."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:269
+msgid "**Old setting name**"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:269
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:271
+msgid "`REDIS_HOST`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:271
+msgid "`CELERY_REDIS_HOST`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:272
+msgid "`REDIS_PORT`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:272
+msgid "`CELERY_REDIS_PORT`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:273
+msgid "`REDIS_DB`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:273
+msgid "`CELERY_REDIS_DB`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:274
+msgid "`REDIS_PASSWORD`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:274
+msgid "`CELERY_REDIS_PASSWORD`"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:277
+msgid "The old names are still supported but pending deprecation."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:279
+msgid ""
+"PyPy: The default pool implementation used is now multiprocessing if running"
+" on PyPy 1.5."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:282
+msgid "multi: now supports \"pass through\" options."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:284
+msgid ""
+"Pass through options makes it easier to use celery without a configuration "
+"file, or just add last-minute options on the command line."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:288
+msgid "Example use:"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:296
+msgid "celerybeat: Now retries establishing the connection (Issue #419)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:298
+msgid "celeryctl: New ``list bindings`` command."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:300
+msgid ""
+"Lists the current or all available bindings, depending on the broker "
+"transport used."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:303
+msgid "Heartbeat is now sent every 30 seconds (previously every 2 minutes)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:305
+msgid ""
+"``ResultSet.join_native()`` and ``iter_native()`` is now supported by the "
+"Redis and Cache result backends."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:308
+msgid ""
+"This is an optimized version of ``join()`` using the underlying backends "
+"ability to fetch multiple results at once."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:311
+msgid ""
+"Can now use SSL when sending error e-mails by enabling the "
+":setting:`EMAIL_USE_SSL` setting."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:314
+msgid ""
+"``events.default_dispatcher()``: Context manager to easily obtain an event "
+"dispatcher instance using the connection pool."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:317
+msgid ""
+"Import errors in the configuration module will not be silenced anymore."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:319
+msgid ""
+"ResultSet.iterate:  Now supports the ``timeout``, ``propagate`` and "
+"``interval`` arguments."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:322
+msgid "``with_default_connection`` ->  ``with default_connection``"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:324
+msgid ""
+"TaskPool.apply_async:  Keyword arguments ``callbacks`` and ``errbacks`` has "
+"been renamed to ``callback`` and ``errback`` and take a single scalar value "
+"instead of a list."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:328
+msgid ""
+"No longer propagates errors occurring during process cleanup (Issue #365)"
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:330
+msgid ""
+"Added ``TaskSetResult.delete()``, which will delete a previously saved "
+"taskset result."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:333
+msgid ""
+"Celerybeat now syncs every 3 minutes instead of only at shutdown (Issue "
+"#382)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:336
+msgid ""
+"Monitors now properly handles unknown events, so user-defined events are "
+"displayed."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:339
+msgid ""
+"Terminating a task on Windows now also terminates all of the tasks child "
+"processes (Issue #384)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:342
+msgid ""
+"worker: ``-I|--include`` option now always searches the current directory to"
+" import the specified modules."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:345
+msgid "Cassandra backend: Now expires results by using TTLs."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:347
+msgid ""
+"Functional test suite in ``funtests`` is now actually working properly, and "
+"passing tests."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:355
+msgid "celeryev was trying to create the pidfile twice."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:357
+msgid ""
+"celery.contrib.batches: Fixed problem where tasks failed silently (Issue "
+"#393)."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:360
+msgid ""
+"Fixed an issue where logging objects would give \"<Unrepresentable\", even "
+"though the objects were."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:363
+msgid ""
+"``CELERY_TASK_ERROR_WHITE_LIST`` is now properly initialized in all loaders."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:366
+msgid "celeryd_detach now passes through command line configuration."
+msgstr ""
+
+#: ../../history/changelog-2.3.rst:368
+msgid ""
+"Remote control command ``add_consumer`` now does nothing if the queue is "
+"already being consumed from."
+msgstr ""

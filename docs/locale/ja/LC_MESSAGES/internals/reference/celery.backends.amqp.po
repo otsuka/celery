@@ -1,0 +1,743 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.backends.amqp.rst:3
+#: ../../../celery/backends/amqp.pydocstring of celery.backends.amqp:2
+msgid "celery.backends.amqp"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of celery.backends.amqp:4
+msgid "The AMQP result backend."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of celery.backends.amqp:6
+msgid "This backend publishes results as messages."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.BacklogLimitExceeded:1
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.BacklogLimitExceeded:1
+msgid "Too much state history to fast-forward."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend:1
+msgid "Publishes results by sending messages."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:1
+msgid "Message consumer."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:3
+msgid "see :attr:`channel`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:4
+msgid "see :attr:`queues`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:5
+msgid "see :attr:`no_ack`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:6
+msgid "see :attr:`auto_declare`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:7
+msgid "see :attr:`callbacks`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:8
+msgid "See :attr:`on_message`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer:9
+msgid "see :attr:`on_decode_error`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.ContentDisallowed:1
+msgid "Consumer does not allow this content-type."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue:1
+msgid "Add a queue to the list of queues to consume from."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue:3
+msgid ""
+"This will not start consuming from the queue, for that you will have to call"
+" :meth:`consume` after."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue_from_dict:1
+msgid "This method is deprecated."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.add_queue_from_dict:3
+msgid "Instead please use::"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel:1
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.close:1
+msgid "End all active queue consumers."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel:3
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.close:3
+msgid ""
+"This does not affect already delivered messages, but it does mean the server"
+" will not send any more messages for this consumer."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.cancel_by_queue:1
+msgid "Cancel consumer by queue name."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:1
+msgid "Start consuming messages."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:3
+msgid ""
+"Can be called multiple times, but note that while it will consume from new "
+"queues added since the last call, it will not cancel consuming from removed "
+"queues ( use :meth:`cancel_by_queue`)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.consume:8
+msgid "See :attr:`no_ack`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.consuming_from:1
+msgid ""
+"Return :const:`True` if the consumer is currently consuming from queue'."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.declare:1
+msgid "Declare queues, exchanges and bindings."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.declare:3
+msgid ""
+"This is done automatically at instantiation if :attr:`auto_declare` is set."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:1
+msgid "Enable/disable flow from peer."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:3
+msgid ""
+"This is a simple flow-control mechanism that a peer can use to avoid "
+"overflowing its queues or otherwise finding itself receiving more messages "
+"than it can process."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.flow:7
+msgid ""
+"The peer that receives a request to stop sending content will finish sending"
+" the current content (if any), and then wait until flow is reactivated."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.purge:1
+msgid "Purge messages from all queues."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.purge:4
+msgid "This will *delete all ready messages*, there is no undo operation."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:1
+msgid "Specify quality of service."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:3
+msgid ""
+"The client can request that messages should be sent in advance so that when "
+"the client finishes processing a message, the following message is already "
+"held locally, rather than needing to be sent down the channel. Prefetching "
+"gives a performance improvement."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:9
+msgid "The prefetch window is Ignored if the :attr:`no_ack` option is set."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:11
+msgid ""
+"Specify the prefetch window in octets. The server will send a message in "
+"advance if it is equal to or smaller in size than the available prefetch "
+"size (and also falls within other prefetch limits). May be set to zero, "
+"meaning \"no specific limit\", although other prefetch limits may still "
+"apply."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:18
+msgid "Specify the prefetch window in terms of whole messages."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.qos:21
+msgid "Apply new settings globally on all channels."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:1
+msgid "Method called when a message is received."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:3
+msgid "This dispatches to the registered :attr:`callbacks`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:5
+msgid "The decoded message body."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:6
+msgid "The `Message` instance."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.receive:8
+msgid "If no consumer callbacks have been registered."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:1
+msgid "Redeliver unacknowledged messages."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:3
+msgid ""
+"Asks the broker to redeliver all unacknowledged messages on the specified "
+"channel."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.recover:6
+msgid ""
+"By default the messages will be redelivered to the original recipient. With "
+"`requeue` set to true, the server will attempt to requeue the message, "
+"potentially then delivering it to an alternative subscriber."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.register_callback:1
+msgid "Register a new callback to be called when a message is received."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.register_callback:4
+msgid ""
+"The signature of the callback needs to accept two arguments: `(body, "
+"message)`, which is the decoded message body and the `Message` instance (a "
+"subclass of :class:`~kombu.transport.base.Message`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Consumer.revive:1
+msgid "Revive consumer after connection loss."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:1
+msgid "An Exchange declaration."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:3
+msgid "See :attr:`name`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:4
+msgid "See :attr:`type`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:5
+msgid "See :attr:`channel`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:6
+msgid "See :attr:`durable`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:7
+msgid "See :attr:`auto_delete`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:8
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:5
+msgid "See :attr:`delivery_mode`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:9
+msgid "See :attr:`arguments`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:13
+msgid "Name of the exchange. Default is no name (the default exchange)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:17
+msgid ""
+"*This description of AMQP exchange types was shamelessly stolen from the "
+"blog post `AMQP in 10 minutes: Part 4`_ by Rajith Attapattu. Reading this "
+"article is recommended if you're new to amqp.*"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:22
+msgid ""
+"\"AMQP defines four default exchange types (routing algorithms) that covers "
+"most of the common messaging use cases. An AMQP broker can also define "
+"additional exchange types, so see your broker manual for more information "
+"about available exchange types."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:27
+msgid "`direct` (*default*)"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:29
+msgid ""
+"Direct match between the routing key in the message, and the routing "
+"criteria used when a queue is bound to this exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:32
+msgid "`topic`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:34
+msgid ""
+"Wildcard match between the routing key and the routing pattern specified in "
+"the exchange/queue binding. The routing key is treated as zero or more words"
+" delimited by `\".\"` and supports special wildcard characters. `\"*\"` "
+"matches a single word and `\"#\"` matches zero or more words."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:40
+msgid "`fanout`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:42
+msgid ""
+"Queues are bound to this exchange with no arguments. Hence any message sent "
+"to this exchange will be forwarded to all queues bound to this exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:46
+msgid "`headers`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:48
+msgid ""
+"Queues are bound to this exchange with a table of arguments containing "
+"headers and values (optional). A special argument named \"x-match\" "
+"determines the matching algorithm, where `\"all\"` implies an `AND` (all "
+"pairs must match) and `\"any\"` implies `OR` (at least one pair must match)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:54
+msgid ":attr:`arguments` is used to specify the arguments."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:62
+msgid "The channel the exchange is bound to (if bound)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:66
+msgid ""
+"Durable exchanges remain active when a server restarts. Non-durable "
+"exchanges (transient exchanges) are purged when a server restarts. Default "
+"is :const:`True`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:72
+msgid ""
+"If set, the exchange is deleted when all queues have finished using it. "
+"Default is :const:`False`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:77
+msgid ""
+"The default delivery mode used for messages. The value is an integer, or "
+"alias string."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:80
+msgid "1 or `\"transient\"`"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:82
+msgid ""
+"The message is transient. Which means it is stored in memory only, and is "
+"lost if the server dies or restarts."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:88
+msgid "2 or \"persistent\" (*default*)"
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:86
+msgid ""
+"The message is persistent. Which means the message is stored both in-memory,"
+" and on disk, and therefore preserved if the server dies or restarts."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:90
+msgid "The default value is 2 (persistent)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange:94
+msgid "Additional arguments to specify when the exchange is declared."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:1
+msgid "Create message instance to be sent with :meth:`publish`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:3
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:3
+msgid "Message body."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:5
+msgid "Set custom delivery mode. Defaults to :attr:`delivery_mode`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:8
+msgid "Message priority, 0 to 9. (currently not supported by RabbitMQ)."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:11
+msgid ""
+"The messages content_type. If content_type is set, no serialization occurs "
+"as it is assumed this is either a binary object, or you've done your own "
+"serialization. Leave blank if using built-in serialization as our library "
+"properly sets content_type."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:17
+msgid ""
+"The character set in which this object is encoded. Use \"binary\" if sending"
+" in raw binary objects. Leave blank if using built-in serialization as our "
+"library properly sets content_encoding."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:22
+msgid "Message properties."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.Message:24
+msgid "Message headers."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.bind_to:1
+msgid "Binds the exchange to another exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.bind_to:3
+msgid ""
+"If set the server will not respond, and the call will not block waiting for "
+"a response.  Default is :const:`False`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:1
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.declare:1
+msgid "Declare the exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:3
+msgid "Creates the exchange on the broker."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.declare:5
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:6
+msgid ""
+"If set the server will not respond, and a response will not be waited for. "
+"Default is :const:`False`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:1
+msgid "Delete the exchange declaration on server."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.delete:3
+msgid ""
+"Delete only if the exchange has no bindings. Default is :const:`False`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:1
+msgid "Publish message."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:3
+msgid ":meth:`Message` instance to publish."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:4
+msgid "Routing key."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:5
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.publish:6
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:6
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:7
+msgid "Currently not supported."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Exchange.unbind_from:1
+msgid "Delete previously created exchange binding from the server."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:1
+msgid "Message Producer."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:3
+msgid "Connection or channel."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:4
+msgid "Optional default exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:5
+msgid "Optional default routing key."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:6
+msgid "Default serializer. Default is `\"json\"`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:7
+msgid "Default compression method. Default is no compression."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:9
+msgid ""
+"Automatically declare the default exchange at instantiation. Default is "
+":const:`True`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer:11
+msgid ""
+"Callback to call for undeliverable messages, when the `mandatory` or "
+"`immediate` arguments to :meth:`publish` is used. This callback needs the "
+"following signature: `(exception, exchange, routing_key, message)`. Note "
+"that the producer needs to drain events to use this feature."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.declare:3
+msgid ""
+"This happens automatically at instantiation if :attr:`auto_declare` is "
+"enabled."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.maybe_declare:1
+msgid ""
+"Declare the exchange if it hasn't already been declared during this session."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:1
+msgid "Publish message to the specified exchange."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:4
+msgid "Message routing key."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:8
+msgid "Message priority. A number between 0 and 9."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:9
+msgid "Content type. Default is auto-detect."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:10
+msgid "Content encoding. Default is auto-detect."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:11
+msgid "Serializer to use. Default is auto-detect."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:12
+msgid "Compression method to use.  Default is none."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:13
+msgid "Mapping of arbitrary headers to pass along with the message body."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:15
+msgid ""
+"Override the exchange.  Note that this exchange must have been declared."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:17
+msgid ""
+"Optional list of required entities that must have been declared before "
+"publishing the message.  The entities will be declared using "
+":func:`~kombu.common.maybe_declare`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:20
+msgid "Retry publishing, or declaring entities if the connection is lost."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:22
+msgid ""
+"Retry configuration, this is the keywords supported by "
+":meth:`~kombu.Connection.ensure`."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:24
+msgid "Additional message properties, see AMQP spec."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.revive:1
+msgid "Revive the producer after connection loss."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.reload_group_result:1
+msgid "Reload group result, even if it has been previously fetched."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.store_result:1
+msgid "Send task return value and status."
+msgstr ""

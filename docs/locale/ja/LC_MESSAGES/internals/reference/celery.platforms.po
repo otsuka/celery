@@ -1,0 +1,236 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.platforms.rst:3 ../../docstring of
+#: celery.platforms:2
+msgid "celery.platforms"
+msgstr ""
+
+#: ../../docstring of celery.platforms:4
+msgid ""
+"Utilities dealing with platform specifics: signals, daemonization, users, "
+"groups, and so on."
+msgstr ""
+
+#: ../../docstring of celery.platforms.pyimplementation:1
+msgid "Return string identifying the current Python implementation."
+msgstr ""
+
+#: ../../docstring of celery.platforms.LockFailed:1
+msgid "Raised if a pidlock can't be acquired."
+msgstr ""
+
+#: ../../docstring of celery.platforms.get_fdmax:1
+msgid "Return the maximum number of open file descriptors on this system."
+msgstr ""
+
+#: ../../docstring of celery.platforms.get_fdmax:4
+msgid "Value returned if there's no file descriptor limit."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile:1
+msgid "Pidfile"
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile:3
+msgid "This is the type returned by :func:`create_pidlock`."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile:5
+msgid ""
+"TIP: Use the :func:`create_pidlock` function instead, which is more "
+"convenient and also removes stale pidfiles (when the process holding the "
+"lock is no longer running)."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.acquire:1
+msgid "Acquire lock."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.is_locked:1
+msgid "Return true if the pid lock exists."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.read_pid:1
+msgid "Read and return the current pid."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.release:1
+msgid "Release lock."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.remove:1
+msgid "Remove the lock."
+msgstr ""
+
+#: ../../docstring of celery.platforms.Pidfile.remove_if_stale:1
+msgid ""
+"Remove the lock if the process is not running. (does not respond to "
+"signals)."
+msgstr ""
+
+#: ../../docstring of celery.platforms.create_pidlock:1
+msgid "Create and verify pidfile."
+msgstr ""
+
+#: ../../docstring of celery.platforms.create_pidlock:3
+msgid ""
+"If the pidfile already exists the program exits with an error message, "
+"however if the process it refers to is not running anymore, the pidfile is "
+"deleted and the program continues."
+msgstr ""
+
+#: ../../docstring of celery.platforms.create_pidlock:7
+msgid ""
+"This function will automatically install an :mod:`atexit` handler to release"
+" the lock at exit, you can skip this by calling :func:`_create_pidlock` "
+"instead."
+msgstr ""
+
+#: ../../docstring of celery.platforms.create_pidlock:11
+msgid ":class:`Pidfile`."
+msgstr ""
+
+#: ../../docstring of celery.platforms.create_pidlock:13 ../../docstring of
+#: celery.platforms.detached:17
+msgid "**Example**:"
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:1
+msgid "Detach the current process in the background (daemonize)."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:3
+msgid ""
+"Optional log file.  The ability to write to this file will be verified "
+"before the process is detached."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:5
+msgid ""
+"Optional pidfile.  The pidfile will not be created, as this is the "
+"responsibility of the child.  But the process will exit if the pid lock "
+"exists and the pid written is still running."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:8
+msgid "Optional user id or user name to change effective privileges to."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:10
+msgid "Optional group id or group name to change effective privileges to."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:12
+msgid "Optional umask that will be effective in the child process."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:13
+msgid "Optional new working directory."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:14
+msgid "Don't actually detach, intented for debugging purposes."
+msgstr ""
+
+#: ../../docstring of celery.platforms.detached:15
+msgid "Ignored."
+msgstr ""
+
+#: ../../docstring of celery.platforms.parse_uid:1
+msgid "Parse user id."
+msgstr ""
+
+#: ../../docstring of celery.platforms.parse_uid:3
+msgid ""
+"uid can be an integer (uid) or a string (user name), if a user name the uid "
+"is taken from the system user registry."
+msgstr ""
+
+#: ../../docstring of celery.platforms.parse_gid:1
+msgid "Parse group id."
+msgstr ""
+
+#: ../../docstring of celery.platforms.parse_gid:3
+msgid ""
+"gid can be an integer (gid) or a string (group name), if a group name the "
+"gid is taken from the system group registry."
+msgstr ""
+
+#: ../../docstring of celery.platforms.setgroups:1
+msgid "Set active groups from a list of group ids."
+msgstr ""
+
+#: ../../docstring of celery.platforms.initgroups:1
+msgid ""
+"Compat version of :func:`os.initgroups` which was first added to Python 2.7."
+msgstr ""
+
+#: ../../docstring of celery.platforms.setgid:1
+msgid "Version of :func:`os.setgid` supporting group names."
+msgstr ""
+
+#: ../../docstring of celery.platforms.setuid:1
+msgid "Version of :func:`os.setuid` supporting usernames."
+msgstr ""
+
+#: ../../docstring of celery.platforms.maybe_drop_privileges:1
+msgid "Change process privileges to new user/group."
+msgstr ""
+
+#: ../../docstring of celery.platforms.maybe_drop_privileges:3
+msgid "If UID and GID is specified, the real user/group is changed."
+msgstr ""
+
+#: ../../docstring of celery.platforms.maybe_drop_privileges:5
+msgid ""
+"If only UID is specified, the real user is changed, and the group is changed"
+" to the users primary group."
+msgstr ""
+
+#: ../../docstring of celery.platforms.maybe_drop_privileges:8
+msgid "If only GID is specified, only the group is changed."
+msgstr ""
+
+#: ../../docstring of celery.platforms.set_process_title:1
+msgid "Set the ps name for the currently running process."
+msgstr ""
+
+#: ../../docstring of celery.platforms.set_process_title:3 ../../docstring of
+#: celery.platforms.set_mp_process_title:3
+msgid "Only works if :mod:`setproctitle` is installed."
+msgstr ""
+
+#: ../../docstring of celery.platforms.set_mp_process_title:1
+msgid "Set the ps name using the multiprocessing process name."
+msgstr ""
+
+#: ../../docstring of celery.platforms.get_errno_name:1
+msgid "Get errno for string, e.g. ``ENOENT``."
+msgstr ""
+
+#: ../../docstring of celery.platforms.ignore_errno:1
+msgid "Context manager to ignore specific POSIX error codes."
+msgstr ""
+
+#: ../../docstring of celery.platforms.ignore_errno:3
+msgid ""
+"Takes a list of error codes to ignore, which can be either the name of the "
+"code, or the code integer itself::"
+msgstr ""
+
+#: ../../docstring of celery.platforms.ignore_errno:13
+msgid ""
+"A tuple of exceptions to ignore (when the errno matches), defaults to "
+":exc:`Exception`."
+msgstr ""

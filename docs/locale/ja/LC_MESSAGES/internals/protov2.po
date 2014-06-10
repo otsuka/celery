@@ -1,0 +1,118 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/protov2.rst:5
+msgid "Task Message Protocol v2 (Draft Spec.)"
+msgstr ""
+
+#: ../../internals/protov2.rst:8
+msgid "Notes"
+msgstr ""
+
+#: ../../internals/protov2.rst:10
+msgid "Support for multiple languages via the ``lang`` header."
+msgstr ""
+
+#: ../../internals/protov2.rst:12
+msgid ""
+"Worker may redirect the message to a worker that supports the language."
+msgstr ""
+
+#: ../../internals/protov2.rst:15
+msgid "Metadata moved to headers."
+msgstr ""
+
+#: ../../internals/protov2.rst:17
+msgid ""
+"This means that workers/intermediates can inspect the message and make "
+"decisions based on the headers without decoding the payload (which may be "
+"language specific, e.g. serialized by the Python specific pickle "
+"serializer)."
+msgstr ""
+
+#: ../../internals/protov2.rst:22
+msgid "Body is only for language specific data."
+msgstr ""
+
+#: ../../internals/protov2.rst:24
+msgid "Python stores args/kwargs in body."
+msgstr ""
+
+#: ../../internals/protov2.rst:26
+msgid ""
+"If a message uses raw encoding then the raw data will be passed as a single "
+"argument to the function."
+msgstr ""
+
+#: ../../internals/protov2.rst:29
+msgid "Java/C, etc. can use a thrift/protobuf document as the body"
+msgstr ""
+
+#: ../../internals/protov2.rst:31
+msgid "Dispatches to actor based on ``c_type``, ``c_meth`` headers"
+msgstr ""
+
+#: ../../internals/protov2.rst:33
+msgid ""
+"``c_meth`` is unused by python, but may be used in the future to specify "
+"class+method pairs."
+msgstr ""
+
+#: ../../internals/protov2.rst:36
+msgid "Chain gains a dedicated field."
+msgstr ""
+
+#: ../../internals/protov2.rst:38
+msgid ""
+"Reducing the chain into a recursive ``callbacks`` argument causes problems "
+"when the recursion limit is exceeded."
+msgstr ""
+
+#: ../../internals/protov2.rst:41
+msgid ""
+"This is fixed in the new message protocol by specifying a list of "
+"signatures, each task will then pop a task off the list when sending the "
+"next message::"
+msgstr ""
+
+#: ../../internals/protov2.rst:51
+msgid "``correlation_id`` replaces ``task_id`` field."
+msgstr ""
+
+#: ../../internals/protov2.rst:54
+msgid ""
+"``c_shadow`` lets you specify a different name for logs, monitors can be "
+"used for e.g. meta tasks that calls any function::"
+msgstr ""
+
+#: ../../internals/protov2.rst:78
+msgid "Undecided"
+msgstr ""
+
+#: ../../internals/protov2.rst:80
+msgid "May consider moving callbacks/errbacks/chain into body."
+msgstr ""
+
+#: ../../internals/protov2.rst:82
+msgid ""
+"Will huge lists in headers cause overhead? The downside of keeping them in "
+"the body is that intermediates won't be able to introspect these values."
+msgstr ""
+
+#: ../../internals/protov2.rst:87
+msgid "Definition"
+msgstr ""
+
+#: ../../internals/protov2.rst:123
+msgid "Example"
+msgstr ""

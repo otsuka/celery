@@ -1,0 +1,157 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp:2
+msgid "celery.app.amqp"
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp:4
+msgid "Sending and receiving messages using Kombu."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:9
+msgid "AMQP"
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:15
+msgid "Broker connection class used.  Default is :class:`kombu.Connection`."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:20
+msgid "Base Consumer class used.  Default is :class:`kombu.compat.Consumer`."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:24
+msgid "All currently defined task queues. (A :class:`Queues` instance)."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.AMQP.Queues:1
+msgid ""
+"Create new :class:`Queues` instance, using queue defaults from the current "
+"configuration."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.AMQP.Router:1
+msgid "Return the current task router."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.AMQP.TaskConsumer:1
+msgid ""
+"Return consumer configured to consume from the queues we are configured for "
+"(``app.amqp.queues.consume_from``)."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.AMQP.TaskProducer:1
+msgid "Return publisher used to send tasks."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.AMQP.TaskProducer:3
+msgid "You should use `app.send_task` instead."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:39
+msgid "Queues"
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues:1
+msgid "Queue name⇒ declaration mapping."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues:3
+msgid "Initial list/tuple or dict of queues."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues:4
+msgid ""
+"By default any unknown queues will be added automatically, but if disabled "
+"the occurrence of unknown queues in `wanted` will raise :exc:`KeyError`."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues:8
+msgid "Default HA policy for queues with none set."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:1
+msgid "Add new queue."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:3
+msgid ""
+"The first argument can either be a :class:`kombu.Queue` instance, or the "
+"name of a queue.  If the former the rest of the keyword arguments are "
+"ignored, and options are simply taken from the queue instance."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:8
+msgid ":class:`kombu.Queue` instance or name of the queue."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:9
+msgid "(if named) specifies exchange name."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:10
+msgid "(if named) specifies binding key."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:11
+msgid "(if named) specifies type of exchange."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.add:12
+msgid "(if named) Additional declaration options."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.deselect:1
+#: ../../../celery/app/amqp.pydocstring of
+#: celery.app.amqp.Queues.select_remove:1
+msgid "Deselect queues so that they will not be consumed from."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.deselect:3
+#: ../../../celery/app/amqp.pydocstring of
+#: celery.app.amqp.Queues.select_remove:3
+msgid "Names of queues to avoid consuming from. Can be iterable or string."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.format:1
+msgid "Format routing table into string for log dumps."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.select:1
+#: ../../../celery/app/amqp.pydocstring of
+#: celery.app.amqp.Queues.select_subset:1
+msgid ""
+"Sets :attr:`consume_from` by selecting a subset of the currently defined "
+"queues."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.select:4
+#: ../../../celery/app/amqp.pydocstring of
+#: celery.app.amqp.Queues.select_subset:4
+msgid "Names of queues to consume from. Can be iterable or string."
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.Queues.select_add:1
+msgid ""
+"Add new task queue that will be consumed from even when a subset has been "
+"selected using the :option:`-Q` option."
+msgstr ""
+
+#: ../../reference/celery.app.amqp.rst:46
+msgid "TaskPublisher"
+msgstr ""
+
+#: ../../../celery/app/amqp.pydocstring of celery.app.amqp.TaskPublisher:1
+msgid "Deprecated version of :class:`TaskProducer`."
+msgstr ""

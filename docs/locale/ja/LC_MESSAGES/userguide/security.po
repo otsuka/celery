@@ -1,0 +1,313 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../userguide/security.rst:5
+msgid "Security"
+msgstr ""
+
+#: ../../userguide/security.rst:11
+msgid "Introduction"
+msgstr ""
+
+#: ../../userguide/security.rst:13
+msgid ""
+"While Celery is written with security in mind, it should be treated as an "
+"unsafe component."
+msgstr ""
+
+#: ../../userguide/security.rst:16
+msgid ""
+"Depending on your `Security Policy`_, there are various steps you can take "
+"to make your Celery installation more secure."
+msgstr ""
+
+#: ../../userguide/security.rst:24
+msgid "Areas of Concern"
+msgstr ""
+
+#: ../../userguide/security.rst:27
+msgid "Broker"
+msgstr ""
+
+#: ../../userguide/security.rst:29
+msgid ""
+"It is imperative that the broker is guarded from unwanted access, especially"
+" if accessible to the public. By default, workers trust that the data they "
+"get from the broker has not been tampered with. See `Message Signing`_ for "
+"information on how to make the broker connection more trustworthy."
+msgstr ""
+
+#: ../../userguide/security.rst:35
+msgid ""
+"The first line of defence should be to put a firewall in front of the "
+"broker, allowing only white-listed machines to access it."
+msgstr ""
+
+#: ../../userguide/security.rst:38
+msgid ""
+"Keep in mind that both firewall misconfiguration, and temporarily disabling "
+"the firewall, is common in the real world. Solid security policy includes "
+"monitoring of firewall equipment to detect if they have been disabled, be it"
+" accidentally or on purpose."
+msgstr ""
+
+#: ../../userguide/security.rst:43
+msgid "In other words, one should not blindly trust the firewall either."
+msgstr ""
+
+#: ../../userguide/security.rst:45
+msgid ""
+"If your broker supports fine-grained access control, like RabbitMQ, this is "
+"something you should look at enabling. See for example "
+"http://www.rabbitmq.com/access-control.html."
+msgstr ""
+
+#: ../../userguide/security.rst:50
+msgid "Client"
+msgstr ""
+
+#: ../../userguide/security.rst:52
+msgid ""
+"In Celery, \"client\" refers to anything that sends messages to the broker, "
+"e.g. web-servers that apply tasks."
+msgstr ""
+
+#: ../../userguide/security.rst:55
+msgid ""
+"Having the broker properly secured doesn't matter if arbitrary messages can "
+"be sent through a client."
+msgstr ""
+
+#: ../../userguide/security.rst:58
+msgid "*[Need more text here]*"
+msgstr ""
+
+#: ../../userguide/security.rst:61
+msgid "Worker"
+msgstr ""
+
+#: ../../userguide/security.rst:63
+msgid ""
+"The default permissions of tasks running inside a worker are the same ones "
+"as the privileges of the worker itself. This applies to resources such as "
+"memory, file-systems and devices."
+msgstr ""
+
+#: ../../userguide/security.rst:67
+msgid ""
+"An exception to this rule is when using the multiprocessing based task pool,"
+" which is currently the default. In this case, the task will have access to "
+"any memory copied as a result of the :func:`fork` call (does not apply under"
+" MS Windows), and access to memory contents written by parent tasks in the "
+"same worker child process."
+msgstr ""
+
+#: ../../userguide/security.rst:73
+msgid ""
+"Limiting access to memory contents can be done by launching every task in a "
+"subprocess (:func:`fork` + :func:`execve`)."
+msgstr ""
+
+#: ../../userguide/security.rst:76
+msgid ""
+"Limiting file-system and device access can be accomplished by using "
+"`chroot`_, `jail`_, `sandboxing`_, virtual machines or other mechanisms as "
+"enabled by the platform or additional software."
+msgstr ""
+
+#: ../../userguide/security.rst:80
+msgid ""
+"Note also that any task executed in the worker will have the same network "
+"access as the machine on which it's running. If the worker is located on an "
+"internal network it's recommended to add firewall rules for outbound "
+"traffic."
+msgstr ""
+
+#: ../../userguide/security.rst:91
+msgid "Serializers"
+msgstr ""
+
+#: ../../userguide/security.rst:93
+msgid ""
+"The default `pickle` serializer is convenient because it supports arbitrary "
+"Python objects, whereas other serializers only work with a restricted set of"
+" types."
+msgstr ""
+
+#: ../../userguide/security.rst:97
+msgid ""
+"But for the same reasons the `pickle` serializer is inherently insecure "
+"[*]_, and should be avoided whenever clients are untrusted or "
+"unauthenticated."
+msgstr ""
+
+#: ../../userguide/security.rst:101
+msgid "http://nadiana.com/python-pickle-insecure"
+msgstr ""
+
+#: ../../userguide/security.rst:103
+msgid ""
+"You can disable untrusted content by specifying a white-list of accepted "
+"content-types in the :setting:`CELERY_ACCEPT_CONTENT` setting:"
+msgstr ""
+
+#: ../../userguide/security.rst:111
+msgid ""
+"This setting was first supported in version 3.0.18. If you're running an "
+"earlier version it will simply be ignored, so make sure you're running a "
+"version that supports it."
+msgstr ""
+
+#: ../../userguide/security.rst:120
+msgid ""
+"This accepts a list of serializer names and content-types, so you could also"
+" specify the content type for json:"
+msgstr ""
+
+#: ../../userguide/security.rst:127
+msgid ""
+"Celery also comes with a special `auth` serializer that validates "
+"communication between Celery clients and workers, making sure that messages "
+"originates from trusted sources. Using `Public-key cryptography` the `auth` "
+"serializer can verify the authenticity of senders, to enable this read :ref"
+":`message-signing` for more information."
+msgstr ""
+
+#: ../../userguide/security.rst:141
+msgid "Message Signing"
+msgstr ""
+
+#: ../../userguide/security.rst:143
+msgid ""
+"Celery can use the `pyOpenSSL`_ library to sign message using `Public-key "
+"cryptography`, where messages sent by clients are signed using a private key"
+" and then later verified by the worker using a public certificate."
+msgstr ""
+
+#: ../../userguide/security.rst:148
+msgid ""
+"Optimally certificates should be signed by an official `Certificate "
+"Authority`_, but they can also be self-signed."
+msgstr ""
+
+#: ../../userguide/security.rst:151
+msgid ""
+"To enable this you should configure the :setting:`CELERY_TASK_SERIALIZER` "
+"setting to use the `auth` serializer. Also required is configuring the paths"
+" used to locate private keys and certificates on the file-system: the "
+":setting:`CELERY_SECURITY_KEY`, :setting:`CELERY_SECURITY_CERTIFICATE` and "
+":setting:`CELERY_SECURITY_CERT_STORE` settings respectively. With these "
+"configured it is also necessary to call the :func:`celery.setup_security` "
+"function.  Note that this will also disable all insecure serializers so that"
+" the worker won't accept messages with untrusted content types."
+msgstr ""
+
+#: ../../userguide/security.rst:163
+msgid ""
+"This is an example configuration using the `auth` serializer, with the "
+"private key and certificate files located in `/etc/ssl`."
+msgstr ""
+
+#: ../../userguide/security.rst:176
+msgid ""
+"While relative paths are not disallowed, using absolute paths is recommended"
+" for these files."
+msgstr ""
+
+#: ../../userguide/security.rst:179
+msgid ""
+"Also note that the `auth` serializer won't encrypt the contents of a "
+"message, so if needed this will have to be enabled separately."
+msgstr ""
+
+#: ../../userguide/security.rst:188
+msgid "Intrusion Detection"
+msgstr ""
+
+#: ../../userguide/security.rst:190
+msgid ""
+"The most important part when defending your systems against intruders is "
+"being able to detect if the system has been compromised."
+msgstr ""
+
+#: ../../userguide/security.rst:194
+msgid "Logs"
+msgstr ""
+
+#: ../../userguide/security.rst:196
+msgid ""
+"Logs are usually the first place to look for evidence of security breaches, "
+"but they are useless if they can be tampered with."
+msgstr ""
+
+#: ../../userguide/security.rst:199
+msgid ""
+"A good solution is to set up centralized logging with a dedicated logging "
+"server. Acess to it should be restricted. In addition to having all of the "
+"logs in a single place, if configured correctly, it can make it harder for "
+"intruders to tamper with your logs."
+msgstr ""
+
+#: ../../userguide/security.rst:204
+msgid ""
+"This should be fairly easy to setup using syslog (see also `syslog-ng`_ and "
+"`rsyslog`_.).  Celery uses the :mod:`logging` library, and already has "
+"support for using syslog."
+msgstr ""
+
+#: ../../userguide/security.rst:208
+msgid ""
+"A tip for the paranoid is to send logs using UDP and cut the transmit part "
+"of the logging server's network cable :-)"
+msgstr ""
+
+#: ../../userguide/security.rst:215
+msgid "Tripwire"
+msgstr ""
+
+#: ../../userguide/security.rst:217
+msgid ""
+"`Tripwire`_ is a (now commercial) data integrity tool, with several open "
+"source implementations, used to keep cryptographic hashes of files in the "
+"file-system, so that administrators can be alerted when they change. This "
+"way when the damage is done and your system has been compromised you can "
+"tell exactly what files intruders have changed  (password files, logs, "
+"backdoors, rootkits and so on). Often this is the only way you will be able "
+"to detect an intrusion."
+msgstr ""
+
+#: ../../userguide/security.rst:225
+msgid "Some open source implementations include:"
+msgstr ""
+
+#: ../../userguide/security.rst:227
+msgid "`OSSEC`_"
+msgstr ""
+
+#: ../../userguide/security.rst:228
+msgid "`Samhain`_"
+msgstr ""
+
+#: ../../userguide/security.rst:229
+msgid "`Open Source Tripwire`_"
+msgstr ""
+
+#: ../../userguide/security.rst:230
+msgid "`AIDE`_"
+msgstr ""
+
+#: ../../userguide/security.rst:232
+msgid ""
+"Also, the `ZFS`_ file-system comes with built-in integrity checks that can "
+"be used."
+msgstr ""

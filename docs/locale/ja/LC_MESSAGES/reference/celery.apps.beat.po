@@ -1,0 +1,32 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.apps.beat.rst:3
+#: ../../../celery/apps/beat.pydocstring of celery.apps.beat:2
+msgid "celery.apps.beat"
+msgstr ""
+
+#: ../../../celery/apps/beat.pydocstring of celery.apps.beat:4
+msgid "This module is the 'program-version' of :mod:`celery.beat`."
+msgstr ""
+
+#: ../../../celery/apps/beat.pydocstring of celery.apps.beat:6
+msgid ""
+"It does everything necessary to run that module as an actual application, "
+"like installing signal handlers and so on."
+msgstr ""
+
+#: ../../../celery/apps/beat.pydocstring of
+#: celery.apps.beat.Beat.install_sync_handler:1
+msgid "Install a `SIGTERM` + `SIGINT` handler that saves the beat schedule."
+msgstr ""

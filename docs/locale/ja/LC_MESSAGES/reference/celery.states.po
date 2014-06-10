@@ -1,0 +1,125 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../celery/states.pydocstring of celery.states:2
+msgid "celery.states"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:4
+msgid "Built-in task states."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:9
+msgid "States"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:11
+msgid "See :ref:`task-states`."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:16
+msgid "Sets"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:21
+msgid "READY_STATES"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:23
+msgid "Set of states meaning the task result is ready (has been executed)."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:28
+msgid "UNREADY_STATES"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:30
+msgid ""
+"Set of states meaning the task result is not ready (has not been executed)."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:35
+msgid "EXCEPTION_STATES"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:37
+msgid "Set of states meaning the task returned an exception."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:42
+msgid "PROPAGATE_STATES"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:44
+msgid "Set of exception states that should propagate exceptions to the user."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:49
+msgid "ALL_STATES"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:51
+msgid "Set of all possible states."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states:55
+msgid "Misc."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.PENDING:1
+msgid "Task state is unknown (assumed pending since you know the id)."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.RECEIVED:1
+msgid "Task was received by a worker."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.STARTED:1
+msgid "Task was started by a worker (:setting:`CELERY_TRACK_STARTED`)."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.SUCCESS:1
+msgid "Task succeeded"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.FAILURE:1
+msgid "Task failed"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.REVOKED:1
+msgid "Task was revoked."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.RETRY:1
+msgid "Task is waiting for retry."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.precedence:1
+msgid "Get the precedence index for state."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.precedence:3
+msgid "Lower index means higher precedence."
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.state:1
+msgid ""
+"State is a subclass of :class:`str`, implementing comparison methods "
+"adhering to state precedence rules::"
+msgstr ""
+
+#: ../../../celery/states.pydocstring of celery.states.state:9
+msgid ""
+"Any custom state is considered to be lower than :state:`FAILURE` and "
+":state:`SUCCESS`, but higher than any of the other built-in states::"
+msgstr ""

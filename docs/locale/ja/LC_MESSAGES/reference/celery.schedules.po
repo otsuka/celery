@@ -1,0 +1,242 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.schedules.rst:3
+#: ../../../celery/schedules.pydocstring of celery.schedules:2
+msgid "celery.schedules"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules:4
+msgid "Schedules define the intervals at which periodic tasks should run."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.ParseException:1
+#: ../../../celery/schedules.pydocstring of
+#: celery.schedules.crontab_parser.ParseException:1
+msgid "Raised by crontab_parser when the input can't be parsed."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule:1
+msgid "Schedule for periodic task."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule:3
+msgid "Interval in seconds (or a :class:`~datetime.timedelta`)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule:4
+msgid ""
+"If set to True the run time will be rounded to the resolution of the "
+"interval."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule:6
+msgid ""
+"Function returning the current date and time (class:`~datetime.datetime`)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule:8
+msgid "Celery app instance."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule.is_due:1
+msgid ""
+"Returns tuple of two items `(is_due, next_time_to_check)`, where next time "
+"to check is in seconds."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule.is_due:4
+msgid "e.g."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule.is_due:7
+msgid "`(True, 20)`, means the task should be run now, and the next"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule.is_due:7
+msgid "time to check is in 20 seconds."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.schedule.is_due:9
+msgid ""
+"`(False, 12.3)`, means the task is not due, but that the scheduler should "
+"check again in 12.3 seconds."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of
+#: celery.schedules.schedule.is_due:12
+msgid ""
+"The next time to check is used to save energy/cpu cycles, it does not need "
+"to be accurate but will influence the precision of your schedule.  You must "
+"also keep in mind the value of :setting:`CELERYBEAT_MAX_LOOP_INTERVAL`, "
+"which decides the maximum number of seconds the scheduler can sleep between "
+"re-checking the periodic task intervals.  So if you have a task that changes"
+" schedule at runtime then your next_run_at check will decide how long it "
+"will take before a change to the schedule takes effect.  The max loop "
+"interval takes precendence over the next check at value returned."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of
+#: celery.schedules.schedule.is_due:23
+msgid "Scheduler max interval variance"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of
+#: celery.schedules.schedule.is_due:25
+msgid ""
+"The default max loop interval may vary for different schedulers. For the "
+"default scheduler the value is 5 minutes, but for e.g. the django-celery "
+"database scheduler the value is 5 seconds."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:1
+msgid ""
+"A crontab can be used as the `run_every` value of a :class:`PeriodicTask` to"
+" add cron-like scheduling."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:4
+msgid ""
+"Like a :manpage:`cron` job, you can specify units of time of when you would "
+"like the task to execute. It is a reasonably complete implementation of "
+"cron's features, so it should provide a fair degree of scheduling needs."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:9
+msgid ""
+"You can specify a minute, an hour, a day of the week, a day of the month, "
+"and/or a month in the year in any of the following formats:"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:14
+msgid ""
+"A (list of) integers from 0-59 that represent the minutes of an hour of when"
+" execution should occur; or"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:16
+msgid ""
+"A string representing a crontab pattern.  This may get pretty advanced, like"
+" `minute='*/15'` (for every quarter) or `minute='1,13,30-45,50-59/2'`."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:22
+msgid ""
+"A (list of) integers from 0-23 that represent the hours of a day of when "
+"execution should occur; or"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:24
+msgid ""
+"A string representing a crontab pattern.  This may get pretty advanced, like"
+" `hour='*/3'` (for every three hours) or `hour='0,8-17/2'` (at midnight, and"
+" every two hours during office hours)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:31
+msgid ""
+"A (list of) integers from 0-6, where Sunday = 0 and Saturday = 6, that "
+"represent the days of a week that execution should occur."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:34
+msgid ""
+"A string representing a crontab pattern.  This may get pretty advanced, like"
+" `day_of_week='mon-fri'` (for weekdays only). (Beware that "
+"`day_of_week='*/2'` does not literally mean 'every two days', but 'every day"
+" that is divisible by two'!)"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:41
+msgid ""
+"A (list of) integers from 1-31 that represents the days of the month that "
+"execution should occur."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:43
+msgid ""
+"A string representing a crontab pattern.  This may get pretty advanced, such"
+" as `day_of_month='2-30/3'` (for every even numbered day) or "
+"`day_of_month='1-7,15-21'` (for the first and third weeks of the month)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:50
+msgid ""
+"A (list of) integers from 1-12 that represents the months of the year during"
+" which execution can occur."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:52
+msgid ""
+"A string representing a crontab pattern.  This may get pretty advanced, such"
+" as `month_of_year='*/3'` (for the first month of every quarter) or "
+"`month_of_year='2-12/2'` (for every even numbered month)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:59
+msgid ""
+"Function returning the current date and time (:class:`~datetime.datetime`)."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:64
+msgid "The Celery app instance."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab:66
+msgid ""
+"It is important to realize that any day on which execution should occur must"
+" be represented by entries in all three of the day and month attributes.  "
+"For example, if `day_of_week` is 0 and `day_of_month` is every seventh day, "
+"only months that begin on Sunday and are also in the `month_of_year` "
+"attribute will have execution events.  Or, `day_of_week` is 1 and "
+"`day_of_month` is '1-7,15-21' means every first and third monday of every "
+"month present in `month_of_year`."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab.is_due:1
+msgid ""
+"Returns tuple of two items `(is_due, next_time_to_run)`, where next time to "
+"run is in seconds."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab.is_due:4
+msgid "See :meth:`celery.schedules.schedule.is_due` for more information."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of
+#: celery.schedules.crontab.remaining_estimate:1
+msgid "Returns when the periodic task should run next as a timedelta."
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab_parser:1
+msgid ""
+"Parser for crontab expressions. Any expression of the form 'groups' (see BNF"
+" grammar below) is accepted and expanded to a set of numbers. These numbers "
+"represent the units of time that the crontab needs to run on::"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab_parser:15
+msgid ""
+"The parser is a general purpose one, useful for parsing hours, minutes and "
+"day_of_week expressions.  Example usage::"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab_parser:25
+msgid ""
+"It can also parse day_of_month and month_of_year expressions if initialized "
+"with an minimum of 1.  Example usage::"
+msgstr ""
+
+#: ../../../celery/schedules.pydocstring of celery.schedules.crontab_parser:35
+msgid "The maximum possible expanded value returned is found by the formula::"
+msgstr ""

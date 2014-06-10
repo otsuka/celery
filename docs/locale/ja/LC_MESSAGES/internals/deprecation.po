@@ -1,0 +1,531 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/deprecation.rst:5
+msgid "Celery Deprecation Timeline"
+msgstr ""
+
+#: ../../internals/deprecation.rst:13
+msgid "Removals for version 3.2"
+msgstr ""
+
+#: ../../internals/deprecation.rst:15
+msgid ""
+"Module ``celery.task.trace`` has been renamed to ``celery.app.trace`` as the"
+" ``celery.task`` package is being phased out.  The compat module will be "
+"removed in version 3.2 so please change any import from::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:21
+msgid "to::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:25
+msgid ""
+"``AsyncResult.serializable()`` and ``celery.result.from_serializable`` will "
+"be removed."
+msgstr ""
+
+#: ../../internals/deprecation.rst:28
+msgid "Use instead::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:37
+msgid "Removals for version 4.0"
+msgstr ""
+
+#: ../../internals/deprecation.rst:40
+msgid "Old Task API"
+msgstr ""
+
+#: ../../internals/deprecation.rst:45
+msgid "Compat Task Modules"
+msgstr ""
+
+#: ../../internals/deprecation.rst:47
+msgid "Module ``celery.decorators`` will be removed:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:49
+msgid "Which means you need to change::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:53
+msgid "Into::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:57
+msgid "Module ``celery.task`` *may* be removed (not decided)"
+msgstr ""
+
+#: ../../internals/deprecation.rst:59
+msgid "This means you should change::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:63 ../../internals/deprecation.rst:71
+msgid "into::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:69
+msgid "from celery.task import Task"
+msgstr ""
+
+#: ../../internals/deprecation.rst:76
+msgid ""
+"Note that the new :class:`~celery.Task` class no longer uses classmethods "
+"for these methods:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:79
+msgid "delay"
+msgstr ""
+
+#: ../../internals/deprecation.rst:80
+msgid "apply_async"
+msgstr ""
+
+#: ../../internals/deprecation.rst:81
+msgid "retry"
+msgstr ""
+
+#: ../../internals/deprecation.rst:82
+msgid "apply"
+msgstr ""
+
+#: ../../internals/deprecation.rst:83
+msgid "AsyncResult"
+msgstr ""
+
+#: ../../internals/deprecation.rst:84
+msgid "subtask"
+msgstr ""
+
+#: ../../internals/deprecation.rst:86
+msgid ""
+"This also means that you can't call these methods directly on the class, but"
+" have to instantiate the task first::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:96
+msgid "TaskSet"
+msgstr ""
+
+#: ../../internals/deprecation.rst:98
+msgid ""
+"TaskSet has been renamed to group and TaskSet will be removed in version "
+"4.0."
+msgstr ""
+
+#: ../../internals/deprecation.rst:100
+msgid "Old::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:106
+msgid "New::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:113
+msgid "Magic keyword arguments"
+msgstr ""
+
+#: ../../internals/deprecation.rst:115
+msgid ""
+"The magic keyword arguments accepted by tasks will be removed in 4.0, so you"
+" should start rewriting any tasks using the ``celery.decorators`` module and"
+" depending on keyword arguments being passed to the task, for example::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:127
+msgid "should be rewritten into::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:137
+msgid "Task attributes"
+msgstr ""
+
+#: ../../internals/deprecation.rst:139
+msgid "The task attributes:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:141
+msgid "``queue``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:142
+msgid "``exchange``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:143
+msgid "``exchange_type``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:144
+msgid "``routing_key``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:145
+msgid "``delivery_mode``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:146
+msgid "``priority``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:148
+msgid "is deprecated and must be set by :setting:`CELERY_ROUTES` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:151
+msgid ":mod:`celery.result`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:153
+msgid "``BaseAsyncResult`` -> ``AsyncResult``."
+msgstr ""
+
+#: ../../internals/deprecation.rst:155
+msgid "``TaskSetResult`` -> ``GroupResult``."
+msgstr ""
+
+#: ../../internals/deprecation.rst:157
+msgid "``TaskSetResult.total`` -> ``len(GroupResult)``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:159
+msgid "``TaskSetResult.taskset_id`` -> ``GroupResult.id``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:161
+msgid ""
+"Apply to: :class:`~celery.result.AsyncResult`, "
+":class:`~celery.result.EagerResult`::"
+msgstr ""
+
+#: ../../internals/deprecation.rst:166
+msgid "``Result.task_id()`` -> ``Result.id``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:168
+msgid "``Result.status`` -> ``Result.state``."
+msgstr ""
+
+#: ../../internals/deprecation.rst:171
+msgid ":mod:`celery.loader`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:173
+msgid "``current_loader()`` -> ``current_app.loader``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:175
+msgid "``load_settings()`` -> ``current_app.conf``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:179
+msgid "Task_sent signal"
+msgstr ""
+
+#: ../../internals/deprecation.rst:181
+msgid ""
+"The :signal:`task_sent` signal will be removed in version 4.0. Please use "
+"the :signal:`before_task_publish` and :signal:`after_task_publush` signals "
+"instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:187
+msgid "Modules to Remove"
+msgstr ""
+
+#: ../../internals/deprecation.rst:189
+msgid "``celery.execute``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:191
+msgid ""
+"This module only contains ``send_task``, which must be replaced with "
+":attr:`@send_task` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:194
+msgid "``celery.decorators``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:196
+msgid "See :ref:`deprecate-compat-task-modules`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:198
+msgid "``celery.log``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:200
+msgid "Use :attr:`@log` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:202
+msgid "``celery.messaging``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:204
+msgid "Use :attr:`@amqp` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:206
+msgid "``celery.registry``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:208
+msgid "Use :mod:`celery.app.registry` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:210
+msgid "``celery.task.control``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:212
+msgid "Use :attr:`@control` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:214
+msgid "``celery.task.schedules``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:216
+msgid "Use :mod:`celery.schedules` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:218
+msgid "``celery.task.chords``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:220
+msgid "Use :func:`celery.chord` instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:223
+msgid "Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:226
+msgid "``BROKER`` Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:229 ../../internals/deprecation.rst:243
+#: ../../internals/deprecation.rst:259 ../../internals/deprecation.rst:273
+#: ../../internals/deprecation.rst:288
+msgid "**Setting name**"
+msgstr ""
+
+#: ../../internals/deprecation.rst:229 ../../internals/deprecation.rst:243
+#: ../../internals/deprecation.rst:259 ../../internals/deprecation.rst:273
+#: ../../internals/deprecation.rst:288
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../internals/deprecation.rst:231
+msgid "``BROKER_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:231 ../../internals/deprecation.rst:232
+#: ../../internals/deprecation.rst:233 ../../internals/deprecation.rst:234
+#: ../../internals/deprecation.rst:235
+msgid ":setting:`BROKER_URL`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:232
+msgid "``BROKER_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:233
+msgid "``BROKER_USER``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:234
+msgid "``BROKER_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:235
+msgid "``BROKER_VHOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:240
+msgid "``REDIS`` Result Backend Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:245
+msgid "``CELERY_REDIS_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:245 ../../internals/deprecation.rst:246
+#: ../../internals/deprecation.rst:247 ../../internals/deprecation.rst:248
+#: ../../internals/deprecation.rst:249 ../../internals/deprecation.rst:250
+#: ../../internals/deprecation.rst:251 ../../internals/deprecation.rst:252
+msgid ":setting:`CELERY_RESULT_BACKEND`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:246
+msgid "``CELERY_REDIS_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:247
+msgid "``CELERY_REDIS_DB``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:248
+msgid "``CELERY_REDIS_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:249
+msgid "``REDIS_HOST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:250
+msgid "``REDIS_PORT``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:251
+msgid "``REDIS_DB``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:252
+msgid "``REDIS_PASSWORD``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:256
+msgid "Logging Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:261
+msgid "``CELERYD_LOG_LEVEL``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:261 ../../internals/deprecation.rst:263
+#: ../../internals/deprecation.rst:265
+msgid ":option:`--loglevel`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:262
+msgid "``CELERYD_LOG_FILE``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:262
+msgid ":option:`--logfile``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:263
+msgid "``CELERYBEAT_LOG_LEVEL``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:264
+msgid "``CELERYBEAT_LOG_FILE``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:264 ../../internals/deprecation.rst:266
+msgid ":option:`--loglevel``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:265
+msgid "``CELERYMON_LOG_LEVEL``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:266
+msgid "``CELERYMON_LOG_FILE``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:270
+msgid "Other Settings"
+msgstr ""
+
+#: ../../internals/deprecation.rst:275
+msgid "``CELERY_TASK_ERROR_WITELIST``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:275
+msgid "Annotate ``Task.ErrorMail``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:276
+msgid "``CELERY_AMQP_TASK_RESULT_EXPIRES``"
+msgstr ""
+
+#: ../../internals/deprecation.rst:276
+msgid ":setting:`CELERY_TASK_RESULT_EXPIRES`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:283
+msgid "Removals for version 2.0"
+msgstr ""
+
+#: ../../internals/deprecation.rst:285
+msgid "The following settings will be removed:"
+msgstr ""
+
+#: ../../internals/deprecation.rst:290 ../../internals/deprecation.rst:291
+msgid "`CELERY_AMQP_CONSUMER_QUEUES`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:290 ../../internals/deprecation.rst:291
+#: ../../internals/deprecation.rst:294
+msgid "`CELERY_QUEUES`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:292
+msgid "`CELERY_AMQP_EXCHANGE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:292
+msgid "`CELERY_DEFAULT_EXCHANGE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:293
+msgid "`CELERY_AMQP_EXCHANGE_TYPE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:293
+msgid "`CELERY_DEFAULT_AMQP_EXCHANGE_TYPE`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:294
+msgid "`CELERY_AMQP_CONSUMER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:295
+msgid "`CELERY_AMQP_PUBLISHER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:295
+msgid "`CELERY_DEFAULT_ROUTING_KEY`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:298
+msgid ":envvar:`CELERY_LOADER` definitions without class name."
+msgstr ""
+
+#: ../../internals/deprecation.rst:300
+msgid ""
+"E.g. `celery.loaders.default`, needs to include the class name: "
+"`celery.loaders.default.Loader`."
+msgstr ""
+
+#: ../../internals/deprecation.rst:304
+msgid ":meth:`TaskSet.run`. Use :meth:`celery.task.base.TaskSet.apply_async`"
+msgstr ""
+
+#: ../../internals/deprecation.rst:304
+msgid "instead."
+msgstr ""
+
+#: ../../internals/deprecation.rst:306
+msgid ""
+"The module :mod:`celery.task.rest`; use :mod:`celery.task.http` instead."
+msgstr ""

@@ -1,0 +1,23 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.app.builtins.rst:3
+#: ../../../celery/app/builtins.pydocstring of celery.app.builtins:2
+msgid "celery.app.builtins"
+msgstr ""
+
+#: ../../../celery/app/builtins.pydocstring of celery.app.builtins:4
+msgid ""
+"Built-in tasks that are always available in all app instances. E.g. chord, "
+"group and xmap."
+msgstr ""

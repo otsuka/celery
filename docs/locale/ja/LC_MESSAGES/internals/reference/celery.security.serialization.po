@@ -1,0 +1,38 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.security.serialization.rst:3
+#: ../../../celery/security/serialization.pydocstring of
+#: celery.security.serialization:2
+msgid "celery.security.serialization"
+msgstr ""
+
+#: ../../../celery/security/serialization.pydocstring of
+#: celery.security.serialization:4
+msgid "Secure serializer."
+msgstr ""
+
+#: ../../../celery/security/serialization.pydocstring of
+#: celery.security.serialization.SecureSerializer.deserialize:1
+msgid "deserialize data structure from string"
+msgstr ""
+
+#: ../../../celery/security/serialization.pydocstring of
+#: celery.security.serialization.SecureSerializer.serialize:1
+msgid "serialize data structure into string"
+msgstr ""
+
+#: ../../../celery/security/serialization.pydocstring of
+#: celery.security.serialization.register_auth:1
+msgid "register security serializer"
+msgstr ""

@@ -1,0 +1,461 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/app-overview.rst:3
+msgid "\"The Big Instance\" Refactor"
+msgstr ""
+
+#: ../../internals/app-overview.rst:5
+msgid ""
+"The `app` branch is a work-in-progress to remove the use of a global "
+"configuration in Celery."
+msgstr ""
+
+#: ../../internals/app-overview.rst:8
+msgid ""
+"Celery can now be instantiated, which means several instances of Celery may "
+"exist in the same process space. Also, large parts can be customized without"
+" resorting to monkey patching."
+msgstr ""
+
+#: ../../internals/app-overview.rst:14
+msgid "Examples"
+msgstr ""
+
+#: ../../internals/app-overview.rst:16
+msgid "Creating a Celery instance::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:24
+msgid "Creating tasks:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:33
+msgid "Creating custom Task subclasses:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:50
+msgid "Starting a worker:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:56
+msgid "Getting access to the configuration:"
+msgstr ""
+
+#: ../../internals/app-overview.rst:64
+msgid "Controlling workers::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:71
+msgid "Other interesting attributes::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:89
+msgid ""
+"As you can probably see, this really opens up another dimension of "
+"customization abilities."
+msgstr ""
+
+#: ../../internals/app-overview.rst:93
+msgid "Deprecations"
+msgstr ""
+
+#: ../../internals/app-overview.rst:95
+msgid "celery.task.ping celery.task.PingTask"
+msgstr ""
+
+#: ../../internals/app-overview.rst:98
+msgid ""
+"Inferior to the ping remote control command. Will be removed in Celery 2.3."
+msgstr ""
+
+#: ../../internals/app-overview.rst:102
+msgid "Removed deprecations"
+msgstr ""
+
+#: ../../internals/app-overview.rst:105
+msgid "`celery.utils.timedelta_seconds`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:105
+msgid "Use: :func:`celery.utils.timeutils.timedelta_seconds`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:108
+msgid "`celery.utils.defaultdict`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:108
+msgid "Use: :func:`celery.utils.compat.defaultdict`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:111
+msgid "`celery.utils.all`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:111
+msgid "Use: :func:`celery.utils.compat.all`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:114
+msgid "`celery.task.apply_async`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:114
+msgid "Use app.send_task"
+msgstr ""
+
+#: ../../internals/app-overview.rst:117
+msgid "`celery.task.tasks`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:117
+msgid "Use :data:`celery.registry.tasks`"
+msgstr ""
+
+#: ../../internals/app-overview.rst:120
+msgid "Aliases (Pending deprecation)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:123
+msgid "celery.task.base"
+msgstr ""
+
+#: ../../internals/app-overview.rst:123
+msgid ".Task -> {app.create_task_cls}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:126
+msgid "celery.task.sets"
+msgstr ""
+
+#: ../../internals/app-overview.rst:126
+msgid ".TaskSet -> {app.TaskSet}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:129
+msgid "celery.decorators / celery.task"
+msgstr ""
+
+#: ../../internals/app-overview.rst:129
+msgid ".task -> {app.task}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:135
+msgid "celery.execute"
+msgstr ""
+
+#: ../../internals/app-overview.rst:132
+msgid ".apply_async -> {task.apply_async}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:133
+msgid ".apply -> {task.apply}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:134
+msgid ".send_task -> {app.send_task}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:135
+msgid ".delay_task -> no alternative"
+msgstr ""
+
+#: ../../internals/app-overview.rst:143
+msgid "celery.log"
+msgstr ""
+
+#: ../../internals/app-overview.rst:138
+msgid ".get_default_logger -> {app.log.get_default_logger}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:139
+msgid ".setup_logger -> {app.log.setup_logger}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:140
+msgid ".get_task_logger -> {app.log.get_task_logger}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:141
+msgid ".setup_task_logger -> {app.log.setup_task_logger}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:142
+msgid ".setup_logging_subsystem -> {app.log.setup_logging_subsystem}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:143
+msgid ".redirect_stdouts_to_logger -> {app.log.redirect_stdouts_to_logger}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:151
+msgid "celery.messaging"
+msgstr ""
+
+#: ../../internals/app-overview.rst:146
+msgid ".establish_connection -> {app.broker_connection}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:147
+msgid ".with_connection -> {app.with_connection}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:148
+msgid ".get_consumer_set -> {app.amqp.get_task_consumer}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:149
+msgid ".TaskPublisher -> {app.amqp.TaskPublisher}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:150
+msgid ".TaskConsumer -> {app.amqp.TaskConsumer}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:151
+msgid ".ConsumerSet -> {app.amqp.ConsumerSet}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:153
+msgid "celery.conf.* -> {app.conf}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:155
+msgid ""
+"**NOTE**: All configuration keys are now named the same as in the "
+"configuration. So the key \"CELERY_ALWAYS_EAGER\" is accessed as::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:161
+msgid "instead of::"
+msgstr ""
+
+#: ../../internals/app-overview.rst:166
+msgid ".get_queues -> {app.amqp.get_queues}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:174
+msgid "celery.task.control"
+msgstr ""
+
+#: ../../internals/app-overview.rst:169
+msgid ".broadcast -> {app.control.broadcast}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:170
+msgid ".rate_limit -> {app.control.rate_limit}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:171
+msgid ".ping -> {app.control.ping}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:172
+msgid ".revoke -> {app.control.revoke}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:173
+msgid ".discard_all -> {app.control.discard_all}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:174
+msgid ".inspect -> {app.control.inspect}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:181
+msgid "celery.utils.info"
+msgstr ""
+
+#: ../../internals/app-overview.rst:177
+msgid ".humanize_seconds -> celery.utils.timeutils.humanize_seconds"
+msgstr ""
+
+#: ../../internals/app-overview.rst:178
+msgid ".textindent -> celery.utils.textindent"
+msgstr ""
+
+#: ../../internals/app-overview.rst:179
+msgid ".get_broker_info -> {app.amqp.get_broker_info}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:180
+msgid ".format_broker_info -> {app.amqp.format_broker_info}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:181
+msgid ".format_queues -> {app.amqp.format_queues}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:184
+msgid "Default App Usage"
+msgstr ""
+
+#: ../../internals/app-overview.rst:186
+msgid ""
+"To be backward compatible, it must be possible to use all the "
+"classes/functions without passing an explicit app instance."
+msgstr ""
+
+#: ../../internals/app-overview.rst:190
+msgid ""
+"This is achieved by having all app-dependent objects use "
+":data:`~celery.app.default_app` if the app instance is missing."
+msgstr ""
+
+#: ../../internals/app-overview.rst:203
+msgid ""
+"The problem with this approach is that there is a chance that the app "
+"instance is lost along the way, and everything seems to be working normally."
+" Testing app instance leaks is hard. The environment variable "
+":envvar:`CELERY_TRACE_APP` can be used, when this is enabled "
+":func:`celery.app.app_or_default` will raise an exception whenever it has to"
+" go back to the default app instance."
+msgstr ""
+
+#: ../../internals/app-overview.rst:212
+msgid "App Dependency Tree"
+msgstr ""
+
+#: ../../internals/app-overview.rst:220
+msgid "{app}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:215
+msgid "celery.loaders.base.BaseLoader"
+msgstr ""
+
+#: ../../internals/app-overview.rst:216
+msgid "celery.backends.base.BaseBackend"
+msgstr ""
+
+#: ../../internals/app-overview.rst:217
+msgid "{app.TaskSet}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:218
+msgid "celery.task.sets.TaskSet (app.TaskSet)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:220
+msgid "[app.TaskSetResult]"
+msgstr ""
+
+#: ../../internals/app-overview.rst:220
+msgid "celery.result.TaskSetResult (app.TaskSetResult)"
+msgstr ""
+
+#: ../../internals/app-overview.rst:223
+msgid "{app.AsyncResult}"
+msgstr ""
+
+#: ../../internals/app-overview.rst:223
+msgid "celery.result.BaseAsyncResult / celery.result.AsyncResult"
+msgstr ""
+
+#: ../../internals/app-overview.rst:236
+msgid "celery.bin.worker.WorkerCommand"
+msgstr ""
+
+#: ../../internals/app-overview.rst:236
+msgid "celery.apps.worker.Worker"
+msgstr ""
+
+#: ../../internals/app-overview.rst:236
+msgid "celery.worker.WorkerController"
+msgstr ""
+
+#: ../../internals/app-overview.rst:233
+msgid "celery.worker.consumer.Consumer"
+msgstr ""
+
+#: ../../internals/app-overview.rst:229
+msgid "celery.worker.job.TaskRequest"
+msgstr ""
+
+#: ../../internals/app-overview.rst:230
+msgid "celery.events.EventDispatcher"
+msgstr ""
+
+#: ../../internals/app-overview.rst:232
+msgid "celery.worker.control.ControlDispatch"
+msgstr ""
+
+#: ../../internals/app-overview.rst:232
+msgid "celery.woker.control.registry.Panel"
+msgstr ""
+
+#: ../../internals/app-overview.rst:233
+msgid "celery.pidbox.BroadcastPublisher"
+msgstr ""
+
+#: ../../internals/app-overview.rst:234
+msgid "celery.pidbox.BroadcastConsumer"
+msgstr ""
+
+#: ../../internals/app-overview.rst:235
+msgid "celery.worker.controllers.Mediator"
+msgstr ""
+
+#: ../../internals/app-overview.rst:236
+msgid "celery.beat.EmbeddedService"
+msgstr ""
+
+#: ../../internals/app-overview.rst:246
+msgid "celery.bin.events.EvCommand"
+msgstr ""
+
+#: ../../internals/app-overview.rst:240
+msgid "celery.events.snapshot.evcam"
+msgstr ""
+
+#: ../../internals/app-overview.rst:240
+msgid "celery.events.snapshot.Polaroid"
+msgstr ""
+
+#: ../../internals/app-overview.rst:241 ../../internals/app-overview.rst:243
+#: ../../internals/app-overview.rst:246
+msgid "celery.events.EventReceiver"
+msgstr ""
+
+#: ../../internals/app-overview.rst:243
+msgid "celery.events.cursesmon.evtop"
+msgstr ""
+
+#: ../../internals/app-overview.rst:244
+msgid "celery.events.cursesmon.CursesMonitor"
+msgstr ""
+
+#: ../../internals/app-overview.rst:246
+msgid "celery.events.dumper"
+msgstr ""
+
+#: ../../internals/app-overview.rst:248
+msgid "celery.bin.amqp.AMQPAdmin"
+msgstr ""
+
+#: ../../internals/app-overview.rst:253
+msgid "celery.bin.beat.BeatCommand"
+msgstr ""
+
+#: ../../internals/app-overview.rst:253
+msgid "celery.apps.beat.Beat"
+msgstr ""
+
+#: ../../internals/app-overview.rst:253
+msgid "celery.beat.Service"
+msgstr ""
+
+#: ../../internals/app-overview.rst:253
+msgid "celery.beat.Scheduler"
+msgstr ""

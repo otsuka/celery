@@ -1,0 +1,136 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.bin.amqp.rst:3
+msgid "celery.bin.amqp"
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp:1
+msgid "The :program:`celery amqp` command."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQPAdmin:1
+msgid "The celery :program:`celery amqp` utility."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell:1
+msgid "AMQP API Shell."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell:3
+msgid "Function used to connect to the server, must return connection object."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell:6
+msgid ""
+"If :const:`True`, the commands won't have annoying output not relevant when "
+"running in non-shell mode."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell:16
+msgid "Mapping of AMQP API commands and their :class:`Spec`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.completenames:1
+msgid "Return all commands starting with `text`, for tab-completion."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.dispatch:1
+msgid "Dispatch and execute the command."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.dispatch:3
+msgid "Lookup order is: :attr:`builtins` -> :attr:`amqp`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.do_exit:1
+msgid "The `'exit'` command."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.get_amqp_api_command:1
+msgid ""
+"With a command name and a list of arguments, convert the arguments to Python"
+" values and find the corresponding method on the AMQP channel object."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.get_amqp_api_command:5
+msgid "tuple of `(method, processed_args)`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.note:1
+msgid "Say something to the user. Disabled if :attr:`silent`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.onecmd:1
+msgid "Parse line and execute command."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.parseline:1
+msgid "Parse input line."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.parseline:3
+msgid "tuple of three items: `(command_name, arglist, original_line)`"
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.AMQShell.respond:1
+msgid "What to do with the return value of a command."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec:1
+msgid "AMQP Command specification."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec:3
+msgid ""
+"Used to convert arguments to Python values and display various help and "
+"tooltips."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec:6
+msgid "see :attr:`args`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec:7
+msgid "see :attr:`returns`."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec.coerce:1
+msgid "Coerce value for argument at index."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec.format_response:1
+msgid "Format the return value of this command in a human-friendly way."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec.str_args_to_python:1
+msgid "Process list of string arguments to values according to spec."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.Spec.str_args_to_python:3
+msgid "e.g:"
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.amqp:1
+msgid "AMQP Administration Shell."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.amqp:3
+msgid ""
+"Also works for non-amqp transports (but not ones that store declarations in "
+"memory)."
+msgstr ""
+
+#: ../../docstring of celery.bin.amqp.amqp:6
+msgid "Examples::"
+msgstr ""

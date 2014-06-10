@@ -1,0 +1,191 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.bin.base.rst:3
+msgid "celery.bin.base"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:4
+msgid "Preload Options"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:6
+msgid ""
+"These options are supported by all commands, and usually parsed before "
+"command-specific arguments."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:11
+msgid "app instance to use (e.g. module.attr_name)"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:15
+msgid "url to broker.  default is 'amqp://guest@localhost//'"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:19
+msgid "name of custom loader class to use."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:23
+msgid "Name of the configuration module"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:28
+msgid "Daemon Options"
+msgstr ""
+
+#: ../../docstring of celery.bin.base:30
+msgid ""
+"These options are supported by commands that can detach into the background "
+"(daemon).  They will be present in any command that also has a `--detach` "
+"option."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:36
+msgid "Path to log file. If no logfile is specified, `stderr` is used."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:40
+msgid "Optional file used to store the process pid."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:42
+msgid ""
+"The program will not start if this file already exists and the pid is still "
+"alive."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:47
+msgid "User id, or user name of the user to run as after detaching."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:51
+msgid ""
+"Group id, or group name of the main group to change to after detaching."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:56
+msgid "Effective umask of the process after detaching. Default is 0."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:60
+msgid "Optional directory to change to after detaching."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command:1
+msgid "Base class for command-line applications."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command:3
+msgid "The current app."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command:4
+msgid "Callable returning the current app if no app provided."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:1
+msgid "Prompt user to choose from a tuple of string values."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:3
+msgid "the question to ask (do not include questionark)"
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:4
+msgid "tuple of possible choices, must be lowercase."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:5
+msgid "Default value if any."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:7
+msgid ""
+"If a default is not specified the question will be repeated until the user "
+"gives a valid choice."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.ask:10
+msgid "Matching is done case insensitively."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.execute_from_commandline:1
+msgid "Execute application from command-line."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.execute_from_commandline:3
+msgid "The list of command-line arguments. Defaults to ``sys.argv``."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.get_options:1
+msgid "Get supported command-line options."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.handle_argv:1
+msgid ""
+"Parse command-line arguments from ``argv`` and dispatch to :meth:`run`."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.handle_argv:4
+msgid "The program name (``argv[0]``)."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.handle_argv:5
+msgid "Command arguments."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.handle_argv:7
+msgid ""
+"Exits with an error message if :attr:`supports_args` is disabled and "
+"``argv`` contains positional arguments."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.parse_options:1
+msgid "Parse the available options."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.run:1
+msgid "This is the body of the command called by :meth:`handle_argv`."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.with_pool_option:1
+msgid ""
+"Return tuple of ``(short_opts, long_opts)`` if the command supports a pool "
+"argument, and used to monkey patch eventlet/gevent environments as early as "
+"possible."
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.with_pool_option:5
+msgid "E.g::"
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Command.with_pool_option:6
+msgid "has_pool_option = (['-P'], ['--pool'])"
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Option:17
+msgid "Instance attributes:"
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Option:2
+msgid "_short_opts : [string] _long_opts : [string]"
+msgstr ""
+
+#: ../../docstring of celery.bin.base.Option:5
+msgid ""
+"action : string type : string dest : string default : any nargs : int const "
+": any choices : [string] callback : function callback_args : (any*) "
+"callback_kwargs : { string : any } help : string metavar : string"
+msgstr ""

@@ -1,0 +1,76 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.iso8601.rst:3
+msgid "celery.utils.iso8601"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:1
+msgid "Originally taken from pyiso8601 (http://code.google.com/p/pyiso8601/)"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:3
+msgid "Modified to match the behavior of dateutil.parser:"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:5
+msgid "raise ValueError instead of ParseError"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:6
+msgid "return naive datetimes by default"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:7
+msgid "uses pytz.FixedOffset"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:9
+msgid "This is the original License:"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:11
+msgid "Copyright (c) 2007 Michael Twomey"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:13
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of this software and associated documentation files (the \"Software\"), to "
+"deal in the Software without restriction, including without limitation the "
+"rights to use, copy, modify, merge, publish, distribute, sublicense, and/or "
+"sell copies of the Software, and to permit persons to whom the Software is "
+"furnished to do so, subject to the following conditions:"
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:21
+msgid ""
+"The above copyright notice and this permission notice shall be included in "
+"all copies or substantial portions of the Software."
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of celery.utils.iso8601:24
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, "
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE "
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER "
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS"
+" IN THE SOFTWARE."
+msgstr ""
+
+#: ../../../celery/utils/iso8601.pydocstring of
+#: celery.utils.iso8601.parse_iso8601:1
+msgid "Parse and convert ISO 8601 string into a datetime object"
+msgstr ""

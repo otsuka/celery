@@ -1,0 +1,48 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.concurrency.base.rst:3
+#: ../../../celery/concurrency/base.pydocstring of celery.concurrency.base:2
+msgid "celery.concurrency.base"
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of celery.concurrency.base:4
+msgid "TaskPool interface."
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of
+#: celery.concurrency.base.BasePool.apply_async:1
+msgid "Equivalent of the :func:`apply` built-in function."
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of
+#: celery.concurrency.base.BasePool.apply_async:3
+msgid ""
+"Callbacks should optimally return as soon as possible since otherwise the "
+"thread which handles the result will get blocked."
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of
+#: celery.concurrency.base.BasePool.is_green:1
+msgid "set to true if pool uses greenlets."
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of
+#: celery.concurrency.base.BasePool.signal_safe:1
+msgid "set to true if the pool can be shutdown from within a signal handler."
+msgstr ""
+
+#: ../../../celery/concurrency/base.pydocstring of
+#: celery.concurrency.base.BasePool.uses_semaphore:1
+msgid "only used by multiprocessing pool"
+msgstr ""

@@ -1,0 +1,1696 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../changelog.rst:5
+msgid "Change history"
+msgstr ""
+
+#: ../../changelog.rst:7
+msgid ""
+"This document contains change notes for bugfix releases in the 3.1.x series "
+"(Cipater), please see :ref:`whatsnew-3.1` for an overview of what's new in "
+"Celery 3.1."
+msgstr ""
+
+#: ../../changelog.rst:14
+msgid "3.1.12"
+msgstr ""
+
+#: ../../changelog.rst:15
+msgid "2014-XX-XX XX:XX X.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:18
+msgid ""
+"**App**: Connections were not being closed after fork due to an error in the"
+" after fork handler (Issue #2055)."
+msgstr ""
+
+#: ../../changelog.rst:21
+msgid ""
+"**Canvas**: ``Signature.link`` now works when the link option is a scalar "
+"value (Issue #2019)."
+msgstr ""
+
+#: ../../changelog.rst:24
+msgid ""
+"**Prefork pool**: Fixed race conditions for when file descriptors are "
+"removed from the event loop."
+msgstr ""
+
+#: ../../changelog.rst:27 ../../changelog.rst:388
+msgid "Fix contributed by Roger Hu."
+msgstr ""
+
+#: ../../changelog.rst:29
+msgid ""
+"**Programs**: :program:`celery worker --detach` no longer closes open file "
+"descriptors when :envvar:`C_FAKEFORK` is used so that the workers output can"
+" be seen."
+msgstr ""
+
+#: ../../changelog.rst:33
+msgid ""
+"**Programs**: The default working directory for :program:`celery worker "
+"--detach` is now the current working directory, not ``/``."
+msgstr ""
+
+#: ../../changelog.rst:36
+msgid ""
+"**Canvas**: ``signature(s, app=app)`` did not upgrade serialized signatures "
+"to their original class (``subtask_type``) when the ``app`` keyword argument"
+" was used."
+msgstr ""
+
+#: ../../changelog.rst:40
+msgid ""
+"**Control**: The ``duplicate nodename`` warning emitted by control commands "
+"now shows the duplicate node name."
+msgstr ""
+
+#: ../../changelog.rst:43
+msgid ""
+"**Tasks**: Can now call ``ResultSet.get()`` on a result set without members."
+msgstr ""
+
+#: ../../changelog.rst:45
+msgid "Fix contributed by Alexey Kotlyarov."
+msgstr ""
+
+#: ../../changelog.rst:47
+msgid ""
+"**App**: Fixed strange traceback mangling issue for "
+"``app.connection_or_acquire``."
+msgstr ""
+
+#: ../../changelog.rst:50
+msgid ""
+"**Programs**: The :program:`celery multi stopwait` command is now documented"
+" in usage."
+msgstr ""
+
+#: ../../changelog.rst:53
+msgid ""
+"**Other**: Fixed cleanup problem with ``PromiseProxy`` when an error is "
+"raised while trying to evaluate the promise."
+msgstr ""
+
+#: ../../changelog.rst:56
+msgid ""
+"**Other**: The utility used to censor configuration values now handles non-"
+"string keys."
+msgstr ""
+
+#: ../../changelog.rst:59
+msgid "Fix contributed by Luke Pomfrey."
+msgstr ""
+
+#: ../../changelog.rst:61
+msgid ""
+"**Other**: The ``inspect conf`` command did not handle non-string keys well."
+msgstr ""
+
+#: ../../changelog.rst:63
+msgid "Fix contributed by Jay Farrimond."
+msgstr ""
+
+#: ../../changelog.rst:65
+msgid ""
+"**Programs**: Fixed argument handling problem in :program:`celery worker "
+"--detach`."
+msgstr ""
+
+#: ../../changelog.rst:68 ../../changelog.rst:268
+msgid "Fix contributed by Dmitry Malinovsky."
+msgstr ""
+
+#: ../../changelog.rst:70
+msgid ""
+"**Programs**: :program:`celery worker --detach` did not forward working "
+"directory option (Issue #2003)."
+msgstr ""
+
+#: ../../changelog.rst:73
+msgid ""
+"**Worker**: The ``requires`` attribute for boot steps were not being handled"
+" correctly (Issue #2002)."
+msgstr ""
+
+#: ../../changelog.rst:76
+msgid ""
+"**Eventlet**: The eventlet pool now supports the ``pool_grow`` and "
+"``pool_shrink`` remote control commands."
+msgstr ""
+
+#: ../../changelog.rst:79 ../../changelog.rst:84
+msgid "Contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../changelog.rst:81
+msgid ""
+"**Eventlet**: The eventlet pool now implements statistics for "
+":program:``celery inspect stats``."
+msgstr ""
+
+#: ../../changelog.rst:86
+msgid "**Documentation**: Clarified ``Task.rate_limit`` behavior."
+msgstr ""
+
+#: ../../changelog.rst:88
+msgid "Contributed by Jonas Haag."
+msgstr ""
+
+#: ../../changelog.rst:90
+msgid ""
+"**Documentation**: ``AbortableTask`` examples now updated to use the new API"
+" (Issue #1993)."
+msgstr ""
+
+#: ../../changelog.rst:93
+msgid ""
+"**Documentation**: The security documentation examples used an out of date "
+"import."
+msgstr ""
+
+#: ../../changelog.rst:96
+msgid "Fix contributed by Ian Dees."
+msgstr ""
+
+#: ../../changelog.rst:98
+msgid ""
+"**Init scripts**: The CentOS init scripts did not quote "
+":envvar:`CELERY_CHDIR`."
+msgstr ""
+
+#: ../../changelog.rst:101
+msgid "Fix contributed by ffeast."
+msgstr ""
+
+#: ../../changelog.rst:106
+msgid "3.1.11"
+msgstr ""
+
+#: ../../changelog.rst:107
+msgid "2014-04-16 11:00 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:108 ../../changelog.rst:183 ../../changelog.rst:327
+#: ../../changelog.rst:401 ../../changelog.rst:533 ../../changelog.rst:704
+#: ../../changelog.rst:778 ../../changelog.rst:890 ../../changelog.rst:922
+#: ../../changelog.rst:939 ../../changelog.rst:964 ../../changelog.rst:1000
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../changelog.rst:110
+msgid "**Now compatible with RabbitMQ 3.3.0**"
+msgstr ""
+
+#: ../../changelog.rst:112
+msgid ""
+"You need to run Celery 3.1.11 or later when using RabbitMQ 3.3, and if you "
+"use the ``librabbitmq`` module you also have to upgrade to librabbitmq "
+"1.5.0:"
+msgstr ""
+
+#: ../../changelog.rst:120 ../../changelog.rst:185 ../../changelog.rst:329
+#: ../../changelog.rst:403
+msgid "**Requirements**:"
+msgstr ""
+
+#: ../../changelog.rst:122
+msgid "Now depends on :ref:`Kombu 3.0.15 <kombu:version-3.0.15>`."
+msgstr ""
+
+#: ../../changelog.rst:124
+msgid "Now depends on `billiard 3.3.0.17`_."
+msgstr ""
+
+#: ../../changelog.rst:126
+msgid ""
+"Bundle ``celery[librabbitmq]`` now depends on :mod:`librabbitmq` 1.5.0."
+msgstr ""
+
+#: ../../changelog.rst:131
+msgid ""
+"**Tasks**: The :setting:`CELERY_DEFAULT_DELIVERY_MODE` setting was being "
+"ignored (Issue #1953)."
+msgstr ""
+
+#: ../../changelog.rst:134
+msgid ""
+"**Worker**: New :option:`--heartbeat-interval` can be used to change the "
+"time (in seconds) between sending event heartbeats."
+msgstr ""
+
+#: ../../changelog.rst:137
+msgid "Contributed by Matthew Duggan and Craig Northway."
+msgstr ""
+
+#: ../../changelog.rst:139
+msgid ""
+"**App**: Fixed memory leaks occurring when creating lots of temporary app "
+"instances (Issue #1949)."
+msgstr ""
+
+#: ../../changelog.rst:142
+msgid ""
+"**MongoDB**: SSL configuration with non-MongoDB transport breaks MongoDB "
+"results backend (Issue #1973)."
+msgstr ""
+
+#: ../../changelog.rst:145
+msgid "Fix contributed by Brian Bouterse."
+msgstr ""
+
+#: ../../changelog.rst:147
+msgid ""
+"**Logging**: The color formatter accidentally modified ``record.msg`` (Issue"
+" #1939)."
+msgstr ""
+
+#: ../../changelog.rst:150
+msgid ""
+"**Results**: Fixed problem with task trails being stored multiple times, "
+"causing ``result.collect()`` to hang (Issue #1936, Issue #1943)."
+msgstr ""
+
+#: ../../changelog.rst:153
+msgid ""
+"**Results**: ``ResultSet`` now implements a ``.backend`` attribute for "
+"compatibility with ``AsyncResult``."
+msgstr ""
+
+#: ../../changelog.rst:156
+msgid "**Results**: ``.forget()`` now also clears the local cache."
+msgstr ""
+
+#: ../../changelog.rst:158
+msgid ""
+"**Results**: Fixed problem with multiple calls to ``result._set_cache`` "
+"(Issue #1940)."
+msgstr ""
+
+#: ../../changelog.rst:161
+msgid "**Results**: ``join_native`` populated result cache even if disabled."
+msgstr ""
+
+#: ../../changelog.rst:163
+msgid ""
+"**Results**: The YAML result serializer should now be able to handle storing"
+" exceptions."
+msgstr ""
+
+#: ../../changelog.rst:166
+msgid ""
+"**Worker**: No longer sends task error emails for expected errors (in "
+"``@task(throws=(..., )))``."
+msgstr ""
+
+#: ../../changelog.rst:169
+msgid ""
+"**Canvas**: Fixed problem with exception deserialization when using the JSON"
+" serializer (Issue #1987)."
+msgstr ""
+
+#: ../../changelog.rst:172
+msgid ""
+"**Eventlet**: Fixes crash when ``celery.contrib.batches`` attempted to "
+"cancel a non-existing timer (Issue #1984)."
+msgstr ""
+
+#: ../../changelog.rst:175
+msgid ""
+"Can now import ``celery.version_info_t``, and ``celery.five`` (Issue #1968)."
+msgstr ""
+
+#: ../../changelog.rst:181
+msgid "3.1.10"
+msgstr ""
+
+#: ../../changelog.rst:182
+msgid "2014-03-22 09:40 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:187
+msgid "Now depends on :ref:`Kombu 3.0.14 <kombu:version-3.0.14>`."
+msgstr ""
+
+#: ../../changelog.rst:189
+msgid "**Results**:"
+msgstr ""
+
+#: ../../changelog.rst:191
+msgid ""
+"Reliability improvements to the SQLAlchemy database backend. Previously the "
+"connection from the MainProcess was improperly shared with the workers. "
+"(Issue #1786)"
+msgstr ""
+
+#: ../../changelog.rst:195
+msgid "**Redis:** Important note about events (Issue #1882)."
+msgstr ""
+
+#: ../../changelog.rst:197
+msgid ""
+"There is a new transport option for Redis that enables monitors to filter "
+"out unwanted events.  Enabling this option in the workers will increase "
+"performance considerably:"
+msgstr ""
+
+#: ../../changelog.rst:205
+msgid ""
+"Enabling this option means that your workers will not be able to see workers"
+" with the option disabled (or is running an older version of Celery), so if "
+"you do enable it then make sure you do so on all nodes."
+msgstr ""
+
+#: ../../changelog.rst:210
+msgid "See :ref:`redis-caveats-fanout-patterns`."
+msgstr ""
+
+#: ../../changelog.rst:212
+msgid "This will be the default in Celery 3.2."
+msgstr ""
+
+#: ../../changelog.rst:214
+msgid ""
+"**Results**: The :class:`@AsyncResult` object now keeps a local cache of the"
+" final state of the task."
+msgstr ""
+
+#: ../../changelog.rst:217
+msgid ""
+"This means that the global result cache can finally be disabled, and you can"
+" do so by setting :setting:`CELERY_MAX_CACHED_RESULTS` to :const:`-1`.  The "
+"lifetime of the cache will then be bound to the lifetime of the result "
+"object, which will be the default behavior in Celery 3.2."
+msgstr ""
+
+#: ../../changelog.rst:223
+msgid ""
+"**Events**: The \"Substantial drift\" warning message is now logged once per"
+" node name only (Issue #1802)."
+msgstr ""
+
+#: ../../changelog.rst:226
+msgid ""
+"**Worker**: Ability to use one log file per child process when using the "
+"prefork pool."
+msgstr ""
+
+#: ../../changelog.rst:229
+msgid ""
+"This can be enabled by using the new ``%i`` and ``%I`` format specifiers for"
+" the log file name.  See :ref:`worker-files-process-index`."
+msgstr ""
+
+#: ../../changelog.rst:232
+msgid "**Redis**: New experimental chord join implementation."
+msgstr ""
+
+#: ../../changelog.rst:234
+msgid ""
+"This is an optimization for chords when using the Redis result backend, "
+"where the join operation is now considerably faster and using less resources"
+" than the previous strategy."
+msgstr ""
+
+#: ../../changelog.rst:238
+msgid "The new option can be set in the result backend URL:"
+msgstr ""
+
+#: ../../changelog.rst:240
+msgid "CELERY_RESULT_BACKEND = 'redis://localhost?new_join=1'"
+msgstr ""
+
+#: ../../changelog.rst:242
+msgid ""
+"This must be enabled manually as it's incompatible with workers and clients "
+"not using it, so be sure to enable the option in all clients and workers if "
+"you decide to use it."
+msgstr ""
+
+#: ../../changelog.rst:246
+msgid ""
+"**Multi**: With ``-opt:index`` (e.g. :option:`-c:1`) the index now always "
+"refers to the position of a node in the argument list."
+msgstr ""
+
+#: ../../changelog.rst:249
+msgid ""
+"This means that referring to a number will work when specifying a list of "
+"node names and not just for a number range:"
+msgstr ""
+
+#: ../../changelog.rst:256
+msgid ""
+"In this example ``1`` refers to node A (as it's the first node in the list)."
+msgstr ""
+
+#: ../../changelog.rst:259
+msgid ""
+"**Signals**: The sender argument to ``Signal.connect`` can now be a proxy "
+"object, which means that it can be used with the task decorator (Issue "
+"#1873)."
+msgstr ""
+
+#: ../../changelog.rst:263
+msgid ""
+"**Task**: A regression caused the ``queue`` argument to ``Task.retry`` to be"
+" ignored (Issue #1892)."
+msgstr ""
+
+#: ../../changelog.rst:266
+msgid "**App**: Fixed error message for :meth:`~@Celery.config_from_envvar`."
+msgstr ""
+
+#: ../../changelog.rst:270
+msgid ""
+"**Canvas**: Chords can now contain a group of other chords (Issue #1921)."
+msgstr ""
+
+#: ../../changelog.rst:272
+msgid ""
+"**Canvas**: Chords can now be combined when using the amqp result backend (a"
+" chord where the callback is also a chord)."
+msgstr ""
+
+#: ../../changelog.rst:275
+msgid ""
+"**Canvas**: Calling ``result.get()`` for a chain task will now complete even"
+" if one of the tasks in the chain is ``ignore_result=True`` (Issue #1905)."
+msgstr ""
+
+#: ../../changelog.rst:279
+msgid "**Canvas**: Worker now also logs chord errors."
+msgstr ""
+
+#: ../../changelog.rst:281
+msgid ""
+"**Canvas**: A chord task raising an exception will now result in any "
+"errbacks (``link_error``) to the chord callback to also be called."
+msgstr ""
+
+#: ../../changelog.rst:284
+msgid ""
+"**Results**: Reliability improvements to the SQLAlchemy database backend "
+"(Issue #1786)."
+msgstr ""
+
+#: ../../changelog.rst:287
+msgid ""
+"Previously the connection from the ``MainProcess`` was improperly inherited "
+"by child processes."
+msgstr ""
+
+#: ../../changelog.rst:290 ../../changelog.rst:335 ../../changelog.rst:340
+#: ../../changelog.rst:651
+msgid "Fix contributed by Ionel Cristian Mărieș."
+msgstr ""
+
+#: ../../changelog.rst:292
+msgid ""
+"**Task**: Task callbacks and errbacks are now called using the group "
+"primitive."
+msgstr ""
+
+#: ../../changelog.rst:295
+msgid ""
+"**Task**: ``Task.apply`` now properly sets ``request.headers`` (Issue "
+"#1874)."
+msgstr ""
+
+#: ../../changelog.rst:298
+msgid ""
+"**Worker**: Fixed ``UnicodeEncodeError`` occuring when worker is started by "
+"`supervisord`."
+msgstr ""
+
+#: ../../changelog.rst:301
+msgid "Fix contributed by Codeb Fan."
+msgstr ""
+
+#: ../../changelog.rst:303
+msgid ""
+"**Beat**: No longer attempts to upgrade a newly created database file (Issue"
+" #1923)."
+msgstr ""
+
+#: ../../changelog.rst:306
+msgid ""
+"**Beat**: New setting :setting:``CELERYBEAT_SYNC_EVERY`` can be be used to "
+"control file sync by specifying the number of tasks to send between each "
+"sync."
+msgstr ""
+
+#: ../../changelog.rst:310
+msgid "Contributed by Chris Clark."
+msgstr ""
+
+#: ../../changelog.rst:312
+msgid ""
+"**Commands**: :program:`celery inspect memdump` no longer crashes if the "
+":mod:`psutil` module is not installed (Issue #1914)."
+msgstr ""
+
+#: ../../changelog.rst:315
+msgid ""
+"**Worker**: Remote control commands now always accepts json serialized "
+"messages (Issue #1870)."
+msgstr ""
+
+#: ../../changelog.rst:318
+msgid ""
+"**Worker**: Gossip will now drop any task related events it receives by "
+"mistake (Issue #1882)."
+msgstr ""
+
+#: ../../changelog.rst:325
+msgid "3.1.9"
+msgstr ""
+
+#: ../../changelog.rst:326
+msgid "2014-02-10 06:43 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:331
+msgid "Now depends on :ref:`Kombu 3.0.12 <kombu:version-3.0.12>`."
+msgstr ""
+
+#: ../../changelog.rst:333
+msgid "**Prefork pool**: Better handling of exiting child processes."
+msgstr ""
+
+#: ../../changelog.rst:337
+msgid ""
+"**Prefork pool**: Now makes sure all file descriptors are removed from the "
+"hub when a process is cleaned up."
+msgstr ""
+
+#: ../../changelog.rst:342
+msgid ""
+"**New Sphinx extension**: for autodoc documentation of tasks: "
+":mod:`celery.contrib.spinx` (Issue #1833)."
+msgstr ""
+
+#: ../../changelog.rst:345
+msgid "**Django**: Now works with Django 1.7a1."
+msgstr ""
+
+#: ../../changelog.rst:347
+msgid ""
+"**Task**: Task.backend is now a property that forwards to ``app.backend`` if"
+" no custom backend has been specified for the task (Issue #1821)."
+msgstr ""
+
+#: ../../changelog.rst:350
+msgid "**Generic init scripts**: Fixed bug in stop command."
+msgstr ""
+
+#: ../../changelog.rst:352
+msgid "Fix contributed by Rinat Shigapov."
+msgstr ""
+
+#: ../../changelog.rst:354
+msgid ""
+"**Generic init scripts**: Fixed compatibility with GNU :manpage:`stat`."
+msgstr ""
+
+#: ../../changelog.rst:356
+msgid "Fix contributed by Paul Kilgo."
+msgstr ""
+
+#: ../../changelog.rst:358
+msgid ""
+"**Generic init scripts**: Fixed compatibility with the minimal "
+":program:`dash` shell (Issue #1815)."
+msgstr ""
+
+#: ../../changelog.rst:361
+msgid ""
+"**Commands**: The :program:`celery amqp basic.publish` command was not "
+"working properly."
+msgstr ""
+
+#: ../../changelog.rst:364
+msgid "Fix contributed by Andrey Voronov."
+msgstr ""
+
+#: ../../changelog.rst:366
+msgid ""
+"**Commands**: Did no longer emit an error message if the pidfile exists and "
+"the process is still alive (Issue #1855)."
+msgstr ""
+
+#: ../../changelog.rst:369
+msgid ""
+"**Commands**: Better error message for missing arguments to preload options "
+"(Issue #1860)."
+msgstr ""
+
+#: ../../changelog.rst:372
+msgid ""
+"**Commands**: :program:`celery -h` did not work because of a bug in the "
+"argument parser (Issue #1849)."
+msgstr ""
+
+#: ../../changelog.rst:375
+msgid "**Worker**: Improved error message for message decoding errors."
+msgstr ""
+
+#: ../../changelog.rst:377
+msgid ""
+"**Time**: Now properly parses the `Z` timezone specifier in ISO 8601 date "
+"strings."
+msgstr ""
+
+#: ../../changelog.rst:380
+msgid "Fix contributed by Martin Davidsson."
+msgstr ""
+
+#: ../../changelog.rst:382
+msgid ""
+"**Worker**: Now uses the *negotiated* heartbeat value to calculate how often"
+" to run the heartbeat checks."
+msgstr ""
+
+#: ../../changelog.rst:385
+msgid ""
+"**Beat**: Fixed problem with beat hanging after the first schedule iteration"
+" (Issue #1822)."
+msgstr ""
+
+#: ../../changelog.rst:390
+msgid ""
+"**Signals**: The header argument to :signal:`before_task_publish` is now "
+"always a dictionary instance so that signal handlers can add headers."
+msgstr ""
+
+#: ../../changelog.rst:393
+msgid ""
+"**Worker**: A list of message headers is now included in message related "
+"errors."
+msgstr ""
+
+#: ../../changelog.rst:399
+msgid "3.1.8"
+msgstr ""
+
+#: ../../changelog.rst:400
+msgid "2014-01-17 10:45 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:405
+msgid "Now depends on :ref:`Kombu 3.0.10 <kombu:version-3.0.10>`."
+msgstr ""
+
+#: ../../changelog.rst:407
+msgid "Now depends on `billiard 3.3.0.14`_."
+msgstr ""
+
+#: ../../changelog.rst:412
+msgid ""
+"**Worker**: The event loop was not properly reinitialized at consumer "
+"restart which would force the worker to continue with a closed ``epoll`` "
+"instance on Linux, resulting in a crash."
+msgstr ""
+
+#: ../../changelog.rst:416
+msgid ""
+"**Events:** Fixed issue with both heartbeats and task events that could "
+"result in the data not being kept in sorted order."
+msgstr ""
+
+#: ../../changelog.rst:419
+msgid ""
+"As a result this would force the worker to log \"heartbeat missed\" events "
+"even though the remote node was sending heartbeats in a timely manner."
+msgstr ""
+
+#: ../../changelog.rst:422
+msgid ""
+"**Results:** The pickle serializer no longer converts group results to "
+"tuples, and will keep the original type (*Issue #1750*)."
+msgstr ""
+
+#: ../../changelog.rst:425
+msgid "**Results:** ``ResultSet.iterate`` is now pending deprecation."
+msgstr ""
+
+#: ../../changelog.rst:427
+msgid ""
+"The method will be deprecated in version 3.2 and removed in version 3.3."
+msgstr ""
+
+#: ../../changelog.rst:429
+msgid ""
+"Use ``result.get(callback=)`` (or ``result.iter_native()`` where available) "
+"instead."
+msgstr ""
+
+#: ../../changelog.rst:432
+msgid ""
+"**Worker**\\|eventlet/gevent: A regression caused ``Ctrl+C`` to be "
+"ineffective for shutdown."
+msgstr ""
+
+#: ../../changelog.rst:435
+msgid ""
+"**Redis result backend:** Now using a pipeline to store state changes for "
+"improved performance."
+msgstr ""
+
+#: ../../changelog.rst:438
+msgid "Contributed by Pepijn de Vos."
+msgstr ""
+
+#: ../../changelog.rst:440
+msgid ""
+"**Redis result backend:** Will now retry storing the result if disconnected."
+msgstr ""
+
+#: ../../changelog.rst:442
+msgid ""
+"**Worker**\\|gossip: Fixed attribute error occurring when another node "
+"leaves."
+msgstr ""
+
+#: ../../changelog.rst:444
+msgid "Fix contributed by Brodie Rao."
+msgstr ""
+
+#: ../../changelog.rst:446
+msgid ""
+"**Generic init scripts:** Now runs a check at startup to verify that any "
+"configuration scripts are owned by root and that they are not world/group "
+"writeable."
+msgstr ""
+
+#: ../../changelog.rst:450
+msgid ""
+"The init script configuration is a shell script executed by root, so this is"
+" a preventive measure to ensure that users do not leave this file vulnerable"
+" to changes by unprivileged users."
+msgstr ""
+
+#: ../../changelog.rst:456
+msgid ""
+"Note that upgrading celery will not update the init scripts, instead you "
+"need to manually copy the improved versions from the source distribution: "
+"https://github.com/celery/celery/tree/3.1/extra/generic-init.d"
+msgstr ""
+
+#: ../../changelog.rst:461
+msgid ""
+"**Commands**: The :program:`celery purge` command now warns that the "
+"operation will delete all tasks and prompts the user for confirmation."
+msgstr ""
+
+#: ../../changelog.rst:464
+msgid ""
+"A new :option:`-f` was added that can be used to disable interactive mode."
+msgstr ""
+
+#: ../../changelog.rst:467
+msgid ""
+"**Task**: ``.retry()`` did not raise the value provided in the ``exc`` "
+"argument when called outside of an error context (*Issue #1755*)."
+msgstr ""
+
+#: ../../changelog.rst:470
+msgid ""
+"**Commands:** The :program:`celery multi` command did not forward command "
+"line configuration to the target workers."
+msgstr ""
+
+#: ../../changelog.rst:473
+msgid ""
+"The change means that multi will forward the special ``--`` argument and "
+"configuration content at the end of the arguments line to the specified "
+"workers."
+msgstr ""
+
+#: ../../changelog.rst:477
+msgid ""
+"Example using command-line configuration to set a broker heartbeat from "
+":program:`celery multi`:"
+msgstr ""
+
+#: ../../changelog.rst:484
+msgid "Fix contributed by Antoine Legrand."
+msgstr ""
+
+#: ../../changelog.rst:486
+msgid ""
+"**Canvas:** ``chain.apply_async()`` now properly forwards execution options."
+msgstr ""
+
+#: ../../changelog.rst:488 ../../changelog.rst:642
+msgid "Fix contributed by Konstantin Podshumok."
+msgstr ""
+
+#: ../../changelog.rst:490
+msgid ""
+"**Redis result backend:** Now takes ``connection_pool`` argument that can be"
+" used to change the connection pool class/constructor."
+msgstr ""
+
+#: ../../changelog.rst:493
+msgid ""
+"**Worker:** Now truncates very long arguments and keyword arguments logged "
+"by the pool at debug severity."
+msgstr ""
+
+#: ../../changelog.rst:496
+msgid ""
+"**Worker:** The worker now closes all open files on :sig:`SIGHUP` "
+"(regression) (*Issue #1768*)."
+msgstr ""
+
+#: ../../changelog.rst:499
+msgid "Fix contributed by Brodie Rao"
+msgstr ""
+
+#: ../../changelog.rst:501
+msgid ""
+"**Worker:** Will no longer accept remote control commands while the worker "
+"startup phase is incomplete (*Issue #1741*)."
+msgstr ""
+
+#: ../../changelog.rst:504
+msgid ""
+"**Commands:** The output of the event dump utility (:program:`celery events "
+"-d`) can now be piped into other commands."
+msgstr ""
+
+#: ../../changelog.rst:507
+msgid ""
+"**Documentation:** The RabbitMQ installation instructions for OS X was "
+"updated to use modern homebrew practices."
+msgstr ""
+
+#: ../../changelog.rst:510
+msgid "Contributed by Jon Chen."
+msgstr ""
+
+#: ../../changelog.rst:512
+msgid "**Commands:** The :program:`celery inspect conf` utility now works."
+msgstr ""
+
+#: ../../changelog.rst:514
+msgid ""
+"**Commands:** The :option:`-no-color` argument was not respected by all "
+"commands (*Issue #1799*)."
+msgstr ""
+
+#: ../../changelog.rst:517
+msgid "**App:** Fixed rare bug with ``autodiscover_tasks()`` (*Issue #1797*)."
+msgstr ""
+
+#: ../../changelog.rst:519
+msgid ""
+"**Distribution:** The sphinx docs will now always add the parent directory "
+"to path so that the current celery source code is used as a basis for API "
+"documentation (*Issue #1782*)."
+msgstr ""
+
+#: ../../changelog.rst:523
+msgid ""
+"**Documentation:** Supervisord examples contained an extraneous '-' in a "
+"`--logfile` argument example."
+msgstr ""
+
+#: ../../changelog.rst:526
+msgid "Fix contributed by Mohammad Almeer."
+msgstr ""
+
+#: ../../changelog.rst:531
+msgid "3.1.7"
+msgstr ""
+
+#: ../../changelog.rst:532
+msgid "2013-12-17 06:00 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:538
+msgid "Important Notes"
+msgstr ""
+
+#: ../../changelog.rst:541
+msgid "Init script security improvements"
+msgstr ""
+
+#: ../../changelog.rst:543
+msgid ""
+"Where the generic init scripts (for ``celeryd``, and ``celerybeat``) before "
+"delegated the responsibility of dropping privileges to the target "
+"application, it will now use ``su`` instead, so that the Python program is "
+"not trusted with superuser privileges."
+msgstr ""
+
+#: ../../changelog.rst:548
+msgid ""
+"This is not in reaction to any known exploit, but it will limit the "
+"possibility of a privilege escalation bug being abused in the future."
+msgstr ""
+
+#: ../../changelog.rst:552
+msgid ""
+"You have to upgrade the init scripts manually from this directory: "
+"https://github.com/celery/celery/tree/3.1/extra/generic-init.d"
+msgstr ""
+
+#: ../../changelog.rst:556
+msgid "AMQP result backend"
+msgstr ""
+
+#: ../../changelog.rst:558
+msgid ""
+"The 3.1 release accidentally left the amqp backend configured to be non-"
+"persistent by default."
+msgstr ""
+
+#: ../../changelog.rst:561
+msgid ""
+"Upgrading from 3.0 would give a \"not equivalent\" error when attempting to "
+"set or retrieve results for a task.  That is unless you manually set the "
+"persistence setting::"
+msgstr ""
+
+#: ../../changelog.rst:567
+msgid ""
+"This version restores the previous value so if you already forced the "
+"upgrade by removing the existing exchange you must either keep the "
+"configuration by setting ``CELERY_RESULT_PERSISTENT = False`` or delete the "
+"``celeryresults`` exchange again."
+msgstr ""
+
+#: ../../changelog.rst:573
+msgid "Synchronous subtasks"
+msgstr ""
+
+#: ../../changelog.rst:575
+msgid ""
+"Tasks waiting for the result of a subtask will now emit a "
+":exc:`RuntimeWarning` warning when using the prefork pool, and in 3.2 this "
+"will result in an exception being raised."
+msgstr ""
+
+#: ../../changelog.rst:579
+msgid ""
+"It's not legal for tasks to block by waiting for subtasks as this is likely "
+"to lead to resource starvation and eventually deadlock when using the "
+"prefork pool (see also :ref:`task-synchronous-subtasks`)."
+msgstr ""
+
+#: ../../changelog.rst:583
+msgid ""
+"If you really know what you are doing you can avoid the warning (and the "
+"future exception being raised) by moving the operation in a whitelist block:"
+msgstr ""
+
+#: ../../changelog.rst:597
+msgid ""
+"Note also that if you wait for the result of a subtask in any form when "
+"using the prefork pool you must also disable the pool prefetching behavior "
+"with the worker :ref:`-Ofair option <prefork-pool-prefetch>`."
+msgstr ""
+
+#: ../../changelog.rst:604
+msgid "Fixes"
+msgstr ""
+
+#: ../../changelog.rst:606
+msgid "Now depends on :ref:`Kombu 3.0.8 <kombu:version-3.0.8>`."
+msgstr ""
+
+#: ../../changelog.rst:608
+msgid "Now depends on :mod:`billiard` 3.3.0.13"
+msgstr ""
+
+#: ../../changelog.rst:610
+msgid ""
+"Events: Fixed compatibility with non-standard json libraries that sends "
+"float as :class:`decimal.Decimal` (Issue #1731)"
+msgstr ""
+
+#: ../../changelog.rst:613
+msgid ""
+"Events: State worker objects now always defines attributes: ``active``, "
+"``processed``, ``loadavg``, ``sw_ident``, ``sw_ver`` and ``sw_sys``."
+msgstr ""
+
+#: ../../changelog.rst:617
+msgid ""
+"Worker: Now keeps count of the total number of tasks processed, not just by "
+"type (``all_active_count``)."
+msgstr ""
+
+#: ../../changelog.rst:620
+msgid ""
+"Init scripts:  Fixed problem with reading configuration file when the init "
+"script is symlinked to a runlevel (e.g. ``S02celeryd``). (Issue #1740)."
+msgstr ""
+
+#: ../../changelog.rst:624
+msgid ""
+"This also removed a rarely used feature where you can symlink the script to "
+"provide alternative configurations.  You instead copy the script and give it"
+" a new name, but perhaps a better solution is to provide arguments to "
+"``CELERYD_OPTS`` to separate them:"
+msgstr ""
+
+#: ../../changelog.rst:634
+msgid ""
+"Fallback chord unlock task is now always called after the chord header "
+"(Issue #1700)."
+msgstr ""
+
+#: ../../changelog.rst:637
+msgid ""
+"This means that the unlock task will not be started if there's an error "
+"sending the header."
+msgstr ""
+
+#: ../../changelog.rst:640
+msgid ""
+"Celery command: Fixed problem with arguments for some control commands."
+msgstr ""
+
+#: ../../changelog.rst:644
+msgid ""
+"Fixed bug in ``utcoffset`` where the offset when in DST would be completely "
+"wrong (Issue #1743)."
+msgstr ""
+
+#: ../../changelog.rst:647
+msgid ""
+"Worker: Errors occurring while attempting to serialize the result of a task "
+"will now cause the task to be marked with failure and a "
+":class:`kombu.exceptions.EncodingError` error."
+msgstr ""
+
+#: ../../changelog.rst:653
+msgid ""
+"Worker with ``-B`` argument did not properly shut down the beat instance."
+msgstr ""
+
+#: ../../changelog.rst:655
+msgid ""
+"Worker: The ``%n`` and ``%h`` formats are now also supported by the "
+":option:`--logfile`, :option:`--pidfile` and :option:`--statedb` arguments."
+msgstr ""
+
+#: ../../changelog.rst:658 ../../changelog.rst:835
+msgid "Example:"
+msgstr ""
+
+#: ../../changelog.rst:664
+msgid ""
+"Redis/Cache result backends: Will now timeout if keys evicted while trying "
+"to join a chord."
+msgstr ""
+
+#: ../../changelog.rst:667
+msgid ""
+"The fallbock unlock chord task now raises :exc:`Retry` so that the retry "
+"even is properly logged by the worker."
+msgstr ""
+
+#: ../../changelog.rst:670
+msgid ""
+"Multi: Will no longer apply Eventlet/gevent monkey patches (Issue #1717)."
+msgstr ""
+
+#: ../../changelog.rst:672
+msgid "Redis result backend: Now supports UNIX sockets."
+msgstr ""
+
+#: ../../changelog.rst:674
+msgid ""
+"Like the Redis broker transport the result backend now also supports using "
+"``redis+socket:///tmp/redis.sock`` URLs."
+msgstr ""
+
+#: ../../changelog.rst:677
+msgid "Contributed by Alcides Viamontes Esquivel."
+msgstr ""
+
+#: ../../changelog.rst:679
+msgid ""
+"Events: Events sent by clients was mistaken for worker related events (Issue"
+" #1714)."
+msgstr ""
+
+#: ../../changelog.rst:682
+msgid ""
+"For ``events.State`` the tasks now have a ``Task.client`` attribute that is "
+"set when a ``task-sent`` event is being received."
+msgstr ""
+
+#: ../../changelog.rst:685
+msgid ""
+"Also, a clients logical clock is not in sync with the cluster so they live "
+"in a \"time bubble\".  So for this reason monitors will no longer attempt to"
+" merge with the clock of an event sent by a client, instead it will fake the"
+" value by using the current clock with a skew of -1."
+msgstr ""
+
+#: ../../changelog.rst:691
+msgid ""
+"Prefork pool: The method used to find terminated processes was flawed in "
+"that it did not also take into account missing popen objects."
+msgstr ""
+
+#: ../../changelog.rst:694
+msgid ""
+"Canvas: ``group`` and ``chord`` now works with anon signatures as long as "
+"the group/chord object is associated with an app instance (Issue #1744)."
+msgstr ""
+
+#: ../../changelog.rst:697
+msgid "You can pass the app by using ``group(..., app=app)``."
+msgstr ""
+
+#: ../../changelog.rst:702
+msgid "3.1.6"
+msgstr ""
+
+#: ../../changelog.rst:703
+msgid "2013-12-02 06:00 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:706
+msgid "Now depends on :mod:`billiard` 3.3.0.10."
+msgstr ""
+
+#: ../../changelog.rst:708
+msgid "Now depends on :ref:`Kombu 3.0.7 <kombu:version-3.0.7>`."
+msgstr ""
+
+#: ../../changelog.rst:710
+msgid ""
+"Fixed problem where Mingle caused the worker to hang at startup (Issue "
+"#1686)."
+msgstr ""
+
+#: ../../changelog.rst:713
+msgid "Beat: Would attempt to drop privileges twice (Issue #1708)."
+msgstr ""
+
+#: ../../changelog.rst:715
+msgid ""
+"Windows: Fixed error with ``geteuid`` not being available (Issue #1676)."
+msgstr ""
+
+#: ../../changelog.rst:717
+msgid "Tasks can now provide a list of expected error classes (Issue #1682)."
+msgstr ""
+
+#: ../../changelog.rst:719
+msgid ""
+"The list should only include errors that the task is expected to raise "
+"during normal operation::"
+msgstr ""
+
+#: ../../changelog.rst:724
+msgid ""
+"What happens when an exceptions is raised depends on the type of error:"
+msgstr ""
+
+#: ../../changelog.rst:726
+msgid "Expected errors (included in ``Task.throws``)"
+msgstr ""
+
+#: ../../changelog.rst:728
+msgid "Will be logged using severity ``INFO``, and traceback is excluded."
+msgstr ""
+
+#: ../../changelog.rst:730
+msgid "Unexpected errors"
+msgstr ""
+
+#: ../../changelog.rst:732
+msgid "Will be logged using severity ``ERROR``, with traceback included."
+msgstr ""
+
+#: ../../changelog.rst:734
+msgid "Cache result backend now compatible with Python 3 (Issue #1697)."
+msgstr ""
+
+#: ../../changelog.rst:736
+msgid "CentOS init script: Now compatible with sys-v style init symlinks."
+msgstr ""
+
+#: ../../changelog.rst:738
+msgid "Fix contributed by Jonathan Jordan."
+msgstr ""
+
+#: ../../changelog.rst:740
+msgid "Events: Fixed problem when task name is not defined (Issue #1710)."
+msgstr ""
+
+#: ../../changelog.rst:742
+msgid "Fix contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../changelog.rst:744
+msgid "Task: Fixed unbound local errors (Issue #1684)."
+msgstr ""
+
+#: ../../changelog.rst:746
+msgid "Fix contributed by Markus Ullmann."
+msgstr ""
+
+#: ../../changelog.rst:748
+msgid ""
+"Canvas: Now unrolls groups with only one task (optimization) (Issue #1656)."
+msgstr ""
+
+#: ../../changelog.rst:750
+msgid "Task: Fixed problem with eta and timezones."
+msgstr ""
+
+#: ../../changelog.rst:752
+msgid "Fix contributed by Alexander Koval."
+msgstr ""
+
+#: ../../changelog.rst:754
+msgid "Django: Worker now performs model validation (Issue #1681)."
+msgstr ""
+
+#: ../../changelog.rst:756
+msgid ""
+"Task decorator now emits less confusing errors when used with incorrect "
+"arguments (Issue #1692)."
+msgstr ""
+
+#: ../../changelog.rst:759
+msgid ""
+"Task: New method ``Task.send_event`` can be used to send custom events to "
+"Flower and other monitors."
+msgstr ""
+
+#: ../../changelog.rst:762
+msgid "Fixed a compatibility issue with non-abstract task classes"
+msgstr ""
+
+#: ../../changelog.rst:764
+msgid ""
+"Events from clients now uses new node name format (``gen<pid>@<hostname>``)."
+msgstr ""
+
+#: ../../changelog.rst:766
+msgid ""
+"Fixed rare bug with Callable not being defined at interpreter shutdown "
+"(Issue #1678)."
+msgstr ""
+
+#: ../../changelog.rst:769
+msgid "Fix contributed by Nick Johnson."
+msgstr ""
+
+#: ../../changelog.rst:771
+msgid "Fixed Python 2.6 compatibility (Issue #1679)."
+msgstr ""
+
+#: ../../changelog.rst:776
+msgid "3.1.5"
+msgstr ""
+
+#: ../../changelog.rst:777
+msgid "2013-11-21 06:20 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:780
+msgid "Now depends on :ref:`Kombu 3.0.6 <kombu:version-3.0.6>`."
+msgstr ""
+
+#: ../../changelog.rst:782
+msgid "Now depends on :mod:`billiard` 3.3.0.8"
+msgstr ""
+
+#: ../../changelog.rst:784
+msgid "App: ``config_from_object`` is now lazy (Issue #1665)."
+msgstr ""
+
+#: ../../changelog.rst:786
+msgid "App: ``autodiscover_tasks`` is now lazy."
+msgstr ""
+
+#: ../../changelog.rst:788
+msgid ""
+"Django users should now wrap access to the settings object in a lambda::"
+msgstr ""
+
+#: ../../changelog.rst:793
+msgid "this ensures that the settings object is not prepared prematurely."
+msgstr ""
+
+#: ../../changelog.rst:796
+msgid ""
+"Fixed regression for ``--app`` argument experienced by some users (Issue "
+"#1653)."
+msgstr ""
+
+#: ../../changelog.rst:799
+msgid ""
+"Worker: Now respects the ``--uid`` and ``--gid`` arguments even if "
+"``--detach`` is not enabled."
+msgstr ""
+
+#: ../../changelog.rst:802
+msgid ""
+"Beat: Now respects the ``--uid`` and ``--gid`` arguments even if "
+"``--detach`` is not enabled."
+msgstr ""
+
+#: ../../changelog.rst:805
+msgid ""
+"Python 3: Fixed unorderable error occuring with the worker ``-B`` argument "
+"enabled."
+msgstr ""
+
+#: ../../changelog.rst:808
+msgid "``celery.VERSION`` is now a named tuple."
+msgstr ""
+
+#: ../../changelog.rst:810
+msgid "``maybe_signature(list)`` is now applied recursively (Issue #1645)."
+msgstr ""
+
+#: ../../changelog.rst:812
+msgid ""
+"``celery shell`` command: Fixed ``IPython.frontend`` deprecation warning."
+msgstr ""
+
+#: ../../changelog.rst:814
+msgid "The default app no longer includes the builtin fixups."
+msgstr ""
+
+#: ../../changelog.rst:816
+msgid ""
+"This fixes a bug where ``celery multi`` would attempt to load the Django "
+"settings module before entering the target working directory."
+msgstr ""
+
+#: ../../changelog.rst:820
+msgid "The Django daemonization tutorial was changed."
+msgstr ""
+
+#: ../../changelog.rst:822
+msgid ""
+"Users no longer have to explicitly export ``DJANGO_SETTINGS_MODULE`` in "
+":file:`/etc/default/celeryd` when the new project layout is used."
+msgstr ""
+
+#: ../../changelog.rst:825
+msgid "Redis result backend: expiry value can now be 0 (Issue #1661)."
+msgstr ""
+
+#: ../../changelog.rst:827
+msgid "Censoring settings now accounts for non-string keys (Issue #1663)."
+msgstr ""
+
+#: ../../changelog.rst:829
+msgid "App: New ``autofinalize`` option."
+msgstr ""
+
+#: ../../changelog.rst:831
+msgid ""
+"Apps are automatically finalized when the task registry is accessed. You can"
+" now disable this behavior so that an exception is raised instead."
+msgstr ""
+
+#: ../../changelog.rst:856
+msgid "The worker did not send monitoring events during shutdown."
+msgstr ""
+
+#: ../../changelog.rst:858
+msgid ""
+"Worker: Mingle and gossip is now automatically disabled when used with an "
+"unsupported transport (Issue #1664)."
+msgstr ""
+
+#: ../../changelog.rst:861
+msgid ""
+"``celery`` command:  Preload options now supports the rare ``--opt value`` "
+"format (Issue #1668)."
+msgstr ""
+
+#: ../../changelog.rst:864
+msgid ""
+"``celery`` command: Accidentally removed options appearing before the "
+"subcommand, these are now moved to the end instead."
+msgstr ""
+
+#: ../../changelog.rst:868
+msgid ""
+"Worker now properly responds to ``inspect stats`` commands even if received "
+"before startup is complete (Issue #1659)."
+msgstr ""
+
+#: ../../changelog.rst:871
+msgid ""
+":signal:`task_postrun` is now sent within a finally block, to make sure the "
+"signal is always sent."
+msgstr ""
+
+#: ../../changelog.rst:874
+msgid "Beat: Fixed syntax error in string formatting."
+msgstr ""
+
+#: ../../changelog.rst:876
+msgid "Contributed by nadad."
+msgstr ""
+
+#: ../../changelog.rst:878
+msgid "Fixed typos in the documentation."
+msgstr ""
+
+#: ../../changelog.rst:880
+msgid "Fixes contributed by Loic Bistuer, sunfinite."
+msgstr ""
+
+#: ../../changelog.rst:882
+msgid ""
+"Nested chains now works properly when constructed using the ``chain`` type "
+"instead of the ``|`` operator (Issue #1656)."
+msgstr ""
+
+#: ../../changelog.rst:888
+msgid "3.1.4"
+msgstr ""
+
+#: ../../changelog.rst:889
+msgid "2013-11-15 11:40 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:892
+msgid "Now depends on :ref:`Kombu 3.0.5 <kombu:version-3.0.5>`."
+msgstr ""
+
+#: ../../changelog.rst:894
+msgid "Now depends on :mod:`billiard` 3.3.0.7"
+msgstr ""
+
+#: ../../changelog.rst:896
+msgid "Worker accidentally set a default socket timeout of 5 seconds."
+msgstr ""
+
+#: ../../changelog.rst:898
+msgid ""
+"Django: Fixup now sets the default app so that threads will use the same app"
+" instance (e.g. for manage.py runserver)."
+msgstr ""
+
+#: ../../changelog.rst:901
+msgid ""
+"Worker: Fixed Unicode error crash at startup experienced by some users."
+msgstr ""
+
+#: ../../changelog.rst:903
+msgid ""
+"Calling ``.apply_async`` on an empty chain now works again (Issue #1650)."
+msgstr ""
+
+#: ../../changelog.rst:905
+msgid ""
+"The ``celery multi show`` command now generates the same arguments as the "
+"start command does."
+msgstr ""
+
+#: ../../changelog.rst:908
+msgid ""
+"The ``--app`` argument could end up using a module object instead of an app "
+"instance (with a resulting crash)."
+msgstr ""
+
+#: ../../changelog.rst:911
+msgid "Fixed a syntax error problem in the celerybeat init script."
+msgstr ""
+
+#: ../../changelog.rst:913
+msgid "Fix contributed by Vsevolod."
+msgstr ""
+
+#: ../../changelog.rst:915
+msgid "Tests now passing on PyPy 2.1 and 2.2."
+msgstr ""
+
+#: ../../changelog.rst:920
+msgid "3.1.3"
+msgstr ""
+
+#: ../../changelog.rst:921
+msgid "2013-11-13 00:55 A.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:924
+msgid "Fixed compatibility problem with Python 2.7.0 - 2.7.5 (Issue #1637)"
+msgstr ""
+
+#: ../../changelog.rst:926
+msgid ""
+"``unpack_from`` started supporting ``memoryview`` arguments in Python 2.7.6."
+msgstr ""
+
+#: ../../changelog.rst:929
+msgid ""
+"Worker: :option:`-B` argument accidentally closed files used for logging."
+msgstr ""
+
+#: ../../changelog.rst:932
+msgid "Task decorated tasks now keep their docstring (Issue #1636)"
+msgstr ""
+
+#: ../../changelog.rst:937
+msgid "3.1.2"
+msgstr ""
+
+#: ../../changelog.rst:938
+msgid "2013-11-12 08:00 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:941
+msgid "Now depends on :mod:`billiard` 3.3.0.6"
+msgstr ""
+
+#: ../../changelog.rst:943
+msgid "No longer needs the billiard C extension to be installed."
+msgstr ""
+
+#: ../../changelog.rst:945
+msgid "The worker silently ignored task errors."
+msgstr ""
+
+#: ../../changelog.rst:947
+msgid ""
+"Django: Fixed ``ImproperlyConfigured`` error raised when no database backend"
+" specified."
+msgstr ""
+
+#: ../../changelog.rst:950
+msgid "Fix contributed by j0hnsmith"
+msgstr ""
+
+#: ../../changelog.rst:952
+msgid ""
+"Prefork pool: Now using ``_multiprocessing.read`` with ``memoryview`` if "
+"available."
+msgstr ""
+
+#: ../../changelog.rst:955
+msgid "``close_open_fds`` now uses ``os.closerange`` if available."
+msgstr ""
+
+#: ../../changelog.rst:957
+msgid "``get_fdmax`` now takes value from ``sysconfig`` if possible."
+msgstr ""
+
+#: ../../changelog.rst:962
+msgid "3.1.1"
+msgstr ""
+
+#: ../../changelog.rst:963
+msgid "2013-11-11 06:30 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:966
+msgid "Now depends on :mod:`billiard` 3.3.0.4."
+msgstr ""
+
+#: ../../changelog.rst:968
+msgid "Python 3: Fixed compatibility issues."
+msgstr ""
+
+#: ../../changelog.rst:970
+msgid ""
+"Windows:  Accidentally showed warning that the billiard C extension was not "
+"installed (Issue #1630)."
+msgstr ""
+
+#: ../../changelog.rst:973
+msgid ""
+"Django: Tutorial updated with a solution that sets a default "
+":envvar:`DJANGO_SETTINGS_MODULE` so that it doesn't have to be typed in with"
+" the :program:`celery` command."
+msgstr ""
+
+#: ../../changelog.rst:977
+msgid ""
+"Also fixed typos in the tutorial, and added the settings required to use the"
+" Django database backend."
+msgstr ""
+
+#: ../../changelog.rst:980
+msgid "Thanks to Chris Ward, orarbel."
+msgstr ""
+
+#: ../../changelog.rst:982
+msgid "Django: Fixed a problem when using the Django settings in Django 1.6."
+msgstr ""
+
+#: ../../changelog.rst:984
+msgid "Django: Fixup should not be applied if the django loader is active."
+msgstr ""
+
+#: ../../changelog.rst:986
+msgid ""
+"Worker:  Fixed attribute error for ``human_write_stats`` when using the "
+"compatibility prefork pool implementation."
+msgstr ""
+
+#: ../../changelog.rst:989
+msgid "Worker: Fixed compatibility with billiard without C extension."
+msgstr ""
+
+#: ../../changelog.rst:991
+msgid "Inspect.conf: Now supports a ``with_defaults`` argument."
+msgstr ""
+
+#: ../../changelog.rst:993
+msgid "Group.restore: The backend argument was not respected."
+msgstr ""
+
+#: ../../changelog.rst:998
+msgid "3.1.0"
+msgstr ""
+
+#: ../../changelog.rst:999
+msgid "2013-11-09 11:00 P.M UTC"
+msgstr ""
+
+#: ../../changelog.rst:1002
+msgid "See :ref:`whatsnew-3.1`."
+msgstr ""

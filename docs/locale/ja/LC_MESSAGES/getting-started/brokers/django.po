@@ -1,0 +1,76 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/brokers/django.rst:5
+msgid "Using the Django Database"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:7
+msgid "Experimental Status"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:9
+msgid ""
+"The Django database transport is in need of improvements in many areas and "
+"there are several open bugs.  Unfortunately we don't have the resources or "
+"funds required to improve the situation, so we're looking for contributors "
+"and partners willing to help."
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:17
+msgid "Installation"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:22
+msgid "Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:24
+msgid ""
+"The database transport uses the Django `DATABASE_*` settings for database "
+"configuration values."
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:27
+msgid "Set your broker transport::"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:31
+msgid "Add :mod:`kombu.transport.django` to `INSTALLED_APPS`::"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:35
+msgid "Sync your database schema:"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:44
+msgid "Limitations"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:46
+msgid "The Django database transport does not currently support:"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:48
+msgid "Remote control commands (:program:`celery events` command, broadcast)"
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:49
+msgid "Events, including the Django Admin monitor."
+msgstr ""
+
+#: ../../getting-started/brokers/django.rst:50
+msgid ""
+"Using more than a few workers (can lead to messages being executed multiple "
+"times)."
+msgstr ""

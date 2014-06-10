@@ -1,0 +1,103 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.loaders.base.rst:3
+#: ../../../celery/loaders/base.pydocstring of celery.loaders.base:2
+msgid "celery.loaders.base"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of celery.loaders.base:4
+msgid "Loader base class."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:1
+msgid "The base class for loaders."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:3
+msgid "Loaders handles,"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:5
+msgid "Reading celery client/worker configurations."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:8
+msgid "What happens when a task starts?"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:8
+msgid "See :meth:`on_task_init`."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:11
+msgid "What happens when the worker starts?"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:11
+msgid "See :meth:`on_worker_init`."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:14
+msgid "What happens when the worker shuts down?"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:14
+msgid "See :meth:`on_worker_shutdown`."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader:16
+msgid "What modules are imported to find tasks?"
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.conf:1
+msgid "Loader configuration."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.on_process_cleanup:1
+msgid "This method is called after a task is executed."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.on_task_init:1
+msgid "This method is called before a task is executed."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.on_worker_init:1
+msgid ""
+"This method is called when the worker (:program:`celery worker`) starts."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.on_worker_process_init:1
+msgid "This method is called when a child process starts."
+msgstr ""
+
+#: ../../../celery/loaders/base.pydocstring of
+#: celery.loaders.base.BaseLoader.on_worker_shutdown:1
+msgid ""
+"This method is called when the worker (:program:`celery worker`) shuts down."
+msgstr ""

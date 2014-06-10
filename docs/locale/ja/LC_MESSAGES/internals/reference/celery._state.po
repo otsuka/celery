@@ -1,0 +1,42 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery._state.rst:3 ../../docstring of
+#: celery._state:2
+msgid "celery._state"
+msgstr ""
+
+#: ../../docstring of celery._state:4
+msgid ""
+"This is an internal module containing thread state like the ``current_app``,"
+" and ``current_task``."
+msgstr ""
+
+#: ../../docstring of celery._state:7
+msgid "This module shouldn't be used directly."
+msgstr ""
+
+#: ../../docstring of celery._state.get_current_task:1
+msgid "Currently executing task."
+msgstr ""
+
+#: ../../docstring of celery._state.get_current_worker_task:1
+msgid "Currently executing task, that was applied by the worker."
+msgstr ""
+
+#: ../../docstring of celery._state.get_current_worker_task:3
+msgid ""
+"This is used to differentiate between the actual task executed by the worker"
+" and any task that was called within a task (using ``task.__call__`` or "
+"``task.apply``)"
+msgstr ""

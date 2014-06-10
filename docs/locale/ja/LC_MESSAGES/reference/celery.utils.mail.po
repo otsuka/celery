@@ -1,0 +1,113 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.utils.mail.rst:3
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail:2
+msgid "celery.utils.mail"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail:4
+msgid "How task error emails are formatted and sent."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of
+#: celery.utils.mail.SendmailWarning:1
+msgid "Problem happened while sending the email message."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:1
+msgid "Defines how and when task error e-mails should be sent."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:3
+msgid "The task instance that raised the error."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:5
+msgid ""
+":attr:`subject` and :attr:`body` are format strings which are passed a "
+"context containing the following keys:"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:8
+msgid "name"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:10
+msgid "Name of the task."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:12
+msgid "id"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:14
+msgid "UUID of the task."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:16
+msgid "exc"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:18
+msgid "String representation of the exception."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:20
+msgid "args"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:22
+msgid "Positional arguments."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:24
+msgid "kwargs"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:26
+msgid "Keyword arguments."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:28
+msgid "traceback"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:30
+msgid "String representation of the traceback."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:32
+msgid "hostname"
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of celery.utils.mail.ErrorMail:34
+msgid "Worker nodename."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of
+#: celery.utils.mail.ErrorMail.body:1
+msgid "Format string used to generate error email content."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of
+#: celery.utils.mail.ErrorMail.should_send:1
+msgid ""
+"Return true or false depending on if a task error mail should be sent for "
+"this type of error."
+msgstr ""
+
+#: ../../../celery/utils/mail.pydocstring of
+#: celery.utils.mail.ErrorMail.subject:1
+msgid "Format string used to generate error email subjects."
+msgstr ""

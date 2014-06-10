@@ -1,0 +1,29 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.worker.autoscale.rst:3
+#: ../../../celery/worker/autoscale.pydocstring of celery.worker.autoscale:2
+msgid "celery.worker.autoscale"
+msgstr ""
+
+#: ../../../celery/worker/autoscale.pydocstring of celery.worker.autoscale:4
+msgid ""
+"This module implements the internal thread responsible for growing and "
+"shrinking the pool according to the current autoscale settings."
+msgstr ""
+
+#: ../../../celery/worker/autoscale.pydocstring of celery.worker.autoscale:8
+msgid ""
+"The autoscale thread is only enabled if :option:`--autoscale` has been "
+"enabled on the command-line."
+msgstr ""

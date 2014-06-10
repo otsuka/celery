@@ -1,0 +1,49 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../celery/app/__init__.pydocstring of celery.app:2
+msgid "celery.app"
+msgstr ""
+
+#: ../../../celery/app/__init__.pydocstring of celery.app:4
+msgid "Celery Application."
+msgstr ""
+
+#: ../../reference/celery.app.rst:9
+msgid "Proxies"
+msgstr ""
+
+#: ../../reference/celery.app.rst:15
+msgid "Functions"
+msgstr ""
+
+#: ../../../celery/app/__init__.pydocstring of celery.app.app_or_default:1
+msgid "Function returning the app provided or the default app if none."
+msgstr ""
+
+#: ../../../celery/app/__init__.pydocstring of celery.app.app_or_default:3
+msgid ""
+"The environment variable :envvar:`CELERY_TRACE_APP` is used to trace app "
+"leaks.  When enabled an exception is raised if there is no active app."
+msgstr ""
+
+#: ../../reference/celery.app.rst:23
+msgid "Data"
+msgstr ""
+
+#: ../../../celery/app/__init__.pydocstring of celery.app.default_loader:1
+msgid ""
+"The 'default' loader is the default loader used by old applications. This is"
+" deprecated and should no longer be used as it's set too early to be "
+"affected by --loader argument."
+msgstr ""

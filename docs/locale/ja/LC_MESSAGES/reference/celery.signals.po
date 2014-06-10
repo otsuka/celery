@@ -1,0 +1,33 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.signals.rst:3 ../../../celery/signals.pydocstring of
+#: celery.signals:2
+msgid "celery.signals"
+msgstr ""
+
+#: ../../../celery/signals.pydocstring of celery.signals:4
+msgid ""
+"This module defines the signals (Observer pattern) sent by both workers and "
+"clients."
+msgstr ""
+
+#: ../../../celery/signals.pydocstring of celery.signals:7
+msgid ""
+"Functions can be connected to these signals, and connected functions are "
+"called whenever a signal is called."
+msgstr ""
+
+#: ../../../celery/signals.pydocstring of celery.signals:10
+msgid "See :ref:`signals` for more information."
+msgstr ""

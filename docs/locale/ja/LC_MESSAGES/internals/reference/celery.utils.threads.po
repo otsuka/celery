@@ -1,0 +1,66 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.threads.rst:3 ../../docstring of
+#: celery.utils.threads:2
+msgid "celery.utils.threads"
+msgstr ""
+
+#: ../../docstring of celery.utils.threads:4
+msgid "Threading utilities."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.bgThread.stop:1
+msgid "Graceful shutdown."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.LocalManager:1
+msgid ""
+"Local objects cannot manage themselves. For that you need a local manager.  "
+"You can pass a local manager multiple locals or add them later by appending "
+"them to `manager.locals`.  Everytime the manager cleans up it, will clean up"
+" all the data left in the locals for this context."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.LocalManager:7
+msgid ""
+"The `ident_func` parameter can be added to override the default ident "
+"function for the wrapped locals."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.LocalManager.cleanup:1
+msgid "Manually clean up the data in the locals for this context."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.LocalManager.cleanup:3
+msgid "Call this at the end of the request or use `make_middleware()`."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.LocalManager.get_ident:1
+msgid ""
+"Return the context identifier the local objects use internally for this "
+"context.  You cannot override this method to change the behavior but use it "
+"to link other context local objects (such as SQLAlchemy's scoped sessions) "
+"to the Werkzeug locals."
+msgstr ""
+
+#: ../../docstring of celery.utils.threads.get_ident:1
+msgid ""
+"Return a non-zero integer that uniquely identifies the current thread "
+"amongst other threads that exist simultaneously. This may be used to "
+"identify per-thread resources. Even though on some platforms threads "
+"identities may appear to be allocated consecutive numbers starting at 1, "
+"this behavior should not be relied upon, and the number should be seen "
+"purely as a magic cookie. A thread's identity may be reused for another "
+"thread after it exits."
+msgstr ""

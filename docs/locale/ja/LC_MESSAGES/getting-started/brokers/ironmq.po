@@ -1,0 +1,98 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/brokers/ironmq.rst:5
+msgid "Using IronMQ"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:10
+msgid "Installation"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:12
+msgid ""
+"For IronMQ support, you'll need the [iron_celery](http://github.com/iron-"
+"io/iron_celery) library:"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:18
+msgid ""
+"As well as an [Iron.io account](http://www.iron.io). Sign up for free at "
+"[iron.io](http://www.iron.io)."
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:23
+msgid "Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:25
+msgid ""
+"First, you'll need to import the iron_celery library right after you import "
+"Celery, for example::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:32
+msgid "You have to specify IronMQ in the broker URL::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:36
+msgid "where the URL format is::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:40
+msgid "you must *remember to include the \"@\" at the end*."
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:42
+msgid ""
+"The login credentials can also be set using the environment variables "
+":envvar:`IRON_TOKEN` and :envvar:`IRON_PROJECT_ID`, which are set "
+"automatically if you use the IronMQ Heroku add-on. And in this case the "
+"broker url may only be::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:49
+msgid "Clouds"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:51
+msgid ""
+"The default cloud/region is ``AWS us-east-1``. You can choose the IronMQ "
+"Rackspace (ORD) cloud by changing the URL to::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:56
+msgid "Results"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:58
+msgid ""
+"You can store results in IronCache with the same Iron.io credentials, just "
+"set the results URL with the same syntax as the broker URL, but changing the"
+" start to ``ironcache``::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:63
+msgid ""
+"This will default to a cache named \"Celery\", if you want to change that::"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:68
+msgid "More Information"
+msgstr ""
+
+#: ../../getting-started/brokers/ironmq.rst:70
+msgid ""
+"You can find more information in the [iron_celery README](http://github.com"
+"/iron-io/iron_celery)."
+msgstr ""

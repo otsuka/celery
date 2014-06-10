@@ -1,0 +1,83 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.worker.components.rst:3
+#: ../../../celery/worker/components.pydocstring of celery.worker.components:2
+msgid "celery.worker.components"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of celery.worker.components:4
+msgid "Default worker bootsteps."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Timer:1
+msgid "This step initializes the internal timer used by the worker."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Queues:1
+msgid "This bootstep initializes the internal queues used by the worker."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:1
+msgid "Bootstep managing the worker pool."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:3
+msgid ""
+"Describes how to initialize the worker pool, and starts and stops the pool "
+"during worker startup/shutdown."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:6
+msgid "Adds attributes:"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:8
+msgid "autoscale"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:9
+msgid "pool"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:10
+msgid "max_concurrency"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Pool:11
+msgid "min_concurrency"
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Beat:1
+msgid "Step used to embed a beat process."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.Beat:3
+msgid "This will only be enabled if the ``beat`` argument is set."
+msgstr ""
+
+#: ../../../celery/worker/components.pydocstring of
+#: celery.worker.components.StateDB:1
+msgid "This bootstep sets up the workers state db if enabled."
+msgstr ""

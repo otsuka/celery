@@ -1,0 +1,89 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/brokers/beanstalk.rst:5
+msgid "Using Beanstalk"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:9
+msgid "Out of order"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:11
+msgid "The Beanstalk transport is currently not working well."
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:13
+msgid ""
+"We are interested in contributions and donations that can go towards "
+"improving this situation."
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:19
+msgid "Installation"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:21
+msgid ""
+"For the Beanstalk support you have to install additional dependencies. You "
+"can install both Celery and these dependencies in one go using the "
+"``celery[beanstalk]`` :ref:`bundle <bundles>`:"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:32
+msgid "Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:34
+msgid ""
+"Configuration is easy, set the transport, and configure the location of your"
+" Beanstalk database::"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:39
+msgid "Where the URL is in the format of::"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:43
+msgid ""
+"The host name will default to ``localhost`` and the port to 11300, and so "
+"they are optional."
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:49
+msgid "Results"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:51
+msgid ""
+"Using Beanstalk to store task state and results is currently **not "
+"supported**."
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:56
+msgid "Limitations"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:58
+msgid "The Beanstalk message transport does not currently support:"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:60
+msgid ""
+"Remote control commands (:program:`celery control`, :program:`celery "
+"inspect`, broadcast)"
+msgstr ""
+
+#: ../../getting-started/brokers/beanstalk.rst:62
+msgid "Authentication"
+msgstr ""

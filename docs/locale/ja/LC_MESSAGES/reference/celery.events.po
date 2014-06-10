@@ -1,0 +1,207 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.events.rst:3
+#: ../../../celery/events/__init__.pydocstring of celery.events:2
+msgid "celery.events"
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of celery.events:4
+msgid ""
+"Events is a stream of messages sent for certain actions occurring in the "
+"worker (and clients if :setting:`CELERY_SEND_TASK_SENT_EVENT` is enabled), "
+"used for monitoring purposes."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of celery.events.Event:1
+msgid "Create an event."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of celery.events.Event:3
+msgid ""
+"An event is a dictionary, the only required field is ``type``. A "
+"``timestamp`` field will be set to the current time if not provided."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:1
+msgid "Dispatches event messages."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:3 ../../../celery/events/__init__.pydocstring
+#: of celery.events.EventReceiver:3
+msgid "Connection to the broker."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:5
+msgid ""
+"Hostname to identify ourselves as, by default uses the hostname returned by "
+":func:`~celery.utils.anon_nodename`."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:9
+msgid ""
+"List of groups to send events for.  :meth:`send` will ignore send requests "
+"to groups not in this list. If this is :const:`None`, all events will be "
+"sent. Example groups include ``\"task\"`` and ``\"worker\"``."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:14
+msgid ""
+"Set to :const:`False` to not actually publish any events, making "
+":meth:`send` a noop operation."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:17
+msgid ""
+"Can be used instead of `connection` to specify an exact channel to use when "
+"sending events."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:20
+msgid ""
+"If enabled events will be buffered while the connection is down. "
+":meth:`flush` must be called as soon as the connection is re-established."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher:24
+msgid "You need to :meth:`close` this after use."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.close:1
+msgid "Close the event dispatcher."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.extend_buffer:1
+msgid "Copies the outbound buffer of another instance."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.flush:1
+msgid "Flushes the outbound buffer."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:1
+msgid "Publish event using a custom :class:`~kombu.Producer` instance."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:4
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:3
+msgid "Event type name, with group separated by dash (`-`)."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:5
+msgid "Dictionary of event fields, must be json serializable."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:6
+msgid ""
+":class:`~kombu.Producer` instance to use, only the ``publish`` method will "
+"be called."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:8
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:4
+msgid "Retry in the event of connection failure."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:9
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:5
+msgid "Dict of custom retry policy, see :meth:`~kombu.Connection.ensure`."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:11
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:7
+msgid ""
+"Don't set logical clock value (also do not forward the internal logical "
+"clock)."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:13
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:9
+msgid "Event type used to create event, defaults to :func:`Event`."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.publish:15
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:11
+msgid "Function returning the current utcoffset in hours."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:1
+msgid "Send event."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventDispatcher.send:12
+msgid "Event fields, must be json serializable."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver:1
+msgid "Capture events."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver:4
+msgid "Event handlers."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver:6
+msgid ""
+":attr:`handlers` is a dict of event types and their handlers, the special "
+"handler `\"*\"` captures all events that doesn't have a handler."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver.capture:1
+msgid "Open up a consumer capturing events."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver.capture:3
+msgid ""
+"This has to run in the main process, and it will never stop unless forced "
+"via :exc:`KeyboardInterrupt` or :exc:`SystemExit`."
+msgstr ""
+
+#: ../../../celery/events/__init__.pydocstring of
+#: celery.events.EventReceiver.process:1
+msgid ""
+"Process the received event by dispatching it to the appropriate handler."
+msgstr ""

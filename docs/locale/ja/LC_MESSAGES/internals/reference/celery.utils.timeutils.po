@@ -1,0 +1,155 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.timeutils.rst:3
+#: ../../../celery/utils/timeutils.pydocstring of celery.utils.timeutils:2
+msgid "celery.utils.timeutils"
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of celery.utils.timeutils:4
+msgid "This module contains various utilities related to dates and times."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.LocalTimezone:1
+msgid "Local time implementation taken from Python's docs."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.LocalTimezone:3
+msgid "Used only when UTC is not enabled."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.maybe_timedelta:1
+msgid "Coerces integer to timedelta if `delta` is an integer."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.timedelta_seconds:1
+msgid "Convert :class:`datetime.timedelta` to seconds."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.timedelta_seconds:3
+msgid "Doesn't account for negative values."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.delta_resolution:1
+msgid "Round a datetime to the resolution of a timedelta."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.delta_resolution:3
+msgid ""
+"If the timedelta is in days, the datetime will be rounded to the nearest "
+"days, if the timedelta is in hours the datetime will be rounded to the "
+"nearest hour, and so on until seconds which will just return the original "
+"datetime."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:1
+msgid "Calculate the remaining time for a start date and a timedelta."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:3
+msgid "e.g. \"how many seconds left for 30 seconds after start?\""
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:5
+msgid "Start :class:`~datetime.datetime`."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:6
+msgid "The end delta as a :class:`~datetime.timedelta`."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:7
+msgid ""
+"If enabled the end time will be calculated using :func:`delta_resolution` "
+"(i.e. rounded to the resolution of `ends_in`)."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.remaining:10
+msgid ""
+"Function returning the current time and date, defaults to "
+":func:`datetime.utcnow`."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.rate:1
+msgid ""
+"Parse rate strings, such as `\"100/m\"`, `\"2/h\"` or `\"0.5/s\"` and "
+"convert them to seconds."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.weekday:1
+msgid "Return the position of a weekday (0 - 7, where 0 is Sunday)."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.weekday:3
+msgid "Example::"
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.humanize_seconds:1
+msgid "Show seconds in human form, e.g. 60 is \"1 minute\", 7200 is \"2 hours\"."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.humanize_seconds:4
+msgid ""
+"Can be used to add a preposition to the output, e.g. 'in' will give 'in 1 "
+"second', but add nothing to 'now'."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.maybe_iso8601:1
+msgid "`Either datetime | str -> datetime or None -> None`"
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.is_naive:1
+msgid ""
+"Return :const:`True` if the datetime is naive (does not have timezone "
+"information)."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.make_aware:1
+msgid "Sets the timezone for a datetime object."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.localize:1
+msgid "Convert aware datetime to another timezone."
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.to_utc:1
+msgid "Converts naive datetime to UTC"
+msgstr ""
+
+#: ../../../celery/utils/timeutils.pydocstring of
+#: celery.utils.timeutils.ffwd:1
+msgid "Version of relativedelta that only supports addition."
+msgstr ""

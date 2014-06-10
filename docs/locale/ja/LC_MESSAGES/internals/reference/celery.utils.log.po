@@ -1,0 +1,69 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.log.rst:3 ../../docstring of
+#: celery.utils.log:2
+msgid "celery.utils.log"
+msgstr ""
+
+#: ../../docstring of celery.utils.log:4
+msgid "Logging utilities."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy:1
+msgid "Forward file object to :class:`logging.Logger` instance."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy:3
+msgid "The :class:`logging.Logger` instance to forward to."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy:4
+msgid "Loglevel to use when writing messages."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.close:1
+msgid ""
+"When the object is closed, no write requests are forwarded to the logging "
+"object anymore."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.flush:1
+msgid "This object is not buffered so any :meth:`flush` requests are ignored."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.isatty:1
+msgid "Always return :const:`False`. Just here for file support."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.write:1
+msgid "Write message to logging object."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.writelines:1
+msgid "`writelines(sequence_of_strings) -> None`."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.writelines:3
+msgid "Write the strings to the file."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.LoggingProxy.writelines:5
+msgid ""
+"The sequence can be any iterable object producing strings. This is "
+"equivalent to calling :meth:`write` for each string."
+msgstr ""
+
+#: ../../docstring of celery.utils.log.ensure_process_aware_logger:1
+msgid "Make sure process name is recorded when loggers are used."
+msgstr ""

@@ -1,0 +1,85 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../userguide/concurrency/eventlet.rst:5
+msgid "Concurrency with Eventlet"
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:10
+msgid "Introduction"
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:12
+msgid ""
+"The `Eventlet`_ homepage describes it as; A concurrent networking library "
+"for Python that allows you to change how you run your code, not how you "
+"write it."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:16
+msgid ""
+"It uses `epoll(4)`_ or `libevent`_ for `highly scalable non-blocking I/O`_."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:18
+msgid ""
+"`Coroutines`_ ensure that the developer uses a blocking style of programming"
+" that is similar to threading, but provide the benefits of non-blocking I/O."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:21
+msgid ""
+"The event dispatch is implicit, which means you can easily use Eventlet from"
+" the Python interpreter, or as a small part of a larger application."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:24
+msgid ""
+"Celery supports Eventlet as an alternative execution pool implementation. It"
+" is in some cases superior to prefork, but you need to ensure your tasks do "
+"not perform blocking calls, as this will halt all other operations in the "
+"worker until the blocking call returns."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:29
+msgid ""
+"The prefork pool can take use of multiple processes, but how many is often "
+"limited to a few processes per CPU.  With Eventlet you can efficiently spawn"
+" hundreds, or thousands of green threads.  In an informal test with a feed "
+"hub system the Eventlet pool could fetch and process hundreds of feeds every"
+" second, while the prefork pool spent 14 seconds processing 100 feeds.  Note"
+" that is one of the applications evented I/O is especially good at "
+"(asynchronous HTTP requests).  You may want a mix of both Eventlet and "
+"prefork workers, and route tasks according to compatibility or what works "
+"best."
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:40
+msgid "Enabling Eventlet"
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:42
+msgid ""
+"You can enable the Eventlet pool by using the ``-P`` option to "
+":program:`celery worker`:"
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:52
+msgid "Examples"
+msgstr ""
+
+#: ../../userguide/concurrency/eventlet.rst:54
+msgid ""
+"See the `Eventlet examples`_ directory in the Celery distribution for some "
+"examples taking use of Eventlet support."
+msgstr ""

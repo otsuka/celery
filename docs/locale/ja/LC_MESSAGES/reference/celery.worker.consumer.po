@@ -1,0 +1,86 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.worker.consumer.rst:3
+#: ../../../celery/worker/consumer.pydocstring of celery.worker.consumer:2
+msgid "celery.worker.consumer"
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of celery.worker.consumer:4
+msgid ""
+"This module contains the components responsible for consuming messages from "
+"the broker, processing the messages and keeping the broker connections up "
+"and running."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.apply_eta_task:1
+msgid "Method called by the timer to apply a task with an ETA/countdown."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.connect:1
+msgid "Establish the broker connection."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.connect:3
+msgid ""
+"Will retry establishing the connection if the "
+":setting:`BROKER_CONNECTION_RETRY` setting is enabled"
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.in_shutdown:1
+msgid "set when consumer is shutting down."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.init_callback:1
+msgid ""
+"Optional callback called the first time the worker is ready to receive "
+"tasks."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.on_decode_error:1
+msgid "Callback called if an error occurs while decoding a message received."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.on_decode_error:4
+msgid ""
+"Simply logs the error and acknowledges the message so it doesn't enter a "
+"loop."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.on_decode_error:7
+msgid "The message with errors."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.on_decode_error:8
+msgid "The original exception instance."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.pool:1
+msgid "The current worker pool instance."
+msgstr ""
+
+#: ../../../celery/worker/consumer.pydocstring of
+#: celery.worker.consumer.Consumer.timer:1
+msgid ""
+"A timer used for high-priority internal tasks, such as sending heartbeats."
+msgstr ""

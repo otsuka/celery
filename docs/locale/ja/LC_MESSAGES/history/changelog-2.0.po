@@ -1,0 +1,1439 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history/changelog-2.0.rst:5
+msgid "Change history for Celery 2.0"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:13
+msgid "2.0.3"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:14
+msgid "2010-08-27 12:00 P.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:15 ../../history/changelog-2.0.rst:152
+#: ../../history/changelog-2.0.rst:270 ../../history/changelog-2.0.rst:402
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:20
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:22
+msgid ""
+"Worker: Properly handle connection errors happening while closing consumers."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:25
+msgid ""
+"Worker: Events are now buffered if the connection is down, then sent when "
+"the connection is re-established."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:28
+msgid "No longer depends on the :mod:`mailer` package."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:30
+msgid ""
+"This package had a name space collision with `django-mailer`, so its "
+"functionality was replaced."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:33
+msgid ""
+"Redis result backend: Documentation typos: Redis doesn't have database "
+"names, but database numbers. The default database is now 0."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:36
+msgid ""
+":class:`~celery.task.control.inspect`: `registered_tasks` was requesting an "
+"invalid command because of a typo."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:39
+msgid "See issue #170."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:41
+msgid ""
+":setting:`CELERY_ROUTES`: Values defined in the route should now have "
+"precedence over values defined in :setting:`CELERY_QUEUES` when merging the "
+"two."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:45
+msgid "With the follow settings::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:54
+msgid "The final routing options for `tasks.add` will become::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:60
+msgid ""
+"This was not the case before: the values in :setting:`CELERY_QUEUES` would "
+"take precedence."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:63
+msgid ""
+"Worker crashed if the value of :setting:`CELERY_TASK_ERROR_WHITELIST` was "
+"not an iterable"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:66
+msgid ""
+":func:`~celery.execute.apply`: Make sure `kwargs[\"task_id\"]` is always "
+"set."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:69
+msgid ""
+"`AsyncResult.traceback`: Now returns :const:`None`, instead of raising "
+":exc:`KeyError` if traceback is missing."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:72
+msgid ""
+":class:`~celery.task.control.inspect`: Replies did not work correctly if no "
+"destination was specified."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:75
+msgid "Can now store result/metadata for custom states."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:77
+msgid ""
+"Worker: A warning is now emitted if the sending of task error emails fails."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:80
+msgid ""
+"celeryev: Curses monitor no longer crashes if the terminal window is "
+"resized."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:83
+msgid "See issue #160."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:85
+msgid ""
+"Worker: On OS X it is not possible to run `os.exec*` in a process that is "
+"threaded."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:88
+msgid ""
+"This breaks the SIGHUP restart handler, and is now disabled on OS X, "
+"emitting a warning instead."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:91 ../../history/changelog-2.0.rst:191
+msgid "See issue #152."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:93
+msgid ""
+":mod:`celery.execute.trace`: Properly handle `raise(str)`, which is still "
+"allowed in Python 2.4."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:96
+msgid "See issue #175."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:98
+msgid ""
+"Using urllib2 in a periodic task on OS X crashed because of the proxy auto "
+"detection used in OS X."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:101
+msgid "This is now fixed by using a workaround. See issue #143."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:104
+msgid "Debian init scripts: Commands should not run in a sub shell"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:106
+msgid "See issue #163."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:108
+msgid ""
+"Debian init scripts: Use the absolute path of celeryd program to allow stat"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:110
+msgid "See issue #162."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:115
+msgid "Documentation"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:117
+msgid "getting-started/broker-installation: Fixed typo"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:119
+msgid "`set_permissions \"\"` -> `set_permissions \".*\"`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:121
+msgid "Tasks User Guide: Added section on database transactions."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:123 ../../history/changelog-2.0.rst:127
+msgid "See issue #169."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:125
+msgid "Routing User Guide: Fixed typo `\"feed\": -> {\"queue\": \"feeds\"}`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:129
+msgid ""
+"Documented the default values for the :setting:`CELERYD_CONCURRENCY` and "
+":setting:`CELERYD_PREFETCH_MULTIPLIER` settings."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:132
+msgid "Tasks User Guide: Fixed typos in the subtask example"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:134
+msgid "celery.signals: Documented worker_process_init."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:136
+msgid ""
+"Daemonization cookbook: Need to export DJANGO_SETTINGS_MODULE in "
+"`/etc/default/celeryd`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:139
+msgid "Added some more FAQs from stack overflow"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:141
+msgid "Daemonization cookbook: Fixed typo `CELERYD_LOGFILE/CELERYD_PIDFILE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:143
+msgid "to `CELERYD_LOG_FILE` / `CELERYD_PID_FILE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:145
+msgid "Also added troubleshooting section for the init scripts."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:150
+msgid "2.0.2"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:151
+msgid "2010-07-22 11:31 A.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:154
+msgid ""
+"Routes: When using the dict route syntax, the exchange for a task could "
+"disappear making the task unroutable."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:157
+msgid "See issue #158."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:159
+msgid "Test suite now passing on Python 2.4"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:161
+msgid ""
+"No longer have to type `PYTHONPATH=.` to use celeryconfig in the current "
+"directory."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:164
+msgid ""
+"This is accomplished by the default loader ensuring that the current "
+"directory is in `sys.path` when loading the config module. `sys.path` is "
+"reset to its original state after loading."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:168
+msgid ""
+"Adding the current working directory to `sys.path` without the user knowing "
+"may be a security issue, as this means someone can drop a Python module in "
+"the users directory that executes arbitrary commands. This was the original "
+"reason not to do this, but if done *only when loading the config module*, "
+"this means that the behavior will only apply to the modules imported in the "
+"config module, which I think is a good compromise (certainly better than "
+"just explicitly setting `PYTHONPATH=.` anyway)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:176
+msgid "Experimental Cassandra backend added."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:178
+msgid ""
+"Worker: SIGHUP handler accidentally propagated to worker pool processes."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:180
+msgid ""
+"In combination with 7a7c44e39344789f11b5346e9cc8340f5fe4846c this would make"
+" each child process start a new worker instance when the terminal window was"
+" closed :/"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:184
+msgid "Worker: Do not install SIGHUP handler if running from a terminal."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:186
+msgid ""
+"This fixes the problem where the worker is launched in the background when "
+"closing the terminal."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:189
+msgid "Worker: Now joins threads at shutdown."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:193
+msgid ""
+"Test tear down: Don't use `atexit` but nose's `teardown()` functionality "
+"instead."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:196
+msgid "See issue #154."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:198
+msgid "Debian worker init script: Stop now works correctly."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:200
+msgid "Task logger: `warn` method added (synonym for `warning`)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:202
+msgid "Can now define a white list of errors to send error emails for."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:204
+msgid "Example::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:208
+msgid "See issue #153."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:210
+msgid ""
+"Worker: Now handles overflow exceptions in `time.mktime` while parsing the "
+"ETA field."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:213
+msgid ""
+"LoggerWrapper: Try to detect loggers logging back to stderr/stdout making an"
+" infinite loop."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:216
+msgid "Added :class:`celery.task.control.inspect`: Inspects a running worker."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:218
+msgid "Examples::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:249
+msgid ""
+"Remote control commands `dump_active`/`dump_reserved`/`dump_schedule` now "
+"replies with detailed task requests."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:252
+msgid "Containing the original arguments and fields of the task requested."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:254
+msgid ""
+"In addition the remote control command `set_loglevel` has been added, this "
+"only changes the log level for the main process."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:257
+msgid ""
+"Worker control command execution now catches errors and returns their string"
+" representation in the reply."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:260
+msgid "Functional test suite added"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:262
+msgid ""
+":mod:`celery.tests.functional.case` contains utilities to start and stop an "
+"embedded worker process, for use in functional testing."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:268
+msgid "2.0.1"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:269
+msgid "2010-07-09 03:02 P.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:272
+msgid ""
+"multiprocessing.pool: Now handles encoding errors, so that pickling errors "
+"doesn't crash the worker processes."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:275
+msgid ""
+"The remote control command replies was not working with RabbitMQ 1.8.0's "
+"stricter equivalence checks."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:278
+msgid ""
+"If you've already hit this problem you may have to delete the declaration:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:285
+msgid "or:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:291
+msgid ""
+"A bug sneaked in the ETA scheduler that made it only able to execute one "
+"task per second(!)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:294
+msgid ""
+"The scheduler sleeps between iterations so it doesn't consume too much CPU. "
+"It keeps a list of the scheduled items sorted by time, at each iteration it "
+"sleeps for the remaining time of the item with the nearest deadline. If "
+"there are no eta tasks it will sleep for a minimum amount of time, one "
+"second by default."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:300
+msgid ""
+"A bug sneaked in here, making it sleep for one second for every task that "
+"was scheduled. This has been fixed, so now it should move tasks like hot "
+"knife through butter."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:304
+msgid ""
+"In addition a new setting has been added to control the minimum sleep "
+"interval; :setting:`CELERYD_ETA_SCHEDULER_PRECISION`. A good value for this "
+"would be a float between 0 and 1, depending on the needed precision. A value"
+" of 0.8 means that when the ETA of a task is met, it will take at most 0.8 "
+"seconds for the task to be moved to the ready queue."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:311
+msgid "Pool: Supervisor did not release the semaphore."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:313
+msgid "This would lead to a deadlock if all workers terminated prematurely."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:315
+msgid "Added Python version trove classifiers: 2.4, 2.5, 2.6 and 2.7"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:317
+msgid "Tests now passing on Python 2.7."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:319
+msgid ""
+"Task.__reduce__: Tasks created using the task decorator can now be pickled."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:321
+msgid "setup.py: nose added to `tests_require`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:323
+msgid "Pickle should now work with SQLAlchemy 0.5.x"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:325
+msgid "New homepage design by Jan Henrik Helmers: http://celeryproject.org"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:327
+msgid "New Sphinx theme by Armin Ronacher: http://docs.celeryproject.org/"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:329
+msgid ""
+"Fixed \"pending_xref\" errors shown in the HTML rendering of the "
+"documentation. Apparently this was caused by new changes in Sphinx 1.0b2."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:332
+msgid "Router classes in :setting:`CELERY_ROUTES` are now imported lazily."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:334
+msgid ""
+"Importing a router class in a module that also loads the Celery environment "
+"would cause a circular dependency. This is solved by importing it when "
+"needed after the environment is set up."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:338
+msgid ":setting:`CELERY_ROUTES` was broken if set to a single dict."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:340
+msgid "This example in the docs should now work again::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:344
+msgid "`CREATE_MISSING_QUEUES` was not honored by apply_async."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:346
+msgid "New remote control command: `stats`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:348
+msgid ""
+"Dumps information about the worker, like pool process ids, and total number "
+"of tasks executed by type."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:351 ../../history/changelog-2.0.rst:368
+msgid "Example reply::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:361
+msgid "New remote control command: `dump_active`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:363
+msgid ""
+"Gives a list of tasks currently being executed by the worker. By default "
+"arguments are passed through repr in case there are arguments that is not "
+"JSON encodable. If you know the arguments are JSON safe, you can pass the "
+"argument `safe=True`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:386
+msgid "Added experimental support for persistent revokes."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:388
+msgid "Use the `-S|--statedb` argument to the worker to enable it:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:394
+msgid ""
+"This will use the file: `/var/run/celeryd.db`, as the `shelve` module "
+"automatically adds the `.db` suffix."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:400
+msgid "2.0.0"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:401
+msgid "2010-07-02 02:30 P.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:405
+msgid "Foreword"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:407
+msgid ""
+"Celery 2.0 contains backward incompatible changes, the most important being "
+"that the Django dependency has been removed so Celery no longer supports "
+"Django out of the box, but instead as an add-on package called `django-"
+"celery`_."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:412
+msgid ""
+"We're very sorry for breaking backwards compatibility, but there's also many"
+" new and exciting features to make up for the time you lose upgrading, so be"
+" sure to read the :ref:`News <v200-news>` section."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:416
+msgid ""
+"Quite a lot of potential users have been upset about the Django dependency, "
+"so maybe this is a chance to get wider adoption by the Python community as "
+"well."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:420
+msgid "Big thanks to all contributors, testers and users!"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:425
+msgid "Upgrading for Django-users"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:427
+msgid ""
+"Django integration has been moved to a separate package: `django-celery`_."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:429
+msgid ""
+"To upgrade you need to install the `django-celery`_ module and change::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:433
+msgid "to::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:437
+msgid ""
+"If you use `mod_wsgi` you need to add the following line to your `.wsgi` "
+"file::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:443
+msgid "The following modules has been moved to `django-celery`_:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:446 ../../history/changelog-2.0.rst:672
+msgid "**Module name**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:446 ../../history/changelog-2.0.rst:566
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:448
+msgid "`celery.models`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:448
+msgid "`djcelery.models`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:449
+msgid "`celery.managers`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:449
+msgid "`djcelery.managers`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:450
+msgid "`celery.views`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:450
+msgid "`djcelery.views`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:451
+msgid "`celery.urls`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:451
+msgid "`djcelery.urls`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:452
+msgid "`celery.management`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:452
+msgid "`djcelery.management`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:453
+msgid "`celery.loaders.djangoapp`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:453
+msgid "`djcelery.loaders`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:454
+msgid "`celery.backends.database`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:454
+msgid "`djcelery.backends.database`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:455
+msgid "`celery.backends.cache`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:455
+msgid "`djcelery.backends.cache`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:458
+msgid ""
+"Importing :mod:`djcelery` will automatically setup Celery to use Django "
+"loader. loader.  It does this by setting the :envvar:`CELERY_LOADER` "
+"environment variable to `\"django\"` (it won't change it if a loader is "
+"already set.)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:462
+msgid ""
+"When the Django loader is used, the \"database\" and \"cache\" result "
+"backend aliases will point to the :mod:`djcelery` backends instead of the "
+"built-in backends, and configuration will be read from the Django settings."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:471
+msgid "Upgrading for others"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:476
+msgid "Database result backend"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:478
+msgid ""
+"The database result backend is now using `SQLAlchemy`_ instead of the Django"
+" ORM, see `Supported Databases`_ for a table of supported databases."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:481
+msgid ""
+"The `DATABASE_*` settings has been replaced by a single setting: "
+":setting:`CELERY_RESULT_DBURI`. The value here should be an `SQLAlchemy "
+"Connection String`_, some examples include:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:499
+msgid ""
+"See `SQLAlchemy Connection Strings`_ for more information about connection "
+"strings."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:502
+msgid ""
+"To specify additional SQLAlchemy database engine options you can use the "
+":setting:`CELERY_RESULT_ENGINE_OPTIONS` setting::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:520
+msgid "Cache result backend"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:522
+msgid ""
+"The cache result backend is no longer using the Django cache framework, but "
+"it supports mostly the same configuration syntax::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:527
+msgid ""
+"To use the cache backend you must either have the `pylibmc`_ or `python-"
+"memcached`_ library installed, of which the former is regarded as the best "
+"choice."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:534
+msgid ""
+"The support backend types are `memcached://` and `memory://`, we haven't "
+"felt the need to support any of the other backends provided by Django."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:541
+msgid "Backward incompatible changes"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:543
+msgid ""
+"Default (python) loader now prints warning on missing `celeryconfig.py` "
+"instead of raising :exc:`ImportError`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:546
+msgid ""
+"The worker raises :exc:`~@ImproperlyConfigured` if the configuration is not "
+"set up. This makes it possible to use `--help` etc., without having a "
+"working configuration."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:550
+msgid ""
+"Also this makes it possible to use the client side of celery without being "
+"configured::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:562
+msgid ""
+"The following deprecated settings has been removed (as scheduled by the :ref"
+":`deprecation-timeline`):"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:566
+msgid "**Setting name**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:568
+msgid "`CELERY_AMQP_CONSUMER_QUEUES`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:568 ../../history/changelog-2.0.rst:571
+msgid "`CELERY_QUEUES`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:569
+msgid "`CELERY_AMQP_EXCHANGE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:569
+msgid "`CELERY_DEFAULT_EXCHANGE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:570
+msgid "`CELERY_AMQP_EXCHANGE_TYPE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:570
+msgid "`CELERY_DEFAULT_EXCHANGE_TYPE`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:571
+msgid "`CELERY_AMQP_CONSUMER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:572
+msgid "`CELERY_AMQP_PUBLISHER_ROUTING_KEY`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:572
+msgid "`CELERY_DEFAULT_ROUTING_KEY`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:575
+msgid ""
+"The `celery.task.rest` module has been removed, use :mod:`celery.task.http` "
+"instead (as scheduled by the :ref:`deprecation-timeline`)."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:578
+msgid ""
+"It's no longer allowed to skip the class name in loader names. (as scheduled"
+" by the :ref:`deprecation-timeline`):"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:581
+msgid ""
+"Assuming the implicit `Loader` class name is no longer supported, if you use"
+" e.g.::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:586
+msgid "You need to include the loader class name, like this::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:590
+msgid ":setting:`CELERY_TASK_RESULT_EXPIRES` now defaults to 1 day."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:592
+msgid "Previous default setting was to expire in 5 days."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:594
+msgid "AMQP backend: Don't use different values for `auto_delete`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:596
+msgid ""
+"This bug became visible with RabbitMQ 1.8.0, which no longer allows "
+"conflicting declarations for the auto_delete and durable settings."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:599
+msgid ""
+"If you've already used celery with this backend chances are you have to "
+"delete the previous declaration:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:606
+msgid "Now uses pickle instead of cPickle on Python versions <= 2.5"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:608
+msgid "cPickle is broken in Python <= 2.5."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:610
+msgid ""
+"It unsafely and incorrectly uses relative instead of absolute imports, so "
+"e.g.::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:615
+msgid "becomes::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:619
+msgid ""
+"Your best choice is to upgrade to Python 2.6, as while the pure pickle "
+"version has worse performance, it is the only safe option for older Python "
+"versions."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:626
+msgid "News"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:628
+msgid "**celeryev**: Curses Celery Monitor and Event Viewer."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:630
+msgid ""
+"This is a simple monitor allowing you to see what tasks are executing in "
+"real-time and investigate tracebacks and results of ready tasks. It also "
+"enables you to set new rate limits and revoke tasks."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:634
+msgid "Screenshot:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:638
+msgid ""
+"If you run `celeryev` with the `-d` switch it will act as an event dumper, "
+"simply dumping the events it receives to standard out:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:658
+msgid ""
+"AMQP result backend: Now supports `.ready()`, `.successful()`, `.result`, "
+"`.status`, and even responds to changes in task state"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:661
+msgid "New user guides:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:663
+msgid ":ref:`guide-workers`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:664
+msgid ":ref:`guide-canvas`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:665
+msgid ":ref:`guide-routing`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:667
+msgid "Worker: Standard out/error is now being redirected to the log file."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:669
+msgid ":mod:`billiard` has been moved back to the celery repository."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:672
+msgid "**celery equivalent**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:674
+msgid "`billiard.pool`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:674
+msgid "`celery.concurrency.processes.pool`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:675
+msgid "`billiard.serialization`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:675
+msgid "`celery.serialization`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:676
+msgid "`billiard.utils.functional`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:676
+msgid "`celery.utils.functional`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:679
+msgid ""
+"The :mod:`billiard` distribution may be maintained, depending on interest."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:681
+msgid "now depends on :mod:`carrot` >= 0.10.5"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:683
+msgid "now depends on :mod:`pyparsing`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:685
+msgid "Worker: Added `--purge` as an alias to `--discard`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:687
+msgid ""
+"Worker: Ctrl+C (SIGINT) once does warm shutdown, hitting Ctrl+C twice forces"
+" termination."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:690
+msgid ""
+"Added support for using complex crontab-expressions in periodic tasks. For "
+"example, you can now use::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:695
+msgid "or even::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:699
+msgid "See :ref:`guide-beat`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:701
+msgid ""
+"Worker: Now waits for available pool processes before applying new tasks to "
+"the pool."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:704
+msgid ""
+"This means it doesn't have to wait for dozens of tasks to finish at shutdown"
+" because it has applied prefetched tasks without having any pool processes "
+"available to immediately accept them."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:708
+msgid "See issue #122."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:710
+msgid "New built-in way to do task callbacks using :class:`~celery.subtask`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:713
+msgid "See :ref:`guide-canvas` for more information."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:715
+msgid "TaskSets can now contain several types of tasks."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:717
+msgid ""
+":class:`~celery.task.sets.TaskSet` has been refactored to use a new syntax, "
+"please see :ref:`guide-canvas` for more information."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:720
+msgid ""
+"The previous syntax is still supported, but will be deprecated in version "
+"1.4."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:723
+msgid "TaskSet failed() result was incorrect."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:725
+msgid "See issue #132."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:727
+msgid "Now creates different loggers per task class."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:729
+msgid "See issue #129."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:731
+msgid "Missing queue definitions are now created automatically."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:733
+msgid ""
+"You can disable this using the :setting:`CELERY_CREATE_MISSING_QUEUES` "
+"setting."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:736
+msgid "The missing queues are created with the following options::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:742
+msgid ""
+"This feature is added for easily setting up routing using the `-Q` option to"
+" the worker:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:749
+msgid ""
+"See the new routing section of the User Guide for more information: :ref"
+":`guide-routing`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:752
+msgid "New Task option: `Task.queue`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:754
+msgid ""
+"If set, message options will be taken from the corresponding entry in "
+":setting:`CELERY_QUEUES`. `exchange`, `exchange_type` and `routing_key` will"
+" be ignored"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:758
+msgid "Added support for task soft and hard time limits."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:760
+msgid "New settings added:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:762
+msgid ":setting:`CELERYD_TASK_TIME_LIMIT`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:764
+msgid ""
+"Hard time limit. The worker processing the task will be killed and replaced "
+"with a new one when this is exceeded."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:767
+msgid ":setting:`CELERYD_TASK_SOFT_TIME_LIMIT`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:769
+msgid ""
+"Soft time limit. The :exc:`~@SoftTimeLimitExceeded` exception will be raised"
+" when this is exceeded.  The task can catch this to e.g. clean up before the"
+" hard time limit comes."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:773
+msgid ""
+"New command-line arguments to celeryd added: `--time-limit` and `--soft-"
+"time-limit`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:776
+msgid "What's left?"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:778
+msgid ""
+"This won't work on platforms not supporting signals (and specifically the "
+"`SIGUSR1` signal) yet. So an alternative the ability to disable the feature "
+"all together on nonconforming platforms must be implemented."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:782
+msgid ""
+"Also when the hard time limit is exceeded, the task result should be a "
+"`TimeLimitExceeded` exception."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:785
+msgid ""
+"Test suite is now passing without a running broker, using the carrot in-"
+"memory backend."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:788
+msgid "Log output is now available in colors."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:791
+msgid "**Log level**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:791
+msgid "**Color**"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:793
+msgid "`DEBUG`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:793
+msgid "Blue"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:794
+msgid "`WARNING`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:794
+msgid "Yellow"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:795
+msgid "`CRITICAL`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:795
+msgid "Magenta"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:796
+msgid "`ERROR`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:796
+msgid "Red"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:799
+msgid ""
+"This is only enabled when the log output is a tty. You can explicitly "
+"enable/disable this feature using the :setting:`CELERYD_LOG_COLOR` setting."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:803
+msgid ""
+"Added support for task router classes (like the django multi-db routers)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:805
+msgid "New setting: :setting:`CELERY_ROUTES`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:807
+msgid ""
+"This is a single, or a list of routers to traverse when sending tasks. "
+"Dictionaries in this list converts to a :class:`celery.routes.MapRoute` "
+"instance."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:811
+msgid "Examples:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:823
+msgid "Where `myapp.tasks.Router` could be:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:833
+msgid ""
+"route_for_task may return a string or a dict. A string then means it's a "
+"queue name in :setting:`CELERY_QUEUES`, a dict means it's a custom route."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:836
+msgid ""
+"When sending tasks, the routers are consulted in order. The first router "
+"that doesn't return `None` is the route to use. The message options is then "
+"merged with the found route settings, where the routers settings have "
+"priority."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:841
+msgid "Example if :func:`~celery.execute.apply_async` has these arguments::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:846
+msgid "and a router returns::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:851
+msgid "the final message options will be::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:855
+msgid ""
+"(and any default message options defined in the "
+":class:`~celery.task.base.Task` class)"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:858
+msgid ""
+"New Task handler called after the task returns: "
+":meth:`~celery.task.base.Task.after_return`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:863
+msgid ":class:`~celery.datastructures.ExceptionInfo` now passed to"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:862
+msgid ""
+":meth:`~celery.task.base.Task.on_retry`/ "
+":meth:`~celery.task.base.Task.on_failure` as einfo keyword argument."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:865
+msgid ""
+"Worker: Added :setting:`CELERYD_MAX_TASKS_PER_CHILD` / "
+":option:`--maxtasksperchild`"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:868
+msgid ""
+"Defines the maximum number of tasks a pool worker can process before the "
+"process is terminated and replaced by a new one."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:871
+msgid ""
+"Revoked tasks now marked with state :state:`REVOKED`, and `result.get()` "
+"will now raise :exc:`~@TaskRevokedError`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:874
+msgid ":func:`celery.task.control.ping` now works as expected."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:876
+msgid ""
+"`apply(throw=True)` / :setting:`CELERY_EAGER_PROPAGATES_EXCEPTIONS`: Makes "
+"eager execution re-raise task errors."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:879
+msgid ""
+"New signal: :signal:`~celery.signals.worker_process_init`: Sent inside the "
+"pool worker process at init."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:882
+msgid ""
+"Worker: :option:`-Q` option: Ability to specify list of queues to use, "
+"disabling other configured queues."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:885
+msgid ""
+"For example, if :setting:`CELERY_QUEUES` defines four queues: `image`, "
+"`video`, `data` and `default`, the following command would make the worker "
+"only consume from the `image` and `video` queues:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:894
+msgid "Worker: New return value for the `revoke` control command:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:896
+msgid "Now returns::"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:900
+msgid "instead of `True`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:902
+msgid "Worker: Can now enable/disable events using remote control"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:904
+msgid "Example usage:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:910
+msgid ""
+"Removed top-level tests directory. Test config now in celery.tests.config"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:912
+msgid ""
+"This means running the unit tests doesn't require any special setup. "
+"`celery/tests/__init__` now configures the :envvar:`CELERY_CONFIG_MODULE` "
+"and :envvar:`CELERY_LOADER` environment variables, so when `nosetests` "
+"imports that, the unit test environment is all set up."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:917
+msgid "Before you run the tests you need to install the test requirements:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:923
+msgid "Running all tests:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:929
+msgid "Specifying the tests to run:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:935
+msgid "Producing HTML coverage:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:941
+msgid ""
+"The coverage output is then located in `celery/tests/cover/index.html`."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:943
+msgid "Worker: New option `--version`: Dump version info and exit."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:945
+msgid ""
+":mod:`celeryd-multi <celeryd.bin.multi>`: Tool for shell scripts to start "
+"multiple workers."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:948
+msgid "Some examples:"
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:1007
+msgid ""
+"The worker now calls the result backends `process_cleanup` method *after* "
+"task execution instead of before."
+msgstr ""
+
+#: ../../history/changelog-2.0.rst:1010
+msgid "AMQP result backend now supports Pika."
+msgstr ""

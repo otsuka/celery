@@ -1,0 +1,762 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.rst:3
+msgid ":mod:`celery` --- Distributed processing"
+msgstr ""
+
+#: ../../reference/celery.rst:13
+msgid ""
+"This module is the main entry-point for the Celery API. It includes commonly"
+" needed things for calling tasks, and creating Celery applications."
+msgstr ""
+
+#: ../../reference/celery.rst:18
+msgid ":class:`Celery`"
+msgstr ""
+
+#: ../../reference/celery.rst:18
+msgid "celery application instance"
+msgstr ""
+
+#: ../../reference/celery.rst:19
+msgid ":class:`group`"
+msgstr ""
+
+#: ../../reference/celery.rst:19
+msgid "group tasks together"
+msgstr ""
+
+#: ../../reference/celery.rst:20
+msgid ":class:`chain`"
+msgstr ""
+
+#: ../../reference/celery.rst:20
+msgid "chain tasks together"
+msgstr ""
+
+#: ../../reference/celery.rst:21
+msgid ":class:`chord`"
+msgstr ""
+
+#: ../../reference/celery.rst:21
+msgid "chords enable callbacks for groups"
+msgstr ""
+
+#: ../../reference/celery.rst:22
+msgid ":class:`signature`"
+msgstr ""
+
+#: ../../reference/celery.rst:22
+msgid "object describing a task invocation"
+msgstr ""
+
+#: ../../reference/celery.rst:23
+msgid ":data:`current_app`"
+msgstr ""
+
+#: ../../reference/celery.rst:23
+msgid "proxy to the current application instance"
+msgstr ""
+
+#: ../../reference/celery.rst:24
+msgid ":data:`current_task`"
+msgstr ""
+
+#: ../../reference/celery.rst:24
+msgid "proxy to the currently executing task"
+msgstr ""
+
+#: ../../reference/celery.rst:28
+msgid ":class:`Celery` application objects"
+msgstr ""
+
+#: ../../reference/celery.rst:34
+msgid ""
+"Name of the main module if running as `__main__`. This is used as a prefix "
+"for task names."
+msgstr ""
+
+#: ../../reference/celery.rst:36
+msgid "URL of the default broker used."
+msgstr ""
+
+#: ../../reference/celery.rst:37
+msgid ""
+"The loader class, or the name of the loader class to use. Default is "
+":class:`celery.loaders.app.AppLoader`."
+msgstr ""
+
+#: ../../reference/celery.rst:39
+msgid ""
+"The result store backend class, or the name of the backend class to use. "
+"Default is the value of the :setting:`CELERY_RESULT_BACKEND` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:42
+msgid "AMQP object or class name."
+msgstr ""
+
+#: ../../reference/celery.rst:43
+msgid "Events object or class name."
+msgstr ""
+
+#: ../../reference/celery.rst:44
+msgid "Log object or class name."
+msgstr ""
+
+#: ../../reference/celery.rst:45
+msgid "Control object or class name."
+msgstr ""
+
+#: ../../reference/celery.rst:46
+msgid "Make this the global current app."
+msgstr ""
+
+#: ../../reference/celery.rst:47
+msgid "A task registry or the name of a registry class."
+msgstr ""
+
+#: ../../reference/celery.rst:48
+msgid "List of modules every worker should import."
+msgstr ""
+
+#: ../../reference/celery.rst:49
+msgid "List of fixup plug-ins (see e.g. :mod:`celery.fixups.django`)."
+msgstr ""
+
+#: ../../reference/celery.rst:51
+msgid ""
+"If set to False a :exc:`RuntimeError` will be raised if the task registry or"
+" tasks are used before the app is finalized."
+msgstr ""
+
+#: ../../reference/celery.rst:57
+msgid "Name of the `__main__` module.  Required for standalone scripts."
+msgstr ""
+
+#: ../../reference/celery.rst:59
+msgid ""
+"If set this will be used instead of `__main__` when automatically generating"
+" task names."
+msgstr ""
+
+#: ../../reference/celery.rst:64
+msgid "Current configuration."
+msgstr ""
+
+#: ../../reference/celery.rst:68
+msgid ""
+"Custom options for command-line programs. See :ref:`extending-"
+"commandoptions`"
+msgstr ""
+
+#: ../../reference/celery.rst:73
+msgid ""
+"Custom bootsteps to extend and modify the worker. See :ref:`extending-"
+"bootsteps`."
+msgstr ""
+
+#: ../../reference/celery.rst:78
+msgid "The instance of the task that is being executed, or :const:`None`."
+msgstr ""
+
+#: ../../reference/celery.rst:82
+msgid "AMQP related functionality: :class:`~@amqp`."
+msgstr ""
+
+#: ../../reference/celery.rst:86
+msgid "Current backend instance."
+msgstr ""
+
+#: ../../reference/celery.rst:90
+msgid "Current loader instance."
+msgstr ""
+
+#: ../../reference/celery.rst:94
+msgid "Remote control: :class:`~@control`."
+msgstr ""
+
+#: ../../reference/celery.rst:98
+msgid "Consuming and sending events: :class:`~@events`."
+msgstr ""
+
+#: ../../reference/celery.rst:102
+msgid "Logging: :class:`~@log`."
+msgstr ""
+
+#: ../../reference/celery.rst:106
+msgid "Task registry."
+msgstr ""
+
+#: ../../reference/celery.rst:108
+msgid "Accessing this attribute will also finalize the app."
+msgstr ""
+
+#: ../../reference/celery.rst:112
+msgid ""
+"Broker connection pool: :class:`~@pool`. This attribute is not related to "
+"the workers concurrency pool."
+msgstr ""
+
+#: ../../reference/celery.rst:117
+msgid "Base task class for this app."
+msgstr ""
+
+#: ../../reference/celery.rst:121
+msgid ""
+"Current timezone for this app. This is a cached property taking the time "
+"zone from the :setting:`CELERY_TIMEZONE` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:127
+msgid ""
+"Close any open pool connections and do any other steps necessary to clean up"
+" after the application."
+msgstr ""
+
+#: ../../reference/celery.rst:130
+msgid ""
+"Only necessary for dynamically created apps for which you can use the with "
+"statement instead::"
+msgstr ""
+
+#: ../../reference/celery.rst:139
+msgid ""
+"Return a new :class:`~celery.canvas.Signature` bound to this app. See "
+":meth:`~celery.signature`"
+msgstr ""
+
+#: ../../reference/celery.rst:144
+msgid ""
+"Return a string with information useful for the Celery core developers when "
+"reporting a bug."
+msgstr ""
+
+#: ../../reference/celery.rst:149
+msgid ""
+"Reads configuration from object, where object is either an object or the "
+"name of a module to import."
+msgstr ""
+
+#: ../../reference/celery.rst:152
+msgid "If true then import errors will be ignored."
+msgstr ""
+
+#: ../../reference/celery.rst:154
+msgid ""
+"Force reading configuration immediately. By default the configuration will "
+"be read only when required."
+msgstr ""
+
+#: ../../reference/celery.rst:167
+msgid "Read configuration from environment variable."
+msgstr ""
+
+#: ../../reference/celery.rst:169
+msgid ""
+"The value of the environment variable must be the name of a module to "
+"import."
+msgstr ""
+
+#: ../../reference/celery.rst:179
+msgid ""
+"With a list of packages, try to import modules of a specific name (by "
+"default 'tasks')."
+msgstr ""
+
+#: ../../reference/celery.rst:182
+msgid "For example if you have an (imagined) directory tree like this::"
+msgstr ""
+
+#: ../../reference/celery.rst:195
+msgid ""
+"Then calling ``app.autodiscover_tasks(['foo', bar', 'baz'])`` will result in"
+" the modules ``foo.tasks`` and ``bar.tasks`` being imported."
+msgstr ""
+
+#: ../../reference/celery.rst:198
+msgid ""
+"List of packages to search. This argument may also be a callable, in which "
+"case the value returned is used (for lazy evaluation)."
+msgstr ""
+
+#: ../../reference/celery.rst:202
+msgid ""
+"The name of the module to find.  Defaults to \"tasks\", which means it look "
+"for \"module.tasks\" for every module in ``packages``."
+msgstr ""
+
+#: ../../reference/celery.rst:205
+msgid ""
+"By default this call is lazy so that the actual autodiscovery will not "
+"happen until an application imports the default modules.  Forcing will cause"
+" the autodiscovery to happen immediately."
+msgstr ""
+
+#: ../../reference/celery.rst:213
+msgid "Add default configuration from dict ``d``."
+msgstr ""
+
+#: ../../reference/celery.rst:215
+msgid ""
+"If the argument is a callable function then it will be regarded as a "
+"promise, and it won't be loaded until the configuration is actually needed."
+msgstr ""
+
+#: ../../reference/celery.rst:219
+msgid "This method can be compared to::"
+msgstr ""
+
+#: ../../reference/celery.rst:223
+msgid ""
+"with a difference that 1) no copy will be made and 2) the dict will not be "
+"transferred when the worker spawns child processes, so it's important that "
+"the same configuration happens at import time when pickle restores the "
+"object on the other side."
+msgstr ""
+
+#: ../../reference/celery.rst:230
+msgid ""
+"Setup the message-signing serializer. This will affect all application "
+"instances (a global operation)."
+msgstr ""
+
+#: ../../reference/celery.rst:233
+msgid ""
+"Disables untrusted serializers and if configured to use the ``auth`` "
+"serializer will register the auth serializer with the provided settings into"
+" the Kombu serializer registry."
+msgstr ""
+
+#: ../../reference/celery.rst:237
+msgid ""
+"List of serializer names, or content_types that should be exempt from being "
+"disabled."
+msgstr ""
+
+#: ../../reference/celery.rst:239
+msgid ""
+"Name of private key file to use. Defaults to the "
+":setting:`CELERY_SECURITY_KEY` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:241
+msgid ""
+"Name of certificate file to use. Defaults to the "
+":setting:`CELERY_SECURITY_CERTIFICATE` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:243
+msgid ""
+"Directory containing certificates. Defaults to the "
+":setting:`CELERY_SECURITY_CERT_STORE` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:245
+msgid "Digest algorithm used when signing messages. Default is ``sha1``."
+msgstr ""
+
+#: ../../reference/celery.rst:247
+msgid ""
+"Serializer used to encode messages after they have been signed.  See "
+":setting:`CELERY_TASK_SERIALIZER` for the serializers supported. Default is "
+"``json``."
+msgstr ""
+
+#: ../../reference/celery.rst:254
+msgid "Run :program:`celery` using `argv`."
+msgstr ""
+
+#: ../../reference/celery.rst:256 ../../reference/celery.rst:312
+msgid "Uses :data:`sys.argv` if `argv` is not specified."
+msgstr ""
+
+#: ../../reference/celery.rst:260
+msgid "Decorator to create a task class out of any callable."
+msgstr ""
+
+#: ../../reference/celery.rst:262
+msgid "Examples:"
+msgstr ""
+
+#: ../../reference/celery.rst:270
+msgid "with setting extra options:"
+msgstr ""
+
+#: ../../reference/celery.rst:278
+msgid "App Binding"
+msgstr ""
+
+#: ../../reference/celery.rst:280
+msgid ""
+"For custom apps the task decorator will return a proxy object, so that the "
+"act of creating the task is not performed until the task is used or the task"
+" registry is accessed."
+msgstr ""
+
+#: ../../reference/celery.rst:284
+msgid ""
+"If you are depending on binding to be deferred, then you must not access any"
+" attributes on the returned object until the application is fully set up "
+"(finalized)."
+msgstr ""
+
+#: ../../reference/celery.rst:291
+msgid "Send task by name."
+msgstr ""
+
+#: ../../reference/celery.rst:293
+msgid "Name of task to call (e.g. `\"tasks.add\"`)."
+msgstr ""
+
+#: ../../reference/celery.rst:294
+msgid "Specify custom result class. Default is using :meth:`AsyncResult`."
+msgstr ""
+
+#: ../../reference/celery.rst:297
+msgid "Otherwise supports the same arguments as :meth:`@-Task.apply_async`."
+msgstr ""
+
+#: ../../reference/celery.rst:301
+msgid "Create new result instance. See :class:`~celery.result.AsyncResult`."
+msgstr ""
+
+#: ../../reference/celery.rst:305
+msgid ""
+"Create new group result instance. See :class:`~celery.result.GroupResult`."
+msgstr ""
+
+#: ../../reference/celery.rst:310
+msgid "Run :program:`celery worker` using `argv`."
+msgstr ""
+
+#: ../../reference/celery.rst:316
+msgid "Worker application. See :class:`~@Worker`."
+msgstr ""
+
+#: ../../reference/celery.rst:320
+msgid "Embeddable worker. See :class:`~@WorkController`."
+msgstr ""
+
+#: ../../reference/celery.rst:324
+msgid "Celerybeat scheduler application. See :class:`~@Beat`."
+msgstr ""
+
+#: ../../reference/celery.rst:329
+msgid "Establish a connection to the message broker."
+msgstr ""
+
+#: ../../reference/celery.rst:331
+msgid "Either the URL or the hostname of the broker to use."
+msgstr ""
+
+#: ../../reference/celery.rst:333
+msgid ""
+"URL, Hostname/IP-address of the broker. If an URL is used, then the other "
+"argument below will be taken from the URL instead."
+msgstr ""
+
+#: ../../reference/celery.rst:336
+msgid "Username to authenticate as."
+msgstr ""
+
+#: ../../reference/celery.rst:337
+msgid "Password to authenticate with"
+msgstr ""
+
+#: ../../reference/celery.rst:338
+msgid "Virtual host to use (domain)."
+msgstr ""
+
+#: ../../reference/celery.rst:339
+msgid "Port to connect to."
+msgstr ""
+
+#: ../../reference/celery.rst:340
+msgid "Defaults to the :setting:`BROKER_USE_SSL` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:341
+msgid "defaults to the :setting:`BROKER_TRANSPORT` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:344
+msgid ":returns :class:`kombu.Connection`:"
+msgstr ""
+
+#: ../../reference/celery.rst:348
+msgid ""
+"For use within a with-statement to get a connection from the pool if one is "
+"not already provided."
+msgstr ""
+
+#: ../../reference/celery.rst:351
+msgid ""
+"If not provided, then a connection will be acquired from the connection "
+"pool."
+msgstr ""
+
+#: ../../reference/celery.rst:356
+msgid ""
+"For use within a with-statement to get a producer from the pool if one is "
+"not already provided"
+msgstr ""
+
+#: ../../reference/celery.rst:359
+msgid ""
+"If not provided, then a producer will be acquired from the producer pool."
+msgstr ""
+
+#: ../../reference/celery.rst:364
+msgid "Sends an email to the admins in the :setting:`ADMINS` setting."
+msgstr ""
+
+#: ../../reference/celery.rst:368
+msgid ""
+"Select a subset of queues, where queues must be a list of queue names to "
+"keep."
+msgstr ""
+
+#: ../../reference/celery.rst:373
+msgid ""
+"Return the current time and date as a :class:`~datetime.datetime` object."
+msgstr ""
+
+#: ../../reference/celery.rst:378
+msgid "Makes this the current app for this thread."
+msgstr ""
+
+#: ../../reference/celery.rst:382
+msgid ""
+"Finalizes the app by loading built-in tasks, and evaluating pending task "
+"decorators"
+msgstr ""
+
+#: ../../reference/celery.rst:387
+msgid "Optional callback for when the first time the configured is required."
+msgstr ""
+
+#: ../../reference/celery.rst:391
+msgid "Helper class used to pickle this application."
+msgstr ""
+
+#: ../../reference/celery.rst:394
+msgid "Canvas primitives"
+msgstr ""
+
+#: ../../reference/celery.rst:396
+msgid "See :ref:`guide-canvas` for more about creating task workflows."
+msgstr ""
+
+#: ../../reference/celery.rst:400
+msgid "Creates a group of tasks to be executed in parallel."
+msgstr ""
+
+#: ../../reference/celery.rst:402 ../../reference/celery.rst:423
+#: ../../reference/celery.rst:444
+msgid "Example::"
+msgstr ""
+
+#: ../../reference/celery.rst:408
+msgid ""
+"A group is lazy so you must call it to take action and evaluate the group."
+msgstr ""
+
+#: ../../reference/celery.rst:411
+msgid ""
+"Will return a `group` task that when called will then call of the tasks in "
+"the group (and return a :class:`GroupResult` instance that can be used to "
+"inspect the state of the group)."
+msgstr ""
+
+#: ../../reference/celery.rst:417
+msgid ""
+"Chains tasks together, so that each tasks follows each other by being "
+"applied as a callback of the previous task."
+msgstr ""
+
+#: ../../reference/celery.rst:420
+msgid ""
+"If called with only one argument, then that argument must be an iterable of "
+"tasks to chain."
+msgstr ""
+
+#: ../../reference/celery.rst:427
+msgid "is effectively :math:`(2 + 2) + 4)`::"
+msgstr ""
+
+#: ../../reference/celery.rst:432
+msgid ""
+"Calling a chain will return the result of the last task in the chain. You "
+"can get to the other tasks by following the ``result.parent``'s::"
+msgstr ""
+
+#: ../../reference/celery.rst:440
+msgid ""
+"A chord consists of a header and a body. The header is a group of tasks that"
+" must complete before the callback is called.  A chord is essentially a "
+"callback for a group of tasks."
+msgstr ""
+
+#: ../../reference/celery.rst:448
+msgid "is effectively :math:`\\Sigma ((2 + 2) + (4 + 4))`::"
+msgstr ""
+
+#: ../../reference/celery.rst:453
+msgid ""
+"The body is applied with the return values of all the header tasks as a "
+"list."
+msgstr ""
+
+#: ../../reference/celery.rst:458
+msgid ""
+"Describes the arguments and execution options for a single task invocation."
+msgstr ""
+
+#: ../../reference/celery.rst:460
+msgid ""
+"Used as the parts in a :class:`group` or to safely pass tasks around as "
+"callbacks."
+msgstr ""
+
+#: ../../reference/celery.rst:463
+msgid "Signatures can also be created from tasks::"
+msgstr ""
+
+#: ../../reference/celery.rst:467
+msgid "or the ``.s()`` shortcut::"
+msgstr ""
+
+#: ../../reference/celery.rst:471
+msgid "Either a task class/instance, or the name of a task."
+msgstr ""
+
+#: ../../reference/celery.rst:472
+msgid "Positional arguments to apply."
+msgstr ""
+
+#: ../../reference/celery.rst:473
+msgid "Keyword arguments to apply."
+msgstr ""
+
+#: ../../reference/celery.rst:474
+msgid "Additional options to :meth:`Task.apply_async`."
+msgstr ""
+
+#: ../../reference/celery.rst:476
+msgid ""
+"Note that if the first argument is a :class:`dict`, the other arguments will"
+" be ignored and the values in the dict will be used instead."
+msgstr ""
+
+#: ../../reference/celery.rst:486
+msgid "Call the task directly (in the current process)."
+msgstr ""
+
+#: ../../reference/celery.rst:490
+msgid "Shortcut to :meth:`apply_async`."
+msgstr ""
+
+#: ../../reference/celery.rst:494
+msgid "Apply this task asynchronously."
+msgstr ""
+
+#: ../../reference/celery.rst:496 ../../reference/celery.rst:521
+msgid "Partial args to be prepended to the existing args."
+msgstr ""
+
+#: ../../reference/celery.rst:497 ../../reference/celery.rst:522
+msgid "Partial kwargs to be merged with the existing kwargs."
+msgstr ""
+
+#: ../../reference/celery.rst:498 ../../reference/celery.rst:523
+msgid "Partial options to be merged with the existing options."
+msgstr ""
+
+#: ../../reference/celery.rst:501
+msgid "See :meth:`~@Task.apply_async`."
+msgstr ""
+
+#: ../../reference/celery.rst:505
+msgid ""
+"Same as :meth:`apply_async` but executed the task inline instead of sending "
+"a task message."
+msgstr ""
+
+#: ../../reference/celery.rst:510
+msgid ""
+"Finalize the signature by adding a concrete task id. The task will not be "
+"called and you should not call the signature twice after freezing it as that"
+" will result in two task messages using the same task id."
+msgstr ""
+
+#: ../../reference/celery.rst:515
+msgid ":class:`@AsyncResult` instance."
+msgstr ""
+
+#: ../../reference/celery.rst:519
+msgid "Return a copy of this signature."
+msgstr ""
+
+#: ../../reference/celery.rst:528
+msgid ""
+"Replace the args, kwargs or options set for this signature. These are only "
+"replaced if the selected is not :const:`None`."
+msgstr ""
+
+#: ../../reference/celery.rst:533
+msgid "Add a callback task to be applied if this task executes successfully."
+msgstr ""
+
+#: ../../reference/celery.rst:536
+msgid "``other_signature`` (to work with :func:`~functools.reduce`)."
+msgstr ""
+
+#: ../../reference/celery.rst:540
+msgid ""
+"Add a callback task to be applied if an error occurs while executing this "
+"task."
+msgstr ""
+
+#: ../../reference/celery.rst:543
+msgid "``other_signature`` (to work with :func:`~functools.reduce`)"
+msgstr ""
+
+#: ../../reference/celery.rst:547
+msgid "Set arbitrary options (same as ``.options.update(…)``)."
+msgstr ""
+
+#: ../../reference/celery.rst:549
+msgid "This is a chaining method call (i.e. it will return ``self``)."
+msgstr ""
+
+#: ../../reference/celery.rst:553
+msgid ""
+"Gives a recursive list of dependencies (unchain if you will, but with links "
+"intact)."
+msgstr ""
+
+#: ../../reference/celery.rst:557
+msgid "Proxies"
+msgstr ""
+
+#: ../../reference/celery.rst:561
+msgid "The currently set app for this thread."
+msgstr ""
+
+#: ../../reference/celery.rst:565
+msgid ""
+"The task currently being executed (only set in the worker, or when "
+"eager/apply is used)."
+msgstr ""

@@ -1,0 +1,168 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/brokers/index.rst:5
+msgid "Brokers"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:7
+msgid "|version|"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:8
+msgid "|today|"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:10
+msgid "Celery supports several message transport alternatives."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:15
+msgid "Broker Instructions"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:24
+msgid "Experimental Transports"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:40
+msgid "Broker Overview"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:42
+msgid ""
+"This is comparison table of the different transports supports, more "
+"information can be found in the documentation for each individual transport "
+"(see :ref:`broker_toc`)."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:47
+msgid "**Name**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:47
+msgid "**Status**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:47
+msgid "**Monitoring**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:47
+msgid "**Remote Control**"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:49
+msgid "*RabbitMQ*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:49
+#: ../../getting-started/brokers/index.rst:51
+msgid "Stable"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:49
+#: ../../getting-started/brokers/index.rst:49
+#: ../../getting-started/brokers/index.rst:51
+#: ../../getting-started/brokers/index.rst:51
+#: ../../getting-started/brokers/index.rst:53
+#: ../../getting-started/brokers/index.rst:53
+msgid "Yes"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:51
+msgid "*Redis*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:53
+msgid "*Mongo DB*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:53
+#: ../../getting-started/brokers/index.rst:55
+#: ../../getting-started/brokers/index.rst:57
+#: ../../getting-started/brokers/index.rst:59
+#: ../../getting-started/brokers/index.rst:61
+#: ../../getting-started/brokers/index.rst:63
+#: ../../getting-started/brokers/index.rst:65
+msgid "Experimental"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:55
+msgid "*Beanstalk*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:55
+#: ../../getting-started/brokers/index.rst:55
+#: ../../getting-started/brokers/index.rst:57
+#: ../../getting-started/brokers/index.rst:57
+#: ../../getting-started/brokers/index.rst:59
+#: ../../getting-started/brokers/index.rst:59
+#: ../../getting-started/brokers/index.rst:61
+#: ../../getting-started/brokers/index.rst:61
+#: ../../getting-started/brokers/index.rst:63
+#: ../../getting-started/brokers/index.rst:63
+#: ../../getting-started/brokers/index.rst:65
+#: ../../getting-started/brokers/index.rst:65
+#: ../../getting-started/brokers/index.rst:67
+#: ../../getting-started/brokers/index.rst:67
+msgid "No"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:57
+msgid "*Amazon SQS*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:59
+msgid "*Couch DB*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:61
+msgid "*Zookeeper*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:63
+msgid "*Django DB*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:65
+msgid "*SQLAlchemy*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:67
+msgid "*Iron MQ*"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:67
+msgid "3rd party"
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:70
+msgid ""
+"Experimental brokers may be functional but they do not have dedicated "
+"maintainers."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:73
+msgid ""
+"Missing monitor support means that the transport does not implement events, "
+"and as such Flower, `celery events`, `celerymon` and other event-based "
+"monitoring tools will not work."
+msgstr ""
+
+#: ../../getting-started/brokers/index.rst:77
+msgid ""
+"Remote control means the ability to inspect and manage workers at runtime "
+"using the `celery inspect` and `celery control` commands (and other tools "
+"using the remote control API)."
+msgstr ""

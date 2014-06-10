@@ -1,0 +1,344 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/guide.rst:5
+msgid "Contributors Guide to the Code"
+msgstr ""
+
+#: ../../internals/guide.rst:11
+msgid "Philosophy"
+msgstr ""
+
+#: ../../internals/guide.rst:14
+msgid "The API>RCP Precedence Rule"
+msgstr ""
+
+#: ../../internals/guide.rst:16
+msgid "The API is more important than Readability"
+msgstr ""
+
+#: ../../internals/guide.rst:17
+msgid "Readability is more important than Convention"
+msgstr ""
+
+#: ../../internals/guide.rst:19
+msgid "Convention is more important than Performance"
+msgstr ""
+
+#: ../../internals/guide.rst:19
+msgid "…unless the code is a proven hotspot."
+msgstr ""
+
+#: ../../internals/guide.rst:21
+msgid ""
+"More important than anything else is the end-user API. Conventions must step"
+" aside, and any suffering is always alleviated if the end result is a better"
+" API."
+msgstr ""
+
+#: ../../internals/guide.rst:26
+msgid "Conventions and Idioms Used"
+msgstr ""
+
+#: ../../internals/guide.rst:29
+msgid "Classes"
+msgstr ""
+
+#: ../../internals/guide.rst:32
+msgid "Naming"
+msgstr ""
+
+#: ../../internals/guide.rst:34
+msgid "Follows :pep:`8`."
+msgstr ""
+
+#: ../../internals/guide.rst:36
+msgid "Class names must be `CamelCase`."
+msgstr ""
+
+#: ../../internals/guide.rst:37
+msgid "but not if they are verbs, verbs shall be `lower_case`:"
+msgstr ""
+
+#: ../../internals/guide.rst:64
+msgid ""
+"Sometimes it makes sense to have a class mask as a function, and there is "
+"precedence for this in the stdlib (e.g. "
+":class:`~contextlib.contextmanager`).  Celery examples include "
+":class:`~celery.subtask`, :class:`~celery.chord`, ``inspect``, "
+":class:`~kombu.utils.functional.promise` and more.."
+msgstr ""
+
+#: ../../internals/guide.rst:70
+msgid "Factory functions and methods must be `CamelCase` (excluding verbs):"
+msgstr ""
+
+#: ../../internals/guide.rst:83
+msgid "Default values"
+msgstr ""
+
+#: ../../internals/guide.rst:85
+msgid ""
+"Class attributes serve as default values for the instance, as this means "
+"that they can be set by either instantiation or inheritance."
+msgstr ""
+
+#: ../../internals/guide.rst:88
+msgid "**Example:**"
+msgstr ""
+
+#: ../../internals/guide.rst:102
+msgid "A subclass can change the default value:"
+msgstr ""
+
+#: ../../internals/guide.rst:109
+msgid "and the value can be set at instantiation:"
+msgstr ""
+
+#: ../../internals/guide.rst:116
+msgid "Exceptions"
+msgstr ""
+
+#: ../../internals/guide.rst:118
+msgid ""
+"Custom exceptions raised by an objects methods and properties should be "
+"available as an attribute and documented in the method/property that throw."
+msgstr ""
+
+#: ../../internals/guide.rst:122
+msgid ""
+"This way a user doesn't have to find out where to import the exception from,"
+" but rather use ``help(obj)`` and access the exception class from the "
+"instance directly."
+msgstr ""
+
+#: ../../internals/guide.rst:126 ../../internals/guide.rst:156
+msgid "**Example**:"
+msgstr ""
+
+#: ../../internals/guide.rst:148
+msgid "Composites"
+msgstr ""
+
+#: ../../internals/guide.rst:150
+msgid ""
+"Similarly to exceptions, composite classes should be override-able by "
+"inheritance and/or instantiation.  Common sense can be used when selecting "
+"what classes to include, but often it's better to add one too many: "
+"predicting what users need to override is hard (this has saved us from many "
+"a monkey patch)."
+msgstr ""
+
+#: ../../internals/guide.rst:171
+msgid "Applications vs. \"single mode\""
+msgstr ""
+
+#: ../../internals/guide.rst:173
+msgid ""
+"In the beginning Celery was developed for Django, simply because this "
+"enabled us get the project started quickly, while also having a large "
+"potential user base."
+msgstr ""
+
+#: ../../internals/guide.rst:177
+msgid ""
+"In Django there is a global settings object, so multiple Django projects "
+"can't co-exist in the same process space, this later posed a problem for "
+"using Celery with frameworks that doesn't have this limitation."
+msgstr ""
+
+#: ../../internals/guide.rst:181
+msgid ""
+"Therefore the app concept was introduced.  When using apps you use 'celery' "
+"objects instead of importing things from celery submodules, this "
+"(unfortunately) also means that Celery essentially has two API's."
+msgstr ""
+
+#: ../../internals/guide.rst:185
+msgid "Here's an example using Celery in single-mode:"
+msgstr ""
+
+#: ../../internals/guide.rst:201
+msgid "and here's the same using Celery app objects:"
+msgstr ""
+
+#: ../../internals/guide.rst:215
+msgid ""
+"In the example above the actual application instance is imported from a "
+"module in the project, this module could look something like this:"
+msgstr ""
+
+#: ../../internals/guide.rst:226
+msgid "Module Overview"
+msgstr ""
+
+#: ../../internals/guide.rst:228
+msgid "celery.app"
+msgstr ""
+
+#: ../../internals/guide.rst:230
+msgid "This is the core of Celery: the entry-point for all functionality."
+msgstr ""
+
+#: ../../internals/guide.rst:232
+msgid "celery.loaders"
+msgstr ""
+
+#: ../../internals/guide.rst:234
+msgid ""
+"Every app must have a loader.  The loader decides how configuration is read,"
+" what happens when the worker starts, when a task starts and ends, and so "
+"on."
+msgstr ""
+
+#: ../../internals/guide.rst:238
+msgid "The loaders included are:"
+msgstr ""
+
+#: ../../internals/guide.rst:240
+msgid "app"
+msgstr ""
+
+#: ../../internals/guide.rst:242
+msgid "Custom celery app instances uses this loader by default."
+msgstr ""
+
+#: ../../internals/guide.rst:244
+msgid "default"
+msgstr ""
+
+#: ../../internals/guide.rst:246
+msgid "\"single-mode\" uses this loader by default."
+msgstr ""
+
+#: ../../internals/guide.rst:248
+msgid ""
+"Extension loaders also exist, like ``django-celery``, ``celery-pylons`` and "
+"so on."
+msgstr ""
+
+#: ../../internals/guide.rst:251
+msgid "celery.worker"
+msgstr ""
+
+#: ../../internals/guide.rst:253
+msgid "This is the worker implementation."
+msgstr ""
+
+#: ../../internals/guide.rst:255
+msgid "celery.backends"
+msgstr ""
+
+#: ../../internals/guide.rst:257
+msgid "Task result backends live here."
+msgstr ""
+
+#: ../../internals/guide.rst:259
+msgid "celery.apps"
+msgstr ""
+
+#: ../../internals/guide.rst:261
+msgid ""
+"Major user applications: worker and beat. The command-line wrappers for "
+"these are in celery.bin (see below)"
+msgstr ""
+
+#: ../../internals/guide.rst:264
+msgid "celery.bin"
+msgstr ""
+
+#: ../../internals/guide.rst:266
+msgid ""
+"Command-line applications. setup.py creates setuptools entrypoints for "
+"these."
+msgstr ""
+
+#: ../../internals/guide.rst:269
+msgid "celery.concurrency"
+msgstr ""
+
+#: ../../internals/guide.rst:271
+msgid "Execution pool implementations (prefork, eventlet, gevent, threads)."
+msgstr ""
+
+#: ../../internals/guide.rst:273
+msgid "celery.db"
+msgstr ""
+
+#: ../../internals/guide.rst:275
+msgid ""
+"Database models for the SQLAlchemy database result backend. (should be moved"
+" into :mod:`celery.backends.database`)"
+msgstr ""
+
+#: ../../internals/guide.rst:278
+msgid "celery.events"
+msgstr ""
+
+#: ../../internals/guide.rst:280
+msgid ""
+"Sending and consuming monitoring events, also includes curses monitor, event"
+" dumper and utilities to work with in-memory cluster state."
+msgstr ""
+
+#: ../../internals/guide.rst:283
+msgid "celery.execute.trace"
+msgstr ""
+
+#: ../../internals/guide.rst:285
+msgid "How tasks are executed and traced by the worker, and in eager mode."
+msgstr ""
+
+#: ../../internals/guide.rst:287
+msgid "celery.security"
+msgstr ""
+
+#: ../../internals/guide.rst:289
+msgid ""
+"Security related functionality, currently a serializer using cryptographic "
+"digests."
+msgstr ""
+
+#: ../../internals/guide.rst:292
+msgid "celery.task"
+msgstr ""
+
+#: ../../internals/guide.rst:294
+msgid "single-mode interface to creating tasks, and controlling workers."
+msgstr ""
+
+#: ../../internals/guide.rst:296
+msgid "celery.tests"
+msgstr ""
+
+#: ../../internals/guide.rst:298
+msgid "The unittest suite."
+msgstr ""
+
+#: ../../internals/guide.rst:300
+msgid "celery.utils"
+msgstr ""
+
+#: ../../internals/guide.rst:302
+msgid ""
+"Utility functions used by the celery code base. Much of it is there to be "
+"compatible across Python versions."
+msgstr ""
+
+#: ../../internals/guide.rst:305
+msgid "celery.contrib"
+msgstr ""
+
+#: ../../internals/guide.rst:307
+msgid "Additional public code that doesn't fit into any other namespace."
+msgstr ""

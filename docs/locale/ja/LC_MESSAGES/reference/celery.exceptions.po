@@ -1,0 +1,137 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.exceptions.rst:3
+#: ../../../celery/exceptions.pydocstring of celery.exceptions:2
+msgid "celery.exceptions"
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions:4
+msgid "This module contains all exceptions used by the Celery API."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.SecurityError:1
+msgid "Security related exceptions."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.SecurityError:3
+msgid "Handle with care."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Ignore:1
+msgid "A task can raise this to ignore doing state updates."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.QueueNotFound:1
+msgid "Task routed to a queue not in CELERY_QUEUES."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.WorkerShutdown:1
+msgid "Signals that the worker should perform a warm shutdown."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.WorkerTerminate:1
+msgid "Signals that the worker should terminate immediately."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.ImproperlyConfigured:1
+msgid "Celery is somehow improperly configured."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.NotRegistered:1
+msgid "The task is not registered."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.AlreadyRegistered:1
+msgid "The task is already registered."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.TimeoutError:1
+msgid "The operation timed out."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.MaxRetriesExceededError:1
+msgid "The tasks max restart limit has been exceeded."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Retry:1
+msgid "The task is to be retried later."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Retry.exc:1
+msgid "Exception (if any) that caused the retry to happen."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Retry.message:1
+msgid "Optional message describing context of retry."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Retry.when:1
+msgid ""
+"Time of retry (ETA), either :class:`numbers.Real` or "
+":class:`~datetime.datetime`."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.TaskRevokedError:1
+msgid "The task has been revoked, so no result available."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.NotConfigured:1
+msgid "Celery has not been configured, as no config module has been found."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.AlwaysEagerIgnored:1
+msgid "send_task ignores CELERY_ALWAYS_EAGER option"
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.InvalidTaskError:1
+msgid "The task has invalid data or is not properly constructed."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.ChordError:1
+msgid "A task part of the chord raised an exception."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.DuplicateNodenameWarning:1
+msgid "Multiple workers are using the same nodename."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.SoftTimeLimitExceeded:1
+msgid ""
+"The soft time limit has been exceeded. This exception is raised to give the "
+"task a chance to clean up."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.TimeLimitExceeded:1
+msgid "The time limit has been exceeded and the job has been terminated."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of
+#: celery.exceptions.WorkerLostError:1
+msgid "The worker processing a job has exited prematurely."
+msgstr ""
+
+#: ../../../celery/exceptions.pydocstring of celery.exceptions.Terminated:1
+msgid "The worker processing a job has been terminated by user request."
+msgstr ""

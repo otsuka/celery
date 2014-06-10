@@ -1,0 +1,747 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history/changelog-2.4.rst:5
+msgid "Change history for Celery 2.4"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:13
+msgid "2.4.5"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:14
+msgid "2011-12-02 05:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:15 ../../history/changelog-2.4.rst:32
+#: ../../history/changelog-2.4.rst:83 ../../history/changelog-2.4.rst:94
+#: ../../history/changelog-2.4.rst:104 ../../history/changelog-2.4.rst:123
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:17
+msgid ""
+"Periodic task interval schedules were accidentally rounded down, resulting "
+"in some periodic tasks being executed early."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:20
+msgid "Logging of humanized times in the beat log is now more detailed."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:22
+msgid ""
+"New :ref:`brokers` section in the Getting Started part of the Documentation"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:24
+msgid ""
+"This replaces the old \"Other queues\" tutorial, and adds documentation for "
+"MongoDB, Beanstalk and CouchDB."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:30
+msgid "2.4.4"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:31
+msgid "2011-11-25 04:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:37
+msgid "Security Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:39
+msgid ""
+"[Security: `CELERYSA-0001`_] Daemons would set effective id's rather than "
+"real id's when the :option:`--uid`/:option:`--gid` arguments to "
+":program:`celery multi`, :program:`celeryd_detach`, :program:`celery beat` "
+"and :program:`celery events` were used."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:44
+msgid ""
+"This means privileges weren't properly dropped, and that it would be "
+"possible to regain supervisor privileges later."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:54
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:56
+msgid "Processes pool: Fixed rare deadlock at shutdown (Issue #523)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:58
+msgid "Fix contributed by Ionel Maries Christian."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:60
+msgid "Webhook tasks issued the wrong HTTP POST headers (Issue #515)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:62
+msgid ""
+"The *Content-Type* header has been changed from ``application/json`` ⇒  "
+"``application/x-www-form-urlencoded``, and adds a proper *Content-Length* "
+"header."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:66
+msgid "Fix contributed by Mitar."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:68
+msgid ""
+"Daemonization tutorial: Adds a configuration example using Django and "
+"virtualenv together (Issue #505)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:71
+msgid "Contributed by Juan Ignacio Catalano."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:73
+msgid ""
+"generic init scripts now automatically creates log and pid file directories "
+"(Issue #545)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:76
+msgid "Contributed by Chris Streeter."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:81
+msgid "2.4.3"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:82
+msgid "2011-11-22 06:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:85
+msgid "Fixes module import typo in `celeryctl` (Issue #538)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:87
+msgid "Fix contributed by Chris Streeter."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:92
+msgid "2.4.2"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:93
+msgid "2011-11-14 12:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:96
+msgid ""
+"Program module no longer uses relative imports so that it is possible to do "
+"``python -m celery.bin.name``."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:102
+msgid "2.4.1"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:103
+msgid "2011-11-07 06:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:106
+msgid "celeryctl inspect commands was missing output."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:108
+msgid "processes pool: Decrease polling interval for less idle CPU usage."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:110
+msgid ""
+"processes pool: MaybeEncodingError was not wrapped in ExceptionInfo (Issue "
+"#524)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:113
+msgid "worker: would silence errors occuring after task consumer started."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:115
+msgid ""
+"logging: Fixed a bug where unicode in stdout redirected log messages "
+"couldn't be written (Issue #522)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:121
+msgid "2.4.0"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:122
+msgid "2011-11-04 04:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:128
+msgid "Important Notes"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:130
+msgid "Now supports Python 3."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:132
+msgid "Fixed deadlock in worker process handling (Issue #496)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:134
+msgid ""
+"A deadlock could occur after spawning new child processes because the "
+"logging library's mutex was not properly reset after fork."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:137
+msgid ""
+"The symptoms of this bug affecting would be that the worker simply stops "
+"processing tasks, as none of the workers child processes are functioning.  "
+"There was a greater chance of this bug occurring with ``maxtasksperchild`` "
+"or a time-limit enabled."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:142
+msgid "This is a workaround for http://bugs.python.org/issue6721#msg140215."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:144
+msgid ""
+"Be aware that while this fixes the logging library lock, there could still "
+"be other locks initialized in the parent process, introduced by custom code."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:148
+msgid "Fix contributed by Harm Verhagen."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:150
+msgid "AMQP Result backend: Now expires results by default."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:152
+msgid ""
+"The default expiration value is now taken from the "
+":setting:`CELERY_TASK_RESULT_EXPIRES` setting."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:155
+msgid ""
+"The old :setting:`CELERY_AMQP_TASK_RESULT_EXPIRES` setting has been "
+"deprecated and will be removed in version 4.0."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:158
+msgid ""
+"Note that this means that the result backend requires RabbitMQ 2.1.0 or "
+"higher, and that you have to disable expiration if you are running with an "
+"older version.  You can do so by disabling the "
+":setting:`CELERY_TASK_RESULT_EXPIRES` setting::"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:165
+msgid "Eventlet: Fixed problem with shutdown (Issue #457)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:167
+msgid "Broker transports can be now be specified using URLs"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:169
+msgid ""
+"The broker can now be specified as an URL instead. This URL must have the "
+"format::"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:174
+msgid "for example the default broker is written as::"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:178
+msgid ""
+"The scheme is required, so that the host is identified as an URL and not "
+"just a host name. User, password, port and virtual_host are optional and "
+"defaults to the particular transports default value."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:185
+msgid ""
+"Note that the path component (virtual_host) always starts with a forward-"
+"slash.  This is necessary to distinguish between the virtual host ``''`` "
+"(empty) and ``'/'``, which are both acceptable virtual host names."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:190
+msgid "A virtual host of ``'/'`` becomes:"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:192
+msgid "amqp://guest:guest@localhost:5672//"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:194
+msgid "and a virtual host of ``''`` (empty) becomes::"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:198
+msgid "So the leading slash in the path component is **always required**."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:200
+msgid ""
+"In addition the :setting:`BROKER_URL` setting has been added as an alias to "
+"``BROKER_HOST``.  Any broker setting specified in both the URL and in the "
+"configuration will be ignored, if a setting is not provided in the URL then "
+"the value from the configuration will be used as default."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:205
+msgid ""
+"Also, programs now support the :option:`-b|--broker` option to specify a "
+"broker URL on the command-line:"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:214
+msgid ""
+"The environment variable :envvar:`CELERY_BROKER_URL` can also be used to "
+"easily override the default broker used."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:217
+msgid ""
+"The deprecated :func:`celery.loaders.setup_loader` function has been "
+"removed."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:219
+msgid ""
+"The :setting:`CELERY_TASK_ERROR_WHITELIST` setting has been replaced by a "
+"more flexible approach (Issue #447)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:222
+msgid ""
+"The error mail sending logic is now available as ``Task.ErrorMail``, with "
+"the implementation (for reference) in :mod:`celery.utils.mail`."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:225
+msgid ""
+"The error mail class can be sub-classed to gain complete control of when "
+"error messages are sent, thus removing the need for a separate white-list "
+"setting."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:229
+msgid ""
+"The :setting:`CELERY_TASK_ERROR_WHITELIST` setting has been deprecated, and "
+"will be removed completely in version 4.0."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:232
+msgid "Additional Deprecations"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:234
+msgid ""
+"The following functions has been deprecated and is scheduled for removal in "
+"version 4.0:"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:238
+msgid "**Old function**"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:238 ../../history/changelog-2.4.rst:251
+msgid "**Alternative**"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:240
+msgid "`celery.loaders.current_loader`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:240
+msgid "`celery.current_app.loader`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:241
+msgid "`celery.loaders.load_settings`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:241
+msgid "`celery.current_app.conf`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:242
+msgid "`celery.execute.apply`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:242
+msgid "`Task.apply`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:243
+msgid "`celery.execute.apply_async`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:243
+msgid "`Task.apply_async`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:244
+msgid "`celery.execute.delay_task`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:244
+msgid "`celery.execute.send_task`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:247
+msgid ""
+"The following settings has been deprecated and is scheduled for removal in "
+"version 4.0:"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:251
+msgid "**Old setting**"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:253
+msgid "`CELERYD_LOG_LEVEL`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:253
+msgid "``celery worker --loglevel=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:254
+msgid "`CELERYD_LOG_FILE`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:254
+msgid "``celery worker --logfile=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:255
+msgid "`CELERYBEAT_LOG_LEVEL`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:255
+msgid "``celery beat --loglevel=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:256
+msgid "`CELERYBEAT_LOG_FILE`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:256
+msgid "``celery beat --logfile=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:257
+msgid "`CELERYMON_LOG_LEVEL`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:257
+msgid "``celerymon --loglevel=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:258
+msgid "`CELERYMON_LOG_FILE`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:258
+msgid "``celerymon --logfile=``"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:264
+msgid "News"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:266
+msgid "No longer depends on :mod:`pyparsing`."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:268
+msgid "Now depends on Kombu 1.4.3."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:270
+msgid "CELERY_IMPORTS can now be a scalar value (Issue #485)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:272
+msgid ""
+"It is too easy to forget to add the comma after the sole element of a tuple,"
+" and this is something that often affects newcomers."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:275
+msgid ""
+"The docs should probably use a list in examples, as using a tuple for this "
+"doesn't even make sense.  Nonetheless, there are many tutorials out there "
+"using a tuple, and this change should be a help to new users."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:280
+msgid "Suggested by jsaxon-cars."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:282
+msgid "Fixed a memory leak when using the thread pool (Issue #486)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:284
+msgid "Contributed by Kornelijus Survila."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:286
+msgid "The statedb was not saved at exit."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:288
+msgid ""
+"This has now been fixed and it should again remember previously revoked "
+"tasks when a ``--statedb`` is enabled."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:291
+msgid ""
+"Adds :setting:`EMAIL_USE_TLS` to enable secure SMTP connections (Issue "
+"#418)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:294
+msgid "Contributed by Stefan Kjartansson."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:296
+msgid ""
+"Now handles missing fields in task messages as documented in the message "
+"format documentation."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:299
+msgid "Missing required field throws :exc:`~@InvalidTaskError`"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:300
+msgid "Missing args/kwargs is assumed empty."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:302
+msgid "Contributed by Chris Chamberlin."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:304
+msgid ""
+"Fixed race condition in celery.events.state (celerymon/celeryev) where task "
+"info would be removed while iterating over it (Issue #501)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:307
+msgid ""
+"The Cache, Cassandra, MongoDB, Redis and Tyrant backends now respects the "
+":setting:`CELERY_RESULT_SERIALIZER` setting (Issue #435)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:310
+msgid ""
+"This means that only the database (django/sqlalchemy) backends currently "
+"does not support using custom serializers."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:313
+msgid "Contributed by Steeve Morin"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:315
+msgid ""
+"Logging calls no longer manually formats messages, but delegates that to the"
+" logging system, so tools like Sentry can easier work with the messages "
+"(Issue #445)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:319
+msgid "Contributed by Chris Adams."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:321
+msgid ""
+"``multi`` now supports a ``stop_verify`` command to wait for processes to "
+"shutdown."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:324
+msgid "Cache backend did not work if the cache key was unicode (Issue #504)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:326
+msgid "Fix contributed by Neil Chintomby."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:328
+msgid ""
+"New setting :setting:`CELERY_RESULT_DB_SHORT_LIVED_SESSIONS` added, which if"
+" enabled will disable the caching of SQLAlchemy sessions (Issue #449)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:332
+msgid "Contributed by Leo Dirac."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:334
+msgid ""
+"All result backends now implements ``__reduce__`` so that they can be "
+"pickled (Issue #441)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:337
+msgid "Fix contributed by Remy Noel"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:339
+msgid "multi did not work on Windows (Issue #472)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:341
+msgid ""
+"New-style ``CELERY_REDIS_*`` settings now takes precedence over the old "
+"``REDIS_*`` configuration keys (Issue #508)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:344
+msgid "Fix contributed by Joshua Ginsberg"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:346
+msgid "Generic beat init script no longer sets `bash -e` (Issue #510)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:348
+msgid "Fix contributed by Roger Hu."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:350
+msgid ""
+"Documented that Chords do not work well with redis-server versions before "
+"2.2."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:353
+msgid "Contributed by Dan McGee."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:355
+msgid "The :setting:`CELERYBEAT_MAX_LOOP_INTERVAL` setting was not respected."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:357
+msgid ""
+"``inspect.registered_tasks`` renamed to ``inspect.registered`` for naming "
+"consistency."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:360
+msgid "The previous name is still available as an alias."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:362
+msgid "Contributed by Mher Movsisyan"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:364
+msgid ""
+"Worker logged the string representation of args and kwargs without safe "
+"guards (Issue #480)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:367
+msgid "RHEL init script: Changed worker startup priority."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:369
+msgid "The default start / stop priorities for MySQL on RHEL are"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:371
+msgid "# chkconfig: - 64 36"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:373
+msgid ""
+"Therefore, if Celery is using a database as a broker / message store, it "
+"should be started after the database is up and running, otherwise errors "
+"will ensue. This commit changes the priority in the init script to"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:377
+msgid "# chkconfig: - 85 15"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:379
+msgid ""
+"which are the default recommended settings for 3-rd party applications and "
+"assure that Celery will be started after the database service & shut down "
+"before it terminates."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:383
+msgid "Contributed by Yury V. Zaytsev."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:385
+msgid ""
+"KeyValueStoreBackend.get_many did not respect the ``timeout`` argument "
+"(Issue #512)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:388
+msgid ""
+"beat/events's --workdir option did not chdir before after configuration was "
+"attempted (Issue #506)."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:391
+msgid ""
+"After deprecating 2.4 support we can now name modules correctly, since we "
+"can take use of absolute imports."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:394
+msgid "Therefore the following internal modules have been renamed:"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:396
+msgid ""
+"celery.concurrency.evlet    -> celery.concurrency.eventlet "
+"celery.concurrency.evg      -> celery.concurrency.gevent"
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:399
+msgid "AUTHORS file is now sorted alphabetically."
+msgstr ""
+
+#: ../../history/changelog-2.4.rst:401
+msgid ""
+"Also, as you may have noticed the contributors of new features/fixes are now"
+" mentioned in the Changelog."
+msgstr ""

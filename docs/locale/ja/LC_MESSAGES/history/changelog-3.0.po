@@ -1,0 +1,2808 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history/changelog-3.0.rst:5
+msgid "Change history for Celery 3.0"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:10
+msgid ""
+"If you're looking for versions prior to 3.0.x you should go to "
+":ref:`history`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:15
+msgid "3.0.24"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:16
+msgid "2013-10-11 04:40 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:17 ../../history/changelog-3.0.rst:79
+#: ../../history/changelog-3.0.rst:108 ../../history/changelog-3.0.rst:133
+#: ../../history/changelog-3.0.rst:151 ../../history/changelog-3.0.rst:220
+#: ../../history/changelog-3.0.rst:261 ../../history/changelog-3.0.rst:388
+#: ../../history/changelog-3.0.rst:448 ../../history/changelog-3.0.rst:537
+#: ../../history/changelog-3.0.rst:548 ../../history/changelog-3.0.rst:666
+#: ../../history/changelog-3.0.rst:802 ../../history/changelog-3.0.rst:867
+#: ../../history/changelog-3.0.rst:948 ../../history/changelog-3.0.rst:1069
+#: ../../history/changelog-3.0.rst:1137 ../../history/changelog-3.0.rst:1178
+#: ../../history/changelog-3.0.rst:1231 ../../history/changelog-3.0.rst:1312
+#: ../../history/changelog-3.0.rst:1339 ../../history/changelog-3.0.rst:1469
+#: ../../history/changelog-3.0.rst:1479 ../../history/changelog-3.0.rst:1543
+#: ../../history/changelog-3.0.rst:1598
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:19
+msgid "Now depends on :ref:`Kombu 2.5.15 <kombu:version-2.5.15>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:21
+msgid "Now depends on :mod:`billiard` version 2.7.3.34."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:23
+msgid "AMQP Result backend:  No longer caches queue declarations."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:25
+msgid ""
+"The queues created by the AMQP result backend are always unique, so caching "
+"the declarations caused a slow memory leak."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:28
+msgid "Worker: Fixed crash when hostname contained Unicode characters."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:30
+msgid "Contributed by Daodao."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:32
+msgid ""
+"The worker would no longer start if the `-P solo` pool was selected (Issue "
+"#1548)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:35
+msgid ""
+"Redis/Cache result backends would not complete chords if any of the tasks "
+"were retried (Issue #1401)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:38
+msgid "Task decorator is no longer lazy if app is finalized."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:40
+msgid ""
+"AsyncResult: Fixed bug with ``copy(AsyncResult)`` when no ``current_app`` "
+"available."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:43
+msgid "ResultSet: Now properly propagates app when passed string id's."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:45
+msgid ""
+"Loader now ignores :envvar:`CELERY_CONFIG_MODULE` if value is empty string."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:47
+msgid ""
+"Fixed race condition in Proxy object where it tried to delete an attribute "
+"twice, resulting in :exc:`AttributeError`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:50
+msgid ""
+"Task methods now works with the :setting:`CELERY_ALWAYS_EAGER` setting "
+"(Issue #1478)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:53
+msgid ""
+":class:`~kombu.common.Broadcast` queues were accidentally declared when "
+"publishing tasks (Issue #1540)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:56
+msgid ""
+"New :envvar:`C_FAKEFORK` environment variable can be used to debug the init "
+"scripts."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:59
+msgid ""
+"Setting this will skip the daemonization step so that errors printed to "
+"stderr after standard outs are closed can be seen::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:64
+msgid "This works with the `celery multi` command in general."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:66
+msgid "``get_pickleable_etype`` did not always return a value (Issue #1556)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:67
+msgid ""
+"Fixed bug where ``app.GroupResult.restore`` would fall back to the default "
+"app."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:70
+msgid "Fixed rare bug where built-in tasks would use the current_app."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:72
+msgid ":func:`~celery.platforms.maybe_fileno` now handles :exc:`ValueError`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:77
+msgid "3.0.23"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:78
+msgid "2013-09-02 01:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:81
+msgid "Now depends on :ref:`Kombu 2.5.14 <kombu:version-2.5.14>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:83
+msgid "``send_task`` did not honor ``link`` and ``link_error`` arguments."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:85
+msgid ""
+"This had the side effect of chains not calling unregistered tasks, silently "
+"discarding them."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:88
+msgid "Fix contributed by Taylor Nelson."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:90
+msgid ":mod:`celery.state`: Optimized precedence lookup."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:92
+msgid "Contributed by Matt Robenolt."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:94
+msgid "Posix: Daemonization did not redirect ``sys.stdin`` to ``/dev/null``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:96
+msgid "Fix contributed by Alexander Smirnov."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:98
+msgid ""
+"Canvas: group bug caused fallback to default app when ``.apply_async`` used "
+"(Issue #1516)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:101
+msgid "Canvas: generator arguments was not always pickleable."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:106
+msgid "3.0.22"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:107
+msgid "2013-08-16 04:30 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:110
+msgid "Now depends on :ref:`Kombu 2.5.13 <kombu:version-2.5.13>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:112
+msgid "Now depends on :mod:`billiard` 2.7.3.32"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:114
+msgid "Fixed bug with monthly and yearly crontabs (Issue #1465)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:116
+msgid "Fix contributed by Guillaume Gauvrit."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:118
+msgid "Fixed memory leak caused by time limits (Issue #1129, Issue #1427)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:120
+msgid ""
+"Worker will now sleep if being restarted more than 5 times in one second to "
+"avoid spamming with ``worker-online`` events."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:123
+msgid "Includes documentation fixes"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:125
+msgid ""
+"Contributed by: Ken Fromm, Andreas Savvides, Alex Kiriukha, Michael "
+"Fladischer."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:131
+msgid "3.0.21"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:132
+msgid "2013-07-05 04:30 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:135
+msgid "Now depends on :mod:`billiard` 2.7.3.31."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:137
+msgid ""
+"This version fixed a bug when running without the billiard C extension."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:139
+msgid "3.0.20 broke eventlet/gevent support (worker not starting)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:141
+msgid ""
+"Fixed memory leak problem when MongoDB result backend was used with the "
+"gevent pool."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:144
+msgid "Fix contributed by Ross Lawley."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:149
+msgid "3.0.20"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:150
+msgid "2013-06-28 04:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:153
+msgid "Contains workaround for deadlock problems."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:155
+msgid "A better solution will be part of Celery 3.1."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:157
+msgid "Now depends on :ref:`Kombu 2.5.12 <kombu:version-2.5.12>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:159
+msgid "Now depends on :mod:`billiard` 2.7.3.30."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:161
+msgid ""
+"``--loader`` argument no longer supported importing loaders from the current"
+" directory."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:164
+msgid ""
+"[Worker] Fixed memory leak when restarting after connection lost (Issue "
+"#1325)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:167
+msgid "[Worker] Fixed UnicodeDecodeError at startup (Issue #1373)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:169
+msgid "Fix contributed by Jessica Tallon."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:171
+msgid "[Worker] Now properly rewrites unpickleable exceptions again."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:173
+msgid ""
+"Fixed possible race condition when evicting items from the revoked task set."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:175
+msgid ""
+"[generic-init.d] Fixed compatibility with Ubuntu's minimal Dash shell (Issue"
+" #1387)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:178
+msgid "Fix contributed by monkut."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:180
+msgid ""
+"``Task.apply``/``ALWAYS_EAGER`` now also executes callbacks and errbacks "
+"(Issue #1336)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:183
+msgid ""
+"[Worker] The :signal:`worker-shutdown` signal was no longer being dispatched"
+" (Issue #1339)j"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:186
+msgid "[Python 3] Fixed problem with threading.Event."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:188
+msgid "Fix contributed by Xavier Ordoquy."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:190
+msgid ""
+"[Python 3] Now handles ``io.UnsupportedOperation`` that may be raised by "
+"``file.fileno()`` in Python 3."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:193
+msgid "[Python 3] Fixed problem with qualname."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:195
+msgid "[events.State] Now ignores unknown event-groups."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:197
+msgid "[MongoDB backend] No longer uses deprecated ``safe`` parameter."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:199
+msgid "Fix contributed by rfkrocktk"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:201
+msgid "The eventlet pool now imports on Windows."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:203
+msgid ""
+"[Canvas] Fixed regression where immutable chord members may receive "
+"arguments (Issue #1340)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:206
+msgid "Fix contributed by Peter Brook."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:208
+msgid "[Canvas] chain now accepts generator argument again (Issue #1319)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:210
+msgid ""
+"``celery.migrate`` command now consumes from all queues if no queues "
+"specified."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:213 ../../history/changelog-3.0.rst:1491
+msgid "Fix contributed by John Watson."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:218
+msgid "3.0.19"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:219
+msgid "2013-04-17 04:30:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:222
+msgid "Now depends on :mod:`billiard` 2.7.3.28"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:224
+msgid ""
+"A Python 3 related fix managed to disable the deadlock fix announced in "
+"3.0.18."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:227
+msgid "Tests have been added to make sure this does not happen again."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:229
+msgid "Task retry policy:  Default max_retries is now 3."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:231
+msgid "This ensures clients will not be hanging while the broker is down."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:235
+msgid ""
+"You can set a longer retry for the worker by using the "
+":signal:`celeryd_after_setup` signal:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:251
+msgid ""
+"Worker: Will now properly display message body in error messages even if the"
+" body is a buffer instance."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:254
+msgid "3.0.18 broke the MongoDB result backend (Issue #1303)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:259
+msgid "3.0.18"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:260
+msgid "2013-04-12 05:00:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:263
+msgid "Now depends on :mod:`kombu` 2.5.10."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:265
+msgid "See the :ref:`kombu changelog <kombu:version-2.5.10>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:267
+msgid "Now depends on :mod:`billiard` 2.7.3.27."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:269
+msgid ""
+"Can now specify a whitelist of accepted serializers using the new "
+":setting:`CELERY_ACCEPT_CONTENT` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:272
+msgid ""
+"This means that you can force the worker to discard messages serialized with"
+" pickle and other untrusted serializers. For example to only allow JSON "
+"serialized messages use::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:278
+msgid "you can also specify MIME types in the whitelist::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:282
+msgid ""
+"Fixed deadlock in multiprocessing's pool caused by the semaphore not being "
+"released when terminated by signal."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:285
+msgid "Processes Pool: It's now possible to debug pool processes using GDB."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:287
+msgid ""
+"``celery report`` now censors possibly secret settings, like passwords and "
+"secret tokens."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:290
+msgid ""
+"You should still check the output before pasting anything on the internet."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:293
+msgid "Connection URLs now ignore multiple '+' tokens."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:295
+msgid "Worker/statedb: Now uses pickle protocol 2 (Py2.5+)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:297
+msgid "Fixed Python 3 compatibility issues."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:299
+msgid ""
+"Worker:  A warning is now given if a worker is started with the same node "
+"name as an existing worker."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:302
+msgid ""
+"Worker: Fixed a deadlock that could occur while revoking tasks (Issue "
+"#1297)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:304
+msgid ""
+"Worker: The :sig:`HUP` handler now closes all open file descriptors before "
+"restarting to ensure file descriptors does not leak (Issue #1270)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:307
+msgid ""
+"Worker: Optimized storing/loading the revoked tasks list (Issue #1289)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:309
+msgid ""
+"After this change the ``--statedb`` file will take up more disk space, but "
+"loading from and storing the revoked tasks will be considerably faster (what"
+" before took 5 minutes will now take less than a second)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:313
+msgid ""
+"Celery will now suggest alternatives if there's a typo in the broker "
+"transport name (e.g. ``ampq`` -> ``amqp``)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:316
+msgid ""
+"Worker: The auto-reloader would cause a crash if a monitored file was "
+"unlinked."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:319
+msgid "Fix contributed by Agris Ameriks."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:321
+msgid "Fixed AsyncResult pickling error."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:323
+msgid "Fix contributed by Thomas Minor."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:325
+msgid ""
+"Fixed handling of Unicode in logging output when using log colors (Issue "
+"#427)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:328
+msgid ""
+":class:`~celery.app.utils.ConfigurationView` is now a ``MutableMapping``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:330
+msgid "Contributed by Aaron Harnly."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:332
+msgid "Fixed memory leak in LRU cache implementation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:334
+msgid "Fix contributed by Romuald Brunet."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:336
+msgid ""
+"``celery.contrib.rdb``: Now works when sockets are in non-blocking mode."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:338
+msgid "Fix contributed by Theo Spears."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:340
+msgid ""
+"The `inspect reserved` remote control command included active (started) "
+"tasks with the reserved tasks (Issue #1030)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:343
+msgid ""
+"The :signal:`task_failure` signal received a modified traceback object meant"
+" for pickling purposes, this has been fixed so that it now receives the real"
+" traceback instead."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:347
+msgid ""
+"The ``@task`` decorator silently ignored positional arguments, it now raises"
+" the expected :exc:`TypeError` instead (Issue #1125)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:350
+msgid ""
+"The worker will now properly handle messages with invalid eta/expires fields"
+" (Issue #1232)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:353
+msgid ""
+"The ``pool_restart`` remote control command now reports an error if the "
+":setting:`CELERYD_POOL_RESTARTS` setting is not set."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:356
+msgid "``celery.conf.add_defaults`` can now be used with non-dict objects."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:358
+msgid "Fixed compatibility problems in the Proxy class (Issue #1087)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:360
+msgid ""
+"The class attributes ``__module__``, ``__name__`` and ``__doc__`` are now "
+"meaningful string objects."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:363
+msgid "Thanks to Marius Gedminas."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:365
+msgid ""
+"MongoDB Backend: The :setting:`MONGODB_BACKEND_SETTINGS` setting now accepts"
+" a ``option`` key that lets you forward arbitrary kwargs to the underlying "
+"``pymongo.Connection`` object (Issue #1015)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:369
+msgid ""
+"Beat: The daily backend cleanup task is no longer enabled for result "
+"backends that support automatic result expiration (Issue #1031)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:372
+msgid ""
+"Canvas list operations now takes application instance from the first task in"
+" the list, instead of depending on the ``current_app`` (Issue #1249)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:375
+msgid ""
+"Worker: Message decoding error log message now includes traceback "
+"information."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:378
+msgid "Worker: The startup banner now includes system platform."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:380
+msgid ""
+"``celery inspect|status|control`` now gives an error if used with an SQL "
+"based broker transport."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:386
+msgid "3.0.17"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:387
+msgid "2013-03-22 04:00:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:390
+msgid "Now depends on kombu 2.5.8"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:392
+msgid "Now depends on billiard 2.7.3.23"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:394
+msgid "RabbitMQ/Redis: thread-less and lock-free rate-limit implementation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:396
+msgid ""
+"This means that rate limits pose minimal overhead when used with "
+"RabbitMQ/Redis or future transports using the eventloop, and that the rate-"
+"limit implementation is now thread-less and lock-free."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:400
+msgid ""
+"The thread-based transports will still use the old implementation for now, "
+"but the plan is to use the timer also for other broker transports in Celery "
+"3.1."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:404
+msgid ""
+"Rate limits now works with eventlet/gevent if using RabbitMQ/Redis as the "
+"broker."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:407
+msgid ""
+"A regression caused ``task.retry`` to ignore additional keyword arguments."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:409
+msgid ""
+"Extra keyword arguments are now used as execution options again. Fix "
+"contributed by Simon Engledew."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:412
+msgid ""
+"Windows: Fixed problem with the worker trying to pickle the Django settings "
+"module at worker startup."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:415
+msgid ""
+"generic-init.d:  No longer double quotes ``$CELERYD_CHDIR`` (Issue #1235)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:417
+msgid "generic-init.d: Removes bash-specific syntax."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:419
+msgid "Fix contributed by Pär Wieslander."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:421
+msgid ""
+"Cassandra Result Backend: Now handles the "
+":exc:`~pycassa.AllServersUnavailable` error (Issue #1010)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:424
+msgid "Fix contributed by Jared Biel."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:426
+msgid ""
+"Result: Now properly forwards apps to GroupResults when deserializing (Issue"
+" #1249)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:429
+msgid "Fix contributed by Charles-Axel Dein."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:431
+msgid ""
+"``GroupResult.revoke`` now supports the ``terminate`` and ``signal`` keyword"
+" arguments."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:434
+msgid ""
+"Worker: Multiprocessing pool workers now import task modules/configuration "
+"before setting up the logging system so that logging signals can be "
+"connected before they're dispatched."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:438
+msgid ""
+"chord:  The ``AsyncResult`` instance returned now has its ``parent`` "
+"attribute set to the header ``GroupResult``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:441
+msgid "This is consistent with how ``chain`` works."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:446
+msgid "3.0.16"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:447
+msgid "2013-03-07 04:00:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:450
+msgid "Happy International Women's Day!"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:452
+msgid ""
+"We have a long way to go, so this is a chance for you to get involved in one"
+" of the organizations working for making our communities more diverse."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:456
+msgid "PyLadies — http://pyladies.com"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:457
+msgid "Girls Who Code — http://www.girlswhocode.com"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:458
+msgid "Women Who Code — http://www.meetup.com/Women-Who-Code-SF/"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:460
+msgid "Now depends on :mod:`kombu` version 2.5.7"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:462
+msgid "Now depends on :mod:`billiard` version 2.7.3.22"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:464
+msgid "AMQP heartbeats are now disabled by default."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:466
+msgid ""
+"Some users experiences issues with heartbeats enabled, and it's not strictly"
+" necessary to use them."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:469
+msgid ""
+"If you're experiencing problems detecting connection failures, you can re-"
+"enable heartbeats by configuring the :setting:`BROKER_HEARTBEAT` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:473
+msgid ""
+"Worker: Now propagates connection errors occurring in multiprocessing "
+"callbacks, so that the connection can be reset (Issue #1226)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:476
+msgid ""
+"Worker: Now propagates connection errors occurring in timer callbacks, so "
+"that the connection can be reset."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:479
+msgid ""
+"The modules in :setting:`CELERY_IMPORTS` and :setting:`CELERY_INCLUDE` are "
+"now imported in the original order (Issue #1161)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:482
+msgid ""
+"The modules in :setting:`CELERY_IMPORTS` will be imported first, then "
+"continued by :setting:`CELERY_INCLUDE`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:485
+msgid "Thanks to Joey Wilhelm."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:487
+msgid "New bash completion for ``celery`` available in the git repository:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:489
+msgid "https://github.com/celery/celery/tree/3.0/extra/bash-completion"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:491
+msgid ""
+"You can source this file or put it in ``bash_completion.d`` to get auto-"
+"completion for the ``celery`` command-line utility."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:494
+msgid ""
+"The node name of a worker can now include unicode characters (Issue #1186)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:496
+msgid "The repr of a ``crontab`` object now displays correctly (Issue #972)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:498
+msgid "``events.State`` no longer modifies the original event dictionary."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:500
+msgid "No longer uses ``Logger.warn`` deprecated in Python 3."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:502
+msgid "Cache Backend: Now works with chords again (Issue #1094)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:504
+msgid "Chord unlock now handles errors occurring while calling the callback."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:506
+msgid ""
+"Generic worker init.d script: Status check is now performed by querying the "
+"pid of the instance instead of sending messages."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:509 ../../history/changelog-3.0.rst:519
+msgid "Contributed by Milen Pavlov."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:511
+msgid "Improved init scripts for CentOS."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:513
+msgid "Updated to support celery 3.x conventions."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:514
+msgid "Now uses CentOS built-in ``status`` and ``killproc``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:515
+msgid "Support for multi-node / multi-pid worker services."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:516
+msgid "Standard color-coded CentOS service-init output."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:517
+msgid "A test suite."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:521
+msgid ""
+"``ResultSet.join`` now always works with empty result set (Issue #1219)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:523
+msgid ""
+"A ``group`` consisting of a single task is now supported (Issue #1219)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:525
+msgid "Now supports the ``pycallgraph`` program (Issue #1051)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:527
+msgid "Fixed Jython compatibility problems."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:529
+msgid ""
+"Django tutorial: Now mentions that the example app must be added to "
+"``INSTALLED_APPS`` (Issue #1192)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:535
+msgid "3.0.15"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:536
+msgid "2013-02-11 04:30:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:539
+msgid "Now depends on billiard 2.7.3.21 which fixed a syntax error crash."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:541
+msgid "Fixed bug with :setting:`CELERY_SEND_TASK_SENT_EVENT`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:546
+msgid "3.0.14"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:547
+msgid "2013-02-08 05:00:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:550
+msgid "Now depends on Kombu 2.5.6"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:552
+msgid "Now depends on billiard 2.7.3.20"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:554
+msgid "``execv`` is now disabled by default."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:556
+msgid ""
+"It was causing too many problems for users, you can still enable it using "
+"the :setting:`CELERYD_FORCE_EXECV` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:559
+msgid ""
+"execv was only enabled when transports other than amqp/redis was used, and "
+"it's there to prevent deadlocks caused by mutexes not being released before "
+"the process forks.  Unfortunately it also changes the environment "
+"introducing many corner case bugs that is hard to fix without adding "
+"horrible hacks.  Deadlock issues are reported far less often than the bugs "
+"that execv are causing, so we now disable it by default."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:566
+msgid ""
+"Work is in motion to create non-blocking versions of these transports so "
+"that execv is not necessary (which is the situation with the amqp and redis "
+"broker transports)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:570
+msgid "Chord exception behavior defined (Issue #1172)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:572
+msgid ""
+"From Celery 3.1 the chord callback will change state to FAILURE when a task "
+"part of a chord raises an exception."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:575
+msgid ""
+"It was never documented what happens in this case, and the actual behavior "
+"was very unsatisfactory, indeed it will just forward the exception value to "
+"the chord callback."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:579
+msgid ""
+"For backward compatibility reasons we do not change to the new behavior in a"
+" bugfix release, even if the current behavior was never documented.  Instead"
+" you can enable the :setting:`CELERY_CHORD_PROPAGATES` setting to get the "
+"new behavior that will be default from Celery 3.1."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:585
+msgid "See more at :ref:`chord-errors`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:587
+msgid "worker: Fixes bug with ignored and retried tasks."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:589
+msgid ""
+"The ``on_chord_part_return`` and ``Task.after_return`` callbacks, nor the "
+"``task_postrun`` signal should be called when the task was retried/ignored."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:593 ../../history/changelog-3.0.rst:785
+msgid "Fix contributed by Vlad."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:595
+msgid "``GroupResult.join_native`` now respects the ``propagate`` argument."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:597
+msgid "``subtask.id`` added as an alias to ``subtask['options'].id``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:609
+msgid ""
+"worker: Fixed error `Could not start worker processes` occurring when "
+"restarting after connection failure (Issue #1118)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:612
+msgid "Adds new signal :signal:`task-retried` (Issue #1169)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:614
+msgid "`celery events --dumper` now handles connection loss."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:616
+msgid ""
+"Will now retry sending the task-sent event in case of connection failure."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:618
+msgid ""
+"amqp backend:  Now uses ``Message.requeue`` instead of republishing the "
+"message after poll."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:621
+msgid ""
+"New :setting:`BROKER_HEARTBEAT_CHECKRATE` setting introduced to modify the "
+"rate at which broker connection heartbeats are monitored."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:624
+msgid "The default value was also changed from 3.0 to 2.0."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:626
+msgid ":class:`celery.events.state.State` is now pickleable."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:628 ../../history/changelog-3.0.rst:632
+msgid "Fix contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:630
+msgid ":class:`celery.datastructures.LRUCache` is now pickleable."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:634
+msgid "The stats broadcast command now includes the workers pid."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:636 ../../history/changelog-3.0.rst:640
+#: ../../history/changelog-3.0.rst:1162 ../../history/changelog-3.0.rst:1347
+msgid "Contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:638
+msgid ""
+"New ``conf`` remote control command to get a workers current configuration."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:642
+msgid ""
+"Adds the ability to modify the chord unlock task's countdown argument (Issue"
+" #1146)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:645
+msgid "Contributed by Jun Sakai"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:647
+msgid ""
+"beat: The scheduler now uses the `now()`` method of the schedule, so that "
+"schedules can provide a custom way to get the current date and time."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:650
+msgid "Contributed by Raphaël Slinckx"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:652
+msgid ""
+"Fixed pickling of configuration modules on Windows or when execv is used "
+"(Issue #1126)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:655
+msgid ""
+"Multiprocessing logger is now configured with loglevel ``ERROR`` by default."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:658
+msgid ""
+"Since 3.0 the multiprocessing loggers were disabled by default (only "
+"configured when the :envvar:`MP_LOG` environment variable was set)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:664
+msgid "3.0.13"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:665
+msgid "2013-01-07 04:00:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:668
+msgid "Now depends on Kombu 2.5"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:670
+msgid ""
+"py-amqp has replaced amqplib as the default transport, gaining support for "
+"AMQP 0.9, and the RabbitMQ extensions including Consumer Cancel "
+"Notifications and heartbeats."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:674
+msgid "support for multiple connection URLs for failover."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:676
+msgid "Read more in the :ref:`Kombu 2.5 changelog <kombu:version-2.5.0>`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:678
+msgid "Now depends on billiard 2.7.3.19"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:680
+msgid ""
+"Fixed a deadlock issue that could occur when the producer pool inherited the"
+" connection pool instance of the parent process."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:683
+msgid "The :option:`--loader` option now works again (Issue #1066)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:685
+msgid ""
+":program:`celery` umbrella command: All subcommands now supports the "
+":option:`--workdir` option (Issue #1063)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:688
+msgid "Groups included in chains now give GroupResults (Issue #1057)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:690
+msgid ""
+"Previously it would incorrectly add a regular result instead of a group "
+"result, but now this works:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:703
+msgid ""
+"Chains can now chain other chains and use partial arguments (Issue #1057)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:705 ../../history/changelog-3.0.rst:997
+msgid "Example:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:717
+msgid "Subtasks can now be used with unregistered tasks."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:719
+msgid "You can specify subtasks even if you just have the name::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:724
+msgid ""
+"The :program:`celery shell` command now always adds the current directory to"
+" the module path."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:727
+msgid ""
+"The worker will now properly handle the :exc:`pytz.AmbiguousTimeError` "
+"exception raised when an ETA/countdown is prepared while being in DST "
+"transition (Issue #1061)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:731
+msgid ""
+"force_execv: Now makes sure that task symbols in the original task modules "
+"will always use the correct app instance (Issue #1072)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:734
+msgid ""
+"AMQP Backend: Now republishes result messages that have been polled (using "
+"``result.ready()`` and friends, ``result.get()`` will not do this in this "
+"version)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:738
+msgid "Crontab schedule values can now \"wrap around\""
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:740
+msgid "This means that values like ``11-1`` translates to ``[11, 12, 1]``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:742 ../../history/changelog-3.0.rst:746
+msgid "Contributed by Loren Abrams."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:744
+msgid "multi stopwait command now shows the pid of processes."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:749
+msgid "Handling of ETA/countdown fixed when the :setting:`CELERY_ENABLE_UTC`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:749
+msgid "setting is disabled (Issue #1065)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:751
+msgid ""
+"A number of uneeded properties were included in messages, caused by "
+"accidentally passing ``Queue.as_dict`` as message properties."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:754
+msgid "Rate limit values can now be float"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:756
+msgid ""
+"This also extends the string format so that values like ``\"0.5/s\"`` works."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:758
+msgid "Contributed by Christoph Krybus"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:760
+msgid "Fixed a typo in the broadcast routing documentation (Issue #1026)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:762
+msgid "Rewrote confusing section about idempotence in the task user guide."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:764
+msgid "Fixed typo in the daemonization tutorial (Issue #1055)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:766
+msgid "Fixed several typos in the documentation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:768
+msgid "Contributed by Marius Gedminas."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:770
+msgid "Batches: Now works when using the eventlet pool."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:772
+msgid "Fix contributed by Thomas Grainger."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:774
+msgid ""
+"Batches: Added example sending results to :mod:`celery.contrib.batches`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:776
+msgid "Contributed by Thomas Grainger."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:778
+msgid ""
+"Mongodb backend: Connection ``max_pool_size`` can now be set in "
+":setting:`CELERY_MONGODB_BACKEND_SETTINGS`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:781
+msgid "Contributed by Craig Younkins."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:783
+msgid "Fixed problem when using earlier versions of :mod:`pytz`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:787
+msgid ""
+"Docs updated to include the default value for the "
+":setting:`CELERY_TASK_RESULT_EXPIRES` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:790
+msgid "Improvements to the django-celery tutorial."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:792
+msgid "Contributed by Locker537."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:794
+msgid ""
+"The ``add_consumer`` control command did not properly persist the addition "
+"of new queues so that they survived connection failure (Issue #1079)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:800
+msgid "3.0.12"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:801
+msgid "2012-11-06 02:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:804
+msgid "Now depends on kombu 2.4.8"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:806
+msgid "[Redis] New and improved fair queue cycle algorithm (Kevin McCarthy)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:807
+msgid "[Redis] Now uses a Redis-based mutex when restoring messages."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:810
+msgid "[Redis] Number of messages that can be restored in one interval is no"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:809
+msgid ""
+"longer limited (but can be set using the ``unacked_restore_limit`` "
+":setting:`transport option <BROKER_TRANSPORT_OPTIONS>`.)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:812
+msgid "Heartbeat value can be specified in broker URLs (Mher Movsisyan)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:813
+msgid "Fixed problem with msgpack on Python 3 (Jasper Bryant-Greene)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:815
+msgid "Now depends on billiard 2.7.3.18"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:817
+msgid ""
+"Celery can now be used with static analysis tools like PyDev/PyCharm/pylint "
+"etc."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:820
+msgid "Development documentation has moved to Read The Docs."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:822
+msgid "The new URL is: http://docs.celeryproject.org/en/master"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:824
+msgid ""
+"New :setting:`CELERY_QUEUE_HA_POLICY` setting used to set the default HA "
+"policy for queues when using RabbitMQ."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:827
+msgid ""
+"New method ``Task.subtask_from_request`` returns a subtask using the current"
+" request."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:830
+msgid "Results get_many method did not respect timeout argument."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:832
+msgid "Fix contributed by Remigiusz Modrzejewski"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:834
+msgid ""
+"generic_init.d scripts now support setting :envvar:`CELERY_CREATE_DIRS` to "
+"always create log and pid directories (Issue #1045)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:837
+msgid "This can be set in your :file:`/etc/default/celeryd`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:839
+msgid "Fixed strange kombu import problem on Python 3.2 (Issue #1034)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:841
+msgid "Worker: ETA scheduler now uses millisecond precision (Issue #1040)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:843
+msgid "The ``--config`` argument to programs is now supported by all loaders."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:845
+msgid "The :setting:`CASSANDRA_OPTIONS` setting has now been documented."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:847
+msgid "Contributed by Jared Biel."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:849
+msgid ""
+"Task methods (:mod:`celery.contrib.methods`) cannot be used with the old "
+"task base class, the task decorator in that module now inherits from the "
+"new."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:852
+msgid ""
+"An optimization was too eager and caused some logging messages to never "
+"emit."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:854
+msgid ":mod:`celery.contrib.batches` now works again."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:856
+msgid "Fixed missing whitespace in ``bdist_rpm`` requirements (Issue #1046)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:858
+msgid ""
+"Event state's ``tasks_by_name`` applied limit before filtering by name."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:860
+msgid "Fix contributed by Alexander A. Sosnovskiy."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:865
+msgid "3.0.11"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:866
+msgid "2012-09-26 04:00 P.M UTC"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:869
+msgid ""
+"[security:low] generic-init.d scripts changed permissions of /var/log & "
+"/var/run"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:871
+msgid ""
+"In the daemonization tutorial the recommended directories were as follows:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:878
+msgid ""
+"But in the scripts themselves the default files were "
+"``/var/log/celery%n.log`` and ``/var/run/celery%n.pid``, so if the user did "
+"not change the location by configuration, the directories ``/var/log`` and "
+"``/var/run`` would be created - and worse have their permissions and owners "
+"changed."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:883
+msgid "This change means that:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:885
+msgid "Default pid file is ``/var/run/celery/%n.pid``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:886
+msgid "Default log file is ``/var/log/celery/%n.log``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:888
+msgid ""
+"The directories are only created and have their permissions changed if *no "
+"custom locations are set*."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:891
+msgid ""
+"Users can force paths to be created by calling the ``create-paths`` "
+"subcommand:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:898
+msgid "Upgrading Celery will not update init scripts"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:900
+msgid ""
+"To update the init scripts you have to re-download the files from source "
+"control and update them manually. You can find the init scripts for version "
+"3.0.x at:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:904
+msgid "http://github.com/celery/celery/tree/3.0/extra/generic-init.d"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:906
+msgid "Now depends on billiard 2.7.3.17"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:908
+msgid ""
+"Fixes request stack protection when app is initialized more than once (Issue"
+" #1003)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:911
+msgid ""
+"ETA tasks now properly works when system timezone is not the same as the "
+"configured timezone (Issue #1004)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:914
+msgid ""
+"Terminating a task now works if the task has been sent to the pool but not "
+"yet acknowledged by a pool process (Issue #1007)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:917
+msgid "Fix contributed by Alexey Zatelepin"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:919
+msgid ""
+"Terminating a task now properly updates the state of the task to revoked, "
+"and sends a ``task-revoked`` event."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:922
+msgid ""
+"Generic worker init script now waits for workers to shutdown by default."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:924
+msgid "Multi: No longer parses --app option (Issue #1008)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:926
+msgid "Multi: stop_verify command renamed to stopwait."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:928
+msgid ""
+"Daemonization: Now delays trying to create pidfile/logfile until after the "
+"working directory has been changed into."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:931
+msgid ""
+":program:`celery worker` and :program:`celery beat` commands now respects "
+"the :option:`--no-color` option (Issue #999)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:934
+msgid "Fixed typos in eventlet examples (Issue #1000)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:936
+msgid "Fix contributed by Bryan Bishop. Congratulations on opening bug #1000!"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:939
+msgid ""
+"Tasks that raise :exc:`~celery.exceptions.Ignore` are now acknowledged."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:941
+msgid "Beat: Now shows the name of the entry in ``sending due task`` logs."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:946
+msgid "3.0.10"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:947
+msgid "2012-09-20 05:30 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:950
+msgid "Now depends on kombu 2.4.7"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:952
+msgid "Now depends on billiard 2.7.3.14"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:954
+msgid ""
+"Fixes crash at startup when using Django and pre-1.4 projects "
+"(setup_environ)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:957
+msgid ""
+"Hard time limits now sends the KILL signal shortly after TERM, to terminate "
+"processes that have signal handlers blocked by C extensions."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:960
+msgid "Billiard now installs even if the C extension cannot be built."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:962
+msgid ""
+"It's still recommended to build the C extension if you are using a transport"
+" other than rabbitmq/redis (or use forced execv for some other reason)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:966
+msgid ""
+"Pool now sets a ``current_process().index`` attribute that can be used to "
+"create as many log files as there are processes in the pool."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:969
+msgid "Canvas: chord/group/chain no longer modifies the state when called"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:971
+msgid ""
+"Previously calling a chord/group/chain would modify the ids of subtasks so "
+"that:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:980
+msgid ""
+"at the second time the ids for the tasks would be the same as in the "
+"previous invocation.  This is now fixed, so that calling a subtask won't "
+"mutate any options."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:984
+msgid "Canvas: Chaining a chord to another task now works (Issue #965)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:986
+msgid ""
+"Worker: Fixed a bug where the request stack could be corrupted if relative "
+"imports are used."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:989
+msgid ""
+"Problem usually manifested itself as an exception while trying to send a "
+"failed task result (``NoneType does not have id attribute``)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:992
+msgid "Fix contributed by Sam Cooke."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:994
+msgid ""
+"Tasks can now raise :exc:`~celery.exceptions.Ignore` to skip updating states"
+" or events after return."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1008
+msgid ""
+"The worker now makes sure the request/task stacks are not modified by the "
+"initial ``Task.__call__``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1011
+msgid ""
+"This would previously be a problem if a custom task class defined "
+"``__call__`` and also called ``super()``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1014
+msgid ""
+"Because of problems the fast local optimization has been disabled, and can "
+"only be enabled by setting the :envvar:`USE_FAST_LOCALS` attribute."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1017
+msgid ""
+"Worker: Now sets a default socket timeout of 5 seconds at shutdown so that "
+"broken socket reads do not hinder proper shutdown (Issue #975)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1020
+msgid "More fixes related to late eventlet/gevent patching."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1022
+msgid "Documentation for settings out of sync with reality:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1024
+msgid ":setting:`CELERY_TASK_PUBLISH_RETRY`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1026
+msgid ""
+"Documented as disabled by default, but it was enabled by default since 2.5 "
+"as stated by the 2.5 changelog."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1029
+msgid ":setting:`CELERY_TASK_PUBLISH_RETRY_POLICY`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1031
+msgid ""
+"The default max_retries had been set to 100, but documented as being 3, and "
+"the interval_max was set to 1 but documented as 0.2. The default setting are"
+" now set to 3 and 0.2 as it was originally documented."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1036
+msgid "Fix contributed by Matt Long."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1038
+msgid ""
+"Worker: Log messages when connection established and lost have been "
+"improved."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1040
+msgid ""
+"The repr of a crontab schedule value of '0' should be '*'  (Issue #972)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1042
+msgid ""
+"Revoked tasks are now removed from reserved/active state in the worker "
+"(Issue #969)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1045
+msgid "Fix contributed by Alexey Zatelepin."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1047
+msgid "gevent: Now supports hard time limits using ``gevent.Timeout``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1049
+msgid ""
+"Documentation: Links to init scripts now point to the 3.0 branch instead of "
+"the development branch (master)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1052
+msgid "Documentation: Fixed typo in signals user guide (Issue #986)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1054
+msgid "``instance.app.queues`` -> ``instance.app.amqp.queues``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1056
+msgid ""
+"Eventlet/gevent: The worker did not properly set the custom app for new "
+"greenlets."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1059
+msgid ""
+"Eventlet/gevent: Fixed a bug where the worker could not recover from "
+"connection loss (Issue #959)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1062
+msgid ""
+"Also, because of a suspected bug in gevent the "
+":setting:`BROKER_CONNECTION_TIMEOUT` setting has been disabled when using "
+"gevent"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1067
+msgid "3.0.9"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1068
+msgid "2012-08-31 06:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1071
+msgid "Important note for users of Django and the database scheduler!"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1073
+msgid ""
+"Recently a timezone issue has been fixed for periodic tasks, but erroneous "
+"timezones could have already been stored in the database, so for the fix to "
+"work you need to reset the ``last_run_at`` fields."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1078
+msgid "You can do this by executing the following command:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1086
+msgid ""
+"You also have to do this if you change the timezone or "
+":setting:`CELERY_ENABLE_UTC` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1089
+msgid "Note about the :setting:`CELERY_ENABLE_UTC` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1091
+msgid ""
+"If you previously disabled this just to force periodic tasks to work with "
+"your timezone, then you are now *encouraged to re-enable it*."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1094
+msgid "Now depends on Kombu 2.4.5 which fixes PyPy + Jython installation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1096
+msgid ""
+"Fixed bug with timezones when :setting:`CELERY_ENABLE_UTC` is disabled "
+"(Issue #952)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1099
+msgid "Fixed a typo in the celerybeat upgrade mechanism (Issue #951)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1101
+msgid "Make sure the `exc_info` argument to logging is resolved (Issue #899)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1103
+msgid ""
+"Fixed problem with Python 3.2 and thread join timeout overflow (Issue #796)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1105
+msgid "A test case was occasionally broken for Python 2.5."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1107
+msgid "Unit test suite now passes for PyPy 1.9."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1109
+msgid "App instances now supports the with statement."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1111
+msgid ""
+"This calls the new :meth:`~celery.Celery.close` method at exit, which cleans"
+" up after the app like closing pool connections."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1114
+msgid ""
+"Note that this is only necessary when dynamically creating apps, e.g. for "
+"\"temporary\" apps."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1117
+msgid "Support for piping a subtask to a chain."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1119
+msgid "For example:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1126
+msgid "Contributed by Steve Morin."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1128
+msgid "Fixed problem with group results on non-pickle serializers."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1130 ../../history/changelog-3.0.rst:1201
+#: ../../history/changelog-3.0.rst:1205
+msgid "Fix contributed by Steeve Morin."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1135
+msgid "3.0.8"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1136
+msgid "2012-08-29 05:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1139
+msgid "Now depends on Kombu 2.4.4"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1141
+msgid ""
+"Fixed problem with amqplib and receiving larger message payloads (Issue "
+"#922)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1144
+msgid ""
+"The problem would manifest itself as either the worker hanging, or "
+"occasionally a ``Framing error`` exception appearing."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1147
+msgid ""
+"Users of the new ``pyamqp://`` transport must upgrade to :mod:`amqp` 0.9.3."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1150
+msgid ""
+"Beat: Fixed another timezone bug with interval and crontab schedules (Issue "
+"#943)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1153
+msgid ""
+"Beat: The schedule file is now automatically cleared if the timezone is "
+"changed."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1156
+msgid ""
+"The schedule is also cleared when you upgrade to 3.0.8 from an earlier "
+"version, this to register the initial timezone info."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1159
+msgid ""
+"Events: The :event:`worker-heartbeat` event now include processed and active"
+" count fields."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1164
+msgid "Fixed error with error email and new task classes (Issue #931)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1166
+msgid ""
+"``BaseTask.__call__`` is no longer optimized away if it has been monkey "
+"patched."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1169
+msgid "Fixed shutdown issue when using gevent (Issue #911 & Issue #936)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1171
+msgid "Fix contributed by Thomas Meson."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1176
+msgid "3.0.7"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1177
+msgid "2012-08-24 05:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1180
+msgid "Fixes several problems with periodic tasks and timezones (Issue #937)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1182
+msgid "Now depends on kombu 2.4.2"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1184
+msgid "Redis: Fixes a race condition crash"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1186
+msgid ""
+"Fixes an infinite loop that could happen when retrying establishing the "
+"broker connection."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1189
+msgid "Daemons now redirect standard file descriptors to :file:`/dev/null`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1191
+msgid ""
+"Though by default the standard outs are also redirected to the logger "
+"instead, but you can disable this by changing the "
+":setting:`CELERY_REDIRECT_STDOUTS` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1195
+msgid "Fixes possible problems when eventlet/gevent is patched too late."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1197
+msgid "``LoggingProxy`` no longer defines ``fileno()`` (Issue #928)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1199
+msgid "Results are now ignored for the chord unlock task."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1203
+msgid "Cassandra backend now works if result expiry is disabled."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1207
+msgid ""
+"The traceback object is now passed to signal handlers instead of the string "
+"representation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1210
+msgid "Fix contributed by Adam DePue."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1212
+msgid "Celery command: Extensions are now sorted by name."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1214
+msgid ""
+"A regression caused the :event:`task-failed` event to be sent with the "
+"exception object instead of its string representation."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1217
+msgid ""
+"The worker daemon would try to create the pid file before daemonizing to "
+"catch errors, but this file was not immediately released (Issue #923)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1220
+msgid "Fixes Jython compatibility."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1222
+msgid ""
+"``billiard.forking_enable`` was called by all pools not just the processes "
+"pool, which would result in a useless warning if the billiard C extensions "
+"were not installed."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1229
+msgid "3.0.6"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1230
+msgid "2012-08-17 11:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1233
+msgid "Now depends on kombu 2.4.0"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1235
+msgid "Now depends on billiard 2.7.3.12"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1237
+msgid ""
+"Redis: Celery now tries to restore messages whenever there are no messages "
+"in the queue."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1240
+msgid ""
+"Crontab schedules now properly respects :setting:`CELERY_TIMEZONE` setting."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1242
+msgid ""
+"It's important to note that crontab schedules uses UTC time by default "
+"unless this setting is set."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1245
+msgid "Issue #904 and django-celery #150."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1247
+msgid "``billiard.enable_forking`` is now only set by the processes pool."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1249
+msgid ""
+"The transport is now properly shown by :program:`celery report` (Issue "
+"#913)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1252
+msgid ""
+"The `--app` argument now works if the last part is a module name (Issue "
+"#921)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1255
+msgid "Fixed problem with unpickleable exceptions (billiard #12)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1257
+msgid ""
+"Adds ``task_name`` attribute to ``EagerResult`` which is always "
+":const:`None` (Issue #907)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1260
+msgid ""
+"Old Task class in :mod:`celery.task` no longer accepts magic kwargs by "
+"default (Issue #918)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1263
+msgid ""
+"A regression long ago disabled magic kwargs for these, and since no one has "
+"complained about it we don't have any incentive to fix it now."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1266
+msgid "The ``inspect reserved`` control command did not work properly."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1268
+msgid ""
+"Should now play better with static analyzation tools by explicitly "
+"specifying dynamically created attributes in the :mod:`celery` and "
+":mod:`celery.task` modules."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1272
+msgid ""
+"Terminating a task now results in :exc:`~celery.exceptions.RevokedTaskError`"
+" instead of a ``WorkerLostError``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1275
+msgid ""
+"``AsyncResult.revoke`` now accepts ``terminate`` and ``signal`` arguments."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1277
+msgid ""
+"The :event:`task-revoked` event now includes new fields: ``terminated``, "
+"``signum``, and ``expired``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1280
+msgid ""
+"The argument to :class:`~celery.exceptions.TaskRevokedError` is now one of "
+"the reasons ``revoked``, ``expired`` or ``terminated``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1283
+msgid ""
+"Old Task class does no longer use classmethods for push_request and "
+"pop_request  (Issue #912)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1286
+msgid "``GroupResult`` now supports the ``children`` attribute (Issue #916)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1288
+msgid ""
+"``AsyncResult.collect`` now respects the ``intermediate`` argument (Issue "
+"#917)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1291
+msgid "Fixes example task in documentation (Issue #902)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1293
+msgid "Eventlet fixed so that the environment is patched as soon as possible."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1295
+msgid ""
+"eventlet: Now warns if celery related modules that depends on threads are "
+"imported before eventlet is patched."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1298
+msgid "Improved event and camera examples in the monitoring guide."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1300
+msgid ""
+"Disables celery command setuptools entrypoints if the command can't be "
+"loaded."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1303
+msgid "Fixed broken ``dump_request`` example in the tasks guide."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1310
+msgid "3.0.5"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1311
+msgid "2012-08-01 04:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1314
+msgid "Now depends on kombu 2.3.1 + billiard 2.7.3.11"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1316
+msgid ""
+"Fixed a bug with the -B option (``cannot pickle thread.lock objects``) "
+"(Issue #894 + Issue #892, + django-celery #154)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1319
+msgid ""
+"The :control:`restart_pool` control command now requires the "
+":setting:`CELERYD_POOL_RESTARTS` setting to be enabled"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1322
+msgid ""
+"This change was necessary as the multiprocessing event that the restart "
+"command depends on is responsible for creating many semaphores/file "
+"descriptors, resulting in problems in some environments."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1326
+msgid "``chain.apply`` now passes args to the first task (Issue #889)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1328
+msgid ""
+"Documented previously secret options to the Django-Celery monitor in the "
+"monitoring userguide (Issue #396)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1331
+msgid ""
+"Old changelog are now organized in separate documents for each series, see "
+":ref:`history`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1337
+msgid "3.0.4"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1338
+msgid "2012-07-26 07:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1341
+msgid "Now depends on Kombu 2.3"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1343
+msgid "New experimental standalone Celery monitor: Flower"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1345
+msgid "See :ref:`monitoring-flower` to read more about it!"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1349
+msgid "Now supports AMQP heartbeats if using the new ``pyamqp://`` transport."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1351
+msgid ""
+"The py-amqp transport requires the :mod:`amqp` library to be installed::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1355
+msgid "Then you need to set the transport URL prefix to ``pyamqp://``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1357
+msgid ""
+"The default heartbeat value is 10 seconds, but this can be changed using the"
+" :setting:`BROKER_HEARTBEAT` setting::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1362
+msgid ""
+"If the broker heartbeat is set to 10 seconds, the heartbeats will be "
+"monitored every 5 seconds (double the hertbeat rate)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1365 ../../history/changelog-3.0.rst:1372
+msgid ""
+"See the :ref:`Kombu 2.3 changelog <kombu:version-2.3.0>` for more "
+"information."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1367
+msgid ""
+"Now supports RabbitMQ Consumer Cancel Notifications, using the ``pyamqp://``"
+" transport."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1370
+msgid "This is essential when running RabbitMQ in a cluster."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1374
+msgid "Delivery info is no longer passed directly through."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1376
+msgid ""
+"It was discovered that the SQS transport adds objects that can't be pickled "
+"to the delivery info mapping, so we had to go back to using the whitelist "
+"again."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1380
+msgid ""
+"Fixing this bug also means that the SQS transport is now working again."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1382
+msgid ""
+"The semaphore was not properly released when a task was revoked (Issue "
+"#877)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1384
+msgid ""
+"This could lead to tasks being swallowed and not released until a worker "
+"restart."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1387
+msgid "Thanks to Hynek Schlawack for debugging the issue."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1389
+msgid "Retrying a task now also forwards any linked tasks."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1391
+msgid ""
+"This means that if a task is part of a chain (or linked in some other way) "
+"and that even if the task is retried, then the next task in the chain will "
+"be executed when the retry succeeds."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1395
+msgid ""
+"Chords: Now supports setting the interval and other keyword arguments to the"
+" chord unlock task."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1398
+msgid "The interval can now be set as part of the chord subtasks kwargs::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1402
+msgid ""
+"In addition the chord unlock task now honors the Task.default_retry_delay "
+"option, used when none is specified, which also means that the default "
+"interval can also be changed using annotations:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1414
+msgid ""
+"New :meth:`@Celery.add_defaults` method can add new default configuration "
+"dicts to the applications configuration."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1417
+msgid "For example::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1423
+msgid ""
+"is the same as ``celery.conf.update(config)`` except that data will not be "
+"copied, and that it will not be pickled when the worker spawns child "
+"processes."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1427
+msgid "In addition the method accepts a callable::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1434
+msgid ""
+"which means the same as the above except that it will not happen until the "
+"celery configuration is actually used."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1437
+msgid ""
+"As an example, Celery can lazily use the configuration of a Flask app::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1443
+msgid ""
+"Revoked tasks were not marked as revoked in the result backend (Issue #871)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1445
+msgid "Fix contributed by Hynek Schlawack."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1447
+msgid ""
+"Eventloop now properly handles the case when the epoll poller object has "
+"been closed (Issue #882)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1450
+msgid "Fixed syntax error in ``funtests/test_leak.py``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1452
+msgid "Fix contributed by Catalin Iacob."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1454
+msgid "group/chunks: Now accepts empty task list (Issue #873)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1456
+msgid "New method names:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1458
+msgid ""
+"``Celery.default_connection()`` ➠  :meth:`~@Celery.connection_or_acquire`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1459
+msgid ""
+"``Celery.default_producer()``   ➠  :meth:`~@Celery.producer_or_acquire`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1461
+msgid "The old names still work for backward compatibility."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1467
+msgid "3.0.3"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1468
+msgid "2012-07-20 09:17 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1471
+msgid ""
+"amqplib passes the channel object as part of the delivery_info and it's not "
+"pickleable, so we now remove it."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1477
+msgid "3.0.2"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1478
+msgid "2012-07-20 04:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1491
+msgid "A bug caused the following task options to not take defaults from the"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1482
+msgid "configuration (Issue #867 + Issue #858)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1484
+msgid "The following settings were affected:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1486
+msgid ":setting:`CELERY_IGNORE_RESULT`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1487
+msgid ":setting:`CELERYD_SEND_TASK_ERROR_EMAILS`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1488
+msgid ":setting:`CELERY_TRACK_STARTED`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1489
+msgid ":setting:`CElERY_STORE_ERRORS_EVEN_IF_IGNORED`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1493
+msgid ""
+"Task Request: ``delivery_info`` is now passed through as-is (Issue #807)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1495
+msgid ""
+"The eta argument now supports datetime's with a timezone set (Issue #855)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1497
+msgid ""
+"The worker's banner displayed the autoscale settings in the wrong order "
+"(Issue #859)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1500
+msgid ""
+"Extension commands are now loaded after concurrency is set up so that they "
+"don't interfere with e.g. eventlet patching."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1503
+msgid "Fixed bug in the threaded pool (Issue #863)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1505
+msgid "The task failure handler mixed up the fields in :func:`sys.exc_info`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1507
+msgid "Fix contributed by Rinat Shigapov."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1509
+msgid "Fixed typos and wording in the docs."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1511
+msgid "Fix contributed by Paul McMillan"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1513
+msgid "New setting: :setting:`CELERY_WORKER_DIRECT`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1515
+msgid ""
+"If enabled each worker will consume from their own dedicated queue which can"
+" be used to route tasks to specific workers."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1518
+msgid ""
+"Fixed several edge case bugs in the add consumer remote control command."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1520
+msgid ""
+":mod:`~celery.contrib.migrate`: Can now filter and move tasks to specific "
+"workers if :setting:`CELERY_WORKER_DIRECT` is enabled."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1523
+msgid "Among other improvements, the following functions have been added:"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1525
+msgid "``move_direct(filterfun, **opts)``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1526
+msgid "``move_direct_by_id(task_id, worker_hostname, **opts)``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1527
+msgid "``move_direct_by_idmap({task_id: worker_hostname, ...}, **opts)``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1528
+msgid "``move_direct_by_taskmap({task_name: worker_hostname, ...}, **opts)``"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1530
+msgid ""
+":meth:`~celery.Celery.default_connection` now accepts a pool argument that "
+"if set to false causes a new connection to be created instead of acquiring "
+"one from the pool."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1534
+msgid "New signal: :signal:`celeryd_after_setup`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1536
+msgid ""
+"Default loader now keeps lowercase attributes from the configuration module."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1541
+msgid "3.0.1"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1542
+msgid "2012-07-10 06:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1545
+msgid "Now depends on kombu 2.2.5"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1547
+msgid "inspect now supports limit argument::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1551
+msgid "Beat: now works with timezone aware datetime's."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1553
+msgid ""
+"Task classes inheriting ``from celery import Task`` mistakingly enabled "
+"``accept_magic_kwargs``."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1556
+msgid "Fixed bug in ``inspect scheduled`` (Issue #829)."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1558
+msgid "Beat: Now resets the schedule to upgrade to UTC."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1560
+msgid "The :program:`celery worker` command now works with eventlet/gevent."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1562
+msgid "Previously it would not patch the environment early enough."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1564
+msgid ""
+"The :program:`celery` command now supports extension commands using "
+"setuptools entry-points."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1567
+msgid ""
+"Libraries can add additional commands to the :program:`celery` command by "
+"adding an entry-point like::"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1578
+msgid ""
+"The command must then support the interface of "
+":class:`celery.bin.base.Command`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1581
+msgid ""
+"contrib.migrate: New utilities to move tasks from one queue to another."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1583
+msgid ":func:`~celery.contrib.migrate.move_tasks`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1584
+msgid ":func:`~celery.contrib.migrate.move_task_by_id`"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1586
+msgid ""
+"The :event:`task-sent` event now contains ``exchange`` and ``routing_key`` "
+"fields."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1589
+msgid "Fixes bug with installing on Python 3."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1591
+msgid "Fix contributed by Jed Smith."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1596
+msgid "3.0.0 (Chiastic Slide)"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1597
+msgid "2012-07-07 01:30 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1600
+msgid "See :ref:`whatsnew-3.0`."
+msgstr ""

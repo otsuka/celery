@@ -1,0 +1,36 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.backends.redis.rst:3
+#: ../../../celery/backends/redis.pydocstring of celery.backends.redis:2
+msgid "celery.backends.redis"
+msgstr ""
+
+#: ../../../celery/backends/redis.pydocstring of celery.backends.redis:4
+msgid "Redis result store backend."
+msgstr ""
+
+#: ../../../celery/backends/redis.pydocstring of
+#: celery.backends.redis.RedisBackend:1
+msgid "Redis task result store."
+msgstr ""
+
+#: ../../../celery/backends/redis.pydocstring of
+#: celery.backends.redis.RedisBackend.max_connections:1
+msgid "Maximium number of connections in the pool."
+msgstr ""
+
+#: ../../../celery/backends/redis.pydocstring of
+#: celery.backends.redis.RedisBackend.redis:1
+msgid "redis-py client module."
+msgstr ""

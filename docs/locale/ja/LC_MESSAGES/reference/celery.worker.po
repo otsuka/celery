@@ -1,0 +1,52 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.worker.rst:3
+#: ../../../celery/worker/__init__.pydocstring of celery.worker:2
+msgid "celery.worker"
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of celery.worker:4
+msgid ":class:`WorkController` can be used to instantiate in-process workers."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of celery.worker:6
+msgid ""
+"The worker consists of several components, all managed by bootsteps "
+"(mod:`celery.bootsteps`)."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of
+#: celery.worker.WorkController:1
+msgid "Unmanaged worker instance."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of
+#: celery.worker.WorkController.Blueprint:1
+msgid "Worker bootstep blueprint."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of
+#: celery.worker.WorkController.start:1
+msgid "Starts the workers main loop."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of
+#: celery.worker.WorkController.stop:1
+msgid "Graceful shutdown of the worker server."
+msgstr ""
+
+#: ../../../celery/worker/__init__.pydocstring of
+#: celery.worker.WorkController.terminate:1
+msgid "Not so graceful shutdown of the worker server."
+msgstr ""

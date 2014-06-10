@@ -1,0 +1,223 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/protocol.rst:7
+msgid "Task Messages"
+msgstr ""
+
+#: ../../internals/protocol.rst:13
+msgid "Message format"
+msgstr ""
+
+#: ../../internals/protocol.rst:18
+msgid "task"
+msgstr ""
+
+#: ../../internals/protocol.rst:18
+msgid "Name of the task. **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:23
+msgid "id"
+msgstr ""
+
+#: ../../internals/protocol.rst:23
+msgid "Unique id of the task (UUID). **required**"
+msgstr ""
+
+#: ../../internals/protocol.rst:28
+msgid "args"
+msgstr ""
+
+#: ../../internals/protocol.rst:28
+msgid "List of arguments. Will be an empty list if not provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:34
+msgid "kwargs"
+msgstr ""
+
+#: ../../internals/protocol.rst:33
+msgid ""
+"Dictionary of keyword arguments. Will be an empty dictionary if not "
+"provided."
+msgstr ""
+
+#: ../../internals/protocol.rst:40
+msgid "retries"
+msgstr ""
+
+#: ../../internals/protocol.rst:39
+msgid ""
+"Current number of times this task has been retried. Defaults to `0` if not "
+"specified."
+msgstr ""
+
+#: ../../internals/protocol.rst:47
+msgid "eta"
+msgstr ""
+
+#: ../../internals/protocol.rst:45
+msgid ""
+"Estimated time of arrival. This is the date and time in ISO 8601 format. If "
+"not provided the message is not scheduled, but will be executed asap."
+msgstr ""
+
+#: ../../internals/protocol.rst:57
+msgid "expires"
+msgstr ""
+
+#: ../../internals/protocol.rst:54
+msgid ""
+"Expiration date. This is the date and time in ISO 8601 format. If not "
+"provided the message will never expire. The message will be expired when the"
+" message is received and the expiration date has been exceeded."
+msgstr ""
+
+#: ../../internals/protocol.rst:60
+msgid "Extensions"
+msgstr ""
+
+#: ../../internals/protocol.rst:62
+msgid ""
+"Extensions are additional keys in the message body that the worker may or "
+"may not support.  If the worker finds an extension key it doesn't support it"
+" should optimally reject the message so another worker gets a chance to "
+"process it."
+msgstr ""
+
+#: ../../internals/protocol.rst:71
+msgid "taskset"
+msgstr ""
+
+#: ../../internals/protocol.rst:71
+msgid "The taskset this task is part of (if any)."
+msgstr ""
+
+#: ../../internals/protocol.rst:80
+msgid "chord"
+msgstr ""
+
+#: ../../internals/protocol.rst:78
+msgid ""
+"Signifies that this task is one of the header parts of a chord.  The value "
+"of this key is the body of the cord that should be executed when all of the "
+"tasks in the header has returned."
+msgstr ""
+
+#: ../../internals/protocol.rst:88
+msgid "utc"
+msgstr ""
+
+#: ../../internals/protocol.rst:87
+msgid ""
+"If true time uses the UTC timezone, if not the current local timezone should"
+" be used."
+msgstr ""
+
+#: ../../internals/protocol.rst:95
+msgid "callbacks"
+msgstr ""
+
+#: ../../internals/protocol.rst:95
+msgid "A list of subtasks to apply if the task exited successfully."
+msgstr ""
+
+#: ../../internals/protocol.rst:102
+msgid "errbacks"
+msgstr ""
+
+#: ../../internals/protocol.rst:102
+msgid ""
+"A list of subtasks to apply if an error occurs while executing the task."
+msgstr ""
+
+#: ../../internals/protocol.rst:116
+msgid "timelimit"
+msgstr ""
+
+#: ../../internals/protocol.rst:109
+msgid ""
+"Task execution time limit settings. This is a tuple of hard and soft time "
+"limit value (`int`/`float` or :const:`None` for no limit)."
+msgstr ""
+
+#: ../../internals/protocol.rst:112
+msgid ""
+"Example value specifying a soft time limit of 3 seconds, and a hard time "
+"limt of 10 seconds::"
+msgstr ""
+
+#: ../../internals/protocol.rst:119
+msgid "Example message"
+msgstr ""
+
+#: ../../internals/protocol.rst:121
+msgid ""
+"This is an example invocation of the `celery.task.PingTask` task in JSON "
+"format:"
+msgstr ""
+
+#: ../../internals/protocol.rst:134
+msgid "Serialization"
+msgstr ""
+
+#: ../../internals/protocol.rst:136
+msgid ""
+"Several types of serialization formats are supported using the "
+"`content_type` message header."
+msgstr ""
+
+#: ../../internals/protocol.rst:139
+msgid "The MIME-types supported by default are shown in the following table."
+msgstr ""
+
+#: ../../internals/protocol.rst:142
+msgid "Scheme"
+msgstr ""
+
+#: ../../internals/protocol.rst:142
+msgid "MIME Type"
+msgstr ""
+
+#: ../../internals/protocol.rst:144
+msgid "json"
+msgstr ""
+
+#: ../../internals/protocol.rst:144
+msgid "application/json"
+msgstr ""
+
+#: ../../internals/protocol.rst:145
+msgid "yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:145
+msgid "application/x-yaml"
+msgstr ""
+
+#: ../../internals/protocol.rst:146
+msgid "pickle"
+msgstr ""
+
+#: ../../internals/protocol.rst:146
+msgid "application/x-python-serialize"
+msgstr ""
+
+#: ../../internals/protocol.rst:147
+msgid "msgpack"
+msgstr ""
+
+#: ../../internals/protocol.rst:147
+msgid "application/x-msgpack"
+msgstr ""

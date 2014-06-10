@@ -1,0 +1,63 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.app.log.rst:3 ../../../celery/app/log.pydocstring of
+#: celery.app.log:2
+msgid "celery.app.log"
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of celery.app.log:4
+msgid "The Celery instances logging section: ``Celery.log``."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of celery.app.log:6
+msgid ""
+"Sets up logging for the worker and other programs, redirects stdouts, colors"
+" log output, patches logging related compatibility fixes, and so on."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.redirect_stdouts_to_logger:1
+msgid ""
+"Redirect :class:`sys.stdout` and :class:`sys.stderr` to a logging instance."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.redirect_stdouts_to_logger:4
+msgid "The :class:`logging.Logger` instance to redirect to."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.redirect_stdouts_to_logger:5
+msgid "The loglevel redirected messages will be logged as."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.setup_logger:1
+msgid "Deprecated: No longer used."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.setup_task_loggers:1
+msgid "Setup the task logger."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.setup_task_loggers:3
+msgid "If `logfile` is not specified, then `sys.stderr` is used."
+msgstr ""
+
+#: ../../../celery/app/log.pydocstring of
+#: celery.app.log.Logging.setup_task_loggers:5
+msgid "Will return the base task logger object."
+msgstr ""

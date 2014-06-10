@@ -1,0 +1,846 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../whatsnew-2.5.rst:5
+msgid "What's new in Celery 2.5"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:7
+msgid ""
+"Celery aims to be a flexible and reliable, best-of-breed solution to process"
+" vast amounts of messages in a distributed fashion, while providing "
+"operations with the tools to maintain such a system."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:11
+msgid ""
+"Celery has a large and diverse community of users and contributors, you "
+"should come join us :ref:`on IRC <irc-channel>` or :ref:`our mailing-list "
+"<mailing-list>`."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:15
+msgid "To read more about Celery you should visit our `website`_."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:17
+msgid ""
+"While this version is backward compatible with previous versions it is "
+"important that you read the following section."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:20
+msgid ""
+"If you use Celery in combination with Django you must also read the `django-"
+"celery changelog <djcelery:version-2.5.0>` and upgrade to `django-celery "
+"2.5`_."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:23
+msgid ""
+"This version is officially supported on CPython 2.5, 2.6, 2.7, 3.2 and 3.3, "
+"as well as PyPy and Jython."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:36
+msgid "Important Notes"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:39
+msgid "Broker connection pool now enabled by default"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:41
+msgid ""
+"The default limit is 10 connections, if you have many threads/green-threads "
+"using connections at the same time you may want to tweak this limit to avoid"
+" contention."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:45
+msgid "See the :setting:`BROKER_POOL_LIMIT` setting for more information."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:47
+msgid ""
+"Also note that publishing tasks will be retried by default, to change this "
+"default or the default retry policy see :setting:`CELERY_TASK_PUBLISH_RETRY`"
+" and :setting:`CELERY_TASK_PUBLISH_RETRY_POLICY`."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:53
+msgid "Rabbit Result Backend: Exchange is no longer *auto delete*"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:55
+msgid ""
+"The exchange used for results in the Rabbit (AMQP) result backend used to "
+"have the *auto_delete* flag set, which could result in a race condition "
+"leading to an annoying warning."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:59
+msgid "For RabbitMQ users"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:61
+msgid ""
+"Old exchanges created with the *auto_delete* flag enabled has to be removed."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:64
+msgid ""
+"The :program:`camqadm` command can be used to delete the previous exchange:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:71
+msgid ""
+"As an alternative to deleting the old exchange you can configure a new name "
+"for the exchange::"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:76
+msgid ""
+"But you have to make sure that all clients and workers use this new setting,"
+" so they are updated to use the same exchange name."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:81
+msgid "Solution for hanging workers (but must be manually enabled)"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:83
+msgid ""
+"The :setting:`CELERYD_FORCE_EXECV` setting has been added to solve a problem"
+" with deadlocks that originate when threads and fork is mixed together:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:91
+msgid ""
+"This setting is recommended for all users using the prefork pool, but "
+"especially users also using time limits or a max tasks per child setting."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:95
+msgid ""
+"See `Python Issue 6721`_ to read more about this issue, and why resorting to"
+" :func:`~os.execv`` is the only safe solution."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:98
+msgid ""
+"Enabling this option will result in a slight performance penalty when new "
+"child worker processes are started, and it will also increase memory usage "
+"(but many platforms are optimized, so the impact may be minimal).  "
+"Considering that it ensures reliability when replacing lost worker "
+"processes, it should be worth it."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:104
+msgid "It's already the default behavior on Windows."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:105
+msgid "It will be the default behavior for all platforms in a future version."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:112
+msgid "Optimizations"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:114
+msgid ""
+"The code path used when the worker executes a task has been heavily "
+"optimized, meaning the worker is able to process a great deal more "
+"tasks/second compared to previous versions.  As an example the solo pool can"
+" now process up to 15000 tasks/second on a 4 core MacBook Pro when using the"
+" `pylibrabbitmq`_ transport, where it previously could only do 5000 "
+"tasks/second."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:121
+msgid "The task error tracebacks are now much shorter."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:123
+msgid ""
+"Fixed a noticeable delay in task processing when rate limits are enabled."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:130 ../../whatsnew-2.5.rst:153
+msgid "Deprecations"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:133
+msgid "Removals"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:135
+msgid ""
+"The old :class:`TaskSet` signature of ``(task_name, list_of_tasks)`` can no "
+"longer be used (originally scheduled for removal in 2.4). The deprecated "
+"``.task_name`` and ``.task`` attributes has also been removed."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:140
+msgid ""
+"The functions ``celery.execute.delay_task``, ``celery.execute.apply``, and "
+"``celery.execute.apply_async`` has been removed (originally) scheduled for "
+"removal in 2.3)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:144
+msgid ""
+"The built-in ``ping`` task has been removed (originally scheduled for "
+"removal in 2.3).  Please use the ping broadcast command instead."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:148
+msgid ""
+"It is no longer possible to import ``subtask`` and ``TaskSet`` from "
+":mod:`celery.task.base`, please import them from :mod:`celery.task` instead "
+"(originally scheduled for removal in 2.4)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:155
+msgid ""
+"The :mod:`celery.decorators` module has changed status from pending "
+"deprecation to deprecated, and is scheduled for removal in version 4.0.  The"
+" ``celery.task`` module must be used instead."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:162
+msgid "News"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:165
+msgid "Timezone support"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:167
+msgid ""
+"Celery can now be configured to treat all incoming and outgoing dates as "
+"UTC, and the local timezone can be configured."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:170
+msgid ""
+"This is not yet enabled by default, since enabling time zone support means "
+"workers running versions pre 2.5 will be out of sync with upgraded workers."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:174
+msgid "To enable UTC you have to set :setting:`CELERY_ENABLE_UTC`::"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:178
+msgid ""
+"When UTC is enabled, dates and times in task messages will be converted to "
+"UTC, and then converted back to the local timezone when received by a "
+"worker."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:182
+msgid ""
+"You can change the local timezone using the :setting:`CELERY_TIMEZONE` "
+"setting.  Installing the :mod:`pytz` library is recommended when using a "
+"custom timezone, to keep timezone definition up-to-date, but it will "
+"fallback to a system definition of the timezone if available."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:187
+msgid "UTC will enabled by default in version 3.0."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:191
+msgid ""
+"django-celery will use the local timezone as specified by the ``TIME_ZONE`` "
+"setting, it will also honor the new `USE_TZ`_ setting introuced in Django "
+"1.4."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:198
+msgid "New security serializer using cryptographic signing"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:200
+msgid ""
+"A new serializer has been added that signs and verifies the signature of "
+"messages."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:203
+msgid ""
+"The name of the new serializer is ``auth``, and needs additional "
+"configuration to work (see :ref:`conf-security`)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:208
+msgid ":ref:`guide-security`"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:210 ../../whatsnew-2.5.rst:261
+#: ../../whatsnew-2.5.rst:546
+msgid "Contributed by Mher Movsisyan."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:213
+msgid "Experimental support for automatic module reloading"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:215
+msgid ""
+"Starting :program:`celeryd` with the :option:`--autoreload` option will "
+"enable the worker to watch for file system changes to all imported task "
+"modules imported (and also any non-task modules added to the "
+":setting:`CELERY_IMPORTS` setting or the :option:`-I|--include` option)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:220
+msgid ""
+"This is an experimental feature intended for use in development only, using "
+"auto-reload in production is discouraged as the behavior of reloading a "
+"module in Python is undefined, and may cause hard to diagnose bugs and "
+"crashes.  Celery uses the same approach as the auto-reloader found in e.g. "
+"the Django ``runserver`` command."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:226
+msgid ""
+"When auto-reload is enabled the worker starts an additional thread that "
+"watches for changes in the file system.  New modules are imported, and "
+"already imported modules are reloaded whenever a change is detected, and if "
+"the prefork pool is used the child processes will finish the work they are "
+"doing and exit, so that they can be replaced by fresh processes effectively "
+"reloading the code."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:233
+msgid ""
+"File system notification backends are pluggable, and Celery comes with three"
+" implementations:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:236
+msgid "inotify (Linux)"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:238
+msgid ""
+"Used if the :mod:`pyinotify` library is installed. If you are running on "
+"Linux this is the recommended implementation, to install the "
+":mod:`pyinotify` library you have to run the following command:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:247
+msgid "kqueue (OS X/BSD)"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:249
+msgid "stat"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:251
+msgid ""
+"The fallback implementation simply polls the files using ``stat`` and is "
+"very expensive."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:254
+msgid ""
+"You can force an implementation by setting the :envvar:`CELERYD_FSNOTIFY` "
+"environment variable:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:265
+msgid "New :setting:`CELERY_ANNOTATIONS` setting"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:267
+msgid ""
+"This new setting enables the configuration to modify task classes and their "
+"attributes."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:270
+msgid ""
+"The setting can be a dict, or a list of annotation objects that filter for "
+"tasks and return a map of attributes to change."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:273
+msgid ""
+"As an example, this is an annotation to change the ``rate_limit`` attribute "
+"for the ``tasks.add`` task:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:280
+msgid "or change the same for all tasks:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:286
+msgid "You can change methods too, for example the ``on_failure`` handler:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:295
+msgid ""
+"If you need more flexibility then you can also create objects that filter "
+"for tasks to annotate:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:309
+msgid "``current`` provides the currently executing task"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:311
+msgid ""
+"The new :data:`celery.task.current` proxy will always give the currently "
+"executing task."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:314
+msgid "**Example**:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:329
+msgid ""
+"Previously you would have to type ``update_twitter_status.retry(…)`` here, "
+"which can be annoying for long task names."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:333
+msgid ""
+"This will not work if the task function is called directly, i.e: "
+"``update_twitter_status(a, b)``. For that to work ``apply`` must be used: "
+"``update_twitter_status.apply((a, b))``."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:338
+msgid "In Other News"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:340
+msgid "Now depends on Kombu 2.1.0."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:342
+msgid "Efficient Chord support for the memcached backend (Issue #533)"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:344
+msgid ""
+"This means memcached joins Redis in the ability to do non-polling chords."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:347
+msgid "Contributed by Dan McGee."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:349
+msgid "Adds Chord support for the Rabbit result backend (amqp)"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:351
+msgid "The Rabbit result backend can now use the fallback chord solution."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:353
+msgid "Sending :sig:`QUIT` to celeryd will now cause it cold terminate."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:355
+msgid ""
+"That is, it will not finish executing the tasks it is currently working on."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:358
+msgid "Contributed by Alec Clowes."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:360
+msgid "New \"detailed\" mode for the Cassandra backend."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:362
+msgid ""
+"Allows to have a \"detailed\" mode for the Cassandra backend. Basically the "
+"idea is to keep all states using Cassandra wide columns. New states are then"
+" appended to the row as new columns, the last state being the last column."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:367
+msgid "See the :setting:`CASSANDRA_DETAILED_MODE` setting."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:369 ../../whatsnew-2.5.rst:459
+#: ../../whatsnew-2.5.rst:463
+msgid "Contributed by Steeve Morin."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:371
+msgid ""
+"The crontab parser now matches Vixie Cron behavior when parsing ranges with "
+"steps (e.g. 1-59/2)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:374
+msgid "Contributed by Daniel Hepper."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:376
+msgid "celerybeat can now be configured on the command-line like celeryd."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:378
+msgid ""
+"Additional configuration must be added at the end of the argument list "
+"followed by ``--``, for example:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:385
+msgid ""
+"Now limits the number of frames in a traceback so that celeryd does not "
+"crash on maximum recursion limit exceeded exceptions (Issue #615)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:388
+msgid ""
+"The limit is set to the current recursion limit divided by 8 (which is 125 "
+"by default)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:391
+msgid ""
+"To get or set the current recursion limit use :func:`sys.getrecursionlimit` "
+"and :func:`sys.setrecursionlimit`."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:394
+msgid "More information is now preserved in the pickleable traceback."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:396
+msgid "This has been added so that Sentry can show more details."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:398
+msgid "Contributed by Sean O'Connor."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:400
+msgid "CentOS init script has been updated and should be more flexible."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:402
+msgid "Contributed by Andrew McFague."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:404
+msgid "MongoDB result backend now supports ``forget()``."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:406
+msgid "Contributed by Andrew McFague"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:408
+msgid ""
+"``task.retry()`` now re-raises the original exception keeping the original "
+"stack trace."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:411
+msgid "Suggested by ojii."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:413
+msgid ""
+"The `--uid` argument to daemons now uses ``initgroups()`` to set groups to "
+"all the groups the user is a member of."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:416
+msgid "Contributed by Łukasz Oleś."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:418
+msgid "celeryctl: Added ``shell`` command."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:420
+msgid ""
+"The shell will have the current_app (``celery``) and all tasks automatically"
+" added to locals."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:423
+msgid "celeryctl: Added ``migrate`` command."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:425
+msgid ""
+"The migrate command moves all tasks from one broker to another. Note that "
+"this is experimental and you should have a backup of the data before "
+"proceeding."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:429
+msgid "**Examples**:"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:437
+msgid ""
+"Routers can now override the ``exchange`` and ``routing_key`` used to create"
+" missing queues (Issue #577)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:440
+msgid ""
+"By default this will always use the name of the queue, but you can now have "
+"a router return exchange and routing_key keys to set them."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:444
+msgid ""
+"This is useful when using routing classes which decides a destination at "
+"runtime."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:447
+msgid "Contributed by Akira Matsuzaki."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:449
+msgid ""
+"Redis result backend: Adds support for a ``max_connections`` parameter."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:451
+msgid ""
+"It is now possible to configure the maximum number of simultaneous "
+"connections in the Redis connection pool used for results."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:455
+msgid ""
+"The default max connections setting can be configured using the "
+":setting:`CELERY_REDIS_MAX_CONNECTIONS` setting, or it can be changed "
+"individually by ``RedisBackend(max_connections=int)``."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:461
+msgid ""
+"Redis result backend: Adds the ability to wait for results without polling."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:465
+msgid "MongoDB result backend: Now supports save and restore taskset."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:467
+msgid "Contributed by Julien Poissonnier."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:469
+msgid "There's a new :ref:`guide-security` guide in the documentation."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:471
+msgid "The init scripts has been updated, and many bugs fixed."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:473
+msgid "Contributed by Chris Streeter."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:475
+msgid "User (tilde) is now expanded in command-line arguments."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:477
+msgid "Can now configure CELERYCTL envvar in :file:`/etc/default/celeryd`."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:479
+msgid ""
+"While not necessary for operation, :program:`celeryctl` is used for the "
+"``celeryd status`` command, and the path to :program:`celeryctl` must be "
+"configured for that to work."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:483
+msgid "The daemonization cookbook contains examples."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:485
+msgid "Contributed by Jude Nagurney."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:487
+msgid "The MongoDB result backend can now use Replica Sets."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:489
+msgid "Contributed by Ivan Metzlar."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:491
+msgid "gevent: Now supports autoscaling (Issue #599)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:493
+msgid "Contributed by Mark Lavin."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:495
+msgid ""
+"multiprocessing: Mediator thread is now always enabled, even though rate "
+"limits are disabled, as the pool semaphore is known to block the main "
+"thread, causing broadcast commands and shutdown to depend on the semaphore "
+"being released."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:501
+msgid "Fixes"
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:503
+msgid ""
+"Exceptions that are re-raised with a new exception object now keeps the "
+"original stack trace."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:506
+msgid "Windows: Fixed the ``no handlers found for multiprocessing`` warning."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:508
+msgid "Windows: The ``celeryd`` program can now be used."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:510
+msgid ""
+"Previously Windows users had to launch celeryd using ``python -m "
+"celery.bin.celeryd``."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:513
+msgid ""
+"Redis result backend: Now uses ``SETEX`` command to set result key, and "
+"expiry atomically."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:516
+msgid "Suggested by yaniv-aknin."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:518
+msgid ""
+"celeryd: Fixed a problem where shutdown hanged when Ctrl+C was used to "
+"terminate."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:521
+msgid "celeryd: No longer crashes when channel errors occur."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:523
+msgid "Fix contributed by Roger Hu."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:525
+msgid ""
+"Fixed memory leak in the eventlet pool, caused by the use of "
+"``greenlet.getcurrent``."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:528
+msgid "Fix contributed by Ignas Mikalajūnas."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:531
+msgid ""
+"Cassandra backend: No longer uses :func:`pycassa.connect` which is "
+"deprecated since :mod:`pycassa` 1.4."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:534
+msgid "Fix contributed by Jeff Terrace."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:536
+msgid ""
+"Fixed unicode decode errors that could occur while sending error emails."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:538
+msgid "Fix contributed by Seong Wun Mun."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:540
+msgid ""
+"``celery.bin`` programs now always defines ``__package__`` as recommended by"
+" PEP-366."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:543
+msgid ""
+"``send_task`` now emits a warning when used in combination with "
+":setting:`CELERY_ALWAYS_EAGER` (Issue #581)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:548
+msgid ""
+"``apply_async`` now forwards the original keyword arguments to ``apply`` "
+"when :setting:`CELERY_ALWAYS_EAGER` is enabled."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:551
+msgid ""
+"celeryev now tries to re-establish the connection if the connection to the "
+"broker is lost (Issue #574)."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:554
+msgid ""
+"celeryev: Fixed a crash occurring if a task has no associated worker "
+"information."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:557
+msgid "Fix contributed by Matt Williamson."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:559
+msgid ""
+"The current date and time is now consistently taken from the current loaders"
+" ``now`` method."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:562
+msgid ""
+"Now shows helpful error message when given a config module ending in ``.py``"
+" that can't be imported."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:565
+msgid ""
+"celeryctl: The ``--expires`` and ``-eta`` arguments to the apply command can"
+" now be an ISO-8601 formatted string."
+msgstr ""
+
+#: ../../whatsnew-2.5.rst:568
+msgid ""
+"celeryctl now exits with exit status ``EX_UNAVAILABLE`` (69) if no replies "
+"have been received."
+msgstr ""

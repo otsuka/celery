@@ -1,0 +1,43 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.worker.heartbeat.rst:3
+#: ../../../celery/worker/heartbeat.pydocstring of celery.worker.heartbeat:2
+msgid "celery.worker.heartbeat"
+msgstr ""
+
+#: ../../../celery/worker/heartbeat.pydocstring of celery.worker.heartbeat:4
+msgid ""
+"This is the internal thread that sends heartbeat events at regular "
+"intervals."
+msgstr ""
+
+#: ../../../celery/worker/heartbeat.pydocstring of
+#: celery.worker.heartbeat.Heart:1
+msgid "Timer sending heartbeats at regular intervals."
+msgstr ""
+
+#: ../../../celery/worker/heartbeat.pydocstring of
+#: celery.worker.heartbeat.Heart:3
+msgid "Timer instance."
+msgstr ""
+
+#: ../../../celery/worker/heartbeat.pydocstring of
+#: celery.worker.heartbeat.Heart:4
+msgid "Event dispatcher used to send the event."
+msgstr ""
+
+#: ../../../celery/worker/heartbeat.pydocstring of
+#: celery.worker.heartbeat.Heart:5
+msgid "Time in seconds between heartbeats. Default is 2 seconds."
+msgstr ""

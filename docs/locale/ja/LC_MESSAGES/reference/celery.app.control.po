@@ -1,0 +1,267 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.app.control.rst:3
+#: ../../../celery/app/control.pydocstring of celery.app.control:2
+msgid "celery.app.control"
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of celery.app.control:4
+msgid ""
+"Client for worker remote control commands. Server implementation is in "
+":mod:`celery.worker.control`."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:1
+msgid "Tell all (or specific) workers to start consuming from a new queue."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:3
+msgid ""
+"Only the queue name is required as if only the queue is specified then the "
+"exchange/routing key will be set to the same name ( like automatic queues "
+"do)."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:9
+msgid ""
+"This command does not respect the default queue/exchange options in the "
+"configuration."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:12
+msgid "Name of queue to start consuming from."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:13
+msgid "Optional name of exchange."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:14
+msgid ""
+"Type of exchange (defaults to 'direct') command to, when empty broadcast to "
+"all workers."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:16
+msgid "Optional routing key."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:17
+msgid ""
+"Additional options as supported by :meth:`kombu.entitiy.Queue.from_dict`."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.add_consumer:20
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.ping:5 ../../../celery/app/control.pydocstring
+#: of celery.app.control.Control.rate_limit:10
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:12
+msgid "See :meth:`broadcast` for supported keyword arguments."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:1
+msgid "Broadcast a control command to the celery workers."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:3
+msgid "Name of command to send."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:4
+msgid "Keyword arguments for the command."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:5
+msgid ""
+"If set, a list of the hosts to send the command to, when empty broadcast to "
+"all workers."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:7
+msgid ""
+"Custom broker connection to use, if not set, a connection will be "
+"established automatically."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:9
+msgid "Wait for and return the reply."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:10
+msgid "Timeout in seconds to wait for the reply."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:11
+msgid "Limit number of replies."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.broadcast:12
+msgid "Callback called immediately for each reply received."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.cancel_consumer:1
+msgid "Tell all (or specific) workers to stop consuming from ``queue``."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.cancel_consumer:3
+msgid "Supports the same keyword arguments as :meth:`broadcast`."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.disable_events:1
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.enable_events:1
+msgid "Tell all (or specific) workers to enable events."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.discard_all:1
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.purge:1
+msgid "Discard all waiting tasks."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.discard_all:3
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.purge:3
+msgid ""
+"This will ignore all tasks waiting for execution, and they will be deleted "
+"from the messaging server."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.discard_all:6
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.purge:6
+msgid "the number of tasks discarded."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.ping:1
+msgid "Ping all (or specific) workers."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.ping:3
+msgid "Will return the list of answers."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.pool_grow:1
+msgid "Tell all (or specific) workers to grow the pool by ``n``."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.pool_grow:3
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.pool_shrink:3
+msgid "Supports the same arguments as :meth:`broadcast`."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.pool_shrink:1
+msgid "Tell all (or specific) workers to shrink the pool by ``n``."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.rate_limit:1
+msgid ""
+"Tell all (or specific) workers to set a new rate limit for task by type."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.rate_limit:4
+msgid "Name of task to change rate limit for."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.rate_limit:5
+msgid ""
+"The rate limit as tasks per second, or a rate limit string (`'100/m'`, etc. "
+"see :attr:`celery.task.base.Task.rate_limit` for more information)."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:1
+msgid "Tell all (or specific) workers to revoke a task by id."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:3
+msgid ""
+"If a task is revoked, the workers will ignore the task and not execute it "
+"after all."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:6
+msgid "Id of the task to revoke."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:7
+msgid "Also terminate the process currently working on the task (if any)."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.revoke:9
+msgid "Name of signal to send to process if terminate. Default is TERM."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.time_limit:1
+msgid "Tell all (or specific) workers to set time limits for a task by type."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.time_limit:4
+msgid "Name of task to change time limits for."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.time_limit:5
+msgid "New soft time limit (in seconds)."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.time_limit:6
+msgid "New hard time limit (in seconds)."
+msgstr ""
+
+#: ../../../celery/app/control.pydocstring of
+#: celery.app.control.Control.time_limit:8
+msgid "Any additional keyword arguments are passed on to :meth:`broadcast`."
+msgstr ""

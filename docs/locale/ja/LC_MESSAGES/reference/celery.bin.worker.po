@@ -1,0 +1,170 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.bin.worker.rst:3
+msgid "celery.bin.worker"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:1
+msgid "The :program:`celery worker` command (previously known as ``celeryd``)"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:7
+msgid "See :ref:`preload-options`."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:11
+msgid ""
+"Number of child processes processing the queue. The default is the number of"
+" CPUs available on your system."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:16
+msgid "Pool implementation:"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:18
+msgid "prefork (default), eventlet, gevent, solo or threads."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:22
+msgid "Path to log file. If no logfile is specified, `stderr` is used."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:26
+msgid ""
+"Logging level, choose between `DEBUG`, `INFO`, `WARNING`, `ERROR`, "
+"`CRITICAL`, or `FATAL`."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:31
+msgid ""
+"Set custom hostname, e.g. 'w1.%h'. Expands: %h (hostname), %n (name) and %d,"
+" (domain)."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:36
+msgid ""
+"Also run the `celery beat` periodic task scheduler. Please note that there "
+"must only be one instance of this service."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:41
+msgid ""
+"List of queues to enable for this worker, separated by comma. By default all"
+" configured queues are enabled. Example: `-Q video,image`"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:47
+msgid ""
+"Comma separated list of additional modules to import. Example: -I "
+"foo.tasks,bar.tasks"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:52
+msgid ""
+"Path to the schedule database if running with the `-B` option. Defaults to "
+"`celerybeat-schedule`. The extension \".db\" may be appended to the "
+"filename."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:58
+msgid "Apply optimization profile.  Supported: default, fair"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:62
+msgid "Scheduler class to use. Default is celery.beat.PersistentScheduler"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:66
+msgid ""
+"Path to the state database. The extension '.db' may be appended to the "
+"filename. Default: {default}"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:71
+msgid ""
+"Send events that can be captured by monitors like :program:`celery events`, "
+"`celerymon`, and others."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:76
+msgid "Do not subscribe to other workers events."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:80
+msgid "Do not synchronize with other workers at startup."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:84
+msgid "Do not send event heartbeats."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:88
+msgid "Interval in seconds at which to send worker heartbeat"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:92
+msgid ""
+"Purges all waiting tasks before the daemon is started. **WARNING**: This is "
+"unrecoverable, and the tasks will be deleted from the messaging server."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:98
+msgid "Enables a hard time limit (in seconds int/float) for tasks."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:102
+msgid "Enables a soft time limit (in seconds int/float) for tasks."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:106
+msgid ""
+"Maximum number of tasks a pool worker can execute before it's terminated and"
+" replaced by a new worker."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:111
+msgid "Optional file used to store the workers pid."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:113
+msgid ""
+"The worker will not start if this file already exists and the pid is still "
+"alive."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:118
+msgid ""
+"Enable autoscaling by providing max_concurrency, min_concurrency. Example::"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:123
+msgid "(always keep 3 processes, but grow to 10 if necessary)"
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:127
+msgid "Enable autoreloading."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker:131
+msgid "Don't do execv after multiprocessing child fork."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker.worker:1
+msgid "Start worker instance."
+msgstr ""
+
+#: ../../../celery/bin/worker.pydocstring of celery.bin.worker.worker:3
+msgid "Examples::"
+msgstr ""

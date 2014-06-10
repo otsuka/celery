@@ -1,0 +1,51 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../docstring of celery.contrib.rdb:2
+msgid "celery.contrib.rdb"
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb:4
+msgid ""
+"Remote debugger for Celery tasks running in multiprocessing pool workers. "
+"Inspired by http://snippets.dzone.com/posts/show/7248"
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb:7
+msgid "**Usage**"
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb:21
+msgid "**Environment Variables**"
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb:25
+msgid ""
+"Hostname to bind to.  Default is '127.0.01', which means the socket will "
+"only be accessible from the local host."
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb:30
+msgid ""
+"Base port to bind to.  Default is 6899. The debugger will try to find an "
+"available port starting from the base port.  The selected port will be "
+"logged by the worker."
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb.set_trace:1
+msgid "Set breakpoint at current location, or a specified frame"
+msgstr ""
+
+#: ../../docstring of celery.contrib.rdb.debugger:1
+msgid "Return the current debugger instance (if any), or creates a new one."
+msgstr ""

@@ -1,0 +1,91 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/resources.rst:5
+msgid "Resources"
+msgstr ""
+
+#: ../../includes/resources.txt:4
+msgid "Getting Help"
+msgstr ""
+
+#: ../../includes/resources.txt:9
+msgid "Mailing list"
+msgstr ""
+
+#: ../../includes/resources.txt:11
+msgid ""
+"For discussions about the usage, development, and future of celery, please "
+"join the `celery-users`_ mailing list."
+msgstr ""
+
+#: ../../includes/resources.txt:19
+msgid "IRC"
+msgstr ""
+
+#: ../../includes/resources.txt:21
+msgid ""
+"Come chat with us on IRC. The **#celery** channel is located at the "
+"`Freenode`_ network."
+msgstr ""
+
+#: ../../includes/resources.txt:29
+msgid "Bug tracker"
+msgstr ""
+
+#: ../../includes/resources.txt:31
+msgid ""
+"If you have any suggestions, bug reports or annoyances please report them to"
+" our issue tracker at http://github.com/celery/celery/issues/"
+msgstr ""
+
+#: ../../includes/resources.txt:37
+msgid "Wiki"
+msgstr ""
+
+#: ../../includes/resources.txt:39
+msgid "http://wiki.github.com/celery/celery/"
+msgstr ""
+
+#: ../../includes/resources.txt:44
+msgid "Contributing"
+msgstr ""
+
+#: ../../includes/resources.txt:46
+msgid ""
+"Development of `celery` happens at Github: http://github.com/celery/celery"
+msgstr ""
+
+#: ../../includes/resources.txt:48
+msgid ""
+"You are highly encouraged to participate in the development of `celery`. If "
+"you don't like Github (for some reason) you're welcome to send regular "
+"patches."
+msgstr ""
+
+#: ../../includes/resources.txt:52
+msgid ""
+"Be sure to also read the `Contributing to Celery`_ section in the "
+"documentation."
+msgstr ""
+
+#: ../../includes/resources.txt:61
+msgid "License"
+msgstr ""
+
+#: ../../includes/resources.txt:63
+msgid ""
+"This software is licensed under the `New BSD License`. See the "
+":file:`LICENSE` file in the top distribution directory for the full license "
+"text."
+msgstr ""

@@ -1,0 +1,140 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.worker.job.rst:3
+#: ../../../celery/worker/job.pydocstring of celery.worker.job:2
+msgid "celery.worker.job"
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of celery.worker.job:4
+msgid ""
+"This module defines the :class:`Request` class, which specifies how tasks "
+"are executed."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of celery.worker.job.Request:1
+msgid "A request for task execution."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.acknowledge:1
+msgid "Acknowledge task."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.error_msg:1
+msgid "Format string used to log task failure."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute:1
+msgid "Execute the task in a :func:`~celery.app.trace.trace_task`."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute:3
+msgid "The loglevel used by the task."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute:4
+msgid "The logfile used by the task."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute_using_pool:1
+msgid "Used by the worker to send this task to the pool."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute_using_pool:3
+msgid "A :class:`celery.concurrency.base.TaskPool` instance."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.execute_using_pool:5
+msgid "if the task was revoked and ignored."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.extend_with_default_kwargs:1
+msgid "Extend the tasks keyword arguments with standard task arguments."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.extend_with_default_kwargs:3
+msgid ""
+"Currently these are `logfile`, `loglevel`, `task_id`, `task_name`, "
+"`task_retries`, and `delivery_info`."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.extend_with_default_kwargs:6
+msgid "See :meth:`celery.task.base.Task.run` for more information."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.extend_with_default_kwargs:8
+msgid ""
+"Magic keyword arguments are deprecated and will be removed in version 4.0."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.internal_error_msg:1
+msgid "Format string used to log internal error."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.maybe_expire:1
+msgid "If expired, mark the task as revoked."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.on_accepted:1
+msgid "Handler called when task is accepted by worker pool."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.on_failure:1
+msgid "Handler called if the task raised an exception."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.on_retry:1
+msgid "Handler called if the task should be retried."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.on_success:1
+msgid "Handler called if the task was successfully processed."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.on_timeout:1
+msgid "Handler called if the task times out."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.retry_msg:1
+msgid "Format string used to log task retry."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.revoked:1
+msgid "If revoked, skip task and mark state."
+msgstr ""
+
+#: ../../../celery/worker/job.pydocstring of
+#: celery.worker.job.Request.success_msg:1
+msgid "Format string used to log task success."
+msgstr ""

@@ -1,0 +1,108 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../internals/reference/celery.utils.serialization.rst:3
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization:2
+msgid "celery.utils.serialization"
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization:4
+msgid "Utilities for safely pickling exceptions."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper:1
+msgid "Wraps unpickleable exceptions."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper:3
+msgid "see :attr:`exc_module`."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper:4
+msgid "see :attr:`exc_cls_name`."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper:5
+msgid "see :attr:`exc_args`"
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper:7
+msgid "**Example**"
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_args:1
+msgid "The arguments for the original exception."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_cls_name:1
+msgid "The name of the original exception class."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.UnpickleableExceptionWrapper.exc_module:1
+msgid "The module of the original exception."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.find_pickleable_exception:1
+msgid ""
+"With an exception instance, iterate over its super classes (by mro) and find"
+" the first super exception that is pickleable.  It does not go below "
+":exc:`Exception` (i.e. it skips :exc:`Exception`, :class:`BaseException` and"
+" :class:`object`).  If that happens you should use "
+":exc:`UnpickleableException` instead."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.find_pickleable_exception:7
+msgid "An exception instance."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.find_pickleable_exception:9
+msgid ""
+"Will return the nearest pickleable parent exception class (except "
+":exc:`Exception` and parents), or if the exception is pickleable it will "
+"return :const:`None`."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.find_pickleable_exception:13
+msgid ":rtype :exc:`Exception`:"
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.create_exception_cls:1
+msgid "Dynamically create an exception class."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.get_pickleable_exception:1
+msgid "Make sure exception is pickleable."
+msgstr ""
+
+#: ../../../celery/utils/serialization.pydocstring of
+#: celery.utils.serialization.get_pickled_exception:1
+msgid ""
+"Get original exception from exception pickled using "
+":meth:`get_pickleable_exception`."
+msgstr ""

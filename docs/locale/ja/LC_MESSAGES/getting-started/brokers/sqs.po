@@ -1,0 +1,225 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../getting-started/brokers/sqs.rst:5
+msgid "Using Amazon SQS"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:7
+msgid "Experimental Status"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:9
+msgid ""
+"The SQS transport is in need of improvements in many areas and there are "
+"several open bugs.  Unfortunately we don't have the resources or funds "
+"required to improve the situation, so we're looking for contributors and "
+"partners willing to help."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:17
+msgid "Installation"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:19
+msgid "For the Amazon SQS support you have to install the `boto`_ library:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:31
+msgid "Configuration"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:33
+msgid "You have to specify SQS in the broker URL::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:37
+msgid "where the URL format is::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:41
+msgid "you must *remember to include the \"@\" at the end*."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:43
+msgid ""
+"The login credentials can also be set using the environment variables "
+":envvar:`AWS_ACCESS_KEY_ID` and :envvar:`AWS_SECRET_ACCESS_KEY`, in that "
+"case the broker url may only be ``sqs://``."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:49
+msgid ""
+"If you specify AWS credentials in the broker URL, then please keep in mind "
+"that the secret access key may contain unsafe characters that needs to be "
+"URL encoded."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:54
+msgid "Options"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:57
+msgid "Region"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:59
+msgid ""
+"The default region is ``us-east-1`` but you can select another region by "
+"configuring the :setting:`BROKER_TRANSPORT_OPTIONS` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:66
+msgid "An overview of Amazon Web Services regions can be found here:"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:68
+msgid "http://aws.amazon.com/about-aws/globalinfrastructure/"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:71
+msgid "Visibility Timeout"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:73
+msgid ""
+"The visibility timeout defines the number of seconds to wait for the worker "
+"to acknowledge the task before the message is redelivered to another worker."
+"  Also see caveats below."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:77
+msgid ""
+"This option is set via the :setting:`BROKER_TRANSPORT_OPTIONS` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:81
+msgid "The default visibility timeout is 30 seconds."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:84
+msgid "Polling Interval"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:86
+msgid ""
+"The polling interval decides the number of seconds to sleep between "
+"unsuccessful polls.  This value can be either an int or a float. By default "
+"the value is 1 second, which means that the worker will sleep for one second"
+" whenever there are no more messages to read."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:91
+msgid ""
+"You should note that **more frequent polling is also more expensive, so "
+"increasing the polling interval can save you money**."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:94
+msgid ""
+"The polling interval can be set via the :setting:`BROKER_TRANSPORT_OPTIONS` "
+"setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:99
+msgid ""
+"Very frequent polling intervals can cause *busy loops*, which results in the"
+" worker using a lot of CPU time.  If you need sub-millisecond precision you "
+"should consider using another transport, like `RabbitMQ <broker-amqp>`, or "
+"`Redis <broker-redis>`."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:105
+msgid "Queue Prefix"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:107
+msgid ""
+"By default Celery will not assign any prefix to the queue names, If you have"
+" other services using SQS you can configure it do so using the "
+":setting:`BROKER_TRANSPORT_OPTIONS` setting::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:117
+msgid "Caveats"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:119
+msgid ""
+"If a task is not acknowledged within the ``visibility_timeout``, the task "
+"will be redelivered to another worker and executed."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:122
+msgid ""
+"This causes problems with ETA/countdown/retry tasks where the time to "
+"execute exceeds the visibility timeout; in fact if that happens it will be "
+"executed again, and again in a loop."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:126
+msgid ""
+"So you have to increase the visibility timeout to match the time of the "
+"longest ETA you are planning to use."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:129
+msgid ""
+"Note that Celery will redeliver messages at worker shutdown, so having a "
+"long visibility timeout will only delay the redelivery of 'lost' tasks in "
+"the event of a power failure or forcefully terminated workers."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:134
+msgid ""
+"Periodic tasks will not be affected by the visibility timeout, as it is a "
+"concept separate from ETA/countdown."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:137
+msgid ""
+"The maximum visibility timeout supported by AWS as of this writing is 12 "
+"hours (43200 seconds)::"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:142
+msgid "SQS does not yet support worker remote control commands."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:144
+msgid ""
+"SQS does not yet support events, and so cannot be used with :program:`celery"
+" events`, :program:`celerymon` or the Django Admin monitor."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:151
+msgid "Results"
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:153
+msgid ""
+"Multiple products in the Amazon Web Services family could be a good "
+"candidate to store or publish results with, but there is no such result "
+"backend included at this point."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:159
+msgid "Do not use the ``amqp`` result backend with SQS."
+msgstr ""
+
+#: ../../getting-started/brokers/sqs.rst:161
+msgid ""
+"It will create one queue for every task, and the queues will not be "
+"collected.  This could cost you money that would be better spent "
+"contributing an AWS result store backend back to Celery :)"
+msgstr ""

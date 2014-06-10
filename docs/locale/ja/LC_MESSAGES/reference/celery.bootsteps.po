@@ -1,0 +1,123 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.bootsteps.rst:3
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps:2
+msgid "celery.bootsteps"
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps:4
+msgid "A directed acyclic graph of reusable components."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:1
+msgid "Blueprint containing bootsteps that can be applied to objects."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:3
+msgid "List of steps."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:4
+msgid "Set explicit name for this blueprint."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:5
+msgid "Set the Celery app for this blueprint."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:6
+msgid "Optional callback applied after blueprint start."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:7
+msgid "Optional callback applied before blueprint close."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint:8
+msgid "Optional callback applied after blueprint stopped."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint.apply:1
+msgid "Apply the steps in this blueprint to an object."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Blueprint.apply:3
+msgid ""
+"This will apply the ``__init__`` and ``include`` methods of each step, with "
+"the object as argument::"
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of
+#: celery.bootsteps.Blueprint.apply:10
+msgid ""
+"For :class:`StartStopStep` the services created will also be added to the "
+"objects ``steps`` attribute."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step:1
+msgid "A Bootstep."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step:3
+msgid ""
+"The :meth:`__init__` method is called when the step is bound to a parent "
+"object, and can as such be used to initialize attributes in the parent "
+"object at parent instantiation-time."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of
+#: celery.bootsteps.Step.conditional:1
+msgid "Set this to true if the step is enabled based on some condition."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.create:1
+msgid "Create the step."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.enabled:1
+msgid "This provides the default for :meth:`include_if`."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.include_if:1
+msgid ""
+"An optional predicate that decides whether this step should be created."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.label:1
+msgid "Optional short name used for graph outputs and in logs."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.last:1
+msgid ""
+"This flag is reserved for the workers Consumer, since it is required to "
+"always be started last. There can only be one object marked last in every "
+"blueprint."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.name:1
+msgid "Optional step name, will use qualname if not specified."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of celery.bootsteps.Step.requires:1
+msgid ""
+"List of other steps that that must be started before this step. Note that "
+"all dependencies must be in the same blueprint."
+msgstr ""
+
+#: ../../../celery/bootsteps.pydocstring of
+#: celery.bootsteps.StartStopStep.obj:1
+msgid ""
+"Optional obj created by the :meth:`create` method. This is used by "
+":class:`StartStopStep` to keep the original service object."
+msgstr ""

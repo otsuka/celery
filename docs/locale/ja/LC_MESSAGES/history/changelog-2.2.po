@@ -1,0 +1,1650 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history/changelog-2.2.rst:5
+msgid "Change history for Celery 2.2"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:13
+msgid "2.2.8"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:14
+msgid "2011-11-25 04:00 P.M GMT"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:15 ../../history/changelog-2.2.rst:39
+#: ../../history/changelog-2.2.rst:63 ../../history/changelog-2.2.rst:121
+#: ../../history/changelog-2.2.rst:305 ../../history/changelog-2.2.rst:338
+#: ../../history/changelog-2.2.rst:396 ../../history/changelog-2.2.rst:427
+#: ../../history/changelog-2.2.rst:451
+msgid "Ask Solem"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:20
+msgid "Security Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:22
+msgid ""
+"[Security: `CELERYSA-0001`_] Daemons would set effective id's rather than "
+"real id's when the :option:`--uid`/:option:`--gid` arguments to "
+":program:`celery multi`, :program:`celeryd_detach`, :program:`celery beat` "
+"and :program:`celery events` were used."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:27
+msgid ""
+"This means privileges weren't properly dropped, and that it would be "
+"possible to regain supervisor privileges later."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:37
+msgid "2.2.7"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:38
+msgid "2011-06-13 04:00 P.M BST"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:41
+msgid ""
+"New signals: :signal:`after_setup_logger` and "
+":signal:`after_setup_task_logger`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:44
+msgid ""
+"These signals can be used to augment logging configuration after Celery has "
+"set up logging."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:47
+msgid "Redis result backend now works with Redis 2.4.4."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:49
+msgid "multi: The :option:`--gid` option now works correctly."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:51
+msgid ""
+"worker: Retry wrongfully used the repr of the traceback instead of the "
+"string representation."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:54
+msgid "App.config_from_object: Now loads module, not attribute of module."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:56
+msgid "Fixed issue where logging of objects would give \"<Unrepresentable: ...>\""
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:61
+msgid "2.2.6"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:62
+msgid "2011-04-15 04:00 P.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:68 ../../history/changelog-2.2.rst:126
+#: ../../history/changelog-2.2.rst:456
+msgid "Important Notes"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:70
+msgid "Now depends on Kombu 1.1.2."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:72
+msgid ""
+"Dependency lists now explicitly specifies that we don't want python-dateutil"
+" 2.x, as this version only supports py3k."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:75
+msgid ""
+"If you have installed dateutil 2.0 by accident you should downgrade to the "
+"1.5.0 version::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:80
+msgid "or by easy_install::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:87 ../../history/changelog-2.2.rst:187
+#: ../../history/changelog-2.2.rst:310 ../../history/changelog-2.2.rst:343
+#: ../../history/changelog-2.2.rst:401 ../../history/changelog-2.2.rst:432
+#: ../../history/changelog-2.2.rst:959
+msgid "Fixes"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:89
+msgid "The new ``WatchedFileHandler`` broke Python 2.5 support (Issue #367)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:91
+msgid "Task: Don't use ``app.main`` if the task name is set explicitly."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:93
+msgid ""
+"Sending emails did not work on Python 2.5, due to a bug in the version "
+"detection code (Issue #378)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:96
+msgid "Beat: Adds method ``ScheduleEntry._default_now``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:98
+msgid ""
+"This method can be overridden to change the default value of "
+"``last_run_at``."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:101
+msgid "An error occurring in process cleanup could mask task errors."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:103
+msgid ""
+"We no longer propagate errors happening at process cleanup, but log them "
+"instead.  This way they will not interfere with publishing the task result "
+"(Issue #365)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:107
+msgid ""
+"Defining tasks did not work properly when using the Django ``shell_plus`` "
+"utility (Issue #366)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:111
+msgid "``AsyncResult.get`` did not accept the ``interval`` and ``propagate``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:111
+msgid "arguments."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:114
+msgid "worker: Fixed a bug where the worker would not shutdown if a"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:114
+msgid ":exc:`socket.error` was raised."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:119
+msgid "2.2.5"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:120
+msgid "2011-03-28 06:00 P.M CEST"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:128
+msgid "Now depends on Kombu 1.0.7"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:133 ../../history/changelog-2.2.rst:767
+msgid "News"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:135
+msgid ""
+"Our documentation is now hosted by Read The Docs "
+"(http://docs.celeryproject.org), and all links have been changed to point to"
+" the new URL."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:139
+msgid ""
+"Logging: Now supports log rotation using external tools like `logrotate.d`_ "
+"(Issue #321)"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:142
+msgid ""
+"This is accomplished by using the ``WatchedFileHandler``, which re-opens the"
+" file if it is renamed or deleted."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:149
+msgid ""
+"otherqueues tutorial now documents how to configure Redis/Database result"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:149
+msgid "backends."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:151
+msgid "gevent: Now supports ETA tasks."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:153
+msgid "But gevent still needs ``CELERY_DISABLE_RATE_LIMITS=True`` to work."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:155
+msgid "TaskSet User Guide: now contains TaskSet callback recipes."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:157
+msgid "Eventlet: New signals:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:159
+msgid "``eventlet_pool_started``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:160
+msgid "``eventlet_pool_preshutdown``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:161
+msgid "``eventlet_pool_postshutdown``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:162
+msgid "``eventlet_pool_apply``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:164
+msgid "See :mod:`celery.signals` for more information."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:166
+msgid ""
+"New :setting:`BROKER_TRANSPORT_OPTIONS` setting can be used to pass "
+"additional arguments to a particular broker transport."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:169
+msgid ""
+"worker: ``worker_pid`` is now part of the request info as returned by "
+"broadcast commands."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:172
+msgid ""
+"TaskSet.apply/Taskset.apply_async now accepts an optional ``taskset_id`` "
+"argument."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:175
+msgid "The taskset_id (if any) is now available in the Task request context."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:177
+msgid ""
+"SQLAlchemy result backend: taskset_id and taskset_id columns now have a "
+"unique constraint.  (Tables need to recreated for this to take affect)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:180
+msgid "Task Userguide: Added section about choosing a result backend."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:182
+msgid "Removed unused attribute ``AsyncResult.uuid``."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:189
+msgid ""
+"multiprocessing.Pool:  Fixes race condition when marking job with "
+"``WorkerLostError`` (Issue #268)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:192
+msgid ""
+"The process may have published a result before it was terminated, but we "
+"have no reliable way to detect that this is the case."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:195
+msgid ""
+"So we have to wait for 10 seconds before marking the result with "
+"WorkerLostError.  This gives the result handler a chance to retrieve the "
+"result."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:199
+msgid "multiprocessing.Pool: Shutdown could hang if rate limits disabled."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:201
+msgid ""
+"There was a race condition when the MainThread was waiting for the pool "
+"semaphore to be released.  The ResultHandler now terminates after 5 seconds "
+"if there are unacked jobs, but no worker processes left to start them  (it "
+"needs to timeout because there could still be an ack+result that we haven't "
+"consumed from the result queue. It is unlikely we will receive any after 5 "
+"seconds with no worker processes)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:208
+msgid ""
+"celerybeat: Now creates pidfile even if the ``--detach`` option is not set."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:210
+msgid ""
+"eventlet/gevent: The broadcast command consumer is now running in a separate"
+" greenthread."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:213
+msgid ""
+"This ensures broadcast commands will take priority even if there are many "
+"active tasks."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:216
+msgid ""
+"Internal module ``celery.worker.controllers`` renamed to "
+"``celery.worker.mediator``."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:219
+msgid ""
+"worker: Threads now terminates the program by calling ``os._exit``, as it is"
+" the only way to ensure exit in the case of syntax errors, or other "
+"unrecoverable errors."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:223
+msgid "Fixed typo in ``maybe_timedelta`` (Issue #352)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:225
+msgid ""
+"worker: Broadcast commands now logs with loglevel debug instead of warning."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:227
+msgid ""
+"AMQP Result Backend: Now resets cached channel if the connection is lost."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:229
+msgid "Polling results with the AMQP result backend was not working properly."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:231
+msgid ""
+"Rate limits: No longer sleeps if there are no tasks, but rather waits for "
+"the task received condition (Performance improvement)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:234
+msgid ""
+"ConfigurationView: ``iter(dict)`` should return keys, not items (Issue "
+"#362)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:236
+msgid ""
+"celerybeat:  PersistentScheduler now automatically removes a corrupted "
+"schedule file (Issue #346)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:239
+msgid ""
+"Programs that doesn't support positional command-line arguments now provides"
+" a user friendly error message."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:242
+msgid ""
+"Programs no longer tries to load the configuration file when showing "
+"``--version`` (Issue #347)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:245
+msgid ""
+"Autoscaler: The \"all processes busy\" log message is now severity debug "
+"instead of error."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:248
+msgid ""
+"worker: If the message body can't be decoded, it is now passed through "
+"``safe_str`` when logging."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:251
+msgid ""
+"This to ensure we don't get additional decoding errors when trying to log "
+"the failure."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:254
+msgid ""
+"``app.config_from_object``/``app.config_from_envvar`` now works for all "
+"loaders."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:257
+msgid ""
+"Now emits a user-friendly error message if the result backend name is "
+"unknown (Issue #349)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:260
+msgid ""
+":mod:`celery.contrib.batches`: Now sets loglevel and logfile in the task "
+"request so ``task.get_logger`` works with batch tasks (Issue #357)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:263
+msgid ""
+"worker: An exception was raised if using the amqp transport and the prefetch"
+" count value exceeded 65535 (Issue #359)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:266
+msgid ""
+"The prefetch count is incremented for every received task with an "
+"ETA/countdown defined.  The prefetch count is a short, so can only support a"
+" maximum value of 65535.  If the value exceeds the maximum value we now "
+"disable the prefetch count, it is re-enabled as soon as the value is below "
+"the limit again."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:272
+msgid "cursesmon: Fixed unbound local error (Issue #303)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:274
+msgid ""
+"eventlet/gevent is now imported on demand so autodoc can import the modules "
+"without having eventlet/gevent installed."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:277
+msgid "worker: Ack callback now properly handles ``AttributeError``."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:279
+msgid ""
+"``Task.after_return`` is now always called *after* the result has been "
+"written."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:282
+msgid ""
+"Cassandra Result Backend: Should now work with the latest ``pycassa`` "
+"version."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:285
+msgid ""
+"multiprocessing.Pool: No longer cares if the putlock semaphore is released "
+"too many times. (this can happen if one or more worker processes are "
+"killed)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:289
+msgid ""
+"SQLAlchemy Result Backend: Now returns accidentally removed ``date_done`` "
+"again (Issue #325)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:292
+msgid ""
+"Task.request contex is now always initialized to ensure calling the task "
+"function directly works even if it actively uses the request context."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:295
+msgid ""
+"Exception occuring when iterating over the result from ``TaskSet.apply`` "
+"fixed."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:298
+msgid "eventlet: Now properly schedules tasks with an ETA in the past."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:303
+msgid "2.2.4"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:304
+msgid "2011-02-19 00:00 AM CET"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:312
+msgid ""
+"worker: 2.2.3 broke error logging, resulting in tracebacks not being logged."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:314
+msgid ""
+"AMQP result backend: Polling task states did not work properly if there were"
+" more than one result message in the queue."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:317
+msgid ""
+"``TaskSet.apply_async()`` and ``TaskSet.apply()`` now supports an optional "
+"``taskset_id`` keyword argument (Issue #331)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:320
+msgid ""
+"The current taskset id (if any) is now available in the task context as "
+"``request.taskset`` (Issue #329)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:323
+msgid ""
+"SQLAlchemy result backend: `date_done` was no longer part of the results as "
+"it had been accidentally removed.  It is now available again (Issue #325)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:326
+msgid ""
+"SQLAlchemy result backend: Added unique constraint on `Task.id` and "
+"`TaskSet.taskset_id`.  Tables needs to be recreated for this to take effect."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:329
+msgid ""
+"Fixed exception raised when iterating on the result of ``TaskSet.apply()``."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:331
+msgid "Tasks Userguide: Added section on choosing a result backend."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:336
+msgid "2.2.3"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:337
+msgid "2011-02-12 04:00 P.M CET"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:345
+msgid "Now depends on Kombu 1.0.3"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:347
+msgid ""
+"Task.retry now supports a ``max_retries`` argument, used to change the "
+"default value."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:350
+msgid ""
+"`multiprocessing.cpu_count` may raise :exc:`NotImplementedError` on "
+"platforms where this is not supported (Issue #320)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:353
+msgid "Coloring of log messages broke if the logged object was not a string."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:355
+msgid "Fixed several typos in the init script documentation."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:357
+msgid ""
+"A regression caused `Task.exchange` and `Task.routing_key` to no longer have"
+" any effect.  This is now fixed."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:360
+msgid ""
+"Routing Userguide: Fixes typo, routers in :setting:`CELERY_ROUTES` must be "
+"instances, not classes."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:363
+msgid ""
+":program:`celeryev` did not create pidfile even though the "
+":option:`--pidfile` argument was set."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:366
+msgid "Task logger format was no longer used. (Issue #317)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:368
+msgid "The id and name of the task is now part of the log message again."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:370
+msgid ""
+"A safe version of ``repr()`` is now used in strategic places to ensure "
+"objects with a broken ``__repr__`` does not crash the worker, or otherwise "
+"make errors hard to understand (Issue #298)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:374
+msgid ""
+"Remote control command :control:`active_queues`: did not account for queues "
+"added at runtime."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:377
+msgid ""
+"In addition the dictionary replied by this command now has a different "
+"structure: the exchange key is now a dictionary containing the exchange "
+"declaration in full."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:381
+msgid ""
+"The :option:`-Q` option to :program:`celery worker` removed unused queue "
+"declarations, so routing of tasks could fail."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:384
+msgid ""
+"Queues are no longer removed, but rather `app.amqp.queues.consume_from()` is"
+" used as the list of queues to consume from."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:387
+msgid "This ensures all queues are available for routing purposes."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:389
+msgid "celeryctl: Now supports the `inspect active_queues` command."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:394
+msgid "2.2.2"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:395
+msgid "2011-02-03 04:00 P.M CET"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:403
+msgid ""
+"Celerybeat could not read the schedule properly, so entries in "
+":setting:`CELERYBEAT_SCHEDULE` would not be scheduled."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:406
+msgid "Task error log message now includes `exc_info` again."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:408
+msgid "The `eta` argument can now be used with `task.retry`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:410
+msgid "Previously it was overwritten by the countdown argument."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:412
+msgid ""
+"celery multi/celeryd_detach: Now logs errors occuring when executing the "
+"`celery worker` command."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:415
+msgid ""
+"daemonizing tutorial: Fixed typo ``--time-limit 300`` -> ``--time-"
+"limit=300``"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:418
+msgid "Colors in logging broke non-string objects in log messages."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:420
+msgid ""
+"``setup_task_logger`` no longer makes assumptions about magic task kwargs."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:425
+msgid "2.2.1"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:426
+msgid "2011-02-02 04:00 P.M CET"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:434
+msgid "Eventlet pool was leaking memory (Issue #308)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:436
+msgid ""
+"Deprecated function ``celery.execute.delay_task`` was accidentally removed, "
+"now available again."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:439
+msgid "``BasePool.on_terminate`` stub did not exist"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:442
+msgid ""
+"celeryd_detach: Adds readable error messages if user/group name does not"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:442
+msgid "exist."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:444
+msgid "Smarter handling of unicode decod errors when logging errors."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:449
+msgid "2.2.0"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:450
+msgid "2011-02-01 10:00 AM CET"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:458
+msgid "Carrot has been replaced with `Kombu`_"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:460
+msgid ""
+"Kombu is the next generation messaging library for Python, fixing several "
+"flaws present in Carrot that was hard to fix without breaking backwards "
+"compatibility."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:464
+msgid "Also it adds:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:466
+msgid ""
+"First-class support for virtual transports; Redis, Django ORM, SQLAlchemy, "
+"Beanstalk, MongoDB, CouchDB and in-memory."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:468
+msgid "Consistent error handling with introspection,"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:469
+msgid ""
+"The ability to ensure that an operation is performed by gracefully handling "
+"connection and channel errors,"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:471
+msgid "Message compression (zlib, bzip2, or custom compression schemes)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:473
+msgid ""
+"This means that `ghettoq` is no longer needed as the functionality it "
+"provided is already available in Celery by default. The virtual transports "
+"are also more feature complete with support for exchanges (direct and "
+"topic).  The Redis transport even supports fanout exchanges so it is able to"
+" perform worker remote control commands."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:482
+msgid "Magic keyword arguments pending deprecation."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:484
+msgid ""
+"The magic keyword arguments were responsibile for many problems and quirks: "
+"notably issues with tasks and decorators, and name collisions in keyword "
+"arguments for the unaware."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:488
+msgid ""
+"It wasn't easy to find a way to deprecate the magic keyword arguments, but "
+"we think this is a solution that makes sense and it will not have any "
+"adverse effects for existing code."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:492
+msgid "The path to a magic keyword argument free world is:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:494
+msgid ""
+"the `celery.decorators` module is deprecated and the decorators can now be "
+"found in `celery.task`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:496
+msgid "The decorators in `celery.task` disables keyword arguments by default"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:498
+msgid ""
+"All examples in the documentation have been changed to use `celery.task`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:501
+msgid ""
+"This means that the following will have magic keyword arguments enabled (old"
+" style):"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:513
+msgid "And this will not use magic keyword arguments (new style):"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:524
+msgid ""
+"In addition, tasks can choose not to accept magic keyword arguments by "
+"setting the `task.accept_magic_kwargs` attribute."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:527
+msgid "Deprecation"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:529
+msgid ""
+"Using the decorators in :mod:`celery.decorators` emits a "
+":class:`PendingDeprecationWarning` with a helpful message urging you to "
+"change your code, in version 2.4 this will be replaced with a "
+":class:`DeprecationWarning`, and in version 4.0 the :mod:`celery.decorators`"
+" module will be removed and no longer exist."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:535
+msgid ""
+"Similarly, the `task.accept_magic_kwargs` attribute will no longer have any "
+"effect starting from version 4.0."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:538
+msgid "The magic keyword arguments are now available as `task.request`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:540
+msgid ""
+"This is called *the context*.  Using thread-local storage the context "
+"contains state that is related to the current request."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:543
+msgid ""
+"It is mutable and you can add custom attributes that will only be seen by "
+"the current task request."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:546
+msgid "The following context attributes are always available:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:549
+msgid "**Magic Keyword Argument**"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:549
+msgid "**Replace with**"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:551
+msgid "`kwargs[\"task_id\"]`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:551
+msgid "`self.request.id`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:552
+msgid "`kwargs[\"delivery_info\"]`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:552
+msgid "`self.request.delivery_info`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:553
+msgid "`kwargs[\"task_retries\"]`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:553
+msgid "`self.request.retries`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:554
+msgid "`kwargs[\"logfile\"]`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:554
+msgid "`self.request.logfile`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:555
+msgid "`kwargs[\"loglevel\"]`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:555
+msgid "`self.request.loglevel`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:556
+msgid "`kwargs[\"task_is_eager`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:556
+msgid "`self.request.is_eager`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:557 ../../history/changelog-2.2.rst:558
+msgid "**NEW**"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:557
+msgid "`self.request.args`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:558
+msgid "`self.request.kwargs`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:561
+msgid ""
+"In addition, the following methods now automatically uses the current "
+"context, so you don't have to pass `kwargs` manually anymore:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:564
+msgid "`task.retry`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:565
+msgid "`task.get_logger`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:566
+msgid "`task.update_state`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:568
+msgid "`Eventlet`_ support."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:570
+msgid "This is great news for I/O-bound tasks!"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:572
+msgid ""
+"To change pool implementations you use the :option:`-P|--pool` argument to "
+":program:`celery worker`, or globally using the :setting:`CELERYD_POOL` "
+"setting.  This can be the full name of a class, or one of the following "
+"aliases: `processes`, `eventlet`, `gevent`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:577
+msgid ""
+"For more information please see the :ref:`concurrency-eventlet` section in "
+"the User Guide."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:580
+msgid "Why not gevent?"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:582
+msgid ""
+"For our first alternative concurrency implementation we have focused on "
+"`Eventlet`_, but there is also an experimental `gevent`_ pool available. "
+"This is missing some features, notably the ability to schedule ETA tasks."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:587
+msgid ""
+"Hopefully the `gevent`_ support will be feature complete by version 2.3, but"
+" this depends on user demand (and contributions)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:593
+msgid "Python 2.4 support deprecated!"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:595
+msgid ""
+"We're happy^H^H^H^H^Hsad to announce that this is the last version to "
+"support Python 2.4."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:598
+msgid ""
+"You are urged to make some noise if you're currently stuck with Python 2.4."
+"  Complain to your package maintainers, sysadmins and bosses: tell them it's"
+" time to move on!"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:602
+msgid ""
+"Apart from wanting to take advantage of with-statements, coroutines, "
+"conditional expressions and enhanced try blocks, the code base now contains "
+"so many 2.4 related hacks and workarounds it's no longer just a compromise, "
+"but a sacrifice."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:607
+msgid ""
+"If it really isn't your choice, and you don't have the option to upgrade to "
+"a newer version of Python, you can just continue to use Celery 2.2. "
+"Important fixes can be backported for as long as there is interest."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:611
+msgid "worker: Now supports Autoscaling of child worker processes."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:613
+msgid ""
+"The :option:`--autoscale` option can be used to configure the minimum and "
+"maximum number of child worker processes::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:622
+msgid "Remote Debugging of Tasks"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:624
+msgid ""
+"``celery.contrib.rdb`` is an extended version of :mod:`pdb` that enables "
+"remote debugging of processes that does not have terminal access."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:628
+msgid "Example usage:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:685
+msgid ""
+"Events are now transient and is using a topic exchange (instead of direct)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:687
+msgid ""
+"The `CELERYD_EVENT_EXCHANGE`, `CELERYD_EVENT_ROUTING_KEY`, "
+"`CELERYD_EVENT_EXCHANGE_TYPE` settings are no longer in use."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:690
+msgid ""
+"This means events will not be stored until there is a consumer, and the "
+"events will be gone as soon as the consumer stops.  Also it means there can "
+"be multiple monitors running at the same time."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:694
+msgid ""
+"The routing key of an event is the type of event (e.g. `worker.started`, "
+"`worker.heartbeat`, `task.succeeded`, etc.  This means a consumer can filter"
+" on specific types, to only be alerted of the events it cares about."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:698
+msgid ""
+"Each consumer will create a unique queue, meaning it is in effect a "
+"broadcast exchange."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:701
+msgid ""
+"This opens up a lot of possibilities, for example the workers could listen "
+"for worker events to know what workers are in the neighborhood, and even "
+"restart workers when they go down (or use this information to optimize "
+"tasks/autoscaling)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:708
+msgid ""
+"The event exchange has been renamed from \"celeryevent\" to \"celeryev\" so "
+"it does not collide with older versions."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:711
+msgid ""
+"If you would like to remove the old exchange you can do so by executing the "
+"following command:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:718
+msgid ""
+"The worker now starts without configuration, and configuration can be "
+"specified directly on the command-line."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:721
+msgid ""
+"Configuration options must appear after the last argument, separated by two "
+"dashes:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:728
+msgid ""
+"Configuration is now an alias to the original configuration, so changes to "
+"the original will reflect Celery at runtime."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:731
+msgid ""
+"`celery.conf` has been deprecated, and modifying `celery.conf.ALWAYS_EAGER` "
+"will no longer have any effect."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:734
+msgid ""
+"The default configuration is now available in the :mod:`celery.app.defaults`"
+" module.  The available configuration options and their types can now be "
+"introspected."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:738
+msgid ""
+"Remote control commands are now provided by `kombu.pidbox`, the generic "
+"process mailbox."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:741
+msgid ""
+"Internal module `celery.worker.listener` has been renamed to "
+"`celery.worker.consumer`, and `.CarrotListener` is now `.Consumer`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:744
+msgid ""
+"Previously deprecated modules `celery.models` and "
+"`celery.management.commands` have now been removed as per the deprecation "
+"timeline."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:755
+msgid "[Security: Low severity] Removed `celery.task.RemoteExecuteTask` and"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:749
+msgid "accompanying functions: `dmap`, `dmap_async`, and `execute_remote`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:751
+msgid ""
+"Executing arbitrary code using pickle is a potential security issue if "
+"someone gains unrestricted access to the message broker."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:754
+msgid ""
+"If you really need this functionality, then you would have to add this to "
+"your own project."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:757
+msgid ""
+"[Security: Low severity] The `stats` command no longer transmits the broker "
+"password."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:760
+msgid ""
+"One would have needed an authenticated broker connection to receive this "
+"password in the first place, but sniffing the password at the wire level "
+"would have been possible if using unencrypted communication."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:769
+msgid "The internal module `celery.task.builtins` has been removed."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:771
+msgid ""
+"The module `celery.task.schedules` is deprecated, and `celery.schedules` "
+"should be used instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:774
+msgid "For example if you have::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:778
+msgid "You should replace that with::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:782
+msgid ""
+"The module needs to be renamed because it must be possible to import "
+"schedules without importing the `celery.task` module."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:785
+msgid ""
+"The following functions have been deprecated and is scheduled for removal in"
+" version 2.3:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:788
+msgid "`celery.execute.apply_async`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:790
+msgid "Use `task.apply_async()` instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:792
+msgid "`celery.execute.apply`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:794
+msgid "Use `task.apply()` instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:796
+msgid "`celery.execute.delay_task`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:798
+msgid "Use `registry.tasks[name].delay()` instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:800
+msgid "Importing `TaskSet` from `celery.task.base` is now deprecated."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:802
+msgid "You should use::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:806
+msgid "instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:808
+msgid "New remote control commands:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:810
+msgid "`active_queues`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:812
+msgid "Returns the queue declarations a worker is currently consuming from."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:814
+msgid ""
+"Added the ability to retry publishing the task message in the event of "
+"connection loss or failure."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:817
+msgid ""
+"This is disabled by default but can be enabled using the "
+":setting:`CELERY_TASK_PUBLISH_RETRY` setting, and tweaked by the "
+":setting:`CELERY_TASK_PUBLISH_RETRY_POLICY` setting."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:821
+msgid ""
+"In addition `retry`, and `retry_policy` keyword arguments have been added to"
+" `Task.apply_async`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:826
+msgid ""
+"Using the `retry` argument to `apply_async` requires you to handle the "
+"publisher/connection manually."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:829
+msgid ""
+"Periodic Task classes (`@periodic_task`/`PeriodicTask`) will *not* be "
+"deprecated as previously indicated in the source code."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:832
+msgid ""
+"But you are encouraged to use the more flexible "
+":setting:`CELERYBEAT_SCHEDULE` setting."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:835
+msgid ""
+"Built-in daemonization support of the worker using `celery multi` is no "
+"longer experimental and is considered production quality."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:838
+msgid ""
+"See :ref:`daemon-generic` if you want to use the new generic init scripts."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:841
+msgid ""
+"Added support for message compression using the "
+":setting:`CELERY_MESSAGE_COMPRESSION` setting, or the `compression` argument"
+" to `apply_async`.  This can also be set using routers."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:848
+msgid "worker: Now logs stacktrace of all threads when receiving the"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:846
+msgid "`SIGUSR1` signal.  (Does not work on cPython 2.4, Windows or Jython)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:848
+msgid "Inspired by https://gist.github.com/737056"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:850
+msgid ""
+"Can now remotely terminate/kill the worker process currently processing a "
+"task."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:853
+msgid ""
+"The `revoke` remote control command now supports a `terminate` argument "
+"Default signal is `TERM`, but can be specified using the `signal` argument. "
+"Signal can be the uppercase name of any signal defined in the :mod:`signal` "
+"module in the Python Standard Library."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:858
+msgid "Terminating a task also revokes it."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:860
+msgid "Example::"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:868
+msgid "`TaskSetResult.join_native`: Backend-optimized version of `join()`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:870
+msgid ""
+"If available, this version uses the backends ability to retrieve multiple "
+"results at once, unlike `join()` which fetches the results one by one."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:874
+msgid ""
+"So far only supported by the AMQP result backend.  Support for memcached and"
+" Redis may be added later."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:877
+msgid ""
+"Improved implementations of `TaskSetResult.join` and `AsyncResult.wait`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:879
+msgid ""
+"An `interval` keyword argument have been added to both so the polling "
+"interval can be specified (default interval is 0.5 seconds)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:882
+msgid ""
+"A `propagate` keyword argument have been added to `result.wait()`, errors "
+"will be returned instead of raised if this is set to False."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:887
+msgid ""
+"You should decrease the polling interval when using the database result "
+"backend, as frequent polling can result in high database load."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:891
+msgid ""
+"The PID of the child worker process accepting a task is now sent as a field "
+"with the :event:`task-started` event."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:894
+msgid ""
+"The following fields have been added to all events in the worker class:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:896
+msgid "`sw_ident`: Name of worker software (e.g. py-celery)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:897
+msgid "`sw_ver`: Software version (e.g. 2.2.0)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:898
+msgid "`sw_sys`: Operating System (e.g. Linux, Windows, Darwin)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:900
+msgid ""
+"For better accuracy the start time reported by the multiprocessing worker "
+"process is used when calculating task duration."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:903
+msgid "Previously the time reported by the accept callback was used."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:906
+msgid "`celerybeat`: New built-in daemonization support using the `--detach`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:906 ../../history/changelog-2.2.rst:909
+msgid "option."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:909
+msgid "`celeryev`: New built-in daemonization support using the `--detach`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:911
+msgid ""
+"`TaskSet.apply_async`: Now supports custom publishers by using the "
+"`publisher` argument."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:914
+msgid "Added :setting:`CELERY_SEND_TASK_SENT_EVENT` setting."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:916
+msgid ""
+"If enabled an event will be sent with every task, so monitors can track "
+"tasks before the workers receive them."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:920
+msgid "`celerybeat`: Now reuses the broker connection when calling"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:920
+msgid "scheduled tasks."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:922
+msgid ""
+"The configuration module and loader to use can now be specified on the "
+"command-line."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:925
+msgid "For example:"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:931
+msgid "Added signals: `beat_init` and `beat_embedded_init`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:933
+msgid ":signal:`celery.signals.beat_init`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:935
+msgid ""
+"Dispatched when :program:`celerybeat` starts (either standalone or "
+"embedded).  Sender is the :class:`celery.beat.Service` instance."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:938
+msgid ":signal:`celery.signals.beat_embedded_init`"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:940
+msgid ""
+"Dispatched in addition to the :signal:`beat_init` signal when "
+":program:`celerybeat` is started as an embedded process.  Sender is the "
+":class:`celery.beat.Service` instance."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:944
+msgid ""
+"Redis result backend: Removed deprecated settings `REDIS_TIMEOUT` and "
+"`REDIS_CONNECT_RETRY`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:947
+msgid ""
+"CentOS init script for :program:`celery worker` now available in "
+"`extra/centos`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:949
+msgid "Now depends on `pyparsing` version 1.5.0 or higher."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:951
+msgid ""
+"There have been reported issues using Celery with pyparsing 1.4.x, so please"
+" upgrade to the latest version."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:954
+msgid "Lots of new unit tests written, now with a total coverage of 95%."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:961
+msgid ""
+"`celeryev` Curses Monitor: Improved resize handling and UI layout (Issue "
+"#274 + Issue #276)"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:964
+msgid ""
+"AMQP Backend: Exceptions occurring while sending task results are now "
+"propagated instead of silenced."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:967
+msgid ""
+"the worker will then show the full traceback of these errors in the log."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:969
+msgid ""
+"AMQP Backend: No longer deletes the result queue after successful poll, as "
+"this should be handled by the :setting:`CELERY_AMQP_TASK_RESULT_EXPIRES` "
+"setting instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:973
+msgid "AMQP Backend: Now ensures queues are declared before polling results."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:975
+msgid "Windows: worker: Show error if running with `-B` option."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:977
+msgid ""
+"Running celerybeat embedded is known not to work on Windows, so users are "
+"encouraged to run celerybeat as a separate service instead."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:980
+msgid "Windows: Utilities no longer output ANSI color codes on Windows"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:982
+msgid ""
+"camqadm: Now properly handles Ctrl+C by simply exiting instead of showing "
+"confusing traceback."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:985
+msgid "Windows: All tests are now passing on Windows."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:987
+msgid "Remove bin/ directory, and `scripts` section from setup.py."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:989
+msgid "This means we now rely completely on setuptools entrypoints."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:994
+msgid "Experimental"
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:996
+msgid "Jython: worker now runs on Jython using the threaded pool."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:998
+msgid ""
+"All tests pass, but there may still be bugs lurking around the corners."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:1000
+msgid "PyPy: worker now runs on PyPy."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:1002
+msgid ""
+"It runs without any pool, so to get parallel execution you must start "
+"multiple instances (e.g. using :program:`multi`)."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:1005
+msgid ""
+"Sadly an initial benchmark seems to show a 30% performance decrease on "
+"pypy-1.4.1 + JIT.  We would like to find out why this is, so stay tuned."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:1008
+msgid ""
+":class:`PublisherPool`: Experimental pool of task publishers and connections"
+" to be used with the `retry` argument to `apply_async`."
+msgstr ""
+
+#: ../../history/changelog-2.2.rst:1011
+msgid ""
+"The example code below will re-use connections and channels, and retry "
+"sending of the task message if the connection is lost."
+msgstr ""

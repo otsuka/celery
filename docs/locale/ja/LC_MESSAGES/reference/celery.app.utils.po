@@ -1,0 +1,83 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Celery 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 16:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../reference/celery.app.utils.rst:3
+#: ../../../celery/app/utils.pydocstring of celery.app.utils:2
+msgid "celery.app.utils"
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of celery.app.utils:4
+msgid "App utilities: Compat settings, bugreport tool, pickling apps."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of celery.app.utils.Settings:1
+msgid "Celery settings object."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.BROKER_BACKEND:1
+msgid "Deprecated compat alias to :attr:`BROKER_TRANSPORT`."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.find_option:1
+msgid "Search for option by name."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.find_option:3
+msgid "Will return ``(namespace, key, type)`` tuple, e.g.::"
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.find_option:10
+msgid "Name of option, cannot be partial."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.find_option:11
+msgid "Preferred namespace (``CELERY`` by default)."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.find_value_for_key:1
+msgid "Shortcut to ``get_by_parts(*find_option(name)[:-1])``"
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.get_by_parts:1
+msgid "Return the current value for setting specified as a path."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.get_by_parts:3
+msgid "Example::"
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.humanize:1
+msgid "Return a human readable string showing changes to the configuration."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of
+#: celery.app.utils.Settings.without_defaults:1
+msgid "Return the current configuration, but without defaults."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of celery.app.utils.appstr:1
+msgid "String used in __repr__ etc, to id app instances."
+msgstr ""
+
+#: ../../../celery/app/utils.pydocstring of celery.app.utils.bugreport:1
+msgid "Return a string containing information useful in bug reports."
+msgstr ""
