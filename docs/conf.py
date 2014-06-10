@@ -155,3 +155,9 @@ epub_exclude_files = ['search.html']
 
 # The depth of the table of contents in toc.ncx.
 epub_tocdepth = 3
+
+
+# -- Options for translation -------------------------------------------
+
+locale_dirs = ['locale/']
+gettext_compact = False
