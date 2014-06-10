@@ -10,6 +10,7 @@ PAPER         =
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d .build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 .PHONY: help clean html web pickle htmlhelp latex changes linkcheck
 
@@ -21,6 +22,7 @@ help:
 	@echo "  htmlhelp  to make HTML files and a HTML help project"
 	@echo "  latex     to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
 	@echo "  changes   to make an overview over all changed/added/deprecated items"
+	@echo "  gettext   to make PO message catalogs"
 	@echo "  linkcheck to check all external links for integrity"
 
 clean:
@@ -79,3 +81,9 @@ linkcheck:
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in .build/linkcheck/output.txt."
+
+gettext:
+	mkdir -p .build/locale
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) .build/locale
+	@echo
+	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
