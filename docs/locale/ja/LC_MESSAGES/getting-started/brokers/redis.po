@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../getting-started/brokers/redis.rst:5
 msgid "Using Redis"
-msgstr ""
+msgstr "Redis の使用"
 
 #: ../../getting-started/brokers/redis.rst:10
 msgid "Installation"
-msgstr ""
+msgstr "インストール"
 
 #: ../../getting-started/brokers/redis.rst:12
 msgid ""
@@ -25,29 +25,33 @@ msgid ""
 "install both Celery and these dependencies in one go using the "
 "``celery[redis]`` :ref:`bundle <bundles>`:"
 msgstr ""
+"Redis を使うには追加の依存パッケージをインストールする必要があります。"
+"``celery[redis]`` :ref:`bundle <bundles>` を使えば Celery と依存パッケージを一緒にインストールできます。"
 
 #: ../../getting-started/brokers/redis.rst:23
 msgid "Configuration"
-msgstr ""
+msgstr "設定"
 
 #: ../../getting-started/brokers/redis.rst:25
 msgid ""
 "Configuration is easy, just configure the location of your Redis database::"
 msgstr ""
+"設定は簡単で、Redis データベースのロケーションを指定するだけです。"
 
 #: ../../getting-started/brokers/redis.rst:30
 msgid "Where the URL is in the format of::"
-msgstr ""
+msgstr "URLのフォーマット::"
 
 #: ../../getting-started/brokers/redis.rst:34
 msgid ""
 "all fields after the scheme are optional, and will default to localhost on "
 "port 6379, using database 0."
 msgstr ""
+"スキーム(scheme)以下の全フィールドはオプションで、デフォルトはホストが localhost、6379 番ポート、データベース 0 です。"
 
 #: ../../getting-started/brokers/redis.rst:40
 msgid "Visibility Timeout"
-msgstr ""
+msgstr "Visibility タイムアウト"
 
 #: ../../getting-started/brokers/redis.rst:42
 msgid ""
@@ -55,46 +59,51 @@ msgid ""
 "to acknowledge the task before the message is redelivered to another worker."
 "  Be sure to see :ref:`redis-caveats` below."
 msgstr ""
+"Visibility タイムアウトは、ワーカーがタスクの実行開始(acknowledge the task)までに待つ時間(単位は秒)を定義します。"
+"この時間を過ぎるとメッセージが別のワーカーに再送されます。"
+"以下の :ref:`redis-caveats` を必ず読んでください。"
 
 #: ../../getting-started/brokers/redis.rst:46
 msgid ""
 "This option is set via the :setting:`BROKER_TRANSPORT_OPTIONS` setting::"
 msgstr ""
+"このオプションは :setting:`BROKER_TRANSPORT_OPTIONS` 設定によって指定されます::"
 
 #: ../../getting-started/brokers/redis.rst:50
 msgid "The default visibility timeout for Redis is 1 hour."
-msgstr ""
+msgstr "Redis の Visibility タイムアウトのデフォルトは 1 時間です。"
 
 #: ../../getting-started/brokers/redis.rst:55
 msgid "Results"
-msgstr ""
+msgstr "結果"
 
 #: ../../getting-started/brokers/redis.rst:57
 msgid ""
 "If you also want to store the state and return values of tasks in Redis, you"
 " should configure these settings::"
 msgstr ""
+"タスクのステートや戻り値を Redis に保存したい場合は、次の設定を追加してください::"
 
 #: ../../getting-started/brokers/redis.rst:62
 msgid ""
 "For a complete list of options supported by the Redis result backend, see "
 ":ref:`conf-redis-result-backend`"
 msgstr ""
+"Redis 結果バックエンドがサポートしているオプションの全項目については :ref:`conf-redis-result-backend` を参照してください。"
 
 #: ../../getting-started/brokers/redis.rst:68
 msgid "Caveats"
-msgstr ""
+msgstr "注意"
 
 #: ../../getting-started/brokers/redis.rst:72
 msgid "Broadcast messages will be seen by all virtual hosts by default."
-msgstr ""
+msgstr "ブロードキャストメッセージは、デフォルトではすべてのバーチャルホストによって見られています。"
 
 #: ../../getting-started/brokers/redis.rst:74
 msgid ""
 "You have to set a transport option to prefix the messages so that they will "
 "only be received by the active virtual host::"
 msgstr ""
-
 #: ../../getting-started/brokers/redis.rst:79
 msgid ""
 "Note that you will not be able to communicate with workers running older "
@@ -109,7 +118,7 @@ msgstr ""
 
 #: ../../getting-started/brokers/redis.rst:87
 msgid "Workers will receive all task related events by default."
-msgstr ""
+msgstr "ワーカーは、デフォルトではすべてのタスク関連イベントを受け取っています。"
 
 #: ../../getting-started/brokers/redis.rst:89
 msgid ""
@@ -133,6 +142,8 @@ msgid ""
 "If a task is not acknowledged within the :ref:`redis-visibility_timeout` the"
 " task will be redelivered to another worker and executed."
 msgstr ""
+"もしタスクが :ref:`redis-visibility_timeout` の時間内に実行開始されなければ(a task is not acknowledged)、"
+"そのタスクは別のワーカーに再送されて実行されます。"
 
 #: ../../getting-started/brokers/redis.rst:103
 msgid ""
@@ -140,12 +151,15 @@ msgid ""
 "execute exceeds the visibility timeout; in fact if that happens it will be "
 "executed again, and again in a loop."
 msgstr ""
+"これは Visibility タイムアウトを超えた実行時間が指定された ETA/countdown/retry タスクで問題を引き起こします。"
+"具体的には、この問題が起こるとタスクが何度も繰り返し実行されます。"
 
 #: ../../getting-started/brokers/redis.rst:107
 msgid ""
 "So you have to increase the visibility timeout to match the time of the "
 "longest ETA you are planning to use."
 msgstr ""
+"なので、使用する予定の最長 ETA の時間に合わせて Visibility タイムアウトを増やしておかなければいけません。"
 
 #: ../../getting-started/brokers/redis.rst:110
 msgid ""
@@ -153,22 +167,26 @@ msgid ""
 "long visibility timeout will only delay the redelivery of 'lost' tasks in "
 "the event of a power failure or forcefully terminated workers."
 msgstr ""
+"Celery はワーカーのシャットダウン時にメッセージを再送します。長い Visiblity タイムアウトは、"
+"停電やワーカーの強制終了によって「失われた」タスクの再送のみが遅くなることを意味します。"
 
 #: ../../getting-started/brokers/redis.rst:115
 msgid ""
 "Periodic tasks will not be affected by the visibility timeout, as this is a "
 "concept separate from ETA/countdown."
 msgstr ""
+"定期的なタスクは Visibility タイムアウトの影響は受けません。"
+"というのも、定期的なタスクは ETA/countdown とは別のコンセプトのものだからです。"
 
 #: ../../getting-started/brokers/redis.rst:118
 msgid ""
 "You can increase this timeout by configuring a transport option with the "
 "same name::"
-msgstr ""
+msgstr "Visibility タイムアウトを増やすには、トランスポートオプションで次のように設定します。"
 
 #: ../../getting-started/brokers/redis.rst:123
 msgid "The value must be an int describing the number of seconds."
-msgstr ""
+msgstr "値は秒数を示す整数でなければけいません。"
 
 #: ../../getting-started/brokers/redis.rst:126
 msgid ""

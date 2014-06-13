@@ -475,8 +475,8 @@ msgid ""
 "development easier, and sometimes they add important hooks like closing "
 "database connections at :manpage:`fork(2)`."
 msgstr ""
-"連携パッケージは絶対に必要なものではありませんが、開発を楽にしてくれます。"
-"中には :manpage:`fork(2)` 時にデータベースの接続を閉じるといった重要なフックを提供してくれています。"
+"連携用のパッケージは絶対に必要なものではありませんが、開発を楽にしてくれるでしょう。"
+"中には :manpage:`fork(2)` 時にデータベースの接続を閉じるといった重要なフックを提供しているものもあります。"
 
 #: ../../getting-started/introduction.rst:260
 msgid "Quickjump"

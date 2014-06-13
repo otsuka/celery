@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../getting-started/brokers/index.rst:5
 msgid "Brokers"
-msgstr ""
+msgstr "ブローカー"
 
 #: ../../getting-started/brokers/index.rst:7
 msgid "|version|"
@@ -25,19 +25,19 @@ msgstr ""
 
 #: ../../getting-started/brokers/index.rst:10
 msgid "Celery supports several message transport alternatives."
-msgstr ""
+msgstr "Celery はいくつかのメッセージトランスポートをサポートしています。"
 
 #: ../../getting-started/brokers/index.rst:15
 msgid "Broker Instructions"
-msgstr ""
+msgstr "ブローカーの説明"
 
 #: ../../getting-started/brokers/index.rst:24
 msgid "Experimental Transports"
-msgstr ""
+msgstr "実験段階のトランスポート"
 
 #: ../../getting-started/brokers/index.rst:40
 msgid "Broker Overview"
-msgstr ""
+msgstr "ブローカー概要"
 
 #: ../../getting-started/brokers/index.rst:42
 msgid ""
@@ -45,22 +45,24 @@ msgid ""
 "information can be found in the documentation for each individual transport "
 "(see :ref:`broker_toc`)."
 msgstr ""
+"各トランスポートのサポート状況の比較表です。"
+"詳細についてはそれぞれのトランスポートのドキュメントを参照してください。(:ref:`broker_toc`)"
 
 #: ../../getting-started/brokers/index.rst:47
 msgid "**Name**"
-msgstr ""
+msgstr "**名称**"
 
 #: ../../getting-started/brokers/index.rst:47
 msgid "**Status**"
-msgstr ""
+msgstr "**ステータス**"
 
 #: ../../getting-started/brokers/index.rst:47
 msgid "**Monitoring**"
-msgstr ""
+msgstr "**監視**"
 
 #: ../../getting-started/brokers/index.rst:47
 msgid "**Remote Control**"
-msgstr ""
+msgstr "**リモートコントロール**"
 
 #: ../../getting-started/brokers/index.rst:49
 msgid "*RabbitMQ*"
@@ -69,7 +71,7 @@ msgstr ""
 #: ../../getting-started/brokers/index.rst:49
 #: ../../getting-started/brokers/index.rst:51
 msgid "Stable"
-msgstr ""
+msgstr "安定版"
 
 #: ../../getting-started/brokers/index.rst:49
 #: ../../getting-started/brokers/index.rst:49
@@ -96,7 +98,7 @@ msgstr ""
 #: ../../getting-started/brokers/index.rst:63
 #: ../../getting-started/brokers/index.rst:65
 msgid "Experimental"
-msgstr ""
+msgstr "実験版"
 
 #: ../../getting-started/brokers/index.rst:55
 msgid "*Beanstalk*"
@@ -152,6 +154,7 @@ msgid ""
 "Experimental brokers may be functional but they do not have dedicated "
 "maintainers."
 msgstr ""
+"実験版のブローカーは機能するでしょうが、専任のメインテナーがいません。"
 
 #: ../../getting-started/brokers/index.rst:73
 msgid ""
