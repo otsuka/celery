@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -17,15 +17,15 @@ msgstr ""
 
 #: ../../copyright.rst:4
 msgid "*Celery User Manual*"
-msgstr ""
+msgstr "*Celery ユーザーマニュアル*"
 
 #: ../../copyright.rst:6
 msgid "by Ask Solem"
-msgstr ""
+msgstr "by Ask Solem　(日本語訳: Tomohiro Otsuka)"
 
 #: ../../copyright.rst:10
 msgid "Copyright |copy| 2009-2014, Ask Solem."
-msgstr ""
+msgstr "Copyright |copy| 2009-2014, Ask Solem."
 
 #: ../../copyright.rst:12
 msgid ""

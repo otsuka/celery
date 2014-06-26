@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:5
 msgid "Next Steps"
-msgstr ""
+msgstr "ネクストステップ"
 
 #: ../../getting-started/next-steps.rst:7
 msgid ""
@@ -21,16 +21,21 @@ msgid ""
 " demonstrate what Celery offers in more detail, including how to add Celery "
 "support for your application and library."
 msgstr ""
+":ref:`first-steps` ガイドでは簡潔な説明に留めていましたが、"
+"このガイドでは Celery をアプリケーションやライブラリに組み込む方法を含め、"
+"Celery の機能をもう少し詳細にお見せしていきます。"
 
 #: ../../getting-started/next-steps.rst:11
 msgid ""
 "This document does not document all of Celery's features and best practices,"
 " so it's recommended that you also read the :ref:`User Guide <guide>`"
 msgstr ""
+"このドキュメントは Celery のすべての機能とベストプラクティスをまとめたものではないので、"
+":ref:`User Guide <guide>` も併せて読むことをお薦めします。"
 
 #: ../../getting-started/next-steps.rst:20
 msgid "Using Celery in your Application"
-msgstr ""
+msgstr "アプリケーションで Celery を使う"
 
 #: ../../getting-started/next-steps.rst:25
 msgid "Our Project"
@@ -38,7 +43,7 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:27
 msgid "Project layout::"
-msgstr ""
+msgstr "プロジェクト構成::"
 
 #: ../../getting-started/next-steps.rst:34
 msgid ":file:`proj/celery.py`"
@@ -50,18 +55,20 @@ msgid ""
 " to as the *app*).  To use Celery within your project you simply import this"
 " instance."
 msgstr ""
+"このモジュール内で :class:`@Celery` インスタンス(*app* と呼ばれることもあります)"
+"を生成します。プロジェクト内で Celery を使う時は、このインスタンスをインポートします。"
 
 #: ../../getting-started/next-steps.rst:43
 msgid "The ``broker`` argument specifies the URL of the broker to use."
-msgstr ""
+msgstr "``broker`` 引数では使用するブローカーの URL を指定します。"
 
 #: ../../getting-started/next-steps.rst:45
 msgid "See :ref:`celerytut-broker` for more information."
-msgstr ""
+msgstr "詳細は :ref:`celerytut-broker` を参照してください。"
 
 #: ../../getting-started/next-steps.rst:47
 msgid "The ``backend`` argument specifies the result backend to use,"
-msgstr ""
+msgstr "``backend`` 引数では使用する結果バックエンドを指定します。"
 
 #: ../../getting-started/next-steps.rst:49
 msgid ""
@@ -73,10 +80,16 @@ msgid ""
 "disabled for individual tasks by setting the ``@task(ignore_result=True)`` "
 "option."
 msgstr ""
+"結果バックエンドはタスクの状態と結果を追跡するのに使用されます。デフォルトでは無効になっているので、"
+"ここでは amqp 結果バックエンドを使用し、後ほど結果の取得方法を説明します。"
+"別のバックエンドを使うこともできます。バックエンドにはそれぞれの長所、短所があります。"
+"結果が必要ない場合は、無効にしておいた方がベターです。"
+"``@task(ignore_result=True)`` オプションをセットして個別のタスクに対して"
+"無効化することも可能です。"
 
 #: ../../getting-started/next-steps.rst:57
 msgid "See :ref:`celerytut-keeping-results` for more information."
-msgstr ""
+msgstr "詳細は :ref:`celerytut-keeping-results` を参照してください。"
 
 #: ../../getting-started/next-steps.rst:59
 msgid ""
@@ -84,6 +97,8 @@ msgid ""
 "starts.  You need to add our tasks module here so that the worker is able to"
 " find our tasks."
 msgstr ""
+"``include`` 引数はワーカーが起動した際にインポートするモジュールのリストです。"
+"ワーカーがタスクを見つけられるように、作成したタスクのモジュールをここに追加しておく必要があります。"
 
 #: ../../getting-started/next-steps.rst:64
 msgid ":file:`proj/tasks.py`"
@@ -91,15 +106,15 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:71
 msgid "Starting the worker"
-msgstr ""
+msgstr "ワーカーの起動"
 
 #: ../../getting-started/next-steps.rst:73
 msgid "The :program:`celery` program can be used to start the worker:"
-msgstr ""
+msgstr "ワーカーの起動には :program:`celery` プログラムを使用します::"
 
 #: ../../getting-started/next-steps.rst:79
 msgid "When the worker starts you should see a banner and some messages::"
-msgstr ""
+msgstr "ワーカーが起動すると、バナーとメッセージが表示されます::"
 
 #: ../../getting-started/next-steps.rst:95
 msgid ""
@@ -107,6 +122,8 @@ msgid ""
 "``celery`` module, you can also specify a different broker on the command-"
 "line by using the :option:`-b` option."
 msgstr ""
+"-- *broker* は ``celery`` モジュールに broker 引数として指定した URL です。"
+"コマンドラインで :option:`-b` オプションを使って別のブローカーを指定することもできます。"
 
 #: ../../getting-started/next-steps.rst:99
 msgid ""
@@ -114,6 +131,8 @@ msgid ""
 "your tasks concurrently, when all of these are busy doing work new tasks "
 "will have to wait for one of the tasks to finish before it can be processed."
 msgstr ""
+"-- *Concurrency* はプリフォークされるワーカープロセスの数で、同時にタスクを処理する数になります。"
+"すべてのワーカープロセスが処理中の場合、新しいタスクは他のタスクが完了するまで待たなくてはいけません。"
 
 #: ../../getting-started/next-steps.rst:104
 msgid ""
@@ -125,12 +144,20 @@ msgid ""
 "number of CPU's is rarely effective, and likely to degrade performance "
 "instead."
 msgstr ""
+"デフォルトの concurrency 数はマシンの CPU (Core も含む) 数です。"
+":option:`-c` オプションでこの数を指定できます。"
+"この推奨値はありません。と言うのも、様々な要素によって最適な数が変わってくるからですが、"
+"タスクが主に I/O バウンドであれば数を増やしてみるといいかもしれません。"
+"しかし実験では CPU 数の 2 倍以上にしてもほとんど効果はなく、むしろパフォーマンスが"
+"下がる傾向が見られました。"
 
 #: ../../getting-started/next-steps.rst:112
 msgid ""
 "Including the default prefork pool, Celery also supports using Eventlet, "
 "Gevent, and threads (see :ref:`concurrency`)."
 msgstr ""
+"デフォルトのプリフォークプールの他に、Eventlet、Gevent、スレッドもサポートしています。"
+"(:ref:`concurrency` を参照)"
 
 #: ../../getting-started/next-steps.rst:115
 msgid ""
@@ -140,6 +167,10 @@ msgid ""
 "monitor, which you can read about in the :ref:`Monitoring and Management "
 "guide <guide-monitoring>`."
 msgstr ""
+"-- *Events* はワーカーで発生したアクションの監視メッセージ(イベント)を Celery に"
+"送信させるオプションです。イベントは、``celery events`` や Flower - リアルタイムの"
+"Celery モニター - といった監視プログラムで使われます。"
+"詳しくは :ref:`Monitoring and Management guide <guide-monitoring>` を読んでください。"
 
 #: ../../getting-started/next-steps.rst:121
 msgid ""
@@ -149,52 +180,65 @@ msgid ""
 "Service, separation of concerns, and emulating priorities, all described in "
 "the :ref:`Routing Guide <guide-routing>`."
 msgstr ""
+"-- *Queues* はワーカーがタスクを取得してくるキューのリストです。"
+"一度にいくつかのキューからタスクを取得するようにワーカーに指示することもできます。"
+"これは Quality of Service や separation of concerns、優先度のエミュレートを実現する"
+"手段として特定のワーカーにメッセージを送るのに使用されます。"
+":ref:`Routing Guide <guide-routing>` に詳細がまとめられています。"
 
 #: ../../getting-started/next-steps.rst:128
 msgid ""
 "You can get a complete list of command-line arguments by passing in the "
 "`--help` flag:"
 msgstr ""
+"コマンドライン引数の全リストを見るには、`--help` フラグを渡します::"
 
 #: ../../getting-started/next-steps.rst:135
 msgid ""
 "These options are described in more detailed in the :ref:`Workers Guide "
 "<guide-workers>`."
 msgstr ""
+"それぞれのオプションについては :ref:`Workers Guide <guide-workers>` に記載されています。"
 
 #: ../../getting-started/next-steps.rst:138
 msgid "Stopping the worker"
-msgstr ""
+msgstr "ワーカーの停止"
 
 #: ../../getting-started/next-steps.rst:140
 msgid ""
 "To stop the worker simply hit Ctrl+C.  A list of signals supported by the "
 "worker is detailed in the :ref:`Workers Guide <guide-workers>`."
 msgstr ""
+"ワーカーを停止するには Ctrl+C を叩くだけです。ワーカーがサポートしているシグナルのリストは"
+" :ref:`Workers Guide <guide-workers>` に記載されています。"
 
 #: ../../getting-started/next-steps.rst:144
 msgid "In the background"
-msgstr ""
+msgstr "バックグラウンドで"
 
 #: ../../getting-started/next-steps.rst:146
 msgid ""
 "In production you will want to run the worker in the background, this is "
 "described in detail in the :ref:`daemonization tutorial <daemonizing>`."
 msgstr ""
+"運用環境においてはワーカーをバックグラウンドで稼動させておきたいことでしょう。"
+"この詳細については :ref:`daemonization tutorial <daemonizing>` を参照してください。"
 
 #: ../../getting-started/next-steps.rst:149
 msgid ""
 "The daemonization scripts uses the :program:`celery multi` command to start "
 "one or more workers in the background:"
 msgstr ""
+"デーモン化スクリプトでは、ひとつ、もしくは複数のワーカーをバックグラウンドで起動するために"
+" :program:`celery multi` コマンドを使用します。"
 
 #: ../../getting-started/next-steps.rst:159
 msgid "You can restart it too:"
-msgstr ""
+msgstr "再起動もできます:"
 
 #: ../../getting-started/next-steps.rst:174
 msgid "or stop it:"
-msgstr ""
+msgstr "停止することも:"
 
 #: ../../getting-started/next-steps.rst:180
 msgid ""
@@ -202,6 +246,8 @@ msgid ""
 "shutdown.  You will probably want to use the ``stopwait`` command instead "
 "which will ensure all currently executing tasks is completed:"
 msgstr ""
+"``stop`` コマンドは非同期なのでワーカーが停止するまで待ちません。``stopwait`` コマンドを使えば"
+"現在実行中の全タスクが完了するのを待って終了します。"
 
 #: ../../getting-started/next-steps.rst:190
 msgid ""
@@ -209,6 +255,8 @@ msgid ""
 "to use the same command-line arguments when restarting.  Only the same "
 "pidfile and logfile arguments must be used when stopping."
 msgstr ""
+":program:`celery multi` はワーカーの情報を保存しないので、再起動の際は同じコマンドライン引数を付ける必要があります。"
+"停止する際は pidfile と logfile の二つの引数だけを起動時と同じにします。"
 
 #: ../../getting-started/next-steps.rst:195
 msgid ""
@@ -216,6 +264,9 @@ msgid ""
 "protect against multiple workers launching on top of each other you are "
 "encouraged to put these in a dedicated directory:"
 msgstr ""
+"デフォルトではカレントディレクトリ上に pid とログファイルを生成しますが、"
+"複数のワーカーが重複して起動してしまうことを防ぐため、専用のディレクトリを用意して、"
+"そこに pid とログファイルを生成するようにします:"
 
 #: ../../getting-started/next-steps.rst:206
 msgid ""
@@ -229,86 +280,96 @@ msgid ""
 "For more examples see the :mod:`~celery.bin.multi` module in the API "
 "reference."
 msgstr ""
+"API リファレンスの :mod:`~celery.bin.multi` モジュールに、その他の例が掲載されています。"
 
 #: ../../getting-started/next-steps.rst:221
 msgid "About the :option:`--app` argument"
-msgstr ""
+msgstr ":option:`--app` 引数について"
 
 #: ../../getting-started/next-steps.rst:223
 msgid ""
 "The :option:`--app` argument specifies the Celery app instance to use, it "
 "must be in the form of ``module.path:attribute``"
 msgstr ""
+":option:`--app` 引数では使用する Celery の app インスタンスを "
+"``module.path:attribute`` の形式で指定します。"
 
 #: ../../getting-started/next-steps.rst:226
 msgid ""
 "But it also supports a shortcut form If only a package name is specified, "
 "where it'll try to search for the app instance, in the following order:"
 msgstr ""
+"パッケージ名のみが指定するショートカット形式もサポートされており、次の順序で app インスタンスを探索します:"
 
 #: ../../getting-started/next-steps.rst:229
 msgid "With ``--app=proj``:"
-msgstr ""
+msgstr "``--app=proj`` の場合:"
 
 #: ../../getting-started/next-steps.rst:231
 msgid "an attribute named ``proj.app``, or"
-msgstr ""
+msgstr "``proj.app`` という名前の属性"
 
 #: ../../getting-started/next-steps.rst:232
 msgid "an attribute named ``proj.celery``, or"
-msgstr ""
+msgstr "``proj.celery`` という名前の属性"
 
 #: ../../getting-started/next-steps.rst:233
 msgid ""
 "any attribute in the module ``proj`` where the value is a Celery "
 "application, or"
-msgstr ""
+msgstr "``proj`` モジュール内の Celery インスタンスが値になっている属性"
 
 #: ../../getting-started/next-steps.rst:236
 msgid ""
 "If none of these are found it'll try a submodule named ``proj.celery``:"
 msgstr ""
+"上のフローで見つからなかった場合、今度は ``proj.celery`` という名前のサブモジュールを探索します:"
 
 #: ../../getting-started/next-steps.rst:238
 msgid "an attribute named ``proj.celery.app``, or"
-msgstr ""
+msgstr "``proj.celery.app`` という名前の属性"
 
 #: ../../getting-started/next-steps.rst:239
 msgid "an attribute named ``proj.celery.celery``, or"
-msgstr ""
+msgstr "``proj.celery.celery`` という名前の属性"
 
 #: ../../getting-started/next-steps.rst:240
 msgid ""
 "Any atribute in the module ``proj.celery`` where the value is a Celery "
 "application."
 msgstr ""
+"``proj.celery`` モジュール内の Celery インタンスが値になっている属性"
 
 #: ../../getting-started/next-steps.rst:243
 msgid ""
 "This scheme mimics the practices used in the documentation, i.e. "
 "``proj:app`` for a single contained module, and ``proj.celery:app`` for "
 "larger projects."
-msgstr ""
+msgstr "このスキームはこのドキュメントでも使われているプラクティスに似ています。"
+"具体的に言うと、単一モジュールで構成されるプロジェクトでは ``proj:app`` を使い、"
+"大きめのプロジェクトでは ``proj.celery:app`` を使っている点です。"
 
 #: ../../getting-started/next-steps.rst:251
 msgid "Calling Tasks"
-msgstr ""
+msgstr "タスクの呼び出し"
 
 #: ../../getting-started/next-steps.rst:253
 msgid "You can call a task using the :meth:`delay` method::"
-msgstr ""
+msgstr ":meth:`delay` メソッドを使ってタスクを呼び出します::"
 
 #: ../../getting-started/next-steps.rst:257
 msgid ""
 "This method is actually a star-argument shortcut to another method called "
 ":meth:`apply_async`::"
 msgstr ""
+"このメソッドは実際には :meth:`apply_asyc` メソッドを star-argument を用いて呼び出しているショートカットです::"
 
 #: ../../getting-started/next-steps.rst:262
 msgid ""
 "The latter enables you to specify execution options like the time to run "
 "(countdown), the queue it should be sent to and so on::"
 msgstr ""
+"後者の呼び出しでは、実行時間(countdown)や送信されるキューなどの実行時オプションを指定できます::"
 
 #: ../../getting-started/next-steps.rst:267
 msgid ""
@@ -316,12 +377,14 @@ msgid ""
 "the task will execute, at the earliest, 10 seconds after the message was "
 "sent."
 msgstr ""
+"上の例では、タスクは ``lopri`` という名前のキューに送られ、メッセージ送信から最速で 10 秒後にタスクが実行されます。"
 
 #: ../../getting-started/next-steps.rst:270
 msgid ""
 "Applying the task directly will execute the task in the current process, so "
 "that no message is sent::"
 msgstr ""
+"タスクを直接呼び出すと、メッセージは送信されず、そのプロセスの中で実行されます::"
 
 #: ../../getting-started/next-steps.rst:276
 msgid ""
@@ -329,18 +392,22 @@ msgid ""
 "(``__call__``), represents the Celery calling API, which are also used for "
 "subtasks."
 msgstr ""
+"これら 3 つのメソッド - :meth:`delay`、:meth:`apply_async`、applying (``__call__``) は "
+"Celery Calling API と称され、サブタスクでも使用されます。"
 
 #: ../../getting-started/next-steps.rst:280
 msgid ""
 "A more detailed overview of the Calling API can be found in the "
 ":ref:`Calling User Guide <guide-calling>`."
 msgstr ""
+"Calling API についてのより詳細な解説は :ref:`Calling User Guide <guide-calling>` にあります。"
 
 #: ../../getting-started/next-steps.rst:283
 msgid ""
 "Every task invocation will be given a unique identifier (an UUID), this is "
 "the task id."
 msgstr ""
+"あらゆるタスクの呼び出しにはユニークな ID (UUID) が付与されます。これがタスク ID です。"
 
 #: ../../getting-started/next-steps.rst:286
 msgid ""
@@ -349,6 +416,9 @@ msgid ""
 "for this you need to enable a :ref:`result backend <task-result-backends>` "
 "so that the state can be stored somewhere."
 msgstr ""
+"``delay`` と ``apply_async`` メソッドは :class:`~@AsyncResult` インスタンスを返します。"
+"このインスタンスを使ってタスクの実行状態を追跡できますが、この状態を保存するために"
+" :ref:`result backend <task-result-backends>` を有効にする必要があります。"
 
 #: ../../getting-started/next-steps.rst:291
 msgid ""
@@ -359,28 +429,38 @@ msgid ""
 "note that result backends are not used for monitoring tasks and workers, for"
 " that Celery uses dedicated event messages (see :ref:`guide-monitoring`)."
 msgstr ""
+"デフォルトでは結果バックエンドは無効になっていますが、これはほとんどのアプリケーションにとっては"
+"適切なものだからです。有効にする場合は、使用するバックエンドを短所も考慮して選んでください。"
+"大半のタスクでは結果を保持しておくことが大して有用ではないので、デフォルトで無効になっているのは"
+"良い設計と言えるでしょう。"
+"また、結果バックエンドはタスクやワーカーを監視するために使うものではないということに注意してください。"
+"監視用途としては Celery はイベントメッセージを使います(:ref:`guide-monitoring`)。"
 
 #: ../../getting-started/next-steps.rst:298
 msgid ""
 "If you have a result backend configured you can retrieve the return value of"
 " a task::"
 msgstr ""
+"結果バックエンドを設定すると、タスクの戻り値を取得できるようになります::"
 
 #: ../../getting-started/next-steps.rst:305
 msgid "You can find the task's id by looking at the :attr:`id` attribute::"
-msgstr ""
+msgstr ":attr:`id` 属性を調べればタスク ID が分かります::"
 
 #: ../../getting-started/next-steps.rst:310
 msgid ""
 "You can also inspect the exception and traceback if the task raised an "
 "exception, in fact ``result.get()`` will propagate any errors by default::"
 msgstr ""
+"また、タスクが例外を送出したた場合にはその例外やトレースバックを調べることもできます。"
+"デフォルトでは ``result.get()`` がすべてのエラーを伝搬します。"
 
 #: ../../getting-started/next-steps.rst:323
 msgid ""
 "If you don't wish for the errors to propagate then you can disable that by "
 "passing the ``propagate`` argument::"
 msgstr ""
+"エラーの伝搬をして欲しくない場合は ``propaage`` 引数によって無効にできます::"
 
 #: ../../getting-started/next-steps.rst:329
 msgid ""
@@ -388,18 +468,22 @@ msgid ""
 " check whether the task succeeded or failed you will have to use the "
 "corresponding methods on the result instance::"
 msgstr ""
+"この場合、exception インスタンスが戻り値となります。タスクの実行が成功したか失敗したかを"
+"結果インタンスの該当するメソッドを使ってチェックしなければいけません::"
 
 #: ../../getting-started/next-steps.rst:339
 msgid ""
 "So how does it know if the task has failed or not?  It can find out by "
 "looking at the tasks *state*::"
 msgstr ""
+"タスクが失敗したかどうかは、タスクの *state* を調べることで分かります::"
 
 #: ../../getting-started/next-steps.rst:345
 msgid ""
 "A task can only be in a single state, but it can progress through several "
 "states. The stages of a typical task can be::"
 msgstr ""
+"タスクはひとつののみ状態を取り得ますが、いくつかの状態を遷移します。典型的なタスクでは次のような遷移です::"
 
 #: ../../getting-started/next-steps.rst:350
 msgid ""
@@ -434,7 +518,7 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:378
 msgid "*Canvas*: Designing Workflows"
-msgstr ""
+msgstr "*Canvas*: 設計ワークフロー"
 
 #: ../../getting-started/next-steps.rst:380
 msgid ""
@@ -443,6 +527,10 @@ msgid ""
 " of a task invocation to another process or as an argument to another "
 "function, for this Celery uses something called *subtasks*."
 msgstr ""
+"ここまで ``delay`` メソッドを使ってタスクを呼び出す方法について学びました。"
+"これで大半のケースにおいて必要なものはすべて賄えているのですが、"
+"タスクの呼び出しシグニチャーを別のプロセスに渡したり、引数として別の関数に渡したいケースが"
+"生じることがあります。これを解決するのが *サブタスク* と呼ばれるものです。"
 
 #: ../../getting-started/next-steps.rst:385
 msgid ""
@@ -450,26 +538,32 @@ msgid ""
 "invocation in a way such that it can be passed to functions or even "
 "serialized and sent across the wire."
 msgstr ""
+"サブタスクは、あるタスク呼び出しの引数や実行時オプションをラップしたもので、"
+"関数に渡したり、シリアライズしてネットワーク上に送信したりするのに使われます。"
 
 #: ../../getting-started/next-steps.rst:389
 msgid ""
 "You can create a subtask for the ``add`` task using the arguments ``(2, "
 "2)``, and a countdown of 10 seconds like this::"
 msgstr ""
+"``add`` タスクに引数 ``(2, 2)`` を指定し、10 秒の countdown オプションを付けた"
+"サブタスクを生成するには次のようにします::"
 
 #: ../../getting-started/next-steps.rst:395
 msgid "There is also a shortcut using star arguments::"
-msgstr ""
+msgstr "star arguments を使ったショートカットもあります::"
 
 #: ../../getting-started/next-steps.rst:401
 msgid "And there's that calling API again…"
-msgstr ""
+msgstr "Calling API 再び…"
 
 #: ../../getting-started/next-steps.rst:403
 msgid ""
 "Subtask instances also supports the calling API, which means that they have "
 "the ``delay`` and ``apply_async`` methods."
 msgstr ""
+"サブタスクのインスタンスも Calling API をサポートしています。"
+"つまり、``delay`` と ``apply_async`` メソッドが利用できます。"
 
 #: ../../getting-started/next-steps.rst:406
 msgid ""
@@ -477,34 +571,42 @@ msgid ""
 "signature specified.  The ``add`` task takes two arguments, so a subtask "
 "specifying two arguments would make a complete signature::"
 msgstr ""
+"サブタスクではすでに引数シグニチャーが指定されている点が異なります。"
+"``add`` タスクは 2 つの引数を取るので、2 つの引数が指定されたサブタスクは完全なシグニチャーを備えていることになります::"
 
 #: ../../getting-started/next-steps.rst:415
 msgid ""
 "But, you can also make incomplete signatures to create what we call "
 "*partials*::"
 msgstr ""
+"一方、不完全なシグニチャーを持たせることもでき、これを *パーシャル* と呼んでいます::"
 
 #: ../../getting-started/next-steps.rst:421
 msgid ""
 "``s2`` is now a partial subtask that needs another argument to be complete, "
 "and this can be resolved when calling the subtask::"
 msgstr ""
+"``s2`` は現時点ではパーシャルなサブタスクで、完全なものになるにはもう 1 つの引数が必要ですが、"
+"これはサブタスクを呼び出す時に行えます::"
 
 #: ../../getting-started/next-steps.rst:429
 msgid ""
 "Here you added the argument 8, which was prepended to the existing argument "
 "2 forming a complete signature of ``add(8, 2)``."
 msgstr ""
+"このように引数 8 を既存の引数 2 の前に加えたので、``add(8, 2)`` という完全なシグニチャーの形になったわけです。"
 
 #: ../../getting-started/next-steps.rst:432
 msgid ""
 "Keyword arguments can also be added later, these are then merged with any "
 "existing keyword arguments, but with new arguments taking precedence::"
 msgstr ""
+"キーワード引数も後から追加することができます。既存のキーワード引数にマージされますが、"
+"後から追加した新しい引数が優先されます::"
 
 #: ../../getting-started/next-steps.rst:438
 msgid "As stated subtasks supports the calling API, which means that:"
-msgstr ""
+msgstr "上述のようにサブタスクは Calling API をサポートします::"
 
 #: ../../getting-started/next-steps.rst:440
 msgid "``subtask.apply_async(args=(), kwargs={}, **options)``"
@@ -515,6 +617,8 @@ msgid ""
 "Calls the subtask with optional partial arguments and partial keyword "
 "arguments.  Also supports partial execution options."
 msgstr ""
+"サブタスクをオプションのパーシャル引数、パーシャルキーワード引数を付けて呼べます。"
+"また、パーシャルな実行時オプションもサポートしています。"
 
 #: ../../getting-started/next-steps.rst:445
 msgid "``subtask.delay(*args, **kwargs)``"
@@ -526,16 +630,20 @@ msgid ""
 "to the arguments in the signature, and keyword arguments is merged with any "
 "existing keys."
 msgstr ""
+"``apply_async`` の Star argument バージョンです。ここで指定した引数は"
+"シグニチャーに含まれる引数の前に追加され、キーワード引数は既存の引数にマージされます。"
 
 #: ../../getting-started/next-steps.rst:451
 msgid ""
 "So this all seems very useful, but what can you actually do with these? To "
 "get to that I must introduce the canvas primitives…"
 msgstr ""
+"これらはとても便利なように見えますが、では一体これらを使って何をするのでしょう？　"
+"その答えのためには canvas primitives を紹介しなければいけません…"
 
 #: ../../getting-started/next-steps.rst:455
 msgid "The Primitives"
-msgstr ""
+msgstr "Primitives"
 
 #: ../../getting-started/next-steps.rst:0
 msgid "\\"
@@ -642,31 +750,36 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:568
 msgid "Routing"
-msgstr ""
+msgstr "ルーティング"
 
 #: ../../getting-started/next-steps.rst:570
 msgid ""
 "Celery supports all of the routing facilities provided by AMQP, but it also "
 "supports simple routing where messages are sent to named queues."
 msgstr ""
+"Celery は AMQP から提供されるルーティングファイリティをすべてサポートしていますが、"
+"指定したキューにメッセージを送るシンプルなルーティングもサポートしています。"
 
 #: ../../getting-started/next-steps.rst:573
 msgid ""
 "The :setting:`CELERY_ROUTES` setting enables you to route tasks by name and "
 "keep everything centralized in one location::"
 msgstr ""
+":settings:`CELERY_ROUTES` 設定で、タスクの名前でルートを指定でき、一カ所にすべてを集めることができます::"
 
 #: ../../getting-started/next-steps.rst:582
 msgid ""
 "You can also specify the queue at runtime with the ``queue`` argument to "
 "``apply_async``::"
 msgstr ""
+"実行時に ``apply_async`` に対して ``queue`` 引数を用いてキューを指定することも可能です::"
 
 #: ../../getting-started/next-steps.rst:588
 msgid ""
 "You can then make a worker consume from this queue by specifying the "
 ":option:`-Q` option:"
 msgstr ""
+"そして、:option:`-Q` オプションを指定して、ワーカーにこのキューを利用させることができます:"
 
 #: ../../getting-started/next-steps.rst:595
 msgid ""
@@ -675,18 +788,23 @@ msgid ""
 "``hipri`` queue, where the default queue is named ``celery`` for historical "
 "reasons:"
 msgstr ""
+"コンマ区切りのリストで複数のキューを指定できます。"
+"次の例では、デフォルトキューと ``hipri`` キューの両方をワーカーに指定しています。"
+"デフォルトキューは力士的な理由で ``celery`` と命名されています:"
 
 #: ../../getting-started/next-steps.rst:604
 msgid ""
 "The order of the queues doesn't matter as the worker will give equal weight "
 "to the queues."
 msgstr ""
+"ワーカーは指定されたキューに等しいウェイトを置いているため、キューの順番は関係ありません。"
 
 #: ../../getting-started/next-steps.rst:607
 msgid ""
 "To learn more about routing, including taking use of the full power of AMQP "
 "routing, see the :ref:`Routing Guide <guide-routing>`."
 msgstr ""
+"AMQP ルーティング機能の利用を含め、ルーティングについてもっと学ぶには :ref:`Routing Guide <guide-routing>` を参照してください。"
 
 #: ../../getting-started/next-steps.rst:611
 msgid "Remote Control"
@@ -785,7 +903,7 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:701
 msgid "Optimization"
-msgstr ""
+msgstr "最適化"
 
 #: ../../getting-started/next-steps.rst:703
 msgid ""
@@ -793,6 +911,9 @@ msgid ""
 "tries to walk the middle way between many short tasks and fewer long tasks, "
 "a compromise between throughput and fair scheduling."
 msgstr ""
+"デフォルトの設定はスループットのための最適化はされていません。"
+"デフォルト設定は多くの短いタスクと少量の長いタスクの中間を行くように意図されており、"
+"スループットと正確なスケジューリングとの妥協を図ったものです。"
 
 #: ../../getting-started/next-steps.rst:707
 msgid ""
@@ -800,23 +921,28 @@ msgid ""
 "throughput then you should read the :ref:`Optimizing Guide <guide-"
 "optimizing>`."
 msgstr ""
+"厳密なスケジューリングな要件がある、またはスループットを高めるように最適化したい、といった場合は"
+":ref:`Optimizing Guide <guide-optimizing>` を読んでください。"
 
 #: ../../getting-started/next-steps.rst:711
 msgid ""
 "If you're using RabbitMQ then you should install the :mod:`librabbitmq` "
 "module, which is an AMQP client implemented in C:"
 msgstr ""
+"RabbitMQ を使っているのであれば、C で実装された AMQP クライアントである "
+":mod:`librabbitmq` モジュールをインストールするべきです。"
 
 #: ../../getting-started/next-steps.rst:719
 msgid "What to do now?"
-msgstr ""
+msgstr "さあ次は？"
 
 #: ../../getting-started/next-steps.rst:721
 msgid ""
 "Now that you have read this document you should continue to the :ref:`User "
 "Guide <guide>`."
 msgstr ""
+"このドキュメントを読み終わったので、次は :ref:`User Guide <guide>` に進みましょう。"
 
 #: ../../getting-started/next-steps.rst:724
 msgid "There's also an :ref:`API reference <apiref>` if you are so inclined."
-msgstr ""
+msgstr ":ref:`API reference <apiref>` もありますよ。"

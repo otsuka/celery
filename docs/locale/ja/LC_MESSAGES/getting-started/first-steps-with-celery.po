@@ -94,6 +94,8 @@ msgid ""
 "an excellent choice for a production environment. Detailed information about"
 " using RabbitMQ with Celery:"
 msgstr ""
+"`RabbitMQ`_ は Celery の全機能をサポートし、安定しており、インストールも簡単です。"
+""
 
 #: ../../getting-started/first-steps-with-celery.rst:52
 msgid ":ref:`broker-rabbitmq`"
@@ -180,8 +182,8 @@ msgid "See :ref:`broker-overview` for a full list."
 msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:109
-msgid "Celery のインストール"
-msgstr ""
+msgid "Installing Celery"
+msgstr "Celery のインストール"
 
 #: ../../getting-started/first-steps-with-celery.rst:111
 msgid ""
@@ -449,7 +451,7 @@ msgid ""
 "trouble."
 msgstr ""
 "大きなプロジェクトでは専用の設定モジュールを使った方が利便性が向上します。"
-"定期的なタスクのインターバルやタスクのルーティングオプションをハードコーティングするのは"
+"定期タスクのインターバルやタスクのルーティングオプションをハードコーティングするのは"
 "避け、設定を一カ所にまとめておく方が良いやり方です。"
 "特にライブラリとして提供するのであれば、設定がまとまっていればユーザーがタスクの振る舞いを"
 "コントロールできますし、システムトラブルの際には管理者がちゃちゃっと設定を変えることもできることでしょう。"
@@ -474,7 +476,7 @@ msgid ""
 "A module named ``celeryconfig.py`` must then be available to load from the "
 "current directory or on the Python path, it could look like this:"
 msgstr ""
-"``celeryconfig.py`` モジュールは現在のディレクトリ、または Python パスから読み込めるようにしておかなければいけません。"
+"``celeryconfig.py`` モジュールはカレントディレクトリ、または Python パスから読み込めるようにしておかなければいけません。"
 "中身は以下のようになります。"
 
 #: ../../getting-started/first-steps-with-celery.rst:331
@@ -531,7 +533,7 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:392
 msgid "Where to go from here"
-msgstr "次はどうする"
+msgstr "お次は？"
 
 #: ../../getting-started/first-steps-with-celery.rst:394
 msgid ""
@@ -539,8 +541,8 @@ msgid ""
 "steps>` tutorial, and after that you can study the :ref:`User Guide "
 "<guide>`."
 msgstr ""
-"もっと Celery について学びたい場合は :ref:`Next Steps <next-steps>` チュートリアルをやって、"
-"その後 :ref:`User Guide <guide>` を読むといいでしょう。"
+"もっと Celery について学びたい場合は :ref:`Next Steps <next-steps>` チュートリアルに進み、"
+"その後 :ref:`User Guide <guide>` を読むことをお薦めします。"
 
 #: ../../getting-started/first-steps-with-celery.rst:401
 msgid "Troubleshooting"

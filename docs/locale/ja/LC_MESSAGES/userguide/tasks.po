@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:5
 msgid "Tasks"
-msgstr ""
+msgstr "タスク"
 
 #: ../../userguide/tasks.rst:7
 msgid "Tasks are the building blocks of Celery applications."
-msgstr ""
+msgstr "タスクは Celery アプリケーションの構成要素です。"
 
 #: ../../userguide/tasks.rst:9
 msgid ""
@@ -25,12 +25,18 @@ msgid ""
 "roles in that it defines both what happens when a task is called (sends a "
 "message), and what happens when a worker receives that message."
 msgstr ""
+"タスクは callable から生成されるクラスです。"
+"タスクが呼ばれた時(メッセージ送信時)に起こる内容、"
+"そしてワーカーがメッセージを受け取った時に起こる内容の両方を定義しているという点で"
+"タスクは二つの役割を担っていると言えます。"
 
 #: ../../userguide/tasks.rst:13
 msgid ""
 "Every task class has a unique name, and this name is referenced in messages "
 "so that the worker can find the right function to execute."
 msgstr ""
+"すべてのタスククラスは一意な名前を持っており、"
+"メッセージに含まれるこの名前を参照して、ワーカーは実行すべき正しい関数を見つけます。"
 
 #: ../../userguide/tasks.rst:16
 msgid ""
@@ -39,6 +45,9 @@ msgid ""
 "advance and even if the worker is killed -- caused by power failure or "
 "otherwise -- the message will be redelivered to another worker."
 msgstr ""
+"タスクメッセージは、ワーカーによって :term:`acknowledged` されるまで消えることはありません。"
+"ワーカーは多くのメッセージを予め保持することができ、電源トラブル等でワーカーが kill されたとしても"
+"メッセージは別のワーカーに再送されます。"
 
 #: ../../userguide/tasks.rst:21
 msgid ""
@@ -49,6 +58,10 @@ msgid ""
 "before it's executed, so that a task that has already been started is never "
 "executed again.."
 msgstr ""
+"理想的にはタスクの関数は :term:`idempotent` (冪等)であるべきです。"
+"これは、ある関数が同じ引数で何度も呼び出されたとしても意図しない結果を生み出さないということです。"
+"ワーカーはタスクが冪等であるかどうか判定できないので、デフォルトの挙動としては"
+"既に開始しているタスクが再実行されないよう、タスク実行前にメッセージを予め acknowledge します。"
 
 #: ../../userguide/tasks.rst:28
 msgid ""
@@ -56,6 +69,9 @@ msgid ""
 "the worker acknowledge the message *after* the task returns instead.  See "
 "also the FAQ entry :ref:`faq-acks_late-vs-retry`."
 msgstr ""
+"もしタスクが冪等である場合、:attr:`acks_late` オプションをセットして、"
+"タスクが完了した *後で* ワーカーにメッセージを acknowledge させるようにできます。"
+"FAQ の :ref:`faq-acks_late-vs-retry` も参照してください。"
 
 #: ../../userguide/tasks.rst:32
 msgid "--"
@@ -66,26 +82,29 @@ msgid ""
 "In this chapter you will learn all about defining tasks, and this is the "
 "**table of contents**:"
 msgstr ""
+"この章ではタスクの定義に関するすべてを学びます。これが **その内容です**:"
 
 #: ../../userguide/tasks.rst:45
 msgid "Basics"
-msgstr ""
+msgstr "基本"
 
 #: ../../userguide/tasks.rst:47
 msgid ""
 "You can easily create a task from any callable by using the "
 ":meth:`~@Celery.task` decorator:"
 msgstr ""
+":meth:`~@Celery.task` デコレーターを使って callable から容易にタスクを生成できます:"
 
 #: ../../userguide/tasks.rst:59
 msgid ""
 "There are also many :ref:`options <task-options>` that can be set for the "
 "task, these can be specified as arguments to the decorator:"
 msgstr ""
+"タスクに設定可能な多くの :ref:`options <task-options>` があり、これらはデコレーターの引数として指定します:"
 
 #: ../../userguide/tasks.rst:0
 msgid "How do I import the task decorator? And what is \"app\"?"
-msgstr ""
+msgstr "どのようにタスクデコレーターをインポートするのですか？ \"app\" とは何ですか？"
 
 #: ../../userguide/tasks.rst:72
 msgid ""
@@ -93,16 +112,20 @@ msgid ""
 "instance, if you don't know what that is then please read :ref:`first-"
 "steps`."
 msgstr ""
+"タスクデコレーターは :class:`@Celery` アプリケーションインタンスから利用できます。"
+"これが何だか分からない場合は、:ref:`first-steps` を読んでください。"
 
 #: ../../userguide/tasks.rst:75
 msgid ""
 "If you're using Django or are still using the \"old\" module based celery "
 "API, then you can import the task decorator like this::"
 msgstr ""
+"Django を使っている、または \"古い\" モジュールの Celery API を使ってある場合は"
+"次のようにタスクデコレーターをインポートできます::"
 
 #: ../../userguide/tasks.rst:0
 msgid "Multiple decorators"
-msgstr ""
+msgstr "複数のデコレーター"
 
 #: ../../userguide/tasks.rst:86
 msgid ""
@@ -110,20 +133,24 @@ msgid ""
 "must make sure that the `task` decorator is applied last (which in Python "
 "oddly means that it must be the first in the list):"
 msgstr ""
+"複数のデコレーターを組み合わせて使う時には `task` デコレーターが最後に適用されるように"
+"してください(Python ではデコレーターリストの最初に来ることを意味します):"
 
 #: ../../userguide/tasks.rst:102
 msgid "Names"
-msgstr ""
+msgstr "名前"
 
 #: ../../userguide/tasks.rst:104
 msgid ""
 "Every task must have a unique name, and a new name will be generated out of "
 "the function name if a custom name is not provided."
 msgstr ""
+"すべてのタスクは一意な名前を持たなければいけません。自分で名前を付けない場合は"
+"関数名から新しい名前が生成されます。"
 
 #: ../../userguide/tasks.rst:107
 msgid "For example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../userguide/tasks.rst:118
 msgid ""
@@ -131,11 +158,14 @@ msgid ""
 "won't collide if there's already a task with that name defined in another "
 "module."
 msgstr ""
+"ベストプラクティスはネームスペースとしてモジュール名を使うことです。こうすれば"
+"別のモジュールで同じ名前のタスクが既にあったとしても衝突することはありません。"
 
 #: ../../userguide/tasks.rst:128
 msgid ""
 "You can tell the name of the task by investigating its name attribute::"
 msgstr ""
+"タスクの name 属性で名前が分かります::"
 
 #: ../../userguide/tasks.rst:133
 msgid ""
@@ -149,13 +179,15 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:151
 msgid "Automatic naming and relative imports"
-msgstr ""
+msgstr "自動命名と相対インポート"
 
 #: ../../userguide/tasks.rst:153
 msgid ""
 "Relative imports and automatic name generation does not go well together, so"
 " if you're using relative imports you should set the name explicitly."
 msgstr ""
+"相対インポートと自動名前生成はうまく共存できません。"
+"なので相対インボートを使う場合は明示的に名前をセットするべきです。"
 
 #: ../../userguide/tasks.rst:156
 msgid ""
@@ -164,12 +196,16 @@ msgid ""
 "won't match and an :exc:`~@NotRegistered` error will be raised by the "
 "worker."
 msgstr ""
+"例えば、クライアントが \"myapp.tasks\" モジュールを \".tasks\" とインポートし、"
+"ワーカーが \"myapp.tasks\" とインポートした場合、生成された名前は一致せず、"
+"ワーカーから :exc:`~@NotRegistered` エラーが送出されます。"
 
 #: ../../userguide/tasks.rst:160
 msgid ""
 "This is also the case when using Django and using `project.myapp`-style "
 "naming in ``INSTALLED_APPS``:"
 msgstr ""
+"これは Django の ``INSTALLED_APPS``"
 
 #: ../../userguide/tasks.rst:167
 msgid ""
@@ -364,7 +400,7 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:336
 msgid "Retrying"
-msgstr ""
+msgstr "リトライ"
 
 #: ../../userguide/tasks.rst:338
 msgid ""
@@ -721,7 +757,7 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:622
 msgid "States"
-msgstr ""
+msgstr "ステート"
 
 #: ../../userguide/tasks.rst:624
 msgid ""
@@ -764,7 +800,7 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:650
 msgid "Result Backends"
-msgstr ""
+msgstr "結果バックエンド"
 
 #: ../../userguide/tasks.rst:652
 msgid ""
@@ -1340,11 +1376,11 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:1209
 msgid "Tips and Best Practices"
-msgstr ""
+msgstr "Tips とベストプラクティス"
 
 #: ../../userguide/tasks.rst:1214
 msgid "Ignore results you don't want"
-msgstr ""
+msgstr "必要ないなら結果は無視する"
 
 #: ../../userguide/tasks.rst:1216
 msgid ""
@@ -1352,16 +1388,19 @@ msgid ""
 ":attr:`~@Task.ignore_result` option, as storing results wastes time and "
 "resources."
 msgstr ""
+"タスクの結果を気にしないのであれば、:attr:`~@Task.ignore_result` オプションをセットしてください。"
+"結果を保存することは時間とリソースを消費します。"
 
 #: ../../userguide/tasks.rst:1226
 msgid ""
 "Results can even be disabled globally using the "
 ":setting:`CELERY_IGNORE_RESULT` setting."
 msgstr ""
+":setting:`CELERY_IGNORE_RESULT` 設定を使って結果の保存をグローバルに無効にすることもできます。"
 
 #: ../../userguide/tasks.rst:1232
 msgid "Disable rate limits if they're not used"
-msgstr ""
+msgstr "使わないならレート制限を無効にする"
 
 #: ../../userguide/tasks.rst:1234
 msgid ""
@@ -1369,12 +1408,15 @@ msgid ""
 "using them.  This is because the rate limit subsystem introduces quite a lot"
 " of complexity."
 msgstr ""
+"レート制限を使っているタスクがないのであれば、この機能を無効にすることを推奨します。"
+"レート制限のサブシステムはとても複雑なものだからです。"
 
 #: ../../userguide/tasks.rst:1238
 msgid ""
 "Set the :setting:`CELERY_DISABLE_RATE_LIMITS` setting to globally disable "
 "rate limits:"
 msgstr ""
+":setting:`CELERY_DISABLE_RATE_LIMITS` 設定によってグローバルにレート制限を無効にできます。"
 
 #: ../../userguide/tasks.rst:1245
 msgid ""

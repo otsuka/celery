@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,25 +13,26 @@ msgstr ""
 
 #: ../../faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "よくある質問"
 
 #: ../../faq.rst:13
 msgid "General"
-msgstr ""
+msgstr "全般"
 
 #: ../../faq.rst:18
 msgid "What kinds of things should I use Celery for?"
-msgstr ""
+msgstr "Celery はどんなことに使えますか？"
 
 #: ../../faq.rst:20
 msgid ""
 "**Answer:** `Queue everything and delight everyone`_ is a good article "
 "describing why you would use a queue in a web context."
-msgstr ""
+msgstr "**回答:** `Queue everything and delight everyone`_ は、"
+" Web コンテキストでキューを使うべき理由について書かれている優れた記事です。"
 
 #: ../../faq.rst:26
 msgid "These are some common use cases:"
-msgstr ""
+msgstr "いくつか共通するユースケースがあります::"
 
 #: ../../faq.rst:28
 msgid ""
@@ -40,20 +41,23 @@ msgid ""
 "the user the impression of good performance and \"snappiness\", even though "
 "the real work might actually take some time."
 msgstr ""
+"バックグラウンドで何かを実行する。例えば、Web リクエストは可能な限り早く終わらせ、"
+"ユーザーのページは徐々に更新していく。こうすれば、"
+"実際の処理には時間が掛かっているけれど、ユーザーにはパフォーマンスが良い印象を与えられます。"
 
 #: ../../faq.rst:33
 msgid "Running something after the web request has finished."
-msgstr ""
+msgstr "Web リクエストが完了してから何かを実行する"
 
 #: ../../faq.rst:35
 msgid ""
 "Making sure something is done, by executing it asynchronously and using "
 "retries."
-msgstr ""
+msgstr "非同期に実行したりリトライを使って、何かが完了したことを確認する"
 
 #: ../../faq.rst:38
 msgid "Scheduling periodic work."
-msgstr ""
+msgstr "定期的な処理のスケジューリング"
 
 #: ../../faq.rst:40
 msgid "And to some degree:"
@@ -61,41 +65,41 @@ msgstr ""
 
 #: ../../faq.rst:42
 msgid "Distributed computing."
-msgstr ""
+msgstr "分散コンピューティング"
 
 #: ../../faq.rst:44
 msgid "Parallel execution."
-msgstr ""
+msgstr "並列実行"
 
 #: ../../faq.rst:49
 msgid "Misconceptions"
-msgstr ""
+msgstr "誤解"
 
 #: ../../faq.rst:54
 msgid "Does Celery really consist of 50.000 lines of code?"
-msgstr ""
+msgstr "Celery は本当に 50,000 行のコードでできているのですか？"
 
 #: ../../faq.rst:56
 msgid ""
 "**Answer:** No, this and similarly large numbers have been reported at "
 "various locations."
-msgstr ""
+msgstr "**回答:** いいえ。様々な場所でこれと同じような大きな数字が報告されています。"
 
 #: ../../faq.rst:59
 msgid "The numbers as of this writing are:"
-msgstr ""
+msgstr "執筆時点での数字:"
 
 #: ../../faq.rst:61
 msgid "core: 7,141 lines of code."
-msgstr ""
+msgstr "core: 7,141 行"
 
 #: ../../faq.rst:62
 msgid "tests: 14,209 lines."
-msgstr ""
+msgstr "tests: 14,209 行"
 
 #: ../../faq.rst:63
 msgid "backends, contrib, compat utilities: 9,032 lines."
-msgstr ""
+msgstr "backends, contrib, compat utilities: 9,032 行"
 
 #: ../../faq.rst:65
 msgid ""
@@ -103,10 +107,12 @@ msgid ""
 "lines of code you would not be able to draw any conclusions from such a "
 "number."
 msgstr ""
+"コードの行数は有用なメトリクスではありません。もし Celery が本当に 50,000 行のコードで"
+"できていたとしても、その数字から何かの結論を得られるものではないと思います。"
 
 #: ../../faq.rst:70
 msgid "Does Celery have many dependencies?"
-msgstr ""
+msgstr "Celery は多くの依存パッケージを必要とするのですか？"
 
 #: ../../faq.rst:72
 msgid ""
@@ -117,12 +123,19 @@ msgid ""
 "like pip and PyPI makes the hassle of installing and maintaining "
 "dependencies a thing of the past."
 msgstr ""
+"Celery へのよくある批判が、たくさんの依存パッケージを必要としているというものです。"
+"今日のソフトウェア開発における複雑さに対処する方法としてコードを再利用することは定石であり、"
+"それを考慮すればこのような批判の論理的根拠はないものと思われます。"
+"また、pip や PyPI といったパッケージマネージャーが依存パッケージのインストールや管理の"
+"煩わしさを過去のものとしてくれたおかげで、依存パッケージを加えるコストは今日ではとても低いもの"
+"となっています。"
 
 #: ../../faq.rst:79
 msgid ""
 "Celery has replaced several dependencies along the way, and the current list"
 " of dependencies are:"
 msgstr ""
+"Celery はいくつかの依存パッケージをリプレイスしており、現在の依存リストは次のようになっています:"
 
 #: ../../faq.rst:83
 msgid "celery"
@@ -139,6 +152,10 @@ msgid ""
 "different message brokers.  It is also used by the OpenStack project, and "
 "many others, validating the choice to separate it from the Celery codebase."
 msgstr ""
+"Kombu は Celery のエコシステムの一部で、メッセージの送受信に使われるライブラリです。"
+"また様々なメッセージブローカーのサポートを可能にもしてくれています。"
+"OpenStack をはじめとする数多くのプロジェクトでも使用されており、Celery のコードベースから"
+"これらの機能を分離するための選択肢として正しかったことを示してます。"
 
 #: ../../faq.rst:95
 msgid "`billiard`_"
@@ -150,12 +167,15 @@ msgid ""
 "performance and stability improvements.  It is an eventual goal that these "
 "improvements will be merged back into Python one day."
 msgstr ""
+"Billiard は Python の multiprocessing モジュールのフォークで、パフォーマンスと安定性が改善されています。"
+"これらの改善がいつの日か Python 本体にマージされることを目指しています。"
 
 #: ../../faq.rst:101
 msgid ""
 "It is also used for compatibility with older Python versions that doesn't "
 "come with the multiprocessing module."
 msgstr ""
+"multiprocessing モジュールを標準で備えていない 古いバージョンの Python との互換性を持たせるのにも利用されています。"
 
 #: ../../faq.rst:106
 msgid "`pytz`"
@@ -163,7 +183,7 @@ msgstr ""
 
 #: ../../faq.rst:108
 msgid "The pytz module provides timezone definitions and related tools."
-msgstr ""
+msgstr "pytz モジュールはタイムゾーンの定義と、それに関連するツールを提供しています。"
 
 #: ../../faq.rst:113
 msgid "django-celery"
@@ -174,10 +194,12 @@ msgid ""
 "If you use django-celery then you don't have to install celery separately, "
 "as it will make sure that the required version is installed."
 msgstr ""
+"django-celery を使うと、別途 Celery をインストールする必要はありません。"
+"必要なバージョンの Celery をインストールしてくれます。"
 
 #: ../../faq.rst:118
 msgid "django-celery does not have any other dependencies."
-msgstr ""
+msgstr "django-celery には他に依存パッケージはありません。"
 
 #: ../../faq.rst:121
 msgid "kombu"
@@ -185,7 +207,7 @@ msgstr ""
 
 #: ../../faq.rst:123
 msgid "Kombu depends on the following packages:"
-msgstr ""
+msgstr "Kombu は以下のパッケージに依存しています::"
 
 #: ../../faq.rst:125
 msgid "`amqp`_"
@@ -196,6 +218,7 @@ msgid ""
 "The underlying pure-Python amqp client implementation.  AMQP being the "
 "default broker this is a natural dependency."
 msgstr ""
+""
 
 #: ../../faq.rst:132
 msgid "`anyjson`_"
@@ -206,6 +229,7 @@ msgid ""
 "anyjson is an utility library to select the best possible JSON "
 "implementation."
 msgstr ""
+"anyjson は最良な JSON 実装を選択をするユーティリティライブラリです。"
 
 #: ../../faq.rst:142
 msgid ""
@@ -213,35 +237,41 @@ msgid ""
 "running on older Python versions, for example Python 2.6 depends on the "
 "``importlib``, and ``ordereddict`` libraries."
 msgstr ""
+"古いバージョンの Python を使う場合、互換性のために追加パッケージがインストールされます。"
+"例えば Python 2.6 では ``importlib``、``ordereddict`` ライブラリに依存しています。"
 
 #: ../../faq.rst:147
 msgid ""
 "Also, to handle the dependencies for popular configuration choices Celery "
 "defines a number of \"bundle\" packages, see :ref:`bundles`."
 msgstr ""
+""
 
 #: ../../faq.rst:155
 msgid "Is Celery heavy-weight?"
-msgstr ""
+msgstr "Celery は重量級？"
 
 #: ../../faq.rst:157
 msgid ""
 "Celery poses very little overhead both in memory footprint and performance."
 msgstr ""
+"Celery はメモリ使用量、パフォーマンスの双方においてほとんどオーバーヘッドはありません。"
 
 #: ../../faq.rst:160
 msgid ""
 "But please note that the default configuration is not optimized for time nor"
 " space, see the :ref:`guide-optimizing` guide for more information."
 msgstr ""
+"しかしながら、デフォルトの設定は速度、または使用リソースに対して最適化されたものではありません。"
+"詳しくは :ref:`guide-optimizing` ガイドを参照してください。"
 
 #: ../../faq.rst:166
 msgid "Is Celery dependent on pickle?"
-msgstr ""
+msgstr "Celery は pickle に依存していますか？"
 
 #: ../../faq.rst:168 ../../faq.rst:189
 msgid "**Answer:** No."
-msgstr ""
+msgstr "**回答:** いいえ。"
 
 #: ../../faq.rst:170
 msgid ""
@@ -272,19 +302,19 @@ msgstr ""
 
 #: ../../faq.rst:187
 msgid "Is Celery for Django only?"
-msgstr ""
+msgstr "Celery は Django のみをサポートしているのですか？"
 
 #: ../../faq.rst:191
 msgid "You can use Celery with any framework, web or otherwise."
-msgstr ""
+msgstr "Celery は別のフレームワークを含め、何とでも使えます。"
 
 #: ../../faq.rst:196
 msgid "Do I have to use AMQP/RabbitMQ?"
-msgstr ""
+msgstr "AMQP/RabbitMQ を使う必要はありますか？"
 
 #: ../../faq.rst:198
 msgid "**Answer**: No."
-msgstr ""
+msgstr "**回答**: いいえ。"
 
 #: ../../faq.rst:200
 msgid ""
@@ -292,6 +322,9 @@ msgid ""
 "also experimental transports available such as MongoDB, Beanstalk, CouchDB, "
 "or using SQL databases. See :ref:`brokers` for more information."
 msgstr ""
+"RabbitMQ の使用が推奨されていますが、Redis を使うこともできます。"
+"さらに MongoDB、Beanstalk、CouchDB や SQL データベースのようなトランスポートも実験的にサポートしています。"
+"詳しくは :ref:`brokers` をご覧ください。"
 
 #: ../../faq.rst:204
 msgid ""
@@ -299,6 +332,8 @@ msgid ""
 "broadcast and event functionality. For example remote control commands only "
 "works with AMQP and Redis."
 msgstr ""
+"実験的サポートのトランスポートは、信頼性に問題があったり、ブロードキャストやイベント機能の"
+"すべてが実装されていません。例えば、リモートコントロールコマンドは AMQP と Redis でのみ利用できます。"
 
 #: ../../faq.rst:208
 msgid ""
@@ -311,6 +346,14 @@ msgid ""
 "Celery; If using Redis/database as a queue worked fine for you before, it "
 "probably will now. You can always upgrade later if you need to."
 msgstr ""
+"Redis やデータベースでは AMQP ブローカーと同様にパフォーマンスは出ないでしょう。"
+"厳格な信頼性を求めるのであれば、RabbitMQ や別の AMQP ブローカーを使うことが推奨されます。"
+"トランスポートによってはポーリングを使用するものもあり、それらはより多くのリソースを消費する傾向があります。"
+"しかしながら、もし何らかの理由で AMQP を使えないのであれば、別のトランスポートを使用してください。"
+"ほとんどの場合において適切に動くことでしょう。"
+"and note that the above points are not specific to "
+"Celery; If using Redis/database as a queue worked fine for you before, it "
+"probably will now. You can always upgrade later if you need to."
 
 #: ../../faq.rst:221
 msgid "Is Celery multilingual?"
@@ -751,17 +794,19 @@ msgstr ""
 
 #: ../../faq.rst:564
 msgid "Tasks"
-msgstr ""
+msgstr "タスク"
 
 #: ../../faq.rst:569
 msgid "How can I reuse the same connection when calling tasks?"
-msgstr ""
+msgstr "タスクを呼び出すときに同じコネクションを使い回すことができますか？"
 
 #: ../../faq.rst:571
 msgid ""
 "**Answer**: See the :setting:`BROKER_POOL_LIMIT` setting. The connection "
 "pool is enabled by default since version 2.5."
 msgstr ""
+"**回答**: :setting:`BROKER_POOL_LIMIT` 設定を参照してください。"
+"コネクションプールはバージョン 2.5 からデフォルトで有効になっています。"
 
 #: ../../faq.rst:577
 msgid "Sudo in a :mod:`subprocess` returns :const:`None`"
@@ -824,7 +869,7 @@ msgstr ""
 
 #: ../../faq.rst:621
 msgid "How can I get the task id of the current task?"
-msgstr ""
+msgstr "カレントタスクのタスクIDはどうすれば取得できますか？"
 
 #: ../../faq.rst:623
 msgid "**Answer**: The current id and more is available in the task request::"
@@ -870,33 +915,35 @@ msgstr ""
 
 #: ../../faq.rst:660
 msgid "How can I run a task once another task has finished?"
-msgstr ""
+msgstr "どうすればあるタスクを、別のタスクが完了した後に実行できますか？"
 
 #: ../../faq.rst:662
 msgid ""
 "**Answer**: You can safely launch a task inside a task. Also, a common "
 "pattern is to add callbacks to tasks:"
 msgstr ""
+"**回答**: タスクの中でタスクを安全に起動できます。また、一般的なパターンとしては"
+"タスクにコールバックを追加する方法です:"
 
 #: ../../faq.rst:679
 msgid "Invocation::"
-msgstr ""
+msgstr "呼び出し::"
 
 #: ../../faq.rst:683
 msgid "See :doc:`userguide/canvas` for more information."
-msgstr ""
+msgstr "詳しくは :doc:`userguide/canvas` を参照してください。"
 
 #: ../../faq.rst:688
 msgid "Can I cancel the execution of a task?"
-msgstr ""
+msgstr "タスクの実行をキャンセルできますか？"
 
 #: ../../faq.rst:689
 msgid "**Answer**: Yes. Use `result.revoke`::"
-msgstr ""
+msgstr "**回答**: はい。`result.remoke` を使います::"
 
 #: ../../faq.rst:694
 msgid "or if you only have the task id::"
-msgstr ""
+msgstr "タスク ID しか分からない場合::"
 
 #: ../../faq.rst:702
 msgid "Why aren't my remote control commands received by all workers?"
@@ -922,17 +969,19 @@ msgstr ""
 
 #: ../../faq.rst:722
 msgid "Can I send some tasks to only some servers?"
-msgstr ""
+msgstr "あるタスクを特定のサーバーに送ることはできますか？"
 
 #: ../../faq.rst:724
 msgid ""
 "**Answer:** Yes. You can route tasks to an arbitrary server using AMQP, and "
 "a worker can bind to as many queues as it wants."
 msgstr ""
+"**回答:** はい。AMQP を使って特定のサーバにタスクを送信することもできます。また、"
+"ワーカーは希望するキューに紐付けることができます。"
 
 #: ../../faq.rst:727
 msgid "See :doc:`userguide/routing` for more information."
-msgstr ""
+msgstr "詳細は :doc:`userguide/routing` を確認してください。"
 
 #: ../../faq.rst:732
 msgid "Can I change the interval of a periodic task at runtime?"
@@ -947,13 +996,15 @@ msgstr ""
 
 #: ../../faq.rst:751
 msgid "Does celery support task priorities?"
-msgstr ""
+msgstr "Celery はタスクの優先度をサポートしていますか？"
 
 #: ../../faq.rst:753
 msgid ""
 "**Answer**: No. In theory, yes, as AMQP supports priorities. However "
 "RabbitMQ doesn't implement them yet."
 msgstr ""
+"**回答**: いいえ。AMQP は優先度をサポートしているので理論的には Yes ですが、"
+"RabbitMQ がまだサポートしていません。"
 
 #: ../../faq.rst:756
 msgid ""
@@ -962,6 +1013,9 @@ msgid ""
 "per message priorities. You can use this in combination with rate limiting "
 "to achieve a highly responsive system."
 msgstr ""
+"Celery での優先度付けの方法としては、優先度が高いタスクを別のサーバに送ることです。"
+"実際の場面では、この方がメッセージの優先度付けよりうまく機能します。"
+"応答性能の高いシステムを築くために、この方法をレートリミットと組み合わせて使うことができます。"
 
 #: ../../faq.rst:764
 msgid "Should I use retry or acks_late?"
@@ -1070,25 +1124,26 @@ msgstr ""
 
 #: ../../faq.rst:860
 msgid "What purpose does the database tables created by django-celery have?"
-msgstr ""
+msgstr "django-celery によって生成されるデータベーステーブルの目的は？"
 
 #: ../../faq.rst:862
 msgid "Several database tables are created by default, these relate to"
-msgstr ""
+msgstr "デフォルトで生成されるいくつかのデータベーステーブルは、以下に関連しています。"
 
 #: ../../faq.rst:864
 msgid "Monitoring"
-msgstr ""
+msgstr "監視"
 
 #: ../../faq.rst:866
 msgid ""
 "When you use the django-admin monitor, the cluster state is written to the "
 "``TaskState`` and ``WorkerState`` models."
 msgstr ""
+"django-admin モニターを使う場合に、cluster state が ``TaskState`` と ``WorkerState`` モデルに書き込まれます。"
 
 #: ../../faq.rst:869
 msgid "Periodic tasks"
-msgstr ""
+msgstr "定期タスク"
 
 #: ../../faq.rst:871
 msgid ""
@@ -1096,22 +1151,28 @@ msgid ""
 "taken from the ``PeriodicTask`` model, there are also several other helper "
 "tables (``IntervalSchedule``, ``CrontabSchedule``, ``PeriodicTasks``)."
 msgstr ""
+"database-backed スケジュールが使用される場合、定期タスクスケジュールは ``PeriodicTask`` モデルから取得されます。"
+"また別のヘルパーテーブルも存在します(``IntervalSchedule``, ``CrontabSchedule``, ``PeriodicTasks``)。"
 
 #: ../../faq.rst:876
 msgid "Task results"
-msgstr ""
+msgstr "タスクの結果"
 
 #: ../../faq.rst:878
 msgid ""
 "The database result backend is enabled by default when using django-celery "
 "(this is for historical reasons, and thus for backward compatibility)."
 msgstr ""
+"django-celery を使う場合、デフォルトでデータベース結果バックエンドが有効になります。"
+"(これは歴史的な理由で、下位互換のためです)"
 
 #: ../../faq.rst:881
 msgid ""
 "The results are stored in the ``TaskMeta`` and ``TaskSetMeta`` models. "
 "*these tables are not created if another result backend is configured*."
 msgstr ""
+"結果は ``TaskMeta`` と ``TaskSetMeta`` モデルに保存されます。"
+"*別の結果バックエンドが設定されている場合、これらのテーブルは生成されません。*"
 
 #: ../../faq.rst:887
 msgid "Windows"

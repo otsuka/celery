@@ -175,8 +175,8 @@ msgid ""
 "Periodic tasks will not be affected by the visibility timeout, as this is a "
 "concept separate from ETA/countdown."
 msgstr ""
-"定期的なタスクは Visibility タイムアウトの影響は受けません。"
-"というのも、定期的なタスクは ETA/countdown とは別のコンセプトのものだからです。"
+"定期タスクは Visibility タイムアウトの影響は受けません。"
+"というのも、定期タスクは ETA/countdown とは別のコンセプトのものだからです。"
 
 #: ../../getting-started/brokers/redis.rst:118
 msgid ""

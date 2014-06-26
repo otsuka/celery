@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,13 +13,15 @@ msgstr ""
 
 #: ../../userguide/application.rst:5
 msgid "Application"
-msgstr ""
+msgstr "アプリケーション"
 
 #: ../../userguide/application.rst:11
 msgid ""
 "The Celery library must be instantiated before use, this instance is called "
 "an application (or *app* for short)."
 msgstr ""
+"Celery ライブラリは使用する前にインタンス化されなければならず、そのインスタンスは"
+"アプリケーション(または略して *app*)と呼ばれます。"
 
 #: ../../userguide/application.rst:14
 msgid ""
@@ -27,10 +29,12 @@ msgid ""
 "different configuration, components and tasks can co-exist in the same "
 "process space."
 msgstr ""
+"アプリケーションはスレッドセーフなので、異なる設定を持つ複数の Celery アプリケーションやコンポーネント、"
+"タスクが同一プロセス空間に共存できます。"
 
 #: ../../userguide/application.rst:18
 msgid "Let's create one now:"
-msgstr ""
+msgstr "ではここで一つ作成してみましょう:"
 
 #: ../../userguide/application.rst:27
 msgid ""
@@ -39,6 +43,8 @@ msgid ""
 "main module (``__main__``), and the memory address of the object "
 "(``0x100469fd0``)."
 msgstr ""
+"最終行で示しているのはアプリケーションの文字列表現で、Celery のクラス名(``Celery``)、"
+"カレントメインモジュールの名前(``__main__``)と、オブジェクトのメモリアドレス(``0x100469fd0``)です。"
 
 #: ../../userguide/application.rst:33
 msgid "Main Name"
@@ -49,6 +55,7 @@ msgid ""
 "Only one of these is important, and that is the main module name, let's look"
 " at why that is."
 msgstr ""
+"この中で重要なのが、メインモジュール名です。その理由をこれから説明します。"
 
 #: ../../userguide/application.rst:38
 msgid ""
@@ -57,12 +64,16 @@ msgid ""
 "similarly to how host names works on the internet: every worker maintains a "
 "mapping of task names to their actual functions, called the *task registry*."
 msgstr ""
+"Celery でタスクメッセージを送信した時、そのメッセージにはソースコードは何も含まれておらず、"
+"実行するタスク名のみが含まれています。これはインターネット上でホスト名が機能する仕組みと同じです。"
+"すべてのワーカーはタスク名とその関数のマッピングを保持しており、そのマッピングを *タスクレジストリ* と呼んでいます。"
 
 #: ../../userguide/application.rst:44
 msgid ""
 "Whenever you define a task, that task will also be added to the local "
 "registry:"
 msgstr ""
+"タスクを定義すると、そのタスクはローカルリポジトリにも追加されます:"
 
 #: ../../userguide/application.rst:61
 msgid ""
@@ -70,23 +81,26 @@ msgid ""
 "detect what module the function belongs to, it uses the main module name to "
 "generate the beginning of the task name."
 msgstr ""
+"ここで ``__main__`` を再度目にしましたね。Celery が関数の属するモジュールを見つけられない時は、"
+"タスク名の先頭にメインモジュールの名前を付けます。"
 
 #: ../../userguide/application.rst:65
 msgid "This is only a problem in a limited set of use cases:"
-msgstr ""
+msgstr "これには次のユースケースで問題があります:"
 
 #: ../../userguide/application.rst:67
 msgid "If the module that the task is defined in is run as a program."
-msgstr ""
+msgstr "タスクの定義されたモジュールがプログラムとして稼働している場合"
 
 #: ../../userguide/application.rst:68
 msgid "If the application is created in the Python shell (REPL)."
-msgstr ""
+msgstr "アプリケーションが Python シェル (REPL) 内で生成された場合"
 
 #: ../../userguide/application.rst:70
 msgid ""
 "For example here, where the tasks module is also used to start a worker:"
 msgstr ""
+"例として、タスクモジュールがワーカーの義等にも使われる場合を見てみましょう:"
 
 #: ../../userguide/application.rst:72
 msgid ":file:`tasks.py`:"
@@ -99,10 +113,13 @@ msgid ""
 " call a task, the tasks will be named starting with \"``tasks``\" (the real "
 "name of the module)::"
 msgstr ""
+"このモジュールが実行されると、タスク名には \"``__main__``\" が付きます。"
+"しかし、例えばタスクの呼び出しで、このモジュールが別のプロセスからインポートされると、"
+"タスク名には \"``tasks``\" (実際のモジュール名)が付けられます。"
 
 #: ../../userguide/application.rst:93
 msgid "You can specify another name for the main module:"
-msgstr ""
+msgstr "メインモジュールに別の名前を指定することができます:"
 
 #: ../../userguide/application.rst:108
 msgid ":ref:`task-names`"
