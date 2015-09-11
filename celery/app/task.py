@@ -483,11 +483,12 @@ class Task(object):
         :keyword retry: If enabled sending of the task message will be retried
                         in the event of connection loss or failure.  Default
                         is taken from the :setting:`CELERY_TASK_PUBLISH_RETRY`
-                        setting.  Note you need to handle the
+                        setting.  Note that you need to handle the
                         producer/connection manually for this to work.
 
         :keyword retry_policy:  Override the retry policy used.  See the
-                                :setting:`CELERY_TASK_PUBLISH_RETRY` setting.
+                                :setting:`CELERY_TASK_PUBLISH_RETRY_POLICY`
+                                setting.
 
         :keyword routing_key: Custom routing key used to route the task to a
                               worker server. If in combination with a
@@ -533,6 +534,10 @@ class Task(object):
             :attr:`trail` attribute
         :keyword publisher: Deprecated alias to ``producer``.
 
+        :rtype :class:`celery.result.AsyncResult`: if
+            :setting:`CELERY_ALWAYS_EAGER` is not set, otherwise
+            :class:`celery.result.EagerResult`.
+
         Also supports all keyword arguments supported by
         :meth:`kombu.Producer.publish`.
 
@@ -569,6 +574,7 @@ class Task(object):
             'chord': request.chord,
             'soft_time_limit': limit_soft,
             'time_limit': limit_hard,
+            'reply_to': request.reply_to,
         }
         options.update(
             {'queue': queue} if queue else (request.delivery_info or {})
@@ -619,14 +625,14 @@ class Task(object):
             >>> from imaginary_twitter_lib import Twitter
             >>> from proj.celery import app
 
-            >>> @app.task()
-            ... def tweet(auth, message):
+            >>> @app.task(bind=True)
+            ... def tweet(self, auth, message):
             ...     twitter = Twitter(oauth=auth)
             ...     try:
             ...         twitter.post_status_update(message)
             ...     except twitter.FailWhale as exc:
             ...         # Retry in 5 minutes.
-            ...         raise tweet.retry(countdown=60 * 5, exc=exc)
+            ...         raise self.retry(countdown=60 * 5, exc=exc)
 
         Although the task will never return above as `retry` raises an
         exception to notify the worker, we use `raise` in front of the retry
@@ -658,20 +664,23 @@ class Task(object):
                 # first try to reraise the original exception
                 maybe_reraise()
                 # or if not in an except block then raise the custom exc.
-                raise exc()
+                raise exc
             raise self.MaxRetriesExceededError(
                 "Can't retry {0}[{1}] args:{2} kwargs:{3}".format(
                     self.name, request.id, S.args, S.kwargs))
 
-        # If task was executed eagerly using apply(),
-        # then the retry must also be executed eagerly.
-        try:
-            S.apply().get() if is_eager else S.apply_async()
-        except Exception as exc:
-            if is_eager:
-                raise
-            raise Reject(exc, requeue=True)
         ret = Retry(exc=exc, when=eta or countdown)
+
+        if is_eager:
+            # if task was executed eagerly using apply(),
+            # then the retry must also be executed eagerly.
+            S.apply().get()
+            return ret
+
+        try:
+            S.apply_async()
+        except Exception as exc:
+            raise Reject(exc, requeue=False)
         if throw:
             raise ret
         return ret
@@ -855,9 +864,8 @@ class Task(object):
         :param status: Current task state.
         :param retval: Task return value/exception.
         :param task_id: Unique id of the task.
-        :param args: Original arguments for the task that failed.
-        :param kwargs: Original keyword arguments for the task
-                       that failed.
+        :param args: Original arguments for the task.
+        :param kwargs: Original keyword arguments for the task.
 
         :keyword einfo: :class:`~billiard.einfo.ExceptionInfo`
                         instance, containing the traceback (if any).

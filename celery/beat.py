@@ -17,7 +17,8 @@ import traceback
 
 from threading import Event, Thread
 
-from billiard import Process, ensure_multiprocessing
+from billiard import ensure_multiprocessing
+from billiard.process import Process
 from billiard.common import reset_signals
 from kombu.utils import cached_property, reprcall
 from kombu.utils.functional import maybe_evaluate
@@ -447,7 +448,7 @@ class Service(object):
         return self.__class__, (self.max_interval, self.schedule_filename,
                                 self.scheduler_cls, self.app)
 
-    def start(self, embedded_process=False):
+    def start(self, embedded_process=False, drift=-0.010):
         info('beat: Starting...')
         debug('beat: Ticking with max interval->%s',
               humanize_seconds(self.scheduler.max_interval))
@@ -460,9 +461,11 @@ class Service(object):
         try:
             while not self._is_shutdown.is_set():
                 interval = self.scheduler.tick()
-                debug('beat: Waking up %s.',
-                      humanize_seconds(interval, prefix='in '))
-                time.sleep(interval)
+                interval = interval + drift if interval else interval
+                if interval and interval > 0:
+                    debug('beat: Waking up %s.',
+                          humanize_seconds(interval, prefix='in '))
+                    time.sleep(interval)
         except (KeyboardInterrupt, SystemExit):
             self._is_shutdown.set()
         finally:
@@ -494,13 +497,15 @@ class Service(object):
 class _Threaded(Thread):
     """Embedded task scheduler using threading."""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, app, **kwargs):
         super(_Threaded, self).__init__()
-        self.service = Service(*args, **kwargs)
+        self.app = app
+        self.service = Service(app, **kwargs)
         self.daemon = True
         self.name = 'Beat'
 
     def run(self):
+        self.app.set_current()
         self.service.start()
 
     def stop(self):
@@ -514,9 +519,10 @@ except NotImplementedError:     # pragma: no cover
 else:
     class _Process(Process):    # noqa
 
-        def __init__(self, *args, **kwargs):
+        def __init__(self, app, **kwargs):
             super(_Process, self).__init__()
-            self.service = Service(*args, **kwargs)
+            self.app = app
+            self.service = Service(app, **kwargs)
             self.name = 'Beat'
 
         def run(self):
@@ -524,6 +530,8 @@ else:
             platforms.close_open_fds([
                 sys.__stdin__, sys.__stdout__, sys.__stderr__,
             ] + list(iter_open_logger_fds()))
+            self.app.set_default()
+            self.app.set_current()
             self.service.start(embedded_process=True)
 
         def stop(self):
@@ -531,7 +539,7 @@ else:
             self.terminate()
 
 
-def EmbeddedService(*args, **kwargs):
+def EmbeddedService(app, max_interval=None, **kwargs):
     """Return embedded clock service.
 
     :keyword thread: Run threaded instead of as a separate process.
@@ -541,6 +549,5 @@ def EmbeddedService(*args, **kwargs):
     if kwargs.pop('thread', False) or _Process is None:
         # Need short max interval to be able to stop thread
         # in reasonable time.
-        kwargs.setdefault('max_interval', 1)
-        return _Threaded(*args, **kwargs)
-    return _Process(*args, **kwargs)
+        return _Threaded(app, max_interval=1, **kwargs)
+    return _Process(app, max_interval=max_interval, **kwargs)

@@ -183,9 +183,17 @@ The backend used to store task results (tombstones).
 Disabled by default.
 Can be one of the following:
 
+* rpc
+    Send results back as AMQP messages
+    See :ref:`conf-rpc-result-backend`.
+
 * database
     Use a relational database supported by `SQLAlchemy`_.
     See :ref:`conf-database-result-backend`.
+
+* redis
+    Use `Redis`_ to store the results.
+    See :ref:`conf-redis-result-backend`.
 
 * cache
     Use `memcached`_ to store the results.
@@ -194,14 +202,6 @@ Can be one of the following:
 * mongodb
     Use `MongoDB`_ to store the results.
     See :ref:`conf-mongodb-result-backend`.
-
-* redis
-    Use `Redis`_ to store the results.
-    See :ref:`conf-redis-result-backend`.
-
-* amqp
-    Send results back as AMQP messages
-    See :ref:`conf-amqp-result-backend`.
 
 * cassandra
     Use `Cassandra`_ to store the results.
@@ -214,6 +214,10 @@ Can be one of the following:
 * couchbase
     Use `Couchbase`_ to store the results.
     See :ref:`conf-couchbase-result-backend`.
+
+* amqp
+    Older AMQP backend (badly) emulating a database-based backend.
+    See :ref:`conf-amqp-result-backend`.
 
 .. warning:
 
@@ -254,7 +258,7 @@ prefix:
 
     CELERY_RESULT_BACKEND = 'db+scheme://user:password@host:port/dbname'
 
-Examples:
+Examples::
 
     # sqlite (filename)
     CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
@@ -299,8 +303,11 @@ the :setting:`CELERY_RESULT_ENGINE_OPTIONS` setting::
     # echo enables verbose logging from SQLAlchemy.
     CELERY_RESULT_ENGINE_OPTIONS = {'echo': True}
 
-
 .. setting:: CELERY_RESULT_DB_SHORT_LIVED_SESSIONS
+
+Short lived sessions
+~~~~~~~~~~~~~~~~~~~~
+
     CELERY_RESULT_DB_SHORT_LIVED_SESSIONS = True
 
 Short lived sessions are disabled by default.  If enabled they can drastically reduce
@@ -327,35 +334,12 @@ you to customize the table names:
         'group': 'myapp_groupmeta',
     }
 
+.. _conf-rpc-result-backend:
+
+RPC backend settings
+--------------------
+
 .. _conf-amqp-result-backend:
-
-AMQP backend settings
----------------------
-
-.. note::
-
-    The AMQP backend requires RabbitMQ 1.1.0 or higher to automatically
-    expire results.  If you are running an older version of RabbitmQ
-    you should disable result expiration like this:
-
-        CELERY_TASK_RESULT_EXPIRES = None
-
-.. setting:: CELERY_RESULT_EXCHANGE
-
-CELERY_RESULT_EXCHANGE
-~~~~~~~~~~~~~~~~~~~~~~
-
-Name of the exchange to publish results in.  Default is `celeryresults`.
-
-.. setting:: CELERY_RESULT_EXCHANGE_TYPE
-
-CELERY_RESULT_EXCHANGE_TYPE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The exchange type of the result exchange.  Default is to use a `direct`
-exchange.
-
-.. setting:: CELERY_RESULT_PERSISTENT
 
 CELERY_RESULT_PERSISTENT
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -369,8 +353,9 @@ Example configuration
 
 .. code-block:: python
 
-    CELERY_RESULT_BACKEND = 'amqp'
-    CELERY_TASK_RESULT_EXPIRES = 18000  # 5 hours.
+    CELERY_RESULT_BACKEND = 'rpc://'
+    CELERY_RESULT_PERSISTENT = False
+
 
 .. _conf-cache-result-backend:
 
@@ -701,6 +686,55 @@ This is a dict supporting the following keys:
 * password
     Password to authenticate to the Couchbase server (optional).
 
+AMQP backend settings
+---------------------
+
+.. admonition:: Do not use in production.
+
+    This is the old AMQP result backend that creates one queue per task,
+    if you want to send results back as message please consider using the
+    RPC backend instead, or if you need the results to be persistent
+    use a result backend designed for that purpose (e.g. Redis, or a database).
+
+.. note::
+
+    The AMQP backend requires RabbitMQ 1.1.0 or higher to automatically
+    expire results.  If you are running an older version of RabbitMQ
+    you should disable result expiration like this:
+
+        CELERY_TASK_RESULT_EXPIRES = None
+
+.. setting:: CELERY_RESULT_EXCHANGE
+
+CELERY_RESULT_EXCHANGE
+~~~~~~~~~~~~~~~~~~~~~~
+
+Name of the exchange to publish results in.  Default is `celeryresults`.
+
+.. setting:: CELERY_RESULT_EXCHANGE_TYPE
+
+CELERY_RESULT_EXCHANGE_TYPE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The exchange type of the result exchange.  Default is to use a `direct`
+exchange.
+
+.. setting:: CELERY_RESULT_PERSISTENT
+
+CELERY_RESULT_PERSISTENT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If set to :const:`True`, result messages will be persistent.  This means the
+messages will not be lost after a broker restart.  The default is for the
+results to be transient.
+
+Example configuration
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    CELERY_RESULT_BACKEND = 'amqp'
+    CELERY_TASK_RESULT_EXPIRES = 18000  # 5 hours.
 
 .. _conf-messaging:
 
@@ -714,13 +748,20 @@ Message Routing
 CELERY_QUEUES
 ~~~~~~~~~~~~~
 
-The mapping of queues the worker consumes from.  This is a dictionary
-of queue name/options.  See :ref:`guide-routing` for more information.
+Most users will not want to specify this setting and should rather use
+the :ref:`automatic routing facilities <routing-automatic>`.
+
+If you really want to configure advanced routing, this setting should
+be a list of :class:`kombu.Queue` objects the worker will consume from.
+
+Note that workers can be overriden this setting via the `-Q` option,
+or individual queues from this list (by name) can be excluded using
+the `-X` option.
+
+Also see :ref:`routing-basics` for more information.
 
 The default is a queue/exchange/binding key of ``celery``, with
 exchange type ``direct``.
-
-You don't have to care about this unless you want custom routing facilities.
 
 .. setting:: CELERY_ROUTES
 
@@ -896,26 +937,6 @@ Example::
 
 .. setting:: BROKER_TRANSPORT
 
-BROKER_FAILOVER_STRATEGY
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Default failover strategy for the broker Connection object. If supplied,
-may map to a key in 'kombu.connection.failover_strategies', or be a reference
-to any method that yields a single item from a supplied list.
-
-Example::
-
-    # Random failover strategy
-    def random_failover_strategy(servers):
-        it = list(it)  # don't modify callers list
-        shuffle = random.shuffle
-        for _ in repeat(None):
-            shuffle(it)
-            yield it[0]
-
-    BROKER_FAILOVER_STRATEGY=random_failover_strategy
-
-
 BROKER_TRANSPORT
 ~~~~~~~~~~~~~~~~
 :Aliases: ``BROKER_BACKEND``
@@ -954,7 +975,7 @@ manner using TCP/IP alone, so AMQP defines something called heartbeats
 that's is used both by the client and the broker to detect if
 a connection was closed.
 
-Hartbeats are disabled by default.
+Heartbeats are disabled by default.
 
 If the heartbeat value is 10 seconds, then
 the heartbeat will be monitored at the interval specified
@@ -1272,24 +1293,6 @@ to have different import categories.
 
 The modules in this setting are imported after the modules in
 :setting:`CELERY_IMPORTS`.
-
-.. setting:: CELERYD_FORCE_EXECV
-
-CELERYD_FORCE_EXECV
-~~~~~~~~~~~~~~~~~~~
-
-On Unix the prefork pool will fork, so that child processes
-start with the same memory as the parent process.
-
-This can cause problems as there is a known deadlock condition
-with pthread locking primitives when `fork()` is combined with threads.
-
-You should enable this setting if you are experiencing hangs (deadlocks),
-especially in combination with time limits or having a max tasks per child limit.
-
-This option will be enabled by default in a later version.
-
-This is not a problem on Windows, as it does not have `fork()`.
 
 .. setting:: CELERYD_WORKER_LOST_WAIT
 

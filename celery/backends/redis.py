@@ -85,7 +85,7 @@ class RedisBackend(KeyValueStoreBackend):
             'port': _get('PORT') or 6379,
             'db': _get('DB') or 0,
             'password': _get('PASSWORD'),
-            'max_connections': max_connections,
+            'max_connections': self.max_connections,
         }
         if url:
             self.connparams = self._params_from_url(url, self.connparams)
@@ -178,8 +178,11 @@ class RedisBackend(KeyValueStoreBackend):
         return self.client.expire(key, value)
 
     def _unpack_chord_result(self, tup, decode,
+                             EXCEPTION_STATES=states.EXCEPTION_STATES,
                              PROPAGATE_STATES=states.PROPAGATE_STATES):
         _, tid, state, retval = decode(tup)
+        if state in EXCEPTION_STATES:
+            retval = self.exception_to_python(retval)
         if state in PROPAGATE_STATES:
             raise ChordError('Dependency {0} raised {1!r}'.format(tid, retval))
         return retval
@@ -211,7 +214,7 @@ class RedisBackend(KeyValueStoreBackend):
         try:
             callback = maybe_signature(request.chord, app=app)
             total = callback['chord_size']
-            if readycount >= total:
+            if readycount == total:
                 decode, unpack = self.decode, self._unpack_chord_result
                 resl, _ = client.pipeline()     \
                     .lrange(jkey, 0, total)     \
