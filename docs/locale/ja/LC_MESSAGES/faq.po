@@ -545,33 +545,36 @@ msgstr ""
 
 #: ../../faq.rst:370
 msgid "How do I purge all waiting tasks?"
-msgstr ""
+msgstr "待機中のすべてのタスクを消すにはどうしたらいいでしょうか？"
 
 #: ../../faq.rst:372
 msgid ""
 "**Answer:** You can use the ``celery purge`` command to purge all configured"
 " task queues:"
 msgstr ""
+"**回答:** ``celery purge`` コマンドを使ってすべてのタスクキューを削除できます。"
 
 #: ../../faq.rst:379
 msgid "or programatically:"
-msgstr ""
+msgstr "またはプログラムを通してもできます:"
 
 #: ../../faq.rst:387
 msgid ""
 "If you only want to purge messages from a specific queue you have to use the"
 " AMQP API or the :program:`celery amqp` utility:"
 msgstr ""
+"特定のキューのメッセージを空にするには、AMQP API か :program:`celery amqp` ユーティリティを使う必要があります:"
 
 #: ../../faq.rst:394
 msgid "The number 1753 is the number of messages deleted."
-msgstr ""
+msgstr "1753 は削除されたメッセージの数です。"
 
 #: ../../faq.rst:396
 msgid ""
 "You can also start :mod:`~celery.bin.worker` with the :option:`--purge` "
 "argument, to purge messages when the worker starts."
 msgstr ""
+":option:`--purge` 引数を付けて :mod:`~celery.bin.worker` を起動すれば、起動時にすべてのメッセージを削除します。"
 
 #: ../../faq.rst:402
 msgid "I've purged messages, but there are still messages left in the queue?"

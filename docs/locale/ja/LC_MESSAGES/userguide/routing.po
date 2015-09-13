@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../userguide/routing.rst:5 ../../userguide/routing.rst:447
 msgid "Routing Tasks"
-msgstr ""
+msgstr "タスクのルーティング"
 
 #: ../../userguide/routing.rst:9
 msgid ""
@@ -21,20 +21,24 @@ msgid ""
 "all transports, please consult the :ref:`transport comparison table <kombu"
 ":transport-comparison>`."
 msgstr ""
+"topic や fanout といったルーティングの変更機能はすべてのトランスポートで利用できるわけではありません。"
+":ref:`transport comparison table <kombu:transport-comparison>` を確認してください。"
 
 #: ../../userguide/routing.rst:20
 msgid "Basics"
-msgstr ""
+msgstr "基本"
 
 #: ../../userguide/routing.rst:25
 msgid "Automatic routing"
-msgstr ""
+msgstr "自動ルーティング"
 
 #: ../../userguide/routing.rst:27
 msgid ""
 "The simplest way to do routing is to use the "
 ":setting:`CELERY_CREATE_MISSING_QUEUES` setting (on by default)."
 msgstr ""
+"一番簡単なルーティングの方法は、:setting:`CELERY_CREATE_MISSING_QUEUES` 設定を使うことです"
+"(デフォルトでオンになっています)。"
 
 #: ../../userguide/routing.rst:30
 msgid ""
@@ -42,6 +46,8 @@ msgid ""
 ":setting:`CELERY_QUEUES` will be created automatically.  This makes it easy "
 "to perform simple routing tasks."
 msgstr ""
+"この設定がオンになっている場合、:setting:`CELERY_QUEUES` 設定に定義されていない名前のキューは自動的に生成されます。"
+"これでタスクのルーティングを行うのが簡単になります。"
 
 #: ../../userguide/routing.rst:34
 msgid ""
@@ -49,6 +55,8 @@ msgid ""
 "server `z`, that only handles feed related tasks.  You can use this "
 "configuration::"
 msgstr ""
+"例えば、レギュラータスクを扱う `x` と `y` の二つのサーバがあり、フィード関連タスクだけを扱うサーバ `z` がある場合、"
+"次のように設定します::"
 
 #: ../../userguide/routing.rst:40
 msgid ""
@@ -56,27 +64,32 @@ msgid ""
 "queue, while all other tasks will be routed to the default queue (named "
 "`\"celery\"` for historical reasons)."
 msgstr ""
+"このルートが有効になっていると、フィードをインポートするタスクは `\"feeds\"` キューに送信され、"
+"それ以外のタスクはデフォルトキュー(歴史的な理由で `\"celery\"` と命名されています)に送信されます。"
 
 #: ../../userguide/routing.rst:44
 msgid ""
 "Now you can start server `z` to only process the feeds queue like this:"
 msgstr ""
+"そして、フィードキューだけを処理させるように次のようにサーバ `z` のワーカーを起動します::"
 
 #: ../../userguide/routing.rst:50
 msgid ""
 "You can specify as many queues as you want, so you can make this server "
 "process the default queue as well:"
 msgstr ""
+"好きなだけキューを指定できるので、このサーバにデフォルトキューも処理させるようにすることも可能です:"
 
 #: ../../userguide/routing.rst:60
 msgid "Changing the name of the default queue"
-msgstr ""
+msgstr "デフォルトキューの名前の変更"
 
 #: ../../userguide/routing.rst:62
 msgid ""
 "You can change the name of the default queue by using the following "
 "configuration:"
 msgstr ""
+"次の設定を使ってデフォルトキューの名前を変更できます:"
 
 #: ../../userguide/routing.rst:77
 msgid "How the queues are defined"
@@ -102,7 +115,7 @@ msgstr ""
 
 #: ../../userguide/routing.rst:98
 msgid "Manual routing"
-msgstr ""
+msgstr "マニュアルルーティング"
 
 #: ../../userguide/routing.rst:100
 msgid ""

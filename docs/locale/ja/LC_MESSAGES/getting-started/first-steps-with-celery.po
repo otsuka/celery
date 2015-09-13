@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:6
 msgid "First Steps with Celery"
-msgstr "Celery ファーストステップ"
+msgstr "Celery First ステップ"
 
 #: ../../getting-started/first-steps-with-celery.rst:8
 msgid ""

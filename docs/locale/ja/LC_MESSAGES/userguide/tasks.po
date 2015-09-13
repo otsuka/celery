@@ -100,7 +100,7 @@ msgid ""
 "There are also many :ref:`options <task-options>` that can be set for the "
 "task, these can be specified as arguments to the decorator:"
 msgstr ""
-"タスクに設定可能な多くの :ref:`options <task-options>` があり、これらはデコレーターの引数として指定します:"
+"タスクには多くの設定 :ref:`options <task-options>` があり、これらはデコレーターの引数として指定します:"
 
 #: ../../userguide/tasks.rst:0
 msgid "How do I import the task decorator? And what is \"app\"?"
@@ -251,14 +251,15 @@ msgid ""
 ":attr:`~@Task.request` contains information and state related to the "
 "executing task."
 msgstr ""
+":attr:`~@Task.request` は実行しているタスクに関連する情報と状態を保持しています。"
 
 #: ../../userguide/tasks.rst:226
 msgid "The request defines the following attributes:"
-msgstr ""
+msgstr "リクエストには以下の属性があります:"
 
 #: ../../userguide/tasks.rst:228
 msgid "The unique id of the executing task."
-msgstr ""
+msgstr "実行中のタスクのユニーク ID。"
 
 #: ../../userguide/tasks.rst:230
 msgid "The unique id a group, if this task is a member."
@@ -272,47 +273,51 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:235
 msgid "Positional arguments."
-msgstr ""
+msgstr "引数"
 
 #: ../../userguide/tasks.rst:237
 msgid "Keyword arguments."
-msgstr ""
+msgstr "キーワード引数"
 
 #: ../../userguide/tasks.rst:239
 msgid ""
 "How many times the current task has been retried. An integer starting at "
 "`0`."
-msgstr ""
+msgstr "現在のタスクがリトライされた回数。`0` 始まりの整数です。"
 
 #: ../../userguide/tasks.rst:242
 msgid ""
 "Set to :const:`True` if the task is executed locally in the client, and not "
 "by a worker."
 msgstr ""
+"タスクがクライアント内で実行されている場合に :const:`True` がセットされ、"
+"ワーカーによって実行されている場合には :const:`False` になります。"
 
 #: ../../userguide/tasks.rst:245
 msgid ""
 "The original ETA of the task (if any). This is in UTC time (depending on the"
 " :setting:`CELERY_ENABLE_UTC` setting)."
 msgstr ""
+"(指定されている場合)タスクのオリジナル ETA。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
 
 #: ../../userguide/tasks.rst:249
 msgid ""
 "The original expiry time of the task (if any). This is in UTC time "
 "(depending on the :setting:`CELERY_ENABLE_UTC` setting)."
 msgstr ""
+"(指定されている場合)タスクのオリジナル有効期限。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
 
 #: ../../userguide/tasks.rst:253
 msgid "The file the worker logs to.  See `Logging`_."
-msgstr ""
+msgstr "ワーカーのログ出力先ファイル。`Logging`_ を参照。"
 
 #: ../../userguide/tasks.rst:255
 msgid "The current log level used."
-msgstr ""
+msgstr "現在使用されているログレベル。"
 
 #: ../../userguide/tasks.rst:257
 msgid "Hostname of the worker instance executing the task."
-msgstr ""
+msgstr "タスクを実行しているワーカーインタンスのホスト名。"
 
 #: ../../userguide/tasks.rst:259
 msgid ""
@@ -324,23 +329,23 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:266
 msgid "This flag is set to true if the task was not executed by the worker."
-msgstr ""
+msgstr "タスクがワーカーによって実行されなかった場合に True。"
 
 #: ../../userguide/tasks.rst:269
 msgid "A list of subtasks to be called if this task returns successfully."
-msgstr ""
+msgstr "タスクの実行が成功した場合に呼ばれるサブタスクのリスト。"
 
 #: ../../userguide/tasks.rst:271
 msgid "A list of subtasks to be called if this task fails."
-msgstr ""
+msgstr "タスクの実行が失敗した場合に呼ばれるサブタスクのリスト。"
 
 #: ../../userguide/tasks.rst:273
 msgid "Set to true the caller has utc enabled (:setting:`CELERY_ENABLE_UTC`)."
-msgstr ""
+msgstr "UTC が有効になっている場合に True (:setting:`CELERY_ENABLE_UTC`)。"
 
 #: ../../userguide/tasks.rst:278
 msgid "Mapping of message headers (may be :const:`None`)."
-msgstr ""
+msgstr "メッセージヘッダーのマッピング (おそらく :const:`None`)。"
 
 #: ../../userguide/tasks.rst:280
 msgid "Where to send reply to (queue name)."
@@ -354,13 +359,15 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:286
 msgid "An example task accessing information in the context is:"
-msgstr ""
+msgstr "Context の情報にアクセスするタスクの例:"
 
 #: ../../userguide/tasks.rst:296
 msgid ""
 "The ``bind`` argument means that the function will be a \"bound method\" so "
 "that you can access attributes and methods on the task type instance."
 msgstr ""
+"``bind`` 引数をセットするとその関数は\"バウンドメソッド\"となり、タスク型インスタンスの"
+"属性とメソッドにアクセスできるようになります。"
 
 #: ../../userguide/tasks.rst:302
 msgid "Logging"
@@ -371,6 +378,7 @@ msgid ""
 "The worker will automatically set up logging for you, or you can configure "
 "logging manually."
 msgstr ""
+"ワーカーは自動的にログのセットアップをしてくれます。手動で設定することもできます。"
 
 #: ../../userguide/tasks.rst:307
 msgid ""
@@ -384,12 +392,14 @@ msgid ""
 "The best practice is to create a common logger for all of your tasks at the "
 "top of your module:"
 msgstr ""
+"ベストプラクティスは、モジュールの先頭ですべてのタスク共通で使用する logger を生成することです:"
 
 #: ../../userguide/tasks.rst:325
 msgid ""
 "Celery uses the standard Python logger library, for which documentation can "
 "be found in the :mod:`logging` module."
 msgstr ""
+"Celery は Python の標準 logger ライブラリを使用します。ドキュメントは :mod:`logging` モジュールのページをご覧ください。"
 
 #: ../../userguide/tasks.rst:329
 msgid ""
@@ -397,6 +407,8 @@ msgid ""
 "will be redirected to logging system (you can disable this, see "
 ":setting:`CELERY_REDIRECT_STDOUTS`)."
 msgstr ""
+":func:`print` 関数も使用でき、標準出力/エラーに出力された内容は logging システムにリダイレクトされます"
+"(これは無効にできます。:setting:`CELERY_REDIRECT_STDOUTS` を参照)。"
 
 #: ../../userguide/tasks.rst:336
 msgid "Retrying"
@@ -407,6 +419,7 @@ msgid ""
 ":meth:`~@Task.retry` can be used to re-execute the task, for example in the "
 "event of recoverable errors."
 msgstr ""
+":meth:`~@Task.retry` は、リカバーできるエラーが発生した際などに、タスクを再実行するのに使います。"
 
 #: ../../userguide/tasks.rst:341
 msgid ""
@@ -414,6 +427,7 @@ msgid ""
 "and it will take care to make sure the message is delivered to the same "
 "queue as the originating task."
 msgstr ""
+"``retry`` を呼び出すと、同じタスク ID を使って新しいメッセージを元のタスクと同じキューに送信します。"
 
 #: ../../userguide/tasks.rst:345
 msgid ""
@@ -421,10 +435,12 @@ msgid ""
 "can track the progress of the task using the result instance (see :ref"
 ":`task-states`)."
 msgstr ""
+"タスクがリトライされたこともタスクのステートに記録されてるので、結果インスタンスを"
+"使ってタスクの進行状況を追跡できます(:ref:`task-states` を参照)。"
 
 #: ../../userguide/tasks.rst:349
 msgid "Here's an example using ``retry``:"
-msgstr ""
+msgstr "``retry`` を使用する例:"
 
 #: ../../userguide/tasks.rst:363
 msgid ""
@@ -434,6 +450,10 @@ msgid ""
 "that the task is to be retried, so that it can store the correct state when "
 "a result backend is enabled."
 msgstr ""
+":meth:`~@Task.retry` の呼び出しは実際には例外を送出するので、それ以降のコードは実行されません。"
+"これは :exc:`~@Retry` 例外で、エラーとしてではなく、タスクがリトライされたことをワーカーに"
+"伝えるための semi-predicate なものとして扱われます。そのため結果バックエンドが有効な場合に"
+"正しいステートを保持できます。"
 
 #: ../../userguide/tasks.rst:369
 msgid ""

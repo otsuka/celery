@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:5
 msgid "Next Steps"
-msgstr "ネクストステップ"
+msgstr "Next ステップ"
 
 #: ../../getting-started/next-steps.rst:7
 msgid ""
@@ -229,7 +229,7 @@ msgid ""
 "The daemonization scripts uses the :program:`celery multi` command to start "
 "one or more workers in the background:"
 msgstr ""
-"デーモン化スクリプトでは、ひとつ、もしくは複数のワーカーをバックグラウンドで起動するために"
+"デーモン化スクリプトでは、一つ、もしくは複数のワーカーをバックグラウンドで起動するために"
 " :program:`celery multi` コマンドを使用します。"
 
 #: ../../getting-started/next-steps.rst:159
@@ -430,11 +430,11 @@ msgid ""
 " that Celery uses dedicated event messages (see :ref:`guide-monitoring`)."
 msgstr ""
 "デフォルトでは結果バックエンドは無効になっていますが、これはほとんどのアプリケーションにとっては"
-"適切なものだからです。有効にする場合は、使用するバックエンドを短所も考慮して選んでください。"
-"大半のタスクでは結果を保持しておくことが大して有用ではないので、デフォルトで無効になっているのは"
+"適切なものだからです。有効にする場合は、使用するバックエンドをその短所も考慮して選んでください。"
+"大半のタスクでは結果を保持しておくことは大して有用ではないので、デフォルトで無効になっているのは"
 "良い設計と言えるでしょう。"
-"また、結果バックエンドはタスクやワーカーを監視するために使うものではないということに注意してください。"
-"監視用途としては Celery はイベントメッセージを使います(:ref:`guide-monitoring`)。"
+"また結果バックエンドは、タスクやワーカーを監視するために使用するものではありません。"
+"監視用途としては Celery はイベントメッセージを使用します(:ref:`guide-monitoring`)。"
 
 #: ../../getting-started/next-steps.rst:298
 msgid ""
@@ -460,7 +460,7 @@ msgid ""
 "If you don't wish for the errors to propagate then you can disable that by "
 "passing the ``propagate`` argument::"
 msgstr ""
-"エラーの伝搬をして欲しくない場合は ``propaage`` 引数によって無効にできます::"
+"エラーを伝搬して欲しくない場合は ``propaage`` 引数によって無効にできます::"
 
 #: ../../getting-started/next-steps.rst:329
 msgid ""
@@ -483,7 +483,7 @@ msgid ""
 "A task can only be in a single state, but it can progress through several "
 "states. The stages of a typical task can be::"
 msgstr ""
-"タスクはひとつののみ状態を取り得ますが、いくつかの状態を遷移します。典型的なタスクでは次のような遷移です::"
+"タスクは一つの状態を取り得ますが、いくつかの状態を遷移します。典型的なタスクでは次のような遷移をとります::"
 
 #: ../../getting-started/next-steps.rst:350
 msgid ""
@@ -765,7 +765,7 @@ msgid ""
 "The :setting:`CELERY_ROUTES` setting enables you to route tasks by name and "
 "keep everything centralized in one location::"
 msgstr ""
-":settings:`CELERY_ROUTES` 設定で、タスクの名前でルートを指定でき、一カ所にすべてを集めることができます::"
+":setting:`CELERY_ROUTES` 設定で、タスクの名前でルートを指定でき、一カ所にすべてを集めることができます::"
 
 #: ../../getting-started/next-steps.rst:582
 msgid ""
@@ -790,14 +790,14 @@ msgid ""
 msgstr ""
 "コンマ区切りのリストで複数のキューを指定できます。"
 "次の例では、デフォルトキューと ``hipri`` キューの両方をワーカーに指定しています。"
-"デフォルトキューは力士的な理由で ``celery`` と命名されています:"
+"デフォルトキューは歴史的な理由で ``celery`` と命名されています:"
 
 #: ../../getting-started/next-steps.rst:604
 msgid ""
 "The order of the queues doesn't matter as the worker will give equal weight "
 "to the queues."
 msgstr ""
-"ワーカーは指定されたキューに等しいウェイトを置いているため、キューの順番は関係ありません。"
+"ワーカーは指定されたキューに等しいウェイトを置いているため、指定するキューの順番は関係ありません。"
 
 #: ../../getting-started/next-steps.rst:607
 msgid ""
@@ -808,23 +808,27 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:611
 msgid "Remote Control"
-msgstr ""
+msgstr "リモートコントロール"
 
 #: ../../getting-started/next-steps.rst:613
 msgid ""
 "If you're using RabbitMQ (AMQP), Redis or MongoDB as the broker then you can"
 " control and inspect the worker at runtime."
 msgstr ""
+"RabbitMQ (AMQP)、Redis、または MongoDB をブローカーとして使う場合、"
+"動的にワーカーの操作や調査を行うことができます。"
 
 #: ../../getting-started/next-steps.rst:616
 msgid "For example you can see what tasks the worker is currently working on:"
-msgstr ""
+msgstr "例えば、ワーカーが現在処理しているタスクを見られます:"
 
 #: ../../getting-started/next-steps.rst:622
 msgid ""
 "This is implemented by using broadcast messaging, so all remote control "
 "commands are received by every worker in the cluster."
 msgstr ""
+"これはブロードキャストメッセージングによって実装されているため、すべてのリモートコントロールコマンドは"
+"クラスタ内の全ワーカーによって受信されます。"
 
 #: ../../getting-started/next-steps.rst:625
 msgid ""
@@ -832,12 +836,15 @@ msgid ""
 ":option:`--destination` option, which is a comma separated list of worker "
 "host names:"
 msgstr ""
+":option:`--destination` オプションを使ってリクエストに応えるワーカーを指定することもできます。"
+"オプションではワーカーのホスト名をコンマ区切りのリストで指定します:"
 
 #: ../../getting-started/next-steps.rst:633
 msgid ""
 "If a destination is not provided then every worker will act and reply to the"
 " request."
 msgstr ""
+"destination が指定されていない場合は、すべてのワーカーがリクエストに応答します。"
 
 #: ../../getting-started/next-steps.rst:636
 msgid ""
@@ -846,24 +853,30 @@ msgid ""
 "what is going on inside the worker. For a list of inspect commands you can "
 "execute:"
 msgstr ""
+":program:`celery inspect` コマンドはワーカーに関して何も変更しないコマンドで構成されており、"
+"ワーカーの中で行なわれていることに関する情報や統計を返します。"
+"inspect コマンドのリストを見るには、次のように実行します:"
 
 #: ../../getting-started/next-steps.rst:645
 msgid ""
 "Then there is the :program:`celery control` command, which contains commands"
 " that actually changes things in the worker at runtime:"
 msgstr ""
+":program:`celery control` コマンドはワーカーの挙動を動的に変更するコマンドで構成されています:"
 
 #: ../../getting-started/next-steps.rst:652
 msgid ""
 "For example you can force workers to enable event messages (used for "
 "monitoring tasks and workers):"
 msgstr ""
+"例えば、ワーカーのイベントメッセージ(タスクやワーカーの監視に使用される)を有効にすることができます:"
 
 #: ../../getting-started/next-steps.rst:659
 msgid ""
 "When events are enabled you can then start the event dumper to see what the "
 "workers are doing:"
 msgstr ""
+"イベントが有効になると、イベントダンプを開始してワーカーが何をしているか見ることができます:"
 
 #: ../../getting-started/next-steps.rst:666
 msgid "or you can start the curses interface:"
@@ -871,27 +884,29 @@ msgstr ""
 
 #: ../../getting-started/next-steps.rst:672
 msgid "when you're finished monitoring you can disable events again:"
-msgstr ""
+msgstr "監視を終了したら、イベントを再び無効にできます:"
 
 #: ../../getting-started/next-steps.rst:678
 msgid ""
 "The :program:`celery status` command also uses remote control commands and "
 "shows a list of online workers in the cluster:"
 msgstr ""
+":program:`celery status` コマンドではクラスタ内のオンラインワーカーのリストを表示します:"
 
 #: ../../getting-started/next-steps.rst:685
 msgid ""
 "You can read more about the :program:`celery` command and monitoring in the "
 ":ref:`Monitoring Guide <guide-monitoring>`."
 msgstr ""
+":program:`celery` コマンドと監視の詳細については :ref:`Monitoring Guide <guide-monitoring>` にあります。"
 
 #: ../../getting-started/next-steps.rst:689
 msgid "Timezone"
-msgstr ""
+msgstr "タイムゾーン"
 
 #: ../../getting-started/next-steps.rst:691
 msgid "All times and dates, internally and in messages uses the UTC timezone."
-msgstr ""
+msgstr "日時に関しては内部的に、またメッセージの中でもすべて UTC タイムゾーンを使用します。"
 
 #: ../../getting-started/next-steps.rst:693
 msgid ""
@@ -900,6 +915,9 @@ msgid ""
 "timezone than the system timezone then you must configure that using the "
 ":setting:`CELERY_TIMEZONE` setting::"
 msgstr ""
+"ワーカーがメッセージを受信すると、例えばカウントダウンが指定されたメッセージの場合、"
+"UTC タイムをローカルタイムに変換します。システムのタイムゾーンとは別のタイムゾーンを"
+"使いたい場合は :setting:`CELERY_TIMEZONE` オプションを使って設定します::"
 
 #: ../../getting-started/next-steps.rst:701
 msgid "Optimization"

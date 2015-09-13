@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,15 +13,15 @@ msgstr ""
 
 #: ../../userguide/workers.rst:5
 msgid "Workers Guide"
-msgstr ""
+msgstr "ワーカーガイド"
 
 #: ../../userguide/workers.rst:14
 msgid "Starting the worker"
-msgstr ""
+msgstr "ワーカーの起動"
 
 #: ../../userguide/workers.rst:0
 msgid "Daemonizing"
-msgstr ""
+msgstr "デーモン化"
 
 #: ../../userguide/workers.rst:18
 msgid ""
@@ -29,16 +29,19 @@ msgid ""
 "See :ref:`daemonizing` for help detaching the worker using popular "
 "daemonization tools."
 msgstr ""
+"バックグラウンドで起動させるのにデーモン化ツールを使いたいことでしょう。"
+"ポピュラーなデーモン化ツールを使ってワーカーを切り離す方法については :ref:`daemonizing` を参考にしてください。"
 
 #: ../../userguide/workers.rst:22
 msgid "You can start the worker in the foreground by executing the command:"
-msgstr ""
+msgstr "フォアグラウンドでワーカーを起動するにはコマンドを実行します:"
 
 #: ../../userguide/workers.rst:28
 msgid ""
 "For a full list of available command-line options see "
 ":mod:`~celery.bin.worker`, or simply do:"
 msgstr ""
+"利用可能なコマンドラインの全オプションについては、:mod:`~celery.bin.worker` を見るか、次のコマンドを叩いてください:"
 
 #: ../../userguide/workers.rst:35
 msgid ""
@@ -46,28 +49,31 @@ msgid ""
 "sure to give a unique name to each individual worker by specifying a host "
 "name with the :option:`--hostname|-n` argument:"
 msgstr ""
+"同じマシン上で複数のワーカーを起動することもできます。その場合は、"
+":option:`--hostname|-n` 引数でホスト名を指定して個々のワーカーに一意な名前を必ず付けます:"
 
 #: ../../userguide/workers.rst:45
 msgid "The hostname argument can expand the following variables:"
-msgstr ""
+msgstr "hostname 引数は以下の変数を展開します:"
 
 #: ../../userguide/workers.rst:47 ../../userguide/workers.rst:148
 msgid "``%h``:  Hostname including domain name."
-msgstr ""
+msgstr "``%h``:  ドメイン名を含むホスト名。"
 
 #: ../../userguide/workers.rst:48 ../../userguide/workers.rst:149
 msgid "``%n``:  Hostname only."
-msgstr ""
+msgstr "``%n``:  ホスト名のみ。"
 
 #: ../../userguide/workers.rst:49 ../../userguide/workers.rst:150
 msgid "``%d``:  Domain name only."
-msgstr ""
+msgstr "``%d``:  ドメイン名のみ。"
 
 #: ../../userguide/workers.rst:51 ../../userguide/workers.rst:154
 msgid ""
 "E.g. if the current hostname is ``george.example.com`` then these will "
 "expand to:"
 msgstr ""
+"例)　現在のホスト名が ``george.exampel.com`` だったら次のように展開されます:"
 
 #: ../../userguide/workers.rst:54
 msgid "``worker1.%h`` -> ``worker1.george.example.com``"
@@ -83,11 +89,11 @@ msgstr ""
 
 #: ../../userguide/workers.rst:61
 msgid "Stopping the worker"
-msgstr ""
+msgstr "ワーカーの停止"
 
 #: ../../userguide/workers.rst:63
 msgid "Shutdown should be accomplished using the :sig:`TERM` signal."
-msgstr ""
+msgstr ":sig:`TERM` シグナルを使って停止させてください。"
 
 #: ../../userguide/workers.rst:65
 msgid ""
@@ -96,6 +102,9 @@ msgid ""
 "should wait for it to finish before doing anything drastic (like sending the"
 " :sig:`KILL` signal)."
 msgstr ""
+"停止処理が走り出すと、ワーカーは実際に停止する前に現在実行中のすべてのタスクを完了させます。"
+"なので、重要なタスクを実行している場合は(:sig:`KILL` シグナルを送るといった)ドラスティックな"
+"ことをする前に、タスクが完了するのを待たなくてはいけません。"
 
 #: ../../userguide/workers.rst:70
 msgid ""
@@ -104,6 +113,10 @@ msgid ""
 " terminate the worker, but be aware that currently executing tasks will be "
 "lost (unless the tasks have the :attr:`~@Task.acks_late` option set)."
 msgstr ""
+"タスクが無限ループに陥っているといった理由でワーカーがいつまで経っても停止しない場合、"
+":sig:`KILL` シグナルを使ってワーカーを強制的に停止させることができます。"
+"但し、現在実行中のタスクは失われてしまうことに気を付けてください"
+"(タスクに :attr:`~@Task.acks_late` オプションがセットされていない場合)。"
 
 #: ../../userguide/workers.rst:76
 msgid ""
@@ -114,7 +127,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:87
 msgid "Restarting the worker"
-msgstr ""
+msgstr "ワーカーの再起動"
 
 #: ../../userguide/workers.rst:89
 msgid ""
@@ -122,6 +135,8 @@ msgid ""
 "instance.  The easiest way to manage workers for development is by using "
 "`celery multi`:"
 msgstr ""
+"ワーカーを再起動するには、`TERM` シグナルを送り、そして新しいインスタンスを起動します。"
+"開発中にワーカーを管理する簡単な方法は `celery multi` を使うことです:"
 
 #: ../../userguide/workers.rst:98
 msgid ""

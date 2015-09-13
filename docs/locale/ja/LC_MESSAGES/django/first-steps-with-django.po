@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../django/first-steps-with-django.rst:5
 msgid "First steps with Django"
-msgstr ""
+msgstr "Django First ステップ"
 
 #: ../../django/first-steps-with-django.rst:8
 msgid "Using Celery with Django"
-msgstr ""
+msgstr "Django と Celery の連携"
 
 #: ../../django/first-steps-with-django.rst:12
 msgid ""
@@ -29,22 +29,30 @@ msgid ""
 "tutorial.  When you have a working example you can continue to the :ref"
 ":`next-steps` guide."
 msgstr ""
+"Celery の以前のバージョンでは Django と連携させるのに別のライブラリが必要でしたが、"
+"バージョン 3.1 からは必要なくなりました。Django は標準でサポートされるようになったので、"
+"このドキュメントでは Celery と Django を連携させる基本的な方法について述べます。"
+"Django と連携させない時と同じ API を使うので、まずは :ref:`first-steps` チュートリアルに"
+"目を通してから、このチュートリアルに進んでください。"
+"When you have a working example you can continue to the :ref:`next-steps` guide."
 
 #: ../../django/first-steps-with-django.rst:20
 msgid ""
 "To use Celery with your Django project you must first define an instance of "
 "the Celery library (called an \"app\")"
 msgstr ""
+"Django プロジェクトで Celery を使うには、まず Celery ライブラリのインスタンス(\"app\" と呼ばれます)を定義します。"
 
 #: ../../django/first-steps-with-django.rst:23
 msgid "If you have a modern Django project layout like::"
-msgstr ""
+msgstr "モダンな Django プロジェクト構成の場合::"
 
 #: ../../django/first-steps-with-django.rst:31
 msgid ""
 "then the recommended way is to create a new `proj/proj/celery.py` module "
 "that defines the Celery instance:"
 msgstr ""
+"次に Celery インスタンスを定義する `proj/proj/celery.py` モジュールを作成します:"
 
 #: ../../django/first-steps-with-django.rst:34
 msgid "`proj/proj/celery.py`"
@@ -56,6 +64,9 @@ msgid ""
 "module.  This ensures that the app is loaded when Django starts so that the "
 "``@shared_task`` decorator (mentioned later) will use it:"
 msgstr ""
+"そして :file:`proj/proj/__init__.py` モジュールで、この app をインポートします。"
+"これで Django の起動時に必ず app がロードされ、"
+"``@shared_task`` デコーレーター(後述)が app を参照できるようになります:"
 
 #: ../../django/first-steps-with-django.rst:42
 msgid ":file:`proj/proj/__init__.py`:"
@@ -67,6 +78,9 @@ msgid ""
 "simple projects you may use a single contained module that defines both the "
 "app and tasks, like in the :ref:`tut-celery` tutorial."
 msgstr ""
+"この例で挙げているプロジェクト構成は大きめのプロジェクトに向いています。"
+"シンプルなプロジェクトでは :ref:`tut-celery` チュートリアルにあるように "
+"app とタスクの両方を定義する単一のモジュールを使ってもいいでしょう。"
 
 #: ../../django/first-steps-with-django.rst:50
 msgid ""
@@ -74,12 +88,16 @@ msgid ""
 "imports from the future, so that our ``celery.py`` module will not clash "
 "with the library:"
 msgstr ""
+"では最初のモジュールの中身を細かく見ていきましょう。"
+"まず __future__ モジュールから absoute_import をインポートしています。"
+"そのため ``celery.py`` モジュールはライブラリと衝突することはありません。"
 
 #: ../../django/first-steps-with-django.rst:58
 msgid ""
 "Then we set the default :envvar:`DJANGO_SETTINGS_MODULE` for the "
 ":program:`celery` command-line program:"
 msgstr ""
+"そして :program:`celery` コマンドラインプログラム用にデフォルトの :envvar:`DJANGO_SETTINGS_MODULE` 環境変数をセットします。"
 
 #: ../../django/first-steps-with-django.rst:65
 msgid ""
@@ -87,12 +105,16 @@ msgid ""
 "settings module to the celery program.  It must always come before creating "
 "the app instances, which is what we do next:"
 msgstr ""
+"これは必ず必要なものではありませんが、毎回設定モジュールを Celery に渡す手間を省いてくれます。"
+"この行は app インスタンスを生成する前に位置していなければいけません:"
 
 #: ../../django/first-steps-with-django.rst:73
 msgid ""
 "This is our instance of the library, you can have many instances but there's"
 " probably no reason for that when using Django."
 msgstr ""
+"この app がプロジェクトで使用する Celery のインスタンスです。インスタンスをいくつも生成することはできますが、"
+"Django と連携する場合にそうする理由はないでしょう。"
 
 #: ../../django/first-steps-with-django.rst:76
 msgid ""
@@ -100,6 +122,8 @@ msgid ""
 "  This means that you don't have to use multiple configuration files, and "
 "instead configure Celery directly from the Django settings."
 msgstr ""
+"この後 app に対し Django の設定モジュールを Celery の設定として追加します。こうすることで"
+"複数の設定ファイルを使う必要がなくなり、Django の設定から直接 Celery を設定できます。"
 
 #: ../../django/first-steps-with-django.rst:81
 msgid ""
@@ -107,6 +131,8 @@ msgid ""
 "then the worker doesn't have to serialize the object when using Windows or "
 "execv:"
 msgstr ""
+"オブジェクトを直接渡すこともできますが、文字列を使った方がベターです。と言うのも、"
+"Windows や execv を使う場合にワーカーがオブジェクトをシリアライズする必要がなくなるからです。"
 
 #: ../../django/first-steps-with-django.rst:89
 msgid ""
@@ -114,12 +140,15 @@ msgid ""
 "separate ``tasks.py`` module, and Celery does have a way to autodiscover "
 "these modules:"
 msgstr ""
+"次に、再利用可能なアプリケーションの一般的なプラクティスとして ``tasks.py`` にすべてのタスクを定義します。"
+"これらのモジュールを Celery は自動で検知することができます:"
 
 #: ../../django/first-steps-with-django.rst:97
 msgid ""
 "With the line above Celery will automatically discover tasks in reusable "
 "apps if you follow the ``tasks.py`` convention::"
 msgstr ""
+"上の行によって Celery は ``tasks.py`` の規約に則った再利用可能なアプリケーション内のタスクを自動的に検知します。"
 
 #: ../../django/first-steps-with-django.rst:107
 msgid ""
@@ -128,6 +157,10 @@ msgid ""
 " can happen only when needed, and so that importing your module will not "
 "evaluate the Django settings object."
 msgstr ""
+"このようにすれば個々のモジュールを :setting:`CELERY_IMPORTS` 設定に一つずつ追加する必要はありません。"
+"The ``lambda`` so that the autodiscovery"
+" can happen only when needed, and so that importing your module will not "
+"evaluate the Django settings object."
 
 #: ../../django/first-steps-with-django.rst:112
 msgid ""
@@ -135,10 +168,13 @@ msgid ""
 "information.  This is using the new ``bind=True`` task option introduced in "
 "Celery 3.1 to easily refer to the current task instance."
 msgstr ""
+"最後に、``debug_task`` は自身のリクエスト情報をダンプするタスクの例です。"
+"ここではカレントタスクのインスタンスを簡単に参照できるようにするため"
+" Celery 3.1 で導入された新しい ``bind=True`` タスクオプションを使用しています。"
 
 #: ../../django/first-steps-with-django.rst:117
 msgid "Using the ``@shared_task`` decorator"
-msgstr ""
+msgstr "``@shared_task`` デコレーターの使用"
 
 #: ../../django/first-steps-with-django.rst:119
 msgid ""
@@ -146,12 +182,17 @@ msgid ""
 "cannot depend on the project itself, so you also cannot import your app "
 "instance directly."
 msgstr ""
+"タスクは再利用可能なアプリケーション内に書かれていることでしょう。"
+"そして再利用可能なアプリケーションは自身のプロジェクトに依存することはできないので、"
+"app インタンスを直接インポートすることもできません。"
 
 #: ../../django/first-steps-with-django.rst:123
 msgid ""
 "The ``@shared_task`` decorator lets you create tasks without having any "
 "concrete app instance:"
 msgstr ""
+"``@shared_task`` デコレーターを用いれば、特定の app インスタンスを参照することなく"
+"タスクを生成できるようになります:"
 
 #: ../../django/first-steps-with-django.rst:126
 msgid ":file:`demoapp/tasks.py`:"
@@ -162,10 +203,12 @@ msgid ""
 "You can find the full source code for the Django example project at: "
 "https://github.com/celery/celery/tree/3.1/examples/django/"
 msgstr ""
+"この Django サンプルプロジェクトのすべてのソースコードは次の URL で取得できます:"
+"https://github.com/celery/celery/tree/3.1/examples/django/"
 
 #: ../../django/first-steps-with-django.rst:137
 msgid "Using the Django ORM/Cache as a result backend."
-msgstr ""
+msgstr "結果バックエンドとして Django ORM/Cache を使う"
 
 #: ../../django/first-steps-with-django.rst:139
 msgid ""
@@ -239,7 +282,7 @@ msgstr ""
 
 #: ../../django/first-steps-with-django.rst:207
 msgid "Starting the worker process"
-msgstr ""
+msgstr "ワーカープロセスの起動"
 
 #: ../../django/first-steps-with-django.rst:209
 msgid ""
@@ -248,16 +291,20 @@ msgid ""
 "development it is useful to be able to start a worker instance by using the "
 "``celery worker`` manage command, much as you would use Django's runserver:"
 msgstr ""
+"本番環境ではワーカーをデーモンとしてバックグラウンドで稼動させたいでしょうが - :ref:`daemonizing` を参照 - "
+"テストや開発時においては Django の runserver コマンドを使うように "
+"``celery worker`` コマンドを使ってワーカーインスタンスを起動する方が便利でしょう:"
 
 #: ../../django/first-steps-with-django.rst:219
 msgid ""
 "For a complete listing of the command-line options available, use the help "
 "command:"
 msgstr ""
+"利用可能なコマンドラインオプションの全リストは help コマンドを使うと見られます:"
 
 #: ../../django/first-steps-with-django.rst:227
 msgid "Where to go from here"
-msgstr ""
+msgstr "次のステップ"
 
 #: ../../django/first-steps-with-django.rst:229
 msgid ""
@@ -265,3 +312,5 @@ msgid ""
 "steps>` tutorial, and after that you can study the :ref:`User Guide "
 "<guide>`."
 msgstr ""
+"Celery についてもっと学びたいなら :ref:`Next Steps <next-steps>` チューリアルに進み、"
+"その後に :ref:`User Guide <guide>` を学ぶといいでしょう。"
