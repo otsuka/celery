@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../userguide/signals.rst:5 ../../userguide/signals.rst:62
 msgid "Signals"
-msgstr ""
+msgstr "シグナル"
 
 #: ../../userguide/signals.rst:10
 msgid ""

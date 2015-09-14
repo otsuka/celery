@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:5
 msgid "Periodic Tasks"
-msgstr ""
+msgstr "定期実行タスク"
 
 #: ../../userguide/periodic-tasks.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "イントロダクション"
 
 #: ../../userguide/periodic-tasks.rst:13
 msgid ""

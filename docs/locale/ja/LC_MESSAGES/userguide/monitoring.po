@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/monitoring.rst:5
 msgid "Monitoring and Management Guide"
-msgstr ""
+msgstr "監視と管理"
 
 #: ../../userguide/monitoring.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "イントロダクション"
 
 #: ../../userguide/monitoring.rst:13
 msgid ""

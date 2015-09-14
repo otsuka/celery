@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../../userguide/calling.rst:109
 msgid "Linking (callbacks/errbacks)"
-msgstr ""
+msgstr "リンク (コールバック/エラーバック)"
 
 #: ../../userguide/calling.rst:111
 msgid ""
@@ -169,10 +169,12 @@ msgid ""
 " callback task will be applied with the result of the parent task as a "
 "partial argument:"
 msgstr ""
+"Celery はタスクのリンクをサポートしており、あるタスクの後に別のタスクが続けることができます。"
+"コールバックタスクは親タスクの結果を部分引数として受け取れます:"
 
 #: ../../userguide/calling.rst:0
 msgid "What is ``s``?"
-msgstr ""
+msgstr "``s`` って？"
 
 #: ../../userguide/calling.rst:121
 msgid ""
@@ -180,6 +182,10 @@ msgid ""
 " in the :ref:`canvas guide <guide-canvas>`, where you can also learn about "
 ":class:`~celery.chain`, which is a simpler way to chain tasks together."
 msgstr ""
+"ここで使われている ``add.s`` はサブタスクと呼ばれています。"
+"サブタスクについては :ref:`canvas ガイド <guide-canvas>` で詳しく説明しますが、"
+"そこでもっとシンプルにタスクを連結できる :class:`~celery.chain` クラスについても取り上げます。"
+
 
 #: ../../userguide/calling.rst:126
 msgid ""
@@ -187,12 +193,16 @@ msgid ""
 "primitive, and you will probably not use it directly, but rather use chains "
 "instead."
 msgstr ""
+"``link`` 実行オプションは Celery 内部処理で使われるものとして扱われており、"
+"実務上で直接使う機会は少なく、ほとんどの場合には chain を使います。"
 
 #: ../../userguide/calling.rst:130
 msgid ""
 "Here the result of the first task (4) will be sent to a new task that adds "
 "16 to the previous result, forming the expression :math:`(2 + 2) + 16 = 20`"
 msgstr ""
+"最初のタスクの結果である (4) が新しいタスクに送られ、そこでは 16 が加算されるので、"
+"最終的に :math:`(2 + 2) + 16 = 20` の式になります。"
 
 #: ../../userguide/calling.rst:135
 msgid ""
@@ -203,26 +213,33 @@ msgid ""
 " way the error callback requires a result backend to be enabled, and the "
 "task must retrieve the result of the task instead."
 msgstr ""
+"タスクで例外が発生した時のコールバックを指定することもできます(*エラーバック*)。"
+"エラーバックの挙動は通常のコールバックとは異なり、親タスクの結果ではなくタスク ID が渡されます。"
+"これは必ずしも発生した例外をシリアライズできるわけではないためです。このため、"
+"エラーコールバックを扱うには結果バックエンドが有効になっている必要があり、"
+"そこから親タスクの結果を取得しなければなりません。"
 
 #: ../../userguide/calling.rst:143
 msgid "This is an example error callback:"
-msgstr ""
+msgstr "エラーコールバックの例:"
 
 #: ../../userguide/calling.rst:153
 msgid "it can be added to the task using the ``link_error`` execution option:"
-msgstr ""
+msgstr "``link_error`` 実行オプションを使ってタスクにエラーコールバックを紐付けます:"
 
 #: ../../userguide/calling.rst:161
 msgid ""
 "In addition, both the ``link`` and ``link_error`` options can be expressed "
 "as a list::"
 msgstr ""
+"また、``link`` と ``link_error`` オプションにはリスト形式で複数のコールバックを指定できます:"
 
 #: ../../userguide/calling.rst:166
 msgid ""
 "The callbacks/errbacks will then be called in order, and all callbacks will "
 "be called with the return value of the parent task as a partial argument."
 msgstr ""
+"コールバック/エラーバックは指定した順に呼ばれ、すべてのコールバックはその親タスクの結果を部分引数として受け取ります。"
 
 #: ../../userguide/calling.rst:173
 msgid "ETA and countdown"

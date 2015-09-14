@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:5
 msgid "Canvas: Designing Workflows"
-msgstr ""
+msgstr "Canvas: ワークフローの設計"
 
 #: ../../userguide/canvas.rst:16
 msgid "Signatures"
-msgstr ""
+msgstr "シグニチャ"
 
 #: ../../userguide/canvas.rst:20
 msgid ""
@@ -26,6 +26,9 @@ msgid ""
 "sometimes you may want to pass the signature of a task invocation to another"
 " process or as an argument to another function."
 msgstr ""
+":ref:`タスクの呼び出し <guide-calling>` で ``delay`` メソッドを使ってタスクを呼び出す方法を学びました。"
+"多くの場合はこれで十分事足りますが、タスク実行のシグニチャを別プロセス、または別の関数の引数に渡したい"
+"といったケースが出てくることもあります。"
 
 #: ../../userguide/canvas.rst:25
 msgid ""
@@ -33,67 +36,78 @@ msgid ""
 "execution options of a single task invocation in a way such that it can be "
 "passed to functions or even serialized and sent across the wire."
 msgstr ""
+":func:`~celery.signature` 関数は、引数とキーワード引数、そして単一タスクの実行オプションをラップし、"
+"他の関数に渡したり、シリアライズしてネットワーク越しに送ったりできるようにします。"
 
 #: ../../userguide/canvas.rst:29
 msgid ""
 "Signatures are often nicknamed \"subtasks\" because they describe a task to "
 "be called within a task."
 msgstr ""
+"シグニチャは、タスク内で呼ばれるタスクについての記述なので「サブタスク」と称されます。"
 
 #: ../../userguide/canvas.rst:32
 msgid ""
 "You can create a signature for the ``add`` task using its name like this::"
 msgstr ""
+"``add`` タスクのシグニチャはその名前を使って次のように作成されます:"
+
 
 #: ../../userguide/canvas.rst:38
 msgid ""
 "This task has a signature of arity 2 (two arguments): ``(2, 2)``, and sets "
 "the countdown execution option to 10."
 msgstr ""
+"このタスクは二つの引数 ``(2, 2)`` のシグニチャを持ち、countdown 実行オプションには 10 がセットされています。"
 
 #: ../../userguide/canvas.rst:41
 msgid "or you can create one using the task's ``subtask`` method::"
 msgstr ""
+"また、タスクの ``subtask`` メソッドを使って作成することも可能です:"
 
 #: ../../userguide/canvas.rst:46
 msgid "There is also a shortcut using star arguments::"
-msgstr ""
+msgstr "star arguments を使うショートカットメソッドもあります:"
 
 #: ../../userguide/canvas.rst:51
 msgid "Keyword arguments are also supported::"
-msgstr ""
+msgstr "キーワード引数もサポートされています:"
 
 #: ../../userguide/canvas.rst:56
 msgid "From any signature instance you can inspect the different fields::"
-msgstr ""
+msgstr "シグニチャのインスタンスから様々な情報を抜き出すことができます:"
 
 #: ../../userguide/canvas.rst:66
 msgid ""
 "It supports the \"Calling API\" which means it supports ``delay`` and "
 "``apply_async`` or being called directly."
-msgstr ""
+msgstr "\"Calling API\" もサポートしています。"
+"これはつまり ``dalay`` や ``apply_async`` メソッド、直接の実行をサポートしているということです。"
 
 #: ../../userguide/canvas.rst:69
 msgid ""
 "Calling the signature will execute the task inline in the current process::"
 msgstr ""
+"シグニチャインスタンスを呼び出すと、カレントプロセスでタスクを実行します:"
 
 #: ../../userguide/canvas.rst:76
 msgid ""
 "``delay`` is our beloved shortcut to ``apply_async`` taking star-arguments::"
-msgstr ""
+msgstr "``dalay`` は ``apply_async`` のショートカットで star-arguments を取ります:"
 
 #: ../../userguide/canvas.rst:82
 msgid ""
 "``apply_async`` takes the same arguments as the :meth:`Task.apply_async "
 "<@Task.apply_async>` method::"
 msgstr ""
+"``apply_async`` は :meth:`Task.apply_async <@Task.apply_async>` メソッドと同じ引数を取ります:"
 
 #: ../../userguide/canvas.rst:90
 msgid ""
 "You can't define options with :meth:`~@Task.s`, but a chaining ``set`` call "
 "takes care of that::"
 msgstr ""
+":meth:`~@Task.s` メソッドでは実行オプションを指定できませんが、それに続く ``set`` メソッドで対応できます:"
 
 #: ../../userguide/canvas.rst:97
 msgid "Partials"
@@ -101,11 +115,11 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:99
 msgid "With a signature, you can execute the task in a worker::"
-msgstr ""
+msgstr "ワーカーでシグニチャのタスクを実行できます:"
 
 #: ../../userguide/canvas.rst:104
 msgid "Or you can call it directly in the current process::"
-msgstr ""
+msgstr "またカレントプロセスで直接実行することもできます:"
 
 #: ../../userguide/canvas.rst:109
 msgid ""
@@ -122,20 +136,22 @@ msgid ""
 "Any keyword arguments added will be merged with the kwargs in the signature,"
 " with the new keyword arguments taking precedence::"
 msgstr ""
+"キーワード引数はシグニチャで指定されたものにマージされます。新しいキーワード引数が優先されます:"
 
 #: ../../userguide/canvas.rst:125
 msgid ""
 "Any options added will be merged with the options in the signature, with the"
 " new options taking precedence::"
 msgstr ""
+"オプションはシグニチャで指定されたオプションにマージされます。新しいオプションが優先されます:"
 
 #: ../../userguide/canvas.rst:131
 msgid "You can also clone signatures to create derivates:"
-msgstr ""
+msgstr "あるシグニチャから派生したシグニチャを作成するためにクローンすることも可能です:"
 
 #: ../../userguide/canvas.rst:140
 msgid "Immutability"
-msgstr ""
+msgstr "不変性"
 
 #: ../../userguide/canvas.rst:144
 msgid ""
@@ -144,17 +160,22 @@ msgid ""
 "want to specify a callback that does not take additional arguments, and in "
 "that case you can set the signature to be immutable::"
 msgstr ""
+"Partials はコールバックで使われるためのもので、リンクされたタスクやコールバックは親タスクの結果と共に呼ばれます。"
+"追加の引数を取らないコールバックを指定する時には、シグニチャが不変だとセットできます:"
 
 #: ../../userguide/canvas.rst:152
 msgid ""
 "The ``.si()`` shortcut can also be used to create immutable signatures::"
 msgstr ""
+"``.si()`` もまた不変シグニチャを生成するショートカットです:"
 
 #: ../../userguide/canvas.rst:156
 msgid ""
 "Only the execution options can be set when a signature is immutable, so it's"
 " not possible to call the signature with partial args/kwargs."
 msgstr ""
+"シグニチャが不変な場合、実行オプションのみセット可能です。"
+"部分引数/キーワード引数を付けてシグニチャを呼ぶことはできません。"
 
 #: ../../userguide/canvas.rst:161
 msgid ""
@@ -165,7 +186,7 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:174
 msgid "Callbacks"
-msgstr ""
+msgstr "コールバック"
 
 #: ../../userguide/canvas.rst:178
 msgid ""
@@ -210,21 +231,22 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:208
 msgid "The Primitives"
-msgstr ""
+msgstr "プリミティブ"
 
 #: ../../userguide/canvas.rst:0
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: ../../userguide/canvas.rst:214
 msgid "``group``"
-msgstr ""
+msgstr "グループ"
 
 #: ../../userguide/canvas.rst:216
 msgid ""
 "The group primitive is a signature that takes a list of tasks that should be"
 " applied in parallel."
 msgstr ""
+"グループプリミティブは並列に実行されるタスクのリストからなるシグニチャです。"
 
 #: ../../userguide/canvas.rst:219
 msgid "``chain``"
@@ -235,6 +257,8 @@ msgid ""
 "The chain primitive lets us link together signatures so that one is called "
 "after the other, essentially forming a *chain* of callbacks."
 msgstr ""
+"チェーンプリミティブは、あるシグニチャが呼ばれた後に次のシグニチャが呼ばれるように複数のシグニチャを連結します。"
+"これはコールバック *チェーン* を作成するのに有用です。"
 
 #: ../../userguide/canvas.rst:224
 msgid "``chord``"
@@ -246,10 +270,12 @@ msgid ""
 "header group and a body,  where the body is a task that should execute after"
 " all of the tasks in the header are complete."
 msgstr ""
+"chord はコールバックをグループです。"
+"chord はヘッダーグループと本体から構成され、本体はヘッダーの全タスク完了後に実行されるタスクです。"
 
 #: ../../userguide/canvas.rst:230
 msgid "``map``"
-msgstr ""
+msgstr "``マップ``"
 
 #: ../../userguide/canvas.rst:232
 msgid ""
@@ -310,7 +336,7 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:283
 msgid "Immutable signatures"
-msgstr ""
+msgstr "不変シグニチャ"
 
 #: ../../userguide/canvas.rst:285
 msgid ""

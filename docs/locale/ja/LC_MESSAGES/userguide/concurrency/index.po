@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../userguide/concurrency/index.rst:5
 msgid "Concurrency"
-msgstr ""
+msgstr "並行処理"
 
 #: ../../userguide/concurrency/index.rst:7
 msgid "|version|"

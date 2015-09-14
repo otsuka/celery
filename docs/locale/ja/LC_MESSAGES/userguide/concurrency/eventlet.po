@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/concurrency/eventlet.rst:5
 msgid "Concurrency with Eventlet"
-msgstr ""
+msgstr "Eventlet での並行処理"
 
 #: ../../userguide/concurrency/eventlet.rst:10
 msgid "Introduction"
-msgstr ""
+msgstr "イントロダクション"
 
 #: ../../userguide/concurrency/eventlet.rst:12
 msgid ""
@@ -25,11 +25,15 @@ msgid ""
 "for Python that allows you to change how you run your code, not how you "
 "write it."
 msgstr ""
+"`Eventlet`_ は、ホームページ上では「"
+"コードはそのままに、実行時の挙動を変える Python の並行処理ネットワークライブラリ"
+"」と記述されています。"
 
 #: ../../userguide/concurrency/eventlet.rst:16
 msgid ""
 "It uses `epoll(4)`_ or `libevent`_ for `highly scalable non-blocking I/O`_."
 msgstr ""
+"`スケーラブルなノンブロッキング I/O`_ を実現するために `epoll(4)`_ または `libevent`_ を使用します。"
 
 #: ../../userguide/concurrency/eventlet.rst:18
 msgid ""
@@ -50,6 +54,10 @@ msgid ""
 "not perform blocking calls, as this will halt all other operations in the "
 "worker until the blocking call returns."
 msgstr ""
+"Celery は実行プールの代替実装として Eventlet をサポートしています。"
+"Eventlet はあるケースにおいて Prefork より優れた性能を発揮しますが、"
+"タスクはブロックキングな処理を行ってはいけません。さもないと、"
+"そのワーカー内の他のすべての処理が一時停止して、ブロッキング処理の完了を待つことになります。"
 
 #: ../../userguide/concurrency/eventlet.rst:29
 msgid ""
@@ -63,23 +71,32 @@ msgid ""
 "prefork workers, and route tasks according to compatibility or what works "
 "best."
 msgstr ""
+"Prefork プールは複数プロセスを利用できますが、通常 CPU 当たり数プロセスに限定されます。"
+"Eventlet では数百、数千のグリーンスレッドを効率的に生成できます。"
+"フィードの収集システムを使った非公式なテストでは、Eventlet プールは秒間数百フィードの取得処理ができた一方で、"
+"Prefork プールは 100 フィードの処理に 14 秒掛かりました。"
+"但しこれはイベント駆動 I/O が特に性能を発揮できるアプリケーションの例ではあります(非同期 HTTP リクエスト)。"
+"Eventlet と Prefork の両方のワーカーを使って、互換性や性能に応じてタスクを振り分けるのがより良いやり方です。"
 
 #: ../../userguide/concurrency/eventlet.rst:40
 msgid "Enabling Eventlet"
-msgstr ""
+msgstr "Eventlet の有効化"
 
 #: ../../userguide/concurrency/eventlet.rst:42
 msgid ""
 "You can enable the Eventlet pool by using the ``-P`` option to "
 ":program:`celery worker`:"
 msgstr ""
+":program:`celery worker` に ``-P`` オプションを付けると Eventlet プールを有効化できます:"
 
 #: ../../userguide/concurrency/eventlet.rst:52
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../userguide/concurrency/eventlet.rst:54
 msgid ""
 "See the `Eventlet examples`_ directory in the Celery distribution for some "
 "examples taking use of Eventlet support."
 msgstr ""
+"Eventlet サポートの利用例は "
+"Celery 配布物の `Eventlet examples`_ ディレクトリをご覧ください。"

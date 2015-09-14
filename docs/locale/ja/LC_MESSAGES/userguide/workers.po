@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:200
 msgid "Concurrency"
-msgstr ""
+msgstr "並行処理"
 
 #: ../../userguide/workers.rst:202
 msgid ""
@@ -309,11 +309,14 @@ msgid ""
 " but you can also use :ref:`Eventlet <concurrency-eventlet>`.  The number of"
 " worker processes/threads can be changed using the :option:`--concurrency` "
 "argument and defaults to the number of CPUs available on the machine."
-msgstr ""
+msgstr "タスクの並行実行にはデフォルトでは multiprocessing モジュールが使用されますが、"
+" :ref:`Eventlet <concurrency-eventlet>` を使用することも可能です。"
+"ワーカープロセス/スレッドの数は :option:`--concurrency` 引数を使って変更でき、"
+"デフォルトではマシンの CPU 数が用いられます。"
 
 #: ../../userguide/workers.rst:207
 msgid "Number of processes (multiprocessing/prefork pool)"
-msgstr ""
+msgstr "プロセス数 (multiprocessing/prefork プール)"
 
 #: ../../userguide/workers.rst:209
 msgid ""
@@ -325,14 +328,20 @@ msgid ""
 "works best for you, as this varies based on application, work load, task run"
 " times and other factors."
 msgstr ""
+"通常はプールするプロセス数が多いほどパフォーマンスが上がりますが、あるカットオフポイントを超えると"
+"プロセス数が増えるに連れてパフォーマンスが下がってきます。"
+"けれども、例えば 10 個のプロセスプールを持つ 3 つのワーカーといった形で"
+"複数のワーカーを走らせておく方が単一のワーカーより良いパフォーマンスを生み出します。"
+"この最適値は、アプリケーションや負荷、タスク実行回数などの要素によって変わってくるため、"
+"試行錯誤を行って導き出す必要があります。"
 
 #: ../../userguide/workers.rst:220
 msgid "Remote control"
-msgstr ""
+msgstr "リモートコントロール"
 
 #: ../../userguide/workers.rst:0
 msgid "The ``celery`` command"
-msgstr ""
+msgstr "``celery`` コマンド"
 
 #: ../../userguide/workers.rst:226
 msgid ""
@@ -340,6 +349,9 @@ msgid ""
 "from the command-line.  It supports all of the commands listed below.  See "
 ":ref:`monitoring-control` for more information."
 msgstr ""
+":program:`celery` プログラムはコマンドラインからリモートコントロールコマンドを実行するのに使います。"
+"以下のコマンドをすべてサポートしています。"
+"詳しくは ref:`monitoring-control` を参照してください。"
 
 #: ../../userguide/workers.rst:230
 msgid ""
@@ -529,7 +541,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:410
 msgid "Time Limits"
-msgstr ""
+msgstr "タイムリミット"
 
 #: ../../userguide/workers.rst:414
 msgid "pool support: *prefork/gevent*"
@@ -537,7 +549,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:0
 msgid "Soft, or hard?"
-msgstr ""
+msgstr "ソフト or ハード？"
 
 #: ../../userguide/workers.rst:418
 msgid ""
@@ -545,6 +557,9 @@ msgid ""
 "allows the task to catch an exception to clean up before it is killed: the "
 "hard timeout is not catchable and force terminates the task."
 msgstr ""
+"タイムリミットには `ソフト` と `ハード` の二つの値があります。"
+"ソフトタイムリミットでは、タスクは例外をキャッチしてプロセスが kill される前にクリンナップ処理を実行できます。"
+"一方ハードタイムリミットはキャッチできず、タスクは強制的に停止されます。"
 
 #: ../../userguide/workers.rst:423
 msgid ""
@@ -553,6 +568,9 @@ msgid ""
 "processing new tasks indefinitely.  The best way to defend against this "
 "scenario happening is enabling time limits."
 msgstr ""
+"ひとつのタスクが永遠に実行されることはあり得ます。"
+"決して起こり得ないイベントを待つタスクが多数ある場合、ワーカーが新しいタスクを処理するのを永久にブロックしてしまいます。"
+"このような事態に備える最良の方法は時間制限を有効にすることです。"
 
 #: ../../userguide/workers.rst:428
 msgid ""
@@ -562,22 +580,29 @@ msgid ""
 "raises an exception the task can catch to clean up before the hard time "
 "limit kills it:"
 msgstr ""
+"タイムリミット(`--time-limit`)ではタスク処理の最大実行時間を指定します。"
+"この時間を超えるとタスク処理は停止され、新しいプロセスに置き変わります。"
+"ソフトタイムリミット(`--soft-time-limit`)を有効にすると、タイムオーバーの際に例外が送出されます。"
+"タスクはこの例外をキャッチして、ハードタイムリミットによってプロセスが kill される前に"
+"クリンナップ処理を行うことができます。"
 
 #: ../../userguide/workers.rst:446
 msgid ""
 "Time limits can also be set using the :setting:`CELERYD_TASK_TIME_LIMIT` / "
 ":setting:`CELERYD_TASK_SOFT_TIME_LIMIT` settings."
 msgstr ""
+"タイムリミットは :setting:`CELERYD_TASK_TIME_LIMIT` / :setting:`CELERYD_TASK_SOFT_TIME_LIMIT` で設定します。"
 
 #: ../../userguide/workers.rst:451
 msgid ""
 "Time limits do not currently work on Windows and other platforms that do not"
 " support the ``SIGUSR1`` signal."
 msgstr ""
+"タイムリミットは Windows や ``SIGUSR1`` シグナルをサポートしていないプラットフォームでは現在機能しません。"
 
 #: ../../userguide/workers.rst:456
 msgid "Changing time limits at runtime"
-msgstr ""
+msgstr "動的なタイムリミットの変更"
 
 #: ../../userguide/workers.rst:459
 msgid "broker support: *amqp, redis*"
@@ -588,6 +613,7 @@ msgid ""
 "There is a remote control command that enables you to change both soft and "
 "hard time limits for a task — named ``time_limit``."
 msgstr ""
+"タスクのソフト及びハードタイムリミットを変更するリモートコントロールコマンドの ``time_limit`` が用意されています。"
 
 #: ../../userguide/workers.rst:464
 msgid ""
@@ -692,7 +718,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:555
 msgid "Queues"
-msgstr ""
+msgstr "キュー"
 
 #: ../../userguide/workers.rst:557
 msgid ""
@@ -700,12 +726,17 @@ msgid ""
 "consume from all queues defined in the :setting:`CELERY_QUEUES` setting "
 "(which if not specified defaults to the queue named ``celery``)."
 msgstr ""
+"ワーカーインスタンスは複数のキューを consume できます。"
+"デフォルトでは :setting:`CELERY_QUEUES` 設定で定義されているすべてのキューを consume します"
+"(定義されていない場合はデフォルトのキュー名 ``celery`` が使われます)。"
 
 #: ../../userguide/workers.rst:562
 msgid ""
 "You can specify what queues to consume from at startup, by giving a comma "
 "separated list of queues to the :option:`-Q` option:"
 msgstr ""
+"ワーカーの起動時に :option:`-Q` オプションでカンマ区切りのキューリストを指定して"
+" consume するキューを決定します。"
 
 #: ../../userguide/workers.rst:569
 msgid ""
@@ -724,7 +755,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:581
 msgid "Queues: Adding consumers"
-msgstr ""
+msgstr "キュー: コンシューマーの追加"
 
 #: ../../userguide/workers.rst:583
 msgid ""
@@ -759,7 +790,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:632
 msgid "Queues: Cancelling consumers"
-msgstr ""
+msgstr "キュー: コンシューマーのキャンセル"
 
 #: ../../userguide/workers.rst:634
 msgid ""
@@ -787,7 +818,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:663
 msgid "Queues: List of active queues"
-msgstr ""
+msgstr "キュー: アクティブなキューのリスト"
 
 #: ../../userguide/workers.rst:665
 msgid ""
@@ -810,7 +841,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:695
 msgid "Autoreloading"
-msgstr ""
+msgstr "オートリロード"
 
 #: ../../userguide/workers.rst:699
 msgid "pool support: *prefork, eventlet, gevent, threads, solo*"

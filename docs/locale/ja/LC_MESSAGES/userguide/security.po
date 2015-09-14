@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../userguide/security.rst:5
 msgid "Security"
-msgstr ""
+msgstr "セキュリティ"
 
 #: ../../userguide/security.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "イントロダクション"
 
 #: ../../userguide/security.rst:13
 msgid ""
