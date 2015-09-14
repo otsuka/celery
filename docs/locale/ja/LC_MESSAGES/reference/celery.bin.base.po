@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -75,11 +75,7 @@ msgid ""
 "Group id, or group name of the main group to change to after detaching."
 msgstr ""
 
-#: ../../docstring of celery.bin.base:56
-msgid "Effective umask of the process after detaching. Default is 0."
-msgstr ""
-
-#: ../../docstring of celery.bin.base:60
+#: ../../docstring of celery.bin.base:61
 msgid "Optional directory to change to after detaching."
 msgstr ""
 
@@ -189,3 +185,16 @@ msgid ""
 ": any choices : [string] callback : function callback_args : (any*) "
 "callback_kwargs : { string : any } help : string metavar : string"
 msgstr ""
+
+#: ../../docstring of celery.bin.base:56
+msgid ""
+"Effective umask (in octal) of the process after detaching.  Inherits the "
+"umask of the parent process by default."
+msgstr ""
+
+#: ../../docstring of celery.bin.base:65
+msgid "Executable to use for the detached process."
+msgstr ""
+
+#~ msgid "Effective umask of the process after detaching. Default is 0."
+#~ msgstr ""

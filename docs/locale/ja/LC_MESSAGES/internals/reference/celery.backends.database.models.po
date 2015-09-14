@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -12,22 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../internals/reference/celery.backends.database.models.rst:3
-#: ../../../celery/backends/database/models.pydocstring of
-#: celery.backends.database.models:2
 msgid "celery.backends.database.models"
 msgstr ""
 
-#: ../../../celery/backends/database/models.pydocstring of
-#: celery.backends.database.models:4
-msgid "Database tables for the SQLAlchemy result store backend."
-msgstr ""
+#~ msgid "Database tables for the SQLAlchemy result store backend."
+#~ msgstr ""
 
-#: ../../../celery/backends/database/models.pydocstring of
-#: celery.backends.database.models.Task:1
-msgid "Task result/status."
-msgstr ""
+#~ msgid "Task result/status."
+#~ msgstr ""
 
-#: ../../../celery/backends/database/models.pydocstring of
-#: celery.backends.database.models.TaskSet:1
-msgid "TaskSet result"
-msgstr ""
+#~ msgid "TaskSet result"
+#~ msgstr ""

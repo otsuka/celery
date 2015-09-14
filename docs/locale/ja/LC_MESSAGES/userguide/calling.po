@@ -24,15 +24,14 @@ msgid ""
 "This document describes Celery's uniform \"Calling API\" used by task "
 "instances and the :ref:`canvas <guide-canvas>`."
 msgstr ""
-"このドキュメントではタスクインスタンスから使用される Celery の \"Calling API\" と"
-" :ref:`canvas <guide-canvas>` について述べます。"
+"このドキュメントではタスクインスタンスから使用される Celery の \"Calling API\" と :ref:`canvas <guide-"
+"canvas>` について述べます。"
 
 #: ../../userguide/calling.rst:20
 msgid ""
 "The API defines a standard set of execution options, as well as three "
 "methods:"
-msgstr ""
-"この API では実行時オプションの標準セットと 3 つのメソッドを定義しています:"
+msgstr "この API では実行時オプションの標準セットと 3 つのメソッドを定義しています:"
 
 #: ../../userguide/calling.rst:22
 msgid "``apply_async(args[, kwargs[, …]])``"
@@ -49,7 +48,7 @@ msgstr ""
 #: ../../userguide/calling.rst:28
 msgid ""
 "Shortcut to send a task message, but does not support execution options."
-msgstr "タスクメッセージ送信のショートカット。実行時オプションはサポートしていない。"
+msgstr "タスクメッセージ送信のショートカット。実行時オプションはサポートされていません。"
 
 #: ../../userguide/calling.rst:31
 msgid "*calling* (``__call__``)"
@@ -61,8 +60,8 @@ msgid ""
 "that the task will be executed in the current process, and not by a worker "
 "(a message will not be sent)."
 msgstr ""
-"Calling API をサポートするオブジェクトを apply する(例. ``add(2, 2)``) と"
-"ワーカーではなく(メッセージは送信されない)、カレントプロセス内でタスクが実行されます。"
+"Calling API をサポートするオブジェクトを apply すると(例. ``add(2, 2)``)、"
+"ワーカーではなく(つまりメッセージは送信されず)、カレントプロセス内でタスクが実行されます。"
 
 #: ../../userguide/calling.rst:0
 msgid "Quick Cheat Sheet"
@@ -120,8 +119,7 @@ msgstr "例"
 msgid ""
 "The :meth:`~@Task.delay` method is convenient as it looks like calling a "
 "regular function:"
-msgstr ""
-":meth:`~@Task.delay` メソッドは通常の関数を呼ぶように使えるので便利です。"
+msgstr ":meth:`~@Task.delay` メソッドは通常の関数を呼ぶように使えるので便利です。"
 
 #: ../../userguide/calling.rst:69
 msgid "Using :meth:`~@Task.apply_async` instead you have to write:"
@@ -135,24 +133,19 @@ msgstr ""
 msgid ""
 "If the task is not registered in the current process you can use "
 ":meth:`~@send_task` to call the task by name instead."
-msgstr ""
-"タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` を使って"
-"名前でタスクを呼び出すことができます。"
+msgstr "タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` を使って名前でタスクを呼び出すことができます。"
 
 #: ../../userguide/calling.rst:81
 msgid ""
 "So `delay` is clearly convenient, but if you want to set additional "
 "execution options you have to use ``apply_async``."
-msgstr ""
-"なので `delay` の方が便利なのですか、実行時オプションをセットする場合は ``apply_async`` を使わなければいません。"
+msgstr "なので `delay` の方が便利なのですか、実行時オプションをセットする場合は ``apply_async`` を使わなければいません。"
 
 #: ../../userguide/calling.rst:84
 msgid ""
 "The rest of this document will go into the task execution options in detail."
 "  All examples use a task called `add`, returning the sum of two arguments:"
-msgstr ""
-"ここからはタスクの実行時オプションを詳細に述べていきます。"
-"すべての例で 2 つの引数の和を返す `add` タスクを使っています。"
+msgstr "ここからはタスクの実行時オプションを詳細に解説します。解説の例として 2 つの引数の和を返す `add` タスクを使います。"
 
 #: ../../userguide/calling.rst:0
 msgid "There's another way…"
@@ -215,36 +208,36 @@ msgstr ""
 msgid "This is an example error callback:"
 msgstr ""
 
-#: ../../userguide/calling.rst:154
+#: ../../userguide/calling.rst:153
 msgid "it can be added to the task using the ``link_error`` execution option:"
 msgstr ""
 
-#: ../../userguide/calling.rst:162
+#: ../../userguide/calling.rst:161
 msgid ""
 "In addition, both the ``link`` and ``link_error`` options can be expressed "
 "as a list::"
 msgstr ""
 
-#: ../../userguide/calling.rst:167
+#: ../../userguide/calling.rst:166
 msgid ""
 "The callbacks/errbacks will then be called in order, and all callbacks will "
 "be called with the return value of the parent task as a partial argument."
 msgstr ""
 
-#: ../../userguide/calling.rst:174
+#: ../../userguide/calling.rst:173
 msgid "ETA and countdown"
 msgstr "ETA とカウントダウン"
 
-#: ../../userguide/calling.rst:176
+#: ../../userguide/calling.rst:175
 msgid ""
 "The ETA (estimated time of arrival) lets you set a specific date and time "
 "that is the earliest time at which your task will be executed.  `countdown` "
 "is a shortcut to set eta by seconds into the future."
 msgstr ""
-"ETA (予定到着時間)オプションを使うとタスクが実行される最早の日時を指定できます。"
-"`countdown` は ETA を未来への秒数で指定するショートカットです。"
+"ETA (予定到着時間)オプションを使うとタスクが実行される最早の日時を指定できます。`countdown` は ETA "
+"を秒数で指定するショートカットです。"
 
-#: ../../userguide/calling.rst:186
+#: ../../userguide/calling.rst:185
 msgid ""
 "The task is guaranteed to be executed at some time *after* the specified "
 "date and time, but not necessarily at that exact time. Possible reasons for "
@@ -254,15 +247,14 @@ msgid ""
 " receive alerts, so appropriate action can be taken to ease the workload.  "
 "See :ref:`monitoring-munin`."
 msgstr ""
-"タスクは指定された日時 *以降* に実行されることが保証されます。"
-"厳密に指定日時に実行されることを保証するわけではないことに気を付けてください。"
-"これは実行待ちのタスクがキューに溜まっていたり、ネットワークが重くなっていたりする"
-"ケースがあるためです。"
-"時間通りにタスクが実行されるのを確認するためにキューの混雑状況を監視すべきです。"
-"負荷を軽減するための適切なアクションを取れるようにするため、Munin などをのツールを使ってアラートを受けとるようにします。"
+"タスクは指定された日時 *以降* "
+"に実行されることが保証されます。厳密に指定日時に実行されることを保証するわけではないことに気を付けてください。"
+"これは実行待ちのタスクがキューに溜まっていたり、ネットワークが重くなっていたりするケースがあるためです。"
+"時間通りにタスクが実行されるようにするには、キューの混雑状況を監視しなければなりません。"
+"そして負荷を軽減するための適切なアクションが取れるようにするため、Munin などをのツールを使ってアラートを受けとるようにします。"
 "詳しくは :ref:`monitoring-munin` を参照してください。"
 
-#: ../../userguide/calling.rst:194
+#: ../../userguide/calling.rst:193
 msgid ""
 "While `countdown` is an integer, `eta` must be a :class:`~datetime.datetime`"
 " object, specifying an exact date and time (including millisecond precision,"
@@ -271,142 +263,134 @@ msgstr ""
 "`coutndown` は整数ですが、`eta` は(ミリセカンドとタイムゾーン情報を含む)日時を指定した "
 ":class:`~datetime.datetime` オブジェクトで指定しなければいけません:"
 
-#: ../../userguide/calling.rst:208
+#: ../../userguide/calling.rst:207
 msgid "Expiration"
 msgstr "有効期限"
 
-#: ../../userguide/calling.rst:210
+#: ../../userguide/calling.rst:209
 msgid ""
 "The `expires` argument defines an optional expiry time, either as seconds "
 "after task publish, or a specific date and time using "
 ":class:`~datetime.datetime`:"
 msgstr ""
-"`expires` 引数ではオプションの有効期限を、タスクが発行されてからの秒数、または"
-" :class:`~datetime.datetime` を使った日時で指定します。"
+"`expires` 引数ではオプションの有効期限を、タスクが発行されてからの秒数、または :class:`~datetime.datetime` "
+"を使った日時で指定します。"
 
-#: ../../userguide/calling.rst:225
+#: ../../userguide/calling.rst:224
 msgid ""
 "When a worker receives an expired task it will mark the task as "
 ":state:`REVOKED` (:exc:`~@TaskRevokedError`)."
 msgstr ""
-"ワーカーが有効期限切れのタスクを受信すると、"
-"タスクを :state:`REVOKED` (:exc:`~@TaskRevokedError`) とマークします。"
+"ワーカーが有効期限切れのタスクを受信すると、タスクを :state:`REVOKED` (:exc:`~@TaskRevokedError`) "
+"とマークします。"
 
-#: ../../userguide/calling.rst:231
+#: ../../userguide/calling.rst:230
 msgid "Message Sending Retry"
 msgstr "メッセージ送信リトライ"
 
-#: ../../userguide/calling.rst:233
+#: ../../userguide/calling.rst:232
 msgid ""
 "Celery will automatically retry sending messages in the event of connection "
 "failure, and retry behavior can be configured -- like how often to retry, or"
 " a maximum number of retries -- or disabled all together."
 msgstr ""
-"Celery はコネクションの失敗イベントか生じた際には自動的にはメッセージ送信をリトライします。"
-"リトライの挙動は -- リトライの頻度や回数など -- 設定可能で、リトライ自体を無効にすることできます。"
+"Celery はコネクションの失敗イベントか生じた際には自動的にはメッセージ送信をリトライします。リトライの挙動は -- リトライの頻度や回数など --"
+" 設定可能で、リトライ自体を無効にすることできます。"
 
-#: ../../userguide/calling.rst:237
+#: ../../userguide/calling.rst:236
 msgid ""
 "To disable retry you can set the ``retry`` execution option to "
 ":const:`False`:"
-msgstr ""
-"リトライを無効にするには ``retry`` 実行時オプションに :const:`False` とセットします:"
+msgstr "リトライを無効にするには ``retry`` 実行時オプションに :const:`False` とセットします:"
 
 #: ../../userguide/calling.rst:0
 msgid "Related Settings"
 msgstr "関連設定"
 
-#: ../../userguide/calling.rst:248
+#: ../../userguide/calling.rst:247
 msgid ":setting:`CELERY_TASK_PUBLISH_RETRY`"
 msgstr ""
 
-#: ../../userguide/calling.rst:249
+#: ../../userguide/calling.rst:248
 msgid ":setting:`CELERY_TASK_PUBLISH_RETRY_POLICY`"
 msgstr ""
 
-#: ../../userguide/calling.rst:252
+#: ../../userguide/calling.rst:251
 msgid "Retry Policy"
 msgstr "リトライポリシー"
 
-#: ../../userguide/calling.rst:254
+#: ../../userguide/calling.rst:253
 msgid ""
 "A retry policy is a mapping that controls how retries behave, and can "
 "contain the following keys:"
-msgstr ""
-"リトライポリシーはリトライの挙動を定義するマッピングで、以下のキーで構成されます:"
+msgstr "リトライポリシーはリトライの挙動を定義するマッピングで、以下のキーで構成されます:"
 
-#: ../../userguide/calling.rst:257
+#: ../../userguide/calling.rst:256
 msgid "`max_retries`"
 msgstr ""
 
-#: ../../userguide/calling.rst:259
+#: ../../userguide/calling.rst:258
 msgid ""
 "Maximum number of retries before giving up, in this case the exception that "
 "caused the retry to fail will be raised."
-msgstr ""
-"リトライを行う最大回数です。この回数を超えるとリトライを失敗させる例外か送出されます。"
+msgstr "リトライを行う最大回数です。この回数を超えるとリトライを失敗させる例外か送出されます。"
 
-#: ../../userguide/calling.rst:262
+#: ../../userguide/calling.rst:261
 msgid "A value of 0 or :const:`None` means it will retry forever."
 msgstr "値を 0 または :const:`None` にセットするとは永遠にリトライします。"
 
-#: ../../userguide/calling.rst:264
+#: ../../userguide/calling.rst:263
 msgid "The default is to retry 3 times."
 msgstr "デフォルトでは 3 回リトライします。"
 
-#: ../../userguide/calling.rst:266
+#: ../../userguide/calling.rst:265
 msgid "`interval_start`"
 msgstr ""
 
-#: ../../userguide/calling.rst:268
+#: ../../userguide/calling.rst:267
 msgid ""
 "Defines the number of seconds (float or integer) to wait between retries.  "
 "Default is 0, which means the first retry will be instantaneous."
 msgstr ""
-"リトライの間のインターバル時間を秒数(float または integer)で指定します。"
-"デフォルトは 0 で最初のリトライはすぐに実行されます。"
+"リトライの間のインターバル時間を秒数(float または integer)で指定します。デフォルトは 0 で最初のリトライはすぐに実行されます。"
 
-#: ../../userguide/calling.rst:272
+#: ../../userguide/calling.rst:271
 msgid "`interval_step`"
 msgstr ""
 
-#: ../../userguide/calling.rst:274
+#: ../../userguide/calling.rst:273
 msgid ""
 "On each consecutive retry this number will be added to the retry delay "
 "(float or integer).  Default is 0.2."
 msgstr ""
-"リトライの回数を重ねる度に、この秒数のリトライディレイが加算されていきます(float または integer)。"
-"デフォルトは 0.2 です。"
+"リトライの回数を重ねる度に、この秒数のリトライディレイが加算されていきます(float または integer)。デフォルトは 0.2 です。"
 
-#: ../../userguide/calling.rst:277
+#: ../../userguide/calling.rst:276
 msgid "`interval_max`"
 msgstr ""
 
-#: ../../userguide/calling.rst:279
+#: ../../userguide/calling.rst:278
 msgid ""
 "Maximum number of seconds (float or integer) to wait between retries.  "
 "Default is 0.2."
-msgstr ""
-"リトライ間のインターバル時間の最大秒数(float または integer)。"
-"デフォルトは 0.2 です。"
+msgstr "リトライ間のインターバル時間の最大秒数(float または integer)。デフォルトは 0.2 です。"
 
-#: ../../userguide/calling.rst:282
+#: ../../userguide/calling.rst:281
 msgid "For example, the default policy correlates to:"
 msgstr "例) デフォルトのポリシーは以下と同等です:"
 
-#: ../../userguide/calling.rst:293
+#: ../../userguide/calling.rst:292
 msgid ""
 "the maximum time spent retrying will be 0.4 seconds.  It is set relatively "
 "short by default because a connection failure could lead to a retry pile "
 "effect if the broker connection is down: e.g. many web server processes "
 "waiting to retry blocking other incoming requests."
 msgstr ""
-"リトライに費やされる最大時間は 0.4 秒と、デフォルトでは比較的短い時間にセットされています。"
-"これはブローカーとのコネクションがダウンしている場合にコネクションエラーによる"
-"リトライの山が築かれてしまうのを防ぐためです。"
-"リトライを待っている Web サーバのプロセスが多いと他のリクエストをブロックしてしまうのと同じように。"
+"リトライに費やされる最大時間は 0.4 秒と、デフォルトでは比較的短い時間にセットされています。これはブローカーとのコネクションが"
+"ダウンしている場合にコネクションエラーによるリトライの山が築かれてしまうのを防ぐためです。リトライを待っている"
+" Web サーバのプロセスが多いと他のリクエストをブロックしてしまうのと同じように。"
 
-#: ../../userguide/calling.rst:301
+#: ../../userguide/calling.rst:300
 msgid "Serializers"
 msgstr ""
 
@@ -414,196 +398,196 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
-#: ../../userguide/calling.rst:305
+#: ../../userguide/calling.rst:304
 msgid ""
 "The pickle module allows for execution of arbitrary functions, please see "
 "the :ref:`security guide <guide-security>`."
 msgstr ""
 
-#: ../../userguide/calling.rst:308
+#: ../../userguide/calling.rst:307
 msgid ""
 "Celery also comes with a special serializer that uses cryptography to sign "
 "your messages."
 msgstr ""
 
-#: ../../userguide/calling.rst:311
+#: ../../userguide/calling.rst:310
 msgid ""
 "Data transferred between clients and workers needs to be serialized, so "
 "every message in Celery has a ``content_type`` header that describes the "
 "serialization method used to encode it."
 msgstr ""
 
-#: ../../userguide/calling.rst:315
+#: ../../userguide/calling.rst:314
 msgid ""
 "The default serializer is :mod:`pickle`, but you can change this using the "
 ":setting:`CELERY_TASK_SERIALIZER` setting, or for each individual task, or "
 "even per message."
 msgstr ""
 
-#: ../../userguide/calling.rst:319
+#: ../../userguide/calling.rst:318
 msgid ""
 "There's built-in support for :mod:`pickle`, `JSON`, `YAML` and `msgpack`, "
 "and you can also add your own custom serializers by registering them into "
 "the Kombu serializer registry (see ref:`kombu:guide-serialization`)."
 msgstr ""
 
-#: ../../userguide/calling.rst:323
+#: ../../userguide/calling.rst:322
 msgid "Each option has its advantages and disadvantages."
 msgstr ""
 
-#: ../../userguide/calling.rst:341
+#: ../../userguide/calling.rst:340
 msgid "json -- JSON is supported in many programming languages, is now"
 msgstr ""
 
-#: ../../userguide/calling.rst:326
+#: ../../userguide/calling.rst:325
 msgid ""
 "a standard part of Python (since 2.6), and is fairly fast to decode using "
 "the modern Python libraries such as :mod:`cjson` or :mod:`simplejson`."
 msgstr ""
 
-#: ../../userguide/calling.rst:329
+#: ../../userguide/calling.rst:328
 msgid ""
 "The primary disadvantage to JSON is that it limits you to the following data"
 " types: strings, Unicode, floats, boolean, dictionaries, and lists. Decimals"
 " and dates are notably missing."
 msgstr ""
 
-#: ../../userguide/calling.rst:333
+#: ../../userguide/calling.rst:332
 msgid ""
 "Also, binary data will be transferred using Base64 encoding, which will "
 "cause the transferred data to be around 34% larger than an encoding which "
 "supports native binary types."
 msgstr ""
 
-#: ../../userguide/calling.rst:337
+#: ../../userguide/calling.rst:336
 msgid ""
 "However, if your data fits inside the above constraints and you need cross-"
 "language support, the default setting of JSON is probably your best choice."
 msgstr ""
 
-#: ../../userguide/calling.rst:341
+#: ../../userguide/calling.rst:340
 msgid "See http://json.org for more information."
 msgstr ""
 
-#: ../../userguide/calling.rst:349
+#: ../../userguide/calling.rst:348
 msgid "pickle -- If you have no desire to support any language other than"
 msgstr ""
 
-#: ../../userguide/calling.rst:344
+#: ../../userguide/calling.rst:343
 msgid ""
 "Python, then using the pickle encoding will gain you the support of all "
 "built-in Python data types (except class instances), smaller messages when "
 "sending binary files, and a slight speedup over JSON processing."
 msgstr ""
 
-#: ../../userguide/calling.rst:349
+#: ../../userguide/calling.rst:348
 msgid "See http://docs.python.org/library/pickle.html for more information."
 msgstr ""
 
-#: ../../userguide/calling.rst:361
+#: ../../userguide/calling.rst:360
 msgid "yaml -- YAML has many of the same characteristics as json,"
 msgstr ""
 
-#: ../../userguide/calling.rst:352
+#: ../../userguide/calling.rst:351
 msgid ""
 "except that it natively supports more data types (including dates, recursive"
 " references, etc.)"
 msgstr ""
 
-#: ../../userguide/calling.rst:355
+#: ../../userguide/calling.rst:354
 msgid ""
 "However, the Python libraries for YAML are a good bit slower than the "
 "libraries for JSON."
 msgstr ""
 
-#: ../../userguide/calling.rst:358
+#: ../../userguide/calling.rst:357
 msgid ""
 "If you need a more expressive set of data types and need to maintain cross-"
 "language compatibility, then YAML may be a better fit than the above."
 msgstr ""
 
-#: ../../userguide/calling.rst:361
+#: ../../userguide/calling.rst:360
 msgid "See http://yaml.org/ for more information."
 msgstr ""
 
-#: ../../userguide/calling.rst:367
+#: ../../userguide/calling.rst:366
 msgid ""
 "msgpack -- msgpack is a binary serialization format that is closer to JSON"
 msgstr ""
 
-#: ../../userguide/calling.rst:364
+#: ../../userguide/calling.rst:363
 msgid ""
 "in features.  It is very young however, and support should be considered "
 "experimental at this point."
 msgstr ""
 
-#: ../../userguide/calling.rst:367
+#: ../../userguide/calling.rst:366
 msgid "See http://msgpack.org/ for more information."
 msgstr ""
 
-#: ../../userguide/calling.rst:369
+#: ../../userguide/calling.rst:368
 msgid ""
 "The encoding used is available as a message header, so the worker knows how "
 "to deserialize any task.  If you use a custom serializer, this serializer "
 "must be available for the worker."
 msgstr ""
 
-#: ../../userguide/calling.rst:373
+#: ../../userguide/calling.rst:372
 msgid ""
 "The following order is used to decide which serializer to use when sending a"
 " task:"
 msgstr ""
 
-#: ../../userguide/calling.rst:376
+#: ../../userguide/calling.rst:375
 msgid "The `serializer` execution option."
 msgstr ""
 
-#: ../../userguide/calling.rst:377
+#: ../../userguide/calling.rst:376
 msgid "The :attr:`@-Task.serializer` attribute"
 msgstr ""
 
-#: ../../userguide/calling.rst:378
+#: ../../userguide/calling.rst:377
 msgid "The :setting:`CELERY_TASK_SERIALIZER` setting."
 msgstr ""
 
-#: ../../userguide/calling.rst:381
+#: ../../userguide/calling.rst:380
 msgid "Example setting a custom serializer for a single task invocation:"
 msgstr ""
 
-#: ../../userguide/calling.rst:390
+#: ../../userguide/calling.rst:389
 msgid "Compression"
 msgstr ""
 
-#: ../../userguide/calling.rst:392
+#: ../../userguide/calling.rst:391
 msgid ""
 "Celery can compress the messages using either *gzip*, or *bzip2*. You can "
 "also create your own compression schemes and register them in the "
 ":func:`kombu compression registry <kombu.compression.register>`."
 msgstr ""
 
-#: ../../userguide/calling.rst:396
+#: ../../userguide/calling.rst:395
 msgid ""
 "The following order is used to decide which compression scheme to use when "
 "sending a task:"
 msgstr ""
 
-#: ../../userguide/calling.rst:399
+#: ../../userguide/calling.rst:398
 msgid "The `compression` execution option."
 msgstr ""
 
-#: ../../userguide/calling.rst:400
+#: ../../userguide/calling.rst:399
 msgid "The :attr:`@-Task.compression` attribute."
 msgstr ""
 
-#: ../../userguide/calling.rst:401
+#: ../../userguide/calling.rst:400
 msgid "The :setting:`CELERY_MESSAGE_COMPRESSION` attribute."
 msgstr ""
 
-#: ../../userguide/calling.rst:403
+#: ../../userguide/calling.rst:402
 msgid "Example specifying the compression used when calling a task::"
 msgstr ""
 
-#: ../../userguide/calling.rst:410
+#: ../../userguide/calling.rst:409
 msgid "Connections"
 msgstr ""
 
@@ -611,99 +595,96 @@ msgstr ""
 msgid "Automatic Pool Support"
 msgstr ""
 
-#: ../../userguide/calling.rst:414
+#: ../../userguide/calling.rst:413
 msgid ""
 "Since version 2.3 there is support for automatic connection pools, so you "
 "don't have to manually handle connections and publishers to reuse "
 "connections."
 msgstr ""
 
-#: ../../userguide/calling.rst:418
+#: ../../userguide/calling.rst:417
 msgid "The connection pool is enabled by default since version 2.5."
 msgstr ""
 
-#: ../../userguide/calling.rst:420
+#: ../../userguide/calling.rst:419
 msgid "See the :setting:`BROKER_POOL_LIMIT` setting for more information."
 msgstr ""
 
-#: ../../userguide/calling.rst:422
+#: ../../userguide/calling.rst:421
 msgid "You can handle the connection manually by creating a publisher:"
 msgstr ""
 
-#: ../../userguide/calling.rst:438
+#: ../../userguide/calling.rst:437
 msgid "Though this particular example is much better expressed as a group:"
 msgstr ""
 
-#: ../../userguide/calling.rst:453
+#: ../../userguide/calling.rst:452
 msgid "Routing options"
 msgstr "ルーティングオプション"
 
-#: ../../userguide/calling.rst:455
+#: ../../userguide/calling.rst:454
 msgid "Celery can route tasks to different queues."
 msgstr "Celery は別々のキューにタスクを送信できます。"
 
-#: ../../userguide/calling.rst:457
+#: ../../userguide/calling.rst:456
 msgid ""
 "Simple routing (name <-> name) is accomplished using the ``queue`` option::"
-msgstr ""
-"``queue`` オプションを使ってシンプルなルー手イング (name <-> name) を指定できます::"
+msgstr "``queue`` オプションを使ってシンプルなルーティング (name <-> name) を指定できます::"
 
-#: ../../userguide/calling.rst:461
+#: ../../userguide/calling.rst:460
 msgid ""
 "You can then assign workers to the ``priority.high`` queue by using the "
 "workers :option:`-Q` argument:"
-msgstr ""
-"そして :option:`-Q` 引数を使って、ワーカーに ``priority.high`` キューを割り当てられます:"
+msgstr "そして :option:`-Q` 引数を使って、ワーカーに ``priority.high`` キューを割り当てられます:"
 
-#: ../../userguide/calling.rst:470
+#: ../../userguide/calling.rst:469
 msgid ""
 "Hard-coding queue names in code is not recommended, the best practice is to "
 "use configuration routers (:setting:`CELERY_ROUTES`)."
 msgstr ""
-"キューの名前をハードコードすることはお薦めできません。ベストプラクティスは"
-"ルーティング設定を使うことです(:setting:`CELERY_ROUTES`)。"
+"キューの名前をハードコードすることはお薦めできません。ベストプラクティスはルーティング設定を使うことです(:setting:`CELERY_ROUTES`)。"
 
-#: ../../userguide/calling.rst:473
+#: ../../userguide/calling.rst:472
 msgid "To find out more about routing, please see :ref:`guide-routing`."
 msgstr "ルーティングについての詳細は :ref:`guide-routing` を参照してください。"
 
-#: ../../userguide/calling.rst:476
+#: ../../userguide/calling.rst:475
 msgid "Advanced Options"
 msgstr ""
 
-#: ../../userguide/calling.rst:478
+#: ../../userguide/calling.rst:477
 msgid ""
 "These options are for advanced users who want to take use of AMQP's full "
 "routing capabilities. Interested parties may read the :ref:`routing guide "
 "<guide-routing>`."
 msgstr ""
 
-#: ../../userguide/calling.rst:482
+#: ../../userguide/calling.rst:481
 msgid "exchange"
 msgstr ""
 
-#: ../../userguide/calling.rst:484
+#: ../../userguide/calling.rst:483
 msgid ""
 "Name of exchange (or a :class:`kombu.entity.Exchange`) to send the message "
 "to."
 msgstr ""
 
-#: ../../userguide/calling.rst:487
+#: ../../userguide/calling.rst:486
 msgid "routing_key"
 msgstr ""
 
-#: ../../userguide/calling.rst:489
+#: ../../userguide/calling.rst:488
 msgid "Routing key used to determine."
 msgstr ""
 
-#: ../../userguide/calling.rst:491
+#: ../../userguide/calling.rst:490
 msgid "priority"
 msgstr ""
 
-#: ../../userguide/calling.rst:493
+#: ../../userguide/calling.rst:492
 msgid "A number between `0` and `9`, where `0` is the highest priority."
 msgstr ""
 
-#: ../../userguide/calling.rst:495
+#: ../../userguide/calling.rst:494
 msgid "Supported by: redis, beanstalk"
 msgstr ""

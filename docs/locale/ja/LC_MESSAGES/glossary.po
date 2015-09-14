@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../glossary.rst:4
 msgid "Glossary"
-msgstr ""
+msgstr "用語集"
 
 #: ../../glossary.rst:17
 msgid "ack"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../glossary.rst:19
 msgid "Short for :term:`acknowledged`."
-msgstr ""
+msgstr ":term:`acknowledged` の省略形。"
 
 #: ../../glossary.rst:8
 msgid "acknowledged"
-msgstr ""
+msgstr "確認応答"
 
 #: ../../glossary.rst:10
 msgid ""
@@ -36,6 +36,11 @@ msgid ""
 "lost), but in Redis/SQS the transaction times out after a configurable "
 "amount of time (the ``visibility_timeout``)."
 msgstr ""
+"ワーカーは、自身がメッセージを処理することを示すためにメッセージの確認応答(acknowledge)を行います。"
+"確認応答に失敗するとメッセージは再送されます。"
+"この確認応答トランザクションの失敗判定条件はブローカーによって異なり、"
+"AMQP ではコネクション/チャンネルが閉じられた(または失われた)時、"
+"Redis/SQS ではトランザクションが設定した時間(``visibility_timeout``)を過ぎた時に失敗となります。"
 
 #: ../../glossary.rst:39
 msgid "apply"
@@ -46,6 +51,7 @@ msgid ""
 "Originally a synonym to :term:`call <calling>` but used to signify that a "
 "function is executed by the current process."
 msgstr ""
+"本来は :term:`call <calling>` の同義語ですが、カレントプロセスで関数を実行するという意味で使われます。"
 
 #: ../../glossary.rst:32
 msgid "billiard"
@@ -59,13 +65,13 @@ msgstr ""
 
 #: ../../glossary.rst:25
 msgid "calling"
-msgstr ""
+msgstr "呼び出し"
 
 #: ../../glossary.rst:27
 msgid ""
 "Sends a task message so that the task function is :term:`executed "
 "<executing>` by a worker."
-msgstr ""
+msgstr "ワーカーにタスクを :term:`実行 <executing>` するようメッセージを送信すること。"
 
 #: ../../glossary.rst:70
 msgid "cipater"
@@ -76,10 +82,12 @@ msgid ""
 "Celery release 3.1 named after song by Autechre "
 "(http://www.youtube.com/watch?v=OHsaqUr_33Y)"
 msgstr ""
+"Autechre の曲から付けた Celery バージョン 3.1 の名前 "
+"(http://www.youtube.com/watch?v=OHsaqUr_33Y)"
 
 #: ../../glossary.rst:43
 msgid "context"
-msgstr ""
+msgstr "コンテキスト"
 
 #: ../../glossary.rst:45
 msgid ""
@@ -87,18 +95,20 @@ msgid ""
 "arguments and what queue it was delivered to. It can be accessed as the "
 "tasks ``request`` attribute. See :ref:`task-request-info`"
 msgstr ""
+"タスクのコンテキストは、タスク ID やタスクに渡された引数、入れられたキューといった情報を保持しています。"
+"タスクの ``request`` 属性からコンテキストにアクセスできます。:ref:`task-request-info` 参照。"
 
 #: ../../glossary.rst:36
 msgid "executing"
-msgstr ""
+msgstr "実行"
 
 #: ../../glossary.rst:38
 msgid "Workers *execute* task :term:`requests <request>`."
-msgstr ""
+msgstr "ワーカーはタスク :term:`リクエスト <request>` を*実行します*。"
 
 #: ../../glossary.rst:49
 msgid "idempotent"
-msgstr ""
+msgstr "冪等"
 
 #: ../../glossary.rst:51
 msgid ""
@@ -108,6 +118,9 @@ msgid ""
 "not necessarily side-effect free in the pure sense (compare to "
 ":term:`nullipotent`)."
 msgstr ""
+"冪等性とは複数回呼ばれても結果が不変である関数を示す数学的性質です。"
+"実際には繰り返し呼ばれても意図しない結果を返さない関数を意味しており、"
+"必ずしも( :term:`nullipotent` と比較して)純粋に副作用がないことを意味しているわけではありません。"
 
 #: ../../glossary.rst:29
 msgid "kombu"
@@ -115,7 +128,7 @@ msgstr ""
 
 #: ../../glossary.rst:31
 msgid "Python messaging library used by Celery to send and receive messages."
-msgstr ""
+msgstr "メッセージの送受信に使われる Python のメッセージングライブラリ。"
 
 #: ../../glossary.rst:56
 msgid "nullipotent"
@@ -127,17 +140,21 @@ msgid ""
 "result, even if called zero or multiple times (side-effect free). A stronger"
 " version of :term:`idempotent`."
 msgstr ""
+"呼ばれた回数に関わらず、同じ効果、同じ結果を生み出す関数を述べるものです(副作用がない)。"
+" :term:`idempotent` をより厳格にしたもの。"
 
 #: ../../glossary.rst:79
 msgid "prefetch count"
-msgstr ""
+msgstr "プリフェッチ数"
 
 #: ../../glossary.rst:81
 msgid ""
 "Maximum number of unacknowledged messages a consumer can hold and if "
 "exceeded the transport should not deliver any more messages to that "
 "consumer.  See :ref:`optimizing-prefetch-limit`."
-msgstr ""
+msgstr "ワーカーが保持できる確認応答を行っていないメッセージの最大数。"
+"ブローカーはこの数以上のメッセージは配送しません。"
+" :ref:`optimizing-prefetch-limit`参照。"
 
 #: ../../glossary.rst:74
 msgid "prefetch multiplier"
@@ -166,7 +183,7 @@ msgstr ""
 
 #: ../../glossary.rst:20
 msgid "request"
-msgstr ""
+msgstr "リクエスト"
 
 #: ../../glossary.rst:22
 msgid ""
@@ -174,3 +191,6 @@ msgid ""
 "information is also available as the task's :term:`context` (the "
 "``task.request`` attribute)."
 msgstr ""
+"タスクのメッセージは、ワーカー内では *リクエスト* に変換されています。"
+"リクエスト情報はタスクの :term:`context` (``task.request`` 属性) から取得できます。"
+

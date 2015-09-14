@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -196,12 +196,6 @@ msgid ""
 "The transports supported are:  ``py-amqp`` ``librabbitmq``, ``redis``, and "
 "``amqplib``. Hopefully this can be extended to include additional broker "
 "transports in the future."
-msgstr ""
-
-#: ../../whatsnew-3.0.rst:120
-msgid ""
-"For increased reliability the :setting:`CELERY_FORCE_EXECV` setting is "
-"enabled by default if the eventloop is not used."
 msgstr ""
 
 #: ../../whatsnew-3.0.rst:124
@@ -893,12 +887,6 @@ msgid ""
 "only evaluated on access."
 msgstr ""
 
-#: ../../whatsnew-3.0.rst:659
-msgid ""
-"All promises will be evaluated when `app.finalize` is called, or implicitly "
-"when the task registry is first used."
-msgstr ""
-
 #: ../../whatsnew-3.0.rst:664
 msgid "Smart `--app` option"
 msgstr ""
@@ -1113,10 +1101,6 @@ msgstr ""
 
 #: ../../whatsnew-3.0.rst:822
 msgid "Can now specify connection for :class:`@control.inspect`."
-msgstr ""
-
-#: ../../whatsnew-3.0.rst:831
-msgid ":setting:`CELERY_FORCE_EXECV` is now enabled by default."
 msgstr ""
 
 #: ../../whatsnew-3.0.rst:833
@@ -1403,3 +1387,32 @@ msgstr ""
 #: ../../whatsnew-3.0.rst:998
 msgid "Fix contributed by Eran Rundstein"
 msgstr ""
+
+#: ../../whatsnew-3.0.rst:120
+msgid ""
+"For increased reliability the :setting:`CELERYD_FORCE_EXECV` setting is "
+"enabled by default if the eventloop is not used."
+msgstr ""
+
+#: ../../whatsnew-3.0.rst:659
+msgid ""
+"All promises will be evaluated when :meth:`@finalize` is called, or "
+"implicitly when the task registry is first used."
+msgstr ""
+
+#: ../../whatsnew-3.0.rst:831
+msgid ":setting:`CELERYD_FORCE_EXECV` is now enabled by default."
+msgstr ""
+
+#~ msgid ""
+#~ "For increased reliability the :setting:`CELERY_FORCE_EXECV` setting is "
+#~ "enabled by default if the eventloop is not used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All promises will be evaluated when `app.finalize` is called, or implicitly "
+#~ "when the task registry is first used."
+#~ msgstr ""
+
+#~ msgid ":setting:`CELERY_FORCE_EXECV` is now enabled by default."
+#~ msgstr ""

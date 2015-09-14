@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -83,10 +83,6 @@ msgstr ""
 msgid "Sender is the name of the task being sent."
 msgstr ""
 
-#: ../../userguide/signals.rst:78
-msgid "Provides arguements:"
-msgstr ""
-
 #: ../../userguide/signals.rst:80 ../../userguide/signals.rst:126
 msgid "body"
 msgstr ""
@@ -164,13 +160,14 @@ msgid ""
 "executed in the process that sent the task."
 msgstr ""
 
-#: ../../userguide/signals.rst:124 ../../userguide/signals.rst:148
-#: ../../userguide/signals.rst:171 ../../userguide/signals.rst:201
-#: ../../userguide/signals.rst:241 ../../userguide/signals.rst:270
-#: ../../userguide/signals.rst:330 ../../userguide/signals.rst:375
-#: ../../userguide/signals.rst:429 ../../userguide/signals.rst:506
-#: ../../userguide/signals.rst:536 ../../userguide/signals.rst:558
-#: ../../userguide/signals.rst:583 ../../userguide/signals.rst:636
+#: ../../userguide/signals.rst:78 ../../userguide/signals.rst:124
+#: ../../userguide/signals.rst:148 ../../userguide/signals.rst:171
+#: ../../userguide/signals.rst:201 ../../userguide/signals.rst:241
+#: ../../userguide/signals.rst:270 ../../userguide/signals.rst:330
+#: ../../userguide/signals.rst:375 ../../userguide/signals.rst:429
+#: ../../userguide/signals.rst:506 ../../userguide/signals.rst:536
+#: ../../userguide/signals.rst:558 ../../userguide/signals.rst:583
+#: ../../userguide/signals.rst:636
 msgid "Provides arguments:"
 msgstr ""
 
@@ -800,3 +797,6 @@ msgstr ""
 msgid ""
 "This signal is deprecated, please use :signal:`after_task_publish` instead."
 msgstr ""
+
+#~ msgid "Provides arguements:"
+#~ msgstr ""

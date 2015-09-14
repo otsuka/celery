@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -346,15 +346,7 @@ msgid ""
 msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:223
-msgid "``crontab(day_of_month='2')``"
-msgstr ""
-
-#: ../../userguide/periodic-tasks.rst:223
 msgid "Execute on the second day of every month."
-msgstr ""
-
-#: ../../userguide/periodic-tasks.rst:226
-msgid "``crontab(day_of_month='2-30/3')``"
 msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:226
@@ -362,15 +354,7 @@ msgid "Execute on every even numbered day."
 msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:229
-msgid "``crontab(day_of_month='1-7,15-21')``"
-msgstr ""
-
-#: ../../userguide/periodic-tasks.rst:229
 msgid "Execute on the first and third weeks of the month."
-msgstr ""
-
-#: ../../userguide/periodic-tasks.rst:232
-msgid "``crontab(day_of_month='11',``"
 msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:233
@@ -379,10 +363,6 @@ msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:232
 msgid "Execute on 11th of May every year."
-msgstr ""
-
-#: ../../userguide/periodic-tasks.rst:235
-msgid "``crontab(month_of_year='*/3')``"
 msgstr ""
 
 #: ../../userguide/periodic-tasks.rst:235
@@ -444,3 +424,44 @@ msgid ""
 "Using `django-celery`'s scheduler you can add, modify and remove periodic "
 "tasks from the Django Admin."
 msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:223
+msgid "``crontab(0, 0, day_of_month='2')``"
+msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:226
+#: ../../userguide/periodic-tasks.rst:229
+#: ../../userguide/periodic-tasks.rst:235
+msgid "``crontab(0, 0,``"
+msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:227
+msgid "``day_of_month='2-30/3')``"
+msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:230
+msgid "``day_of_month='1-7,15-21')``"
+msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:232
+msgid "``crontab(0, 0, day_of_month='11',``"
+msgstr ""
+
+#: ../../userguide/periodic-tasks.rst:236
+msgid "``month_of_year='*/3')``"
+msgstr ""
+
+#~ msgid "``crontab(day_of_month='2')``"
+#~ msgstr ""
+
+#~ msgid "``crontab(day_of_month='2-30/3')``"
+#~ msgstr ""
+
+#~ msgid "``crontab(day_of_month='1-7,15-21')``"
+#~ msgstr ""
+
+#~ msgid "``crontab(day_of_month='11',``"
+#~ msgstr ""
+
+#~ msgid "``crontab(month_of_year='*/3')``"
+#~ msgstr ""

@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -79,25 +79,25 @@ msgid ""
 "the :program:`celery multi` utility (or :program:`celery worker --detach`):"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:68 ../../tutorials/daemonizing.rst:192
-#: ../../tutorials/daemonizing.rst:290
+#: ../../tutorials/daemonizing.rst:72 ../../tutorials/daemonizing.rst:196
+#: ../../tutorials/daemonizing.rst:294
 msgid "Example configuration"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:70
+#: ../../tutorials/daemonizing.rst:74
 msgid "This is an example configuration for a Python project."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:72
+#: ../../tutorials/daemonizing.rst:76
 msgid ":file:`/etc/default/celeryd`:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:116 ../../tutorials/daemonizing.rst:219
-#: ../../tutorials/daemonizing.rst:321
+#: ../../tutorials/daemonizing.rst:120 ../../tutorials/daemonizing.rst:223
+#: ../../tutorials/daemonizing.rst:325
 msgid "Example Django configuration"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:118
+#: ../../tutorials/daemonizing.rst:122
 msgid ""
 "Django users now uses the exact same template as above, but make sure that "
 "the module that defines your Celery app instance also sets a default value "
@@ -105,57 +105,57 @@ msgid ""
 "in :ref:`django-first-steps`."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:126 ../../tutorials/daemonizing.rst:233
+#: ../../tutorials/daemonizing.rst:130 ../../tutorials/daemonizing.rst:237
 msgid "Available options"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:131 ../../tutorials/daemonizing.rst:236
+#: ../../tutorials/daemonizing.rst:135 ../../tutorials/daemonizing.rst:240
 msgid "CELERY_APP"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:129
+#: ../../tutorials/daemonizing.rst:133
 msgid ""
 "App instance to use (value for ``--app`` argument). If you're still using "
 "the old API, or django-celery, then you can omit this setting."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:140
+#: ../../tutorials/daemonizing.rst:144
 msgid "CELERY_BIN"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:134
+#: ../../tutorials/daemonizing.rst:138
 msgid "Absolute or relative path to the :program:`celery` program. Examples:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:137
+#: ../../tutorials/daemonizing.rst:141
 msgid ":file:`celery`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:138
+#: ../../tutorials/daemonizing.rst:142
 msgid ":file:`/usr/local/bin/celery`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:139
+#: ../../tutorials/daemonizing.rst:143
 msgid ":file:`/virtualenvs/proj/bin/celery`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:140
+#: ../../tutorials/daemonizing.rst:144
 msgid ":file:`/virtualenvs/proj/bin/python -m celery`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:143
+#: ../../tutorials/daemonizing.rst:147
 msgid "CELERYD_NODES"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:143
+#: ../../tutorials/daemonizing.rst:147
 msgid "List of node names to start (separated by space)."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:149
+#: ../../tutorials/daemonizing.rst:153
 msgid "CELERYD_OPTS"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:146
+#: ../../tutorials/daemonizing.rst:150
 msgid ""
 "Additional command-line arguments for the worker, see `celery worker --help`"
 " for a list.  This also supports the extended syntax used by `multi` to "
@@ -163,183 +163,183 @@ msgid ""
 "multi-node configuration examples."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:153
+#: ../../tutorials/daemonizing.rst:157
 msgid "CELERYD_CHDIR"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:152
+#: ../../tutorials/daemonizing.rst:156
 msgid ""
 "Path to change directory to at start. Default is to stay in the current "
 "directory."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:156
+#: ../../tutorials/daemonizing.rst:160
 msgid "CELERYD_PID_FILE"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:156
+#: ../../tutorials/daemonizing.rst:160
 msgid "Full path to the PID file. Default is /var/run/celery/%N.pid"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:159
+#: ../../tutorials/daemonizing.rst:163
 msgid "CELERYD_LOG_FILE"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:159
+#: ../../tutorials/daemonizing.rst:163
 msgid "Full path to the worker log file. Default is /var/log/celery/%N.log"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:162
+#: ../../tutorials/daemonizing.rst:166
 msgid "CELERYD_LOG_LEVEL"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:162
+#: ../../tutorials/daemonizing.rst:166
 msgid "Worker log level. Default is INFO."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:165
+#: ../../tutorials/daemonizing.rst:169
 msgid "CELERYD_USER"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:165
+#: ../../tutorials/daemonizing.rst:169
 msgid "User to run the worker as. Default is current user."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:168
+#: ../../tutorials/daemonizing.rst:172
 msgid "CELERYD_GROUP"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:168
+#: ../../tutorials/daemonizing.rst:172
 msgid "Group to run worker as. Default is current user."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:172 ../../tutorials/daemonizing.rst:259
+#: ../../tutorials/daemonizing.rst:176 ../../tutorials/daemonizing.rst:263
 msgid "CELERY_CREATE_DIRS"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:171 ../../tutorials/daemonizing.rst:258
+#: ../../tutorials/daemonizing.rst:175 ../../tutorials/daemonizing.rst:262
 msgid ""
 "Always create directories (log directory and pid file directory). Default is"
 " to only create directories when no custom logfile/pidfile set."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:176 ../../tutorials/daemonizing.rst:263
+#: ../../tutorials/daemonizing.rst:180 ../../tutorials/daemonizing.rst:267
 msgid "CELERY_CREATE_RUNDIR"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:175 ../../tutorials/daemonizing.rst:262
+#: ../../tutorials/daemonizing.rst:179 ../../tutorials/daemonizing.rst:266
 msgid ""
 "Always create pidfile directory.  By default only enabled when no custom "
 "pidfile location set."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:180 ../../tutorials/daemonizing.rst:267
+#: ../../tutorials/daemonizing.rst:184 ../../tutorials/daemonizing.rst:271
 msgid "CELERY_CREATE_LOGDIR"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:179 ../../tutorials/daemonizing.rst:266
+#: ../../tutorials/daemonizing.rst:183 ../../tutorials/daemonizing.rst:270
 msgid ""
 "Always create logfile directory.  By default only enable when no custom "
 "logfile location set."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:185
+#: ../../tutorials/daemonizing.rst:189
 msgid "Init script: celerybeat"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:186
+#: ../../tutorials/daemonizing.rst:190
 msgid "`/etc/init.d/celerybeat {start|stop|restart}`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:187
+#: ../../tutorials/daemonizing.rst:191
 msgid "/etc/default/celerybeat or /etc/default/celeryd"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:194 ../../tutorials/daemonizing.rst:292
+#: ../../tutorials/daemonizing.rst:198 ../../tutorials/daemonizing.rst:296
 msgid "This is an example configuration for a Python project:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:196
+#: ../../tutorials/daemonizing.rst:200
 msgid "`/etc/default/celerybeat`:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:221
+#: ../../tutorials/daemonizing.rst:225
 msgid ""
 "You should use the same template as above, but make sure the "
 "``DJANGO_SETTINGS_MODULE`` variable is set (and exported), and that "
 "``CELERYD_CHDIR`` is set to the projects directory:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:236
+#: ../../tutorials/daemonizing.rst:240
 msgid "App instance to use (value for ``--app`` argument)."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:240
+#: ../../tutorials/daemonizing.rst:244
 msgid "CELERYBEAT_OPTS"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:239
+#: ../../tutorials/daemonizing.rst:243
 msgid ""
 "Additional arguments to celerybeat, see `celerybeat --help` for a list."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:243
+#: ../../tutorials/daemonizing.rst:247
 msgid "CELERYBEAT_PID_FILE"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:243
+#: ../../tutorials/daemonizing.rst:247
 msgid "Full path to the PID file. Default is /var/run/celeryd.pid."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:246
+#: ../../tutorials/daemonizing.rst:250
 msgid "CELERYBEAT_LOG_FILE"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:246
+#: ../../tutorials/daemonizing.rst:250
 msgid "Full path to the celeryd log file. Default is /var/log/celeryd.log"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:249
+#: ../../tutorials/daemonizing.rst:253
 msgid "CELERYBEAT_LOG_LEVEL"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:249
+#: ../../tutorials/daemonizing.rst:253
 msgid "Log level to use for celeryd. Default is INFO."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:252
+#: ../../tutorials/daemonizing.rst:256
 msgid "CELERYBEAT_USER"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:252
+#: ../../tutorials/daemonizing.rst:256
 msgid "User to run beat as. Default is current user."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:255
+#: ../../tutorials/daemonizing.rst:259
 msgid "CELERYBEAT_GROUP"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:255
+#: ../../tutorials/daemonizing.rst:259
 msgid "Group to run beat as. Default is current user."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:272
+#: ../../tutorials/daemonizing.rst:276
 msgid "Usage systemd"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:277
+#: ../../tutorials/daemonizing.rst:281
 msgid "Service file: celery.service"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:279
+#: ../../tutorials/daemonizing.rst:283
 msgid "`systemctl {start|stop|restart|status} celery.service`"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:280
+#: ../../tutorials/daemonizing.rst:284
 msgid "/etc/conf.d/celery"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:282
+#: ../../tutorials/daemonizing.rst:286
 msgid ""
 "To create a temporary folders for the log and pid files change user and "
 "group in /usr/lib/tmpfiles.d/celery.conf. To configure user, group, chdir "
@@ -347,35 +347,35 @@ msgid ""
 "/usr/lib/systemd/system/celery.service."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:294
+#: ../../tutorials/daemonizing.rst:298
 msgid ":file:`/etc/conf.d/celery`:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:323
+#: ../../tutorials/daemonizing.rst:327
 msgid "This is an example configuration for those using `django-celery`:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:346
+#: ../../tutorials/daemonizing.rst:350
 msgid ""
 "To add an environment variable such as DJANGO_SETTINGS_MODULE use the "
 "Environment in celery.service."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:352
+#: ../../tutorials/daemonizing.rst:356
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:354
+#: ../../tutorials/daemonizing.rst:358
 msgid ""
 "If you can't get the init scripts to work, you should try running them in "
 "*verbose mode*:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:361
+#: ../../tutorials/daemonizing.rst:365
 msgid "This can reveal hints as to why the service won't start."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:363
+#: ../../tutorials/daemonizing.rst:367
 msgid ""
 "If the worker starts with \"OK\" but exits almost immediately afterwards and"
 " there is nothing in the log file, then there is probably an error but as "
@@ -384,11 +384,11 @@ msgid ""
 "environment variable to skip the daemonization step:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:375
+#: ../../tutorials/daemonizing.rst:379
 msgid "and now you should be able to see the errors."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:377
+#: ../../tutorials/daemonizing.rst:381
 msgid ""
 "Commonly such errors are caused by insufficient permissions to read from, or"
 " write to a file, and also by syntax errors in configuration modules, user "
@@ -396,41 +396,41 @@ msgid ""
 "bug, in which case you should :ref:`report it <reporting-bugs>`)."
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:386
+#: ../../tutorials/daemonizing.rst:390
 msgid "`supervisord`_"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:388
+#: ../../tutorials/daemonizing.rst:392
 msgid "`extra/supervisord/`_"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:397
+#: ../../tutorials/daemonizing.rst:401
 msgid "launchd (OS X)"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:399
+#: ../../tutorials/daemonizing.rst:403
 msgid "`extra/osx`_"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:408
+#: ../../tutorials/daemonizing.rst:412
 msgid "Windows"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:410
+#: ../../tutorials/daemonizing.rst:414
 msgid "See this excellent external tutorial:"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:412
+#: ../../tutorials/daemonizing.rst:416
 msgid ""
 "http://www.calazan.com/windows-tip-run-applications-in-the-background-using-"
 "task-scheduler/"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:415
+#: ../../tutorials/daemonizing.rst:419
 msgid "CentOS"
 msgstr ""
 
-#: ../../tutorials/daemonizing.rst:416
+#: ../../tutorials/daemonizing.rst:420
 msgid ""
 "In CentOS we can take advantage of built-in service helpers, such as the "
 "pid-based status checker function in ``/etc/init.d/functions``. See the "

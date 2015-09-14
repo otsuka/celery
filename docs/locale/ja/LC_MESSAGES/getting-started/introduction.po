@@ -23,41 +23,13 @@ msgstr "タスクキューとは？"
 msgid ""
 "Task queues are used as a mechanism to distribute work across threads or "
 "machines."
-msgstr ""
-"タスクキューは、スレッドやマシンに処理を分散するメカニズムとして使われます。"
-
-#: ../../getting-started/introduction.rst:17
-msgid ""
-"A task queue's input is a unit of work, called a task, dedicated worker "
-"processes then constantly monitor the queue for new work to perform."
-msgstr ""
-"タスクキューのインプットが処理の単位で、タスクと呼ばれます。"
-"専用のワーカープロセスが実行すべき処理がないかキューを常に監視しています。"
-
-#: ../../getting-started/introduction.rst:20
-msgid ""
-"Celery communicates via messages, usually using a broker to mediate between "
-"clients and workers.  To initiate a task a client puts a message on the "
-"queue, the broker then delivers the message to a worker."
-msgstr ""
-"Celery はメッセージを介してコミュニケーションを図ります。通常はクライアントとワーカーを仲介するブローカーを使います。"
-"タスクを開始するため、クライアントはメッセージをキューに入れ、ブローカーがそのメッセージをワーカーに運びます。"
+msgstr "タスクキューは、処理を別のスレッドやマシンに分散するメカニズムの一つです。"
 
 #: ../../getting-started/introduction.rst:24
 msgid ""
 "A Celery system can consist of multiple workers and brokers, giving way to "
 "high availability and horizontal scaling."
-msgstr ""
-"Celery のシステムは複数のワーカーとブローカーから構成することができ、"
-"高い可用性と水平スケーリングを可能にします。"
-
-#: ../../getting-started/introduction.rst:27
-msgid ""
-"Celery is written in Python, but the protocol can be implemented in any "
-"language.  So far there's RCelery_ for the Ruby programming language, node-"
-"celery_ for Node.js and a `PHP client`_, but language interoperability can "
-"also be achieved by :ref:`using webhooks <guide-webhooks>`."
-msgstr ""
+msgstr "Celery のシステムは複数のワーカーとブローカーで構成できるため、高い可用性と水平スケーリングが実現できるようになっています。"
 
 #: ../../getting-started/introduction.rst:37
 msgid "What do I need?"
@@ -85,8 +57,8 @@ msgid ""
 "Python 2.6 or newer is required. The last version to support Python 2.4 was "
 "Celery series 2.2."
 msgstr ""
-"今回が Python 2.5 をサポートする最後のバージョンです。次のバージョンからは Python 2.6 以降が必須となります。"
-"Python 2.4 をサポートする最後のバージョンは、Celery 2.2 系です。"
+"今回が Python 2.5 をサポートする最後のバージョンです。次のバージョンからは Python 2.6 以降が必須となります。Python 2.4"
+" をサポートする最後のバージョンは、Celery 2.2 系です。"
 
 #: ../../getting-started/introduction.rst:50
 msgid ""
@@ -95,16 +67,15 @@ msgid ""
 "support for a myriad of other experimental solutions, including using SQLite"
 " for local development."
 msgstr ""
-"*Celery* はメッセージを送受信するのにメッセージトランスポートを必要とします。"
-"RabbitMQ と Redis ブローカートランスポートがすべての機能をサポートしていますが、"
-"他にもたくさんの実験的ソリューションもサポートしています。例えばローカル開発のための SQLite です。"
+"*Celery* は、メッセージの送受信にメッセージトランスポート(ブローカー)を使います。"
+"RabbitMQ と Redis をブローカーとして使えば、すべての機能を利用できます。"
+"また、試験的にサポートしているブローカーがいくつもあり、例えばローカル開発のための SQLite はその一つです。"
 
 #: ../../getting-started/introduction.rst:55
 msgid ""
 "*Celery* can run on a single machine, on multiple machines, or even across "
 "data centers."
-msgstr ""
-"*Celery* は単一マシン上でも複数マシン上でも実行できます。データセンターをまたいででも実行可能です。"
+msgstr "*Celery* は単一マシン上でも複数マシン上でも、はたまたデータセンターをまたいででも実行可能です。"
 
 #: ../../getting-started/introduction.rst:59
 msgid "Get Started"
@@ -142,19 +113,19 @@ msgstr "**シンプル**"
 msgid ""
 "Celery is easy to use and maintain, and it *doesn't need configuration "
 "files*."
-msgstr ""
-"Celery は簡単に使えます。*設定ファイルを必要としません*。"
+msgstr "Celery は簡単に使えます。*設定ファイルを必要としません*。"
 
 #: ../../getting-started/introduction.rst:79
 msgid ""
 "It has an active, friendly community you can talk to for support, including "
 "a `mailing-list`_ and an :ref:`IRC channel <irc-channel>`."
 msgstr ""
-"そして、`mailing-list`_ and an :ref:`IRC チャンネル <irc-channel>` を含むアクティブで親切なコミュニティがあります。"
+"`mailing-list`_ や :ref:`IRC チャンネル <irc-channel>` "
+"を含む、活発で親切なコミュニティがあります。"
 
 #: ../../getting-started/introduction.rst:82
 msgid "Here's one of the simplest applications you can make:"
-msgstr "最もシンプルなアプリケーションのコードをお見せしましょう。"
+msgstr "ここで最もシンプルなアプリケーションのコードをお見せしましょう。"
 
 #: ../../getting-started/introduction.rst:94
 msgid "**Highly Available**"
@@ -166,8 +137,8 @@ msgid ""
 " or failure, and some brokers support HA in way of *Master/Master* or "
 "*Master/Slave* replication."
 msgstr ""
-"ワーカーとクライアントは、接続が切れた時や失敗した時には自動的にリトライします。"
-"またブローカーによっては *Master/Master* または *Master/Slave* レプリケーションによる HA をサポートしています。"
+"ワーカーとクライアントは、接続が切れた時や失敗した時には自動的にリトライします。またブローカーによっては *Master/Master* または "
+"*Master/Slave* レプリケーションによる HA をサポートしています。"
 
 #: ../../getting-started/introduction.rst:100
 msgid "**Fast**"
@@ -179,8 +150,8 @@ msgid ""
 "millisecond round-trip latency (using RabbitMQ, py-librabbitmq, and "
 "optimized settings)."
 msgstr ""
-"Celery の 1 プロセスで 1 分間に数百万のタスクを処理することができます。ミリ秒以下のラウンドトリップレートで"
-"(RabbitMQ、py-librabbitmq を最適化した設定で使用した場合)。"
+"単一の Celery プロセスで 1 分間に数百万のタスクを処理し、ミリ秒以下のラウンドトリップレートを実現できます(RabbitMQ、py-"
+"librabbitmq を最適化した設定で使用した場合)。"
 
 #: ../../getting-started/introduction.rst:106
 msgid "**Flexible**"
@@ -192,9 +163,10 @@ msgid ""
 "pool implementations, serializers, compression schemes, logging, schedulers,"
 " consumers, producers, autoscalers, broker transports and much more."
 msgstr ""
-"*Celery* のほとんどのパーツは拡張可能であり、そのまま備わっているものを使うこともできます。例えば"
-"カスタムのプール実装、シリアライザー、圧縮スキーム、ロギング、スケジューラー、"
-"コンシューマー(customers)、プロデューサー(producers)、オートスケーラー(autoscalers)、ブローカートランスポート(broker transport)などなど。"
+"*Celery* "
+"のほとんどのパーツは拡張可能です。プールの実装、シリアライザー、圧縮スキーム、ロギング、スケジューラー、"
+"コンシューマー(customers)、プロデューサー(producers)、オートスケーラー(autoscalers)、ブローカートランスポート(broker"
+" transport) 等。"
 
 #: ../../getting-started/introduction.rst:0
 msgid "It supports"
@@ -206,27 +178,31 @@ msgstr "**ブローカー**"
 
 #: ../../getting-started/introduction.rst:120
 msgid ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
-msgstr ""
+msgstr ":ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,"
 
 #: ../../getting-started/introduction.rst:121
 msgid ":ref:`MongoDB <broker-mongodb>` (exp), ZeroMQ (exp)"
-msgstr ""
+msgstr ":ref:`MongoDB <broker-mongodb>` (試験的), ZeroMQ (exp)"
 
 #: ../../getting-started/introduction.rst:122
 msgid ""
 ":ref:`CouchDB <broker-couchdb>` (exp), :ref:`SQLAlchemy <broker-sqlalchemy>`"
 " (exp)"
 msgstr ""
+":ref:`CouchDB <broker-couchdb>` (試験的), :ref:`SQLAlchemy <broker-sqlalchemy>`"
+" (試験的)"
 
 #: ../../getting-started/introduction.rst:123
 msgid ""
 ":ref:`Django ORM <broker-django>` (exp), :ref:`Amazon SQS <broker-sqs>`, "
 "(exp)"
 msgstr ""
+":ref:`Django ORM <broker-django>` (試験的), :ref:`Amazon SQS <broker-sqs>`, "
+"(試験的)"
 
 #: ../../getting-started/introduction.rst:124
 msgid "and more…"
-msgstr "などなど"
+msgstr "その他"
 
 #: ../../getting-started/introduction.rst:126
 msgid "**Concurrency**"
@@ -293,6 +269,7 @@ msgid ""
 "A stream of monitoring events is emitted by workers and is used by built-in "
 "and external tools to tell you what your cluster is doing -- in real-time."
 msgstr ""
+"ワーカーから送出された監視イベントを利用して、(リアルタイムで)クラスタの状況を組み込み或いは外部のツールでチェックすることができます。"
 
 #: ../../getting-started/introduction.rst:159
 msgid ":ref:`Read more… <guide-monitoring>`."
@@ -323,7 +300,7 @@ msgid ""
 "how long a task can be allowed to run, and this can be set as a default, for"
 " a specific worker or individually for each task type."
 msgstr ""
-"秒/分/時間単位で実行可能なタスクの数や、ひとつのタスクが処理に使える時間を、デフォルト値として設定できます。"
+"秒/分/時間単位で実行可能なタスクの数や、ひとつのタスクが処理に使える時間をデフォルト値として設定できます。"
 "また、特定のワーカーやそれぞれのタスクタイプごとにも設定できます。"
 
 #: ../../getting-started/introduction.rst:175
@@ -341,9 +318,9 @@ msgid ""
 "events based on a simple interval, or crontab expressions supporting minute,"
 " hour, day of week, day of month, and month of year."
 msgstr ""
-"タスクが実行される時間を秒数で、あるいは :class:`~datetime.datetime` オブジェクトで指定できます。"
-"また繰り返し実行するタスクもインターバル時間、及び crontab で設定するように 分, 時間, 曜日, 日, 月 "
-"形式で指定することができます。"
+"タスクが実行される日時を秒数、または :class:`~datetime.datetime` "
+"オブジェクトで指定できます。また繰り返し実行するタスクもインターバル時間、及び crontab で設定するような 分, 時間, 曜日, 日, 月 "
+"形式で指定できます。"
 
 #: ../../getting-started/introduction.rst:186
 msgid ":ref:`Read more… <guide-beat>`."
@@ -358,8 +335,8 @@ msgid ""
 "In development workers can be configured to automatically reload source code"
 " as it changes, including :manpage:`inotify(7)` support on Linux."
 msgstr ""
-"開発中はソースコードが変更された際にワーカーを自動的にリロードするように設定できます。"
-"Linux では :manpage:`inotify(7)` のサポートも含まれます。"
+"開発中にソースコードが変更されたタイミングでワーカーを自動的にリロードさせることが可能です。Linux では :manpage:`inotify(7)` "
+"のサポートも含まれます。"
 
 #: ../../getting-started/introduction.rst:193
 msgid ":ref:`Read more… <worker-autoreloading>`."
@@ -375,8 +352,7 @@ msgid ""
 "specified by the user, used to limit memory usage in shared hosting/cloud "
 "environments or to enforce a given quality of service."
 msgstr ""
-"共有ホストやクラウド環境でのメモリ使用量を制限するため、またサービスの質を一定に保つため、"
-"負荷状況やユーザーが指定したカスタムメトリクスに応じてワーカープールを動的にリサイズできます。"
+"共有ホストやクラウド環境でのメモリ使用量を制限するため、またサービスの質を一定に保つため、負荷状況やユーザーが指定したカスタムメトリクスに応じてワーカープールを動的にリサイズできます。"
 
 #: ../../getting-started/introduction.rst:202
 msgid ":ref:`Read more… <worker-autoscaling>`."
@@ -392,8 +368,8 @@ msgid ""
 "resources, like memory or file descriptors, that are simply out of your "
 "control."
 msgstr ""
-"メモリやファイルディスクリプタといったリソースをリークさせてしまうユーザータスクのため、"
-":option:`--maxtasksperchild` オプションが用意されています。"
+"メモリやファイルディスクリプタといったリソースをリークさせてしまうユーザータスクのため、:option:`--maxtasksperchild` "
+"オプションが用意されています。"
 
 #: ../../getting-started/introduction.rst:210
 msgid ":ref:`Read more… <worker-maxtasksperchild>`."
@@ -418,8 +394,7 @@ msgstr "フレームワークとの連携"
 msgid ""
 "Celery is easy to integrate with web frameworks, some of which even have "
 "integration packages:"
-msgstr ""
-"Celery は Web フレームワークとも容易に連携できます。フレームワークによっては連携用のパッケージが用意されています。"
+msgstr "Celery は Web フレームワークとも連携でき、連携用パッケージが用意されているものもあります。"
 
 #: ../../getting-started/introduction.rst:229
 msgid "`Django`_"
@@ -475,8 +450,8 @@ msgid ""
 "development easier, and sometimes they add important hooks like closing "
 "database connections at :manpage:`fork(2)`."
 msgstr ""
-"連携用のパッケージは絶対に必要なものではありませんが、開発を楽にしてくれるでしょう。"
-"中には :manpage:`fork(2)` 時にデータベースの接続を閉じるといった重要なフックを提供しているものもあります。"
+"連携用パッケージは絶対に必要なものではありませんが、開発を楽にしてくれるでしょう。中には :manpage:`fork(2)` "
+"時にデータベースの接続を閉じるといった重要なフックを提供しているものもあります。"
 
 #: ../../getting-started/introduction.rst:260
 msgid "Quickjump"
@@ -484,7 +459,7 @@ msgstr "クイックジャンプ"
 
 #: ../../getting-started/introduction.rst:0
 msgid "I want to ⟶"
-msgstr "私がやりたいのは ⟶"
+msgstr "やりたいこと、知りたいことは ⟶"
 
 #: ../../getting-started/introduction.rst:267
 msgid ":ref:`get the return value of a task <task-states>`"
@@ -581,14 +556,12 @@ msgstr ":ref:`タスクが失敗したときにメールを受け取りたい <c
 #: ../../getting-started/introduction.rst:290
 msgid ""
 ":ref:`get a list of people and companies using Celery <res-using-celery>`"
-msgstr ""
-":ref:`Celery を使っている人々や企業の一覧を見たい <res-using-celery>`"
+msgstr ":ref:`Celery を使っている人々や企業の一覧を見たい <res-using-celery>`"
 
 #: ../../getting-started/introduction.rst:291
 msgid ""
 ":ref:`write my own remote control command <worker-custom-control-commands>`"
-msgstr ""
-":ref:`リモートコントロールコマンドを自作したい <worker-custom-control-commands>`"
+msgstr ":ref:`リモートコントロールコマンドを自作したい <worker-custom-control-commands>`"
 
 #: ../../getting-started/introduction.rst:292
 msgid ":ref:`change worker queues at runtime <worker-queues>`"
@@ -600,47 +573,47 @@ msgstr ""
 
 #: ../../getting-started/introduction.rst:299
 msgid ":ref:`Brokers <brokers>`"
-msgstr ""
+msgstr ":ref:`ブローカー <brokers>`"
 
 #: ../../getting-started/introduction.rst:300
 msgid ":ref:`Applications <guide-app>`"
-msgstr ""
+msgstr ":ref:`アプリケーション <guide-app>`"
 
 #: ../../getting-started/introduction.rst:301
 msgid ":ref:`Tasks <guide-tasks>`"
-msgstr ""
+msgstr ":ref:`タスク <guide-tasks>`"
 
 #: ../../getting-started/introduction.rst:302
 msgid ":ref:`Calling <guide-calling>`"
-msgstr ""
+msgstr ":ref:`Calling <guide-calling>`"
 
 #: ../../getting-started/introduction.rst:303
 msgid ":ref:`Workers <guide-workers>`"
-msgstr ""
+msgstr ":ref:`ワーカー <guide-workers>`"
 
 #: ../../getting-started/introduction.rst:304
 msgid ":ref:`Daemonizing <daemonizing>`"
-msgstr ""
+msgstr ":ref:`デーモン化 <daemonizing>`"
 
 #: ../../getting-started/introduction.rst:305
 msgid ":ref:`Monitoring <guide-monitoring>`"
-msgstr ""
+msgstr ":ref:`監視 <guide-monitoring>`"
 
 #: ../../getting-started/introduction.rst:306
 msgid ":ref:`Optimizing <guide-optimizing>`"
-msgstr ""
+msgstr ":ref:`最適化 <guide-optimizing>`"
 
 #: ../../getting-started/introduction.rst:307
 msgid ":ref:`Security <guide-security>`"
-msgstr ""
+msgstr ":ref:`セキュリティ <guide-security>`"
 
 #: ../../getting-started/introduction.rst:308
 msgid ":ref:`Routing <guide-routing>`"
-msgstr ""
+msgstr ":ref:`ルーティング <guide-routing>`"
 
 #: ../../getting-started/introduction.rst:309
 msgid ":ref:`Configuration <configuration>`"
-msgstr ""
+msgstr ":ref:`設定 <configuration>`"
 
 #: ../../getting-started/introduction.rst:310
 msgid ":ref:`Django <django>`"
@@ -652,7 +625,7 @@ msgstr ""
 
 #: ../../getting-started/introduction.rst:312
 msgid ":ref:`Signals <signals>`"
-msgstr ""
+msgstr ":ref:`シグナル <signals>`"
 
 #: ../../getting-started/introduction.rst:313
 msgid ":ref:`FAQ <faq>`"
@@ -660,7 +633,7 @@ msgstr ""
 
 #: ../../getting-started/introduction.rst:314
 msgid ":ref:`API Reference <apiref>`"
-msgstr ""
+msgstr ":ref:`API リファレンス <apiref>`"
 
 #: ../../includes/installation.txt:4
 msgid "Installation"
@@ -670,8 +643,7 @@ msgstr "インストール"
 msgid ""
 "You can install Celery either via the Python Package Index (PyPI) or from "
 "source."
-msgstr ""
-"Celery は Python Package Index (PyPI)、またはソースからインストールできます。"
+msgstr "Celery は Python Package Index (PyPI)、またはソースからインストールできます。"
 
 #: ../../includes/installation.txt:9
 msgid "To install using `pip`,::"
@@ -683,13 +655,14 @@ msgstr "`easy_install` を使ってインストールする::"
 
 #: ../../includes/installation.txt:20
 msgid "Bundles"
-msgstr ""
+msgstr "バンドル"
 
 #: ../../includes/installation.txt:22
 msgid ""
 "Celery also defines a group of bundles that can be used to install Celery "
 "and the dependencies for a given feature."
 msgstr ""
+"Celery とある機能のための依存パッケージをインストールするのに利用できるバンドルパッケージが用意されています。"
 
 #: ../../includes/installation.txt:25
 msgid ""
@@ -697,14 +670,16 @@ msgid ""
 "using brackets.  Multiple bundles can be specified by separating them by "
 "commas."
 msgstr ""
+"ブラッケット([..])を使った記法で requirements ファイルや、``pip`` コマンドラインツールに指定します。"
+"複数のバンドルを指定するときはカンマで区切ります。"
 
 #: ../../includes/installation.txt:35
 msgid "The following bundles are available:"
-msgstr ""
+msgstr "利用可能なバンドル一覧:"
 
 #: ../../includes/installation.txt:38
 msgid "Serializers"
-msgstr ""
+msgstr "シリアライザー"
 
 #: ../../includes/installation.txt:41
 msgid "for using the auth serializer."
@@ -720,31 +695,31 @@ msgstr ""
 
 #: ../../includes/installation.txt:50
 msgid "Concurrency"
-msgstr ""
+msgstr "並行処理"
 
 #: ../../includes/installation.txt:53
 msgid "for using the eventlet pool."
-msgstr ""
+msgstr "eventlet プールの使用"
 
 #: ../../includes/installation.txt:56
 msgid "for using the gevent pool."
-msgstr ""
+msgstr "gevent プールの使用"
 
 #: ../../includes/installation.txt:59
 msgid "for using the thread pool."
-msgstr ""
+msgstr "スレッドプールの使用"
 
 #: ../../includes/installation.txt:62
 msgid "Transports and Backends"
-msgstr ""
+msgstr "トランスポートとバックエンド"
 
 #: ../../includes/installation.txt:65
 msgid "for using the librabbitmq C library."
-msgstr ""
+msgstr "librabbitmq C ライブラリの使用"
 
 #: ../../includes/installation.txt:68
 msgid "for using Redis as a message transport or as a result backend."
-msgstr ""
+msgstr "Redis をメッセージトランスポートや結果バックエンドとして使用"
 
 #: ../../includes/installation.txt:71
 msgid ""
@@ -806,8 +781,7 @@ msgstr "ソースのダウンロードとインストール"
 msgid ""
 "Download the latest version of Celery from "
 "http://pypi.python.org/pypi/celery/"
-msgstr ""
-"最新バージョンの Celery は http://pypi.python.org/pypi/celery/ からダウンロードします。"
+msgstr "最新バージョンの Celery は http://pypi.python.org/pypi/celery/ からダウンロードします。"
 
 #: ../../includes/installation.txt:116
 msgid "You can install it by doing the following,::"
@@ -817,33 +791,61 @@ msgstr "次のようにしてインストールできます::"
 msgid ""
 "The last command must be executed as a privileged user if you are not "
 "currently using a virtualenv."
-msgstr ""
-"virtualenv を使っていない場合、最後のコマンドは特権ユーザーとして実行しなければいけません。"
+msgstr "virtualenv を使っていない場合、最後のコマンドは特権ユーザーとして実行しなければいけません。"
 
 #: ../../includes/installation.txt:129
 msgid "Using the development version"
-msgstr ""
+msgstr "開発版の使用"
 
 #: ../../includes/installation.txt:132
 msgid "With pip"
-msgstr ""
+msgstr "pip で"
 
 #: ../../includes/installation.txt:134
 msgid ""
 "The Celery development version also requires the development versions of "
 "``kombu``, ``amqp`` and ``billiard``."
 msgstr ""
-
+"Celery の開発版には ``kombu``、``amqp``、``billiard``の開発版も必要です。"
 #: ../../includes/installation.txt:137
 msgid ""
 "You can install the latest snapshot of these using the following pip "
 "commands::"
 msgstr ""
+"これらの最新スナップショット版をインストールするには次の pip コマンドを使います:"
 
 #: ../../includes/installation.txt:146
 msgid "With git"
-msgstr ""
+msgstr "git で"
 
 #: ../../includes/installation.txt:148
 msgid "Please the Contributing section."
 msgstr ""
+
+#: ../../getting-started/introduction.rst:17
+msgid ""
+"A task queue's input is a unit of work called a task. Dedicated worker "
+"processes constantly monitor task queues for new work to perform."
+msgstr ""
+"タスクキューの入力となるのは「タスク」と呼ばれる処理の単位で、専用のワーカープロセスが処理すべき新しいタスクが入ってきていないか常にタスクキューを監視しています。"
+
+#: ../../getting-started/introduction.rst:20
+msgid ""
+"Celery communicates via messages, usually using a broker to mediate between "
+"clients and workers.  To initiate a task, a client adds a message to the "
+"queue, which the broker then delivers to a worker."
+msgstr ""
+"Celery ではクライアントとワーカー間のやりとりを、ブローカーを使ったメッセージ経由で行っています。"
+"あるタスクを開始する際、クライアントはメッセージをキューに追加し、ブローカーがそのメッセージをワーカーに持って行きます。"
+
+#: ../../getting-started/introduction.rst:27
+msgid ""
+"Celery is written in Python, but the protocol can be implemented in any "
+"language.  So far there's RCelery_ for the Ruby programming language, node-"
+"celery_ for Node.js and a `PHP client`_. Language interoperability can also "
+"be achieved by :ref:`using webhooks <guide-webhooks>`."
+msgstr ""
+"Celery は Python で書かれていますが、そのプロトコルは様々な言語で実装可能です。"
+"現在、Ruby の RCelery_ や Node.js の node-celery_ 、また `PHP client`_ があります。"
+":ref:`Webフックを使えば <guide-webhooks>`、複数言語をまたいだ処理の実行も可能です。"
+

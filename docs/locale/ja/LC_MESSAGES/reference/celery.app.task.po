@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -170,25 +170,22 @@ msgstr ""
 msgid "Unique id of the task."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.after_return:6
 #: ../../../celery/app/task.pydocstring of celery.app.task.Task.on_failure:7
 msgid "Original arguments for the task that failed."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.after_return:7
 #: ../../../celery/app/task.pydocstring of celery.app.task.Task.on_failure:8
 msgid "Original keyword arguments for the task that failed."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of
-#: celery.app.task.Task.after_return:10
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.after_return:9
 msgid ""
 ":class:`~billiard.einfo.ExceptionInfo` instance, containing the traceback "
 "(if any)."
 msgstr ""
 
 #: ../../../celery/app/task.pydocstring of
-#: celery.app.task.Task.after_return:13 ../../../celery/app/task.pydocstring
+#: celery.app.task.Task.after_return:12 ../../../celery/app/task.pydocstring
 #: of celery.app.task.Task.on_failure:14 ../../../celery/app/task.pydocstring
 #: of celery.app.task.Task.on_retry:13 ../../../celery/app/task.pydocstring of
 #: celery.app.task.Task.on_success:10
@@ -258,47 +255,33 @@ msgstr ""
 msgid "Re-use existing broker connection instead of establishing a new one."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:27
-msgid ""
-"If enabled sending of the task message will be retried in the event of "
-"connection loss or failure.  Default is taken from the "
-":setting:`CELERY_TASK_PUBLISH_RETRY` setting.  Note you need to handle the "
-"producer/connection manually for this to work."
-msgstr ""
-
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:33
-msgid ""
-"Override the retry policy used.  See the "
-":setting:`CELERY_TASK_PUBLISH_RETRY` setting."
-msgstr ""
-
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:36
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:37
 msgid ""
 "Custom routing key used to route the task to a worker server. If in "
 "combination with a ``queue`` argument only used to specify custom routing "
 "keys to topic exchanges."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:41
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:42
 msgid ""
 "The queue to route the task to.  This must be a key present in "
 ":setting:`CELERY_QUEUES`, or :setting:`CELERY_CREATE_MISSING_QUEUES` must be"
 " enabled.  See :ref:`guide-routing` for more information."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:47
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:48
 msgid ""
 "Named custom exchange to send the task to. Usually not used in combination "
 "with the ``queue`` argument."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:51
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:52
 msgid ""
 "The task priority, a number between 0 and 9. Defaults to the "
 ":attr:`priority` attribute."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:54
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:55
 msgid ""
 "A string identifying the default serialization method to use.  Can be "
 "`pickle`, `json`, `yaml`, `msgpack` or any custom serialization method that "
@@ -306,7 +289,7 @@ msgid ""
 "the :attr:`serializer` attribute."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:61
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:62
 msgid ""
 "A string identifying the compression method to use.  Can be one of ``zlib``,"
 " ``bzip2``, or any custom compression methods registered with "
@@ -314,21 +297,21 @@ msgid ""
 ":setting:`CELERY_MESSAGE_COMPRESSION` setting."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:67
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:68
 msgid "A single, or a list of tasks to apply if the task exits successfully."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:69
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:70
 msgid ""
 "A single, or a list of tasks to apply if an error occurs while executing the"
 " task."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:72
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:73
 msgid ":class:~@amqp.TaskProducer` instance to use."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:73
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:74
 msgid ""
 "If set to True (default) and the task is applied while executing another "
 "task, then the result will be appended to the parent tasks "
@@ -336,17 +319,17 @@ msgid ""
 "using the :attr:`trail` attribute"
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:78
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:79
 msgid "Deprecated alias to ``producer``."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:80
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:85
 msgid ""
 "Also supports all keyword arguments supported by "
 ":meth:`kombu.Producer.publish`."
 msgstr ""
 
-#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:84
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:89
 msgid ""
 "If the :setting:`CELERY_ALWAYS_EAGER` setting is set, it will be replaced by"
 " a local :func:`apply` call instead."
@@ -708,3 +691,47 @@ msgid ""
 "If no :attr:`Task.name` attribute is provided, then the name is generated "
 "from the module and class name."
 msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.after_return:6
+msgid "Original arguments for the task."
+msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.after_return:7
+msgid "Original keyword arguments for the task."
+msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:27
+msgid ""
+"If enabled sending of the task message will be retried in the event of "
+"connection loss or failure.  Default is taken from the "
+":setting:`CELERY_TASK_PUBLISH_RETRY` setting.  Note that you need to handle "
+"the producer/connection manually for this to work."
+msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:33
+msgid ""
+"Override the retry policy used.  See the "
+":setting:`CELERY_TASK_PUBLISH_RETRY_POLICY` setting."
+msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:83
+msgid ":rtype :class:`celery.result.AsyncResult`: if"
+msgstr ""
+
+#: ../../../celery/app/task.pydocstring of celery.app.task.Task.apply_async:82
+msgid ""
+":setting:`CELERY_ALWAYS_EAGER` is not set, otherwise "
+":class:`celery.result.EagerResult`."
+msgstr ""
+
+#~ msgid ""
+#~ "If enabled sending of the task message will be retried in the event of "
+#~ "connection loss or failure.  Default is taken from the "
+#~ ":setting:`CELERY_TASK_PUBLISH_RETRY` setting.  Note you need to handle the "
+#~ "producer/connection manually for this to work."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Override the retry policy used.  See the "
+#~ ":setting:`CELERY_TASK_PUBLISH_RETRY` setting."
+#~ msgstr ""

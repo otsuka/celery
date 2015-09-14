@@ -25,18 +25,15 @@ msgid ""
 "roles in that it defines both what happens when a task is called (sends a "
 "message), and what happens when a worker receives that message."
 msgstr ""
-"タスクは callable から生成されるクラスです。"
-"タスクが呼ばれた時(メッセージ送信時)に起こる内容、"
-"そしてワーカーがメッセージを受け取った時に起こる内容の両方を定義しているという点で"
-"タスクは二つの役割を担っていると言えます。"
+"タスクは関数やメソッドなどの呼び出し可能オブジェクトから生成できるクラスです。"
+"タスクは二つの役割を担っています。と言うのも、タスクが呼ばれた時(メッセージ送信時)に起こる内容、"
+"それとワーカーがメッセージを受け取った時に起こる内容、この両方を定義しているからです。"
 
 #: ../../userguide/tasks.rst:13
 msgid ""
 "Every task class has a unique name, and this name is referenced in messages "
 "so that the worker can find the right function to execute."
-msgstr ""
-"すべてのタスククラスは一意な名前を持っており、"
-"メッセージに含まれるこの名前を参照して、ワーカーは実行すべき正しい関数を見つけます。"
+msgstr "すべてのタスククラスは一意な名前を持っており、ワーカーはメッセージに含まれるこの名前を参照して実行すべき関数を見つけます。"
 
 #: ../../userguide/tasks.rst:16
 msgid ""
@@ -45,9 +42,9 @@ msgid ""
 "advance and even if the worker is killed -- caused by power failure or "
 "otherwise -- the message will be redelivered to another worker."
 msgstr ""
-"タスクメッセージは、ワーカーによって :term:`acknowledged` されるまで消えることはありません。"
-"ワーカーは多くのメッセージを予め保持することができ、電源トラブル等でワーカーが kill されたとしても"
-"メッセージは別のワーカーに再送されます。"
+"タスクメッセージは、ワーカーによって :term:`acknowledged` "
+"されるまで消えることはありません。ワーカーは多くのメッセージを予め保持することができ、電源トラブル等でワーカーが kill "
+"されたとしてもメッセージは別のワーカーに再送されるようになっています。"
 
 #: ../../userguide/tasks.rst:21
 msgid ""
@@ -58,9 +55,9 @@ msgid ""
 "before it's executed, so that a task that has already been started is never "
 "executed again.."
 msgstr ""
-"理想的にはタスクの関数は :term:`idempotent` (冪等)であるべきです。"
-"これは、ある関数が同じ引数で何度も呼び出されたとしても意図しない結果を生み出さないということです。"
-"ワーカーはタスクが冪等であるかどうか判定できないので、デフォルトの挙動としては"
+"理想的にはタスクの関数は :term:`idempotent` であるべきです。"
+"これは、ある関数が同じ引数で何度呼び出されたとしても意図しない結果を生み出さないことを意味します。"
+"ワーカーはタスクが冪等であるかどうかは判定できないので、デフォルトの挙動としては"
 "既に開始しているタスクが再実行されないよう、タスク実行前にメッセージを予め acknowledge します。"
 
 #: ../../userguide/tasks.rst:28
@@ -69,9 +66,8 @@ msgid ""
 "the worker acknowledge the message *after* the task returns instead.  See "
 "also the FAQ entry :ref:`faq-acks_late-vs-retry`."
 msgstr ""
-"もしタスクが冪等である場合、:attr:`acks_late` オプションをセットして、"
-"タスクが完了した *後で* ワーカーにメッセージを acknowledge させるようにできます。"
-"FAQ の :ref:`faq-acks_late-vs-retry` も参照してください。"
+"もしタスクが冪等である場合、:attr:`acks_late` オプションをセットすると、ワーカーはタスクが完了した *後で* "
+"メッセージの確認応答を行います。FAQ の :ref:`faq-acks_late-vs-retry` も参照してください。"
 
 #: ../../userguide/tasks.rst:32
 msgid "--"
@@ -81,26 +77,17 @@ msgstr ""
 msgid ""
 "In this chapter you will learn all about defining tasks, and this is the "
 "**table of contents**:"
-msgstr ""
-"この章ではタスクの定義に関するすべてを学びます。これが **その内容です**:"
+msgstr "この章ではタスクの定義に関するすべてを学びます。以下が **その内容です**:"
 
 #: ../../userguide/tasks.rst:45
 msgid "Basics"
 msgstr "基本"
 
-#: ../../userguide/tasks.rst:47
-msgid ""
-"You can easily create a task from any callable by using the "
-":meth:`~@Celery.task` decorator:"
-msgstr ""
-":meth:`~@Celery.task` デコレーターを使って callable から容易にタスクを生成できます:"
-
 #: ../../userguide/tasks.rst:59
 msgid ""
 "There are also many :ref:`options <task-options>` that can be set for the "
 "task, these can be specified as arguments to the decorator:"
-msgstr ""
-"タスクには多くの設定 :ref:`options <task-options>` があり、これらはデコレーターの引数として指定します:"
+msgstr "タスクには多くの設定 :ref:`オプション <task-options>` があり、これらはデコレーターの引数として指定します:"
 
 #: ../../userguide/tasks.rst:0
 msgid "How do I import the task decorator? And what is \"app\"?"
@@ -112,16 +99,16 @@ msgid ""
 "instance, if you don't know what that is then please read :ref:`first-"
 "steps`."
 msgstr ""
-"タスクデコレーターは :class:`@Celery` アプリケーションインタンスから利用できます。"
-"これが何だか分からない場合は、:ref:`first-steps` を読んでください。"
+"タスクデコレーターは :class:`@Celery` アプリケーションインタンスから利用できます。これが何だか分からない場合は、:ref"
+":`first-steps` を読んでください。"
 
 #: ../../userguide/tasks.rst:75
 msgid ""
 "If you're using Django or are still using the \"old\" module based celery "
 "API, then you can import the task decorator like this::"
 msgstr ""
-"Django を使っている、または \"古い\" モジュールの Celery API を使ってある場合は"
-"次のようにタスクデコレーターをインポートできます::"
+"Django を使っている、または \"古い\" モジュールの Celery API "
+"を使ってある場合は次のようにタスクデコレーターをインポートできます::"
 
 #: ../../userguide/tasks.rst:0
 msgid "Multiple decorators"
@@ -133,8 +120,8 @@ msgid ""
 "must make sure that the `task` decorator is applied last (which in Python "
 "oddly means that it must be the first in the list):"
 msgstr ""
-"複数のデコレーターを組み合わせて使う時には `task` デコレーターが最後に適用されるように"
-"してください(Python ではデコレーターリストの最初に来ることを意味します):"
+"複数のデコレーターを組み合わせて使う時には `task` デコレーターが最後に適用されるようにしてください(Python "
+"ではデコレーターリストの最初に位置することを意味します):"
 
 #: ../../userguide/tasks.rst:102
 msgid "Names"
@@ -144,9 +131,7 @@ msgstr "名前"
 msgid ""
 "Every task must have a unique name, and a new name will be generated out of "
 "the function name if a custom name is not provided."
-msgstr ""
-"すべてのタスクは一意な名前を持たなければいけません。自分で名前を付けない場合は"
-"関数名から新しい名前が生成されます。"
+msgstr "すべてのタスクは一意な名前を持たなければいけません。自分で名前を付けない場合は関数名から新しい名前が生成されます。"
 
 #: ../../userguide/tasks.rst:107
 msgid "For example:"
@@ -158,14 +143,12 @@ msgid ""
 "won't collide if there's already a task with that name defined in another "
 "module."
 msgstr ""
-"ベストプラクティスはネームスペースとしてモジュール名を使うことです。こうすれば"
-"別のモジュールで同じ名前のタスクが既にあったとしても衝突することはありません。"
+"ベストプラクティスはネームスペースとしてモジュール名を使うことです。こうすれば別のモジュールで同じ名前のタスクが既にあったとしても衝突することはありません。"
 
 #: ../../userguide/tasks.rst:128
 msgid ""
 "You can tell the name of the task by investigating its name attribute::"
-msgstr ""
-"タスクの name 属性で名前が分かります::"
+msgstr "タスクの name 属性で名前が分かります::"
 
 #: ../../userguide/tasks.rst:133
 msgid ""
@@ -185,9 +168,7 @@ msgstr "自動命名と相対インポート"
 msgid ""
 "Relative imports and automatic name generation does not go well together, so"
 " if you're using relative imports you should set the name explicitly."
-msgstr ""
-"相対インポートと自動名前生成はうまく共存できません。"
-"なので相対インボートを使う場合は明示的に名前をセットするべきです。"
+msgstr "相対インポートと自動名前生成はうまく共存できません。なので相対インポートを使う場合は明示的に名前をセットするべきです。"
 
 #: ../../userguide/tasks.rst:156
 msgid ""
@@ -196,16 +177,14 @@ msgid ""
 "won't match and an :exc:`~@NotRegistered` error will be raised by the "
 "worker."
 msgstr ""
-"例えば、クライアントが \"myapp.tasks\" モジュールを \".tasks\" とインポートし、"
-"ワーカーが \"myapp.tasks\" とインポートした場合、生成された名前は一致せず、"
-"ワーカーから :exc:`~@NotRegistered` エラーが送出されます。"
+"例えば、クライアントが \"myapp.tasks\" モジュールを \".tasks\" とインポートし、ワーカーが \"myapp.tasks\" "
+"とインポートした場合、生成された名前は一致せず、ワーカーから :exc:`~@NotRegistered` エラーが送出されます。"
 
 #: ../../userguide/tasks.rst:160
 msgid ""
 "This is also the case when using Django and using `project.myapp`-style "
 "naming in ``INSTALLED_APPS``:"
-msgstr ""
-"これは Django の ``INSTALLED_APPS``"
+msgstr "これは Django の ``INSTALLED_APPS``"
 
 #: ../../userguide/tasks.rst:167
 msgid ""
@@ -244,14 +223,13 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:221
 msgid "Context"
-msgstr ""
+msgstr "コンテキスト"
 
 #: ../../userguide/tasks.rst:223
 msgid ""
 ":attr:`~@Task.request` contains information and state related to the "
 "executing task."
-msgstr ""
-":attr:`~@Task.request` は実行しているタスクに関連する情報と状態を保持しています。"
+msgstr ":attr:`~@Task.request` は実行しているタスクに関連する情報と状態を保持しています。"
 
 #: ../../userguide/tasks.rst:226
 msgid "The request defines the following attributes:"
@@ -290,22 +268,20 @@ msgid ""
 "Set to :const:`True` if the task is executed locally in the client, and not "
 "by a worker."
 msgstr ""
-"タスクがクライアント内で実行されている場合に :const:`True` がセットされ、"
-"ワーカーによって実行されている場合には :const:`False` になります。"
+"タスクがクライアント内で実行されている場合に :const:`True` がセットされ、ワーカーによって実行されている場合には "
+":const:`False` になります。"
 
 #: ../../userguide/tasks.rst:245
 msgid ""
 "The original ETA of the task (if any). This is in UTC time (depending on the"
 " :setting:`CELERY_ENABLE_UTC` setting)."
-msgstr ""
-"(指定されている場合)タスクのオリジナル ETA。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
+msgstr "(指定されている場合)タスクのオリジナル ETA。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
 
 #: ../../userguide/tasks.rst:249
 msgid ""
 "The original expiry time of the task (if any). This is in UTC time "
 "(depending on the :setting:`CELERY_ENABLE_UTC` setting)."
-msgstr ""
-"(指定されている場合)タスクのオリジナル有効期限。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
+msgstr "(指定されている場合)タスクのオリジナル有効期限。UTC 時間です(:setting:`CELERY_ENABLE_UTC` に因る)。"
 
 #: ../../userguide/tasks.rst:253
 msgid "The file the worker logs to.  See `Logging`_."
@@ -359,15 +335,13 @@ msgstr ""
 
 #: ../../userguide/tasks.rst:286
 msgid "An example task accessing information in the context is:"
-msgstr "Context の情報にアクセスするタスクの例:"
+msgstr "コンテキスト情報にアクセスするタスクの例:"
 
 #: ../../userguide/tasks.rst:296
 msgid ""
 "The ``bind`` argument means that the function will be a \"bound method\" so "
 "that you can access attributes and methods on the task type instance."
-msgstr ""
-"``bind`` 引数をセットするとその関数は\"バウンドメソッド\"となり、タスク型インスタンスの"
-"属性とメソッドにアクセスできるようになります。"
+msgstr "``bind`` 引数をセットするとその関数は\"バウンドメソッド\"となり、タスク型インスタンスの属性とメソッドにアクセスできるようになります。"
 
 #: ../../userguide/tasks.rst:302
 msgid "Logging"
@@ -377,8 +351,7 @@ msgstr ""
 msgid ""
 "The worker will automatically set up logging for you, or you can configure "
 "logging manually."
-msgstr ""
-"ワーカーは自動的にログのセットアップをしてくれます。手動で設定することもできます。"
+msgstr "ワーカーは自動的にログのセットアップをしてくれます。手動で設定することもできます。"
 
 #: ../../userguide/tasks.rst:307
 msgid ""
@@ -391,58 +364,47 @@ msgstr ""
 msgid ""
 "The best practice is to create a common logger for all of your tasks at the "
 "top of your module:"
-msgstr ""
-"ベストプラクティスは、モジュールの先頭ですべてのタスク共通で使用する logger を生成することです:"
+msgstr "ベストプラクティスは、モジュールの先頭ですべてのタスク共通で使用する logger を生成することです:"
 
 #: ../../userguide/tasks.rst:325
 msgid ""
 "Celery uses the standard Python logger library, for which documentation can "
 "be found in the :mod:`logging` module."
 msgstr ""
-"Celery は Python の標準 logger ライブラリを使用します。ドキュメントは :mod:`logging` モジュールのページをご覧ください。"
+"Celery は Python の標準 logger ライブラリを使用します。ドキュメントは :mod:`logging` "
+"モジュールのページをご覧ください。"
 
-#: ../../userguide/tasks.rst:329
-msgid ""
-"You can also use :func:`print`, as anything written to standard out/-err "
-"will be redirected to logging system (you can disable this, see "
-":setting:`CELERY_REDIRECT_STDOUTS`)."
-msgstr ""
-":func:`print` 関数も使用でき、標準出力/エラーに出力された内容は logging システムにリダイレクトされます"
-"(これは無効にできます。:setting:`CELERY_REDIRECT_STDOUTS` を参照)。"
-
-#: ../../userguide/tasks.rst:336
+#: ../../userguide/tasks.rst:362
 msgid "Retrying"
 msgstr "リトライ"
 
-#: ../../userguide/tasks.rst:338
+#: ../../userguide/tasks.rst:364
 msgid ""
 ":meth:`~@Task.retry` can be used to re-execute the task, for example in the "
 "event of recoverable errors."
-msgstr ""
-":meth:`~@Task.retry` は、リカバーできるエラーが発生した際などに、タスクを再実行するのに使います。"
+msgstr ":meth:`~@Task.retry` は回復できるエラーが発生した際などに、タスクを再実行するのに使います。"
 
-#: ../../userguide/tasks.rst:341
+#: ../../userguide/tasks.rst:367
 msgid ""
 "When you call ``retry`` it will send a new message, using the same task-id, "
 "and it will take care to make sure the message is delivered to the same "
 "queue as the originating task."
-msgstr ""
-"``retry`` を呼び出すと、同じタスク ID を使って新しいメッセージを元のタスクと同じキューに送信します。"
+msgstr "``retry`` を呼び出すと、同じタスク ID を使って新しいメッセージを元のタスクと同じキューに送信します。"
 
-#: ../../userguide/tasks.rst:345
+#: ../../userguide/tasks.rst:371
 msgid ""
 "When a task is retried this is also recorded as a task state, so that you "
 "can track the progress of the task using the result instance (see :ref"
 ":`task-states`)."
 msgstr ""
-"タスクがリトライされたこともタスクのステートに記録されてるので、結果インスタンスを"
-"使ってタスクの進行状況を追跡できます(:ref:`task-states` を参照)。"
+"タスクがリトライされたこともタスクのステートに記録されてるので、結果インスタンスを使ってタスクの進行状況を追跡できます(:ref:`task-"
+"states` を参照)。"
 
-#: ../../userguide/tasks.rst:349
+#: ../../userguide/tasks.rst:375
 msgid "Here's an example using ``retry``:"
 msgstr "``retry`` を使用する例:"
 
-#: ../../userguide/tasks.rst:363
+#: ../../userguide/tasks.rst:389
 msgid ""
 "The :meth:`~@Task.retry` call will raise an exception so any code after the "
 "retry will not be reached.  This is the :exc:`~@Retry` exception, it is not "
@@ -450,64 +412,63 @@ msgid ""
 "that the task is to be retried, so that it can store the correct state when "
 "a result backend is enabled."
 msgstr ""
-":meth:`~@Task.retry` の呼び出しは実際には例外を送出するので、それ以降のコードは実行されません。"
-"これは :exc:`~@Retry` 例外で、エラーとしてではなく、タスクがリトライされたことをワーカーに"
-"伝えるための semi-predicate なものとして扱われます。そのため結果バックエンドが有効な場合に"
-"正しいステートを保持できます。"
+":meth:`~@Task.retry` の呼び出しは実際には例外を送出するので、それ以降のコードは実行されません。これは :exc:`~@Retry`"
+" 例外で、エラーとしてではなく、タスクがリトライされたことをワーカーに伝えるための semi-predicate "
+"なものとして扱われます。そのため結果バックエンドが有効な場合に正しいステートを保持できます。"
 
-#: ../../userguide/tasks.rst:369
+#: ../../userguide/tasks.rst:395
 msgid ""
 "This is normal operation and always happens unless the ``throw`` argument to"
 " retry is set to :const:`False`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:372
+#: ../../userguide/tasks.rst:398
 msgid ""
 "The bind argument to the task decorator will give access to ``self`` (the "
 "task type instance)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:375
+#: ../../userguide/tasks.rst:401
 msgid ""
 "The ``exc`` method is used to pass exception information that is used in "
 "logs, and when storing task results. Both the exception and the traceback "
 "will be available in the task state (if a result backend is enabled)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:380
+#: ../../userguide/tasks.rst:406
 msgid ""
 "If the task has a ``max_retries`` value the current exception will be re-"
 "raised if the max number of retries has been exceeded, but this will not "
 "happen if:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:384
+#: ../../userguide/tasks.rst:410
 msgid "An ``exc`` argument was not given."
 msgstr ""
 
-#: ../../userguide/tasks.rst:386
+#: ../../userguide/tasks.rst:412
 msgid "In this case the :exc:`~@MaxRetriesExceeded` exception will be raised."
 msgstr ""
 
-#: ../../userguide/tasks.rst:389
+#: ../../userguide/tasks.rst:415
 msgid "There is no current exception"
 msgstr ""
 
-#: ../../userguide/tasks.rst:391
+#: ../../userguide/tasks.rst:417
 msgid ""
 "If there's no original exception to re-raise the ``exc`` argument will be "
 "used instead, so:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:398
+#: ../../userguide/tasks.rst:424
 msgid "will raise the ``exc`` argument given."
 msgstr ""
 
-#: ../../userguide/tasks.rst:403
+#: ../../userguide/tasks.rst:429
 msgid "Using a custom retry delay"
 msgstr ""
 
-#: ../../userguide/tasks.rst:405
+#: ../../userguide/tasks.rst:431
 msgid ""
 "When a task is to be retried, it can wait for a given amount of time before "
 "doing so, and the default delay is defined by the "
@@ -516,61 +477,61 @@ msgid ""
 "float)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:411
+#: ../../userguide/tasks.rst:437
 msgid ""
 "You can also provide the `countdown` argument to :meth:`~@Task.retry` to "
 "override this default."
 msgstr ""
 
-#: ../../userguide/tasks.rst:427
+#: ../../userguide/tasks.rst:453
 msgid "List of Options"
 msgstr ""
 
-#: ../../userguide/tasks.rst:429
+#: ../../userguide/tasks.rst:455
 msgid ""
 "The task decorator can take a number of options that change the way the task"
 " behaves, for example you can set the rate limit for a task using the "
 ":attr:`rate_limit` option."
 msgstr ""
 
-#: ../../userguide/tasks.rst:433
+#: ../../userguide/tasks.rst:459
 msgid ""
 "Any keyword argument passed to the task decorator will actually be set as an"
 " attribute of the resulting task class, and this is a list of the built-in "
 "attributes."
 msgstr ""
 
-#: ../../userguide/tasks.rst:438
+#: ../../userguide/tasks.rst:464
 msgid "General"
 msgstr ""
 
-#: ../../userguide/tasks.rst:444
+#: ../../userguide/tasks.rst:470
 msgid "The name the task is registered as."
 msgstr ""
 
-#: ../../userguide/tasks.rst:446
+#: ../../userguide/tasks.rst:472
 msgid ""
 "You can set this name manually, or a name will be automatically generated "
 "using the module and class name.  See :ref:`task-names`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:452
+#: ../../userguide/tasks.rst:478
 msgid ""
 "If the task is being executed this will contain information about the "
 "current request.  Thread local storage is used."
 msgstr ""
 
-#: ../../userguide/tasks.rst:455
+#: ../../userguide/tasks.rst:481
 msgid "See :ref:`task-request-info`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:459 ../../userguide/tasks.rst:1074
+#: ../../userguide/tasks.rst:485 ../../userguide/tasks.rst:1099
 msgid ""
 "Abstract classes are not registered, but are used as the base class for new "
 "task types."
 msgstr ""
 
-#: ../../userguide/tasks.rst:464
+#: ../../userguide/tasks.rst:490
 msgid ""
 "The maximum number of attempted retries before giving up. If the number of "
 "retries exceeds this value a :exc:`~@MaxRetriesExceeded` exception will be "
@@ -578,126 +539,120 @@ msgid ""
 "not automatically retry on exception.."
 msgstr ""
 
-#: ../../userguide/tasks.rst:469
+#: ../../userguide/tasks.rst:495
 msgid ""
 "The default value is 3. A value of :const:`None` will disable the retry "
 "limit and the task will retry forever until it succeeds."
 msgstr ""
 
-#: ../../userguide/tasks.rst:475
+#: ../../userguide/tasks.rst:501
 msgid ""
 "Optional tuple of expected error classes that should not be regarded as an "
 "actual error."
 msgstr ""
 
-#: ../../userguide/tasks.rst:478
+#: ../../userguide/tasks.rst:504
 msgid ""
 "Errors in this list will be reported as a failure to the result backend, but"
 " the worker will not log the event as an error, and no traceback will be "
 "included."
 msgstr ""
 
-#: ../../userguide/tasks.rst:482
+#: ../../userguide/tasks.rst:508
 msgid "Example:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:490
+#: ../../userguide/tasks.rst:516
 msgid "Error types:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:492
+#: ../../userguide/tasks.rst:518
 msgid "Expected errors (in ``Task.throws``)"
 msgstr ""
 
-#: ../../userguide/tasks.rst:494
+#: ../../userguide/tasks.rst:520
 msgid "Logged with severity ``INFO``, traceback excluded."
 msgstr ""
 
-#: ../../userguide/tasks.rst:496
+#: ../../userguide/tasks.rst:522
 msgid "Unexpected errors"
 msgstr ""
 
-#: ../../userguide/tasks.rst:498
+#: ../../userguide/tasks.rst:524
 msgid "Logged with severity ``ERROR``, with traceback included."
 msgstr ""
 
-#: ../../userguide/tasks.rst:502
+#: ../../userguide/tasks.rst:538
 msgid ""
 "Default time in seconds before a retry of the task should be executed.  Can "
 "be either :class:`int` or :class:`float`. Default is a 3 minute delay."
 msgstr ""
 
-#: ../../userguide/tasks.rst:508
+#: ../../userguide/tasks.rst:544
 msgid ""
 "Set the rate limit for this task type which limits the number of tasks that "
 "can be run in a given time frame.  Tasks will still complete when a rate "
 "limit is in effect, but it may take some time before it's allowed to start."
 msgstr ""
 
-#: ../../userguide/tasks.rst:513
+#: ../../userguide/tasks.rst:549
 msgid ""
 "If this is :const:`None` no rate limit is in effect. If it is an integer or "
 "float, it is interpreted as \"tasks per second\"."
 msgstr ""
 
-#: ../../userguide/tasks.rst:516
+#: ../../userguide/tasks.rst:552
 msgid ""
 "The rate limits can be specified in seconds, minutes or hours by appending "
 "`\"/s\"`, `\"/m\"` or `\"/h\"` to the value.  Tasks will be evenly "
 "distributed over the specified time frame."
 msgstr ""
 
-#: ../../userguide/tasks.rst:520
-msgid ""
-"Example: `\"100/m\"` (hundred tasks a minute). This will enforce a minimum "
-"delay of 10ms between starting two tasks."
-msgstr ""
-
-#: ../../userguide/tasks.rst:523
+#: ../../userguide/tasks.rst:559
 msgid ""
 "Default is the :setting:`CELERY_DEFAULT_RATE_LIMIT` setting, which if not "
 "specified means rate limiting for tasks is disabled by default."
 msgstr ""
 
-#: ../../userguide/tasks.rst:528
+#: ../../userguide/tasks.rst:569
 msgid ""
 "The hard time limit, in seconds, for this task.  If not set then the workers"
 " default will be used."
 msgstr ""
 
-#: ../../userguide/tasks.rst:533
+#: ../../userguide/tasks.rst:574
 msgid ""
 "The soft time limit for this task.  If not set then the workers default will"
 " be used."
 msgstr ""
 
-#: ../../userguide/tasks.rst:538
+#: ../../userguide/tasks.rst:579
 msgid ""
 "Don't store task state.    Note that this means you can't use "
 ":class:`~celery.result.AsyncResult` to check if the task is ready, or get "
 "its return value."
 msgstr ""
 
-#: ../../userguide/tasks.rst:544
+#: ../../userguide/tasks.rst:585
 msgid ""
 "If :const:`True`, errors will be stored even if the task is configured to "
 "ignore results."
 msgstr ""
 
-#: ../../userguide/tasks.rst:549
+#: ../../userguide/tasks.rst:590
 msgid ""
 "Send an email whenever a task of this type fails. Defaults to the "
 ":setting:`CELERY_SEND_TASK_ERROR_EMAILS` setting. See :ref:`conf-error-"
 "mails` for more information."
 msgstr ""
 
-#: ../../userguide/tasks.rst:555
+#: ../../userguide/tasks.rst:596
 msgid ""
 "If the sending of error emails is enabled for this task, then this is the "
 "class defining the logic to send error mails."
 msgstr ""
 
-#: ../../userguide/tasks.rst:560
+#: ../../userguide/tasks.rst:601
 msgid ""
 "A string identifying the default serialization method to use. Defaults to "
 "the :setting:`CELERY_TASK_SERIALIZER` setting.  Can be `pickle` `json`, "
@@ -705,51 +660,51 @@ msgid ""
 ":mod:`kombu.serialization.registry`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:566
+#: ../../userguide/tasks.rst:607
 msgid "Please see :ref:`calling-serializers` for more information."
 msgstr ""
 
-#: ../../userguide/tasks.rst:570
+#: ../../userguide/tasks.rst:611
 msgid "A string identifying the default compression scheme to use."
 msgstr ""
 
-#: ../../userguide/tasks.rst:572
+#: ../../userguide/tasks.rst:613
 msgid ""
 "Defaults to the :setting:`CELERY_MESSAGE_COMPRESSION` setting. Can be "
 "`gzip`, or `bzip2`, or any custom compression schemes that have been "
 "registered with the :mod:`kombu.compression` registry."
 msgstr ""
 
-#: ../../userguide/tasks.rst:576
+#: ../../userguide/tasks.rst:617
 msgid "Please see :ref:`calling-compression` for more information."
 msgstr ""
 
-#: ../../userguide/tasks.rst:580
+#: ../../userguide/tasks.rst:621
 msgid ""
 "The result store backend to use for this task.  Defaults to the "
 ":setting:`CELERY_RESULT_BACKEND` setting."
 msgstr ""
 
-#: ../../userguide/tasks.rst:585
+#: ../../userguide/tasks.rst:626
 msgid ""
 "If set to :const:`True` messages for this task will be acknowledged "
 "**after** the task has been executed, not *just before*, which is the "
 "default behavior."
 msgstr ""
 
-#: ../../userguide/tasks.rst:589
+#: ../../userguide/tasks.rst:630
 msgid ""
 "Note that this means the task may be executed twice if the worker crashes in"
 " the middle of execution, which may be acceptable for some applications."
 msgstr ""
 
-#: ../../userguide/tasks.rst:593
+#: ../../userguide/tasks.rst:634
 msgid ""
 "The global default can be overridden by the :setting:`CELERY_ACKS_LATE` "
 "setting."
 msgstr ""
 
-#: ../../userguide/tasks.rst:600
+#: ../../userguide/tasks.rst:641
 msgid ""
 "If :const:`True` the task will report its status as \"started\" when the "
 "task is executed by a worker. The default value is :const:`False` as the "
@@ -759,40 +714,40 @@ msgid ""
 "need to report which task is currently running."
 msgstr ""
 
-#: ../../userguide/tasks.rst:608
+#: ../../userguide/tasks.rst:649
 msgid ""
 "The host name and process id of the worker executing the task will be "
 "available in the state metadata (e.g. `result.info['pid']`)"
 msgstr ""
 
-#: ../../userguide/tasks.rst:611
+#: ../../userguide/tasks.rst:652
 msgid ""
 "The global default can be overridden by the :setting:`CELERY_TRACK_STARTED` "
 "setting."
 msgstr ""
 
-#: ../../userguide/tasks.rst:617
+#: ../../userguide/tasks.rst:658
 msgid "The API reference for :class:`~@Task`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:622
+#: ../../userguide/tasks.rst:663
 msgid "States"
 msgstr "ステート"
 
-#: ../../userguide/tasks.rst:624
+#: ../../userguide/tasks.rst:665
 msgid ""
 "Celery can keep track of the tasks current state.  The state also contains "
 "the result of a successful task, or the exception and traceback information "
 "of a failed task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:628
+#: ../../userguide/tasks.rst:669
 msgid ""
 "There are several *result backends* to choose from, and they all have "
 "different strengths and weaknesses (see :ref:`task-result-backends`)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:631
+#: ../../userguide/tasks.rst:672
 msgid ""
 "During its lifetime a task will transition through several possible states, "
 "and each state may have arbitrary metadata attached to it.  When a task "
@@ -801,121 +756,69 @@ msgid ""
 "is implied to have been in the :state:`STARTED` state at some point)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:638
+#: ../../userguide/tasks.rst:679
 msgid ""
 "There are also sets of states, like the set of :state:`FAILURE_STATES`, and "
 "the set of :state:`READY_STATES`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:641
+#: ../../userguide/tasks.rst:682
 msgid ""
 "The client uses the membership of these sets to decide whether the exception"
 " should be re-raised (:state:`PROPAGATE_STATES`), or whether the state can "
 "be cached (it can if the task is ready)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:645
+#: ../../userguide/tasks.rst:686
 msgid "You can also define :ref:`custom-states`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:650
+#: ../../userguide/tasks.rst:691
 msgid "Result Backends"
 msgstr "結果バックエンド"
 
-#: ../../userguide/tasks.rst:652
-msgid ""
-"If you want to keep track of tasks or need the return values, then Celery "
-"must store or send the states somewhere so that they can be retrieved later."
-" There are several built-in result backends to choose from: "
-"SQLAlchemy/Django ORM, Memcached, RabbitMQ (amqp), MongoDB, and Redis -- or "
-"you can define your own."
-msgstr ""
-
-#: ../../userguide/tasks.rst:657
+#: ../../userguide/tasks.rst:698
 msgid ""
 "No backend works well for every use case. You should read about the "
 "strengths and weaknesses of each backend, and choose the most appropriate "
 "for your needs."
 msgstr ""
 
-#: ../../userguide/tasks.rst:664
+#: ../../userguide/tasks.rst:704
 msgid ":ref:`conf-result-backend`"
 msgstr ""
 
-#: ../../userguide/tasks.rst:667
-msgid "RabbitMQ Result Backend"
-msgstr ""
-
-#: ../../userguide/tasks.rst:669
-msgid ""
-"The RabbitMQ result backend (amqp) is special as it does not actually "
-"*store* the states, but rather sends them as messages.  This is an important"
-" difference as it means that a result *can only be retrieved once*; If you "
-"have two processes waiting for the same result, one of the processes will "
-"never receive the result!"
-msgstr ""
-
-#: ../../userguide/tasks.rst:675
+#: ../../userguide/tasks.rst:714
 msgid ""
 "Even with that limitation, it is an excellent choice if you need to receive "
 "state changes in real-time.  Using messaging means the client does not have "
 "to poll for new states."
 msgstr ""
 
-#: ../../userguide/tasks.rst:679
-msgid ""
-"There are several other pitfalls you should be aware of when using the "
-"RabbitMQ result backend:"
-msgstr ""
-
-#: ../../userguide/tasks.rst:682
-msgid ""
-"Every new task creates a new queue on the server, with thousands of tasks "
-"the broker may be overloaded with queues and this will affect performance in"
-" negative ways. If you're using RabbitMQ then each queue will be a separate "
-"Erlang process, so if you're planning to keep many results simultaneously "
-"you may have to increase the Erlang process limit, and the maximum number of"
-" file descriptors your OS allows."
-msgstr ""
-
-#: ../../userguide/tasks.rst:689
-msgid ""
-"Old results will be cleaned automatically, based on the "
-":setting:`CELERY_TASK_RESULT_EXPIRES` setting.  By default this is set to "
-"expire after 1 day: if you have a very busy cluster you should lower this "
-"value."
-msgstr ""
-
-#: ../../userguide/tasks.rst:694
-msgid ""
-"For a list of options supported by the RabbitMQ result backend, please see "
-":ref:`conf-amqp-result-backend`."
-msgstr ""
-
-#: ../../userguide/tasks.rst:699
+#: ../../userguide/tasks.rst:723
 msgid "Database Result Backend"
 msgstr ""
 
-#: ../../userguide/tasks.rst:701
+#: ../../userguide/tasks.rst:725
 msgid ""
 "Keeping state in the database can be convenient for many, especially for web"
 " applications with a database already in place, but it also comes with "
 "limitations."
 msgstr ""
 
-#: ../../userguide/tasks.rst:705
+#: ../../userguide/tasks.rst:729
 msgid ""
 "Polling the database for new states is expensive, and so you should increase"
 " the polling intervals of operations such as `result.get()`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:708
+#: ../../userguide/tasks.rst:732
 msgid ""
 "Some databases use a default transaction isolation level that is not "
 "suitable for polling tables for changes."
 msgstr ""
 
-#: ../../userguide/tasks.rst:711
+#: ../../userguide/tasks.rst:735
 msgid ""
 "In MySQL the default transaction isolation level is `REPEATABLE-READ`, which"
 " means the transaction will not see changes by other transactions until the "
@@ -923,97 +826,97 @@ msgid ""
 "COMMITTED` isolation level."
 msgstr ""
 
-#: ../../userguide/tasks.rst:720
+#: ../../userguide/tasks.rst:743
 msgid "Built-in States"
 msgstr ""
 
-#: ../../userguide/tasks.rst:725
+#: ../../userguide/tasks.rst:748
 msgid "PENDING"
 msgstr ""
 
-#: ../../userguide/tasks.rst:727
+#: ../../userguide/tasks.rst:750
 msgid ""
 "Task is waiting for execution or unknown. Any task id that is not known is "
 "implied to be in the pending state."
 msgstr ""
 
-#: ../../userguide/tasks.rst:733
+#: ../../userguide/tasks.rst:756
 msgid "STARTED"
 msgstr ""
 
-#: ../../userguide/tasks.rst:735
+#: ../../userguide/tasks.rst:758
 msgid ""
 "Task has been started. Not reported by default, to enable please see "
 ":attr:`@Task.track_started`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:738
+#: ../../userguide/tasks.rst:761
 msgid "`pid` and `hostname` of the worker process executing the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:744
+#: ../../userguide/tasks.rst:767
 msgid "SUCCESS"
 msgstr ""
 
-#: ../../userguide/tasks.rst:746
+#: ../../userguide/tasks.rst:769
 msgid "Task has been successfully executed."
 msgstr ""
 
-#: ../../userguide/tasks.rst:748
+#: ../../userguide/tasks.rst:771
 msgid "`result` contains the return value of the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:749 ../../userguide/tasks.rst:750
-#: ../../userguide/tasks.rst:762 ../../userguide/tasks.rst:783
+#: ../../userguide/tasks.rst:772 ../../userguide/tasks.rst:773
+#: ../../userguide/tasks.rst:785 ../../userguide/tasks.rst:806
 msgid "Yes"
 msgstr ""
 
-#: ../../userguide/tasks.rst:755
+#: ../../userguide/tasks.rst:778
 msgid "FAILURE"
 msgstr ""
 
-#: ../../userguide/tasks.rst:757
+#: ../../userguide/tasks.rst:780
 msgid "Task execution resulted in failure."
 msgstr ""
 
-#: ../../userguide/tasks.rst:759
+#: ../../userguide/tasks.rst:782
 msgid ""
 "`result` contains the exception occurred, and `traceback` contains the "
 "backtrace of the stack at the point when the exception was raised."
 msgstr ""
 
-#: ../../userguide/tasks.rst:767
+#: ../../userguide/tasks.rst:790
 msgid "RETRY"
 msgstr ""
 
-#: ../../userguide/tasks.rst:769
+#: ../../userguide/tasks.rst:792
 msgid "Task is being retried."
 msgstr ""
 
-#: ../../userguide/tasks.rst:771
+#: ../../userguide/tasks.rst:794
 msgid ""
 "`result` contains the exception that caused the retry, and `traceback` "
 "contains the backtrace of the stack at the point when the exceptions was "
 "raised."
 msgstr ""
 
-#: ../../userguide/tasks.rst:774
+#: ../../userguide/tasks.rst:797
 msgid "No"
 msgstr ""
 
-#: ../../userguide/tasks.rst:779
+#: ../../userguide/tasks.rst:802
 msgid "REVOKED"
 msgstr ""
 
-#: ../../userguide/tasks.rst:781
+#: ../../userguide/tasks.rst:804
 msgid "Task has been revoked."
 msgstr ""
 
-#: ../../userguide/tasks.rst:788
+#: ../../userguide/tasks.rst:811
 msgid "Custom states"
 msgstr ""
 
-#: ../../userguide/tasks.rst:790
+#: ../../userguide/tasks.rst:813
 msgid ""
 "You can easily define your own states, all you need is a unique name. The "
 "name of the state is usually an uppercase string.  As an example you could "
@@ -1021,11 +924,12 @@ msgid ""
 "defines its own custom :state:`ABORTED` state."
 msgstr ""
 
-#: ../../userguide/tasks.rst:795
+
+#: ../../userguide/tasks.rst:818
 msgid "Use :meth:`~@Task.update_state` to update a task's state::"
 msgstr ""
 
-#: ../../userguide/tasks.rst:804
+#: ../../userguide/tasks.rst:828
 msgid ""
 "Here I created the state `\"PROGRESS\"`, which tells any application aware "
 "of this state that the task is currently in progress, and also where it is "
@@ -1033,23 +937,23 @@ msgid ""
 "metadata.  This can then be used to create e.g. progress bars."
 msgstr ""
 
-#: ../../userguide/tasks.rst:812
+#: ../../userguide/tasks.rst:836
 msgid "Creating pickleable exceptions"
 msgstr ""
 
-#: ../../userguide/tasks.rst:814
+#: ../../userguide/tasks.rst:838
 msgid ""
 "A rarely known Python fact is that exceptions must conform to some simple "
 "rules to support being serialized by the pickle module."
 msgstr ""
 
-#: ../../userguide/tasks.rst:817
+#: ../../userguide/tasks.rst:841
 msgid ""
 "Tasks that raise exceptions that are not pickleable will not work properly "
 "when Pickle is used as the serializer."
 msgstr ""
 
-#: ../../userguide/tasks.rst:820
+#: ../../userguide/tasks.rst:844
 msgid ""
 "To make sure that your exceptions are pickleable the exception *MUST* "
 "provide the original arguments it was instantiated with in its ``.args`` "
@@ -1057,71 +961,71 @@ msgid ""
 "``Exception.__init__``."
 msgstr ""
 
-#: ../../userguide/tasks.rst:825
+#: ../../userguide/tasks.rst:849
 msgid "Let's look at some examples that work, and one that doesn't:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:848
+#: ../../userguide/tasks.rst:872
 msgid ""
 "So the rule is: For any exception that supports custom arguments ``*args``, "
 "``Exception.__init__(self, *args)`` must be used."
 msgstr ""
 
-#: ../../userguide/tasks.rst:852
+#: ../../userguide/tasks.rst:876
 msgid ""
 "There is no special support for *keyword arguments*, so if you want to "
 "preserve keyword arguments when the exception is unpickled you have to pass "
 "them as regular args:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:870
+#: ../../userguide/tasks.rst:894
 msgid "Semipredicates"
 msgstr ""
 
-#: ../../userguide/tasks.rst:872
+#: ../../userguide/tasks.rst:896
 msgid ""
 "The worker wraps the task in a tracing function which records the final "
 "state of the task.  There are a number of exceptions that can be used to "
 "signal this function to change how it treats the return of the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:879
+#: ../../userguide/tasks.rst:903
 msgid "Ignore"
 msgstr ""
 
-#: ../../userguide/tasks.rst:881
+#: ../../userguide/tasks.rst:905
 msgid ""
 "The task may raise :exc:`~@Ignore` to force the worker to ignore the task.  "
 "This means that no state will be recorded for the task, but the message is "
 "still acknowledged (removed from queue)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:885
+#: ../../userguide/tasks.rst:909
 msgid ""
 "This can be used if you want to implement custom revoke-like functionality, "
 "or manually store the result of a task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:888
+#: ../../userguide/tasks.rst:912
 msgid "Example keeping revoked tasks in a Redis set:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:899
+#: ../../userguide/tasks.rst:923
 msgid "Example that stores results manually:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:915
+#: ../../userguide/tasks.rst:940
 msgid "Reject"
 msgstr ""
 
-#: ../../userguide/tasks.rst:917
+#: ../../userguide/tasks.rst:942
 msgid ""
 "The task may raise :exc:`~@Reject` to reject the task message using AMQPs "
 "``basic_reject`` method.  This will not have any effect unless "
 ":attr:`Task.acks_late` is enabled."
 msgstr ""
 
-#: ../../userguide/tasks.rst:921
+#: ../../userguide/tasks.rst:946
 msgid ""
 "Rejecting a message has the same effect as acking it, but some brokers may "
 "implement additional functionality that can be used. For example RabbitMQ "
@@ -1130,433 +1034,429 @@ msgid ""
 "redelivered to."
 msgstr ""
 
-#: ../../userguide/tasks.rst:929
+#: ../../userguide/tasks.rst:954
 msgid ""
 "Reject can also be used to requeue messages, but please be very careful when"
 " using this as it can easily result in an infinite message loop."
 msgstr ""
 
-#: ../../userguide/tasks.rst:932
+#: ../../userguide/tasks.rst:957
 msgid "Example using reject when a task causes an out of memory condition:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:958
+#: ../../userguide/tasks.rst:983
 msgid "Example requeuing the message:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:970
+#: ../../userguide/tasks.rst:995
 msgid ""
 "Consult your broker documentation for more details about the "
 "``basic_reject`` method."
 msgstr ""
 
-#: ../../userguide/tasks.rst:977
+#: ../../userguide/tasks.rst:1002
 msgid "Retry"
 msgstr ""
 
-#: ../../userguide/tasks.rst:979
+#: ../../userguide/tasks.rst:1004
 msgid ""
 "The :exc:`~@Retry` exception is raised by the ``Task.retry`` method to tell "
 "the worker that the task is being retried."
 msgstr ""
 
-#: ../../userguide/tasks.rst:985
+#: ../../userguide/tasks.rst:1010
 msgid "Custom task classes"
 msgstr ""
 
-#: ../../userguide/tasks.rst:987
+#: ../../userguide/tasks.rst:1012
 msgid ""
 "All tasks inherit from the :class:`@Task` class. The :meth:`~@Task.run` "
 "method becomes the task body."
 msgstr ""
 
-#: ../../userguide/tasks.rst:990
+#: ../../userguide/tasks.rst:1015
 msgid "As an example, the following code,"
 msgstr ""
 
-#: ../../userguide/tasks.rst:999
+#: ../../userguide/tasks.rst:1024
 msgid "will do roughly this behind the scenes:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1011
+#: ../../userguide/tasks.rst:1036
 msgid "Instantiation"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1013
+#: ../../userguide/tasks.rst:1038
 msgid ""
 "A task is **not** instantiated for every request, but is registered in the "
 "task registry as a global instance."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1016
+#: ../../userguide/tasks.rst:1041
 msgid ""
 "This means that the ``__init__`` constructor will only be called once per "
 "process, and that the task class is semantically closer to an Actor."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1020
+#: ../../userguide/tasks.rst:1045
 msgid "If you have a task,"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1037
+#: ../../userguide/tasks.rst:1062
 msgid ""
 "And you route every request to the same process, then it will keep state "
 "between requests."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1040
+#: ../../userguide/tasks.rst:1065
 msgid ""
 "This can also be useful to cache resources, e.g. a base Task class that "
 "caches a database connection:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1058
+#: ../../userguide/tasks.rst:1083
 msgid "that can be added to tasks like this:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1068
+#: ../../userguide/tasks.rst:1093
 msgid ""
 "The ``db`` attribute of the ``process_rows`` task will then always stay the "
 "same in each process."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1072
+#: ../../userguide/tasks.rst:1097
 msgid "Abstract classes"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1094
+#: ../../userguide/tasks.rst:1119
 msgid "Handlers"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1098
+#: ../../userguide/tasks.rst:1123
 msgid "Handler called after the task returns."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1100
+#: ../../userguide/tasks.rst:1125
 msgid "Current task state."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1101
+#: ../../userguide/tasks.rst:1126
 msgid "Task return value/exception."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1102
+#: ../../userguide/tasks.rst:1127
 msgid "Unique id of the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1103
+#: ../../userguide/tasks.rst:1128
 msgid "Original arguments for the task that returned."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1104
+#: ../../userguide/tasks.rst:1129
 msgid "Original keyword arguments for the task that returned."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1107
+#: ../../userguide/tasks.rst:1132
 msgid ""
 ":class:`~celery.datastructures.ExceptionInfo` instance, containing the "
 "traceback (if any)."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1110 ../../userguide/tasks.rst:1125
-#: ../../userguide/tasks.rst:1139 ../../userguide/tasks.rst:1150
+#: ../../userguide/tasks.rst:1135 ../../userguide/tasks.rst:1150
+#: ../../userguide/tasks.rst:1164 ../../userguide/tasks.rst:1175
 msgid "The return value of this handler is ignored."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1114
+#: ../../userguide/tasks.rst:1139
 msgid "This is run by the worker when the task fails."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1116
+#: ../../userguide/tasks.rst:1141
 msgid "The exception raised by the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1117
+#: ../../userguide/tasks.rst:1142
 msgid "Unique id of the failed task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1118
+#: ../../userguide/tasks.rst:1143
 msgid "Original arguments for the task that failed."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1119
+#: ../../userguide/tasks.rst:1144
 msgid "Original keyword arguments for the task that failed."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1122 ../../userguide/tasks.rst:1136
+#: ../../userguide/tasks.rst:1147 ../../userguide/tasks.rst:1161
 msgid ""
 ":class:`~celery.datastructures.ExceptionInfo` instance, containing the "
 "traceback."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1129
+#: ../../userguide/tasks.rst:1154
 msgid "This is run by the worker when the task is to be retried."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1131
+#: ../../userguide/tasks.rst:1156
 msgid "The exception sent to :meth:`~@Task.retry`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1132
+#: ../../userguide/tasks.rst:1157
 msgid "Unique id of the retried task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1133
+#: ../../userguide/tasks.rst:1158
 msgid "Original arguments for the retried task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1134
+#: ../../userguide/tasks.rst:1159
 msgid "Original keyword arguments for the retried task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1143
+#: ../../userguide/tasks.rst:1168
 msgid "Run by the worker if the task executes successfully."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1145
+#: ../../userguide/tasks.rst:1170
 msgid "The return value of the task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1146
+#: ../../userguide/tasks.rst:1171
 msgid "Unique id of the executed task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1147
+#: ../../userguide/tasks.rst:1172
 msgid "Original arguments for the executed task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1148
+#: ../../userguide/tasks.rst:1173
 msgid "Original keyword arguments for the executed task."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1153
+#: ../../userguide/tasks.rst:1178
 msgid "on_retry"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1158
+#: ../../userguide/tasks.rst:1183
 msgid "How it works"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1160
+#: ../../userguide/tasks.rst:1185
 msgid ""
 "Here comes the technical details, this part isn't something you need to "
 "know, but you may be interested."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1163
+#: ../../userguide/tasks.rst:1188
 msgid ""
 "All defined tasks are listed in a registry.  The registry contains a list of"
 " task names and their task classes.  You can investigate this registry "
 "yourself:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1178
+#: ../../userguide/tasks.rst:1203
 msgid ""
 "This is the list of tasks built-in to celery.  Note that tasks will only be "
 "registered when the module they are defined in is imported."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1181
+#: ../../userguide/tasks.rst:1206
 msgid ""
 "The default loader imports any modules listed in the "
 ":setting:`CELERY_IMPORTS` setting."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1184
+#: ../../userguide/tasks.rst:1209
 msgid ""
 "The entity responsible for registering your task in the registry is the "
 "metaclass: :class:`~celery.task.base.TaskType`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1187
+#: ../../userguide/tasks.rst:1212
 msgid ""
 "If you want to register your task manually you can mark the task as "
 ":attr:`~@Task.abstract`:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1195
+#: ../../userguide/tasks.rst:1220
 msgid ""
 "This way the task won't be registered, but any task inheriting from it will "
 "be."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1198
+#: ../../userguide/tasks.rst:1223
 msgid ""
 "When tasks are sent, no actual function code is sent with it, just the name "
 "of the task to execute.  When the worker then receives the message it can "
 "look up the name in its task registry to find the execution code."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1202
+#: ../../userguide/tasks.rst:1227
 msgid ""
 "This means that your workers should always be updated with the same software"
 " as the client.  This is a drawback, but the alternative is a technical "
 "challenge that has yet to be solved."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1209
+#: ../../userguide/tasks.rst:1234
 msgid "Tips and Best Practices"
 msgstr "Tips とベストプラクティス"
 
-#: ../../userguide/tasks.rst:1214
+#: ../../userguide/tasks.rst:1239
 msgid "Ignore results you don't want"
 msgstr "必要ないなら結果は無視する"
 
-#: ../../userguide/tasks.rst:1216
+#: ../../userguide/tasks.rst:1241
 msgid ""
 "If you don't care about the results of a task, be sure to set the "
 ":attr:`~@Task.ignore_result` option, as storing results wastes time and "
 "resources."
 msgstr ""
-"タスクの結果を気にしないのであれば、:attr:`~@Task.ignore_result` オプションをセットしてください。"
-"結果を保存することは時間とリソースを消費します。"
+"タスクの結果を気にしないのであれば、:attr:`~@Task.ignore_result` "
+"オプションをセットしてください。結果を保存することは時間とリソースを消費します。"
 
-#: ../../userguide/tasks.rst:1226
+#: ../../userguide/tasks.rst:1251
 msgid ""
 "Results can even be disabled globally using the "
 ":setting:`CELERY_IGNORE_RESULT` setting."
-msgstr ""
-":setting:`CELERY_IGNORE_RESULT` 設定を使って結果の保存をグローバルに無効にすることもできます。"
+msgstr ":setting:`CELERY_IGNORE_RESULT` 設定を使って結果の保存をグローバルに無効にすることもできます。"
 
-#: ../../userguide/tasks.rst:1232
+#: ../../userguide/tasks.rst:1257
 msgid "Disable rate limits if they're not used"
 msgstr "使わないならレート制限を無効にする"
 
-#: ../../userguide/tasks.rst:1234
+#: ../../userguide/tasks.rst:1259
 msgid ""
 "Disabling rate limits altogether is recommended if you don't have any tasks "
 "using them.  This is because the rate limit subsystem introduces quite a lot"
 " of complexity."
-msgstr ""
-"レート制限を使っているタスクがないのであれば、この機能を無効にすることを推奨します。"
-"レート制限のサブシステムはとても複雑なものだからです。"
+msgstr "レート制限を使っているタスクがないのであれば、この機能を無効にすることを推奨します。レート制限のサブシステムはとても複雑なものだからです。"
 
-#: ../../userguide/tasks.rst:1238
+#: ../../userguide/tasks.rst:1263
 msgid ""
 "Set the :setting:`CELERY_DISABLE_RATE_LIMITS` setting to globally disable "
 "rate limits:"
-msgstr ""
-":setting:`CELERY_DISABLE_RATE_LIMITS` 設定によってグローバルにレート制限を無効にできます。"
+msgstr ":setting:`CELERY_DISABLE_RATE_LIMITS` 設定によってグローバルにレート制限を無効にできます。"
 
-#: ../../userguide/tasks.rst:1245
+#: ../../userguide/tasks.rst:1270
 msgid ""
 "You find additional optimization tips in the :ref:`Optimizing Guide <guide-"
 "optimizing>`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1251
+#: ../../userguide/tasks.rst:1276
 msgid "Avoid launching synchronous subtasks"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1253
+#: ../../userguide/tasks.rst:1278
 msgid ""
 "Having a task wait for the result of another task is really inefficient, and"
 " may even cause a deadlock if the worker pool is exhausted."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1256
+#: ../../userguide/tasks.rst:1281
 msgid ""
 "Make your design asynchronous instead, for example by using *callbacks*."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1258
+#: ../../userguide/tasks.rst:1283
 msgid "**Bad**:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1281
+#: ../../userguide/tasks.rst:1306
 msgid "**Good**:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1303
+#: ../../userguide/tasks.rst:1328
 msgid ""
 "Here I instead created a chain of tasks by linking together different "
 ":func:`~celery.subtask`'s. You can read about chains and other powerful "
 "constructs at :ref:`designing-workflows`."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1311
+#: ../../userguide/tasks.rst:1336
 msgid "Performance and Strategies"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1316
+#: ../../userguide/tasks.rst:1341
 msgid "Granularity"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1318
+#: ../../userguide/tasks.rst:1343
 msgid ""
 "The task granularity is the amount of computation needed by each subtask. In"
 " general it is better to split the problem up into many small tasks, than "
 "have a few long running tasks."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1322
+#: ../../userguide/tasks.rst:1347
 msgid ""
 "With smaller tasks you can process more tasks in parallel and the tasks "
 "won't run long enough to block the worker from processing other waiting "
 "tasks."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1325
+#: ../../userguide/tasks.rst:1350
 msgid ""
 "However, executing a task does have overhead. A message needs to be sent, "
 "data may not be local, etc. So if the tasks are too fine-grained the "
 "additional overhead may not be worth it in the end."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1331
+#: ../../userguide/tasks.rst:1356
 msgid ""
 "The book `Art of Concurrency`_ has a section dedicated to the topic of task "
 "granularity [AOC1]_."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1336
+#: ../../userguide/tasks.rst:1361
 msgid ""
 "Breshears, Clay. Section 2.2.1, \"The Art of Concurrency\". O'Reilly Media, "
 "Inc. May 15, 2009.  ISBN-13 978-0-596-52153-0."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1342
+#: ../../userguide/tasks.rst:1367
 msgid "Data locality"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1344
+#: ../../userguide/tasks.rst:1369
 msgid ""
 "The worker processing the task should be as close to the data as possible.  "
 "The best would be to have a copy in memory, the worst would be a full "
 "transfer from another continent."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1348
+#: ../../userguide/tasks.rst:1373
 msgid ""
 "If the data is far away, you could try to run another worker at location, or"
 " if that's not possible - cache often used data, or preload data you know is"
 " going to be used."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1352
+#: ../../userguide/tasks.rst:1377
 msgid ""
 "The easiest way to share data between workers is to use a distributed cache "
 "system, like `memcached`_."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1357
+#: ../../userguide/tasks.rst:1382
 msgid ""
 "The paper `Distributed Computing Economics`_ by Jim Gray is an excellent "
 "introduction to the topic of data locality."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1368
+#: ../../userguide/tasks.rst:1393
 msgid "State"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1370
+#: ../../userguide/tasks.rst:1395
 msgid ""
 "Since celery is a distributed system, you can't know in which process, or on"
 " what machine the task will be executed.  You can't even know if the task "
 "will run in a timely manner."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1374
+#: ../../userguide/tasks.rst:1399
 msgid ""
 "The ancient async sayings tells us that “asserting the world is the "
 "responsibility of the task”.  What this means is that the world view may "
@@ -1567,7 +1467,7 @@ msgid ""
 "that, not the callers."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1382
+#: ../../userguide/tasks.rst:1407
 msgid ""
 "Another gotcha is Django model objects.  They shouldn't be passed on as "
 "arguments to tasks.  It's almost always better to re-fetch the object from "
@@ -1575,19 +1475,19 @@ msgid ""
 "to race conditions."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1387
+#: ../../userguide/tasks.rst:1412
 msgid ""
 "Imagine the following scenario where you have an article and a task that "
 "automatically expands some abbreviations in it:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1401
+#: ../../userguide/tasks.rst:1426
 msgid ""
 "First, an author creates an article and saves it, then the author clicks on "
 "a button that initiates the abbreviation task::"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1407
+#: ../../userguide/tasks.rst:1432
 msgid ""
 "Now, the queue is very busy, so the task won't be run for another 2 minutes."
 " In the meantime another author makes changes to the article, so when the "
@@ -1595,27 +1495,27 @@ msgid ""
 "because the task had the old body in its argument."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1412
+#: ../../userguide/tasks.rst:1437
 msgid ""
 "Fixing the race condition is easy, just use the article id instead, and re-"
 "fetch the article in the task body:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1425
+#: ../../userguide/tasks.rst:1450
 msgid ""
 "There might even be performance benefits to this approach, as sending large "
 "messages may be expensive."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1431
+#: ../../userguide/tasks.rst:1456
 msgid "Database transactions"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1433
+#: ../../userguide/tasks.rst:1458
 msgid "Let's have a look at another example:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1444
+#: ../../userguide/tasks.rst:1469
 msgid ""
 "This is a Django view creating an article object in the database, then "
 "passing the primary key to a task.  It uses the `commit_on_success` "
@@ -1623,54 +1523,47 @@ msgid ""
 "back if the view raises an exception."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1449
+#: ../../userguide/tasks.rst:1474
 msgid ""
 "There is a race condition if the task starts executing before the "
 "transaction has been committed; The database object does not exist yet!"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1453
+#: ../../userguide/tasks.rst:1478
 msgid ""
 "The solution is to *always commit transactions before sending tasks "
 "depending on state from the current transaction*:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1472
+#: ../../userguide/tasks.rst:1511
 msgid "Example"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1474
-msgid ""
-"Let's take a real wold example; A blog where comments posted needs to be "
-"filtered for spam.  When the comment is created, the spam filter runs in the"
-" background, so the user doesn't have to wait for it to finish."
-msgstr ""
-
-#: ../../userguide/tasks.rst:1478
+#: ../../userguide/tasks.rst:1517
 msgid ""
 "I have a Django blog application allowing comments on blog posts.  I'll "
 "describe parts of the models/views and tasks for this application."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1483
+#: ../../userguide/tasks.rst:1522
 msgid "blog/models.py"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1485
+#: ../../userguide/tasks.rst:1524
 msgid "The comment model looks like this:"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1509
+#: ../../userguide/tasks.rst:1548
 msgid ""
 "In the view where the comment is posted, I first write the comment to the "
 "database, then I launch the spam filter task in the background."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1515
+#: ../../userguide/tasks.rst:1554
 msgid "blog/views.py"
 msgstr ""
 
-#: ../../userguide/tasks.rst:1553
+#: ../../userguide/tasks.rst:1592
 msgid ""
 "To filter spam in comments I use `Akismet`_, the service used to filter spam"
 " in comments posted to the free weblog platform `Wordpress`.  `Akismet`_ is "
@@ -1678,12 +1571,192 @@ msgid ""
 "sign up to their service to get an API key."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1558
+#: ../../userguide/tasks.rst:1597
 msgid ""
 "To make API calls to `Akismet`_ I use the `akismet.py`_ library written by "
 "`Michael Foord`_."
 msgstr ""
 
-#: ../../userguide/tasks.rst:1564
+#: ../../userguide/tasks.rst:1603
 msgid "blog/tasks.py"
 msgstr ""
+
+#: ../../userguide/tasks.rst:47
+msgid ""
+"You can easily create a task from any callable by using the :meth:`~@task` "
+"decorator:"
+msgstr ""
+":meth:`~@task` デコレーターを使えば、呼び出し可能オブジェクトから簡単にタスクを生成できます。"
+
+#: ../../userguide/tasks.rst:329
+msgid ""
+"You can also use :func:`print`, as anything written to standard out/-err "
+"will be redirected to the logging system (you can disable this, see "
+":setting:`CELERY_REDIRECT_STDOUTS`)."
+msgstr ""
+
+#: ../../userguide/tasks.rst:335
+msgid ""
+"The worker will not update the redirection if you create a logger instance "
+"somewhere in your task or task module."
+msgstr ""
+
+#: ../../userguide/tasks.rst:338
+msgid ""
+"If you want to redirect ``sys.stdout`` and ``sys.stderr`` to a custom logger"
+" you have to enable this manually, for example:"
+msgstr ""
+
+#: ../../userguide/tasks.rst:528
+msgid ""
+"By default the task will keep track of subtasks called "
+"(``task.request.children``), and this will be stored with the final result "
+"in the result backend, available to the client via ``AsyncResult.children``."
+msgstr ""
+
+#: ../../userguide/tasks.rst:533
+msgid ""
+"This list of task can grow quite big for tasks starting many subtasks, and "
+"you can set this attribute to False to disable it."
+msgstr ""
+
+#: ../../userguide/tasks.rst:556
+msgid ""
+"Example: `\"100/m\"` (hundred tasks a minute). This will enforce a minimum "
+"delay of 600ms between starting two tasks on the same worker instance."
+msgstr ""
+
+#: ../../userguide/tasks.rst:562
+msgid ""
+"Note that this is a *per worker instance* rate limit, and not a global rate "
+"limit. To enforce a global rate limit (e.g. for an API with a maximum number"
+" of  requests per second), you must restrict to a given queue."
+msgstr ""
+
+#: ../../userguide/tasks.rst:693
+msgid ""
+"If you want to keep track of tasks or need the return values, then Celery "
+"must store or send the states somewhere so that they can be retrieved later."
+" There are several built-in result backends to choose from: "
+"SQLAlchemy/Django ORM, Memcached, RabbitMQ/QPid (rpc), MongoDB, and Redis --"
+" or you can define your own."
+msgstr ""
+
+#: ../../userguide/tasks.rst:707
+msgid "RPC Result Backend (RabbitMQ/QPid)"
+msgstr ""
+
+#: ../../userguide/tasks.rst:709
+msgid ""
+"The RPC result backend (`rpc://`) is special as it does not actually *store*"
+" the states, but rather sends them as messages.  This is an important "
+"difference as it means that a result *can only be retrieved once*, and *only"
+" by the client that initiated the task*. Two different processes can not "
+"wait for the same result."
+msgstr ""
+
+#: ../../userguide/tasks.rst:718
+msgid ""
+"The messages are transient (non-persistent) by default, so the results will "
+"disappear if the broker restarts. You can configure the result backend to "
+"send persistent messages using the :setting:`CELERY_RESULT_PERSISTENT` "
+"setting."
+msgstr ""
+
+#: ../../userguide/tasks.rst:1495
+msgid ""
+"Django 1.6 (and later) now enables autocommit mode by default, and "
+"``commit_on_success``/``commit_manually`` are deprecated."
+msgstr ""
+
+#: ../../userguide/tasks.rst:1498
+msgid ""
+"This means each SQL query is wrapped and executed in individual "
+"transactions, making it less likely to experience the problem described "
+"above."
+msgstr ""
+
+#: ../../userguide/tasks.rst:1502
+msgid ""
+"However, enabling ``ATOMIC_REQUESTS`` on the database connection will bring "
+"back the transaction-per-request model and the race condition along with it."
+"  In this case, the simple solution is using the "
+"``@transaction.non_atomic_requests`` decorator to go back to autocommit for "
+"that view only."
+msgstr ""
+
+#: ../../userguide/tasks.rst:1513
+msgid ""
+"Let's take a real world example; A blog where comments posted needs to be "
+"filtered for spam.  When the comment is created, the spam filter runs in the"
+" background, so the user doesn't have to wait for it to finish."
+msgstr ""
+
+#~ msgid ""
+#~ "You can easily create a task from any callable by using the "
+#~ ":meth:`~@Celery.task` decorator:"
+#~ msgstr ":meth:`~@Celery.task` デコレーターを使って callable から容易にタスクを生成できます:"
+
+#~ msgid ""
+#~ "You can also use :func:`print`, as anything written to standard out/-err "
+#~ "will be redirected to logging system (you can disable this, see "
+#~ ":setting:`CELERY_REDIRECT_STDOUTS`)."
+#~ msgstr ""
+#~ ":func:`print` 関数も使用でき、標準出力/エラーに出力された内容は logging "
+#~ "システムにリダイレクトされます(これは無効にできます。:setting:`CELERY_REDIRECT_STDOUTS` を参照)。"
+
+#~ msgid ""
+#~ "Example: `\"100/m\"` (hundred tasks a minute). This will enforce a minimum "
+#~ "delay of 10ms between starting two tasks."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to keep track of tasks or need the return values, then Celery "
+#~ "must store or send the states somewhere so that they can be retrieved later."
+#~ " There are several built-in result backends to choose from: "
+#~ "SQLAlchemy/Django ORM, Memcached, RabbitMQ (amqp), MongoDB, and Redis -- or "
+#~ "you can define your own."
+#~ msgstr ""
+
+#~ msgid "RabbitMQ Result Backend"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The RabbitMQ result backend (amqp) is special as it does not actually "
+#~ "*store* the states, but rather sends them as messages.  This is an important"
+#~ " difference as it means that a result *can only be retrieved once*; If you "
+#~ "have two processes waiting for the same result, one of the processes will "
+#~ "never receive the result!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are several other pitfalls you should be aware of when using the "
+#~ "RabbitMQ result backend:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Every new task creates a new queue on the server, with thousands of tasks "
+#~ "the broker may be overloaded with queues and this will affect performance in"
+#~ " negative ways. If you're using RabbitMQ then each queue will be a separate "
+#~ "Erlang process, so if you're planning to keep many results simultaneously "
+#~ "you may have to increase the Erlang process limit, and the maximum number of"
+#~ " file descriptors your OS allows."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Old results will be cleaned automatically, based on the "
+#~ ":setting:`CELERY_TASK_RESULT_EXPIRES` setting.  By default this is set to "
+#~ "expire after 1 day: if you have a very busy cluster you should lower this "
+#~ "value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For a list of options supported by the RabbitMQ result backend, please see "
+#~ ":ref:`conf-amqp-result-backend`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's take a real wold example; A blog where comments posted needs to be "
+#~ "filtered for spam.  When the comment is created, the spam filter runs in the"
+#~ " background, so the user doesn't have to wait for it to finish."
+#~ msgstr ""

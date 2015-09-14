@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -92,96 +92,96 @@ msgstr ""
 msgid "**purge**: Purge messages from all configured task queues."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:79
+#: ../../userguide/monitoring.rst:75
 msgid ""
 "There is no undo for this operation, and messages will be permanently "
 "deleted!"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:82
+#: ../../userguide/monitoring.rst:83
 msgid "**inspect active**: List active tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:88
+#: ../../userguide/monitoring.rst:89
 msgid "These are all the tasks that are currently being executed."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:90
+#: ../../userguide/monitoring.rst:91
 msgid "**inspect scheduled**: List scheduled ETA tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:96
+#: ../../userguide/monitoring.rst:97
 msgid ""
 "These are tasks reserved by the worker because they have the `eta` or "
 "`countdown` argument set."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:99
+#: ../../userguide/monitoring.rst:100
 msgid "**inspect reserved**: List reserved tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:105
+#: ../../userguide/monitoring.rst:106
 msgid ""
 "This will list all tasks that have been prefetched by the worker, and is "
 "currently waiting to be executed (does not include tasks with an eta)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:109
+#: ../../userguide/monitoring.rst:110
 msgid "**inspect revoked**: List history of revoked tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:115
+#: ../../userguide/monitoring.rst:116
 msgid "**inspect registered**: List registered tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:121
+#: ../../userguide/monitoring.rst:122
 msgid ""
 "**inspect stats**: Show worker statistics (see :ref:`worker-statistics`)"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:127
+#: ../../userguide/monitoring.rst:128
 msgid "**control enable_events**: Enable events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:133
+#: ../../userguide/monitoring.rst:134
 msgid "**control disable_events**: Disable events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:139
+#: ../../userguide/monitoring.rst:140
 msgid ""
 "**migrate**: Migrate tasks from one broker to another (**EXPERIMENTAL**)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:145
+#: ../../userguide/monitoring.rst:146
 msgid ""
 "This command will migrate all the tasks on one broker to another. As this "
 "command is new and experimental you should be sure to have a backup of the "
 "data before proceeding."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:151
+#: ../../userguide/monitoring.rst:152
 msgid ""
 "All ``inspect`` and ``control`` commands supports a ``--timeout`` argument, "
 "This is the number of seconds to wait for responses. You may have to "
 "increase this timeout if you're not getting a response due to latency."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:159
+#: ../../userguide/monitoring.rst:160
 msgid "Specifying destination nodes"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:161
+#: ../../userguide/monitoring.rst:162
 msgid ""
 "By default the inspect and control commands operates on all workers. You can"
 " specify a single, or a list of workers by using the `--destination` "
 "argument:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:175
+#: ../../userguide/monitoring.rst:176
 msgid "Flower: Real-time Celery web-monitor"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:177
+#: ../../userguide/monitoring.rst:178
 msgid ""
 "Flower is a real-time web based monitor and administration tool for Celery. "
 "It is under active development, but is already an essential tool. Being the "
@@ -189,124 +189,124 @@ msgid ""
 "celerymon and the ncurses based monitor."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:182
+#: ../../userguide/monitoring.rst:183
 msgid ""
 "Flower is pronounced like \"flow\", but you can also use the botanical "
 "version if you prefer."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:186
+#: ../../userguide/monitoring.rst:187
 msgid "Features"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:188
+#: ../../userguide/monitoring.rst:189
 msgid "Real-time monitoring using Celery Events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:190
+#: ../../userguide/monitoring.rst:191
 msgid "Task progress and history."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:191
+#: ../../userguide/monitoring.rst:192
 msgid ""
 "Ability to show task details (arguments, start time, runtime, and more)"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:192
+#: ../../userguide/monitoring.rst:193
 msgid "Graphs and statistics"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:194
+#: ../../userguide/monitoring.rst:195
 msgid "Remote Control"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:196
+#: ../../userguide/monitoring.rst:197
 msgid "View worker status and statistics."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:197
+#: ../../userguide/monitoring.rst:198
 msgid "Shutdown and restart worker instances."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:198
+#: ../../userguide/monitoring.rst:199
 msgid "Control worker pool size and autoscale settings."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:199
+#: ../../userguide/monitoring.rst:200
 msgid "View and modify the queues a worker instance consumes from."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:200
+#: ../../userguide/monitoring.rst:201
 msgid "View currently running tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:201
+#: ../../userguide/monitoring.rst:202
 msgid "View scheduled tasks (ETA/countdown)"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:202
+#: ../../userguide/monitoring.rst:203
 msgid "View reserved and revoked tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:203
+#: ../../userguide/monitoring.rst:204
 msgid "Apply time and rate limits"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:204
+#: ../../userguide/monitoring.rst:205
 msgid "Configuration viewer"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:205
+#: ../../userguide/monitoring.rst:206
 msgid "Revoke or terminate tasks"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:207
+#: ../../userguide/monitoring.rst:208
 msgid "HTTP API"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:208
+#: ../../userguide/monitoring.rst:209
 msgid "OpenID authentication"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:210
+#: ../../userguide/monitoring.rst:211
 msgid "**Screenshots**"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:218
+#: ../../userguide/monitoring.rst:219
 msgid "More screenshots_:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:223
+#: ../../userguide/monitoring.rst:224
 msgid "Usage"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:225
+#: ../../userguide/monitoring.rst:226
 msgid "You can use pip to install Flower:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:231
+#: ../../userguide/monitoring.rst:232
 msgid "Running the flower command will start a web-server that you can visit:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:237
+#: ../../userguide/monitoring.rst:238
 msgid ""
 "The default port is http://localhost:5555, but you can change this using the"
 " `--port` argument:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:243
+#: ../../userguide/monitoring.rst:244
 msgid "Broker URL can also be passed through the `--broker` argument :"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:251
+#: ../../userguide/monitoring.rst:252
 msgid "Then, you can visit flower in your web browser :"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:262
+#: ../../userguide/monitoring.rst:263
 msgid "celery events: Curses Monitor"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:266
+#: ../../userguide/monitoring.rst:267
 msgid ""
 "`celery events` is a simple curses monitor displaying task and worker "
 "history.  You can inspect the result and traceback of tasks, and it also "
@@ -315,61 +315,61 @@ msgid ""
 "want to use Flower instead."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:272
+#: ../../userguide/monitoring.rst:273
 msgid "Starting:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:278
+#: ../../userguide/monitoring.rst:279
 msgid "You should see a screen like:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:283
+#: ../../userguide/monitoring.rst:284
 msgid ""
 "`celery events` is also used to start snapshot cameras (see :ref"
 ":`monitoring-snapshots`:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:290
+#: ../../userguide/monitoring.rst:291
 msgid "and it includes a tool to dump events to :file:`stdout`:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:296
+#: ../../userguide/monitoring.rst:297
 msgid "For a complete list of options use ``--help``:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:307
+#: ../../userguide/monitoring.rst:308
 msgid "RabbitMQ"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:309
+#: ../../userguide/monitoring.rst:310
 msgid ""
 "To manage a Celery cluster it is important to know how RabbitMQ can be "
 "monitored."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:312
+#: ../../userguide/monitoring.rst:313
 msgid ""
 "RabbitMQ ships with the `rabbitmqctl(1)`_ command, with this you can list "
 "queues, exchanges, bindings, queue lengths, the memory usage of each queue, "
 "as well as manage users, virtual hosts and their permissions."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:319
+#: ../../userguide/monitoring.rst:320
 msgid ""
 "The default virtual host (``\"/\"``) is used in these examples, if you use a"
 " custom virtual host you have to add the ``-p`` argument to the command, "
 "e.g: ``rabbitmqctl list_queues -p my_vhost …``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:329 ../../userguide/monitoring.rst:373
+#: ../../userguide/monitoring.rst:330 ../../userguide/monitoring.rst:374
 msgid "Inspecting queues"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:331 ../../userguide/monitoring.rst:375
+#: ../../userguide/monitoring.rst:332 ../../userguide/monitoring.rst:376
 msgid "Finding the number of tasks in a queue:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:339
+#: ../../userguide/monitoring.rst:340
 msgid ""
 "Here `messages_ready` is the number of messages ready for delivery (sent but"
 " not received), `messages_unacknowledged` is the number of messages that has"
@@ -378,36 +378,36 @@ msgid ""
 "unacknowledged messages."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:346
+#: ../../userguide/monitoring.rst:347
 msgid "Finding the number of workers currently consuming from a queue:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:352
+#: ../../userguide/monitoring.rst:353
 msgid "Finding the amount of memory allocated to a queue:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:358
+#: ../../userguide/monitoring.rst:359
 msgid ""
 "Adding the ``-q`` option to `rabbitmqctl(1)`_ makes the output easier to "
 "parse."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:365
+#: ../../userguide/monitoring.rst:366
 msgid "Redis"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:367
+#: ../../userguide/monitoring.rst:368
 msgid ""
 "If you're using Redis as the broker, you can monitor the Celery cluster "
 "using the `redis-cli(1)` command to list lengths of queues."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:381
+#: ../../userguide/monitoring.rst:382
 msgid ""
 "The default queue is named `celery`. To get all available queues, invoke:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:389
+#: ../../userguide/monitoring.rst:390
 msgid ""
 "Queue keys only exists when there are tasks in them, so if a key does not "
 "exist it simply means there are no messages in that queue. This is because "
@@ -416,7 +416,7 @@ msgid ""
 "returns 0."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:395
+#: ../../userguide/monitoring.rst:396
 msgid ""
 "Also, if you're using Redis for other purposes, the output of the `keys` "
 "command will include unrelated values stored in the database.  The "
@@ -427,80 +427,80 @@ msgid ""
 "database based."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:406
+#: ../../userguide/monitoring.rst:407
 msgid "Munin"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:408
+#: ../../userguide/monitoring.rst:409
 msgid ""
 "This is a list of known Munin plug-ins that can be useful when maintaining a"
 " Celery cluster."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:411
+#: ../../userguide/monitoring.rst:412
 msgid "rabbitmq-munin: Munin plug-ins for RabbitMQ."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:413
+#: ../../userguide/monitoring.rst:414
 msgid "http://github.com/ask/rabbitmq-munin"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:415
+#: ../../userguide/monitoring.rst:416
 msgid ""
 "celery_tasks: Monitors the number of times each task type has been executed "
 "(requires `celerymon`)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:418
+#: ../../userguide/monitoring.rst:419
 msgid "http://exchange.munin-monitoring.org/plugins/celery_tasks-2/details"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:420
+#: ../../userguide/monitoring.rst:421
 msgid ""
 "celery_task_states: Monitors the number of tasks in each state (requires "
 "`celerymon`)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:423
+#: ../../userguide/monitoring.rst:424
 msgid "http://exchange.munin-monitoring.org/plugins/celery_tasks/details"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:429
+#: ../../userguide/monitoring.rst:430
 msgid "Events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:431
+#: ../../userguide/monitoring.rst:432
 msgid ""
 "The worker has the ability to send a message whenever some event happens.  "
 "These events are then captured by tools like Flower, and :program:`celery "
 "events` to monitor the cluster."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:438
+#: ../../userguide/monitoring.rst:439
 msgid "Snapshots"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:442
+#: ../../userguide/monitoring.rst:443
 msgid ""
 "Even a single worker can produce a huge amount of events, so storing the "
 "history of all events on disk may be very expensive."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:445
+#: ../../userguide/monitoring.rst:446
 msgid ""
 "A sequence of events describes the cluster state in that time period, by "
 "taking periodic snapshots of this state you can keep all history, but still "
 "only periodically write it to disk."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:449
+#: ../../userguide/monitoring.rst:450
 msgid ""
 "To take snapshots you need a Camera class, with this you can define what "
 "should happen every time the state is captured;  You can write it to a "
 "database, send it by email or something else entirely."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:453
+#: ../../userguide/monitoring.rst:454
 msgid ""
 ":program:`celery events` is then used to take snapshots with the camera, for"
 " example if you want to capture state every 2 seconds using the camera "
@@ -508,287 +508,287 @@ msgid ""
 "arguments:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:466
+#: ../../userguide/monitoring.rst:467
 msgid "Custom Camera"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:468
+#: ../../userguide/monitoring.rst:469
 msgid ""
 "Cameras can be useful if you need to capture events and do something with "
 "those events at an interval.  For real-time event processing you should use "
 ":class:`@events.Receiver` directly, like in :ref:`event-real-time-example`."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:473
+#: ../../userguide/monitoring.rst:474
 msgid "Here is an example camera, dumping the snapshot to screen:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:492
+#: ../../userguide/monitoring.rst:493
 msgid ""
 "See the API reference for :mod:`celery.events.state` to read more about "
 "state objects."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:495
+#: ../../userguide/monitoring.rst:496
 msgid ""
 "Now you can use this cam with :program:`celery events` by specifying it with"
 " the :option:`-c` option:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:502
+#: ../../userguide/monitoring.rst:503
 msgid "Or you can use it programmatically like this:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:523
+#: ../../userguide/monitoring.rst:524
 msgid "Real-time processing"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:525
+#: ../../userguide/monitoring.rst:526
 msgid "To process events in real-time you need the following"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:527
+#: ../../userguide/monitoring.rst:528
 msgid "An event consumer (this is the ``Receiver``)"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:529
+#: ../../userguide/monitoring.rst:530
 msgid "A set of handlers called when events come in."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:531
+#: ../../userguide/monitoring.rst:532
 msgid ""
 "You can have different handlers for each event type, or a catch-all handler "
 "can be used ('*')"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:534
+#: ../../userguide/monitoring.rst:535
 msgid "State (optional)"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:536
+#: ../../userguide/monitoring.rst:537
 msgid ""
 ":class:`@events.State` is a convenient in-memory representation of tasks and"
 " workers in the cluster that is updated as events come in."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:539
+#: ../../userguide/monitoring.rst:540
 msgid ""
 "It encapsulates solutions for many common things, like checking if a worker "
 "is still alive (by verifying heartbeats), merging event fields together as "
 "events come in, making sure timestamps are in sync, and so on."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:544
+#: ../../userguide/monitoring.rst:545
 msgid "Combining these you can easily process events in real-time:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:577
+#: ../../userguide/monitoring.rst:578
 msgid ""
 "The wakeup argument to ``capture`` sends a signal to all workers to force "
 "them to send a heartbeat.  This way you can immediately see workers when the"
 " monitor starts."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:582
+#: ../../userguide/monitoring.rst:583
 msgid "You can listen to specific events by specifying the handlers:"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:613
+#: ../../userguide/monitoring.rst:614
 msgid "Event Reference"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:615
+#: ../../userguide/monitoring.rst:616
 msgid "This list contains the events sent by the worker, and their arguments."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:620
+#: ../../userguide/monitoring.rst:621
 msgid "Task Events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:625
+#: ../../userguide/monitoring.rst:626
 msgid "task-sent"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:627
+#: ../../userguide/monitoring.rst:628
 msgid ""
 "``task-sent(uuid, name, args, kwargs, retries, eta, expires, queue, "
 "exchange, routing_key)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:630
+#: ../../userguide/monitoring.rst:631
 msgid ""
 "Sent when a task message is published and the "
 ":setting:`CELERY_SEND_TASK_SENT_EVENT` setting is enabled."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:636
+#: ../../userguide/monitoring.rst:637
 msgid "task-received"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:638
+#: ../../userguide/monitoring.rst:639
 msgid ""
 "``task-received(uuid, name, args, kwargs, retries, eta, hostname, "
 "timestamp)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:641
+#: ../../userguide/monitoring.rst:642
 msgid "Sent when the worker receives a task."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:646
+#: ../../userguide/monitoring.rst:647
 msgid "task-started"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:648
+#: ../../userguide/monitoring.rst:649
 msgid "``task-started(uuid, hostname, timestamp, pid)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:650
+#: ../../userguide/monitoring.rst:651
 msgid "Sent just before the worker executes the task."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:655
+#: ../../userguide/monitoring.rst:656
 msgid "task-succeeded"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:657
+#: ../../userguide/monitoring.rst:658
 msgid "``task-succeeded(uuid, result, runtime, hostname, timestamp)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:659
+#: ../../userguide/monitoring.rst:660
 msgid "Sent if the task executed successfully."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:661
+#: ../../userguide/monitoring.rst:662
 msgid ""
 "Runtime is the time it took to execute the task using the pool. (Starting "
 "from the task is sent to the worker pool, and ending when the pool result "
 "handler callback is called)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:668
+#: ../../userguide/monitoring.rst:669
 msgid "task-failed"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:670
+#: ../../userguide/monitoring.rst:671
 msgid "``task-failed(uuid, exception, traceback, hostname, timestamp)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:672
+#: ../../userguide/monitoring.rst:673
 msgid "Sent if the execution of the task failed."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:677
+#: ../../userguide/monitoring.rst:678
 msgid "task-revoked"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:679
+#: ../../userguide/monitoring.rst:680
 msgid "``task-revoked(uuid, terminated, signum, expired)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:681
+#: ../../userguide/monitoring.rst:682
 msgid ""
 "Sent if the task has been revoked (Note that this is likely to be sent by "
 "more than one worker)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:685
+#: ../../userguide/monitoring.rst:686
 msgid "``terminated`` is set to true if the task process was terminated,"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:685
+#: ../../userguide/monitoring.rst:686
 msgid "and the ``signum`` field set to the signal used."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:687
+#: ../../userguide/monitoring.rst:688
 msgid "``expired`` is set to true if the task expired."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:692
+#: ../../userguide/monitoring.rst:693
 msgid "task-retried"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:694
+#: ../../userguide/monitoring.rst:695
 msgid "``task-retried(uuid, exception, traceback, hostname, timestamp)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:696
+#: ../../userguide/monitoring.rst:697
 msgid "Sent if the task failed, but will be retried in the future."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:701
+#: ../../userguide/monitoring.rst:702
 msgid "Worker Events"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:706
+#: ../../userguide/monitoring.rst:707
 msgid "worker-online"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:708
+#: ../../userguide/monitoring.rst:709
 msgid "``worker-online(hostname, timestamp, freq, sw_ident, sw_ver, sw_sys)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:710
+#: ../../userguide/monitoring.rst:711
 msgid "The worker has connected to the broker and is online."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:712 ../../userguide/monitoring.rst:730
+#: ../../userguide/monitoring.rst:713 ../../userguide/monitoring.rst:731
 msgid "`hostname`: Hostname of the worker."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:713 ../../userguide/monitoring.rst:731
+#: ../../userguide/monitoring.rst:714 ../../userguide/monitoring.rst:732
 msgid "`timestamp`: Event timestamp."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:714 ../../userguide/monitoring.rst:732
+#: ../../userguide/monitoring.rst:715 ../../userguide/monitoring.rst:733
 msgid "`freq`: Heartbeat frequency in seconds (float)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:715 ../../userguide/monitoring.rst:733
+#: ../../userguide/monitoring.rst:716 ../../userguide/monitoring.rst:734
 msgid "`sw_ident`: Name of worker software (e.g. ``py-celery``)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:716 ../../userguide/monitoring.rst:734
+#: ../../userguide/monitoring.rst:717 ../../userguide/monitoring.rst:735
 msgid "`sw_ver`: Software version (e.g. 2.2.0)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:717 ../../userguide/monitoring.rst:735
+#: ../../userguide/monitoring.rst:718 ../../userguide/monitoring.rst:736
 msgid "`sw_sys`: Operating System (e.g. Linux, Windows, Darwin)."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:722
+#: ../../userguide/monitoring.rst:723
 msgid "worker-heartbeat"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:724
+#: ../../userguide/monitoring.rst:725
 msgid ""
 "``worker-heartbeat(hostname, timestamp, freq, sw_ident, sw_ver, sw_sys, "
 "active, processed)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:727
+#: ../../userguide/monitoring.rst:728
 msgid ""
 "Sent every minute, if the worker has not sent a heartbeat in 2 minutes, it "
 "is considered to be offline."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:736
+#: ../../userguide/monitoring.rst:737
 msgid "`active`: Number of currently executing tasks."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:737
+#: ../../userguide/monitoring.rst:738
 msgid "`processed`: Total number of tasks processed by this worker."
 msgstr ""
 
-#: ../../userguide/monitoring.rst:742
+#: ../../userguide/monitoring.rst:743
 msgid "worker-offline"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:744
+#: ../../userguide/monitoring.rst:745
 msgid ""
 "``worker-offline(hostname, timestamp, freq, sw_ident, sw_ver, sw_sys)``"
 msgstr ""
 
-#: ../../userguide/monitoring.rst:746
+#: ../../userguide/monitoring.rst:747
 msgid "The worker has disconnected from the broker."
 msgstr ""

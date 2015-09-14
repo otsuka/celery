@@ -27,8 +27,9 @@ msgstr "Celery はどんなことに使えますか？"
 msgid ""
 "**Answer:** `Queue everything and delight everyone`_ is a good article "
 "describing why you would use a queue in a web context."
-msgstr "**回答:** `Queue everything and delight everyone`_ は、"
-" Web コンテキストでキューを使うべき理由について書かれている優れた記事です。"
+msgstr ""
+"**回答:** `Queue everything and delight everyone`_ は、 Web "
+"コンテキストでキューを使うべき理由について書かれている優れた記事です。"
 
 #: ../../faq.rst:26
 msgid "These are some common use cases:"
@@ -41,9 +42,8 @@ msgid ""
 "the user the impression of good performance and \"snappiness\", even though "
 "the real work might actually take some time."
 msgstr ""
-"バックグラウンドで何かを実行する。例えば、Web リクエストは可能な限り早く終わらせ、"
-"ユーザーのページは徐々に更新していく。こうすれば、"
-"実際の処理には時間が掛かっているけれど、ユーザーにはパフォーマンスが良い印象を与えられます。"
+"バックグラウンドで何かを実行する。例えば、Web "
+"リクエストは可能な限り早く終わらせ、ユーザーのページは徐々に更新していく。こうすれば、実際の処理には時間が掛かっているけれど、ユーザーにはパフォーマンスが良い印象を与えられます。"
 
 #: ../../faq.rst:33
 msgid "Running something after the web request has finished."
@@ -107,8 +107,8 @@ msgid ""
 "lines of code you would not be able to draw any conclusions from such a "
 "number."
 msgstr ""
-"コードの行数は有用なメトリクスではありません。もし Celery が本当に 50,000 行のコードで"
-"できていたとしても、その数字から何かの結論を得られるものではないと思います。"
+"コードの行数は有用なメトリクスではありません。もし Celery が本当に 50,000 "
+"行のコードでできていたとしても、その数字から何かの結論を得られるものではないと思います。"
 
 #: ../../faq.rst:70
 msgid "Does Celery have many dependencies?"
@@ -123,19 +123,16 @@ msgid ""
 "like pip and PyPI makes the hassle of installing and maintaining "
 "dependencies a thing of the past."
 msgstr ""
-"Celery へのよくある批判が、たくさんの依存パッケージを必要としているというものです。"
-"今日のソフトウェア開発における複雑さに対処する方法としてコードを再利用することは定石であり、"
-"それを考慮すればこのような批判の論理的根拠はないものと思われます。"
-"また、pip や PyPI といったパッケージマネージャーが依存パッケージのインストールや管理の"
-"煩わしさを過去のものとしてくれたおかげで、依存パッケージを加えるコストは今日ではとても低いもの"
-"となっています。"
+"Celery "
+"へのよくある批判が、たくさんの依存パッケージを必要としているというものです。今日のソフトウェア開発における複雑さに対処する方法としてコードを再利用することは定石であり、それを考慮すればこのような批判の論理的根拠はないものと思われます。また、pip"
+" や PyPI "
+"といったパッケージマネージャーが依存パッケージのインストールや管理の煩わしさを過去のものとしてくれたおかげで、依存パッケージを加えるコストは今日ではとても低いものとなっています。"
 
 #: ../../faq.rst:79
 msgid ""
 "Celery has replaced several dependencies along the way, and the current list"
 " of dependencies are:"
-msgstr ""
-"Celery はいくつかの依存パッケージをリプレイスしており、現在の依存リストは次のようになっています:"
+msgstr "Celery はいくつかの依存パッケージをリプレイスしており、現在の依存リストは次のようになっています:"
 
 #: ../../faq.rst:83
 msgid "celery"
@@ -152,10 +149,10 @@ msgid ""
 "different message brokers.  It is also used by the OpenStack project, and "
 "many others, validating the choice to separate it from the Celery codebase."
 msgstr ""
-"Kombu は Celery のエコシステムの一部で、メッセージの送受信に使われるライブラリです。"
-"また様々なメッセージブローカーのサポートを可能にもしてくれています。"
-"OpenStack をはじめとする数多くのプロジェクトでも使用されており、Celery のコードベースから"
-"これらの機能を分離するための選択肢として正しかったことを示してます。"
+"Kombu は Celery "
+"のエコシステムの一部で、メッセージの送受信に使われるライブラリです。また様々なメッセージブローカーのサポートを可能にもしてくれています。OpenStack"
+" をはじめとする数多くのプロジェクトでも使用されており、Celery "
+"のコードベースからこれらの機能を分離するための選択肢として正しかったことを示してます。"
 
 #: ../../faq.rst:95
 msgid "`billiard`_"
@@ -167,15 +164,8 @@ msgid ""
 "performance and stability improvements.  It is an eventual goal that these "
 "improvements will be merged back into Python one day."
 msgstr ""
-"Billiard は Python の multiprocessing モジュールのフォークで、パフォーマンスと安定性が改善されています。"
-"これらの改善がいつの日か Python 本体にマージされることを目指しています。"
-
-#: ../../faq.rst:101
-msgid ""
-"It is also used for compatibility with older Python versions that doesn't "
-"come with the multiprocessing module."
-msgstr ""
-"multiprocessing モジュールを標準で備えていない 古いバージョンの Python との互換性を持たせるのにも利用されています。"
+"Billiard は Python の multiprocessing "
+"モジュールのフォークで、パフォーマンスと安定性が改善されています。これらの改善がいつの日か Python 本体にマージされることを目指しています。"
 
 #: ../../faq.rst:106
 msgid "`pytz`"
@@ -194,8 +184,8 @@ msgid ""
 "If you use django-celery then you don't have to install celery separately, "
 "as it will make sure that the required version is installed."
 msgstr ""
-"django-celery を使うと、別途 Celery をインストールする必要はありません。"
-"必要なバージョンの Celery をインストールしてくれます。"
+"django-celery を使うと、別途 Celery をインストールする必要はありません。必要なバージョンの Celery "
+"をインストールしてくれます。"
 
 #: ../../faq.rst:118
 msgid "django-celery does not have any other dependencies."
@@ -218,7 +208,6 @@ msgid ""
 "The underlying pure-Python amqp client implementation.  AMQP being the "
 "default broker this is a natural dependency."
 msgstr ""
-""
 
 #: ../../faq.rst:132
 msgid "`anyjson`_"
@@ -228,8 +217,7 @@ msgstr ""
 msgid ""
 "anyjson is an utility library to select the best possible JSON "
 "implementation."
-msgstr ""
-"anyjson は最良な JSON 実装を選択をするユーティリティライブラリです。"
+msgstr "anyjson は最良な JSON 実装を選択をするユーティリティライブラリです。"
 
 #: ../../faq.rst:142
 msgid ""
@@ -237,15 +225,14 @@ msgid ""
 "running on older Python versions, for example Python 2.6 depends on the "
 "``importlib``, and ``ordereddict`` libraries."
 msgstr ""
-"古いバージョンの Python を使う場合、互換性のために追加パッケージがインストールされます。"
-"例えば Python 2.6 では ``importlib``、``ordereddict`` ライブラリに依存しています。"
+"古いバージョンの Python を使う場合、互換性のために追加パッケージがインストールされます。例えば Python 2.6 では "
+"``importlib``、``ordereddict`` ライブラリに依存しています。"
 
 #: ../../faq.rst:147
 msgid ""
 "Also, to handle the dependencies for popular configuration choices Celery "
 "defines a number of \"bundle\" packages, see :ref:`bundles`."
 msgstr ""
-""
 
 #: ../../faq.rst:155
 msgid "Is Celery heavy-weight?"
@@ -254,16 +241,15 @@ msgstr "Celery は重量級？"
 #: ../../faq.rst:157
 msgid ""
 "Celery poses very little overhead both in memory footprint and performance."
-msgstr ""
-"Celery はメモリ使用量、パフォーマンスの双方においてほとんどオーバーヘッドはありません。"
+msgstr "Celery はメモリ使用量、パフォーマンスの双方においてほとんどオーバーヘッドはありません。"
 
 #: ../../faq.rst:160
 msgid ""
 "But please note that the default configuration is not optimized for time nor"
 " space, see the :ref:`guide-optimizing` guide for more information."
 msgstr ""
-"しかしながら、デフォルトの設定は速度、または使用リソースに対して最適化されたものではありません。"
-"詳しくは :ref:`guide-optimizing` ガイドを参照してください。"
+"しかしながら、デフォルトの設定は速度、または使用リソースに対して最適化されたものではありません。詳しくは :ref:`guide-optimizing`"
+" ガイドを参照してください。"
 
 #: ../../faq.rst:166
 msgid "Is Celery dependent on pickle?"
@@ -322,9 +308,8 @@ msgid ""
 "also experimental transports available such as MongoDB, Beanstalk, CouchDB, "
 "or using SQL databases. See :ref:`brokers` for more information."
 msgstr ""
-"RabbitMQ の使用が推奨されていますが、Redis を使うこともできます。"
-"さらに MongoDB、Beanstalk、CouchDB や SQL データベースのようなトランスポートも実験的にサポートしています。"
-"詳しくは :ref:`brokers` をご覧ください。"
+"RabbitMQ の使用が推奨されていますが、Redis を使うこともできます。さらに MongoDB、Beanstalk、CouchDB や SQL "
+"データベースのようなトランスポートも試験的にサポートしています。詳しくは :ref:`brokers` をご覧ください。"
 
 #: ../../faq.rst:204
 msgid ""
@@ -332,8 +317,8 @@ msgid ""
 "broadcast and event functionality. For example remote control commands only "
 "works with AMQP and Redis."
 msgstr ""
-"実験的サポートのトランスポートは、信頼性に問題があったり、ブロードキャストやイベント機能の"
-"すべてが実装されていません。例えば、リモートコントロールコマンドは AMQP と Redis でのみ利用できます。"
+"試験的サポートのトランスポートは、信頼性に問題があったり、ブロードキャストやイベント機能のすべてが実装されていません。例えば、リモートコントロールコマンドは"
+" AMQP と Redis でのみ利用できます。"
 
 #: ../../faq.rst:208
 msgid ""
@@ -346,14 +331,13 @@ msgid ""
 "Celery; If using Redis/database as a queue worked fine for you before, it "
 "probably will now. You can always upgrade later if you need to."
 msgstr ""
-"Redis やデータベースでは AMQP ブローカーと同様にパフォーマンスは出ないでしょう。"
+"Redis やデータベースでは AMQP ブローカーと同様のパフォーマンスは出ないでしょう。"
 "厳格な信頼性を求めるのであれば、RabbitMQ や別の AMQP ブローカーを使うことが推奨されます。"
 "トランスポートによってはポーリングを使用するものもあり、それらはより多くのリソースを消費する傾向があります。"
 "しかしながら、もし何らかの理由で AMQP を使えないのであれば、別のトランスポートを使用してください。"
 "ほとんどの場合において適切に動くことでしょう。"
-"and note that the above points are not specific to "
-"Celery; If using Redis/database as a queue worked fine for you before, it "
-"probably will now. You can always upgrade later if you need to."
+"これらのことは Celery に限ったことではありません。以前に Redis/データベースをキューに使用して問題なく稼動していたのであれば、"
+"今でも大丈夫でしょう。必要になった際にいつでもアップグレードできます。"
 
 #: ../../faq.rst:221
 msgid "Is Celery multilingual?"
@@ -445,54 +429,47 @@ msgstr ""
 msgid "Does it work on FreeBSD?"
 msgstr ""
 
-#: ../../faq.rst:291
-msgid ""
-"**Answer:** The prefork pool requires a working POSIX semaphore "
-"implementation which isn't enabled in FreeBSD by default. You have to enable"
-" POSIX semaphores in the kernel and manually recompile multiprocessing."
-msgstr ""
-
-#: ../../faq.rst:295
+#: ../../faq.rst:302
 msgid ""
 "Luckily, Viktor Petersson has written a tutorial to get you started with "
 "Celery on FreeBSD here: http://www.playingwithwire.com/2009/10/how-to-get-"
 "celeryd-to-work-on-freebsd/"
 msgstr ""
 
-#: ../../faq.rst:302
+#: ../../faq.rst:309
 msgid "I'm having `IntegrityError: Duplicate Key` errors. Why?"
 msgstr ""
 
-#: ../../faq.rst:304
+#: ../../faq.rst:311
 msgid ""
 "**Answer:** See `MySQL is throwing deadlock errors, what can I do?`_. Thanks"
 " to howsthedotcom."
 msgstr ""
 
-#: ../../faq.rst:310
+#: ../../faq.rst:317
 msgid "Why aren't my tasks processed?"
 msgstr ""
 
-#: ../../faq.rst:312
+#: ../../faq.rst:319
 msgid ""
 "**Answer:** With RabbitMQ you can see how many consumers are currently "
 "receiving tasks by running the following command:"
 msgstr ""
 
-#: ../../faq.rst:321
+#: ../../faq.rst:328
 msgid ""
 "This shows that there's 2891 messages waiting to be processed in the task "
 "queue, and there are two consumers processing them."
 msgstr ""
 
-#: ../../faq.rst:324
+#: ../../faq.rst:331
 msgid ""
 "One reason that the queue is never emptied could be that you have a stale "
 "worker process taking the messages hostage. This could happen if the worker "
 "wasn't properly shut down."
 msgstr ""
 
-#: ../../faq.rst:328
+#: ../../faq.rst:335
 msgid ""
 "When a message is received by a worker the broker waits for it to be "
 "acknowledged before marking the message as processed. The broker will not "
@@ -500,87 +477,87 @@ msgid ""
 "properly."
 msgstr ""
 
-#: ../../faq.rst:333
+#: ../../faq.rst:340
 msgid ""
 "If you hit this problem you have to kill all workers manually and restart "
 "them::"
 msgstr ""
 
-#: ../../faq.rst:338
+#: ../../faq.rst:345
 msgid ""
 "You might have to wait a while until all workers have finished the work "
 "they're doing. If it's still hanging after a long time you can kill them by "
 "force with::"
 msgstr ""
 
-#: ../../faq.rst:347
+#: ../../faq.rst:354
 msgid "Why won't my Task run?"
 msgstr ""
 
-#: ../../faq.rst:349
+#: ../../faq.rst:356
 msgid ""
 "**Answer:** There might be syntax errors preventing the tasks module being "
 "imported."
 msgstr ""
 
-#: ../../faq.rst:351
+#: ../../faq.rst:358
 msgid ""
 "You can find out if Celery is able to run the task by executing the task "
 "manually:"
 msgstr ""
 
-#: ../../faq.rst:357
+#: ../../faq.rst:364
 msgid ""
 "Watch the workers log file to see if it's able to find the task, or if some "
 "other error is happening."
 msgstr ""
 
-#: ../../faq.rst:363
+#: ../../faq.rst:370
 msgid "Why won't my periodic task run?"
 msgstr ""
 
-#: ../../faq.rst:365
+#: ../../faq.rst:372
 msgid "**Answer:** See `Why won't my Task run?`_."
 msgstr ""
 
-#: ../../faq.rst:370
+#: ../../faq.rst:377
 msgid "How do I purge all waiting tasks?"
 msgstr "待機中のすべてのタスクを消すにはどうしたらいいでしょうか？"
 
-#: ../../faq.rst:372
+#: ../../faq.rst:379
 msgid ""
 "**Answer:** You can use the ``celery purge`` command to purge all configured"
 " task queues:"
-msgstr ""
-"**回答:** ``celery purge`` コマンドを使ってすべてのタスクキューを削除できます。"
+msgstr "**回答:** ``celery purge`` コマンドを使ってすべてのタスクキューを削除できます。"
 
-#: ../../faq.rst:379
+#: ../../faq.rst:386
 msgid "or programatically:"
 msgstr "またはプログラムを通してもできます:"
 
-#: ../../faq.rst:387
+#: ../../faq.rst:394
 msgid ""
 "If you only want to purge messages from a specific queue you have to use the"
 " AMQP API or the :program:`celery amqp` utility:"
 msgstr ""
 "特定のキューのメッセージを空にするには、AMQP API か :program:`celery amqp` ユーティリティを使う必要があります:"
 
-#: ../../faq.rst:394
+#: ../../faq.rst:401
 msgid "The number 1753 is the number of messages deleted."
 msgstr "1753 は削除されたメッセージの数です。"
 
-#: ../../faq.rst:396
+#: ../../faq.rst:403
 msgid ""
 "You can also start :mod:`~celery.bin.worker` with the :option:`--purge` "
 "argument, to purge messages when the worker starts."
 msgstr ""
-":option:`--purge` 引数を付けて :mod:`~celery.bin.worker` を起動すれば、起動時にすべてのメッセージを削除します。"
+":option:`--purge` 引数を付けて :mod:`~celery.bin.worker` "
+"を起動すれば、起動時にすべてのメッセージを削除します。"
 
-#: ../../faq.rst:402
+#: ../../faq.rst:409
 msgid "I've purged messages, but there are still messages left in the queue?"
 msgstr ""
 
-#: ../../faq.rst:404
+#: ../../faq.rst:411
 msgid ""
 "**Answer:** Tasks are acknowledged (removed from the queue) as soon as they "
 "are actually executed. After the worker has received a task, it will take "
@@ -594,51 +571,44 @@ msgid ""
 " the tasks using :func:`celery.control.purge`."
 msgstr ""
 
-#: ../../faq.rst:418
+#: ../../faq.rst:425
 msgid "Results"
 msgstr ""
 
-#: ../../faq.rst:423
+#: ../../faq.rst:430
 msgid "How do I get the result of a task if I have the ID that points there?"
 msgstr ""
 
-#: ../../faq.rst:425
+#: ../../faq.rst:432
 msgid "**Answer**: Use `task.AsyncResult`::"
 msgstr ""
 
-#: ../../faq.rst:430
+#: ../../faq.rst:437
 msgid ""
 "This will give you a :class:`~celery.result.AsyncResult` instance using the "
 "tasks current result backend."
 msgstr ""
 
-#: ../../faq.rst:433
-msgid ""
-"If you need to specify a custom result backend, or you want to use the "
-"current application's default backend you can use "
-":class:`@Celery.AsyncResult`:"
-msgstr ""
-
-#: ../../faq.rst:443
+#: ../../faq.rst:450
 msgid "Security"
 msgstr ""
 
-#: ../../faq.rst:446
+#: ../../faq.rst:453
 msgid "Isn't using `pickle` a security concern?"
 msgstr ""
 
-#: ../../faq.rst:448
+#: ../../faq.rst:455
 msgid "**Answer**: Yes, indeed it is."
 msgstr ""
 
-#: ../../faq.rst:450
+#: ../../faq.rst:457
 msgid ""
 "You are right to have a security concern, as this can indeed be a real "
 "issue. It is essential that you protect against unauthorized access to your "
 "broker, databases and other services transmitting pickled data."
 msgstr ""
 
-#: ../../faq.rst:455
+#: ../../faq.rst:462
 msgid ""
 "For the task messages you can set the :setting:`CELERY_TASK_SERIALIZER` "
 "setting to \"json\" or \"yaml\" instead of pickle. There is currently no "
@@ -646,37 +616,37 @@ msgid ""
 "using JSON is a simple task)"
 msgstr ""
 
-#: ../../faq.rst:460
+#: ../../faq.rst:467
 msgid ""
 "Note that this is not just something you should be aware of with Celery, for"
 " example also Django uses pickle for its cache client."
 msgstr ""
 
-#: ../../faq.rst:464
+#: ../../faq.rst:471
 msgid "Can messages be encrypted?"
 msgstr ""
 
-#: ../../faq.rst:466
+#: ../../faq.rst:473
 msgid ""
 "**Answer**: Some AMQP brokers supports using SSL (including RabbitMQ). You "
 "can enable this using the :setting:`BROKER_USE_SSL` setting."
 msgstr ""
 
-#: ../../faq.rst:469
+#: ../../faq.rst:476
 msgid ""
 "It is also possible to add additional encryption and security to messages, "
 "if you have a need for this then you should contact the :ref:`mailing-list`."
 msgstr ""
 
-#: ../../faq.rst:473
+#: ../../faq.rst:480
 msgid "Is it safe to run :program:`celery worker` as root?"
 msgstr ""
 
-#: ../../faq.rst:475
+#: ../../faq.rst:482
 msgid "**Answer**: No!"
 msgstr ""
 
-#: ../../faq.rst:477
+#: ../../faq.rst:484
 msgid ""
 "We're not currently aware of any security issues, but it would be incredibly"
 " naive to assume that they don't exist, so running the Celery services "
@@ -684,35 +654,35 @@ msgid ""
 " as an unprivileged user is recommended."
 msgstr ""
 
-#: ../../faq.rst:485
+#: ../../faq.rst:492
 msgid "Brokers"
 msgstr ""
 
-#: ../../faq.rst:488
+#: ../../faq.rst:495
 msgid "Why is RabbitMQ crashing?"
 msgstr ""
 
-#: ../../faq.rst:490
+#: ../../faq.rst:497
 msgid ""
 "**Answer:** RabbitMQ will crash if it runs out of memory. This will be fixed"
 " in a future release of RabbitMQ. please refer to the RabbitMQ FAQ: "
 "http://www.rabbitmq.com/faq.html#node-runs-out-of-memory"
 msgstr ""
 
-#: ../../faq.rst:496
+#: ../../faq.rst:503
 msgid ""
 "This is no longer the case, RabbitMQ versions 2.0 and above includes a new "
 "persister, that is tolerant to out of memory errors. RabbitMQ 2.1 or higher "
 "is recommended for Celery."
 msgstr ""
 
-#: ../../faq.rst:500
+#: ../../faq.rst:507
 msgid ""
 "If you're still running an older version of RabbitMQ and experience crashes,"
 " then please upgrade!"
 msgstr ""
 
-#: ../../faq.rst:503
+#: ../../faq.rst:510
 msgid ""
 "Misconfiguration of Celery can eventually lead to a crash on older version "
 "of RabbitMQ. Even if it doesn't crash, this can still consume a lot of "
@@ -720,239 +690,225 @@ msgid ""
 "pitfalls."
 msgstr ""
 
-#: ../../faq.rst:508
+#: ../../faq.rst:515
 msgid "Events."
 msgstr ""
 
-#: ../../faq.rst:510
+#: ../../faq.rst:517
 msgid ""
 "Running :mod:`~celery.bin.worker` with the :option:`-E`/:option:`--events` "
 "option will send messages for events happening inside of the worker."
 msgstr ""
 
-#: ../../faq.rst:513
+#: ../../faq.rst:520
 msgid ""
 "Events should only be enabled if you have an active monitor consuming them, "
 "or if you purge the event queue periodically."
 msgstr ""
 
-#: ../../faq.rst:516
+#: ../../faq.rst:523
 msgid "AMQP backend results."
 msgstr ""
 
-#: ../../faq.rst:518
+#: ../../faq.rst:525
 msgid ""
 "When running with the AMQP result backend, every task result will be sent as"
 " a message. If you don't collect these results, they will build up and "
 "RabbitMQ will eventually run out of memory."
 msgstr ""
 
-#: ../../faq.rst:522
+#: ../../faq.rst:529
 msgid ""
 "Results expire after 1 day by default.  It may be a good idea to lower this "
 "value by configuring the :setting:`CELERY_TASK_RESULT_EXPIRES` setting."
 msgstr ""
 
-#: ../../faq.rst:526
+#: ../../faq.rst:533
 msgid ""
 "If you don't use the results for a task, make sure you set the "
 "`ignore_result` option:"
 msgstr ""
 
-#: ../../faq.rst:541
+#: ../../faq.rst:548
 msgid "Can I use Celery with ActiveMQ/STOMP?"
 msgstr ""
 
-#: ../../faq.rst:543
+#: ../../faq.rst:550
 msgid ""
 "**Answer**: No.  It used to be supported by Carrot, but is not currently "
 "supported in Kombu."
 msgstr ""
 
-#: ../../faq.rst:549
+#: ../../faq.rst:556
 msgid "What features are not supported when not using an AMQP broker?"
 msgstr ""
 
-#: ../../faq.rst:551
+#: ../../faq.rst:558
 msgid ""
 "This is an incomplete list of features not available when using the virtual "
 "transports:"
 msgstr ""
 
-#: ../../faq.rst:554
+#: ../../faq.rst:561
 msgid "Remote control commands (supported only by Redis)."
 msgstr ""
 
-#: ../../faq.rst:556
+#: ../../faq.rst:563
 msgid "Monitoring with events may not work in all virtual transports."
 msgstr ""
 
-#: ../../faq.rst:559
+#: ../../faq.rst:566
 msgid "The `header` and `fanout` exchange types"
 msgstr ""
 
-#: ../../faq.rst:559
+#: ../../faq.rst:566
 msgid "(`fanout` is supported by Redis)."
 msgstr ""
 
-#: ../../faq.rst:564
+#: ../../faq.rst:571
 msgid "Tasks"
 msgstr "タスク"
 
-#: ../../faq.rst:569
+#: ../../faq.rst:576
 msgid "How can I reuse the same connection when calling tasks?"
 msgstr "タスクを呼び出すときに同じコネクションを使い回すことができますか？"
 
-#: ../../faq.rst:571
+#: ../../faq.rst:578
 msgid ""
 "**Answer**: See the :setting:`BROKER_POOL_LIMIT` setting. The connection "
 "pool is enabled by default since version 2.5."
 msgstr ""
-"**回答**: :setting:`BROKER_POOL_LIMIT` 設定を参照してください。"
-"コネクションプールはバージョン 2.5 からデフォルトで有効になっています。"
+"**回答**: :setting:`BROKER_POOL_LIMIT` 設定を参照してください。コネクションプールはバージョン 2.5 "
+"からデフォルトで有効になっています。"
 
-#: ../../faq.rst:577
+#: ../../faq.rst:584
 msgid "Sudo in a :mod:`subprocess` returns :const:`None`"
 msgstr ""
 
-#: ../../faq.rst:579
+#: ../../faq.rst:586
 msgid ""
 "There is a sudo configuration option that makes it illegal for process "
 "without a tty to run sudo::"
 msgstr ""
 
-#: ../../faq.rst:584
+#: ../../faq.rst:591
 msgid ""
 "If you have this configuration in your :file:`/etc/sudoers` file then tasks "
 "will not be able to call sudo when the worker is running as a daemon. If you"
 " want to enable that, then you need to remove the line from sudoers."
 msgstr ""
 
-#: ../../faq.rst:588
+#: ../../faq.rst:595
 msgid "See: http://timelordz.com/wiki/Apache_Sudo_Commands"
 msgstr ""
 
-#: ../../faq.rst:593
+#: ../../faq.rst:600
 msgid ""
 "Why do workers delete tasks from the queue if they are unable to process "
 "them?"
 msgstr ""
 
-#: ../../faq.rst:594
+#: ../../faq.rst:601
 msgid "**Answer**:"
 msgstr ""
 
-#: ../../faq.rst:596
-msgid ""
-"The worker rejects unknown tasks, messages with encoding errors and messages"
-" that doesn't contain the proper fields (as per the task message protocol)."
-msgstr ""
-
-#: ../../faq.rst:599
+#: ../../faq.rst:606
 msgid ""
 "If it did not reject them they could be redelivered again and again, causing"
 " a loop."
 msgstr ""
 
-#: ../../faq.rst:602
+#: ../../faq.rst:609
 msgid ""
 "Recent versions of RabbitMQ has the ability to configure a dead-letter queue"
 " for exchange, so that rejected messages is moved there."
 msgstr ""
 
-#: ../../faq.rst:608
+#: ../../faq.rst:615
 msgid "Can I call a task by name?"
 msgstr ""
 
-#: ../../faq.rst:610
-msgid ""
-"**Answer**: Yes. Use :func:`celery.execute.send_task`. You can also call a "
-"task by name from any language that has an AMQP client."
-msgstr ""
-
-#: ../../faq.rst:621
+#: ../../faq.rst:627
 msgid "How can I get the task id of the current task?"
 msgstr "カレントタスクのタスクIDはどうすれば取得できますか？"
 
-#: ../../faq.rst:623
-msgid "**Answer**: The current id and more is available in the task request::"
-msgstr ""
-
 #: ../../faq.rst:629
+msgid "**Answer**: The current id and more is available in the task request::"
+msgstr "**回答**: カレントタスクのIDやその他の情報はタスクリクエストの中で取得できます::"
+
+#: ../../faq.rst:635
 msgid "For more information see :ref:`task-request-info`."
-msgstr ""
+msgstr "詳細は :ref:`task-request-info` を参照してください。"
 
-#: ../../faq.rst:634
+#: ../../faq.rst:640
 msgid "Can I specify a custom task_id?"
-msgstr ""
-
-#: ../../faq.rst:636
-msgid ""
-"**Answer**: Yes.  Use the `task_id` argument to :meth:`Task.apply_async`::"
-msgstr ""
+msgstr "独自の task_id を指定できますか？"
 
 #: ../../faq.rst:642
-msgid "Can I use decorators with tasks?"
-msgstr ""
+msgid ""
+"**Answer**: Yes.  Use the `task_id` argument to :meth:`Task.apply_async`::"
+msgstr "**回答**: はい。:meth:`Task.apply_async`: メソッドに `task_id` 引数を指定します:"
 
-#: ../../faq.rst:644
+#: ../../faq.rst:648
+msgid "Can I use decorators with tasks?"
+msgstr "タスクにデコレーターを使用できますか？"
+
+#: ../../faq.rst:650
 msgid ""
 "**Answer**: Yes.  But please see note in the sidebar at :ref:`task-basics`."
-msgstr ""
+msgstr "**回答**: はい。但し、:ref:`task-basics` ページのサイドバーにある注釈を一読ください。"
 
-#: ../../faq.rst:649
+#: ../../faq.rst:655
 msgid "Can I use natural task ids?"
 msgstr ""
 
-#: ../../faq.rst:651
+#: ../../faq.rst:657
 msgid ""
 "**Answer**: Yes, but make sure it is unique, as the behavior for two tasks "
 "existing with the same id is undefined."
 msgstr ""
 
-#: ../../faq.rst:654
+#: ../../faq.rst:660
 msgid ""
 "The world will probably not explode, but at the worst they can overwrite "
 "each others results."
 msgstr ""
 
-#: ../../faq.rst:660
+#: ../../faq.rst:666
 msgid "How can I run a task once another task has finished?"
 msgstr "どうすればあるタスクを、別のタスクが完了した後に実行できますか？"
 
-#: ../../faq.rst:662
+#: ../../faq.rst:668
 msgid ""
 "**Answer**: You can safely launch a task inside a task. Also, a common "
 "pattern is to add callbacks to tasks:"
-msgstr ""
-"**回答**: タスクの中でタスクを安全に起動できます。また、一般的なパターンとしては"
-"タスクにコールバックを追加する方法です:"
+msgstr "**回答**: タスクの中でタスクを安全に起動できます。また、一般的なパターンとしてはタスクにコールバックを追加する方法です:"
 
-#: ../../faq.rst:679
+#: ../../faq.rst:685
 msgid "Invocation::"
 msgstr "呼び出し::"
 
-#: ../../faq.rst:683
+#: ../../faq.rst:689
 msgid "See :doc:`userguide/canvas` for more information."
 msgstr "詳しくは :doc:`userguide/canvas` を参照してください。"
 
-#: ../../faq.rst:688
+#: ../../faq.rst:694
 msgid "Can I cancel the execution of a task?"
 msgstr "タスクの実行をキャンセルできますか？"
 
-#: ../../faq.rst:689
+#: ../../faq.rst:695
 msgid "**Answer**: Yes. Use `result.revoke`::"
 msgstr "**回答**: はい。`result.remoke` を使います::"
 
-#: ../../faq.rst:694
+#: ../../faq.rst:700
 msgid "or if you only have the task id::"
 msgstr "タスク ID しか分からない場合::"
 
-#: ../../faq.rst:702
+#: ../../faq.rst:708
 msgid "Why aren't my remote control commands received by all workers?"
 msgstr ""
 
-#: ../../faq.rst:704
+#: ../../faq.rst:710
 msgid ""
 "**Answer**: To receive broadcast remote control commands, every worker node "
 "uses its host name to create a unique queue name to listen to, so if you "
@@ -960,84 +916,73 @@ msgid ""
 " be received in round-robin between them."
 msgstr ""
 
-#: ../../faq.rst:709
+#: ../../faq.rst:715
 msgid ""
 "To work around this you can explicitly set the nodename for every worker "
 "using the :option:`-n` argument to :mod:`~celery.bin.worker`:"
 msgstr ""
 
-#: ../../faq.rst:717
+#: ../../faq.rst:723
 msgid "where ``%h`` is automatically expanded into the current hostname."
 msgstr ""
 
-#: ../../faq.rst:722
+#: ../../faq.rst:728
 msgid "Can I send some tasks to only some servers?"
 msgstr "あるタスクを特定のサーバーに送ることはできますか？"
 
-#: ../../faq.rst:724
+#: ../../faq.rst:730
 msgid ""
 "**Answer:** Yes. You can route tasks to an arbitrary server using AMQP, and "
 "a worker can bind to as many queues as it wants."
 msgstr ""
-"**回答:** はい。AMQP を使って特定のサーバにタスクを送信することもできます。また、"
-"ワーカーは希望するキューに紐付けることができます。"
+"**回答:** はい。AMQP を使って特定のサーバにタスクを送信することもできます。また、ワーカーは希望するキューに紐付けることができます。"
 
-#: ../../faq.rst:727
+#: ../../faq.rst:733
 msgid "See :doc:`userguide/routing` for more information."
 msgstr "詳細は :doc:`userguide/routing` を確認してください。"
 
-#: ../../faq.rst:732
+#: ../../faq.rst:738
 msgid "Can I change the interval of a periodic task at runtime?"
 msgstr ""
 
-#: ../../faq.rst:734
+#: ../../faq.rst:740
 msgid ""
 "**Answer**: Yes. You can use the Django database scheduler, or you can "
 "create a new schedule subclass and override "
 ":meth:`~celery.schedules.schedule.is_due`:"
 msgstr ""
 
-#: ../../faq.rst:751
+#: ../../faq.rst:757
 msgid "Does celery support task priorities?"
 msgstr "Celery はタスクの優先度をサポートしていますか？"
 
-#: ../../faq.rst:753
+#: ../../faq.rst:759
 msgid ""
 "**Answer**: No. In theory, yes, as AMQP supports priorities. However "
 "RabbitMQ doesn't implement them yet."
-msgstr ""
-"**回答**: いいえ。AMQP は優先度をサポートしているので理論的には Yes ですが、"
-"RabbitMQ がまだサポートしていません。"
+msgstr "**回答**: いいえ。AMQP は優先度をサポートしているので理論的には Yes ですが、RabbitMQ がまだサポートしていません。"
 
-#: ../../faq.rst:756
+#: ../../faq.rst:762
 msgid ""
 "The usual way to prioritize work in Celery, is to route high priority tasks "
 "to different servers. In the real world this may actually work better than "
 "per message priorities. You can use this in combination with rate limiting "
 "to achieve a highly responsive system."
 msgstr ""
-"Celery での優先度付けの方法としては、優先度が高いタスクを別のサーバに送ることです。"
-"実際の場面では、この方がメッセージの優先度付けよりうまく機能します。"
-"応答性能の高いシステムを築くために、この方法をレートリミットと組み合わせて使うことができます。"
+"Celery "
+"での優先度付けの方法としては、優先度が高いタスクを別のサーバに送ることです。実際の場面では、この方がメッセージの優先度付けよりうまく機能します。応答性能の高いシステムを築くために、この方法をレートリミットと組み合わせて使うことができます。"
 
-#: ../../faq.rst:764
+#: ../../faq.rst:770
 msgid "Should I use retry or acks_late?"
 msgstr ""
 
-#: ../../faq.rst:766
+#: ../../faq.rst:772
 msgid ""
 "**Answer**: Depends. It's not necessarily one or the other, you may want to "
 "use both."
-msgstr ""
+msgstr "**回答**: 場合による。どちらか一方というものではなく、両方を使うことになるでしょう。"
 
-#: ../../faq.rst:769
-msgid ""
-"`Task.retry` is used to retry tasks, notably for expected errors that is "
-"catchable with the `try:` block. The AMQP transaction is not used for these "
-"errors: **if the task raises an exception it is still acknowledged!**."
-msgstr ""
-
-#: ../../faq.rst:773
+#: ../../faq.rst:779
 msgid ""
 "The `acks_late` setting would be used when you need the task to be executed "
 "again if the worker (for some reason) crashes mid-execution. It's important "
@@ -1046,147 +991,267 @@ msgid ""
 "or task code)."
 msgstr ""
 
-#: ../../faq.rst:779
+#: ../../faq.rst:785
 msgid ""
 "In an ideal world you could safely retry any task that has failed, but this "
 "is rarely the case. Imagine the following task:"
 msgstr ""
 
-#: ../../faq.rst:791
-msgid ""
-"If this crashed in the middle of copying the file to its destination the "
-"world would contain incomplete state. This is not a critical scenario of "
-"course, but you can probably imagine something far more sinister. So for "
-"ease of programming we have less reliability; It's a good default, users who"
-" require it and know what they are doing can still enable acks_late (and in "
-"the future hopefully use manual acknowledgement)"
-msgstr ""
-
-#: ../../faq.rst:799
+#: ../../faq.rst:805
 msgid ""
 "In addition `Task.retry` has features not available in AMQP transactions: "
 "delay between retries, max retries, etc."
 msgstr ""
 
-#: ../../faq.rst:802
+#: ../../faq.rst:808
 msgid ""
 "So use retry for Python errors, and if your task is idempotent combine that "
 "with `acks_late` if that level of reliability is required."
 msgstr ""
 
-#: ../../faq.rst:809
+#: ../../faq.rst:815
 msgid "Can I schedule tasks to execute at a specific time?"
 msgstr ""
 
-#: ../../faq.rst:813
+#: ../../faq.rst:819
 msgid ""
 "**Answer**: Yes. You can use the `eta` argument of :meth:`Task.apply_async`."
 msgstr ""
 
-#: ../../faq.rst:815
+#: ../../faq.rst:821
 msgid ""
 "Or to schedule a periodic task at a specific time, use the "
 ":class:`celery.schedules.crontab` schedule behavior:"
 msgstr ""
 
-#: ../../faq.rst:831
+#: ../../faq.rst:837
 msgid "How can I safely shut down the worker?"
 msgstr ""
 
-#: ../../faq.rst:833
+#: ../../faq.rst:839
 msgid ""
 "**Answer**: Use the :sig:`TERM` signal, and the worker will finish all "
 "currently executing jobs and shut down as soon as possible. No tasks should "
 "be lost."
 msgstr ""
 
-#: ../../faq.rst:836
-msgid ""
-"You should never stop :mod:`~celery.bin.worker` with the :sig:`KILL` signal "
-"(:option:`-9`), unless you've tried :sig:`TERM` a few times and waited a few"
-" minutes to let it get a chance to shut down.  As if you do tasks may be "
-"terminated mid-execution, and they will not be re-run unless you have the "
-"`acks_late` option set (`Task.acks_late` / :setting:`CELERY_ACKS_LATE`)."
-msgstr ""
-
-#: ../../faq.rst:844
+#: ../../faq.rst:864
 msgid ":ref:`worker-stopping`"
 msgstr ""
 
-#: ../../faq.rst:849
+#: ../../faq.rst:869
 msgid "How do I run the worker in the background on [platform]?"
 msgstr ""
 
-#: ../../faq.rst:850
+#: ../../faq.rst:870
 msgid "**Answer**: Please see :ref:`daemonizing`."
 msgstr ""
 
-#: ../../faq.rst:855
+#: ../../faq.rst:875
 msgid "Django"
 msgstr ""
 
-#: ../../faq.rst:860
+#: ../../faq.rst:880
 msgid "What purpose does the database tables created by django-celery have?"
 msgstr "django-celery によって生成されるデータベーステーブルの目的は？"
 
-#: ../../faq.rst:862
+#: ../../faq.rst:882
 msgid "Several database tables are created by default, these relate to"
 msgstr "デフォルトで生成されるいくつかのデータベーステーブルは、以下に関連しています。"
 
-#: ../../faq.rst:864
+#: ../../faq.rst:884
 msgid "Monitoring"
 msgstr "監視"
 
-#: ../../faq.rst:866
+#: ../../faq.rst:886
 msgid ""
 "When you use the django-admin monitor, the cluster state is written to the "
 "``TaskState`` and ``WorkerState`` models."
 msgstr ""
-"django-admin モニターを使う場合に、cluster state が ``TaskState`` と ``WorkerState`` モデルに書き込まれます。"
+"django-admin モニターを使う場合に、cluster state が ``TaskState`` と ``WorkerState`` "
+"モデルに書き込まれます。"
 
-#: ../../faq.rst:869
+#: ../../faq.rst:889
 msgid "Periodic tasks"
 msgstr "定期タスク"
 
-#: ../../faq.rst:871
+#: ../../faq.rst:891
 msgid ""
 "When the database-backed schedule is used the periodic task schedule is "
 "taken from the ``PeriodicTask`` model, there are also several other helper "
 "tables (``IntervalSchedule``, ``CrontabSchedule``, ``PeriodicTasks``)."
 msgstr ""
-"database-backed スケジュールが使用される場合、定期タスクスケジュールは ``PeriodicTask`` モデルから取得されます。"
-"また別のヘルパーテーブルも存在します(``IntervalSchedule``, ``CrontabSchedule``, ``PeriodicTasks``)。"
+"database-backed スケジュールが使用される場合、定期タスクスケジュールは ``PeriodicTask`` "
+"モデルから取得されます。また別のヘルパーテーブルも存在します(``IntervalSchedule``, ``CrontabSchedule``, "
+"``PeriodicTasks``)。"
 
-#: ../../faq.rst:876
+#: ../../faq.rst:896
 msgid "Task results"
 msgstr "タスクの結果"
 
-#: ../../faq.rst:878
+#: ../../faq.rst:898
 msgid ""
 "The database result backend is enabled by default when using django-celery "
 "(this is for historical reasons, and thus for backward compatibility)."
 msgstr ""
-"django-celery を使う場合、デフォルトでデータベース結果バックエンドが有効になります。"
-"(これは歴史的な理由で、下位互換のためです)"
+"django-celery を使う場合、デフォルトでデータベース結果バックエンドが有効になります。(これは歴史的な理由で、下位互換のためです)"
 
-#: ../../faq.rst:881
+#: ../../faq.rst:901
 msgid ""
 "The results are stored in the ``TaskMeta`` and ``TaskSetMeta`` models. "
 "*these tables are not created if another result backend is configured*."
 msgstr ""
-"結果は ``TaskMeta`` と ``TaskSetMeta`` モデルに保存されます。"
-"*別の結果バックエンドが設定されている場合、これらのテーブルは生成されません。*"
+"結果は ``TaskMeta`` と ``TaskSetMeta`` "
+"モデルに保存されます。*別の結果バックエンドが設定されている場合、これらのテーブルは生成されません。*"
 
-#: ../../faq.rst:887
+#: ../../faq.rst:907
 msgid "Windows"
 msgstr ""
 
-#: ../../faq.rst:892
+#: ../../faq.rst:912
 msgid "The `-B` / `--beat` option to worker doesn't work?"
 msgstr ""
 
-#: ../../faq.rst:893
+#: ../../faq.rst:913
 msgid ""
 "**Answer**: That's right. Run `celery beat` and `celery worker` as separate "
 "services instead."
 msgstr ""
+
+#: ../../faq.rst:101
+msgid ""
+"It is also used for compatibility with older Python versions that don't come"
+" with the multiprocessing module."
+msgstr ""
+
+#: ../../faq.rst:291
+msgid "**Answer:** Depends"
+msgstr ""
+
+#: ../../faq.rst:293
+msgid ""
+"When using the RabbitMQ (AMQP) and Redis transports it should work out of "
+"the box."
+msgstr ""
+
+#: ../../faq.rst:296
+msgid ""
+"For other transports the compatibility prefork pool is used which requires a"
+" working POSIX semaphore implementation, this is enabled in FreeBSD by "
+"default since FreeBSD 8.x. For older version of FreeBSD, you have to enable "
+"POSIX semaphores in the kernel and manually recompile billiard."
+msgstr ""
+
+#: ../../faq.rst:440
+msgid ""
+"If you need to specify a custom result backend, or you want to use the "
+"current application's default backend you can use :class:`@AsyncResult`:"
+msgstr ""
+
+#: ../../faq.rst:603
+msgid ""
+"The worker rejects unknown tasks, messages with encoding errors and messages"
+" that don't contain the proper fields (as per the task message protocol)."
+msgstr ""
+
+#: ../../faq.rst:617
+msgid ""
+"**Answer**: Yes. Use :meth:`@send_task`. You can also call a task by name "
+"from any language that has an AMQP client."
+msgstr ""
+
+#: ../../faq.rst:775
+msgid ""
+"`Task.retry` is used to retry tasks, notably for expected errors that is "
+"catchable with the `try:` block. The AMQP transaction is not used for these "
+"errors: **if the task raises an exception it is still acknowledged!**"
+msgstr ""
+
+#: ../../faq.rst:797
+msgid ""
+"If this crashed in the middle of copying the file to its destination the "
+"world would contain incomplete state. This is not a critical scenario of "
+"course, but you can probably imagine something far more sinister. So for "
+"ease of programming we have less reliability; It's a good default, users who"
+" require it and know what they are doing can still enable acks_late (and in "
+"the future hopefully use manual acknowledgement)."
+msgstr ""
+
+#: ../../faq.rst:842
+msgid ""
+"You should never stop :mod:`~celery.bin.worker` with the :sig:`KILL` signal "
+"(:option:`-9`), unless you've tried :sig:`TERM` a few times and waited a few"
+" minutes to let it get a chance to shut down."
+msgstr ""
+
+#: ../../faq.rst:846
+msgid ""
+"Also make sure you kill the main worker process, not its child processes. "
+"You can direct a kill signal to a specific child process if you know the "
+"process is currently executing a task the worker shutdown is depending on, "
+"but this also means that a ``WorkerLostError`` state will be set for the "
+"task so the task will not run again."
+msgstr ""
+
+#: ../../faq.rst:852
+msgid ""
+"Identifying the type of process is easier if you have installed the "
+"``setproctitle`` module:"
+msgstr ""
+
+#: ../../faq.rst:859
+msgid ""
+"With this library installed you will be able to see the type of process in "
+"ps listings, but the worker must be restarted for this to take effect."
+msgstr ""
+
+#~ msgid ""
+#~ "It is also used for compatibility with older Python versions that doesn't "
+#~ "come with the multiprocessing module."
+#~ msgstr ""
+#~ "multiprocessing モジュールを標準で備えていない 古いバージョンの Python との互換性を持たせるのにも利用されています。"
+
+#~ msgid ""
+#~ "**Answer:** The prefork pool requires a working POSIX semaphore "
+#~ "implementation which isn't enabled in FreeBSD by default. You have to enable"
+#~ " POSIX semaphores in the kernel and manually recompile multiprocessing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you need to specify a custom result backend, or you want to use the "
+#~ "current application's default backend you can use "
+#~ ":class:`@Celery.AsyncResult`:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The worker rejects unknown tasks, messages with encoding errors and messages"
+#~ " that doesn't contain the proper fields (as per the task message protocol)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Answer**: Yes. Use :func:`celery.execute.send_task`. You can also call a "
+#~ "task by name from any language that has an AMQP client."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Task.retry` is used to retry tasks, notably for expected errors that is "
+#~ "catchable with the `try:` block. The AMQP transaction is not used for these "
+#~ "errors: **if the task raises an exception it is still acknowledged!**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If this crashed in the middle of copying the file to its destination the "
+#~ "world would contain incomplete state. This is not a critical scenario of "
+#~ "course, but you can probably imagine something far more sinister. So for "
+#~ "ease of programming we have less reliability; It's a good default, users who"
+#~ " require it and know what they are doing can still enable acks_late (and in "
+#~ "the future hopefully use manual acknowledgement)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should never stop :mod:`~celery.bin.worker` with the :sig:`KILL` signal "
+#~ "(:option:`-9`), unless you've tried :sig:`TERM` a few times and waited a few"
+#~ " minutes to let it get a chance to shut down.  As if you do tasks may be "
+#~ "terminated mid-execution, and they will not be re-run unless you have the "
+#~ "`acks_late` option set (`Task.acks_late` / :setting:`CELERY_ACKS_LATE`)."
+#~ msgstr ""

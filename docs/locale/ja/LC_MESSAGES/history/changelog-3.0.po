@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -645,10 +645,6 @@ msgstr ""
 msgid ""
 "The ``pool_restart`` remote control command now reports an error if the "
 ":setting:`CELERYD_POOL_RESTARTS` setting is not set."
-msgstr ""
-
-#: ../../history/changelog-3.0.rst:356
-msgid "``celery.conf.add_defaults`` can now be used with non-dict objects."
 msgstr ""
 
 #: ../../history/changelog-3.0.rst:358
@@ -1967,12 +1963,6 @@ msgstr ""
 msgid "App instances now supports the with statement."
 msgstr ""
 
-#: ../../history/changelog-3.0.rst:1111
-msgid ""
-"This calls the new :meth:`~celery.Celery.close` method at exit, which cleans"
-" up after the app like closing pool connections."
-msgstr ""
-
 #: ../../history/changelog-3.0.rst:1114
 msgid ""
 "Note that this is only necessary when dynamically creating apps, e.g. for "
@@ -2482,21 +2472,8 @@ msgid ""
 "interval can also be changed using annotations:"
 msgstr ""
 
-#: ../../history/changelog-3.0.rst:1414
-msgid ""
-"New :meth:`@Celery.add_defaults` method can add new default configuration "
-"dicts to the applications configuration."
-msgstr ""
-
 #: ../../history/changelog-3.0.rst:1417
 msgid "For example::"
-msgstr ""
-
-#: ../../history/changelog-3.0.rst:1423
-msgid ""
-"is the same as ``celery.conf.update(config)`` except that data will not be "
-"copied, and that it will not be pickled when the worker spawns child "
-"processes."
 msgstr ""
 
 #: ../../history/changelog-3.0.rst:1427
@@ -2543,16 +2520,6 @@ msgstr ""
 
 #: ../../history/changelog-3.0.rst:1456
 msgid "New method names:"
-msgstr ""
-
-#: ../../history/changelog-3.0.rst:1458
-msgid ""
-"``Celery.default_connection()`` ➠  :meth:`~@Celery.connection_or_acquire`."
-msgstr ""
-
-#: ../../history/changelog-3.0.rst:1459
-msgid ""
-"``Celery.default_producer()``   ➠  :meth:`~@Celery.producer_or_acquire`."
 msgstr ""
 
 #: ../../history/changelog-3.0.rst:1461
@@ -2806,3 +2773,61 @@ msgstr ""
 #: ../../history/changelog-3.0.rst:1600
 msgid "See :ref:`whatsnew-3.0`."
 msgstr ""
+
+#: ../../history/changelog-3.0.rst:356
+msgid ":meth:`@add_defaults`` can now be used with non-dict objects."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1111
+msgid ""
+"This calls the new :meth:`@close` method at exit, which cleans up after the "
+"app like closing pool connections."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1414
+msgid ""
+"New :meth:`@add_defaults` method can add new default configuration dicts to "
+"the applications configuration."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1423
+msgid ""
+"is the same as ``app.conf.update(config)`` except that data will not be "
+"copied, and that it will not be pickled when the worker spawns child "
+"processes."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1458
+msgid "``Celery.default_connection()`` ➠  :meth:`~@connection_or_acquire`."
+msgstr ""
+
+#: ../../history/changelog-3.0.rst:1459
+msgid "``Celery.default_producer()``   ➠  :meth:`~@producer_or_acquire`."
+msgstr ""
+
+#~ msgid "``celery.conf.add_defaults`` can now be used with non-dict objects."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This calls the new :meth:`~celery.Celery.close` method at exit, which cleans"
+#~ " up after the app like closing pool connections."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "New :meth:`@Celery.add_defaults` method can add new default configuration "
+#~ "dicts to the applications configuration."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "is the same as ``celery.conf.update(config)`` except that data will not be "
+#~ "copied, and that it will not be pickled when the worker spawns child "
+#~ "processes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Celery.default_connection()`` ➠  :meth:`~@Celery.connection_or_acquire`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Celery.default_producer()``   ➠  :meth:`~@Celery.producer_or_acquire`."
+#~ msgstr ""

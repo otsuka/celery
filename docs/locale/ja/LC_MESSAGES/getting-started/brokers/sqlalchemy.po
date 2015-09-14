@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -53,12 +53,6 @@ msgid ""
 "databases."
 msgstr ""
 
-#: ../../getting-started/brokers/sqlalchemy.rst:35
-msgid ""
-"Here's a list of examples using a selection of other `SQLAlchemy Connection "
-"String`_'s:"
-msgstr ""
-
 #: ../../getting-started/brokers/sqlalchemy.rst:60
 msgid "Results"
 msgstr ""
@@ -90,3 +84,14 @@ msgid ""
 "Using more than a few workers (can lead to messages being executed multiple "
 "times)."
 msgstr ""
+
+#: ../../getting-started/brokers/sqlalchemy.rst:35
+msgid ""
+"Here's a list of examples using a selection of other `SQLAlchemy Connection "
+"Strings`_:"
+msgstr ""
+
+#~ msgid ""
+#~ "Here's a list of examples using a selection of other `SQLAlchemy Connection "
+#~ "String`_'s:"
+#~ msgstr ""

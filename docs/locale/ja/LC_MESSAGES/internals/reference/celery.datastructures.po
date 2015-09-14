@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -81,38 +81,38 @@ msgstr ""
 msgid "ExceptionInfo"
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo:1
 msgid "Exception wrapping an exception and its traceback."
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo:3
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo:3
 msgid "The exception info tuple as returned by :func:`sys.exc_info`."
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo.exception:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo.exception:1
 msgid "Exception instance."
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo.internal:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo.internal:1
 msgid "Set to true if this is an internal error."
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo.tb:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo.tb:1
 msgid "Pickleable traceback instance for use with :mod:`traceback`"
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo.traceback:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo.traceback:1
 msgid "String representation of the traceback."
 msgstr ""
 
-#: ../../../lib/python2.7/site-packages/billiard/einfo.pydocstring of
-#: celery.datastructures.ExceptionInfo.type:1
+#: ../../../../../.virtualenvs/celery/lib/python2.7/site-packages/billiard/einfo.pydocstring
+#: of celery.datastructures.ExceptionInfo.type:1
 msgid "Exception type."
 msgstr ""
 
@@ -122,12 +122,6 @@ msgstr ""
 
 #: ../../docstring of celery.datastructures.LimitedSet:1
 msgid "Kind-of Set with limitations."
-msgstr ""
-
-#: ../../docstring of celery.datastructures.LimitedSet:3
-msgid ""
-"Good for when you need to test for membership (`a in set`), but the list "
-"might become too big."
 msgstr ""
 
 #: ../../docstring of celery.datastructures.LimitedSet:6
@@ -171,3 +165,14 @@ msgid ""
 "and the limit has been exceeded, the *Least Recently Used* key will be "
 "discarded from the cache."
 msgstr ""
+
+#: ../../docstring of celery.datastructures.LimitedSet:3
+msgid ""
+"Good for when you need to test for membership (`a in set`), but the set "
+"should not grow unbounded."
+msgstr ""
+
+#~ msgid ""
+#~ "Good for when you need to test for membership (`a in set`), but the list "
+#~ "might become too big."
+#~ msgstr ""

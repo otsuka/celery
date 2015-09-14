@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -89,61 +89,68 @@ msgstr ""
 msgid "Finally, we can install rabbitmq using :program:`brew`:"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:94
+#: ../../getting-started/brokers/rabbitmq.rst:100
 msgid "Configuring the system host name"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:96
+#: ../../getting-started/brokers/rabbitmq.rst:102
 msgid ""
 "If you're using a DHCP server that is giving you a random host name, you "
 "need to permanently configure the host name. This is because RabbitMQ uses "
 "the host name to communicate with nodes."
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:100
+#: ../../getting-started/brokers/rabbitmq.rst:106
 msgid "Use the :program:`scutil` command to permanently set your host name:"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:106
+#: ../../getting-started/brokers/rabbitmq.rst:112
 msgid ""
 "Then add that host name to :file:`/etc/hosts` so it's possible to resolve it"
 " back into an IP address::"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:111
+#: ../../getting-started/brokers/rabbitmq.rst:117
 msgid ""
 "If you start the rabbitmq server, your rabbit node should now be "
 "`rabbit@myhost`, as verified by :program:`rabbitmqctl`:"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:128
+#: ../../getting-started/brokers/rabbitmq.rst:134
 msgid ""
 "This is especially important if your DHCP server gives you a host name "
 "starting with an IP address, (e.g. `23.10.112.31.comcast.net`), because then"
 " RabbitMQ will try to use `rabbit@23`, which is an illegal host name."
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:135
+#: ../../getting-started/brokers/rabbitmq.rst:141
 msgid "Starting/Stopping the RabbitMQ server"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:137
+#: ../../getting-started/brokers/rabbitmq.rst:143
 msgid "To start the server:"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:143
+#: ../../getting-started/brokers/rabbitmq.rst:149
 msgid ""
 "you can also run it in the background by adding the :option:`-detached` "
 "option (note: only one dash):"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:150
+#: ../../getting-started/brokers/rabbitmq.rst:156
 msgid ""
 "Never use :program:`kill` to stop the RabbitMQ server, but rather use the "
 ":program:`rabbitmqctl` command:"
 msgstr ""
 
-#: ../../getting-started/brokers/rabbitmq.rst:157
+#: ../../getting-started/brokers/rabbitmq.rst:163
 msgid ""
 "When the server is running, you can continue reading `Setting up RabbitMQ`_."
+msgstr ""
+
+#: ../../getting-started/brokers/rabbitmq.rst:93
+msgid ""
+"After you have installed rabbitmq with brew you need to add the following to"
+" your path to be able to start and stop the broker. Add it to your "
+".bash_profile or .profile"
 msgstr ""

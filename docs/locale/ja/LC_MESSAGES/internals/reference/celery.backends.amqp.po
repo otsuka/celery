@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -723,7 +723,7 @@ msgid ""
 msgstr ""
 
 #: ../../../celery/backends/amqp.pydocstring of
-#: celery.backends.amqp.AMQPBackend.Producer.publish:24
+#: celery.backends.amqp.AMQPBackend.Producer.publish:26
 msgid "Additional message properties, see AMQP spec."
 msgstr ""
 
@@ -740,4 +740,10 @@ msgstr ""
 #: ../../../celery/backends/amqp.pydocstring of
 #: celery.backends.amqp.AMQPBackend.store_result:1
 msgid "Send task return value and status."
+msgstr ""
+
+#: ../../../celery/backends/amqp.pydocstring of
+#: celery.backends.amqp.AMQPBackend.Producer.publish:24
+msgid ""
+"A TTL in seconds can be specified per message. Default is no expiration."
 msgstr ""

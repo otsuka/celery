@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -12,12 +12,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../internals/reference/celery.backends.database.session.rst:3
-#: ../../../celery/backends/database/session.pydocstring of
-#: celery.backends.database.session:2
 msgid "celery.backends.database.session"
 msgstr ""
 
-#: ../../../celery/backends/database/session.pydocstring of
-#: celery.backends.database.session:4
-msgid "SQLAlchemy sessions."
-msgstr ""
+#~ msgid "SQLAlchemy sessions."
+#~ msgstr ""

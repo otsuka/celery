@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -416,19 +416,13 @@ msgid ""
 "the result is 4."
 msgstr ""
 
-#: ../../userguide/canvas.rst:422
-msgid ""
-"The results will keep track of what subtasks a task applies, and this can be"
-" accessed from the result instance::"
-msgstr ""
-
-#: ../../userguide/canvas.rst:431
+#: ../../userguide/canvas.rst:505
 msgid ""
 "The result instance also has a :meth:`~@AsyncResult.collect` method that "
 "treats the result as a graph, enabling you to iterate over the results::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:439
+#: ../../userguide/canvas.rst:513
 msgid ""
 "By default :meth:`~@AsyncResult.collect` will raise an "
 ":exc:`~@IncompleteStream` exception if the graph is not fully formed (one of"
@@ -436,75 +430,69 @@ msgid ""
 "representation of the graph too::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:448
-msgid ""
-"You can link together as many tasks as you like, and signatures can be "
-"linked too::"
-msgstr ""
-
-#: ../../userguide/canvas.rst:455
+#: ../../userguide/canvas.rst:422
 msgid "You can also add *error callbacks* using the ``link_error`` argument::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:461
+#: ../../userguide/canvas.rst:428
 msgid ""
 "Since exceptions can only be serialized when pickle is used the error "
 "callbacks take the id of the parent task as argument instead:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:478
+#: ../../userguide/canvas.rst:445
 msgid ""
 "To make it even easier to link tasks together there is a special signature "
 "called :class:`~celery.chain` that lets you chain tasks together:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:492
+#: ../../userguide/canvas.rst:459
 msgid ""
 "Calling the chain will call the tasks in the current process and return the "
 "result of the last task in the chain::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:499
+#: ../../userguide/canvas.rst:466
 msgid ""
 "It also sets ``parent`` attributes so that you can work your way up the "
 "chain to get intermediate results::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:512
+#: ../../userguide/canvas.rst:478
 msgid "Chains can also be made using the ``|`` (pipe) operator::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:517
+#: ../../userguide/canvas.rst:524
 msgid "Graphs"
 msgstr ""
 
-#: ../../userguide/canvas.rst:519
+#: ../../userguide/canvas.rst:526
 msgid ""
 "In addition you can work with the result graph as a "
 ":class:`~celery.datastructures.DependencyGraph`:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:533
+#: ../../userguide/canvas.rst:540
 msgid "You can even convert these graphs to *dot* format::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:539
+#: ../../userguide/canvas.rst:546
 msgid "and create images:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:550
+#: ../../userguide/canvas.rst:557
 msgid "Groups"
 msgstr ""
 
-#: ../../userguide/canvas.rst:554
+#: ../../userguide/canvas.rst:561
 msgid "A group can be used to execute several tasks in parallel."
 msgstr ""
 
-#: ../../userguide/canvas.rst:556
+#: ../../userguide/canvas.rst:563
 msgid "The :class:`~celery.group` function takes a list of signatures::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:564
+#: ../../userguide/canvas.rst:571
 msgid ""
 "If you **call** the group, the tasks will be applied one after one in the "
 "current process, and a :class:`~celery.result.GroupResult` instance is "
@@ -512,150 +500,150 @@ msgid ""
 "tasks are ready and so on::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:574
+#: ../../userguide/canvas.rst:581
 msgid "Group also supports iterators::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:578
+#: ../../userguide/canvas.rst:585
 msgid ""
 "A group is a signature object, so it can be used in combination with other "
 "signatures."
 msgstr ""
 
-#: ../../userguide/canvas.rst:582
+#: ../../userguide/canvas.rst:589
 msgid "Group Results"
 msgstr ""
 
-#: ../../userguide/canvas.rst:584
+#: ../../userguide/canvas.rst:591
 msgid ""
 "The group task returns a special result too, this result works just like "
 "normal task results, except that it works on the group as a whole::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:608
+#: ../../userguide/canvas.rst:615
 msgid ""
 "The :class:`~celery.result.GroupResult` takes a list of "
 ":class:`~celery.result.AsyncResult` instances and operates on them as if it "
 "was a single task."
 msgstr ""
 
-#: ../../userguide/canvas.rst:612
+#: ../../userguide/canvas.rst:619
 msgid "It supports the following operations:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:614
+#: ../../userguide/canvas.rst:621
 msgid ":meth:`~celery.result.GroupResult.successful`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:616
+#: ../../userguide/canvas.rst:623
 msgid ""
 "Return :const:`True` if all of the subtasks finished successfully (e.g. did "
 "not raise an exception)."
 msgstr ""
 
-#: ../../userguide/canvas.rst:619
+#: ../../userguide/canvas.rst:626
 msgid ":meth:`~celery.result.GroupResult.failed`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:621
+#: ../../userguide/canvas.rst:628
 msgid "Return :const:`True` if any of the subtasks failed."
 msgstr ""
 
-#: ../../userguide/canvas.rst:623
+#: ../../userguide/canvas.rst:630
 msgid ":meth:`~celery.result.GroupResult.waiting`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:625
+#: ../../userguide/canvas.rst:632
 msgid "Return :const:`True` if any of the subtasks is not ready yet."
 msgstr ""
 
-#: ../../userguide/canvas.rst:628
+#: ../../userguide/canvas.rst:635
 msgid ":meth:`~celery.result.GroupResult.ready`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:630
+#: ../../userguide/canvas.rst:637
 msgid "Return :const:`True` if all of the subtasks are ready."
 msgstr ""
 
-#: ../../userguide/canvas.rst:633
+#: ../../userguide/canvas.rst:640
 msgid ":meth:`~celery.result.GroupResult.completed_count`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:635
+#: ../../userguide/canvas.rst:642
 msgid "Return the number of completed subtasks."
 msgstr ""
 
-#: ../../userguide/canvas.rst:637
+#: ../../userguide/canvas.rst:644
 msgid ":meth:`~celery.result.GroupResult.revoke`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:639
+#: ../../userguide/canvas.rst:646
 msgid "Revoke all of the subtasks."
 msgstr ""
 
-#: ../../userguide/canvas.rst:641
+#: ../../userguide/canvas.rst:648
 msgid ":meth:`~celery.result.GroupResult.join`"
 msgstr ""
 
-#: ../../userguide/canvas.rst:643
+#: ../../userguide/canvas.rst:650
 msgid ""
 "Gather the results for all of the subtasks and return a list with them "
 "ordered by the order of which they were called."
 msgstr ""
 
-#: ../../userguide/canvas.rst:650
+#: ../../userguide/canvas.rst:657
 msgid "Chords"
 msgstr ""
 
-#: ../../userguide/canvas.rst:656
+#: ../../userguide/canvas.rst:663
 msgid ""
 "Tasks used within a chord must *not* ignore their results. If the result "
 "backend is disabled for *any* task (header or body) in your chord you should"
 " read \":ref:`chord-important-notes`\"."
 msgstr ""
 
-#: ../../userguide/canvas.rst:661
+#: ../../userguide/canvas.rst:668
 msgid ""
 "A chord is a task that only executes after all of the tasks in a group have "
 "finished executing."
 msgstr ""
 
-#: ../../userguide/canvas.rst:665
+#: ../../userguide/canvas.rst:672
 msgid ""
 "Let's calculate the sum of the expression :math:`1 + 1 + 2 + 2 + 3 + 3 ... n"
 " + n` up to a hundred digits."
 msgstr ""
 
-#: ../../userguide/canvas.rst:668
+#: ../../userguide/canvas.rst:675
 msgid ""
 "First you need two tasks, :func:`add` and :func:`tsum` (:func:`sum` is "
 "already a standard function):"
 msgstr ""
 
-#: ../../userguide/canvas.rst:682
+#: ../../userguide/canvas.rst:689
 msgid ""
 "Now you can use a chord to calculate each addition step in parallel, and "
 "then get the sum of the resulting numbers::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:693
+#: ../../userguide/canvas.rst:700
 msgid ""
 "This is obviously a very contrived example, the overhead of messaging and "
 "synchronization makes this a lot slower than its Python counterpart::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:698
+#: ../../userguide/canvas.rst:705
 msgid ""
 "The synchronization step is costly, so you should avoid using chords as much"
 " as possible. Still, the chord is a powerful primitive to have in your "
 "toolbox as synchronization is a required step for many parallel algorithms."
 msgstr ""
 
-#: ../../userguide/canvas.rst:702
+#: ../../userguide/canvas.rst:709
 msgid "Let's break the chord expression down:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:712
+#: ../../userguide/canvas.rst:719
 msgid ""
 "Remember, the callback can only be executed after all of the tasks in the "
 "header have returned.  Each step in the header is executed as a task, in "
@@ -666,34 +654,34 @@ msgid ""
 " for other tasks <task-synchronous-subtasks>`)"
 msgstr ""
 
-#: ../../userguide/canvas.rst:723
+#: ../../userguide/canvas.rst:730
 msgid "Error handling"
 msgstr ""
 
-#: ../../userguide/canvas.rst:725
+#: ../../userguide/canvas.rst:732
 msgid "So what happens if one of the tasks raises an exception?"
 msgstr ""
 
-#: ../../userguide/canvas.rst:727
+#: ../../userguide/canvas.rst:734
 msgid ""
 "This was not documented for some time and before version 3.1 the exception "
 "value will be forwarded to the chord callback."
 msgstr ""
 
-#: ../../userguide/canvas.rst:731
+#: ../../userguide/canvas.rst:738
 msgid ""
 "From 3.1 errors will propagate to the callback, so the callback will not be "
 "executed instead the callback changes to failure state, and the error is set"
 " to the :exc:`~@ChordError` exception:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:749
+#: ../../userguide/canvas.rst:756
 msgid ""
 "If you're running 3.0.14 or later you can enable the new behavior via the "
 ":setting:`CELERY_CHORD_PROPAGATES` setting::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:754
+#: ../../userguide/canvas.rst:761
 msgid ""
 "While the traceback may be different depending on which result backend is "
 "being used, you can see the error description includes the id of the task "
@@ -701,7 +689,7 @@ msgid ""
 "also find the original traceback in ``result.traceback``."
 msgstr ""
 
-#: ../../userguide/canvas.rst:759
+#: ../../userguide/canvas.rst:766
 msgid ""
 "Note that the rest of the tasks will still execute, so the third task "
 "(``add.s(8, 8)``) is still executed even though the middle task failed. Also"
@@ -709,11 +697,11 @@ msgid ""
 " does not respect the ordering of the header group."
 msgstr ""
 
-#: ../../userguide/canvas.rst:767
+#: ../../userguide/canvas.rst:774
 msgid "Important Notes"
 msgstr ""
 
-#: ../../userguide/canvas.rst:769
+#: ../../userguide/canvas.rst:776
 msgid ""
 "Tasks used within a chord must *not* ignore their results. In practice this "
 "means that you must enable a :const:`CELERY_RESULT_BACKEND` in order to use "
@@ -723,26 +711,26 @@ msgid ""
 "applies to both Task subclasses and decorated tasks."
 msgstr ""
 
-#: ../../userguide/canvas.rst:776
+#: ../../userguide/canvas.rst:783
 msgid "Example Task subclass:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:785
+#: ../../userguide/canvas.rst:792
 msgid "Example decorated task:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:793
+#: ../../userguide/canvas.rst:800
 msgid ""
 "By default the synchronization step is implemented by having a recurring "
 "task poll the completion of the group every second, calling the signature "
 "when ready."
 msgstr ""
 
-#: ../../userguide/canvas.rst:797
+#: ../../userguide/canvas.rst:804
 msgid "Example implementation:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:810
+#: ../../userguide/canvas.rst:817
 msgid ""
 "This is used by all result backends except Redis and Memcached, which "
 "increment a counter after each task in the header, then applying the "
@@ -751,72 +739,72 @@ msgid ""
 "upgrade to at least 2.2 to use them."
 msgstr ""
 
-#: ../../userguide/canvas.rst:816
+#: ../../userguide/canvas.rst:823
 msgid ""
 "The Redis and Memcached approach is a much better solution, but not easily "
 "implemented in other backends (suggestions welcome!)."
 msgstr ""
 
-#: ../../userguide/canvas.rst:822
+#: ../../userguide/canvas.rst:829
 msgid ""
 "If you are using chords with the Redis result backend and also overriding "
 "the :meth:`Task.after_return` method, you need to make sure to call the "
 "super method or else the chord callback will not be applied."
 msgstr ""
 
-#: ../../userguide/canvas.rst:835
+#: ../../userguide/canvas.rst:842
 msgid "Map & Starmap"
 msgstr ""
 
-#: ../../userguide/canvas.rst:837
+#: ../../userguide/canvas.rst:844
 msgid ""
 ":class:`~celery.map` and :class:`~celery.starmap` are built-in tasks that "
 "calls the task for every element in a sequence."
 msgstr ""
 
-#: ../../userguide/canvas.rst:840
+#: ../../userguide/canvas.rst:847
 msgid "They differ from group in that"
 msgstr ""
 
-#: ../../userguide/canvas.rst:842
+#: ../../userguide/canvas.rst:849
 msgid "only one task message is sent"
 msgstr ""
 
-#: ../../userguide/canvas.rst:844
+#: ../../userguide/canvas.rst:851
 msgid "the operation is sequential."
 msgstr ""
 
-#: ../../userguide/canvas.rst:846
+#: ../../userguide/canvas.rst:853
 msgid "For example using ``map``:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:855 ../../userguide/canvas.rst:868
+#: ../../userguide/canvas.rst:862 ../../userguide/canvas.rst:875
 msgid "is the same as having a task doing:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:863
+#: ../../userguide/canvas.rst:870
 msgid "and using ``starmap``::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:876
+#: ../../userguide/canvas.rst:883
 msgid ""
 "Both ``map`` and ``starmap`` are signature objects, so they can be used as "
 "other signatures and combined in groups etc., for example to call the "
 "starmap after 10 seconds::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:885
+#: ../../userguide/canvas.rst:892
 msgid "Chunks"
 msgstr ""
 
-#: ../../userguide/canvas.rst:887
+#: ../../userguide/canvas.rst:894
 msgid ""
 "Chunking lets you divide an iterable of work into pieces, so that if you "
 "have one million objects, you can create 10 tasks with hundred thousand "
 "objects each."
 msgstr ""
 
-#: ../../userguide/canvas.rst:891
+#: ../../userguide/canvas.rst:898
 msgid ""
 "Some may worry that chunking your tasks results in a degradation of "
 "parallelism, but this is rarely true for a busy cluster and in practice "
@@ -824,33 +812,60 @@ msgid ""
 "increase performance."
 msgstr ""
 
-#: ../../userguide/canvas.rst:896
+#: ../../userguide/canvas.rst:903
 msgid "To create a chunks signature you can use :meth:`@Task.chunks`:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:902
+#: ../../userguide/canvas.rst:909
 msgid ""
 "As with :class:`~celery.group` the act of sending the messages for the "
 "chunks will happen in the current process when called:"
 msgstr ""
 
-#: ../../userguide/canvas.rst:922
+#: ../../userguide/canvas.rst:929
 msgid ""
 "while calling ``.apply_async`` will create a dedicated task so that the "
 "individual tasks are applied in a worker instead::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:928
+#: ../../userguide/canvas.rst:935
 msgid "You can also convert chunks to a group::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:932
+#: ../../userguide/canvas.rst:939
 msgid ""
 "and with the group skew the countdown of each task by increments of one::"
 msgstr ""
 
-#: ../../userguide/canvas.rst:937
+#: ../../userguide/canvas.rst:944
 msgid ""
 "which means that the first task will have a countdown of 1, the second a "
 "countdown of 2 and so on."
 msgstr ""
+
+#: ../../userguide/canvas.rst:484
+msgid ""
+"It's not possible to synchronize on groups, so a group chained to another "
+"signature is automatically upgraded to a chord:"
+msgstr ""
+
+#: ../../userguide/canvas.rst:493
+msgid "Trails"
+msgstr ""
+
+#: ../../userguide/canvas.rst:495
+msgid ""
+"Tasks will keep track of what subtasks a task calls in the result backend "
+"(unless disabled using :attr:`Task.trail <~@Task.trail>`) and this can be "
+"accessed from the result instance::"
+msgstr ""
+
+#~ msgid ""
+#~ "The results will keep track of what subtasks a task applies, and this can be"
+#~ " accessed from the result instance::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can link together as many tasks as you like, and signatures can be "
+#~ "linked too::"
+#~ msgstr ""

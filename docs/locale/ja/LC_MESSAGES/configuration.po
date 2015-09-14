@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -177,50 +177,45 @@ msgid ""
 "Can be one of the following:"
 msgstr ""
 
-#: ../../configuration.rst:188 ../../configuration.rst:503
+#: ../../configuration.rst:192 ../../configuration.rst:488
 msgid "database"
 msgstr ""
 
-#: ../../configuration.rst:187
+#: ../../configuration.rst:191
 msgid ""
 "Use a relational database supported by `SQLAlchemy`_. See :ref:`conf-"
 "database-result-backend`."
 msgstr ""
 
-#: ../../configuration.rst:192
-msgid "cache"
-msgstr ""
-
-#: ../../configuration.rst:191
-msgid ""
-"Use `memcached`_ to store the results. See :ref:`conf-cache-result-backend`."
-msgstr ""
-
-#: ../../configuration.rst:196
-msgid "mongodb"
-msgstr ""
-
-#: ../../configuration.rst:195
-msgid ""
-"Use `MongoDB`_ to store the results. See :ref:`conf-mongodb-result-backend`."
-msgstr ""
-
 #: ../../configuration.rst:200
-msgid "redis"
+msgid "cache"
 msgstr ""
 
 #: ../../configuration.rst:199
 msgid ""
-"Use `Redis`_ to store the results. See :ref:`conf-redis-result-backend`."
+"Use `memcached`_ to store the results. See :ref:`conf-cache-result-backend`."
 msgstr ""
 
 #: ../../configuration.rst:204
-msgid "amqp"
+msgid "mongodb"
 msgstr ""
 
 #: ../../configuration.rst:203
 msgid ""
-"Send results back as AMQP messages See :ref:`conf-amqp-result-backend`."
+"Use `MongoDB`_ to store the results. See :ref:`conf-mongodb-result-backend`."
+msgstr ""
+
+#: ../../configuration.rst:196
+msgid "redis"
+msgstr ""
+
+#: ../../configuration.rst:195
+msgid ""
+"Use `Redis`_ to store the results. See :ref:`conf-redis-result-backend`."
+msgstr ""
+
+#: ../../configuration.rst:220
+msgid "amqp"
 msgstr ""
 
 #: ../../configuration.rst:208
@@ -253,84 +248,59 @@ msgid ""
 "backend`."
 msgstr ""
 
-#: ../../configuration.rst:235
+#: ../../configuration.rst:239
 msgid "CELERY_RESULT_SERIALIZER"
 msgstr ""
 
-#: ../../configuration.rst:237
+#: ../../configuration.rst:241
 msgid ""
 "Result serialization format.  Default is ``pickle``. See :ref:`calling-"
 "serializers` for information about supported serialization formats."
 msgstr ""
 
-#: ../../configuration.rst:244
+#: ../../configuration.rst:248
 msgid "Database backend settings"
 msgstr ""
 
-#: ../../configuration.rst:247
+#: ../../configuration.rst:251
 msgid "Database URL Examples"
 msgstr ""
 
-#: ../../configuration.rst:249
+#: ../../configuration.rst:253
 msgid ""
 "To use the database backend you have to configure the "
 ":setting:`CELERY_RESULT_BACKEND` setting with a connection URL and the "
 "``db+`` prefix:"
 msgstr ""
 
-#: ../../configuration.rst:257
-msgid "Examples:"
-msgstr ""
-
-#: ../../configuration.rst:259
-msgid ""
-"# sqlite (filename) CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'"
-msgstr ""
-
-#: ../../configuration.rst:262
-msgid "# mysql CELERY_RESULT_BACKEND = 'db+mysql://scott:tiger@localhost/foo'"
-msgstr ""
-
-#: ../../configuration.rst:265
-msgid ""
-"# postgresql CELERY_RESULT_BACKEND = "
-"'db+postgresql://scott:tiger@localhost/mydatabase'"
-msgstr ""
-
-#: ../../configuration.rst:268
-msgid ""
-"# oracle CELERY_RESULT_BACKEND = "
-"'db+oracle://scott:tiger@127.0.0.1:1521/sidname'"
-msgstr ""
-
-#: ../../configuration.rst:273
+#: ../../configuration.rst:277
 msgid ""
 "Please see `Supported Databases`_ for a table of supported databases, and "
 "`Connection String`_ for more information about connection strings (which is"
 " the part of the URI that comes after the ``db+`` prefix)."
 msgstr ""
 
-#: ../../configuration.rst:286
+#: ../../configuration.rst:290
 msgid "CELERY_RESULT_DBURI"
 msgstr ""
 
-#: ../../configuration.rst:288
+#: ../../configuration.rst:292
 msgid ""
 "This setting is no longer used as it's now possible to specify the database "
 "URL directly in the :setting:`CELERY_RESULT_BACKEND` setting."
 msgstr ""
 
-#: ../../configuration.rst:294
+#: ../../configuration.rst:298
 msgid "CELERY_RESULT_ENGINE_OPTIONS"
 msgstr ""
 
-#: ../../configuration.rst:296
+#: ../../configuration.rst:300
 msgid ""
 "To specify additional SQLAlchemy database engine options you can use the "
 ":setting:`CELERY_RESULT_ENGINE_OPTIONS` setting::"
 msgstr ""
 
-#: ../../configuration.rst:306
+#: ../../configuration.rst:313
 msgid ""
 "Short lived sessions are disabled by default.  If enabled they can "
 "drastically reduce performance, especially on systems processing lots of "
@@ -341,230 +311,223 @@ msgid ""
 " option only affects the database backend."
 msgstr ""
 
-#: ../../configuration.rst:314
+#: ../../configuration.rst:321
 msgid "Specifying Table Names"
 msgstr ""
 
-#: ../../configuration.rst:318
+#: ../../configuration.rst:325
 msgid ""
 "When SQLAlchemy is configured as the result backend, Celery automatically "
 "creates two tables to store result metadata for tasks.  This setting allows "
 "you to customize the table names:"
 msgstr ""
 
-#: ../../configuration.rst:333
+#: ../../configuration.rst:690
 msgid "AMQP backend settings"
 msgstr ""
 
-#: ../../configuration.rst:337
-msgid ""
-"The AMQP backend requires RabbitMQ 1.1.0 or higher to automatically expire "
-"results.  If you are running an older version of RabbitmQ you should disable"
-" result expiration like this:"
-msgstr ""
-
-#: ../../configuration.rst:341
+#: ../../configuration.rst:705
 msgid "CELERY_TASK_RESULT_EXPIRES = None"
 msgstr ""
 
-#: ../../configuration.rst:346
+#: ../../configuration.rst:710
 msgid "CELERY_RESULT_EXCHANGE"
 msgstr ""
 
-#: ../../configuration.rst:348
+#: ../../configuration.rst:712
 msgid ""
 "Name of the exchange to publish results in.  Default is `celeryresults`."
 msgstr ""
 
-#: ../../configuration.rst:353
+#: ../../configuration.rst:717
 msgid "CELERY_RESULT_EXCHANGE_TYPE"
 msgstr ""
 
-#: ../../configuration.rst:355
+#: ../../configuration.rst:719
 msgid ""
 "The exchange type of the result exchange.  Default is to use a `direct` "
 "exchange."
 msgstr ""
 
-#: ../../configuration.rst:361
+#: ../../configuration.rst:345 ../../configuration.rst:725
 msgid "CELERY_RESULT_PERSISTENT"
 msgstr ""
 
-#: ../../configuration.rst:363
+#: ../../configuration.rst:347 ../../configuration.rst:727
 msgid ""
 "If set to :const:`True`, result messages will be persistent.  This means the"
 " messages will not be lost after a broker restart.  The default is for the "
 "results to be transient."
 msgstr ""
 
-#: ../../configuration.rst:368 ../../configuration.rst:525
-#: ../../configuration.rst:616
+#: ../../configuration.rst:352 ../../configuration.rst:510
+#: ../../configuration.rst:601 ../../configuration.rst:732
 msgid "Example configuration"
 msgstr ""
 
-#: ../../configuration.rst:378
+#: ../../configuration.rst:363
 msgid "Cache backend settings"
 msgstr ""
 
-#: ../../configuration.rst:382
+#: ../../configuration.rst:367
 msgid ""
 "The cache backend supports the `pylibmc`_ and `python-memcached` libraries."
 "  The latter is used only if `pylibmc`_ is not installed."
 msgstr ""
 
-#: ../../configuration.rst:385
+#: ../../configuration.rst:370
 msgid "Using a single memcached server:"
 msgstr ""
 
-#: ../../configuration.rst:391
+#: ../../configuration.rst:376
 msgid "Using multiple memcached servers:"
 msgstr ""
 
-#: ../../configuration.rst:401
+#: ../../configuration.rst:386
 msgid "The \"memory\" backend stores the cache in memory only:"
 msgstr ""
 
-#: ../../configuration.rst:403
+#: ../../configuration.rst:388
 msgid "CELERY_CACHE_BACKEND = 'memory'"
 msgstr ""
 
-#: ../../configuration.rst:406
+#: ../../configuration.rst:391
 msgid "CELERY_CACHE_BACKEND_OPTIONS"
 msgstr ""
 
-#: ../../configuration.rst:408
+#: ../../configuration.rst:393
 msgid ""
 "You can set pylibmc options using the "
 ":setting:`CELERY_CACHE_BACKEND_OPTIONS` setting:"
 msgstr ""
 
-#: ../../configuration.rst:421
+#: ../../configuration.rst:406
 msgid "CELERY_CACHE_BACKEND"
 msgstr ""
 
-#: ../../configuration.rst:423
+#: ../../configuration.rst:408
 msgid ""
 "This setting is no longer used as it's now possible to specify the cache "
 "backend directly in the :setting:`CELERY_RESULT_BACKEND` setting."
 msgstr ""
 
-#: ../../configuration.rst:429
+#: ../../configuration.rst:414
 msgid "Redis backend settings"
 msgstr ""
 
-#: ../../configuration.rst:432
+#: ../../configuration.rst:417
 msgid "Configuring the backend URL"
 msgstr ""
 
-#: ../../configuration.rst:436
+#: ../../configuration.rst:421
 msgid ""
 "The Redis backend requires the :mod:`redis` library: "
 "http://pypi.python.org/pypi/redis/"
 msgstr ""
 
-#: ../../configuration.rst:439
+#: ../../configuration.rst:424
 msgid "To install the redis package use `pip` or `easy_install`:"
 msgstr ""
 
-#: ../../configuration.rst:445
+#: ../../configuration.rst:430
 msgid ""
 "This backend requires the :setting:`CELERY_RESULT_BACKEND` setting to be set"
 " to a Redis URL::"
 msgstr ""
 
-#: ../../configuration.rst:450
+#: ../../configuration.rst:435
 msgid "For example::"
 msgstr ""
 
-#: ../../configuration.rst:454
+#: ../../configuration.rst:439
 msgid "which is the same as::"
 msgstr ""
 
-#: ../../configuration.rst:458
+#: ../../configuration.rst:443
 msgid "The fields of the URL is defined as folows:"
 msgstr ""
 
-#: ../../configuration.rst:460
+#: ../../configuration.rst:445
 msgid "*host*"
 msgstr ""
 
-#: ../../configuration.rst:462
+#: ../../configuration.rst:447
 msgid "Host name or IP address of the Redis server. e.g. `localhost`."
 msgstr ""
 
-#: ../../configuration.rst:464
+#: ../../configuration.rst:449
 msgid "*port*"
 msgstr ""
 
-#: ../../configuration.rst:466
+#: ../../configuration.rst:451
 msgid "Port to the Redis server. Default is 6379."
 msgstr ""
 
-#: ../../configuration.rst:468
+#: ../../configuration.rst:453
 msgid "*db*"
 msgstr ""
 
-#: ../../configuration.rst:470
+#: ../../configuration.rst:455
 msgid ""
 "Database number to use. Default is 0. The db can include an optional leading"
 " slash."
 msgstr ""
 
-#: ../../configuration.rst:473
+#: ../../configuration.rst:458
 msgid "*password*"
 msgstr ""
 
-#: ../../configuration.rst:475
+#: ../../configuration.rst:460
 msgid "Password used to connect to the database."
 msgstr ""
 
-#: ../../configuration.rst:480
+#: ../../configuration.rst:465
 msgid "CELERY_REDIS_MAX_CONNECTIONS"
 msgstr ""
 
-#: ../../configuration.rst:482
+#: ../../configuration.rst:467
 msgid ""
 "Maximum number of connections available in the Redis connection pool used "
 "for sending and retrieving results."
 msgstr ""
 
-#: ../../configuration.rst:488
+#: ../../configuration.rst:473
 msgid "MongoDB backend settings"
 msgstr ""
 
-#: ../../configuration.rst:492
+#: ../../configuration.rst:477
 msgid ""
 "The MongoDB backend requires the :mod:`pymongo` library: "
 "http://github.com/mongodb/mongo-python-driver/tree/master"
 msgstr ""
 
-#: ../../configuration.rst:498
+#: ../../configuration.rst:483
 msgid "CELERY_MONGODB_BACKEND_SETTINGS"
 msgstr ""
 
-#: ../../configuration.rst:500 ../../configuration.rst:686
+#: ../../configuration.rst:485 ../../configuration.rst:671
 msgid "This is a dict supporting the following keys:"
 msgstr ""
 
-#: ../../configuration.rst:503
+#: ../../configuration.rst:488
 msgid "The database name to connect to. Defaults to ``celery``."
 msgstr ""
 
-#: ../../configuration.rst:507
+#: ../../configuration.rst:492
 msgid "taskmeta_collection"
 msgstr ""
 
-#: ../../configuration.rst:506
+#: ../../configuration.rst:491
 msgid ""
 "The collection name to store task meta data. Defaults to "
 "``celery_taskmeta``."
 msgstr ""
 
-#: ../../configuration.rst:514
+#: ../../configuration.rst:499
 msgid "max_pool_size"
 msgstr ""
 
-#: ../../configuration.rst:510
+#: ../../configuration.rst:495
 msgid ""
 "Passed as max_pool_size to PyMongo's Connection or MongoClient constructor. "
 "It is the maximum number of TCP connections to keep open to MongoDB at a "
@@ -572,312 +535,301 @@ msgid ""
 "will be closed when they are released. Defaults to 10."
 msgstr ""
 
-#: ../../configuration.rst:516
+#: ../../configuration.rst:501
 msgid "options"
 msgstr ""
 
-#: ../../configuration.rst:518
+#: ../../configuration.rst:503
 msgid ""
 "Additional keyword arguments to pass to the mongodb connection constructor."
 "  See the :mod:`pymongo` docs to see a list of arguments supported."
 msgstr ""
 
-#: ../../configuration.rst:538
+#: ../../configuration.rst:523
 msgid "Cassandra backend settings"
 msgstr ""
 
-#: ../../configuration.rst:542
+#: ../../configuration.rst:527
 msgid ""
 "The Cassandra backend requires the :mod:`pycassa` library: "
 "http://pypi.python.org/pypi/pycassa/"
 msgstr ""
 
-#: ../../configuration.rst:545
+#: ../../configuration.rst:530
 msgid "To install the pycassa package use `pip` or `easy_install`:"
 msgstr ""
 
-#: ../../configuration.rst:551
+#: ../../configuration.rst:536
 msgid ""
 "This backend requires the following configuration directives to be set."
 msgstr ""
 
-#: ../../configuration.rst:556
+#: ../../configuration.rst:541
 msgid "CASSANDRA_SERVERS"
 msgstr ""
 
-#: ../../configuration.rst:558
+#: ../../configuration.rst:543
 msgid "List of ``host:port`` Cassandra servers. e.g.::"
 msgstr ""
 
-#: ../../configuration.rst:565
+#: ../../configuration.rst:550
 msgid "CASSANDRA_KEYSPACE"
 msgstr ""
 
-#: ../../configuration.rst:567
+#: ../../configuration.rst:552
 msgid "The keyspace in which to store the results. e.g.::"
 msgstr ""
 
-#: ../../configuration.rst:574
+#: ../../configuration.rst:559
 msgid "CASSANDRA_COLUMN_FAMILY"
 msgstr ""
 
-#: ../../configuration.rst:576
+#: ../../configuration.rst:561
 msgid "The column family in which to store the results. e.g.::"
 msgstr ""
 
-#: ../../configuration.rst:583
+#: ../../configuration.rst:568
 msgid "CASSANDRA_READ_CONSISTENCY"
 msgstr ""
 
-#: ../../configuration.rst:585
+#: ../../configuration.rst:570
 msgid ""
 "The read consistency used. Values can be ``ONE``, ``QUORUM`` or ``ALL``."
 msgstr ""
 
-#: ../../configuration.rst:590
+#: ../../configuration.rst:575
 msgid "CASSANDRA_WRITE_CONSISTENCY"
 msgstr ""
 
-#: ../../configuration.rst:592
+#: ../../configuration.rst:577
 msgid ""
 "The write consistency used. Values can be ``ONE``, ``QUORUM`` or ``ALL``."
 msgstr ""
 
-#: ../../configuration.rst:597
+#: ../../configuration.rst:582
 msgid "CASSANDRA_DETAILED_MODE"
 msgstr ""
 
-#: ../../configuration.rst:599
+#: ../../configuration.rst:584
 msgid ""
 "Enable or disable detailed mode. Default is :const:`False`. This mode allows"
 " to use the power of Cassandra wide columns to store all states for a task "
 "as a wide column, instead of only the last one."
 msgstr ""
 
-#: ../../configuration.rst:603
+#: ../../configuration.rst:588
 msgid ""
 "To use this mode, you need to configure your ColumnFamily to use the "
 "``TimeUUID`` type as a comparator::"
 msgstr ""
 
-#: ../../configuration.rst:609
+#: ../../configuration.rst:594
 msgid "CASSANDRA_OPTIONS"
 msgstr ""
 
-#: ../../configuration.rst:611
+#: ../../configuration.rst:596
 msgid "Options to be passed to the `pycassa connection pool`_ (optional)."
 msgstr ""
 
-#: ../../configuration.rst:635
+#: ../../configuration.rst:620
 msgid "IronCache backend settings"
 msgstr ""
 
-#: ../../configuration.rst:639
+#: ../../configuration.rst:624
 msgid ""
 "The IronCache backend requires the :mod:`iron_celery` library: "
 "http://pypi.python.org/pypi/iron_celery"
 msgstr ""
 
-#: ../../configuration.rst:642
+#: ../../configuration.rst:627
 msgid "To install the iron_celery package use `pip` or `easy_install`:"
 msgstr ""
 
-#: ../../configuration.rst:648
+#: ../../configuration.rst:633
 msgid ""
 "IronCache is configured via the URL provided in "
 ":setting:`CELERY_RESULT_BACKEND`, for example::"
 msgstr ""
 
-#: ../../configuration.rst:652
+#: ../../configuration.rst:637
 msgid "Or to change the cache name::"
 msgstr ""
 
-#: ../../configuration.rst:656
+#: ../../configuration.rst:641
 msgid "For more information, see: https://github.com/iron-io/iron_celery"
 msgstr ""
 
-#: ../../configuration.rst:662
+#: ../../configuration.rst:647
 msgid "Couchbase backend settings"
 msgstr ""
 
-#: ../../configuration.rst:666
+#: ../../configuration.rst:651
 msgid ""
 "The Couchbase backend requires the :mod:`couchbase` library: "
 "https://pypi.python.org/pypi/couchbase"
 msgstr ""
 
-#: ../../configuration.rst:669
+#: ../../configuration.rst:654
 msgid "To install the couchbase package use `pip` or `easy_install`:"
 msgstr ""
 
-#: ../../configuration.rst:675
+#: ../../configuration.rst:660
 msgid ""
 "This backend can be configured via the :setting:`CELERY_RESULT_BACKEND` set "
 "to a couchbase URL::"
 msgstr ""
 
-#: ../../configuration.rst:684
+#: ../../configuration.rst:669
 msgid "CELERY_COUCHBASE_BACKEND_SETTINGS"
 msgstr ""
 
-#: ../../configuration.rst:689
+#: ../../configuration.rst:674
 msgid "host"
 msgstr ""
 
-#: ../../configuration.rst:689
+#: ../../configuration.rst:674
 msgid "Host name of the Couchbase server. Defaults to ``localhost``."
 msgstr ""
 
-#: ../../configuration.rst:692
+#: ../../configuration.rst:677
 msgid "port"
 msgstr ""
 
-#: ../../configuration.rst:692
+#: ../../configuration.rst:677
 msgid "The port the Couchbase server is listening to. Defaults to ``8091``."
 msgstr ""
 
-#: ../../configuration.rst:696
+#: ../../configuration.rst:681
 msgid "bucket"
 msgstr ""
 
-#: ../../configuration.rst:695
+#: ../../configuration.rst:680
 msgid ""
 "The default bucket the Couchbase server is writing to. Defaults to "
 "``default``."
 msgstr ""
 
-#: ../../configuration.rst:699
+#: ../../configuration.rst:684
 msgid "username"
 msgstr ""
 
-#: ../../configuration.rst:699
+#: ../../configuration.rst:684
 msgid "User name to authenticate to the Couchbase server as (optional)."
 msgstr ""
 
-#: ../../configuration.rst:703
+#: ../../configuration.rst:687
 msgid "password"
 msgstr ""
 
-#: ../../configuration.rst:702
+#: ../../configuration.rst:687
 msgid "Password to authenticate to the Couchbase server (optional)."
 msgstr ""
 
-#: ../../configuration.rst:708
+#: ../../configuration.rst:742
 msgid "Message Routing"
 msgstr ""
 
-#: ../../configuration.rst:715
+#: ../../configuration.rst:749
 msgid "CELERY_QUEUES"
 msgstr ""
 
-#: ../../configuration.rst:717
-msgid ""
-"The mapping of queues the worker consumes from.  This is a dictionary of "
-"queue name/options.  See :ref:`guide-routing` for more information."
-msgstr ""
-
-#: ../../configuration.rst:720
+#: ../../configuration.rst:763
 msgid ""
 "The default is a queue/exchange/binding key of ``celery``, with exchange "
 "type ``direct``."
 msgstr ""
 
-#: ../../configuration.rst:723
-msgid ""
-"You don't have to care about this unless you want custom routing facilities."
-msgstr ""
-
-#: ../../configuration.rst:728
+#: ../../configuration.rst:769
 msgid "CELERY_ROUTES"
 msgstr ""
 
-#: ../../configuration.rst:730
+#: ../../configuration.rst:771
 msgid ""
 "A list of routers, or a single router used to route tasks to queues. When "
 "deciding the final destination of a task the routers are consulted in order."
 "  See :ref:`routers` for more information."
 msgstr ""
 
-#: ../../configuration.rst:737
+#: ../../configuration.rst:778
 msgid "CELERY_QUEUE_HA_POLICY"
 msgstr ""
 
-#: ../../configuration.rst:738
+#: ../../configuration.rst:779
 msgid "RabbitMQ"
 msgstr ""
 
-#: ../../configuration.rst:740
+#: ../../configuration.rst:781
 msgid ""
 "This will set the default HA policy for a queue, and the value can either be"
 " a string (usually ``all``):"
 msgstr ""
 
-#: ../../configuration.rst:747
+#: ../../configuration.rst:788
 msgid ""
 "Using 'all' will replicate the queue to all current nodes, Or you can give "
 "it a list of nodes to replicate to:"
 msgstr ""
 
-#: ../../configuration.rst:755
+#: ../../configuration.rst:796
 msgid ""
 "Using a list will implicitly set ``x-ha-policy`` to 'nodes' and ``x-ha-"
 "policy-params`` to the given list of nodes."
 msgstr ""
 
-#: ../../configuration.rst:758
+#: ../../configuration.rst:799
 msgid "See http://www.rabbitmq.com/ha.html for more information."
 msgstr ""
 
-#: ../../configuration.rst:763
+#: ../../configuration.rst:804
 msgid "CELERY_WORKER_DIRECT"
 msgstr ""
 
-#: ../../configuration.rst:765
+#: ../../configuration.rst:806
 msgid ""
 "This option enables so that every worker has a dedicated queue, so that "
 "tasks can be routed to specific workers."
 msgstr ""
 
-#: ../../configuration.rst:768
+#: ../../configuration.rst:809
 msgid ""
 "The queue name for each worker is automatically generated based on the "
 "worker hostname and a ``.dq`` suffix, using the ``C.dq`` exchange."
 msgstr ""
 
-#: ../../configuration.rst:771
+#: ../../configuration.rst:812
 msgid ""
 "For example the queue name for the worker with node name ``w1@example.com`` "
 "becomes::"
 msgstr ""
 
-#: ../../configuration.rst:776
+#: ../../configuration.rst:817
 msgid ""
 "Then you can route the task to the task by specifying the hostname as the "
 "routing key and the ``C.dq`` exchange::"
 msgstr ""
 
-#: ../../configuration.rst:786
+#: ../../configuration.rst:827
 msgid "CELERY_CREATE_MISSING_QUEUES"
 msgstr ""
 
-#: ../../configuration.rst:788
+#: ../../configuration.rst:829
 msgid ""
 "If enabled (default), any queues specified that are not defined in "
 ":setting:`CELERY_QUEUES` will be automatically created. See :ref:`routing-"
 "automatic`."
 msgstr ""
 
-#: ../../configuration.rst:795
+#: ../../configuration.rst:836
 msgid "CELERY_DEFAULT_QUEUE"
 msgstr ""
 
-#: ../../configuration.rst:797
+#: ../../configuration.rst:838
 msgid ""
 "The name of the default queue used by `.apply_async` if the message has no "
 "route or no custom queue has been specified."
 msgstr ""
 
-#: ../../configuration.rst:801
+#: ../../configuration.rst:842
 msgid ""
 "This queue must be listed in :setting:`CELERY_QUEUES`. If "
 ":setting:`CELERY_QUEUES` is not specified then it is automatically created "
@@ -885,123 +837,122 @@ msgid ""
 "queue."
 msgstr ""
 
-#: ../../configuration.rst:806 ../../configuration.rst:820
-#: ../../configuration.rst:839
+#: ../../configuration.rst:847 ../../configuration.rst:861
+#: ../../configuration.rst:880
 msgid "The default is: `celery`."
 msgstr ""
 
-#: ../../configuration.rst:810
+#: ../../configuration.rst:851
 msgid ":ref:`routing-changing-default-queue`"
 msgstr ""
 
-#: ../../configuration.rst:815
+#: ../../configuration.rst:856
 msgid "CELERY_DEFAULT_EXCHANGE"
 msgstr ""
 
-#: ../../configuration.rst:817
+#: ../../configuration.rst:858
 msgid ""
 "Name of the default exchange to use when no custom exchange is specified for"
 " a key in the :setting:`CELERY_QUEUES` setting."
 msgstr ""
 
-#: ../../configuration.rst:825
+#: ../../configuration.rst:866
 msgid "CELERY_DEFAULT_EXCHANGE_TYPE"
 msgstr ""
 
-#: ../../configuration.rst:827
+#: ../../configuration.rst:868
 msgid ""
 "Default exchange type used when no custom exchange type is specified for a "
 "key in the :setting:`CELERY_QUEUES` setting. The default is: `direct`."
 msgstr ""
 
-#: ../../configuration.rst:834
+#: ../../configuration.rst:875
 msgid "CELERY_DEFAULT_ROUTING_KEY"
 msgstr ""
 
-#: ../../configuration.rst:836
+#: ../../configuration.rst:877
 msgid ""
 "The default routing key used when no custom routing key is specified for a "
 "key in the :setting:`CELERY_QUEUES` setting."
 msgstr ""
 
-#: ../../configuration.rst:844
+#: ../../configuration.rst:885
 msgid "CELERY_DEFAULT_DELIVERY_MODE"
 msgstr ""
 
-#: ../../configuration.rst:846
+#: ../../configuration.rst:887
 msgid ""
 "Can be `transient` or `persistent`.  The default is to send persistent "
 "messages."
 msgstr ""
 
-#: ../../configuration.rst:852
+#: ../../configuration.rst:893
 msgid "Broker Settings"
 msgstr ""
 
-#: ../../configuration.rst:857
+#: ../../configuration.rst:898
 msgid "CELERY_ACCEPT_CONTENT"
 msgstr ""
 
-#: ../../configuration.rst:859
+#: ../../configuration.rst:900
 msgid "A whitelist of content-types/serializers to allow."
 msgstr ""
 
-#: ../../configuration.rst:861
+#: ../../configuration.rst:902
 msgid ""
 "If a message is received that is not in this list then the message will be "
 "discarded with an error."
 msgstr ""
 
-#: ../../configuration.rst:864
+#: ../../configuration.rst:905
 msgid ""
 "By default any content type is enabled (including pickle and yaml) so make "
 "sure untrusted parties do not have access to your broker. See :ref:`guide-"
 "security` for more."
 msgstr ""
 
-#: ../../configuration.rst:868 ../../configuration.rst:885
-#: ../../configuration.rst:906
+#: ../../configuration.rst:909 ../../configuration.rst:926
 msgid "Example::"
 msgstr ""
 
-#: ../../configuration.rst:879 ../../configuration.rst:900
+#: ../../configuration.rst:920
 msgid "BROKER_FAILOVER_STRATEGY"
 msgstr ""
 
-#: ../../configuration.rst:881 ../../configuration.rst:902
+#: ../../configuration.rst:922
 msgid ""
 "Default failover strategy for the broker Connection object. If supplied, may"
 " map to a key in 'kombu.connection.failover_strategies', or be a reference "
 "to any method that yields a single item from a supplied list."
 msgstr ""
 
-#: ../../configuration.rst:920
+#: ../../configuration.rst:941
 msgid "BROKER_TRANSPORT"
 msgstr ""
 
-#: ../../configuration.rst:921
+#: ../../configuration.rst:942
 msgid "``BROKER_BACKEND``"
 msgstr ""
 
-#: ../../configuration.rst:922
+#: ../../configuration.rst:943
 msgid "``CARROT_BACKEND``"
 msgstr ""
 
-#: ../../configuration.rst:927
+#: ../../configuration.rst:948
 msgid "BROKER_URL"
 msgstr ""
 
-#: ../../configuration.rst:929
+#: ../../configuration.rst:950
 msgid "Default broker URL.  This must be an URL in the form of::"
 msgstr ""
 
-#: ../../configuration.rst:933
+#: ../../configuration.rst:954
 msgid ""
 "Only the scheme part (``transport://``) is required, the rest is optional, "
 "and defaults to the specific transports default values."
 msgstr ""
 
-#: ../../configuration.rst:936
+#: ../../configuration.rst:957
 msgid ""
 "The transport part is the broker implementation to use, and the default is "
 "``amqp``, which uses ``librabbitmq`` by default or falls back to ``pyamqp`` "
@@ -1011,32 +962,28 @@ msgid ""
 "implementation."
 msgstr ""
 
-#: ../../configuration.rst:943
+#: ../../configuration.rst:964
 msgid ""
 "See :ref:`kombu:connection-urls` in the Kombu documentation for more "
 "information."
 msgstr ""
 
-#: ../../configuration.rst:949
+#: ../../configuration.rst:970
 msgid "BROKER_HEARTBEAT"
 msgstr ""
 
-#: ../../configuration.rst:950 ../../configuration.rst:969
+#: ../../configuration.rst:971 ../../configuration.rst:990
 msgid "``pyamqp``"
 msgstr ""
 
-#: ../../configuration.rst:952
+#: ../../configuration.rst:973
 msgid ""
 "It's not always possible to detect connection loss in a timely manner using "
 "TCP/IP alone, so AMQP defines something called heartbeats that's is used "
 "both by the client and the broker to detect if a connection was closed."
 msgstr ""
 
-#: ../../configuration.rst:957
-msgid "Hartbeats are disabled by default."
-msgstr ""
-
-#: ../../configuration.rst:959
+#: ../../configuration.rst:980
 msgid ""
 "If the heartbeat value is 10 seconds, then the heartbeat will be monitored "
 "at the interval specified by the :setting:`BROKER_HEARTBEAT_CHECKRATE` "
@@ -1044,11 +991,11 @@ msgid ""
 "the default 10 seconds, the heartbeat is checked every 5 seconds)."
 msgstr ""
 
-#: ../../configuration.rst:968
+#: ../../configuration.rst:989
 msgid "BROKER_HEARTBEAT_CHECKRATE"
 msgstr ""
 
-#: ../../configuration.rst:971
+#: ../../configuration.rst:992
 msgid ""
 "At intervals the worker will monitor that the broker has not missed too many"
 " heartbeats.  The rate at which this is checked is calculated by dividing "
@@ -1057,26 +1004,26 @@ msgid ""
 " seconds (twice the heartbeat sending rate)."
 msgstr ""
 
-#: ../../configuration.rst:980
+#: ../../configuration.rst:1001
 msgid "BROKER_USE_SSL"
 msgstr ""
 
-#: ../../configuration.rst:982
+#: ../../configuration.rst:1003
 msgid ""
 "Use SSL to connect to the broker.  Off by default.  This may not be "
 "supported by all transports."
 msgstr ""
 
-#: ../../configuration.rst:988
+#: ../../configuration.rst:1009
 msgid "BROKER_POOL_LIMIT"
 msgstr ""
 
-#: ../../configuration.rst:992
+#: ../../configuration.rst:1013
 msgid ""
 "The maximum number of connections that can be open in the connection pool."
 msgstr ""
 
-#: ../../configuration.rst:994
+#: ../../configuration.rst:1015
 msgid ""
 "The pool is enabled by default since version 2.5, with a default limit of "
 "ten connections.  This number can be tweaked depending on the number of "
@@ -1085,98 +1032,98 @@ msgid ""
 "contention can arise and you should consider increasing the limit."
 msgstr ""
 
-#: ../../configuration.rst:1000
+#: ../../configuration.rst:1021
 msgid ""
 "If set to :const:`None` or 0 the connection pool will be disabled and "
 "connections will be established and closed for every use."
 msgstr ""
 
-#: ../../configuration.rst:1003
+#: ../../configuration.rst:1024
 msgid "Default (since 2.5) is to use a pool of 10 connections."
 msgstr ""
 
-#: ../../configuration.rst:1008
+#: ../../configuration.rst:1029
 msgid "BROKER_CONNECTION_TIMEOUT"
 msgstr ""
 
-#: ../../configuration.rst:1010
+#: ../../configuration.rst:1031
 msgid ""
 "The default timeout in seconds before we give up establishing a connection "
 "to the AMQP server.  Default is 4 seconds."
 msgstr ""
 
-#: ../../configuration.rst:1016
+#: ../../configuration.rst:1037
 msgid "BROKER_CONNECTION_RETRY"
 msgstr ""
 
-#: ../../configuration.rst:1018
+#: ../../configuration.rst:1039
 msgid ""
 "Automatically try to re-establish the connection to the AMQP broker if lost."
 msgstr ""
 
-#: ../../configuration.rst:1020
+#: ../../configuration.rst:1041
 msgid ""
 "The time between retries is increased for each retry, and is not exhausted "
 "before :setting:`BROKER_CONNECTION_MAX_RETRIES` is exceeded."
 msgstr ""
 
-#: ../../configuration.rst:1024
+#: ../../configuration.rst:1045
 msgid "This behavior is on by default."
 msgstr ""
 
-#: ../../configuration.rst:1029
+#: ../../configuration.rst:1050
 msgid "BROKER_CONNECTION_MAX_RETRIES"
 msgstr ""
 
-#: ../../configuration.rst:1031
+#: ../../configuration.rst:1052
 msgid ""
 "Maximum number of retries before we give up re-establishing a connection to "
 "the AMQP broker."
 msgstr ""
 
-#: ../../configuration.rst:1034
+#: ../../configuration.rst:1055
 msgid "If this is set to :const:`0` or :const:`None`, we will retry forever."
 msgstr ""
 
-#: ../../configuration.rst:1036
+#: ../../configuration.rst:1057
 msgid "Default is 100 retries."
 msgstr ""
 
-#: ../../configuration.rst:1041
+#: ../../configuration.rst:1062
 msgid "BROKER_LOGIN_METHOD"
 msgstr ""
 
-#: ../../configuration.rst:1043
+#: ../../configuration.rst:1064
 msgid "Set custom amqp login method, default is ``AMQPLAIN``."
 msgstr ""
 
-#: ../../configuration.rst:1048
+#: ../../configuration.rst:1069
 msgid "BROKER_TRANSPORT_OPTIONS"
 msgstr ""
 
-#: ../../configuration.rst:1052
+#: ../../configuration.rst:1073
 msgid "A dict of additional options passed to the underlying transport."
 msgstr ""
 
-#: ../../configuration.rst:1054
+#: ../../configuration.rst:1075
 msgid "See your transport user manual for supported options (if any)."
 msgstr ""
 
-#: ../../configuration.rst:1056
+#: ../../configuration.rst:1077
 msgid ""
 "Example setting the visibility timeout (supported by Redis and SQS "
 "transports):"
 msgstr ""
 
-#: ../../configuration.rst:1066
+#: ../../configuration.rst:1087
 msgid "Task execution settings"
 msgstr ""
 
-#: ../../configuration.rst:1071
+#: ../../configuration.rst:1092
 msgid "CELERY_ALWAYS_EAGER"
 msgstr ""
 
-#: ../../configuration.rst:1073
+#: ../../configuration.rst:1094
 msgid ""
 "If this is :const:`True`, all tasks will be executed locally by blocking "
 "until the task returns.  ``apply_async()`` and ``Task.delay()`` will return "
@@ -1185,141 +1132,141 @@ msgid ""
 "already evaluated."
 msgstr ""
 
-#: ../../configuration.rst:1079
+#: ../../configuration.rst:1100
 msgid ""
 "That is, tasks will be executed locally instead of being sent to the queue."
 msgstr ""
 
-#: ../../configuration.rst:1085
+#: ../../configuration.rst:1106
 msgid "CELERY_EAGER_PROPAGATES_EXCEPTIONS"
 msgstr ""
 
-#: ../../configuration.rst:1087
+#: ../../configuration.rst:1108
 msgid ""
 "If this is :const:`True`, eagerly executed tasks (applied by `task.apply()`,"
 " or when the :setting:`CELERY_ALWAYS_EAGER` setting is enabled), will "
 "propagate exceptions."
 msgstr ""
 
-#: ../../configuration.rst:1091
+#: ../../configuration.rst:1112
 msgid "It's the same as always running ``apply()`` with ``throw=True``."
 msgstr ""
 
-#: ../../configuration.rst:1096
+#: ../../configuration.rst:1117
 msgid "CELERY_IGNORE_RESULT"
 msgstr ""
 
-#: ../../configuration.rst:1098
+#: ../../configuration.rst:1119
 msgid ""
 "Whether to store the task return values or not (tombstones). If you still "
 "want to store errors, just not successful return values, you can set "
 ":setting:`CELERY_STORE_ERRORS_EVEN_IF_IGNORED`."
 msgstr ""
 
-#: ../../configuration.rst:1105
+#: ../../configuration.rst:1126
 msgid "CELERY_MESSAGE_COMPRESSION"
 msgstr ""
 
-#: ../../configuration.rst:1107
+#: ../../configuration.rst:1128
 msgid ""
 "Default compression used for task messages. Can be ``gzip``, ``bzip2`` (if "
 "available), or any custom compression schemes registered in the Kombu "
 "compression registry."
 msgstr ""
 
-#: ../../configuration.rst:1111
+#: ../../configuration.rst:1132
 msgid "The default is to send uncompressed messages."
 msgstr ""
 
-#: ../../configuration.rst:1116
+#: ../../configuration.rst:1137
 msgid "CELERY_TASK_RESULT_EXPIRES"
 msgstr ""
 
-#: ../../configuration.rst:1118
+#: ../../configuration.rst:1139
 msgid ""
 "Time (in seconds, or a :class:`~datetime.timedelta` object) for when after "
 "stored task tombstones will be deleted."
 msgstr ""
 
-#: ../../configuration.rst:1121
+#: ../../configuration.rst:1142
 msgid ""
 "A built-in periodic task will delete the results after this time "
 "(:class:`celery.task.backend_cleanup`)."
 msgstr ""
 
-#: ../../configuration.rst:1124
+#: ../../configuration.rst:1145
 msgid ""
 "A value of :const:`None` or 0 means results will never expire (depending on "
 "backend specifications)."
 msgstr ""
 
-#: ../../configuration.rst:1127
+#: ../../configuration.rst:1148
 msgid "Default is to expire after 1 day."
 msgstr ""
 
-#: ../../configuration.rst:1131
+#: ../../configuration.rst:1152
 msgid ""
 "For the moment this only works with the amqp, database, cache, redis and "
 "MongoDB backends."
 msgstr ""
 
-#: ../../configuration.rst:1134
+#: ../../configuration.rst:1155
 msgid ""
 "When using the database or MongoDB backends, `celery beat` must be running "
 "for the results to be expired."
 msgstr ""
 
-#: ../../configuration.rst:1140
+#: ../../configuration.rst:1161
 msgid "CELERY_MAX_CACHED_RESULTS"
 msgstr ""
 
-#: ../../configuration.rst:1142
+#: ../../configuration.rst:1163
 msgid "Result backends caches ready results used by the client."
 msgstr ""
 
-#: ../../configuration.rst:1144
+#: ../../configuration.rst:1165
 msgid ""
 "This is the total number of results to cache before older results are "
 "evicted. The default is 5000.  0 or None means no limit, and a value of "
 ":const:`-1` will disable the cache."
 msgstr ""
 
-#: ../../configuration.rst:1151
+#: ../../configuration.rst:1172
 msgid "CELERY_CHORD_PROPAGATES"
 msgstr ""
 
-#: ../../configuration.rst:1155
+#: ../../configuration.rst:1176
 msgid ""
 "This setting defines what happens when a task part of a chord raises an "
 "exception:"
 msgstr ""
 
-#: ../../configuration.rst:1158
+#: ../../configuration.rst:1179
 msgid ""
 "If propagate is True the chord callback will change state to FAILURE with "
 "the exception value set to a :exc:`~@ChordError` instance containing "
 "information about the error and the task that failed."
 msgstr ""
 
-#: ../../configuration.rst:1162
+#: ../../configuration.rst:1183
 msgid "This is the default behavior in Celery 3.1+"
 msgstr ""
 
-#: ../../configuration.rst:1164
+#: ../../configuration.rst:1185
 msgid ""
 "If propagate is False the exception value will instead be forwarded to the "
 "chord callback."
 msgstr ""
 
-#: ../../configuration.rst:1167
+#: ../../configuration.rst:1188
 msgid "This was the default behavior before version 3.1."
 msgstr ""
 
-#: ../../configuration.rst:1172
+#: ../../configuration.rst:1193
 msgid "CELERY_TRACK_STARTED"
 msgstr ""
 
-#: ../../configuration.rst:1174
+#: ../../configuration.rst:1195
 msgid ""
 "If :const:`True` the task will report its status as \"started\" when the "
 "task is executed by a worker.  The default value is :const:`False` as the "
@@ -1329,160 +1276,129 @@ msgid ""
 "need to report which task is currently running."
 msgstr ""
 
-#: ../../configuration.rst:1184
+#: ../../configuration.rst:1205
 msgid "CELERY_TASK_SERIALIZER"
 msgstr ""
 
-#: ../../configuration.rst:1186
+#: ../../configuration.rst:1207
 msgid ""
 "A string identifying the default serialization method to use.  Can be "
 "`pickle` (default), `json`, `yaml`, `msgpack` or any custom serialization "
 "methods that have been registered with :mod:`kombu.serialization.registry`."
 msgstr ""
 
-#: ../../configuration.rst:1192
+#: ../../configuration.rst:1213
 msgid ":ref:`calling-serializers`."
 msgstr ""
 
-#: ../../configuration.rst:1197
+#: ../../configuration.rst:1218
 msgid "CELERY_TASK_PUBLISH_RETRY"
 msgstr ""
 
-#: ../../configuration.rst:1201
+#: ../../configuration.rst:1222
 msgid ""
 "Decides if publishing task messages will be retried in the case of "
 "connection loss or other connection errors. See also "
 ":setting:`CELERY_TASK_PUBLISH_RETRY_POLICY`."
 msgstr ""
 
-#: ../../configuration.rst:1205
+#: ../../configuration.rst:1226
 msgid "Enabled by default."
 msgstr ""
 
-#: ../../configuration.rst:1210
+#: ../../configuration.rst:1231
 msgid "CELERY_TASK_PUBLISH_RETRY_POLICY"
 msgstr ""
 
-#: ../../configuration.rst:1214
+#: ../../configuration.rst:1235
 msgid ""
 "Defines the default policy when retrying publishing a task message in the "
 "case of connection loss or other connection errors."
 msgstr ""
 
-#: ../../configuration.rst:1217
+#: ../../configuration.rst:1238
 msgid "See :ref:`calling-retry` for more information."
 msgstr ""
 
-#: ../../configuration.rst:1222
+#: ../../configuration.rst:1243
 msgid "CELERY_DEFAULT_RATE_LIMIT"
 msgstr ""
 
-#: ../../configuration.rst:1224
+#: ../../configuration.rst:1245
 msgid "The global default rate limit for tasks."
 msgstr ""
 
-#: ../../configuration.rst:1226
+#: ../../configuration.rst:1247
 msgid ""
 "This value is used for tasks that does not have a custom rate limit The "
 "default is no rate limit."
 msgstr ""
 
-#: ../../configuration.rst:1232
+#: ../../configuration.rst:1253
 msgid "CELERY_DISABLE_RATE_LIMITS"
 msgstr ""
 
-#: ../../configuration.rst:1234
+#: ../../configuration.rst:1255
 msgid "Disable all rate limits, even if tasks has explicit rate limits set."
 msgstr ""
 
-#: ../../configuration.rst:1239
+#: ../../configuration.rst:1260
 msgid "CELERY_ACKS_LATE"
 msgstr ""
 
-#: ../../configuration.rst:1241
+#: ../../configuration.rst:1262
 msgid ""
 "Late ack means the task messages will be acknowledged **after** the task has"
 " been executed, not *just before*, which is the default behavior."
 msgstr ""
 
-#: ../../configuration.rst:1246
+#: ../../configuration.rst:1267
 msgid "FAQ: :ref:`faq-acks_late-vs-retry`."
 msgstr ""
 
-#: ../../configuration.rst:1251
+#: ../../configuration.rst:1272
 msgid "Worker"
 msgstr ""
 
-#: ../../configuration.rst:1256
+#: ../../configuration.rst:1277
 msgid "CELERY_IMPORTS"
 msgstr ""
 
-#: ../../configuration.rst:1258
+#: ../../configuration.rst:1279
 msgid "A sequence of modules to import when the worker starts."
 msgstr ""
 
-#: ../../configuration.rst:1260
+#: ../../configuration.rst:1281
 msgid ""
 "This is used to specify the task modules to import, but also to import "
 "signal handlers and additional remote control commands, etc."
 msgstr ""
 
-#: ../../configuration.rst:1263
+#: ../../configuration.rst:1284
 msgid "The modules will be imported in the original order."
 msgstr ""
 
-#: ../../configuration.rst:1268
+#: ../../configuration.rst:1289
 msgid "CELERY_INCLUDE"
 msgstr ""
 
-#: ../../configuration.rst:1270
+#: ../../configuration.rst:1291
 msgid ""
 "Exact same semantics as :setting:`CELERY_IMPORTS`, but can be used as a "
 "means to have different import categories."
 msgstr ""
 
-#: ../../configuration.rst:1273
+#: ../../configuration.rst:1294
 msgid ""
 "The modules in this setting are imported after the modules in "
 ":setting:`CELERY_IMPORTS`."
 msgstr ""
 
-#: ../../configuration.rst:1279
-msgid "CELERYD_FORCE_EXECV"
-msgstr ""
-
-#: ../../configuration.rst:1281
-msgid ""
-"On Unix the prefork pool will fork, so that child processes start with the "
-"same memory as the parent process."
-msgstr ""
-
-#: ../../configuration.rst:1284
-msgid ""
-"This can cause problems as there is a known deadlock condition with pthread "
-"locking primitives when `fork()` is combined with threads."
-msgstr ""
-
-#: ../../configuration.rst:1287
-msgid ""
-"You should enable this setting if you are experiencing hangs (deadlocks), "
-"especially in combination with time limits or having a max tasks per child "
-"limit."
-msgstr ""
-
-#: ../../configuration.rst:1290
-msgid "This option will be enabled by default in a later version."
-msgstr ""
-
-#: ../../configuration.rst:1292
-msgid "This is not a problem on Windows, as it does not have `fork()`."
-msgstr ""
-
-#: ../../configuration.rst:1297
+#: ../../configuration.rst:1300
 msgid "CELERYD_WORKER_LOST_WAIT"
 msgstr ""
 
-#: ../../configuration.rst:1299
+#: ../../configuration.rst:1302
 msgid ""
 "In some cases a worker may be killed without proper cleanup, and the worker "
 "may have published a result before terminating. This value specifies how "
@@ -1490,576 +1406,576 @@ msgid ""
 ":exc:`@WorkerLostError` exception."
 msgstr ""
 
-#: ../../configuration.rst:1304
+#: ../../configuration.rst:1307
 msgid "Default is 10.0"
 msgstr ""
 
-#: ../../configuration.rst:1309
+#: ../../configuration.rst:1312
 msgid "CELERYD_MAX_TASKS_PER_CHILD"
 msgstr ""
 
-#: ../../configuration.rst:1311
+#: ../../configuration.rst:1314
 msgid ""
 "Maximum number of tasks a pool worker process can execute before it's "
 "replaced with a new one.  Default is no limit."
 msgstr ""
 
-#: ../../configuration.rst:1317
+#: ../../configuration.rst:1320
 msgid "CELERYD_TASK_TIME_LIMIT"
 msgstr ""
 
-#: ../../configuration.rst:1319
+#: ../../configuration.rst:1322
 msgid ""
 "Task hard time limit in seconds.  The worker processing the task will be "
 "killed and replaced with a new one when this is exceeded."
 msgstr ""
 
-#: ../../configuration.rst:1325
+#: ../../configuration.rst:1328
 msgid "CELERYD_TASK_SOFT_TIME_LIMIT"
 msgstr ""
 
-#: ../../configuration.rst:1327
+#: ../../configuration.rst:1330
 msgid "Task soft time limit in seconds."
 msgstr ""
 
-#: ../../configuration.rst:1329
+#: ../../configuration.rst:1332
 msgid ""
 "The :exc:`~@SoftTimeLimitExceeded` exception will be raised when this is "
 "exceeded.  The task can catch this to e.g. clean up before the hard time "
 "limit comes."
 msgstr ""
 
-#: ../../configuration.rst:1333
+#: ../../configuration.rst:1336
 msgid "Example:"
 msgstr ""
 
-#: ../../configuration.rst:1349
+#: ../../configuration.rst:1352
 msgid "CELERY_STORE_ERRORS_EVEN_IF_IGNORED"
 msgstr ""
 
-#: ../../configuration.rst:1351
+#: ../../configuration.rst:1354
 msgid ""
 "If set, the worker stores all task errors in the result store even if "
 ":attr:`Task.ignore_result <celery.task.base.Task.ignore_result>` is on."
 msgstr ""
 
-#: ../../configuration.rst:1357
+#: ../../configuration.rst:1360
 msgid "CELERYD_STATE_DB"
 msgstr ""
 
-#: ../../configuration.rst:1359
+#: ../../configuration.rst:1362
 msgid ""
 "Name of the file used to stores persistent worker state (like revoked "
 "tasks). Can be a relative or absolute path, but be aware that the suffix "
 "`.db` may be appended to the file name (depending on Python version)."
 msgstr ""
 
-#: ../../configuration.rst:1363
+#: ../../configuration.rst:1366
 msgid ""
 "Can also be set via the :option:`--statedb` argument to "
 ":mod:`~celery.bin.worker`."
 msgstr ""
 
-#: ../../configuration.rst:1366
+#: ../../configuration.rst:1369
 msgid "Not enabled by default."
 msgstr ""
 
-#: ../../configuration.rst:1371
+#: ../../configuration.rst:1374
 msgid "CELERYD_TIMER_PRECISION"
 msgstr ""
 
-#: ../../configuration.rst:1373
+#: ../../configuration.rst:1376
 msgid ""
 "Set the maximum time in seconds that the ETA scheduler can sleep between "
 "rechecking the schedule.  Default is 1 second."
 msgstr ""
 
-#: ../../configuration.rst:1376
+#: ../../configuration.rst:1379
 msgid ""
 "Setting this value to 1 second means the schedulers precision will be 1 "
 "second. If you need near millisecond precision you can set this to 0.1."
 msgstr ""
 
-#: ../../configuration.rst:1382
+#: ../../configuration.rst:1385
 msgid "CELERY_ENABLE_REMOTE_CONTROL"
 msgstr ""
 
-#: ../../configuration.rst:1384
+#: ../../configuration.rst:1387
 msgid "Specify if remote control of the workers is enabled."
 msgstr ""
 
-#: ../../configuration.rst:1386
+#: ../../configuration.rst:1389
 msgid "Default is :const:`True`."
 msgstr ""
 
-#: ../../configuration.rst:1392
+#: ../../configuration.rst:1395
 msgid "Error E-Mails"
 msgstr ""
 
-#: ../../configuration.rst:1397
+#: ../../configuration.rst:1400
 msgid "CELERY_SEND_TASK_ERROR_EMAILS"
 msgstr ""
 
-#: ../../configuration.rst:1399
+#: ../../configuration.rst:1402
 msgid ""
 "The default value for the `Task.send_error_emails` attribute, which if set "
 "to :const:`True` means errors occurring during task execution will be sent "
 "to :setting:`ADMINS` by email."
 msgstr ""
 
-#: ../../configuration.rst:1403 ../../configuration.rst:1524
-#: ../../configuration.rst:1538 ../../configuration.rst:1740
+#: ../../configuration.rst:1406 ../../configuration.rst:1527
+#: ../../configuration.rst:1541 ../../configuration.rst:1743
 msgid "Disabled by default."
 msgstr ""
 
-#: ../../configuration.rst:1408
+#: ../../configuration.rst:1411
 msgid "ADMINS"
 msgstr ""
 
-#: ../../configuration.rst:1410
+#: ../../configuration.rst:1413
 msgid ""
 "List of `(name, email_address)` tuples for the administrators that should "
 "receive error emails."
 msgstr ""
 
-#: ../../configuration.rst:1416
+#: ../../configuration.rst:1419
 msgid "SERVER_EMAIL"
 msgstr ""
 
-#: ../../configuration.rst:1418
+#: ../../configuration.rst:1421
 msgid ""
 "The email address this worker sends emails from. Default is "
 "celery@localhost."
 msgstr ""
 
-#: ../../configuration.rst:1424
+#: ../../configuration.rst:1427
 msgid "EMAIL_HOST"
 msgstr ""
 
-#: ../../configuration.rst:1426
+#: ../../configuration.rst:1429
 msgid "The mail server to use.  Default is ``localhost``."
 msgstr ""
 
-#: ../../configuration.rst:1431
+#: ../../configuration.rst:1434
 msgid "EMAIL_HOST_USER"
 msgstr ""
 
-#: ../../configuration.rst:1433
+#: ../../configuration.rst:1436
 msgid "User name (if required) to log on to the mail server with."
 msgstr ""
 
-#: ../../configuration.rst:1438
+#: ../../configuration.rst:1441
 msgid "EMAIL_HOST_PASSWORD"
 msgstr ""
 
-#: ../../configuration.rst:1440
+#: ../../configuration.rst:1443
 msgid "Password (if required) to log on to the mail server with."
 msgstr ""
 
-#: ../../configuration.rst:1445
+#: ../../configuration.rst:1448
 msgid "EMAIL_PORT"
 msgstr ""
 
-#: ../../configuration.rst:1447
+#: ../../configuration.rst:1450
 msgid "The port the mail server is listening on.  Default is `25`."
 msgstr ""
 
-#: ../../configuration.rst:1453
+#: ../../configuration.rst:1456
 msgid "EMAIL_USE_SSL"
 msgstr ""
 
-#: ../../configuration.rst:1455
+#: ../../configuration.rst:1458
 msgid "Use SSL when connecting to the SMTP server.  Disabled by default."
 msgstr ""
 
-#: ../../configuration.rst:1460
+#: ../../configuration.rst:1463
 msgid "EMAIL_USE_TLS"
 msgstr ""
 
-#: ../../configuration.rst:1462
+#: ../../configuration.rst:1465
 msgid "Use TLS when connecting to the SMTP server.  Disabled by default."
 msgstr ""
 
-#: ../../configuration.rst:1467
+#: ../../configuration.rst:1470
 msgid "EMAIL_TIMEOUT"
 msgstr ""
 
-#: ../../configuration.rst:1469
+#: ../../configuration.rst:1472
 msgid ""
 "Timeout in seconds for when we give up trying to connect to the SMTP server "
 "when sending emails."
 msgstr ""
 
-#: ../../configuration.rst:1472
+#: ../../configuration.rst:1475
 msgid "The default is 2 seconds."
 msgstr ""
 
-#: ../../configuration.rst:1477
+#: ../../configuration.rst:1480
 msgid "Example E-Mail configuration"
 msgstr ""
 
-#: ../../configuration.rst:1479
+#: ../../configuration.rst:1482
 msgid ""
 "This configuration enables the sending of error emails to "
 "george@vandelay.com and kramer@vandelay.com:"
 msgstr ""
 
-#: ../../configuration.rst:1505
+#: ../../configuration.rst:1508
 msgid "Events"
 msgstr ""
 
-#: ../../configuration.rst:1510
+#: ../../configuration.rst:1513
 msgid "CELERY_SEND_EVENTS"
 msgstr ""
 
-#: ../../configuration.rst:1512
+#: ../../configuration.rst:1515
 msgid "Send events so the worker can be monitored by tools like `celerymon`."
 msgstr ""
 
-#: ../../configuration.rst:1517
+#: ../../configuration.rst:1520
 msgid "CELERY_SEND_TASK_SENT_EVENT"
 msgstr ""
 
-#: ../../configuration.rst:1521
+#: ../../configuration.rst:1524
 msgid ""
 "If enabled, a :event:`task-sent` event will be sent for every task so tasks "
 "can be tracked before they are consumed by a worker."
 msgstr ""
 
-#: ../../configuration.rst:1529
+#: ../../configuration.rst:1532
 msgid "CELERY_EVENT_QUEUE_TTL"
 msgstr ""
 
-#: ../../configuration.rst:1530 ../../configuration.rst:1544
+#: ../../configuration.rst:1533 ../../configuration.rst:1547
 msgid "``amqp``"
 msgstr ""
 
-#: ../../configuration.rst:1532
+#: ../../configuration.rst:1535
 msgid ""
 "Message expiry time in seconds (int/float) for when messages sent to a "
 "monitor clients event queue is deleted (``x-message-ttl``)"
 msgstr ""
 
-#: ../../configuration.rst:1535
+#: ../../configuration.rst:1538
 msgid ""
 "For example, if this value is set to 10 then a message delivered to this "
 "queue will be deleted after 10 seconds."
 msgstr ""
 
-#: ../../configuration.rst:1543
+#: ../../configuration.rst:1546
 msgid "CELERY_EVENT_QUEUE_EXPIRES"
 msgstr ""
 
-#: ../../configuration.rst:1547
+#: ../../configuration.rst:1550
 msgid ""
 "Expiry time in seconds (int/float) for when a monitor clients event queue "
 "will be deleted (``x-expires``)."
 msgstr ""
 
-#: ../../configuration.rst:1550
+#: ../../configuration.rst:1553
 msgid "Default is never, relying on the queue autodelete setting."
 msgstr ""
 
-#: ../../configuration.rst:1555
+#: ../../configuration.rst:1558
 msgid "CELERY_EVENT_SERIALIZER"
 msgstr ""
 
-#: ../../configuration.rst:1557
+#: ../../configuration.rst:1560
 msgid ""
 "Message serialization format used when sending event messages. Default is "
 "``json``. See :ref:`calling-serializers`."
 msgstr ""
 
-#: ../../configuration.rst:1563
+#: ../../configuration.rst:1566
 msgid "Broadcast Commands"
 msgstr ""
 
-#: ../../configuration.rst:1568
+#: ../../configuration.rst:1571
 msgid "CELERY_BROADCAST_QUEUE"
 msgstr ""
 
-#: ../../configuration.rst:1570
+#: ../../configuration.rst:1573
 msgid ""
 "Name prefix for the queue used when listening for broadcast messages. The "
 "workers host name will be appended to the prefix to create the final queue "
 "name."
 msgstr ""
 
-#: ../../configuration.rst:1574 ../../configuration.rst:1583
+#: ../../configuration.rst:1577 ../../configuration.rst:1586
 msgid "Default is ``celeryctl``."
 msgstr ""
 
-#: ../../configuration.rst:1579
+#: ../../configuration.rst:1582
 msgid "CELERY_BROADCAST_EXCHANGE"
 msgstr ""
 
-#: ../../configuration.rst:1581
+#: ../../configuration.rst:1584
 msgid "Name of the exchange used for broadcast messages."
 msgstr ""
 
-#: ../../configuration.rst:1588
+#: ../../configuration.rst:1591
 msgid "CELERY_BROADCAST_EXCHANGE_TYPE"
 msgstr ""
 
-#: ../../configuration.rst:1590
+#: ../../configuration.rst:1593
 msgid "Exchange type used for broadcast messages.  Default is ``fanout``."
 msgstr ""
 
-#: ../../configuration.rst:1595
+#: ../../configuration.rst:1598
 msgid "Logging"
 msgstr ""
 
-#: ../../configuration.rst:1600
+#: ../../configuration.rst:1603
 msgid "CELERYD_HIJACK_ROOT_LOGGER"
 msgstr ""
 
-#: ../../configuration.rst:1604
+#: ../../configuration.rst:1607
 msgid ""
 "By default any previously configured handlers on the root logger will be "
 "removed. If you want to customize your own logging handlers, then you can "
 "disable this behavior by setting `CELERYD_HIJACK_ROOT_LOGGER = False`."
 msgstr ""
 
-#: ../../configuration.rst:1611
+#: ../../configuration.rst:1614
 msgid ""
 "Logging can also be customized by connecting to the "
 ":signal:`celery.signals.setup_logging` signal."
 msgstr ""
 
-#: ../../configuration.rst:1617
+#: ../../configuration.rst:1620
 msgid "CELERYD_LOG_COLOR"
 msgstr ""
 
-#: ../../configuration.rst:1619
+#: ../../configuration.rst:1622
 msgid "Enables/disables colors in logging output by the Celery apps."
 msgstr ""
 
-#: ../../configuration.rst:1621
+#: ../../configuration.rst:1624
 msgid "By default colors are enabled if"
 msgstr ""
 
-#: ../../configuration.rst:1623
+#: ../../configuration.rst:1626
 msgid "the app is logging to a real terminal, and not a file."
 msgstr ""
 
-#: ../../configuration.rst:1624
+#: ../../configuration.rst:1627
 msgid "the app is not running on Windows."
 msgstr ""
 
-#: ../../configuration.rst:1629
+#: ../../configuration.rst:1632
 msgid "CELERYD_LOG_FORMAT"
 msgstr ""
 
-#: ../../configuration.rst:1631 ../../configuration.rst:1856
+#: ../../configuration.rst:1634 ../../configuration.rst:1859
 msgid "The format to use for log messages."
 msgstr ""
 
-#: ../../configuration.rst:1633 ../../configuration.rst:1858
+#: ../../configuration.rst:1636 ../../configuration.rst:1861
 msgid "Default is `[%(asctime)s: %(levelname)s/%(processName)s] %(message)s`"
 msgstr ""
 
-#: ../../configuration.rst:1635 ../../configuration.rst:1651
-#: ../../configuration.rst:1860
+#: ../../configuration.rst:1638 ../../configuration.rst:1654
+#: ../../configuration.rst:1863
 msgid ""
 "See the Python :mod:`logging` module for more information about log formats."
 msgstr ""
 
-#: ../../configuration.rst:1641
+#: ../../configuration.rst:1644
 msgid "CELERYD_TASK_LOG_FORMAT"
 msgstr ""
 
-#: ../../configuration.rst:1643
+#: ../../configuration.rst:1646
 msgid ""
 "The format to use for log messages logged in tasks.  Can be overridden using"
 " the :option:`--loglevel` option to :mod:`~celery.bin.worker`."
 msgstr ""
 
-#: ../../configuration.rst:1646
+#: ../../configuration.rst:1649
 msgid "Default is::"
 msgstr ""
 
-#: ../../configuration.rst:1657
+#: ../../configuration.rst:1660
 msgid "CELERY_REDIRECT_STDOUTS"
 msgstr ""
 
-#: ../../configuration.rst:1659
+#: ../../configuration.rst:1662
 msgid ""
 "If enabled `stdout` and `stderr` will be redirected to the current logger."
 msgstr ""
 
-#: ../../configuration.rst:1662
+#: ../../configuration.rst:1665
 msgid ""
 "Enabled by default. Used by :program:`celery worker` and :program:`celery "
 "beat`."
 msgstr ""
 
-#: ../../configuration.rst:1668
+#: ../../configuration.rst:1671
 msgid "CELERY_REDIRECT_STDOUTS_LEVEL"
 msgstr ""
 
-#: ../../configuration.rst:1670
+#: ../../configuration.rst:1673
 msgid ""
 "The log level output to `stdout` and `stderr` is logged as. Can be one of "
 ":const:`DEBUG`, :const:`INFO`, :const:`WARNING`, :const:`ERROR` or "
 ":const:`CRITICAL`."
 msgstr ""
 
-#: ../../configuration.rst:1674
+#: ../../configuration.rst:1677
 msgid "Default is :const:`WARNING`."
 msgstr ""
 
-#: ../../configuration.rst:1679
+#: ../../configuration.rst:1682
 msgid "Security"
 msgstr ""
 
-#: ../../configuration.rst:1684
+#: ../../configuration.rst:1687
 msgid "CELERY_SECURITY_KEY"
 msgstr ""
 
-#: ../../configuration.rst:1688
+#: ../../configuration.rst:1691
 msgid ""
 "The relative or absolute path to a file containing the private key used to "
 "sign messages when :ref:`message-signing` is used."
 msgstr ""
 
-#: ../../configuration.rst:1694
+#: ../../configuration.rst:1697
 msgid "CELERY_SECURITY_CERTIFICATE"
 msgstr ""
 
-#: ../../configuration.rst:1698
+#: ../../configuration.rst:1701
 msgid ""
 "The relative or absolute path to an X.509 certificate file used to sign "
 "messages when :ref:`message-signing` is used."
 msgstr ""
 
-#: ../../configuration.rst:1704
+#: ../../configuration.rst:1707
 msgid "CELERY_SECURITY_CERT_STORE"
 msgstr ""
 
-#: ../../configuration.rst:1708
+#: ../../configuration.rst:1711
 msgid ""
 "The directory containing X.509 certificates used for :ref:`message-signing`."
 "  Can be a glob with wildcards, (for example :file:`/etc/certs/*.pem`)."
 msgstr ""
 
-#: ../../configuration.rst:1715
+#: ../../configuration.rst:1718
 msgid "Custom Component Classes (advanced)"
 msgstr ""
 
-#: ../../configuration.rst:1720
+#: ../../configuration.rst:1723
 msgid "CELERYD_POOL"
 msgstr ""
 
-#: ../../configuration.rst:1722
+#: ../../configuration.rst:1725
 msgid "Name of the pool class used by the worker."
 msgstr ""
 
-#: ../../configuration.rst:1724
+#: ../../configuration.rst:1727
 msgid "Eventlet/Gevent"
 msgstr ""
 
-#: ../../configuration.rst:1726
+#: ../../configuration.rst:1729
 msgid ""
 "Never use this option to select the eventlet or gevent pool. You must use "
 "the `-P` option instead, otherwise the monkey patching will happen too late "
 "and things will break in strange and silent ways."
 msgstr ""
 
-#: ../../configuration.rst:1730
+#: ../../configuration.rst:1733
 msgid "Default is ``celery.concurrency.prefork:TaskPool``."
 msgstr ""
 
-#: ../../configuration.rst:1735
+#: ../../configuration.rst:1738
 msgid "CELERYD_POOL_RESTARTS"
 msgstr ""
 
-#: ../../configuration.rst:1737
+#: ../../configuration.rst:1740
 msgid ""
 "If enabled the worker pool can be restarted using the "
 ":control:`pool_restart` remote control command."
 msgstr ""
 
-#: ../../configuration.rst:1745
+#: ../../configuration.rst:1748
 msgid "CELERYD_AUTOSCALER"
 msgstr ""
 
-#: ../../configuration.rst:1749
+#: ../../configuration.rst:1752
 msgid "Name of the autoscaler class to use."
 msgstr ""
 
-#: ../../configuration.rst:1751
+#: ../../configuration.rst:1754
 msgid "Default is ``celery.worker.autoscale:Autoscaler``."
 msgstr ""
 
-#: ../../configuration.rst:1756
+#: ../../configuration.rst:1759
 msgid "CELERYD_AUTORELOADER"
 msgstr ""
 
-#: ../../configuration.rst:1758
+#: ../../configuration.rst:1761
 msgid ""
 "Name of the autoreloader class used by the worker to reload Python modules "
 "and files that have changed."
 msgstr ""
 
-#: ../../configuration.rst:1761
+#: ../../configuration.rst:1764
 msgid "Default is: ``celery.worker.autoreload:Autoreloader``."
 msgstr ""
 
-#: ../../configuration.rst:1766
+#: ../../configuration.rst:1769
 msgid "CELERYD_CONSUMER"
 msgstr ""
 
-#: ../../configuration.rst:1768
+#: ../../configuration.rst:1771
 msgid ""
 "Name of the consumer class used by the worker. Default is "
 ":class:`celery.worker.consumer.Consumer`"
 msgstr ""
 
-#: ../../configuration.rst:1774
+#: ../../configuration.rst:1777
 msgid "CELERYD_TIMER"
 msgstr ""
 
-#: ../../configuration.rst:1776
+#: ../../configuration.rst:1779
 msgid ""
 "Name of the ETA scheduler class used by the worker. Default is "
 ":class:`celery.utils.timer2.Timer`, or one overrided by the pool "
 "implementation."
 msgstr ""
 
-#: ../../configuration.rst:1783
+#: ../../configuration.rst:1786
 msgid "Periodic Task Server: celery beat"
 msgstr ""
 
-#: ../../configuration.rst:1788
+#: ../../configuration.rst:1791
 msgid "CELERYBEAT_SCHEDULE"
 msgstr ""
 
-#: ../../configuration.rst:1790
+#: ../../configuration.rst:1793
 msgid ""
 "The periodic task schedule used by :mod:`~celery.bin.beat`. See :ref:`beat-"
 "entries`."
 msgstr ""
 
-#: ../../configuration.rst:1796
+#: ../../configuration.rst:1799
 msgid "CELERYBEAT_SCHEDULER"
 msgstr ""
 
-#: ../../configuration.rst:1798
+#: ../../configuration.rst:1801
 msgid ""
 "The default scheduler class.  Default is "
 "``celery.beat:PersistentScheduler``."
 msgstr ""
 
-#: ../../configuration.rst:1800
+#: ../../configuration.rst:1803
 msgid ""
 "Can also be set via the :option:`-S` argument to :mod:`~celery.bin.beat`."
 msgstr ""
 
-#: ../../configuration.rst:1806
+#: ../../configuration.rst:1809
 msgid "CELERYBEAT_SCHEDULE_FILENAME"
 msgstr ""
 
-#: ../../configuration.rst:1808
+#: ../../configuration.rst:1811
 msgid ""
 "Name of the file used by `PersistentScheduler` to store the last run times "
 "of periodic tasks.  Can be a relative or absolute path, but be aware that "
@@ -2067,17 +1983,17 @@ msgid ""
 "version)."
 msgstr ""
 
-#: ../../configuration.rst:1812
+#: ../../configuration.rst:1815
 msgid ""
 "Can also be set via the :option:`--schedule` argument to "
 ":mod:`~celery.bin.beat`."
 msgstr ""
 
-#: ../../configuration.rst:1818
+#: ../../configuration.rst:1821
 msgid "CELERYBEAT_SYNC_EVERY"
 msgstr ""
 
-#: ../../configuration.rst:1820
+#: ../../configuration.rst:1823
 msgid ""
 "The number of periodic tasks that can be called before another database sync"
 " is issued. Defaults to 0 (sync based on timing - default of 3 minutes as "
@@ -2085,17 +2001,17 @@ msgid ""
 "every task message sent."
 msgstr ""
 
-#: ../../configuration.rst:1829
+#: ../../configuration.rst:1832
 msgid "CELERYBEAT_MAX_LOOP_INTERVAL"
 msgstr ""
 
-#: ../../configuration.rst:1831
+#: ../../configuration.rst:1834
 msgid ""
 "The maximum number of seconds :mod:`~celery.bin.beat` can sleep between "
 "checking the schedule."
 msgstr ""
 
-#: ../../configuration.rst:1834
+#: ../../configuration.rst:1837
 msgid ""
 "The default for this value is scheduler specific. For the default celery "
 "beat scheduler the value is 300 (5 minutes), but for e.g. the django-celery "
@@ -2103,17 +2019,160 @@ msgid ""
 "externally, and so it must take changes to the schedule into account."
 msgstr ""
 
-#: ../../configuration.rst:1840
+#: ../../configuration.rst:1843
 msgid ""
 "Also when running celery beat embedded (:option:`-B`) on Jython as a thread "
 "the max interval is overridden and set to 1 so that it's possible to shut "
 "down in a timely manner."
 msgstr ""
 
-#: ../../configuration.rst:1848
+#: ../../configuration.rst:1851
 msgid "Monitor Server: celerymon"
 msgstr ""
 
-#: ../../configuration.rst:1854
+#: ../../configuration.rst:1857
 msgid "CELERYMON_LOG_FORMAT"
 msgstr ""
+
+#: ../../configuration.rst:188
+msgid "rpc"
+msgstr ""
+
+#: ../../configuration.rst:187
+msgid "Send results back as AMQP messages See :ref:`conf-rpc-result-backend`."
+msgstr ""
+
+#: ../../configuration.rst:219
+msgid ""
+"Older AMQP backend (badly) emulating a database-based backend. See :ref"
+":`conf-amqp-result-backend`."
+msgstr ""
+
+#: ../../configuration.rst:261
+msgid "Examples::"
+msgstr ""
+
+#: ../../configuration.rst:309
+msgid "Short lived sessions"
+msgstr ""
+
+#: ../../configuration.rst:311
+msgid "CELERY_RESULT_DB_SHORT_LIVED_SESSIONS = True"
+msgstr ""
+
+#: ../../configuration.rst:340
+msgid "RPC backend settings"
+msgstr ""
+
+#: ../../configuration.rst:692
+msgid "Do not use in production."
+msgstr ""
+
+#: ../../configuration.rst:694
+msgid ""
+"This is the old AMQP result backend that creates one queue per task, if you "
+"want to send results back as message please consider using the RPC backend "
+"instead, or if you need the results to be persistent use a result backend "
+"designed for that purpose (e.g. Redis, or a database)."
+msgstr ""
+
+#: ../../configuration.rst:701
+msgid ""
+"The AMQP backend requires RabbitMQ 1.1.0 or higher to automatically expire "
+"results.  If you are running an older version of RabbitMQ you should disable"
+" result expiration like this:"
+msgstr ""
+
+#: ../../configuration.rst:751
+msgid ""
+"Most users will not want to specify this setting and should rather use the "
+":ref:`automatic routing facilities <routing-automatic>`."
+msgstr ""
+
+#: ../../configuration.rst:754
+msgid ""
+"If you really want to configure advanced routing, this setting should be a "
+"list of :class:`kombu.Queue` objects the worker will consume from."
+msgstr ""
+
+#: ../../configuration.rst:757
+msgid ""
+"Note that workers can be overriden this setting via the `-Q` option, or "
+"individual queues from this list (by name) can be excluded using the `-X` "
+"option."
+msgstr ""
+
+#: ../../configuration.rst:761
+msgid "Also see :ref:`routing-basics` for more information."
+msgstr ""
+
+#: ../../configuration.rst:978
+msgid "Heartbeats are disabled by default."
+msgstr ""
+
+#~ msgid ""
+#~ "Send results back as AMQP messages See :ref:`conf-amqp-result-backend`."
+#~ msgstr ""
+
+#~ msgid "Examples:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "# sqlite (filename) CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'"
+#~ msgstr ""
+
+#~ msgid "# mysql CELERY_RESULT_BACKEND = 'db+mysql://scott:tiger@localhost/foo'"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "# postgresql CELERY_RESULT_BACKEND = "
+#~ "'db+postgresql://scott:tiger@localhost/mydatabase'"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "# oracle CELERY_RESULT_BACKEND = "
+#~ "'db+oracle://scott:tiger@127.0.0.1:1521/sidname'"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The AMQP backend requires RabbitMQ 1.1.0 or higher to automatically expire "
+#~ "results.  If you are running an older version of RabbitmQ you should disable"
+#~ " result expiration like this:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The mapping of queues the worker consumes from.  This is a dictionary of "
+#~ "queue name/options.  See :ref:`guide-routing` for more information."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You don't have to care about this unless you want custom routing facilities."
+#~ msgstr ""
+
+#~ msgid "Hartbeats are disabled by default."
+#~ msgstr ""
+
+#~ msgid "CELERYD_FORCE_EXECV"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On Unix the prefork pool will fork, so that child processes start with the "
+#~ "same memory as the parent process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This can cause problems as there is a known deadlock condition with pthread "
+#~ "locking primitives when `fork()` is combined with threads."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should enable this setting if you are experiencing hangs (deadlocks), "
+#~ "especially in combination with time limits or having a max tasks per child "
+#~ "limit."
+#~ msgstr ""
+
+#~ msgid "This option will be enabled by default in a later version."
+#~ msgstr ""
+
+#~ msgid "This is not a problem on Windows, as it does not have `fork()`."
+#~ msgstr ""

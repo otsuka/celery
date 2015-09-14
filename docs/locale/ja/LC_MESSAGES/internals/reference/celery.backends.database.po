@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Celery 3.1\n"
@@ -12,22 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../internals/reference/celery.backends.database.rst:3
-#: ../../../celery/backends/database/__init__.pydocstring of
-#: celery.backends.database:2
 msgid "celery.backends.database"
 msgstr ""
 
-#: ../../../celery/backends/database/__init__.pydocstring of
-#: celery.backends.database:4
-msgid "SQLAlchemy result store backend."
-msgstr ""
+#~ msgid "SQLAlchemy result store backend."
+#~ msgstr ""
 
-#: ../../../celery/backends/database/__init__.pydocstring of
-#: celery.backends.database.DatabaseBackend:1
-msgid "The database result backend."
-msgstr ""
+#~ msgid "The database result backend."
+#~ msgstr ""
 
-#: ../../../celery/backends/database/__init__.pydocstring of
-#: celery.backends.database.DatabaseBackend.cleanup:1
-msgid "Delete expired metadata."
-msgstr ""
+#~ msgid "Delete expired metadata."
+#~ msgstr ""

@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../getting-started/brokers/index.rst:10
 msgid "Celery supports several message transport alternatives."
-msgstr "Celery はいくつかのメッセージトランスポートをサポートしています。"
+msgstr "Celery では複数のメッセージトランスポートからブローカーを選ぶことができます。"
 
 #: ../../getting-started/brokers/index.rst:15
 msgid "Broker Instructions"
@@ -33,11 +33,11 @@ msgstr "ブローカーの説明"
 
 #: ../../getting-started/brokers/index.rst:24
 msgid "Experimental Transports"
-msgstr "実験段階のトランスポート"
+msgstr "試験段階のトランスポート"
 
 #: ../../getting-started/brokers/index.rst:40
 msgid "Broker Overview"
-msgstr "ブローカー概要"
+msgstr "ブローカーの概要"
 
 #: ../../getting-started/brokers/index.rst:42
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 #: ../../getting-started/brokers/index.rst:49
 #: ../../getting-started/brokers/index.rst:51
 msgid "Stable"
-msgstr "安定版"
+msgstr "安定"
 
 #: ../../getting-started/brokers/index.rst:49
 #: ../../getting-started/brokers/index.rst:49
@@ -98,7 +98,7 @@ msgstr ""
 #: ../../getting-started/brokers/index.rst:63
 #: ../../getting-started/brokers/index.rst:65
 msgid "Experimental"
-msgstr "実験版"
+msgstr "試験的"
 
 #: ../../getting-started/brokers/index.rst:55
 msgid "*Beanstalk*"
@@ -147,14 +147,14 @@ msgstr ""
 
 #: ../../getting-started/brokers/index.rst:67
 msgid "3rd party"
-msgstr ""
+msgstr "サードパーティー"
 
 #: ../../getting-started/brokers/index.rst:70
 msgid ""
 "Experimental brokers may be functional but they do not have dedicated "
 "maintainers."
 msgstr ""
-"実験版のブローカーは機能するでしょうが、専任のメインテナーがいません。"
+"試験的ステータスのブローカーは動作はしますが、専任のメインテナーがいない状況です。"
 
 #: ../../getting-started/brokers/index.rst:73
 msgid ""
@@ -162,6 +162,8 @@ msgid ""
 "and as such Flower, `celery events`, `celerymon` and other event-based "
 "monitoring tools will not work."
 msgstr ""
+"監視に対応していないトランスポートはイベントが実装されていないことを意味します。"
+"これはつまり、Flower、`celery events`、`celerymon` やその他のイベントベースの監視ツールが使えないということです。"
 
 #: ../../getting-started/brokers/index.rst:77
 msgid ""
@@ -169,3 +171,5 @@ msgid ""
 "using the `celery inspect` and `celery control` commands (and other tools "
 "using the remote control API)."
 msgstr ""
+"リモートコントロールは、`celery inspect` と `celery control` コマンド(それとリモートコントロール API を使った他のツール)"
+"を使って、実行中のワーカーの状態を調べたり操作したりする機能です。"
