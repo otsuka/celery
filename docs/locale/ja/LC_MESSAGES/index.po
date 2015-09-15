@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../index.rst:3
 msgid "Celery - Distributed Task Queue"
-msgstr ""
+msgstr "Celery - 分散タスクキュー"
 
 #: ../../index.rst:5
 msgid ""
@@ -21,8 +21,7 @@ msgid ""
 " amounts of messages, while providing operations with the tools required to "
 "maintain such a system."
 msgstr ""
-"Celery "
-"は大量のメッセージを扱えるシンプルでフレキシブル、且つ信頼性の高い分散処理システムです。"
+"Celery は大量のメッセージを扱えるシンプルでフレキシブル、且つ信頼性の高い分散処理システムです。"
 ""
 
 #: ../../index.rst:9
@@ -52,11 +51,11 @@ msgstr "はじめよう"
 msgid ""
 "If you are new to Celery you can get started by following the :ref:`first-"
 "steps` tutorial."
-msgstr "Celery が初めての方は、まずは :ref:`first-steps` チュートリアルから始めてみてください。"
+msgstr "Celery が初めての方は、まずは :ref:`first-steps` から始めてみてください。"
 
 #: ../../index.rst:24
 msgid "You can also check out the :ref:`FAQ <faq>`."
-msgstr "また、 :ref:`FAQ <faq>` ページも用意してあります。"
+msgstr "他に :ref:`FAQ <faq>` ページも用意してあります。"
 
 #: ../../index.rst:29
 msgid "Contents"

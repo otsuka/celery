@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:6
 msgid "First Steps with Celery"
-msgstr "Celery First ステップ"
+msgstr "Celery ファーストステップ"
 
 #: ../../getting-started/first-steps-with-celery.rst:8
 msgid ""
@@ -23,14 +23,16 @@ msgid ""
 " and integrate with other languages, and it comes with the tools and support"
 " you need to run such a system in production."
 msgstr ""
-"Celery は「バッテリー同梱」のタスクキューです。Celery "
-"が持つ数々の機能をすべて学ばなくとも、すぐに使い始めることができます。あなたのプロダクトがスケールし、他の言語とも連携できるようベストプラクティスに基づいて設計されており、運用環境で稼動させるのに必要なツールとサポートが提供されています。"
+"Celery は「バッテリー同梱」のタスクキューです。"
+"Celery が持つ数々の機能すべてを学ばなくとも、すぐに使い始めることができます。"
+"ベストプラクティスに基づいた設計が施されているため、あなたのプロダクトはスケールし、他の言語とも連携可能になっています。"
+"そして運用環境で稼動に必要なツールとサポートも提供されています。"
 
 #: ../../getting-started/first-steps-with-celery.rst:15
 msgid ""
 "In this tutorial you will learn the absolute basics of using Celery. You "
 "will learn about;"
-msgstr "このチュートリアルでは Celery を使うための基本を学んでいきます。"
+msgstr "このチュートリアルでは Celery を使うための基本のキを学んでいきます。"
 
 #: ../../getting-started/first-steps-with-celery.rst:18
 msgid "Choosing and installing a message transport (broker)."
@@ -38,7 +40,7 @@ msgstr "メッセージトランスポート(ブローカー)の選定とイン�
 
 #: ../../getting-started/first-steps-with-celery.rst:20
 msgid "Starting the worker and calling tasks."
-msgstr "ワーカーの起動とタスクの呼び出し"
+msgstr "ワーカーの起動とタスクコール"
 
 #: ../../getting-started/first-steps-with-celery.rst:21
 msgid ""
@@ -54,9 +56,11 @@ msgid ""
 "good idea to browse the rest of the documentation, for example the :ref"
 ":`next-steps` tutorial, which will showcase Celery's capabilities."
 msgstr ""
-"最初は Celery "
-"がとっつきにくく見えることでしょう。ですが心配することはありません。このチュートリアルを読めばすぐに始められるようになります。あなたを困惑させないよう、基本的な機能に絞ってあります。まずはこのチュートリアルを終えてから残りのドキュメントを読むといいでしょう。例えば"
-" :ref:`next-steps` チュートリアルに進めば Celery に備わった様々な機能を見られます。"
+"Celery はとっつきにくいものに見えていることでしょう。ですが心配することはありません。"
+"このチュートリアルを読めばすぐに使い始められるようになります。"
+"ここではあなたを困惑させないよう、基本的な機能に絞って説明します。"
+"まずはこのチュートリアルを終え、そして残りのドキュメントを読み進めてみてください。"
+":ref:`next-steps` チュートリアルでは Celery に備わっている種々の機能が紹介されています。"
 
 #: ../../getting-started/first-steps-with-celery.rst:38
 msgid "Choosing a Broker"
@@ -64,7 +68,7 @@ msgstr "ブローカーの選定"
 
 #: ../../getting-started/first-steps-with-celery.rst:43
 msgid "There are several choices available, including:"
-msgstr "利用可能なサービスを以下に挙げます。"
+msgstr "利用可能なブローカー:"
 
 #: ../../getting-started/first-steps-with-celery.rst:46
 msgid "RabbitMQ"
@@ -75,7 +79,8 @@ msgid ""
 "`RabbitMQ`_ is feature-complete, stable, durable and easy to install. It's "
 "an excellent choice for a production environment. Detailed information about"
 " using RabbitMQ with Celery:"
-msgstr "`RabbitMQ`_ は Celery の全機能をサポートし、安定しており、インストールも簡単です。"
+msgstr "`RabbitMQ`_ は Celery の全機能をサポートしており、安定的でインストールも簡単です。"
+"運用環境には打ってつけのブローカーです。RabbitMQ の使用についての詳細は次のページを参照してください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:52
 msgid ":ref:`broker-rabbitmq`"
@@ -114,8 +119,8 @@ msgid ""
 "the event of abrupt termination or power failures. Detailed information "
 "about using Redis:"
 msgstr ""
-"`Redis`_ "
-"もまた全機能を実装したものですが、不意な停止や停電といったトラブルの際にはデータロスに繋がりやすい性質を持ちます。詳細については次のページをご覧ください。"
+"`Redis`_ もまた全機能を実装したものですが、不意な停止や停電といったトラブルの際には"
+"データロスが起こり得ます。詳細については次のページをご覧ください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:79
 msgid ":ref:`broker-redis`"
@@ -123,13 +128,15 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:85
 msgid "Using a database"
-msgstr ""
+msgstr "データベースの使用"
 
 #: ../../getting-started/first-steps-with-celery.rst:87
 msgid ""
 "Using a database as a message queue is not recommended, but can be "
 "sufficient for very small installations.  Your options include:"
 msgstr ""
+"メッセージキューにデータベースを使用するのは推奨されていませんが、"
+"ごく小規模なプロダクトでは十分でしょう。二つのブローカーが利用可能です:"
 
 #: ../../getting-started/first-steps-with-celery.rst:90
 msgid ":ref:`broker-sqlalchemy`"
@@ -145,10 +152,12 @@ msgid ""
 "message broker can be convenient while developing even if you use a more "
 "robust system in production."
 msgstr ""
+"すでに Django のデータベースを使っている場合、本番運用ではより堅牢なシステムを使うとして、"
+"開発時にはそのデータベースをブローカーとしてサクッと使うこともできます。"
 
 #: ../../getting-started/first-steps-with-celery.rst:98
 msgid "Other brokers"
-msgstr ""
+msgstr "その他のブローカー"
 
 #: ../../getting-started/first-steps-with-celery.rst:100
 msgid ""
@@ -156,10 +165,12 @@ msgid ""
 "implementations to choose from, including :ref:`Amazon SQS <broker-sqs>`, "
 ":ref:`broker-mongodb` and :ref:`IronMQ <broker-ironmq>`."
 msgstr ""
+"上記の他にも、試験的トランスポート実装として次のようなものがあります。"
+" :ref:`Amazon SQS <broker-sqs>`、 :ref:`broker-mongodb` と :ref:`IronMQ <broker-ironmq>` です。"
 
 #: ../../getting-started/first-steps-with-celery.rst:104
 msgid "See :ref:`broker-overview` for a full list."
-msgstr ""
+msgstr "全リストは :ref:`broker-overview` をご覧ください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:109
 msgid "Installing Celery"
@@ -170,6 +181,8 @@ msgid ""
 "Celery is on the Python Package Index (PyPI), so it can be installed with "
 "standard Python tools like ``pip`` or ``easy_install``:"
 msgstr ""
+"Celery は Python Package Index (PyPI) に登録されているので ``pip`` や ``easy_install`` など "
+"Python のスタンダードなツールを使ってインストールできます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:119
 msgid "Application"
@@ -181,8 +194,8 @@ msgid ""
 "for larger projects you want to create a :ref:`dedicated module <project-"
 "layout>`."
 msgstr ""
-"このチュートリアルでは単一のモジュールにすべてのコードを入れていますが、大きなプロジェクトでは :ref:`専用のモジュール <project-"
-"layout>` を作ることになるでしょう。"
+"このチュートリアルでは単一のモジュールにすべてのコードを書いていますが、"
+"大きなプロジェクトでは :ref:`専用のモジュール <project-layout>` を作ります。"
 
 #: ../../getting-started/first-steps-with-celery.rst:130
 msgid "Let's create the file :file:`tasks.py`:"
@@ -204,6 +217,7 @@ msgid ""
 "You defined a single task, called ``add``, which returns the sum of two "
 "numbers."
 msgstr ""
+"``add`` という名の、二つの数字の和を返すタスクを作成しました。"
 
 #: ../../getting-started/first-steps-with-celery.rst:155
 msgid "Running the celery worker server"
@@ -227,39 +241,41 @@ msgid ""
 "  To do this you need to use the tools provided by your platform, or "
 "something like `supervisord`_ (see :ref:`daemonizing` for more information)."
 msgstr ""
-"運用時には、ワーカーをデーモンとしてバックグラウンドで実行したいことと思います。そのためには運用するプラットフォームが提供するツールや、`supervisord`_"
-" (詳細は :ref:`daemonizing` を参照)のようなツールを使う必要があります。"
+"運用時にはワーカーをデーモンとしてバックグラウンドで稼動させるには、"
+"運用対象のプラットフォームが提供するツールや、`supervisord`_"
+" (詳細は :ref:`daemonizing` を参照)のようなプロセス管理ツールを使う必要があります。"
 
 #: ../../getting-started/first-steps-with-celery.rst:174
 msgid "For a complete listing of the command-line options available, do:"
-msgstr "利用可能なコマンドラインオプションの全リストを見るには、次のコマンドを実行してください。"
+msgstr "利用可能なコマンドラインオプションの全リストを見るには、次のコマンドを実行してください:"
 
 #: ../../getting-started/first-steps-with-celery.rst:180
 msgid ""
 "There are also several other commands available, and help is also available:"
-msgstr "他にも利用可能なコマンドがあります。またヘルプも利用できます。"
+msgstr "他にも利用可能なコマンドがあります。またヘルプも利用できます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:191
 msgid "Calling the task"
-msgstr "タスクの呼び出し"
+msgstr "タスクコール"
 
 #: ../../getting-started/first-steps-with-celery.rst:193
 msgid "To call our task you can use the :meth:`~@Task.delay` method."
-msgstr "Celery タスクを呼び出すには :meth:`~@Task.delay` メソッドを使うことができます。"
+msgstr "定義したタスクのコールには :meth:`~@Task.delay` メソッドを使います。"
 
 #: ../../getting-started/first-steps-with-celery.rst:195
 msgid ""
 "This is a handy shortcut to the :meth:`~@Task.apply_async` method which "
 "gives greater control of the task execution (see :ref:`guide-calling`)::"
 msgstr ""
-"このメソッドはタスクの実行を細かくコントロールできる :meth:`~@Task.apply_async` メソッド(:ref:`guide-"
-"calling` を参照)の便利なショートカットです。"
+"このメソッドは、タスクの実行を細かくコントロールできる :meth:`~@Task.apply_async` メソッド(:ref:`guide-"
+"calling` を参照)の便利なショートカットです:"
 
 #: ../../getting-started/first-steps-with-celery.rst:202
 msgid ""
 "The task has now been processed by the worker you started earlier, and you "
 "can verify that by looking at the workers console output."
-msgstr "これでタスクは先程起動したワーカーによって処理されました。ワーカーのコンソールに出力された内容を確認することができます。"
+msgstr "これでタスクは先程起動したワーカーによって処理されました。"
+"ワーカーのコンソールに出力された内容を確認してみてください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:205
 msgid ""
@@ -269,13 +285,16 @@ msgid ""
 "isn't enabled by default, and you have to configure Celery to use a result "
 "backend, which is detailed in the next section."
 msgstr ""
-"タスクを呼び出すと、:class:`~@AsyncResult` "
-"インスタンスが返されます。このインスタンスを使って、タスクの状態確認、タスク終了までの待機、タスクの戻り値(タスクが失敗した場合は、その例外やトレースバック)の取得などが可能です。しかし、この結果の取得機能はデフォルトでは有効になっておらず、Celery"
-" が結果バックエンドを使うように設定する必要があります。詳細については次のセクションで説明します。"
+"タスクをコールすると、:class:`~@AsyncResult` インスタンスが返されます。"
+"このインスタンスを用いて、タスクの状態確認、タスク終了までの待機、タスクの戻り値"
+"(タスクが失敗した場合は、その例外やトレースバック)の取得などが可能です。"
+"しかし、この結果の取得機能はデフォルトでは有効になっておらず、"
+"結果バックエンドが使えるように設定する必要があります。"
+"詳細については次のセクションで説明します。"
 
 #: ../../getting-started/first-steps-with-celery.rst:214
 msgid "Keeping Results"
-msgstr "結果の取得"
+msgstr "結果の保持"
 
 #: ../../getting-started/first-steps-with-celery.rst:216
 msgid ""
@@ -284,10 +303,10 @@ msgid ""
 "choose from: `SQLAlchemy`_/`Django`_ ORM, `Memcached`_, `Redis`_, AMQP "
 "(`RabbitMQ`_), and `MongoDB`_ -- or you can define your own."
 msgstr ""
-"タスクの状態を調べるためには、Celery "
-"はタスクの状態をどこかに保存または送信する必要があります。いくつか組み込みの結果バックエンドがあります。`SQLAlchemy`_/`Django`_ "
+"タスクの状態を調べるには、Celery がタスクの状態をどこかに保存または送信しなければなりません。"
+"Celery 組み込みの結果バックエンドとして次のものが提供されています: `SQLAlchemy`_/`Django`_ "
 "ORM, `Memcached`_, `Redis`_, AMQP (`RabbitMQ`_), `MongoDB`_ -- "
-"または自分で定義することも可能です。"
+"これ以外に自分で定義することも可能です。"
 
 #: ../../getting-started/first-steps-with-celery.rst:238
 msgid ""
@@ -300,20 +319,21 @@ msgid ""
 " you'll hold on to the :class:`~@AsyncResult` instance returned when you "
 "call a task::"
 msgstr ""
-"これで結果バックエンドの設定ができたので、もう一度タスクを呼び出してみましょう。今回はタスクを呼び出し戻り値の "
-":class:`~@AsyncResult` インスタンスを保持しておきます。"
+"これで結果バックエンドの設定ができたので、もう一度タスクをコールしてみましょう。"
+"今回はタスクコールの戻り値である :class:`~@AsyncResult` インスタンスを保持しておきます。"
 
 #: ../../getting-started/first-steps-with-celery.rst:246
 msgid ""
 "The :meth:`~@AsyncResult.ready` method returns whether the task has finished"
 " processing or not::"
-msgstr ":meth:`~@AsyncResult.ready` メソッドはタスクの処理が終了したかどうかを判定します。"
+msgstr ":meth:`~@AsyncResult.ready` メソッドはタスクの処理が終了したかどうかを判定します:"
 
 #: ../../getting-started/first-steps-with-celery.rst:252
 msgid ""
 "You can wait for the result to complete, but this is rarely used since it "
 "turns the asynchronous call into a synchronous one::"
-msgstr "タスクの処理が完了するまで待つこともできますが、非同期呼び出しが同期的になってしまうので、そんなことは滅多にすることありません。"
+msgstr "タスクの処理が完了するまで待つこともできますが、"
+"非同期コールが同期的になってしまうので、通常そういったことはしません。"
 
 #: ../../getting-started/first-steps-with-celery.rst:258
 msgid ""
@@ -321,14 +341,14 @@ msgid ""
 "raise the exception, but you can override this by specifying the "
 "``propagate`` argument::"
 msgstr ""
-"タスクが例外を送出した場合には、:meth:`~@AsyncResult.get` メソッドがその例外を再度送出します。この挙動は "
-"``propagete`` 引数を指定することによって変更できます。"
+"タスクが例外を送出した場合には、:meth:`~@AsyncResult.get` メソッドがその例外を再送出します。"
+"この挙動は ``propagete`` 引数によって変更できます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:265
 msgid ""
 "If the task raised an exception you can also gain access to the original "
 "traceback::"
-msgstr "タスクが例外を送出した場合、元のトレースバックを取得することもできます。"
+msgstr "タスクが例外を送出した場合、元のトレースバックを取得することもできます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:271
 msgid "See :mod:`celery.result` for the complete result object reference."
@@ -346,10 +366,10 @@ msgid ""
 "at the back there's a lid revealing loads of sliders, dials and buttons: "
 "this is the configuration."
 msgstr ""
-"Celery "
-"は一般の家電製品と同じく、操作しなければいけない箇所はそんなにありません。入力と出力がありますが、入力はブローカーに送って、出力は必要な場合に結果バックエンドから取りだすだけです。しかし"
-" Celery の裏側をよく見ると、たくさんのスライダーやダイヤル、ボタンを隠している蓋があるんです。この蓋を開けて Celery "
-"を「設定」することができるのです。"
+"Celery は一般の家電製品と同じく、操作しなければいけない箇所は少ししかありません。"
+"入力と出力はありますが、入力はブローカーへの送信、出力は必要な場合に結果バックエンドから取得するだけです。"
+"しかし Celery の背面をよく見ると、たくさんのスライダーやダイヤル、ボタンが隠されている蓋に気付くでしょう。"
+"この蓋を開ければ Celery を「設定」することができるのです。"
 
 #: ../../getting-started/first-steps-with-celery.rst:283
 msgid ""
@@ -359,9 +379,9 @@ msgid ""
 "configured. You can read about the options in the :ref:`configuration` "
 "reference."
 msgstr ""
-"ほとんどのユースケースではデフォルトの設定で十分でしょうが、Celery "
-"を思い通りに動作させるために調整できるものがたくさんあります。何が設定できるのかを知るためには、利用可能なオプションを読むのがいいでしょう。:ref:`configuration`"
-" リファレンスがそれです。"
+"ほとんどのユースケースではデフォルトの設定で十分でしょう。しかし Celery "
+"の挙動を意図したものにするために調整できる項目がたくさん用意されています。"
+"それらを詳しく知るには :ref:`configuration` リファレンスに目を通してください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:289
 msgid ""
@@ -370,13 +390,14 @@ msgid ""
 " used for serializing task payloads by changing the "
 ":setting:`CELERY_TASK_SERIALIZER` setting:"
 msgstr ""
-"設定は、app "
-"インスタンスに直接セットすることもできますし、専用の設定モジュールを使うこともできます。こごては例として、タスクデータをシリアライズするのに使われるデフォルトのシリアライザーを変更するため、:setting:`CELERY_TASK_SERIALIZER`"
-" オプションを設定してみましょう。"
+"設定内容は、app インスタンスに直接セットすることもできますし、"
+"設定用のモジュールに記載することもできます。"
+"ここでは例として、タスクデータをシリアライズするのに使われるデフォルトのシリアライザーを変更します。"
+" :setting:`CELERY_TASK_SERIALIZER` オプションを設定してみましょう:"
 
 #: ../../getting-started/first-steps-with-celery.rst:298
 msgid "If you are configuring many settings at once you can use ``update``:"
-msgstr "たくさんの項目を一気に設定するなら、``update`` を使えます。"
+msgstr "たくさんの項目を一気に設定するときには ``update`` が便利です:"
 
 #: ../../getting-started/first-steps-with-celery.rst:310
 msgid ""
@@ -388,7 +409,11 @@ msgid ""
 "SysAdmin making simple changes to the configuration in the event of system "
 "trouble."
 msgstr ""
-"大きなプロジェクトでは専用の設定モジュールを使った方が利便性が向上します。定期タスクのインターバルやタスクのルーティングオプションをハードコーティングするのは避け、設定を一カ所にまとめておく方が良いやり方です。特にライブラリとして提供するのであれば、設定がまとまっていればユーザーがタスクの振る舞いをコントロールできますし、システムトラブルの際には管理者がちゃちゃっと設定を変えることもできることでしょう。"
+"大きなプロジェクトでは設定用のモジュールを使った方が利便性が高まります。"
+"定期実行タスクのインターバルやタスクのルーティングオプションをハードコーティングするのは避け、"
+"設定を一カ所にまとめておくのが良いやり方です。"
+"特にライブラリとして提供する場合は、設定がまとまっていればユーザーはタスクの振る舞いをコントロールできますし、"
+"システムトラブルの際には管理者がサクッと設定を変えることもできることでしょう。"
 
 #: ../../getting-started/first-steps-with-celery.rst:325
 msgid ""
@@ -402,7 +427,7 @@ msgid ""
 "current directory or on the Python path, it could look like this:"
 msgstr ""
 "``celeryconfig.py`` モジュールはカレントディレクトリ、または Python "
-"パスから読み込めるようにしておかなければいけません。中身は以下のようになります。"
+"パスから読み込めるようにしておかなければいけません。中身は以下のようになります:"
 
 #: ../../getting-started/first-steps-with-celery.rst:331
 #: ../../getting-started/first-steps-with-celery.rst:356
@@ -414,7 +439,7 @@ msgstr ""
 msgid ""
 "To verify that your configuration file works properly, and doesn't contain "
 "any syntax errors, you can try to import it:"
-msgstr "設定ファイルに文法エラーがなく、正しく作動するかどうか確認するには、次のようにモジュールをインポートします。"
+msgstr "設定ファイルに文法エラーがなく、正しく作動するかどうか確認するには、次のようにモジュールをインポートします:"
 
 #: ../../getting-started/first-steps-with-celery.rst:351
 msgid ""
@@ -431,7 +456,7 @@ msgstr "タスクの実行レートを制限して、1 分間に 10 タスクだ
 msgid ""
 "If you are using RabbitMQ or Redis as the broker then you can also direct "
 "the workers to set a new rate limit for the task at runtime:"
-msgstr "ブローカーに RabbitMQ か Redis を使っている場合には、ワーカーに対して動的にタスクの実行レート制限値をセットできます。"
+msgstr "ブローカーに RabbitMQ か Redis を使っている場合には、ワーカーに対して動的にタスクの実行レート制限値をセットできます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:386
 msgid ""
@@ -454,8 +479,8 @@ msgid ""
 "steps>` tutorial, and after that you can study the :ref:`User Guide "
 "<guide>`."
 msgstr ""
-"もっと Celery について学びたい場合は :ref:`Next Steps <next-steps>` チュートリアルに進み、その後 "
-":ref:`User Guide <guide>` を読むことをお薦めします。"
+"もっと Celery について学びたい場合は :ref:`Next Steps <next-steps>` チュートリアルに進み、"
+"その後 :ref:`ユーザーガイド <guide>` に進んでください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:401
 msgid "Troubleshooting"
@@ -531,7 +556,7 @@ msgid ""
 "It's easy to start multiple workers by accident, so make sure that the "
 "previous worker is properly shutdown before you start a new one."
 msgstr ""
-"うっかり複数のワーカーを立ち上げてしまいやすいので、新しいワーカーを起動する前に以前のワーカーを正しく終了されていることを確認するようにしてください。"
+"うっかり複数のワーカーを立ち上げてしまいやすいので、新しいワーカーを起動する前に以前のワーカーが正しく終了されていることを確認するようにしてください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:445
 msgid ""
@@ -566,6 +591,8 @@ msgid ""
 "Celery requires a solution to send and receive messages; usually this comes "
 "in the form of a separate service called a *message broker*."
 msgstr ""
+"Celery はメッセージの送信と受信を行うソリューションを必要とします。通常これは *メッセージブローカー* "
+"と呼ばれる独立したサービスの形で提供されます。"
 
 #: ../../getting-started/first-steps-with-celery.rst:121
 msgid ""

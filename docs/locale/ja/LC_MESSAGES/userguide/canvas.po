@@ -26,8 +26,8 @@ msgid ""
 "sometimes you may want to pass the signature of a task invocation to another"
 " process or as an argument to another function."
 msgstr ""
-":ref:`タスクの呼び出し <guide-calling>` で ``delay`` メソッドを使ってタスクを呼び出す方法を学びました。"
-"多くの場合はこれで十分事足りますが、タスク実行のシグニチャを別プロセス、または別の関数の引数に渡したい"
+":ref:`タスクコール <guide-calling>` で ``delay`` メソッドを使ってタスクを呼び出す方法を学びました。"
+"大半のケースではこれだけで事足りますが、タスク実行のシグニチャを別のプロセス、または別の関数の引数として渡したい"
 "といったケースが出てくることもあります。"
 
 #: ../../userguide/canvas.rst:25
@@ -44,7 +44,7 @@ msgid ""
 "Signatures are often nicknamed \"subtasks\" because they describe a task to "
 "be called within a task."
 msgstr ""
-"シグニチャは、タスク内で呼ばれるタスクについての記述なので「サブタスク」と称されます。"
+"シグニチャはタスク内から呼ばれるタスクに当たるものなので、しばしば「サブタスク」と称されます。"
 
 #: ../../userguide/canvas.rst:32
 msgid ""
@@ -125,11 +125,12 @@ msgstr "またカレントプロセスで直接実行することもできます
 msgid ""
 "Specifying additional args, kwargs or options to ``apply_async``/``delay`` "
 "creates partials:"
-msgstr ""
+msgstr "``apply_async``/``delay`` に追加の引数、キーワード引数、実行オプションを指定すると、"
+"partial を生成します:"
 
 #: ../../userguide/canvas.rst:112
 msgid "Any arguments added will be prepended to the args in the signature::"
-msgstr ""
+msgstr "追加引数は、シグニチャに定義された引数の前に与えられます:"
 
 #: ../../userguide/canvas.rst:118
 msgid ""
@@ -193,26 +194,30 @@ msgid ""
 "Callbacks can be added to any task using the ``link`` argument to "
 "``apply_async``::"
 msgstr ""
+"コールバックは ``apply_async`` の ``link`` 引数に指定してタスクに追加します:"
 
 #: ../../userguide/canvas.rst:183
 msgid ""
 "The callback will only be applied if the task exited successfully, and it "
 "will be applied with the return value of the parent task as argument."
 msgstr ""
+"コールバックはタスクの実行に成功した場合にのみ呼ばれ、"
+"親タスクの戻り値が引数に渡されます。"
 
 #: ../../userguide/canvas.rst:186
 msgid ""
 "As I mentioned earlier, any arguments you add to a signature, will be "
 "prepended to the arguments specified by the signature itself!"
 msgstr ""
+"前述のようにシグニチャに追加した引数は、シグニチャ自身で指定された引数の前に追加されます。"
 
 #: ../../userguide/canvas.rst:189
 msgid "If you have the signature::"
-msgstr ""
+msgstr "このようなシグニチャの場合:"
 
 #: ../../userguide/canvas.rst:193
 msgid "then `sig.delay(result)` becomes::"
-msgstr ""
+msgstr "`sig.delay(result)` はこうなります:"
 
 #: ../../userguide/canvas.rst:197
 msgid "..."
@@ -222,12 +227,15 @@ msgstr ""
 msgid ""
 "Now let's call our ``add`` task with a callback using partial arguments::"
 msgstr ""
+"部分引数を使って ``add`` タスクのコールバックを呼んでみましょう:"
 
 #: ../../userguide/canvas.rst:204
 msgid ""
 "As expected this will first launch one task calculating :math:`2 + 2`, then "
 "another task calculating :math:`4 + 8`."
 msgstr ""
+"期待通り、最初のタスクが :math:`2 + 2` を計算し、"
+"次に別のタスクが :math:`4 + 8` を計算しています。"
 
 #: ../../userguide/canvas.rst:208
 msgid "The Primitives"
@@ -239,14 +247,14 @@ msgstr "概要"
 
 #: ../../userguide/canvas.rst:214
 msgid "``group``"
-msgstr "グループ"
+msgstr ""
 
 #: ../../userguide/canvas.rst:216
 msgid ""
 "The group primitive is a signature that takes a list of tasks that should be"
 " applied in parallel."
 msgstr ""
-"グループプリミティブは並列に実行されるタスクのリストからなるシグニチャです。"
+"group プリミティブは並列に実行されるタスクのリストからなるシグニチャです。"
 
 #: ../../userguide/canvas.rst:219
 msgid "``chain``"
@@ -257,7 +265,7 @@ msgid ""
 "The chain primitive lets us link together signatures so that one is called "
 "after the other, essentially forming a *chain* of callbacks."
 msgstr ""
-"チェーンプリミティブは、あるシグニチャが呼ばれた後に次のシグニチャが呼ばれるように複数のシグニチャを連結します。"
+"chain プリミティブは、あるシグニチャが呼ばれた後に次のシグニチャが呼ばれるように複数のシグニチャを連結します。"
 "これはコールバック *チェーン* を作成するのに有用です。"
 
 #: ../../userguide/canvas.rst:224
@@ -270,12 +278,12 @@ msgid ""
 "header group and a body,  where the body is a task that should execute after"
 " all of the tasks in the header are complete."
 msgstr ""
-"chord はコールバックをグループです。"
-"chord はヘッダーグループと本体から構成され、本体はヘッダーの全タスク完了後に実行されるタスクです。"
+"chord はコールバックを備えるグループです。"
+"ヘッダーグループと本体から構成され、本体はヘッダーの全タスク完了後に実行されるタスクです。"
 
 #: ../../userguide/canvas.rst:230
 msgid "``map``"
-msgstr "``マップ``"
+msgstr ""
 
 #: ../../userguide/canvas.rst:232
 msgid ""
@@ -284,6 +292,10 @@ msgid ""
 "``task.map([1, 2])`` results in a single task being called, applying the "
 "arguments in order to the task function so that the result is::"
 msgstr ""
+"map プリミティブは組み込みの ``map`` 関数と同様の機能ですが、"
+"引数のリスト要素をタスクに渡してコールする一時的なタスクを生成します。"
+"例えば ``task.map([1, 2])`` は単一のタスクを生成し、指定された引数は順にタスク関数に渡され、"
+"最終的には以下のようになります:"
 
 #: ../../userguide/canvas.rst:240
 msgid "``starmap``"
@@ -294,6 +306,8 @@ msgid ""
 "Works exactly like map except the arguments are applied as ``*args``. For "
 "example ``add.starmap([(2, 2), (4, 4)])`` results in a single task calling::"
 msgstr ""
+"引数が ``*args`` として渡される以外は map と全く同じです。"
+"例えば ``add.starmap([(2, 2), (4, 4)])`` は以下の単一タスクになります::"
 
 #: ../../userguide/canvas.rst:248
 msgid "``chunks``"
@@ -303,36 +317,40 @@ msgstr ""
 msgid ""
 "Chunking splits a long list of arguments into parts, e.g the operation::"
 msgstr ""
+"chunks は長い引数リストを分割します:"
 
 #: ../../userguide/canvas.rst:255
 msgid ""
 "will split the list of items into chunks of 10, resulting in 100 tasks (each"
 " processing 10 items in sequence)."
 msgstr ""
+"この例はアイテムのリストを 10個 ずつに分割し、100 個のタスクを生成します"
+"(それぞれのタスクが 10 アイテムを順に処理します)。"
 
 #: ../../userguide/canvas.rst:259
 msgid ""
 "The primitives are also signature objects themselves, so that they can be "
 "combined in any number of ways to compose complex workflows."
-msgstr ""
+msgstr "プリミティブ自身もシグニチャオブジェクトなので、"
+"それらを組み合わせて複雑なワークフローを構成できます。"
 
 #: ../../userguide/canvas.rst:262
 msgid "Here's some examples:"
-msgstr ""
+msgstr "いくつか例を紹介します:"
 
 #: ../../userguide/canvas.rst:264
 msgid "Simple chain"
-msgstr ""
+msgstr "シンプルな chain"
 
 #: ../../userguide/canvas.rst:266
 msgid ""
 "Here's a simple chain, the first task executes passing its return value to "
 "the next task in the chain, and so on."
-msgstr ""
+msgstr "シンプルな chain の例です。最初のタスクの戻り値が chain の後続タスクに渡さます。"
 
 #: ../../userguide/canvas.rst:278
 msgid "This can also be written using pipes::"
-msgstr ""
+msgstr "これは次のようにパイプを使って書くこともできます:"
 
 #: ../../userguide/canvas.rst:283
 msgid "Immutable signatures"
@@ -361,11 +379,11 @@ msgstr ""
 
 #: ../../userguide/canvas.rst:310
 msgid "Simple group"
-msgstr ""
+msgstr "シンプルな group"
 
 #: ../../userguide/canvas.rst:312
 msgid "You can easily create a group of tasks to execute in parallel::"
-msgstr ""
+msgstr "並列に実行されるタスクの group を簡単に作成できます:"
 
 #: ../../userguide/canvas.rst:319
 msgid "Simple chord"

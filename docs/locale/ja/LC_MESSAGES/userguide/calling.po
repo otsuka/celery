@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../userguide/calling.rst:5
 msgid "Calling Tasks"
-msgstr "タスクの呼び出し"
+msgstr "タスクコール"
 
 #: ../../userguide/calling.rst:15
 msgid "Basics"
@@ -24,8 +24,8 @@ msgid ""
 "This document describes Celery's uniform \"Calling API\" used by task "
 "instances and the :ref:`canvas <guide-canvas>`."
 msgstr ""
-"このドキュメントではタスクインスタンスから使用される Celery の \"Calling API\" と :ref:`canvas <guide-"
-"canvas>` について述べます。"
+"このドキュメントではタスクインスタンスから使用される Celery の \"Calling API\" と、 "
+":ref:`canvas <guide-canvas>` について説明します。"
 
 #: ../../userguide/calling.rst:20
 msgid ""
@@ -133,13 +133,13 @@ msgstr ""
 msgid ""
 "If the task is not registered in the current process you can use "
 ":meth:`~@send_task` to call the task by name instead."
-msgstr "タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` を使って名前でタスクを呼び出すことができます。"
+msgstr "タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` メソッドで名前を指定してタスクをコールできます。"
 
 #: ../../userguide/calling.rst:81
 msgid ""
 "So `delay` is clearly convenient, but if you want to set additional "
 "execution options you have to use ``apply_async``."
-msgstr "なので `delay` の方が便利なのですか、実行時オプションをセットする場合は ``apply_async`` を使わなければいません。"
+msgstr "このように `delay` の方が手軽ですが、実行時オプションをセットする場合は ``apply_async`` を使わなければいません。"
 
 #: ../../userguide/calling.rst:84
 msgid ""
@@ -169,12 +169,12 @@ msgid ""
 " callback task will be applied with the result of the parent task as a "
 "partial argument:"
 msgstr ""
-"Celery はタスクのリンクをサポートしており、あるタスクの後に別のタスクが続けることができます。"
+"Celery はタスクのリンクをサポートしており、あるタスクの後に別のタスクを続けることができます。"
 "コールバックタスクは親タスクの結果を部分引数として受け取れます:"
 
 #: ../../userguide/calling.rst:0
 msgid "What is ``s``?"
-msgstr "``s`` って？"
+msgstr "``s`` とは？"
 
 #: ../../userguide/calling.rst:121
 msgid ""
@@ -183,7 +183,7 @@ msgid ""
 ":class:`~celery.chain`, which is a simpler way to chain tasks together."
 msgstr ""
 "ここで使われている ``add.s`` はサブタスクと呼ばれています。"
-"サブタスクについては :ref:`canvas ガイド <guide-canvas>` で詳しく説明しますが、"
+"サブタスクについては :ref:`canvas <guide-canvas>` ページで詳しく説明しますが、"
 "そこでもっとシンプルにタスクを連結できる :class:`~celery.chain` クラスについても取り上げます。"
 
 
@@ -194,7 +194,7 @@ msgid ""
 "instead."
 msgstr ""
 "``link`` 実行オプションは Celery 内部処理で使われるものとして扱われており、"
-"実務上で直接使う機会は少なく、ほとんどの場合には chain を使います。"
+"実務上で直接使う機会は少なく、通常は主に chain を使います。"
 
 #: ../../userguide/calling.rst:130
 msgid ""
@@ -213,11 +213,11 @@ msgid ""
 " way the error callback requires a result backend to be enabled, and the "
 "task must retrieve the result of the task instead."
 msgstr ""
-"タスクで例外が発生した時のコールバックを指定することもできます(*エラーバック*)。"
+"タスクで例外が発生した際のコールバックを指定することもできます(*エラーバック*)。"
 "エラーバックの挙動は通常のコールバックとは異なり、親タスクの結果ではなくタスク ID が渡されます。"
-"これは必ずしも発生した例外をシリアライズできるわけではないためです。このため、"
+"これは発生した例外を必ずシリアライズできるわけではないためです。このため、"
 "エラーコールバックを扱うには結果バックエンドが有効になっている必要があり、"
-"そこから親タスクの結果を取得しなければなりません。"
+"そこから親タスクの結果を取得します。"
 
 #: ../../userguide/calling.rst:143
 msgid "This is an example error callback:"
@@ -251,8 +251,8 @@ msgid ""
 "that is the earliest time at which your task will be executed.  `countdown` "
 "is a shortcut to set eta by seconds into the future."
 msgstr ""
-"ETA (予定到着時間)オプションを使うとタスクが実行される最早の日時を指定できます。`countdown` は ETA "
-"を秒数で指定するショートカットです。"
+"ETA (予定到着時間)オプションを使うとタスクが実行される最早の日時を指定できます。"
+"`countdown` は ETA を秒数で指定するショートカットです。"
 
 #: ../../userguide/calling.rst:185
 msgid ""
@@ -266,9 +266,9 @@ msgid ""
 msgstr ""
 "タスクは指定された日時 *以降* "
 "に実行されることが保証されます。厳密に指定日時に実行されることを保証するわけではないことに気を付けてください。"
-"これは実行待ちのタスクがキューに溜まっていたり、ネットワークが重くなっていたりするケースがあるためです。"
+"これは実行待ちのタスクがキューに溜まっていたり、ネットワークが混雑していたりするケースがあるためです。"
 "時間通りにタスクが実行されるようにするには、キューの混雑状況を監視しなければなりません。"
-"そして負荷を軽減するための適切なアクションが取れるようにするため、Munin などをのツールを使ってアラートを受けとるようにします。"
+"そして負荷を軽減するための適切なアクションが取れるようにするため、Munin などのツールを使ってアラートを受けとるようにします。"
 "詳しくは :ref:`monitoring-munin` を参照してください。"
 
 #: ../../userguide/calling.rst:193
@@ -311,8 +311,8 @@ msgid ""
 "failure, and retry behavior can be configured -- like how often to retry, or"
 " a maximum number of retries -- or disabled all together."
 msgstr ""
-"Celery はコネクションの失敗イベントか生じた際には自動的にはメッセージ送信をリトライします。リトライの挙動は -- リトライの頻度や回数など --"
-" 設定可能で、リトライ自体を無効にすることできます。"
+"Celery はコネクションの失敗イベントか生じた際には自動的にはメッセージ送信をリトライします。"
+"リトライの挙動は --リトライの頻度や回数など-- 設定可能で、リトライ自体を無効にすることできます。"
 
 #: ../../userguide/calling.rst:236
 msgid ""
@@ -350,7 +350,7 @@ msgstr ""
 msgid ""
 "Maximum number of retries before giving up, in this case the exception that "
 "caused the retry to fail will be raised."
-msgstr "リトライを行う最大回数です。この回数を超えるとリトライを失敗させる例外か送出されます。"
+msgstr "リトライを行う最大回数。この回数を超えるとリトライを失敗させる例外か送出されます。"
 
 #: ../../userguide/calling.rst:261
 msgid "A value of 0 or :const:`None` means it will retry forever."
@@ -409,23 +409,25 @@ msgstr ""
 
 #: ../../userguide/calling.rst:300
 msgid "Serializers"
-msgstr ""
+msgstr "シリアライザー"
 
 #: ../../userguide/calling.rst:0
 msgid "Security"
-msgstr ""
+msgstr "セキュリティ"
 
 #: ../../userguide/calling.rst:304
 msgid ""
 "The pickle module allows for execution of arbitrary functions, please see "
 "the :ref:`security guide <guide-security>`."
 msgstr ""
+"pickle モジュールは任意の関数実行を許してしまいます。 :ref:`セキュリティ <guide-security>` のページをご覧ください。"
 
 #: ../../userguide/calling.rst:307
 msgid ""
 "Celery also comes with a special serializer that uses cryptography to sign "
 "your messages."
 msgstr ""
+"Celery は暗号を使ってメッセージにサインするシリアライザーも提供しています。"
 
 #: ../../userguide/calling.rst:310
 msgid ""
@@ -433,6 +435,9 @@ msgid ""
 "every message in Celery has a ``content_type`` header that describes the "
 "serialization method used to encode it."
 msgstr ""
+"クライアントとワーカー間を移動するデータはシリアライズされていなくてはいけません。"
+"すべての Celery メッセージには ``content_type`` ヘッダーが含まれており、"
+"そこにはメッセージのエンコードに用いられたシリアライズメソッドが記載されています。"
 
 #: ../../userguide/calling.rst:314
 msgid ""
@@ -440,6 +445,8 @@ msgid ""
 ":setting:`CELERY_TASK_SERIALIZER` setting, or for each individual task, or "
 "even per message."
 msgstr ""
+"デフォルトのシリアライザーは :mod:`pickle` ですが、 :setting:`CELERY_TASK_SERIALIZER` 設定で"
+"変更できます。またタスク単位、メッセージ単位でも変更できます。"
 
 #: ../../userguide/calling.rst:318
 msgid ""
@@ -447,20 +454,25 @@ msgid ""
 "and you can also add your own custom serializers by registering them into "
 "the Kombu serializer registry (see ref:`kombu:guide-serialization`)."
 msgstr ""
+"組み込みのシリアライザーには :mod:`pickle`、`JSON`、`YAML` と `msgpack` があります。"
+"独自のシリアライザーを実装することも可能で、Kombu のシリアライザーレジストリに登録して使います。"
+"( ref:`kombu:guide-serialization` 参照)"
 
 #: ../../userguide/calling.rst:322
 msgid "Each option has its advantages and disadvantages."
-msgstr ""
+msgstr "シリアライザーにはそれぞれ有利不利があります。"
 
 #: ../../userguide/calling.rst:340
 msgid "json -- JSON is supported in many programming languages, is now"
-msgstr ""
+msgstr "json -- JSON は多くのプログラミング言語でサポートされており、"
 
 #: ../../userguide/calling.rst:325
 msgid ""
 "a standard part of Python (since 2.6), and is fairly fast to decode using "
 "the modern Python libraries such as :mod:`cjson` or :mod:`simplejson`."
 msgstr ""
+"現在では Python (2.6 以降)の標準モジュールです。 :mod:`cjson` や :mod:`simplejson` といった"
+"モダンな Python ライブラリを使えば極めて高速にデコードできます。"
 
 #: ../../userguide/calling.rst:328
 msgid ""
@@ -468,6 +480,9 @@ msgid ""
 " types: strings, Unicode, floats, boolean, dictionaries, and lists. Decimals"
 " and dates are notably missing."
 msgstr ""
+"不利な点として大きいのは、扱えるデータ型が次のものに限られていることです: "
+"strings、Unicode、floats、boolean、辞書とリスト。"
+"Decimal と日時型が含まれていないのです。"
 
 #: ../../userguide/calling.rst:332
 msgid ""
@@ -475,20 +490,24 @@ msgid ""
 "cause the transferred data to be around 34% larger than an encoding which "
 "supports native binary types."
 msgstr ""
+"また、バイナリデータは Base64 でエンコードされるので、"
+"バイナリ型をサポートしているエンコーディングよりもデータ量が約 34% も大きくなります。"
 
 #: ../../userguide/calling.rst:336
 msgid ""
 "However, if your data fits inside the above constraints and you need cross-"
 "language support, the default setting of JSON is probably your best choice."
 msgstr ""
+"ただ、上記の制約に収まるデータを扱う場合や、言語をまたいだやりとりが必要な場合には"
+" JSON のデフォルト設定がベストな選択になるでしょう。"
 
 #: ../../userguide/calling.rst:340
 msgid "See http://json.org for more information."
-msgstr ""
+msgstr "詳しくは http://json.org をご覧ください。"
 
 #: ../../userguide/calling.rst:348
 msgid "pickle -- If you have no desire to support any language other than"
-msgstr ""
+msgstr "pickle -- Python 以外の言語をサポートしなくてもよい場合、"
 
 #: ../../userguide/calling.rst:343
 msgid ""
@@ -496,10 +515,13 @@ msgid ""
 "built-in Python data types (except class instances), smaller messages when "
 "sending binary files, and a slight speedup over JSON processing."
 msgstr ""
+"pickle によるエンコーディングを使えば Python の組み込み型(クラスインスタンスを除く)"
+"すべてがサポートされることになります。"
+"バイナリファイルの送信時もメッセージのデータ量は膨れあがらず、JSON 処理よりも若干高速です。"
 
 #: ../../userguide/calling.rst:348
 msgid "See http://docs.python.org/library/pickle.html for more information."
-msgstr ""
+msgstr "詳しくは http://docs.python.org/library/pickle.html をご覧ください。"
 
 #: ../../userguide/calling.rst:360
 msgid "yaml -- YAML has many of the same characteristics as json,"
@@ -573,7 +595,7 @@ msgstr ""
 
 #: ../../userguide/calling.rst:389
 msgid "Compression"
-msgstr ""
+msgstr "圧縮"
 
 #: ../../userguide/calling.rst:391
 msgid ""

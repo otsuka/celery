@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr "よくある質問"
+msgstr "FAQ"
 
 #: ../../faq.rst:13
 msgid "General"
