@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../userguide/calling.rst:5
 msgid "Calling Tasks"
-msgstr "タスクコール"
+msgstr "タスクの呼び出し"
 
 #: ../../userguide/calling.rst:15
 msgid "Basics"
@@ -133,7 +133,7 @@ msgstr ""
 msgid ""
 "If the task is not registered in the current process you can use "
 ":meth:`~@send_task` to call the task by name instead."
-msgstr "タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` メソッドで名前を指定してタスクをコールできます。"
+msgstr "タスクがカレントプロセスに登録されていない場合は :meth:`~@send_task` メソッドで名前を指定してタスクを呼び出せます。"
 
 #: ../../userguide/calling.rst:81
 msgid ""
@@ -454,13 +454,13 @@ msgid ""
 "and you can also add your own custom serializers by registering them into "
 "the Kombu serializer registry (see ref:`kombu:guide-serialization`)."
 msgstr ""
-"組み込みのシリアライザーには :mod:`pickle`、`JSON`、`YAML` と `msgpack` があります。"
-"独自のシリアライザーを実装することも可能で、Kombu のシリアライザーレジストリに登録して使います。"
+"組み込みのシリアライザーには :mod:`pickle`、`JSON`、`YAML`、`msgpack` があります。"
+"独自のシリアライザーを実装することも可能で、Kombu の serializer registry に登録して使います。"
 "( ref:`kombu:guide-serialization` 参照)"
 
 #: ../../userguide/calling.rst:322
 msgid "Each option has its advantages and disadvantages."
-msgstr "シリアライザーにはそれぞれ有利不利があります。"
+msgstr "各シリアライザーにはそれぞれ有利不利があります。"
 
 #: ../../userguide/calling.rst:340
 msgid "json -- JSON is supported in many programming languages, is now"

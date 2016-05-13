@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../index.rst:3
 msgid "Celery - Distributed Task Queue"
-msgstr "Celery - 分散タスクキュー"
+msgstr "Celery - 分散型タスクキュー"
 
 #: ../../index.rst:5
 msgid ""
@@ -22,13 +22,13 @@ msgid ""
 "maintain such a system."
 msgstr ""
 "Celery は大量のメッセージを扱えるシンプルでフレキシブル、且つ信頼性の高い分散処理システムです。"
-""
+"システムの運用管理に必要なツールを提供しています。"
 
 #: ../../index.rst:9
 msgid ""
 "It's a task queue with focus on real-time processing, while also supporting "
 "task scheduling."
-msgstr "リアルタイム処理にフォーカスしたタスクキューですが、スケジューリングタスクもサポートしています。"
+msgstr "リアルタイム処理に主眼を置いたタスクキューですが、タスクスケジューリングもサポートしています。"
 
 #: ../../index.rst:12
 msgid ""
@@ -45,13 +45,13 @@ msgstr "Celery はオープンソースで `BSD License`_ に基づいて提供�
 
 #: ../../index.rst:19
 msgid "Getting Started"
-msgstr "はじめよう"
+msgstr "はじめに"
 
 #: ../../index.rst:21
 msgid ""
 "If you are new to Celery you can get started by following the :ref:`first-"
 "steps` tutorial."
-msgstr "Celery が初めての方は、まずは :ref:`first-steps` から始めてみてください。"
+msgstr "Celery を初めて使用する方は、まずは :ref:`first-steps` から始めてみてください。"
 
 #: ../../index.rst:24
 msgid "You can also check out the :ref:`FAQ <faq>`."

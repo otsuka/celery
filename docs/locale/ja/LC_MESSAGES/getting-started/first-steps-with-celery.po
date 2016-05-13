@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Celery は「バッテリー同梱」のタスクキューです。"
 "Celery が持つ数々の機能すべてを学ばなくとも、すぐに使い始めることができます。"
-"ベストプラクティスに基づいた設計が施されているため、あなたのプロダクトはスケールし、他の言語とも連携可能になっています。"
-"そして運用環境で稼動に必要なツールとサポートも提供されています。"
+"ベストプラクティスに基づいた設計が施されているため、あなたのプロダクトはスケールし、他の言語とも連携できるようになっています。"
+"また、システムの運用管理に必要なツールも付属しています。"
 
 #: ../../getting-started/first-steps-with-celery.rst:15
 msgid ""
@@ -40,7 +40,7 @@ msgstr "メッセージトランスポート(ブローカー)の選定とイン�
 
 #: ../../getting-started/first-steps-with-celery.rst:20
 msgid "Starting the worker and calling tasks."
-msgstr "ワーカーの起動とタスクコール"
+msgstr "ワーカーの起動とタスクの呼び出し"
 
 #: ../../getting-started/first-steps-with-celery.rst:21
 msgid ""
@@ -256,11 +256,11 @@ msgstr "他にも利用可能なコマンドがあります。またヘルプも
 
 #: ../../getting-started/first-steps-with-celery.rst:191
 msgid "Calling the task"
-msgstr "タスクコール"
+msgstr "タスクの呼び出し"
 
 #: ../../getting-started/first-steps-with-celery.rst:193
 msgid "To call our task you can use the :meth:`~@Task.delay` method."
-msgstr "定義したタスクのコールには :meth:`~@Task.delay` メソッドを使います。"
+msgstr "定義したタスクの呼び出しには :meth:`~@Task.delay` メソッドを使います。"
 
 #: ../../getting-started/first-steps-with-celery.rst:195
 msgid ""
@@ -285,7 +285,7 @@ msgid ""
 "isn't enabled by default, and you have to configure Celery to use a result "
 "backend, which is detailed in the next section."
 msgstr ""
-"タスクをコールすると、:class:`~@AsyncResult` インスタンスが返されます。"
+"タスクを呼び出すと、:class:`~@AsyncResult` インスタンスが返されます。"
 "このインスタンスを用いて、タスクの状態確認、タスク終了までの待機、タスクの戻り値"
 "(タスクが失敗した場合は、その例外やトレースバック)の取得などが可能です。"
 "しかし、この結果の取得機能はデフォルトでは有効になっておらず、"
@@ -319,8 +319,8 @@ msgid ""
 " you'll hold on to the :class:`~@AsyncResult` instance returned when you "
 "call a task::"
 msgstr ""
-"これで結果バックエンドの設定ができたので、もう一度タスクをコールしてみましょう。"
-"今回はタスクコールの戻り値である :class:`~@AsyncResult` インスタンスを保持しておきます。"
+"これで結果バックエンドの設定ができたので、もう一度タスクを呼び出してみましょう。"
+"今回はタスク呼び出しの戻り値である :class:`~@AsyncResult` インスタンスを保持しておきます。"
 
 #: ../../getting-started/first-steps-with-celery.rst:246
 msgid ""
@@ -333,7 +333,7 @@ msgid ""
 "You can wait for the result to complete, but this is rarely used since it "
 "turns the asynchronous call into a synchronous one::"
 msgstr "タスクの処理が完了するまで待つこともできますが、"
-"非同期コールが同期的になってしまうので、通常そういったことはしません。"
+"非同期呼び出しが同期的になってしまうので、通常そういったことはしません。"
 
 #: ../../getting-started/first-steps-with-celery.rst:258
 msgid ""
@@ -367,8 +367,8 @@ msgid ""
 "this is the configuration."
 msgstr ""
 "Celery は一般の家電製品と同じく、操作しなければいけない箇所は少ししかありません。"
-"入力と出力はありますが、入力はブローカーへの送信、出力は必要な場合に結果バックエンドから取得するだけです。"
-"しかし Celery の背面をよく見ると、たくさんのスライダーやダイヤル、ボタンが隠されている蓋に気付くでしょう。"
+"入出力端子はありますが、入力端子はブローカーに接続し、出力端子は必要な場合に結果バックエンドに接続します。"
+"しかし Celery の背面をよく見ると、たくさんのスライダーやダイヤル、ボタンが隠されている蓋があることに気付くでしょう。"
 "この蓋を開ければ Celery を「設定」することができるのです。"
 
 #: ../../getting-started/first-steps-with-celery.rst:283
@@ -379,9 +379,9 @@ msgid ""
 "configured. You can read about the options in the :ref:`configuration` "
 "reference."
 msgstr ""
-"ほとんどのユースケースではデフォルトの設定で十分でしょう。しかし Celery "
-"の挙動を意図したものにするために調整できる項目がたくさん用意されています。"
-"それらを詳しく知るには :ref:`configuration` リファレンスに目を通してください。"
+"ほとんどのユースケースにおいてはデフォルトの設定で十分でしょう。しかし Celery "
+"の挙動を意図したものにするための設定項目はたくさん用意されています。"
+"それらの項目の詳細については :ref:`configuration` リファレンスをご覧ください。"
 
 #: ../../getting-started/first-steps-with-celery.rst:289
 msgid ""
@@ -391,13 +391,13 @@ msgid ""
 ":setting:`CELERY_TASK_SERIALIZER` setting:"
 msgstr ""
 "設定内容は、app インスタンスに直接セットすることもできますし、"
-"設定用のモジュールに記載することもできます。"
+"設定用のモジュールにまとめることもできます。"
 "ここでは例として、タスクデータをシリアライズするのに使われるデフォルトのシリアライザーを変更します。"
 " :setting:`CELERY_TASK_SERIALIZER` オプションを設定してみましょう:"
 
 #: ../../getting-started/first-steps-with-celery.rst:298
 msgid "If you are configuring many settings at once you can use ``update``:"
-msgstr "たくさんの項目を一気に設定するときには ``update`` が便利です:"
+msgstr "たくさんの項目を一括設定するときには ``update`` が便利です:"
 
 #: ../../getting-started/first-steps-with-celery.rst:310
 msgid ""
@@ -439,7 +439,7 @@ msgstr ""
 msgid ""
 "To verify that your configuration file works properly, and doesn't contain "
 "any syntax errors, you can try to import it:"
-msgstr "設定ファイルに文法エラーがなく、正しく作動するかどうか確認するには、次のようにモジュールをインポートします:"
+msgstr "設定ファイルに文法エラーがなく、正しく作動することを確認するには、次のようにモジュールをインポートします:"
 
 #: ../../getting-started/first-steps-with-celery.rst:351
 msgid ""
@@ -450,7 +450,7 @@ msgstr "設定オプションの全リファレンスは、:ref:`configuration` 
 msgid ""
 "Or instead of routing it you could rate limit the task instead, so that only"
 " 10 tasks of this type can be processed in a minute (10/m):"
-msgstr "タスクの実行レートを制限して、1 分間に 10 タスクだけ実行されるようにもできます。"
+msgstr "タスクの実行レートを制限して、1 分間に 10 タスクだけ実行されるようにもできます:"
 
 #: ../../getting-started/first-steps-with-celery.rst:376
 msgid ""
@@ -471,7 +471,7 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:392
 msgid "Where to go from here"
-msgstr "お次は？"
+msgstr "次は？"
 
 #: ../../getting-started/first-steps-with-celery.rst:394
 msgid ""
@@ -584,7 +584,7 @@ msgstr ""
 
 #: ../../getting-started/first-steps-with-celery.rst:19
 msgid "Installing Celery and creating your first task."
-msgstr ""
+msgstr "Celery のインストールと、初めてのタスク作成"
 
 #: ../../getting-started/first-steps-with-celery.rst:40
 msgid ""
@@ -601,6 +601,10 @@ msgid ""
 "entry-point for everything you want to do in Celery, like creating tasks and"
 " managing workers, it must be possible for other modules to import it."
 msgstr ""
+"まず初めに必要なものは Celery のインスタンスで、これは celery アプリケーション、"
+"または省略して app と呼ばれます。このインスタンスは、タスクの生成やワーカーの管理といった "
+"Celery で行うことすべてのエントリーポイントとなります。"
+"そのため、他のモジュールがインポートできるようにしておかなければいけません。"
 
 #: ../../getting-started/first-steps-with-celery.rst:226
 msgid ""
@@ -609,69 +613,27 @@ msgid ""
 "argument to :class:`@Celery`, (or via the :setting:`CELERY_RESULT_BACKEND` "
 "setting if you choose to use a configuration module)::"
 msgstr ""
+"ここでの例では、状態を非永続メッセージとして返送する `rpc` の結果バックエンドを使います。"
+"バックエンドは :class:`@Celery` のコンストラクタに ``backend`` 引数で指定します"
+"(設定用のモジュールを使う場合は、:setting:`CELERY_RESULT_BACKEND` 設定で指定します)。"
 
 #: ../../getting-started/first-steps-with-celery.rst:233
 msgid ""
 "Or if you want to use Redis as the result backend, but still use RabbitMQ as"
 " the message broker (a popular combination)::"
 msgstr ""
+"結果バックエンドに Redis を使いたい場合でも、メッセージブローカーには RabbitMQ を使えます(これは一般的な組み合わせです):"
 
 #: ../../getting-started/first-steps-with-celery.rst:318
 msgid ""
 "You can tell your Celery instance to use a configuration module, by calling "
 "the :meth:`@config_from_object` method:"
 msgstr ""
+":meth:`@config_from_object` メソッドを通して Celery インスタンスに設定モジュールを使うように指示します:"
 
 #: ../../getting-started/first-steps-with-celery.rst:353
 msgid ""
 "To demonstrate the power of configuration files, this is how you would route"
 " a misbehaving task to a dedicated queue:"
-msgstr ""
+msgstr "設定ファイルの凄さを見せましょう。次のようにすると、おかしな動作をするタスクはそれ専用のキューに入れられます:"
 
-#~ msgid "Installing Celery and creating your first task"
-#~ msgstr "Celery のインストールとタスクの作成"
-
-#~ msgid ""
-#~ "Celery requires a solution to send and receive messages, usually this comes "
-#~ "in the form of a separate service called a *message broker*."
-#~ msgstr ""
-#~ "Celery はメッセージの送信と受信を行うソリューションを必要とします。通常これは *メッセージブローカー* "
-#~ "と呼ばれる独立したサービスの形で提供されます。"
-
-#~ msgid ""
-#~ "The first thing you need is a Celery instance, this is called the celery "
-#~ "application or just app in short.  Since this instance is used as the entry-"
-#~ "point for everything you want to do in Celery, like creating tasks and "
-#~ "managing workers, it must be possible for other modules to import it."
-#~ msgstr ""
-#~ "まず初めに必要なものは Celery のインスタンスで、これは celery application または縮めて app "
-#~ "と呼ばれます。このインスタンスが、タスクの生成やワーカーの管理といった Celery "
-#~ "で行うすべてのことのエントリーポイントとなるため、他のモジュールがインポートできるようにしておかなければいけません。"
-
-#~ msgid ""
-#~ "For this example you will use the `amqp` result backend, which sends states "
-#~ "as messages.  The backend is specified via the ``backend`` argument to "
-#~ ":class:`@Celery`, (or via the :setting:`CELERY_RESULT_BACKEND` setting if "
-#~ "you choose to use a configuration module)::"
-#~ msgstr ""
-#~ "今回の例では `amqp` の結果バックエンドを使います。`amqp` は状態をメッセージとして送信します。バックエンドは "
-#~ ":class:`@Celery` のコンストラクタに ``backend`` "
-#~ "引数で指定します。(設定用のモジュールを使う場合は、:setting:`CELERY_RESULT_BACKEND` 設定で指定することもできます)"
-
-#~ msgid ""
-#~ "or if you want to use Redis as the result backend, but still use RabbitMQ as"
-#~ " the message broker (a popular combination)::"
-#~ msgstr ""
-#~ "結果バックエンドに Redis を使いたい場合でも、メッセージブローカーには RabbitMQ を使えます(これは人気のある組み合わせです)。"
-
-#~ msgid ""
-#~ "You can tell your Celery instance to use a configuration module, by calling "
-#~ "the :meth:`~@Celery.config_from_object` method:"
-#~ msgstr ""
-#~ ":meth:`~@Celery.config_from_object` メソッドを通して Celery "
-#~ "インスタンスに設定モジュールを使うように命令できます。"
-
-#~ msgid ""
-#~ "To demonstrate the power of configuration files, this how you would route a "
-#~ "misbehaving task to a dedicated queue:"
-#~ msgstr "設定ファイルの凄さを見せましょう。次のようにすると、おかしな動作をするタスクはそれ専用のキューに入ります。"

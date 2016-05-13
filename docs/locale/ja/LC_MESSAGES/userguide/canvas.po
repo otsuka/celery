@@ -651,30 +651,36 @@ msgid ""
 "A chord is a task that only executes after all of the tasks in a group have "
 "finished executing."
 msgstr ""
+"Chorid はグループの全タスクの実行完了後にのみ実行されるタスクです。"
 
 #: ../../userguide/canvas.rst:672
 msgid ""
 "Let's calculate the sum of the expression :math:`1 + 1 + 2 + 2 + 3 + 3 ... n"
 " + n` up to a hundred digits."
 msgstr ""
+":math:`1 + 1 + 2 + 2 + 3 + 3 ... n + n` と 100 まで続く足し算を行ってみましょう。"
 
 #: ../../userguide/canvas.rst:675
 msgid ""
 "First you need two tasks, :func:`add` and :func:`tsum` (:func:`sum` is "
 "already a standard function):"
 msgstr ""
+"まず二つのタスクが必要です。:func:`add` と :func:`tsum` (:func:`sum` は標準関数でありますね)です:"
 
 #: ../../userguide/canvas.rst:689
 msgid ""
 "Now you can use a chord to calculate each addition step in parallel, and "
 "then get the sum of the resulting numbers::"
 msgstr ""
+"そして、Chord を使ってそれぞれの数字の足し算を並列に計算し、それらの結果の数値の和を求めます::"
 
 #: ../../userguide/canvas.rst:700
 msgid ""
 "This is obviously a very contrived example, the overhead of messaging and "
 "synchronization makes this a lot slower than its Python counterpart::"
 msgstr ""
+"これは明らかに不自然な実行例なので、メッセージングや同期処理のオーバーヘッドのために次のように Python で"
+"直に計算するよりかなり遅くなります::"
 
 #: ../../userguide/canvas.rst:705
 msgid ""
@@ -682,10 +688,13 @@ msgid ""
 " as possible. Still, the chord is a powerful primitive to have in your "
 "toolbox as synchronization is a required step for many parallel algorithms."
 msgstr ""
+"同期処理部分はコストが掛かるので、可能な限り Chord を使うのは避けるべきです。"
+"それでも、たくさんの並列処理の後に同期処理が必要な場合には Chord はとても役に立つ Pirimitive なので"
+"知っておいて損はありません。。"
 
 #: ../../userguide/canvas.rst:709
 msgid "Let's break the chord expression down:"
-msgstr ""
+msgstr "Chord の式を小分けに見てみましょう:"
 
 #: ../../userguide/canvas.rst:719
 msgid ""
@@ -697,20 +706,26 @@ msgid ""
 "and get the final return value (but remember to :ref:`never have a task wait"
 " for other tasks <task-synchronous-subtasks>`)"
 msgstr ""
+"コールバックは header のすべてのタスクがリターンした後に実行されることを忘れないでください。"
+"header のそれぞれのステップは一つのタスクとして、並列に、場合によっては異なるノードで実行されます。"
+"コールバックは header の各タスクの結果と共に呼び出されます。 "
+":meth:`chord` が返すタスク ID はコールバックの ID なので、実行が完了するのを待ち、最終的な結果を取得することができます"
+"(但し、 :ref:`never have a task wait for other tasks <task-synchronous-subtasks>` にも注意してください)。"
 
 #: ../../userguide/canvas.rst:730
 msgid "Error handling"
-msgstr ""
+msgstr "エラーの取り扱い"
 
 #: ../../userguide/canvas.rst:732
 msgid "So what happens if one of the tasks raises an exception?"
-msgstr ""
+msgstr "もしタスクの一つが例外を送出した場合どうなるか？"
 
 #: ../../userguide/canvas.rst:734
 msgid ""
 "This was not documented for some time and before version 3.1 the exception "
 "value will be forwarded to the chord callback."
 msgstr ""
+"このことについてはドキュメント化されておらず、3.1 より前のバージョンではこのような例外の値は Chord のコールバックに転送されます。"
 
 #: ../../userguide/canvas.rst:738
 msgid ""
@@ -718,12 +733,14 @@ msgid ""
 "executed instead the callback changes to failure state, and the error is set"
 " to the :exc:`~@ChordError` exception:"
 msgstr ""
+"3.1 からは、エラーはコールバックまで伝播して、コールバックは実行されずに失敗ステートに変化し、"
+"エラーは :exc:`~@ChordError` にセットされます:"
 
 #: ../../userguide/canvas.rst:756
 msgid ""
 "If you're running 3.0.14 or later you can enable the new behavior via the "
 ":setting:`CELERY_CHORD_PROPAGATES` setting::"
-msgstr ""
+msgstr "3.0.14 以降で :setting:`CELERY_CHORD_PROPAGATES` 設定でこの新しい挙動を有効化できます:"
 
 #: ../../userguide/canvas.rst:761
 msgid ""
@@ -732,6 +749,9 @@ msgid ""
 "that failed and a string representation of the original exception.  You can "
 "also find the original traceback in ``result.traceback``."
 msgstr ""
+"トレースバックは結果バックエンドによって異なりますが、失敗したタスクの ID を含むエラー記述と"
+"オリジナルの例外の文字列表現は確認できます。"
+"また ``result.traceback`` でオリジナルのトレースバックも取得できます。"
 
 #: ../../userguide/canvas.rst:766
 msgid ""
@@ -740,6 +760,10 @@ msgid ""
 " the :exc:`~@ChordError` only shows the task that failed first (in time): it"
 " does not respect the ordering of the header group."
 msgstr ""
+"例外が送出されても残りのタスクは実行されることに注意してください。つまり、3番目のタスク(``add.s(8, 8)``)は、"
+"真ん中のタスクが失敗しても実行されます。"
+"また、 :exc:`~@ChordError` に含まれるタスクは(時間的に)最初に失敗したタスクのものになります。"
+"header グループのリストの順番は関係ありません。"
 
 #: ../../userguide/canvas.rst:774
 msgid "Important Notes"

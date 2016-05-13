@@ -154,7 +154,7 @@ msgid ""
 "consumer.  See :ref:`optimizing-prefetch-limit`."
 msgstr "ワーカーが保持できる確認応答を行っていないメッセージの最大数。"
 "ブローカーはこの数以上のメッセージは配送しません。"
-" :ref:`optimizing-prefetch-limit`参照。"
+" :ref:`optimizing-prefetch-limit` 参照。"
 
 #: ../../glossary.rst:74
 msgid "prefetch multiplier"

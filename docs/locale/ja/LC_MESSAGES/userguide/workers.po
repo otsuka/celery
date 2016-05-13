@@ -431,7 +431,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:298
 msgid "Commands"
-msgstr ""
+msgstr "コマンド"
 
 #: ../../userguide/workers.rst:303
 msgid "``revoke``: Revoking tasks"
@@ -682,7 +682,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:526
 msgid "Autoscaling"
-msgstr ""
+msgstr "オートスケーリング"
 
 #: ../../userguide/workers.rst:530
 msgid "pool support: *prefork*, *gevent*"
@@ -977,7 +977,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:811
 msgid "Inspecting workers"
-msgstr ""
+msgstr "ワーカーの調査"
 
 #: ../../userguide/workers.rst:813
 msgid ""
@@ -1409,7 +1409,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:1102
 msgid "Additional Commands"
-msgstr ""
+msgstr "その他のコマンド"
 
 #: ../../userguide/workers.rst:1107
 msgid "Remote shutdown"
@@ -1449,7 +1449,7 @@ msgstr ""
 
 #: ../../userguide/workers.rst:1160
 msgid "Writing your own remote control commands"
-msgstr ""
+msgstr "独自のリモートコマンドの作成"
 
 #: ../../userguide/workers.rst:1162
 msgid ""
